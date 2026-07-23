@@ -1,7 +1,7 @@
 import json
 from typing import List, Dict, Optional, Literal, Any, TypedDict
 from pydantic import BaseModel, Field
-from langchain_openai import ChatOpenAI
+from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain_core.prompts import ChatPromptTemplate
 
 # ==========================================
@@ -95,7 +95,7 @@ class ChatbotState(TypedDict):
 # ==========================================
 # LLM
 # ==========================================
-llm = ChatOpenAI(model="gpt-4o", temperature=0.1)
+llm = ChatGoogleGenerativeAI(model="gemini-pro", temperature=0.1)
 
 # ==========================================
 # AGENT 1: Intake & Clarification
