@@ -586,10 +586,10 @@ function buildExploreBlock(kind, accentColor) {
     <div class="mapwindow">
       <div class="winbar">
         <div class="dots"><span></span><span></span><span></span></div>
-        <div class="addr">opportunity_distance_map.html</div>
+        <div class="addr">map\\map.html</div>
       </div>
       <div class="mapframe" id="mapframe-${kind}">
-        <iframe src="opportunity_distance_map.html" title="Interactive opportunity distance map" loading="lazy" onerror="this.style.display='none'"></iframe>
+        <iframe src="map\\map.html" title="Interactive opportunity distance map" loading="lazy" onerror="this.style.display='none'"></iframe>
         <svg class="overlay-svg" viewBox="0 0 315 230" preserveAspectRatio="xMidYMid slice">
           <defs>
             <filter id="heatblur-${kind}" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="9"></feGaussianBlur></filter>
@@ -611,7 +611,7 @@ function buildExploreBlock(kind, accentColor) {
           <g class="layer" id="ly-${kind}-tech"></g>
           <g class="layer show" id="ly-${kind}-transit"></g>
         </svg>
-        <a class="openmap" href="opportunity_distance_map.html" target="_blank">Open live map ↗</a>
+        <a class="openmap" href="map\\map.html" target="_blank">Open live map ↗</a>
       </div>
     </div>
     <div class="legend" id="incomelegend-${kind}" style="display:none;"><span>Lower income</span><div class="bar"></div><span>Higher income</span></div>
