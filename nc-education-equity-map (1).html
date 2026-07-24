@@ -260,6 +260,14 @@
   }
   .county-tip::before{ display:none; }
 
+  /* ---------- county name labels ---------- */
+  .county-label-tip{
+    background: transparent !important; box-shadow: none !important; border: none !important;
+    color: #2B2B2E; font-weight: 700; font-size: 11.5px; text-shadow: 0 1px 3px rgba(255,255,255,0.9), 0 0 6px rgba(255,255,255,0.9);
+    pointer-events: none;
+  }
+  .county-label-tip::before{ display:none; }
+
   /* ---------- Mobile ---------- */
   @media (max-width: 680px){
     .brand{ padding: 8px 12px; top: 12px; left: 12px; }
@@ -278,14 +286,6 @@
   <div id="loading">
     <div class="spinner"></div>
     <div class="loading-text" id="loadingText">Loading North Carolina schools…</div>
-  </div>
-
-  <div class="float-ui brand glass">
-    <div class="dot"></div>
-    <div class="brand-text">
-      <div class="brand-title">NC Education Equity</div>
-      <div class="brand-sub">2025 school &amp; county data</div>
-    </div>
   </div>
 
   <div class="float-ui search-wrap">
@@ -313,6 +313,18 @@
             </div>
           </div>
           <label class="switch"><input type="checkbox" id="toggleSchools" checked><span class="switch-track"></span></label>
+        </div>
+      </div>
+      <div class="lp-row">
+        <div class="lp-row-top">
+          <div class="lp-label">
+            <span class="lp-swatch round" style="background:#4A4A4E"></span>
+            <div>
+              <div class="lp-name">Counties</div>
+              <div class="lp-desc">County name labels</div>
+            </div>
+          </div>
+          <label class="switch"><input type="checkbox" id="toggleCounties" checked><span class="switch-track"></span></label>
         </div>
       </div>
       <div class="lp-row">
@@ -397,10 +409,30 @@ const ATTR_BREAKS = [12.36, 14.52, 15.74, 17.92];
 
   L.control.zoom({ position: 'bottomright' }).addTo(map);
 
-  L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
-    attribution: '&copy; OpenStreetMap &copy; CARTO',
-    subdomains: 'abcd',
-    maxZoom: 19
+  // Dedicated pane so School Pins always sit above every other overlay, regardless of toggle order
+  map.createPane('schoolsPane');
+  map.getPane('schoolsPane').style.zIndex = 450;
+
+  // Satellite imagery base layer
+  L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
+    attribution: '&copy; Esri &mdash; Source: Esri, Maxar, Earthstar Geographics',
+    maxZoom: 19,
+    maxNativeZoom: 19
+  }).addTo(map);
+
+  // Road / place-name labels — only requested once zoomed in close
+  L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Reference/World_Transportation/MapServer/tile/{z}/{y}/{x}', {
+    attribution: '',
+    maxZoom: 19,
+    maxNativeZoom: 19,
+    minZoom: 13,
+    opacity: 0.9
+  }).addTo(map);
+  L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/{z}/{y}/{x}', {
+    attribution: '',
+    maxZoom: 19,
+    maxNativeZoom: 19,
+    minZoom: 13
   }).addTo(map);
 
   var ncBounds = L.latLngBounds([33.7,-84.4],[36.7,-75.3]);
@@ -452,6 +484,20 @@ const ATTR_BREAKS = [12.36, 14.52, 15.74, 17.92];
     }
   });
 
+  // County name labels only — no fill, no border, just text (default: on)
+  var countiesLabelLayer = L.geoJSON(NC_COUNTIES, {
+    style: function(){ return { fillOpacity: 0, opacity: 0, weight: 0 }; },
+    interactive: false,
+    onEachFeature: function(feature, layer){
+      layer.bindTooltip(esc(feature.properties.NAME), {
+        permanent: true,
+        direction: 'center',
+        className: 'county-label-tip',
+        pane: 'tooltipPane'
+      });
+    }
+  }).addTo(map);
+
   function registerCounty(feature, layer, kind){
     var name = feature.properties.NAME;
     if(!countyIndex[name]) countyIndex[name] = {};
@@ -475,7 +521,7 @@ const ATTR_BREAKS = [12.36, 14.52, 15.74, 17.92];
 
     var html = '<div class="popup-card">';
     html += '<div class="pc-head"><div><div class="pc-title">'+esc(s.name)+'</div>';
-    html += '<div class="pc-sub">'+esc(s.district||'')+' · '+esc(s.county)+' County</div></div>';
+    html += '<div class="pc-sub">'+esc(s.district||'')+' · '+esc(s.county)+' County · '+esc(formatGradeSpan(s.grade_span))+'</div></div>';
     html += '<div class="pc-grade" style="background:'+gcolor+'">'+gradeText+'</div></div>';
     if(s.is_approx_location){
       html += '<div class="pc-approx">📍 Approximate location (county-level)</div>';
@@ -483,7 +529,7 @@ const ATTR_BREAKS = [12.36, 14.52, 15.74, 17.92];
     html += '<div class="pc-divider"></div>';
     html += '<div class="pc-grid">';
     html += stat('Absence Rate', s.absence_rate_pct, '%', s.absence_rate_pct==null);
-    html += stat('Graduation Rate', s.grad_rate_pct, '%', s.grad_rate_pct==null);
+    html += stat('Graduation Rate', s.grad_rate_pct==null ? null : (s.grad_rate_pct/100).toFixed(2), '%', s.grad_rate_pct==null);
     html += stat('Student:Teacher', s.student_teacher_ratio, ':1', s.student_teacher_ratio==null);
     html += stat('Free/Reduced Lunch', s.frl_rate, '%', s.frl_rate==null);
     html += '</div>';
@@ -499,6 +545,24 @@ const ATTR_BREAKS = [12.36, 14.52, 15.74, 17.92];
     return html;
   }
 
+  function formatGradeLabel(code){
+    if(code == null) return '';
+    var c = String(code).trim();
+    if(c === '0K') return 'K';
+    if(c === 'PK') return 'PK';
+    var n = parseInt(c, 10);
+    return isNaN(n) ? c : String(n);
+  }
+  function formatGradeSpan(span){
+    if(!span) return 'Grades N/A';
+    var parts = span.split(':');
+    if(parts.length !== 2) return span;
+    var lo = formatGradeLabel(parts[0]);
+    var hi = formatGradeLabel(parts[1]);
+    if(lo === hi) return 'Grade '+lo;
+    return 'Grades '+lo+'-'+hi;
+  }
+
   function esc(str){
     if(str==null) return '';
     return String(str).replace(/[&<>"']/g, function(c){
@@ -506,7 +570,7 @@ const ATTR_BREAKS = [12.36, 14.52, 15.74, 17.92];
     });
   }
 
-  var canvasRenderer = L.canvas({ padding: 0.5 });
+  var canvasRenderer = L.canvas({ padding: 0.5, pane: 'schoolsPane' });
 
   SCHOOLS.forEach(function(s, idx){
     if(s.lat == null || s.lon == null) return;
@@ -531,6 +595,7 @@ const ATTR_BREAKS = [12.36, 14.52, 15.74, 17.92];
 
   // ---------------- Layer toggles ----------------
   var toggleSchools = document.getElementById('toggleSchools');
+  var toggleCounties = document.getElementById('toggleCounties');
   var toggleFrl = document.getElementById('toggleFrl');
   var toggleAttr = document.getElementById('toggleAttr');
   var frlOpacity = document.getElementById('frlOpacity');
@@ -540,6 +605,9 @@ const ATTR_BREAKS = [12.36, 14.52, 15.74, 17.92];
 
   toggleSchools.addEventListener('change', function(){
     if(this.checked){ markerLayer.addTo(map); } else { map.removeLayer(markerLayer); }
+  });
+  toggleCounties.addEventListener('change', function(){
+    if(this.checked){ countiesLabelLayer.addTo(map); } else { map.removeLayer(countiesLabelLayer); }
   });
   toggleFrl.addEventListener('change', function(){
     if(this.checked){ frlLayer.addTo(map); frlOpacityRow.style.opacity=1; frlOpacityRow.style.pointerEvents='auto'; }
