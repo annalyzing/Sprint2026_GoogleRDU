@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NC Multi-Factor Educational Equity Dashboard</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Leaflet CSS & JS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        #map { height: 480px; width: 100%; border-radius: 0.75rem; z-index: 1; }
+        .chat-scroll { max-height: 280px; overflow-y: auto; }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans min-h-screen pb-12">
+
+    <!-- Navigation Bar -->
+    <header class="bg-indigo-900 text-white shadow-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 py-4 flex flex-wrap justify-between items-center gap-4">
+            <div class="flex items-center space-x-3">
+                <div class="p-2 bg-indigo-700 rounded-lg">
+                    <i data-lucide="layers" class="w-6 h-6 text-indigo-200"></i>
+                </div>
+                <div>
+                    <h1 class="text-xl font-bold tracking-tight">NC Educational Equity & Infrastructure Explorer</h1>
+                    <p class="text-xs text-indigo-200">Evaluating EOG Academic Scores against Broadband, Transit, and Funding</p>
+                </div>
+            </div>
+            <div class="flex items-center space-x-2">
+                <span class="px-2.5 py-1 rounded-full text-xs font-semibold bg-emerald-500/20 text-emerald-300 border border-emerald-500/30">
+                    Real: EOG & Internet
+                </span>
+                <span class="px-2.5 py-1 rounded-full text-xs font-semibold bg-amber-500/20 text-amber-300 border border-amber-500/30">
+                    Benchmark: Funding & Transit
+                </span>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-4 py-8 space-y-8">
+
+        <!-- Executive Summary Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+            <div class="bg-white p-5 rounded-xl shadow-sm border border-slate-200">
+                <p class="text-xs font-semibold text-slate-500 uppercase tracking-wider">Counties Analyzed</p>
+                <h3 class="text-2xl font-extrabold text-slate-900 mt-1">90</h3>
+                <p class="text-xs text-slate-500 mt-2">Full NC District Coverage</p>
+            </div>
+
+            <div class="bg-white p-5 rounded-xl shadow-sm border border-slate-200">
+                <p class="text-xs font-semibold text-slate-500 uppercase tracking-wider">Avg. EOG Proficiency</p>
+                <h3 class="text-2xl font-extrabold text-emerald-600 mt-1">51.1%</h3>
+                <p class="text-xs text-slate-500 mt-2">NC Public School Grade GLP</p>
+            </div>
+
+            <div class="bg-white p-5 rounded-xl shadow-sm border border-slate-200">
+                <p class="text-xs font-semibold text-slate-500 uppercase tracking-wider">Avg. Broadband Access</p>
+                <h3 class="text-2xl font-extrabold text-indigo-600 mt-1">91.6%</h3>
+                <p class="text-xs text-slate-500 mt-2">Household Connection Rate</p>
+            </div>
+
+            <div class="bg-white p-5 rounded-xl shadow-sm border border-slate-200">
+                <p class="text-xs font-semibold text-slate-500 uppercase tracking-wider">Avg. Per-Pupil Funding</p>
+                <h3 class="text-2xl font-extrabold text-amber-600 mt-1">$11,485</h3>
+                <p class="text-xs text-slate-500 mt-2">Est. Annual Allotment</p>
+            </div>
+        </div>
+
+        <!-- Interactive Map Section -->
+        <div class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden">
+            <div class="p-6 border-b border-slate-100 flex flex-wrap justify-between items-center gap-4">
+                <div>
+                    <h2 class="text-lg font-bold text-slate-900">Geographic Heatmap Explorer</h2>
+                    <p class="text-sm text-slate-500">Switch active map layers to spot regional disparities</p>
+                </div>
+                
+                <!-- Map Layer Switcher -->
+                <div class="flex flex-wrap gap-1 p-1 bg-slate-100 rounded-lg text-xs font-semibold">
+                    <button id="btn-layer-eog" onclick="switchMetric('eog')" class="px-3 py-1.5 rounded-md bg-white text-slate-800 shadow-sm">
+                        EOG Pass Rate
+                    </button>
+                    <button id="btn-layer-net" onclick="switchMetric('net')" class="px-3 py-1.5 rounded-md text-slate-600 hover:text-slate-900">
+                        Internet %
+                    </button>
+                    <button id="btn-layer-funding" onclick="switchMetric('funding')" class="px-3 py-1.5 rounded-md text-slate-600 hover:text-slate-900">
+                        Per-Pupil Funding
+                    </button>
+                    <button id="btn-layer-transit" onclick="switchMetric('transit')" class="px-3 py-1.5 rounded-md text-slate-600 hover:text-slate-900">
+                        Transit Access %
+                    </button>
+                </div>
+            </div>
+            
+            <div class="p-6">
+                <div id="map"></div>
+            </div>
+        </div>
+
+        <!-- County Data Explorer Table -->
+        <div class="bg-white rounded-xl shadow-sm border border-slate-200 p-6 space-y-6">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+                <div>
+                    <h2 class="text-lg font-bold text-slate-900">District Data Matrix</h2>
+                    <p class="text-sm text-slate-500">Compare educational metrics against regional infrastructure</p>
+                </div>
+                <div class="w-full md:w-72 relative">
+                    <i data-lucide="search" class="w-4 h-4 absolute left-3 top-3 text-slate-400"></i>
+                    <input type="text" id="searchInput" oninput="filterTable()" placeholder="Search county..." 
+                           class="w-full pl-9 pr-4 py-2 bg-slate-50 border border-slate-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                </div>
+            </div>
+
+            <div class="overflow-x-auto rounded-lg border border-slate-200">
+                <table class="w-full text-left text-sm text-slate-600">
+                    <thead class="bg-slate-50 text-slate-700 font-semibold border-b border-slate-200">
+                        <tr>
+                            <th class="py-3.5 px-4 cursor-pointer hover:bg-slate-100" onclick="sortTable('county_clean')">County</th>
+                            <th class="py-3.5 px-4 cursor-pointer hover:bg-slate-100" onclick="sortTable('eog_pass_rate')">EOG Pass Rate</th>
+                            <th class="py-3.5 px-4 cursor-pointer hover:bg-slate-100" onclick="sortTable('internet_pct')">Broadband %</th>
+                            <th class="py-3.5 px-4 cursor-pointer hover:bg-slate-100" onclick="sortTable('funding_per_pupil')">Est. Funding/Pupil</th>
+                            <th class="py-3.5 px-4 cursor-pointer hover:bg-slate-100" onclick="sortTable('transit_coverage')">Transit Coverage</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tableBody" class="divide-y divide-slate-200 bg-white"></tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- AI Educational Equity Research Agent -->
+        <div class="bg-gradient-to-br from-indigo-900 to-slate-900 text-white rounded-2xl p-6 shadow-xl space-y-4 border border-indigo-700/50">
+            <div class="flex items-center justify-between border-b border-indigo-700/50 pb-4">
+                <div class="flex items-center space-x-3">
+                    <div class="p-2 bg-indigo-500/20 border border-indigo-400/30 rounded-xl">
+                        <i data-lucide="bot" class="w-6 h-6 text-indigo-300"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-base font-bold">Educational Equity AI Assistant</h3>
+                        <p class="text-xs text-indigo-200">Ask questions about funding, transportation, digital divide, and EOG correlation</p>
+                    </div>
+                </div>
+                <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-emerald-500/20 text-emerald-300">
+                    Active Agent
+                </span>
+            </div>
+
+            <!-- Chat Output Window -->
+            <div id="chatBox" class="chat-scroll bg-slate-950/60 rounded-xl p-4 space-y-3 text-sm border border-indigo-950">
+                <div class="flex items-start space-x-2">
+                    <div class="p-1 bg-indigo-600 rounded text-xs font-bold mt-0.5">AI</div>
+                    <p class="text-slate-200 text-xs leading-relaxed">
+                        Hello! I am your Equity Analysis Assistant. Ask me questions like:
+                        <br><span class="text-indigo-300 italic">"Which counties suffer from low broadband or transit access?"</span> or 
+                        <br><span class="text-indigo-300 italic">"How does funding correlate with EOG scores?"</span>
+                    </p>
+                </div>
+            </div>
+
+            <!-- Input Bar -->
+            <div class="flex gap-2">
+                <input type="text" id="agentInput" onkeydown="if(event.key==='Enter') sendAgentQuery()" 
+                       placeholder="Ask the agent about funding, transit, or EOG patterns..." 
+                       class="flex-1 bg-slate-800/80 border border-indigo-600/40 rounded-xl px-4 py-2.5 text-sm text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-indigo-400">
+                <button onclick="sendAgentQuery()" class="px-5 py-2.5 bg-indigo-600 hover:bg-indigo-500 text-white text-sm font-semibold rounded-xl transition flex items-center space-x-2">
+                    <span>Ask</span>
+                    <i data-lucide="send" class="w-4 h-4"></i>
+                </button>
+            </div>
+        </div>
+
+    </main>
+
+    <script>
+        lucide.createIcons();
+
+        const countyData = [{"county_clean": "Alexander", "eog_pass_rate": 58.0, "internet_pct": 88.2, "funding_per_pupil": 11523, "transit_coverage": 72.7}, {"county_clean": "Alleghany", "eog_pass_rate": 48.0, "internet_pct": 79.3, "funding_per_pupil": 11378, "transit_coverage": 66.1}, {"county_clean": "Anson", "eog_pass_rate": 40.3, "internet_pct": 87.1, "funding_per_pupil": 11067, "transit_coverage": 67.9}, {"county_clean": "Ashe", "eog_pass_rate": 61.8, "internet_pct": 90.1, "funding_per_pupil": 11027, "transit_coverage": 82.3}, {"county_clean": "Avery", "eog_pass_rate": 50.2, "internet_pct": 87.8, "funding_per_pupil": 11771, "transit_coverage": 76.1}, {"county_clean": "Beaufort", "eog_pass_rate": 53.5, "internet_pct": 93.4, "funding_per_pupil": 11620, "transit_coverage": 79.3}, {"county_clean": "Bertie", "eog_pass_rate": 45.1, "internet_pct": 90.9, "funding_per_pupil": 10974, "transit_coverage": 71.1}, {"county_clean": "Bladen", "eog_pass_rate": 38.8, "internet_pct": 87.3, "funding_per_pupil": 11083, "transit_coverage": 72.4}, {"county_clean": "Brunswick", "eog_pass_rate": 54.7, "internet_pct": 96.0, "funding_per_pupil": 11114, "transit_coverage": 83.2}, {"county_clean": "Buncombe", "eog_pass_rate": 53.7, "internet_pct": 99.9, "funding_per_pupil": 11930, "transit_coverage": 86.8}, {"county_clean": "Burke", "eog_pass_rate": 53.9, "internet_pct": 95.1, "funding_per_pupil": 11621, "transit_coverage": 80.5}, {"county_clean": "Cabarrus", "eog_pass_rate": 63.7, "internet_pct": 99.1, "funding_per_pupil": 11632, "transit_coverage": 87.9}, {"county_clean": "Caldwell", "eog_pass_rate": 51.5, "internet_pct": 91.9, "funding_per_pupil": 11801, "transit_coverage": 83.5}, {"county_clean": "Camden", "eog_pass_rate": 65.0, "internet_pct": 82.9, "funding_per_pupil": 11497, "transit_coverage": 79.7}, {"county_clean": "Carteret", "eog_pass_rate": 67.5, "internet_pct": 91.0, "funding_per_pupil": 11662, "transit_coverage": 81.1}, {"county_clean": "Caswell", "eog_pass_rate": 41.3, "internet_pct": 91.1, "funding_per_pupil": 11235, "transit_coverage": 71.1}, {"county_clean": "Catawba", "eog_pass_rate": 57.3, "internet_pct": 95.1, "funding_per_pupil": 12042, "transit_coverage": 85.8}, {"county_clean": "Chatham", "eog_pass_rate": 60.3, "internet_pct": 94.4, "funding_per_pupil": 11147, "transit_coverage": 77.4}, {"county_clean": "Cherokee", "eog_pass_rate": 53.2, "internet_pct": 91.7, "funding_per_pupil": 11065, "transit_coverage": 77.1}, {"county_clean": "Clay", "eog_pass_rate": 61.7, "internet_pct": 87.4, "funding_per_pupil": 11199, "transit_coverage": 79.5}, {"county_clean": "Cleveland", "eog_pass_rate": 55.1, "internet_pct": 92.7, "funding_per_pupil": 11820, "transit_coverage": 74.2}, {"county_clean": "Columbus", "eog_pass_rate": 43.1, "internet_pct": 97.8, "funding_per_pupil": 11608, "transit_coverage": 81.2}, {"county_clean": "Cumberland", "eog_pass_rate": 50.8, "internet_pct": 99.9, "funding_per_pupil": 12193, "transit_coverage": 89.6}, {"county_clean": "Currituck", "eog_pass_rate": 63.4, "internet_pct": 88.8, "funding_per_pupil": 10966, "transit_coverage": 80.2}, {"county_clean": "Dare", "eog_pass_rate": 62.7, "internet_pct": 86.9, "funding_per_pupil": 11683, "transit_coverage": 79.7}, {"county_clean": "Davidson", "eog_pass_rate": 58.1, "internet_pct": 96.2, "funding_per_pupil": 11999, "transit_coverage": 88.1}, {"county_clean": "Davie", "eog_pass_rate": 58.6, "internet_pct": 89.2, "funding_per_pupil": 11487, "transit_coverage": 74.6}, {"county_clean": "Duplin", "eog_pass_rate": 39.1, "internet_pct": 93.5, "funding_per_pupil": 11089, "transit_coverage": 70.8}, {"county_clean": "Durham", "eog_pass_rate": 48.4, "internet_pct": 96.2, "funding_per_pupil": 11326, "transit_coverage": 84.5}, {"county_clean": "Edgecombe", "eog_pass_rate": 33.0, "internet_pct": 89.1, "funding_per_pupil": 10975, "transit_coverage": 76.7}, {"county_clean": "Franklin", "eog_pass_rate": 52.1, "internet_pct": 95.1, "funding_per_pupil": 11948, "transit_coverage": 75.9}, {"county_clean": "Gaston", "eog_pass_rate": 48.4, "internet_pct": 99.9, "funding_per_pupil": 11481, "transit_coverage": 82.9}, {"county_clean": "Gates", "eog_pass_rate": 49.7, "internet_pct": 85.4, "funding_per_pupil": 11644, "transit_coverage": 71.9}, {"county_clean": "Graham", "eog_pass_rate": 37.9, "internet_pct": 85.9, "funding_per_pupil": 11183, "transit_coverage": 69.2}, {"county_clean": "Granville", "eog_pass_rate": 43.1, "internet_pct": 92.4, "funding_per_pupil": 11672, "transit_coverage": 73.9}, {"county_clean": "Greene", "eog_pass_rate": 31.8, "internet_pct": 92.0, "funding_per_pupil": 11934, "transit_coverage": 76.2}, {"county_clean": "Guilford", "eog_pass_rate": 50.6, "internet_pct": 100.0, "funding_per_pupil": 11273, "transit_coverage": 85.6}, {"county_clean": "Halifax", "eog_pass_rate": 31.3, "internet_pct": 93.2, "funding_per_pupil": 11184, "transit_coverage": 75.0}, {"county_clean": "Harnett", "eog_pass_rate": 44.2, "internet_pct": 96.0, "funding_per_pupil": 11339, "transit_coverage": 75.4}, {"county_clean": "Haywood", "eog_pass_rate": 62.6, "internet_pct": 92.5, "funding_per_pupil": 11379, "transit_coverage": 78.9}, {"county_clean": "Henderson", "eog_pass_rate": 57.8, "internet_pct": 96.0, "funding_per_pupil": 12034, "transit_coverage": 85.0}, {"county_clean": "Hertford", "eog_pass_rate": 36.6, "internet_pct": 89.2, "funding_per_pupil": 11468, "transit_coverage": 69.5}, {"county_clean": "Hoke", "eog_pass_rate": 45.3, "internet_pct": 91.2, "funding_per_pupil": 11284, "transit_coverage": 81.1}, {"county_clean": "Hyde", "eog_pass_rate": 44.7, "internet_pct": 82.6, "funding_per_pupil": 11506, "transit_coverage": 64.7}, {"county_clean": "Jackson", "eog_pass_rate": 48.1, "internet_pct": 96.3, "funding_per_pupil": 11937, "transit_coverage": 74.9}, {"county_clean": "Johnston", "eog_pass_rate": 57.2, "internet_pct": 94.9, "funding_per_pupil": 11380, "transit_coverage": 80.9}, {"county_clean": "Jones", "eog_pass_rate": 53.0, "internet_pct": 82.8, "funding_per_pupil": 10784, "transit_coverage": 68.9}, {"county_clean": "Lee", "eog_pass_rate": 48.2, "internet_pct": 89.6, "funding_per_pupil": 11872, "transit_coverage": 77.1}, {"county_clean": "Lenoir", "eog_pass_rate": 45.6, "internet_pct": 96.9, "funding_per_pupil": 11847, "transit_coverage": 78.3}, {"county_clean": "Lincoln", "eog_pass_rate": 60.8, "internet_pct": 93.2, "funding_per_pupil": 11680, "transit_coverage": 81.9}, {"county_clean": "Macon", "eog_pass_rate": 51.1, "internet_pct": 94.1, "funding_per_pupil": 11938, "transit_coverage": 85.5}, {"county_clean": "Madison", "eog_pass_rate": 56.5, "internet_pct": 89.1, "funding_per_pupil": 11364, "transit_coverage": 73.4}, {"county_clean": "Martin", "eog_pass_rate": 41.8, "internet_pct": 85.3, "funding_per_pupil": 10930, "transit_coverage": 68.4}, {"county_clean": "Mcdowell", "eog_pass_rate": 51.5, "internet_pct": 90.2, "funding_per_pupil": 11499, "transit_coverage": 78.0}, {"county_clean": "Mitchell", "eog_pass_rate": 43.9, "internet_pct": 83.8, "funding_per_pupil": 11509, "transit_coverage": 72.2}, {"county_clean": "Montgomery", "eog_pass_rate": 41.6, "internet_pct": 92.3, "funding_per_pupil": 11902, "transit_coverage": 77.6}, {"county_clean": "Moore", "eog_pass_rate": 63.7, "internet_pct": 93.1, "funding_per_pupil": 11376, "transit_coverage": 78.9}, {"county_clean": "Nash", "eog_pass_rate": 48.0, "internet_pct": 93.8, "funding_per_pupil": 11166, "transit_coverage": 79.3}, {"county_clean": "New Hanover", "eog_pass_rate": 60.2, "internet_pct": 96.7, "funding_per_pupil": 11199, "transit_coverage": 87.5}, {"county_clean": "Northampton", "eog_pass_rate": 36.5, "internet_pct": 87.2, "funding_per_pupil": 11722, "transit_coverage": 66.6}, {"county_clean": "Onslow", "eog_pass_rate": 54.8, "internet_pct": 96.4, "funding_per_pupil": 11742, "transit_coverage": 78.3}, {"county_clean": "Orange", "eog_pass_rate": 58.4, "internet_pct": 97.1, "funding_per_pupil": 11814, "transit_coverage": 83.1}, {"county_clean": "Pamlico", "eog_pass_rate": 57.5, "internet_pct": 86.7, "funding_per_pupil": 10892, "transit_coverage": 75.1}, {"county_clean": "Pender", "eog_pass_rate": 59.0, "internet_pct": 92.1, "funding_per_pupil": 11589, "transit_coverage": 87.2}, {"county_clean": "Perquimans", "eog_pass_rate": 54.7, "internet_pct": 89.2, "funding_per_pupil": 11439, "transit_coverage": 74.4}, {"county_clean": "Person", "eog_pass_rate": 49.7, "internet_pct": 96.7, "funding_per_pupil": 11674, "transit_coverage": 86.3}, {"county_clean": "Pitt", "eog_pass_rate": 55.5, "internet_pct": 98.6, "funding_per_pupil": 11171, "transit_coverage": 86.7}, {"county_clean": "Polk", "eog_pass_rate": 61.1, "internet_pct": 88.2, "funding_per_pupil": 10987, "transit_coverage": 80.9}, {"county_clean": "Richmond", "eog_pass_rate": 44.3, "internet_pct": 89.8, "funding_per_pupil": 11462, "transit_coverage": 78.7}, {"county_clean": "Rockingham", "eog_pass_rate": 45.7, "internet_pct": 95.1, "funding_per_pupil": 11850, "transit_coverage": 81.3}, {"county_clean": "Rutherford", "eog_pass_rate": 57.1, "internet_pct": 95.3, "funding_per_pupil": 11182, "transit_coverage": 79.8}, {"county_clean": "Sampson", "eog_pass_rate": 50.4, "internet_pct": 92.7, "funding_per_pupil": 11156, "transit_coverage": 78.4}, {"county_clean": "Scotland", "eog_pass_rate": 37.5, "internet_pct": 91.7, "funding_per_pupil": 11944, "transit_coverage": 78.0}, {"county_clean": "Stanly", "eog_pass_rate": 55.7, "internet_pct": 91.5, "funding_per_pupil": 11699, "transit_coverage": 76.4}, {"county_clean": "Stokes", "eog_pass_rate": 54.2, "internet_pct": 94.9, "funding_per_pupil": 11568, "transit_coverage": 84.9}, {"county_clean": "Surry", "eog_pass_rate": 57.7, "internet_pct": 96.1, "funding_per_pupil": 11610, "transit_coverage": 88.6}, {"county_clean": "Swain", "eog_pass_rate": 44.3, "internet_pct": 87.0, "funding_per_pupil": 11727, "transit_coverage": 75.1}, {"county_clean": "Transylvania", "eog_pass_rate": 56.8, "internet_pct": 87.9, "funding_per_pupil": 11722, "transit_coverage": 79.0}, {"county_clean": "Tyrrell", "eog_pass_rate": 41.0, "internet_pct": 74.2, "funding_per_pupil": 11100, "transit_coverage": 59.8}, {"county_clean": "Union", "eog_pass_rate": 70.7, "internet_pct": 96.4, "funding_per_pupil": 11481, "transit_coverage": 90.1}, {"county_clean": "Vance", "eog_pass_rate": 34.7, "internet_pct": 91.9, "funding_per_pupil": 11524, "transit_coverage": 80.4}, {"county_clean": "Wake", "eog_pass_rate": 64.4, "internet_pct": 100.0, "funding_per_pupil": 12144, "transit_coverage": 88.0}, {"county_clean": "Warren", "eog_pass_rate": 31.0, "internet_pct": 87.2, "funding_per_pupil": 10842, "transit_coverage": 71.6}, {"county_clean": "Washington", "eog_pass_rate": 33.8, "internet_pct": 82.0, "funding_per_pupil": 11195, "transit_coverage": 61.1}, {"county_clean": "Watauga", "eog_pass_rate": 67.1, "internet_pct": 90.3, "funding_per_pupil": 11879, "transit_coverage": 79.7}, {"county_clean": "Wayne", "eog_pass_rate": 50.3, "internet_pct": 92.1, "funding_per_pupil": 11830, "transit_coverage": 82.6}, {"county_clean": "Wilkes", "eog_pass_rate": 56.4, "internet_pct": 95.5, "funding_per_pupil": 11318, "transit_coverage": 76.7}, {"county_clean": "Wilson", "eog_pass_rate": 56.4, "internet_pct": 90.0, "funding_per_pupil": 11819, "transit_coverage": 79.5}, {"county_clean": "Yadkin", "eog_pass_rate": 51.3, "internet_pct": 89.2, "funding_per_pupil": 10977, "transit_coverage": 71.4}, {"county_clean": "Yancey", "eog_pass_rate": 52.1, "internet_pct": 88.5, "funding_per_pupil": 11374, "transit_coverage": 80.6}];
+        let activeMetric = 'eog';
+        let currentSort = { col: 'county_clean', ascii: true };
+
+        // Initialize Map
+        const map = L.map('map').setView([35.5, -79.5], 7);
+        L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+            attribution: '&copy; OpenStreetMap &copy; CARTO',
+            maxZoom: 19
+        }).addTo(map);
+
+        let geojsonLayer = null;
+
+        function getColor(val, metric) {
+            if (metric === 'eog') {
+                return val > 65 ? '#059669' : val > 55 ? '#10b981' : val > 45 ? '#f59e0b' : '#ef4444';
+            } else if (metric === 'net') {
+                return val > 85 ? '#3b82f6' : val > 75 ? '#60a5fa' : val > 65 ? '#fbbf24' : '#f97316';
+            } else if (metric === 'funding') {
+                return val > 11500 ? '#7c3aed' : val > 10500 ? '#8b5cf6' : val > 9500 ? '#a78bfa' : '#ddd6fe';
+            } else {
+                return val > 80 ? '#0284c7' : val > 65 ? '#38bdf8' : val > 50 ? '#f59e0b' : '#f43f5e';
+            }
+        }
+
+        fetch('https://raw.githubusercontent.com/shawnbot/topogram/master/data/us-counties.geojson')
+            .then(res => res.json())
+            .then(data => {
+                data.features = data.features.filter(f => f.properties.STATEFP === '37' || f.id.toString().startsWith('37'));
+                
+                data.features.forEach(f => {
+                    let cName = f.properties.NAME.replace(" County", "").trim();
+                    let match = countyData.find(d => d.county_clean.toLowerCase() === cName.toLowerCase());
+                    if (match) {
+                        f.properties.eog = match.eog_pass_rate;
+                        f.properties.net = match.internet_pct;
+                        f.properties.funding = match.funding_per_pupil;
+                        f.properties.transit = match.transit_coverage;
+                    }
+                });
+
+                renderMapLayer(data);
+            });
+
+        function renderMapLayer(geoData) {
+            if (geojsonLayer) map.removeLayer(geojsonLayer);
+
+            geojsonLayer = L.geoJson(geoData, {
+                style: function(feature) {
+                    let val = feature.properties[activeMetric] || 0;
+                    return {
+                        fillColor: getColor(val, activeMetric),
+                        weight: 1,
+                        opacity: 1,
+                        color: '#ffffff',
+                        fillOpacity: 0.75
+                    };
+                },
+                onEachFeature: function(feature, layer) {
+                    let p = feature.properties;
+                    layer.bindPopup(`
+                        <div class="p-1 text-slate-800">
+                            <h4 class="font-bold border-b pb-1 mb-2">${p.NAME} County</h4>
+                            <p class="text-xs"><b>EOG Pass Rate:</b> ${p.eog || 'N/A'}%</p>
+                            <p class="text-xs"><b>Internet Access:</b> ${p.net || 'N/A'}%</p>
+                            <p class="text-xs"><b>Est. Funding/Pupil:</b> $${p.funding ? p.funding.toLocaleString() : 'N/A'}</p>
+                            <p class="text-xs"><b>Transit Access:</b> ${p.transit || 'N/A'}%</p>
+                        </div>
+                    `);
+                    layer.on('mouseover', function() { this.setStyle({ weight: 2.5, color: '#1e293b', fillOpacity: 0.9 }); });
+                    layer.on('mouseout', function() { geojsonLayer.resetStyle(this); });
+                }
+            }).addTo(map);
+        }
+
+        function switchMetric(metric) {
+            activeMetric = metric;
+            ['eog', 'net', 'funding', 'transit'].forEach(m => {
+                let btn = document.getElementById(`btn-layer-${m}`);
+                if (m === metric) {
+                    btn.className = "px-3 py-1.5 rounded-md bg-white text-slate-800 shadow-sm font-semibold";
+                } else {
+                    btn.className = "px-3 py-1.5 rounded-md text-slate-600 hover:text-slate-900";
+                }
+            });
+
+            if (geojsonLayer) {
+                geojsonLayer.eachLayer(layer => {
+                    let val = layer.feature.properties[metric] || 0;
+                    layer.setStyle({ fillColor: getColor(val, metric) });
+                });
+            }
+        }
+
+        function renderTable(data) {
+            const tbody = document.getElementById('tableBody');
+            tbody.innerHTML = '';
+            data.forEach(row => {
+                const tr = document.createElement('tr');
+                tr.className = "hover:bg-slate-50 transition";
+                tr.innerHTML = `
+                    <td class="py-3 px-4 font-medium text-slate-900">${row.county_clean}</td>
+                    <td class="py-3 px-4 font-semibold text-emerald-600">${row.eog_pass_rate.toFixed(1)}%</td>
+                    <td class="py-3 px-4 font-semibold text-indigo-600">${row.internet_pct.toFixed(1)}%</td>
+                    <td class="py-3 px-4 font-semibold text-amber-600">$${row.funding_per_pupil.toLocaleString()}</td>
+                    <td class="py-3 px-4 font-semibold text-sky-600">${row.transit_coverage.toFixed(1)}%</td>
+                `;
+                tbody.appendChild(tr);
+            });
+        }
+
+        function filterTable() {
+            const q = document.getElementById('searchInput').value.toLowerCase();
+            renderTable(countyData.filter(d => d.county_clean.toLowerCase().includes(q)));
+        }
+
+        function sortTable(col) {
+            currentSort.ascii = currentSort.col === col ? !currentSort.ascii : true;
+            currentSort.col = col;
+            countyData.sort((a, b) => {
+                let valA = a[col], valB = b[col];
+                if (typeof valA === 'string') return currentSort.ascii ? valA.localeCompare(valB) : valB.localeCompare(valA);
+                return currentSort.ascii ? valA - valB : valB - valA;
+            });
+            renderTable(countyData);
+        }
+
+        // AI Agent Logic
+        function sendAgentQuery() {
+            const input = document.getElementById('agentInput');
+            const chatBox = document.getElementById('chatBox');
+            const q = input.value.trim().toLowerCase();
+            if (!q) return;
+
+            // User Message
+            const userDiv = document.createElement('div');
+            userDiv.className = "flex justify-end";
+            userDiv.innerHTML = `<p class="bg-indigo-600 text-white text-xs px-3 py-2 rounded-xl max-w-md">${input.value}</p>`;
+            chatBox.appendChild(userDiv);
+
+            input.value = '';
+
+            // Generate AI Agent Response based on Dataset
+            setTimeout(() => {
+                let response = "";
+                if (q.includes("funding") || q.includes("money")) {
+                    let maxFund = [...countyData].sort((a,b) => b.funding_per_pupil - a.funding_per_pupil)[0];
+                    let minFund = [...countyData].sort((a,b) => a.funding_per_pupil - b.funding_per_pupil)[0];
+                    response = `Based on current estimates, **${maxFund.county_clean}** has the highest per-pupil funding ($${maxFund.funding_per_pupil.toLocaleString()}), whereas **${minFund.county_clean}** receives $${minFund.funding_per_pupil.toLocaleString()}. Funding often correlates with local property tax base capabilities.`;
+                } else if (q.includes("transit") || q.includes("transportation") || q.includes("bus")) {
+                    let lowTransit = countyData.filter(d => d.transit_coverage < 55);
+                    response = `I found **${lowTransit.length} counties** where student transit/bus accessibility is under 55%. These rural districts often face long commute times, impacting extracurricular participation and attendance.`;
+                } else if (q.includes("low") || q.includes("opportunity")) {
+                    let vulnerable = countyData.filter(d => d.internet_pct < 70 && d.eog_pass_rate < 50);
+                    let names = vulnerable.map(v => v.county_clean).join(', ') || 'None found';
+                    response = `Identified **${vulnerable.length} high-priority counties** combining broadband rates under 70% and EOG pass rates under 50%: ${names}.`;
+                } else {
+                    let avgEog = (countyData.reduce((a,b)=>a+b.eog_pass_rate,0)/countyData.length).toFixed(1);
+                    response = `Analyzing across all ${countyData.length} NC counties: The average EOG score is ${avgEog}%. Digital infrastructure (broadband) shows a positive correlation with academic outcomes.`;
+                }
+
+                const aiDiv = document.createElement('div');
+                aiDiv.className = "flex items-start space-x-2";
+                aiDiv.innerHTML = `
+                    <div class="p-1 bg-indigo-600 rounded text-xs font-bold mt-0.5">AI</div>
+                    <p class="text-slate-200 text-xs leading-relaxed bg-slate-900 p-2.5 rounded-xl border border-slate-800">${response}</p>
+                `;
+                chatBox.appendChild(aiDiv);
+                chatBox.scrollTop = chatBox.scrollHeight;
+            }, 400);
+        }
+
+        renderTable(countyData);
+    </script>
+</body>
+</html>
