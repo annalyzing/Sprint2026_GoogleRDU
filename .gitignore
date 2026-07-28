@@ -1,3 +1,4 @@
-# script to clean found data -- just testing how gitignore works
-cleaningData.py
-
+.venv/
+__pycache__/
+*.pyc
+*.env

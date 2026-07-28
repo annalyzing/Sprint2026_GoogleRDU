@@ -95,7 +95,11 @@ class ChatbotState(TypedDict):
 # ==========================================
 # LLM
 # ==========================================
+<<<<<<< HEAD
+llm = ChatGoogleGenerativeAI(model="gemini-pro", temperature=0.1)
+=======
 llm = ChatGoogleGenerativeAI(model="gemini-1.5-flash", temperature=0.1)
+>>>>>>> 3f0a90a695747ea56160f9d8ac67114890e87eaf
 
 # ==========================================
 # AGENT 1: Intake & Clarification
