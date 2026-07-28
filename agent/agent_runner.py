@@ -1,7 +1,11 @@
 from dotenv import load_dotenv
 load_dotenv()
 from agents import run_agent_1, run_agent_2, run_agent_3, run_agent_4, run_agent_5
+<<<<<<< HEAD
+def run_agent(message: str, persona: str, history: list = [])-> str:
+=======
 def run_agent(message: str, persona: str, history: list = []) -> str:
+>>>>>>> 3f0a90a695747ea56160f9d8ac67114890e87eaf
     state = {
         "persona": persona,
         "raw_user_input": message,
