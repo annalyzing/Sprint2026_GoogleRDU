@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<<<<<<< HEAD
 <title>EduBridge — Closing the opportunity gap, county by county</title>
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
@@ -515,10 +516,442 @@
   }
   .map-ai-send:hover { opacity: 0.85; }
   .map-ai-send svg { width: 13px; height: 13px; color: #fff; }
+=======
+<title>EduBridge</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --bg: #0a0a0f;
+    --surface: #12121a;
+    --surface2: #1a1a26;
+    --border: #2a2a3a;
+    --text: #f0f0f5;
+    --muted: #6a6a8a;
+    --dim: #3a3a55;
+    --blue: #6e8ef7;
+    --purple: #a77bf5;
+    --green: #5fcf9f;
+    --orange: #f5a345;
+    --red: #f56e6e;
+  }
+
+  html, body {
+    height: 100%;
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Inter', sans-serif;
+    overflow: hidden;
+  }
+
+  /* ─── PROFILE SELECTION ─── */
+  #profile-screen {
+    position: fixed; inset: 0;
+    background: var(--bg);
+    display: flex; flex-direction: column;
+    align-items: center; justify-content: center;
+    z-index: 100;
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+
+  #profile-screen.exit {
+    opacity: 0;
+    transform: scale(1.04);
+    pointer-events: none;
+  }
+
+  .profile-logo {
+    font-size: 22px; font-weight: 600; letter-spacing: -0.5px;
+    margin-bottom: 56px; color: var(--text);
+  }
+  .profile-logo span {
+    background: linear-gradient(90deg, var(--blue), var(--purple));
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+  }
+
+  .profile-heading {
+    font-size: 28px; font-weight: 500; letter-spacing: -0.5px;
+    margin-bottom: 8px; text-align: center;
+  }
+  .profile-sub {
+    font-size: 14px; color: var(--muted);
+    margin-bottom: 48px; text-align: center;
+  }
+
+  .profile-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    max-width: 720px;
+    width: 100%;
+    padding: 0 24px;
+  }
+
+  .profile-card {
+    background: var(--surface);
+    border: 0.5px solid var(--border);
+    border-radius: 16px;
+    padding: 28px 16px 24px;
+    display: flex; flex-direction: column; align-items: center; gap: 12px;
+    cursor: pointer;
+    transition: border-color 0.2s, background 0.2s, transform 0.2s;
+    text-align: center;
+  }
+  .profile-card:hover {
+    border-color: var(--blue);
+    background: #16162a;
+    transform: translateY(-3px);
+  }
+
+  .profile-icon {
+    width: 52px; height: 52px; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 22px;
+    margin-bottom: 4px;
+  }
+
+  .profile-card-name {
+    font-size: 14px; font-weight: 500; color: var(--text);
+  }
+  .profile-card-desc {
+    font-size: 11px; color: var(--muted); line-height: 1.4;
+  }
+
+  /* ─── MAIN APP ─── */
+  #app {
+    position: fixed; inset: 0;
+    display: flex; flex-direction: column;
+    opacity: 0; pointer-events: none;
+    transition: opacity 0.5s ease 0.3s;
+  }
+  #app.visible { opacity: 1; pointer-events: all; }
+
+  /* Header */
+  .app-header {
+    height: 56px; flex-shrink: 0;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 0 24px;
+    border-bottom: 0.5px solid var(--border);
+    background: rgba(10,10,15,0.9);
+    backdrop-filter: blur(12px);
+    position: relative; z-index: 10;
+  }
+
+  .header-logo { font-size: 16px; font-weight: 600; letter-spacing: -0.3px; }
+  .header-logo span {
+    background: linear-gradient(90deg, var(--blue), var(--purple));
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+  }
+
+  .role-pill {
+    display: flex; align-items: center; gap: 8px;
+    background: var(--surface2);
+    border: 0.5px solid var(--border);
+    border-radius: 20px; padding: 6px 14px;
+    cursor: pointer; font-size: 12px; color: var(--text);
+    transition: border-color 0.2s;
+    position: relative;
+  }
+  .role-pill:hover { border-color: var(--blue); }
+  .role-dot { width: 6px; height: 6px; border-radius: 50%; }
+
+  /* Role switcher dropdown */
+  .role-dropdown {
+    position: absolute; top: calc(100% + 8px); right: 0;
+    background: var(--surface2);
+    border: 0.5px solid var(--border);
+    border-radius: 14px; padding: 8px;
+    min-width: 180px;
+    opacity: 0; pointer-events: none;
+    transform: translateY(-6px);
+    transition: opacity 0.18s, transform 0.18s;
+    z-index: 50;
+  }
+  .role-dropdown.open { opacity: 1; pointer-events: all; transform: translateY(0); }
+
+  .role-option {
+    display: flex; align-items: center; gap: 10px;
+    padding: 10px 12px; border-radius: 10px;
+    cursor: pointer; font-size: 13px; color: var(--muted);
+    transition: background 0.15s, color 0.15s;
+  }
+  .role-option:hover { background: var(--surface); color: var(--text); }
+  .role-option.current { color: var(--text); }
+  .role-option-dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
+
+  /* Nav */
+  .app-nav {
+    display: flex; gap: 2px;
+    padding: 0 16px;
+    border-bottom: 0.5px solid var(--border);
+    background: var(--bg);
+    position: relative;
+  }
+
+  .nav-tab {
+    padding: 12px 20px;
+    font-size: 13px; color: var(--muted);
+    cursor: pointer; position: relative;
+    transition: color 0.2s;
+    white-space: nowrap;
+  }
+  .nav-tab:hover { color: var(--text); }
+  .nav-tab.active { color: var(--text); }
+
+  .nav-underline {
+    position: absolute; bottom: 0; height: 2px;
+    background: linear-gradient(90deg, var(--blue), var(--purple));
+    border-radius: 2px 2px 0 0;
+    transition: left 0.25s cubic-bezier(.4,0,.2,1), width 0.25s cubic-bezier(.4,0,.2,1);
+  }
+
+  /* Content area */
+  .app-content {
+    flex: 1; overflow: hidden; position: relative;
+  }
+
+  .tab-panel {
+    position: absolute; inset: 0;
+    overflow-y: auto;
+    padding: 28px 28px 40px;
+    opacity: 0; pointer-events: none;
+    transform: translateY(10px);
+    transition: opacity 0.28s ease, transform 0.28s ease;
+  }
+  .tab-panel.active {
+    opacity: 1; pointer-events: all; transform: translateY(0);
+  }
+
+  /* ─── SHARED COMPONENTS ─── */
+  .rainbow-line {
+    height: 1.5px;
+    background: linear-gradient(90deg, var(--blue), var(--purple), var(--green), var(--orange));
+    border-radius: 2px; margin-bottom: 24px;
+  }
+
+  .section-label {
+    font-size: 11px; font-weight: 500; color: var(--muted);
+    text-transform: uppercase; letter-spacing: 0.8px;
+    margin-bottom: 12px;
+  }
+
+  .card {
+    background: var(--surface);
+    border: 0.5px solid var(--border);
+    border-radius: 14px;
+    padding: 18px;
+    margin-bottom: 12px;
+  }
+
+  .card-sm {
+    background: var(--surface);
+    border: 0.5px solid var(--border);
+    border-radius: 10px;
+    padding: 12px 14px;
+    margin-bottom: 8px;
+  }
+
+  .metric-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-top: 14px;
+  }
+
+  .metric-box {
+    background: #0f0f1a;
+    border: 0.5px solid var(--border);
+    border-radius: 10px;
+    padding: 12px;
+  }
+  .metric-label { font-size: 10px; color: var(--muted); margin-bottom: 4px; }
+  .metric-value { font-size: 18px; font-weight: 500; color: var(--text); }
+
+  /* AI Chat */
+  .chat-wrap {
+    background: var(--surface);
+    border: 0.5px solid var(--border);
+    border-radius: 24px;
+    padding: 14px 18px;
+    display: flex; align-items: center; gap: 12px;
+    margin-bottom: 16px;
+    cursor: text;
+  }
+  .chat-placeholder { font-size: 14px; color: var(--dim); flex: 1; }
+  .chat-send {
+    width: 32px; height: 32px;
+    background: linear-gradient(135deg, var(--blue), var(--purple));
+    border-radius: 50%; display: flex; align-items: center; justify-content: center;
+    cursor: pointer; flex-shrink: 0;
+    font-size: 14px;
+  }
+
+  .prompt-chips { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 20px; }
+  .prompt-chip {
+    background: var(--surface2);
+    border: 0.5px solid var(--border);
+    border-radius: 20px; padding: 7px 14px;
+    font-size: 12px; color: #9494cc;
+    cursor: pointer;
+    transition: border-color 0.15s, color 0.15s;
+  }
+  .prompt-chip:hover { border-color: var(--blue); color: var(--blue); }
+
+  .ai-response {
+    background: #0f0f1a;
+    border: 0.5px solid #2a2a40;
+    border-radius: 14px;
+    padding: 16px;
+    margin-bottom: 12px;
+  }
+  .ai-tag {
+    display: flex; align-items: center; gap: 6px;
+    margin-bottom: 10px;
+  }
+  .ai-glow {
+    width: 6px; height: 6px; border-radius: 50%;
+    background: linear-gradient(135deg, var(--blue), var(--purple));
+  }
+  .ai-name { font-size: 11px; font-weight: 500; color: var(--blue); }
+  .ai-text { font-size: 13px; color: #ccc; line-height: 1.6; }
+
+  /* Resource cards */
+  .resource-tag {
+    display: inline-block;
+    border-radius: 6px; padding: 3px 9px;
+    font-size: 10px; font-weight: 500;
+    margin-bottom: 8px;
+  }
+  .tag-stem { background: #1a1f35; border: 0.5px solid var(--blue); color: #8899ee; }
+  .tag-tutor { background: #0f1a18; border: 0.5px solid var(--green); color: var(--green); }
+  .tag-policy { background: #1a1020; border: 0.5px solid var(--purple); color: #c07af5; }
+  .tag-scholar { background: #1f1a0f; border: 0.5px solid var(--orange); color: var(--orange); }
+  .tag-fafsa { background: #1a0f20; border: 0.5px solid #c07af5; color: #c07af5; }
+
+  .resource-actions { display: flex; gap: 8px; margin-top: 12px; }
+  .res-btn {
+    background: var(--surface2); border: 0.5px solid var(--border);
+    border-radius: 8px; padding: 6px 12px;
+    font-size: 11px; color: var(--muted);
+    cursor: pointer; transition: color 0.15s, border-color 0.15s;
+  }
+  .res-btn:hover { color: var(--text); border-color: var(--dim); }
+
+  /* Map */
+  .map-area {
+    background: #0c1018;
+    border: 0.5px solid #1e2535;
+    border-radius: 16px;
+    height: 280px;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 16px;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .map-grid-bg {
+    position: absolute; inset: 0;
+    background-image: linear-gradient(#1a2030 1px, transparent 1px), linear-gradient(90deg, #1a2030 1px, transparent 1px);
+    background-size: 32px 32px;
+    opacity: 0.5;
+  }
+  .map-pin {
+    position: absolute; border-radius: 50%;
+    width: 12px; height: 12px;
+    cursor: pointer;
+    transition: transform 0.2s;
+  }
+  .map-pin:hover { transform: scale(1.4); }
+  .map-pin-label {
+    position: absolute;
+    background: var(--surface2);
+    border: 0.5px solid var(--border);
+    border-radius: 8px;
+    padding: 4px 8px;
+    font-size: 10px; color: var(--text);
+    white-space: nowrap;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.15s;
+    top: -28px; left: 50%; transform: translateX(-50%);
+  }
+  .map-pin:hover .map-pin-label { opacity: 1; }
+
+  .layer-pills { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 14px; }
+  .layer-pill {
+    background: var(--surface); border: 0.5px solid var(--border);
+    border-radius: 16px; padding: 6px 14px;
+    font-size: 12px; color: var(--muted);
+    cursor: pointer; transition: all 0.15s;
+  }
+  .layer-pill.on { background: #1a1a30; border-color: var(--blue); color: var(--blue); }
+
+  /* Report cards for policymaker */
+  .report-card {
+    background: var(--surface);
+    border: 0.5px solid var(--border);
+    border-radius: 14px;
+    padding: 18px;
+    margin-bottom: 10px;
+    display: flex; align-items: center; gap: 16px;
+    cursor: pointer;
+    transition: border-color 0.15s;
+  }
+  .report-card:hover { border-color: var(--purple); }
+  .report-icon {
+    width: 44px; height: 44px; border-radius: 10px;
+    background: #1a1030; border: 0.5px solid #3535a0;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 18px; flex-shrink: 0;
+  }
+
+  /* Insight cards */
+  .insight {
+    border-left: 2px solid var(--blue);
+    border-radius: 0 10px 10px 0;
+    background: #0f0f1a;
+    padding: 12px 14px;
+    margin-bottom: 8px;
+  }
+  .insight-title { font-size: 13px; font-weight: 500; color: var(--blue); margin-bottom: 3px; }
+  .insight-body { font-size: 12px; color: var(--muted); line-height: 1.4; }
+
+  /* Stat row for policymaker dashboard */
+  .kpi-grid {
+    display: grid; grid-template-columns: repeat(4, 1fr);
+    gap: 10px; margin-bottom: 20px;
+  }
+  .kpi-card {
+    background: var(--surface);
+    border: 0.5px solid var(--border);
+    border-radius: 12px; padding: 16px 14px;
+  }
+  .kpi-label { font-size: 10px; color: var(--muted); margin-bottom: 6px; }
+  .kpi-value { font-size: 22px; font-weight: 500; }
+  .kpi-change { font-size: 10px; color: var(--muted); margin-top: 3px; }
+
+  /* Scrollbar */
+  .tab-panel::-webkit-scrollbar { width: 4px; }
+  .tab-panel::-webkit-scrollbar-track { background: transparent; }
+  .tab-panel::-webkit-scrollbar-thumb { background: var(--border); border-radius: 2px; }
+
+  /* Two col layout */
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+
+  /* Page title */
+  .page-title { font-size: 20px; font-weight: 500; margin-bottom: 4px; letter-spacing: -0.3px; }
+  .page-sub { font-size: 13px; color: var(--muted); margin-bottom: 20px; }
+
+  /* Trend bar */
+  .trend-bar-wrap { background: #0f0f18; border-radius: 4px; height: 6px; margin-top: 6px; overflow: hidden; }
+  .trend-bar { height: 100%; border-radius: 4px; }
+>>>>>>> 3f0a90a695747ea56160f9d8ac67114890e87eaf
 </style>
 </head>
 <body>
 
+<<<<<<< HEAD
 <!-- ================= SITE HEADER ================= -->
 <header id="site-header">
   <div class="wrap header-inner">
@@ -675,10 +1108,79 @@
       <button class="cancel" id="modalcancel" onclick="closeModal()">Cancel</button>
       <button class="submit" id="modalsubmit">Add zone</button>
     </div>
+=======
+<!-- ═══ PROFILE SELECTION ═══ -->
+<div id="profile-screen">
+  <div class="profile-logo">Edu<span>Bridge</span></div>
+  <h1 class="profile-heading">Who's using EduBridge?</h1>
+  <p class="profile-sub">Your experience will be personalized for you.</p>
+  <div class="profile-grid">
+
+    <div class="profile-card" onclick="selectRole('parent')">
+      <div class="profile-icon" style="background:#1a1a2e;border:0.5px solid #3535a0;">👨‍👩‍👧</div>
+      <div class="profile-card-name">Parent</div>
+      <div class="profile-card-desc">Find resources and understand your child's school</div>
+    </div>
+
+    <div class="profile-card" onclick="selectRole('student')">
+      <div class="profile-icon" style="background:#0f1a18;border:0.5px solid #1a5040;">🎒</div>
+      <div class="profile-card-name">Student</div>
+      <div class="profile-card-desc">Discover scholarships, camps, and opportunities</div>
+    </div>
+
+    <div class="profile-card" onclick="selectRole('policy')">
+      <div class="profile-icon" style="background:#1a0f20;border:0.5px solid #50208a;">🏛️</div>
+      <div class="profile-card-name">Policymaker</div>
+      <div class="profile-card-desc">Analyze district data and generate reports</div>
+    </div>
+
+    <div class="profile-card" onclick="selectRole('general')">
+      <div class="profile-icon" style="background:#1a1510;border:0.5px solid #504020;">🔭</div>
+      <div class="profile-card-name">Explorer</div>
+      <div class="profile-card-desc">Browse equity data and explore freely</div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ═══ MAIN APP ═══ -->
+<div id="app">
+  <header class="app-header">
+    <div class="header-logo">Edu<span>Bridge</span></div>
+    <div class="role-pill" onclick="toggleDropdown(event)">
+      <div class="role-dot" id="role-dot"></div>
+      <span id="role-pill-label">Parent</span>
+      <span style="color:var(--muted);font-size:10px">▾</span>
+      <div class="role-dropdown" id="role-dropdown">
+        <div class="role-option" onclick="switchRole('parent')">
+          <div class="role-option-dot" style="background:#6e8ef7"></div> Parent
+        </div>
+        <div class="role-option" onclick="switchRole('student')">
+          <div class="role-option-dot" style="background:#5fcf9f"></div> Student
+        </div>
+        <div class="role-option" onclick="switchRole('policy')">
+          <div class="role-option-dot" style="background:#a77bf5"></div> Policymaker
+        </div>
+        <div class="role-option" onclick="switchRole('general')">
+          <div class="role-option-dot" style="background:#f5a345"></div> Explorer
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <nav class="app-nav" id="app-nav">
+    <!-- tabs injected by JS -->
+    <div class="nav-underline" id="nav-underline"></div>
+  </nav>
+
+  <div class="app-content" id="app-content">
+    <!-- panels injected by JS -->
+>>>>>>> 3f0a90a695747ea56160f9d8ac67114890e87eaf
   </div>
 </div>
 
 <script>
+<<<<<<< HEAD
 /* ============ ICONS ============ */
 const ICON = {
   explore: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M15 9l-2 5-5 2 2-5 5-2Z"/></svg>',
@@ -1422,6 +1924,524 @@ function goTab(i) {
   document.querySelectorAll('.header-tab')[tab]?.classList.add('active');
   wireExploreBlock(role);
   updateTabMeta();
+=======
+const ROLES = {
+  parent: {
+    color: '#6e8ef7',
+    label: 'Parent',
+    tabs: ['AI Assistant', 'Map', 'Community', 'Profile'],
+    defaultTab: 0
+  },
+  student: {
+    color: '#5fcf9f',
+    label: 'Student',
+    tabs: ['Opportunities', 'Map', 'AI Assistant', 'Profile'],
+    defaultTab: 0
+  },
+  policy: {
+    color: '#a77bf5',
+    label: 'Policymaker',
+    tabs: ['Dashboard', 'Map', 'Reports', 'AI Assistant'],
+    defaultTab: 0
+  },
+  general: {
+    color: '#f5a345',
+    label: 'Explorer',
+    tabs: ['Map', 'AI Assistant', 'Community', 'Profile'],
+    defaultTab: 0
+  }
+};
+
+const CONTENT = {
+  parent: {
+    'AI Assistant': `
+      <div class="page-title">Good morning.</div>
+      <div class="page-sub">Ask anything about your child's school or district.</div>
+      <div class="rainbow-line"></div>
+      <div class="chat-wrap">
+        <span style="font-size:16px;color:var(--dim)">🔍</span>
+        <span class="chat-placeholder">Why is my district underperforming?</span>
+        <div class="chat-send">↑</div>
+      </div>
+      <div class="prompt-chips">
+        <span class="prompt-chip">How does transportation affect attendance?</span>
+        <span class="prompt-chip">Broadband access in my ZIP</span>
+        <span class="prompt-chip">Compare nearby schools</span>
+        <span class="prompt-chip">Find free tutoring near me</span>
+        <span class="prompt-chip">What is my district's equity score?</span>
+      </div>
+      <div class="section-label">AI Response</div>
+      <div class="ai-response">
+        <div class="ai-tag"><div class="ai-glow"></div><span class="ai-name">EduBridge AI</span></div>
+        <p class="ai-text">Students in your area have <span style="color:var(--purple);font-weight:500">[X]% lower broadband access</span> than the state average. Transportation barriers contribute to higher absenteeism — roughly <span style="color:var(--orange);font-weight:500">[X] days missed per year</span> above the state median. Here are nearby resources.</p>
+        <div class="metric-grid">
+          <div class="metric-box"><div class="metric-label">Funding gap</div><div class="metric-value" style="color:var(--red)">$[X]</div></div>
+          <div class="metric-box"><div class="metric-label">Broadband</div><div class="metric-value" style="color:var(--orange)">[X]%</div></div>
+          <div class="metric-box"><div class="metric-label">Grad rate</div><div class="metric-value" style="color:var(--green)">[X]%</div></div>
+        </div>
+        <div style="margin-top:12px;background:#0a1210;border:0.5px solid #1a3028;border-radius:10px;padding:12px">
+          <div style="font-size:11px;color:var(--green);font-weight:500;margin-bottom:6px">📍 Nearby resources</div>
+          <div style="font-size:12px;color:var(--muted);margin-bottom:4px">[Organization] · [X] mi away · Free tutoring</div>
+          <div style="font-size:12px;color:var(--muted)">[Organization] · [X] mi away · Internet assistance</div>
+        </div>
+      </div>`,
+
+    'Map': `
+      <div class="page-title">Equity map</div>
+      <div class="page-sub">Explore educational data across counties and districts.</div>
+      <div class="layer-pills">
+        <span class="layer-pill on" onclick="togglePill(this)">Equity score</span>
+        <span class="layer-pill" onclick="togglePill(this)">Funding</span>
+        <span class="layer-pill" onclick="togglePill(this)">Broadband</span>
+        <span class="layer-pill" onclick="togglePill(this)">Transport</span>
+        <span class="layer-pill" onclick="togglePill(this)">Grad rate</span>
+      </div>
+      <div class="map-area">
+        <div class="map-grid-bg"></div>
+        <div class="map-pin" style="top:38%;left:40%;background:#6e8ef7;box-shadow:0 0 10px #6e8ef766"><div class="map-pin-label">Durham Co.</div></div>
+        <div class="map-pin" style="top:55%;left:58%;background:#a77bf5;box-shadow:0 0 10px #a77bf566"><div class="map-pin-label">Wake Co.</div></div>
+        <div class="map-pin" style="top:45%;left:28%;background:#5fcf9f;box-shadow:0 0 10px #5fcf9f66"><div class="map-pin-label">Orange Co.</div></div>
+        <div class="map-pin" style="top:25%;left:62%;background:#f5a345;box-shadow:0 0 10px #f5a34566"><div class="map-pin-label">Person Co.</div></div>
+        <div class="map-pin" style="top:65%;left:44%;background:#f56e6e;box-shadow:0 0 10px #f56e6e66"><div class="map-pin-label">Harnett Co.</div></div>
+        <div style="position:absolute;bottom:12px;right:12px;display:flex;gap:8px">
+          <div style="display:flex;align-items:center;gap:4px"><div style="width:8px;height:8px;background:#6e8ef7;border-radius:50%"></div><span style="font-size:10px;color:var(--muted)">High</span></div>
+          <div style="display:flex;align-items:center;gap:4px"><div style="width:8px;height:8px;background:#f5a345;border-radius:50%"></div><span style="font-size:10px;color:var(--muted)">Mid</span></div>
+          <div style="display:flex;align-items:center;gap:4px"><div style="width:8px;height:8px;background:#f56e6e;border-radius:50%"></div><span style="font-size:10px;color:var(--muted)">Low</span></div>
+        </div>
+      </div>
+      <div class="section-label">Selected county</div>
+      <div class="card">
+        <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:12px">
+          <div>
+            <div style="font-size:16px;font-weight:500">[County Name]</div>
+            <div style="font-size:11px;color:var(--muted);margin-top:2px">[State] · Tap a pin to select</div>
+          </div>
+          <div style="font-size:28px;font-weight:600;background:linear-gradient(90deg,var(--blue),var(--purple));-webkit-background-clip:text;-webkit-text-fill-color:transparent">[XX]</div>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:0">
+          ${['Funding per pupil', 'Broadband access', 'Transportation index', 'Graduation rate', 'Teacher shortages'].map(m => `
+          <div style="display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:0.5px solid var(--border)">
+            <span style="font-size:12px;color:var(--muted)">${m}</span>
+            <span style="font-size:12px;font-weight:500;color:var(--text)">[—]</span>
+          </div>`).join('')}
+        </div>
+      </div>`,
+
+    'Community': `
+      <div class="page-title">Community resources</div>
+      <div class="page-sub">Programs, events, and support near you.</div>
+      <div class="layer-pills">
+        <span class="layer-pill on" onclick="togglePill(this)">Near me</span>
+        <span class="layer-pill" onclick="togglePill(this)">Free</span>
+        <span class="layer-pill" onclick="togglePill(this)">Virtual</span>
+        <span class="layer-pill" onclick="togglePill(this)">K–5</span>
+        <span class="layer-pill" onclick="togglePill(this)">Middle</span>
+        <span class="layer-pill" onclick="togglePill(this)">High school</span>
+      </div>
+      ${[
+        {tag:'tag-tutor',label:'TUTORING',name:'[Tutoring Organization]',meta:'[Date] · [Location] · Free',desc:'After-school tutoring in math and reading. Open enrollment, no waitlist.'},
+        {tag:'tag-stem',label:'STEM CAMP',name:'[STEM Program Name]',meta:'[Date] · [Location] · Free',desc:'Hands-on science and coding for grades 4–8. Limited spots available.'},
+        {tag:'tag-fafsa',label:'FAFSA WORKSHOP',name:'[Workshop Organization]',meta:'[Date] · Virtual · Free',desc:'Step-by-step FAFSA completion help with financial aid advisors.'},
+        {tag:'tag-scholar',label:'SCHOLARSHIPS',name:'[Scholarship Program]',meta:'Deadline [Date] · [Amount]',desc:'Need-based scholarship for high school seniors in [District].'},
+      ].map(e => `
+      <div class="card">
+        <span class="resource-tag ${e.tag}">${e.label}</span>
+        <div style="font-size:14px;font-weight:500;margin-bottom:3px">${e.name}</div>
+        <div style="font-size:11px;color:var(--muted);margin-bottom:8px">${e.meta}</div>
+        <div style="font-size:12px;color:#aaa;line-height:1.5">${e.desc}</div>
+        <div class="resource-actions">
+          <button class="res-btn">❤️ Save</button>
+          <button class="res-btn">📅 Calendar</button>
+          <button class="res-btn">📍 Map</button>
+        </div>
+      </div>`).join('')}`,
+
+    'Profile': `
+      <div style="display:flex;align-items:center;gap:16px;margin-bottom:24px">
+        <div style="width:60px;height:60px;border-radius:50%;background:linear-gradient(135deg,var(--blue),var(--purple));display:flex;align-items:center;justify-content:center;font-size:22px;font-weight:600;color:#fff;flex-shrink:0">[A]</div>
+        <div>
+          <div style="font-size:18px;font-weight:500">[Your name]</div>
+          <div style="font-size:12px;color:var(--muted);margin-top:2px">Parent · [District] · [State]</div>
+        </div>
+      </div>
+      <div class="rainbow-line"></div>
+      <div class="section-label">Personalized insights</div>
+      <div class="insight"><div class="insight-title">Broadband assistance</div><div class="insight-body">You may qualify for discounted internet. Add your ZIP to check eligibility.</div></div>
+      <div class="insight" style="border-left-color:var(--green)"><div class="insight-title" style="color:var(--green)">STEM camp nearby</div><div class="insight-body">An event [X] miles away matches your child's grade level.</div></div>
+      <div class="insight" style="border-left-color:var(--orange)"><div class="insight-title" style="color:var(--orange)">District report updated</div><div class="insight-body">Funding data for your district was refreshed this week.</div></div>
+      <div class="section-label" style="margin-top:20px">Your details</div>
+      ${['ZIP code', 'School district', "Child's grade", 'School name'].map(f => `
+      <div class="card-sm" style="display:flex;justify-content:space-between;align-items:center">
+        <span style="font-size:13px;color:var(--muted)">${f}</span>
+        <span style="font-size:12px;color:var(--dim)">[Not set]</span>
+      </div>`).join('')}`
+  },
+
+  student: {
+    'Opportunities': `
+      <div class="page-title">Your opportunities</div>
+      <div class="page-sub">Filtered for your grade and ZIP code.</div>
+      <div class="layer-pills">
+        <span class="layer-pill on" onclick="togglePill(this)">All</span>
+        <span class="layer-pill" onclick="togglePill(this)">Scholarships</span>
+        <span class="layer-pill" onclick="togglePill(this)">Internships</span>
+        <span class="layer-pill" onclick="togglePill(this)">STEM</span>
+        <span class="layer-pill" onclick="togglePill(this)">College prep</span>
+        <span class="layer-pill" onclick="togglePill(this)">Free</span>
+      </div>
+      ${[
+        {tag:'tag-scholar',label:'SCHOLARSHIP',name:'[Scholarship Name]',meta:'Deadline [Date] · Up to $[X,XXX]',desc:'Need-based award for [grade] students in [district]. Essays required.'},
+        {tag:'tag-stem',label:'STEM INTERNSHIP',name:'[Company / Org Name]',meta:'[Date range] · [Location] · Paid',desc:'Summer internship in engineering or computer science for rising juniors and seniors.'},
+        {tag:'tag-tutor',label:'FREE TUTORING',name:'[Tutoring Program]',meta:'Ongoing · Virtual · Free',desc:'Weekly sessions in math, science, and writing. Available to all grade levels.'},
+        {tag:'tag-policy',label:'COLLEGE PREP',name:'[Program Name]',meta:'[Date] · [Location] · Free',desc:'Application workshops, essay reviews, and financial aid guidance for seniors.'},
+      ].map(e => `
+      <div class="card">
+        <span class="resource-tag ${e.tag}">${e.label}</span>
+        <div style="font-size:14px;font-weight:500;margin-bottom:3px">${e.name}</div>
+        <div style="font-size:11px;color:var(--muted);margin-bottom:8px">${e.meta}</div>
+        <div style="font-size:12px;color:#aaa;line-height:1.5">${e.desc}</div>
+        <div class="resource-actions">
+          <button class="res-btn">❤️ Save</button>
+          <button class="res-btn">📅 Remind me</button>
+          <button class="res-btn">🔗 Apply</button>
+        </div>
+      </div>`).join('')}`,
+
+    'Map': `
+      <div class="page-title">Programs near you</div>
+      <div class="page-sub">See opportunities on the map.</div>
+      <div class="layer-pills">
+        <span class="layer-pill on" onclick="togglePill(this)">Programs</span>
+        <span class="layer-pill" onclick="togglePill(this)">Schools</span>
+        <span class="layer-pill" onclick="togglePill(this)">Colleges</span>
+      </div>
+      <div class="map-area">
+        <div class="map-grid-bg"></div>
+        <div class="map-pin" style="top:42%;left:38%;background:var(--green);box-shadow:0 0 10px #5fcf9f66"><div class="map-pin-label">Tutoring center</div></div>
+        <div class="map-pin" style="top:52%;left:60%;background:var(--blue);box-shadow:0 0 10px #6e8ef766"><div class="map-pin-label">STEM camp</div></div>
+        <div class="map-pin" style="top:30%;left:50%;background:var(--orange);box-shadow:0 0 10px #f5a34566"><div class="map-pin-label">Scholarship workshop</div></div>
+      </div>
+      <div class="section-label">[X] programs found near [ZIP]</div>
+      ${['[Tutoring Center Name] · [X] mi · Free','[STEM Camp] · [X] mi · Grades 6–12','[College Prep Workshop] · [X] mi · Free'].map(p => `
+      <div class="card-sm" style="display:flex;justify-content:space-between;align-items:center">
+        <span style="font-size:13px;color:var(--text)">${p}</span>
+        <span style="font-size:18px;cursor:pointer">›</span>
+      </div>`).join('')}`,
+
+    'AI Assistant': `
+      <div class="page-title">Ask EduBridge</div>
+      <div class="page-sub">Get answers about your academic future.</div>
+      <div class="rainbow-line"></div>
+      <div class="chat-wrap">
+        <span style="font-size:16px;color:var(--dim)">🔍</span>
+        <span class="chat-placeholder">What scholarships can I apply for?</span>
+        <div class="chat-send">↑</div>
+      </div>
+      <div class="prompt-chips">
+        <span class="prompt-chip">Scholarships for [grade] students</span>
+        <span class="prompt-chip">STEM camps near me</span>
+        <span class="prompt-chip">How do I apply for FAFSA?</span>
+        <span class="prompt-chip">What colleges accept students from my district?</span>
+      </div>
+      <div class="section-label">AI response</div>
+      <div class="ai-response">
+        <div class="ai-tag"><div class="ai-glow" style="background:linear-gradient(135deg,var(--green),var(--blue))"></div><span class="ai-name" style="color:var(--green)">EduBridge AI</span></div>
+        <p class="ai-text">Based on your grade and ZIP, you may qualify for <span style="color:var(--green);font-weight:500">[X] scholarships</span> currently open. The nearest STEM opportunity is <span style="color:var(--blue);font-weight:500">[X] miles away</span> and accepts rolling applications. Your district's graduation rate is <span style="color:var(--orange);font-weight:500">[X]%</span> — here's how that compares.</p>
+      </div>`,
+
+    'Profile': `
+      <div style="display:flex;align-items:center;gap:16px;margin-bottom:24px">
+        <div style="width:60px;height:60px;border-radius:50%;background:linear-gradient(135deg,var(--green),var(--blue));display:flex;align-items:center;justify-content:center;font-size:22px;font-weight:600;color:#fff">[A]</div>
+        <div>
+          <div style="font-size:18px;font-weight:500">[Your name]</div>
+          <div style="font-size:12px;color:var(--muted);margin-top:2px">Student · Grade [X] · [School]</div>
+        </div>
+      </div>
+      <div class="rainbow-line"></div>
+      <div class="section-label">Saved opportunities</div>
+      <div class="card-sm" style="display:flex;justify-content:space-between"><span style="font-size:13px;color:var(--muted)">Saved scholarships</span><span style="font-size:13px;color:var(--text)">—</span></div>
+      <div class="card-sm" style="display:flex;justify-content:space-between"><span style="font-size:13px;color:var(--muted)">Upcoming deadlines</span><span style="font-size:13px;color:var(--text)">—</span></div>
+      <div class="card-sm" style="display:flex;justify-content:space-between"><span style="font-size:13px;color:var(--muted)">Saved programs</span><span style="font-size:13px;color:var(--text)">—</span></div>
+      <div class="section-label" style="margin-top:20px">Your details</div>
+      ${['ZIP code','Grade level','School name','Interests'].map(f => `
+      <div class="card-sm" style="display:flex;justify-content:space-between;align-items:center">
+        <span style="font-size:13px;color:var(--muted)">${f}</span>
+        <span style="font-size:12px;color:var(--dim)">[Not set]</span>
+      </div>`).join('')}`
+  },
+
+  policy: {
+    'Dashboard': `
+      <div class="page-title">District overview</div>
+      <div class="page-sub">Equity metrics across your selected region.</div>
+      <div class="rainbow-line"></div>
+      <div class="kpi-grid">
+        <div class="kpi-card"><div class="kpi-label">Avg equity score</div><div class="kpi-value" style="color:var(--orange)">[XX]</div><div class="kpi-change">↓ [X] from last year</div></div>
+        <div class="kpi-card"><div class="kpi-label">Funding gap</div><div class="kpi-value" style="color:var(--red)">$[X]B</div><div class="kpi-change">Statewide</div></div>
+        <div class="kpi-card"><div class="kpi-label">Broadband gap</div><div class="kpi-value" style="color:var(--purple)">[X]%</div><div class="kpi-change">Below state avg</div></div>
+        <div class="kpi-card"><div class="kpi-label">Teacher shortage</div><div class="kpi-value" style="color:var(--blue)">[X]K</div><div class="kpi-change">Open positions</div></div>
+      </div>
+      <div class="section-label">District breakdown</div>
+      ${['[District A]','[District B]','[District C]','[District D]'].map((d,i) => `
+      <div class="card-sm">
+        <div style="display:flex;justify-content:space-between;margin-bottom:6px">
+          <span style="font-size:13px;font-weight:500">${d}</span>
+          <span style="font-size:12px;color:var(--muted)">Score: [XX]</span>
+        </div>
+        <div class="trend-bar-wrap"><div class="trend-bar" style="width:${[72,54,38,61][i]}%;background:${['var(--blue)','var(--orange)','var(--red)','var(--green)'][i]}"></div></div>
+      </div>`).join('')}
+      <div class="section-label" style="margin-top:20px">Quick actions</div>
+      <div class="two-col">
+        <div class="card" style="cursor:pointer"><div style="font-size:18px;margin-bottom:6px">📊</div><div style="font-size:13px;font-weight:500">Generate report</div><div style="font-size:11px;color:var(--muted);margin-top:3px">Export district summary</div></div>
+        <div class="card" style="cursor:pointer"><div style="font-size:18px;margin-bottom:6px">⚖️</div><div style="font-size:13px;font-weight:500">Compare districts</div><div style="font-size:11px;color:var(--muted);margin-top:3px">Side-by-side metrics</div></div>
+      </div>`,
+
+    'Map': `
+      <div class="page-title">Equity map</div>
+      <div class="page-sub">District and county-level data visualization.</div>
+      <div class="layer-pills">
+        <span class="layer-pill on" onclick="togglePill(this)">Equity score</span>
+        <span class="layer-pill" onclick="togglePill(this)">Funding</span>
+        <span class="layer-pill" onclick="togglePill(this)">Broadband</span>
+        <span class="layer-pill" onclick="togglePill(this)">Transport</span>
+        <span class="layer-pill" onclick="togglePill(this)">Absenteeism</span>
+        <span class="layer-pill" onclick="togglePill(this)">Teacher shortage</span>
+      </div>
+      <div class="map-area">
+        <div class="map-grid-bg"></div>
+        <div class="map-pin" style="top:38%;left:40%;background:var(--blue);box-shadow:0 0 10px #6e8ef766"><div class="map-pin-label">District A</div></div>
+        <div class="map-pin" style="top:55%;left:58%;background:var(--orange);box-shadow:0 0 10px #f5a34566"><div class="map-pin-label">District B</div></div>
+        <div class="map-pin" style="top:45%;left:28%;background:var(--red);box-shadow:0 0 10px #f56e6e66"><div class="map-pin-label">District C</div></div>
+        <div class="map-pin" style="top:25%;left:62%;background:var(--green);box-shadow:0 0 10px #5fcf9f66"><div class="map-pin-label">District D</div></div>
+      </div>
+      <div class="card">
+        <div style="font-size:14px;font-weight:500;margin-bottom:12px">[Selected District]</div>
+        ${['Funding per pupil','Broadband access','Chronic absenteeism','Grad rate','Open teaching positions'].map(m => `
+        <div style="display:flex;justify-content:space-between;align-items:center;padding:7px 0;border-bottom:0.5px solid var(--border)">
+          <span style="font-size:12px;color:var(--muted)">${m}</span>
+          <span style="font-size:12px;font-weight:500">[—]</span>
+        </div>`).join('')}
+        <button style="margin-top:12px;width:100%;background:#14102a;border:0.5px solid #3535a0;border-radius:10px;padding:10px;color:var(--purple);font-size:12px;cursor:pointer;font-family:inherit">✦ Generate district report</button>
+      </div>`,
+
+    'Reports': `
+      <div class="page-title">Reports</div>
+      <div class="page-sub">Exportable summaries and analysis.</div>
+      <div class="rainbow-line"></div>
+      <div class="section-label">Recent reports</div>
+      ${[
+        {icon:'📊',name:'[District] Equity Summary',meta:'Generated [date] · PDF · [X] pages'},
+        {icon:'📉',name:'Statewide Funding Gap Analysis',meta:'Generated [date] · PDF · [X] pages'},
+        {icon:'🗺️',name:'Broadband Access by County',meta:'Generated [date] · CSV + PDF'},
+        {icon:'👩‍🏫',name:'Teacher Shortage Report — [Region]',meta:'Generated [date] · PDF · [X] pages'},
+      ].map(r => `
+      <div class="report-card">
+        <div class="report-icon">${r.icon}</div>
+        <div style="flex:1">
+          <div style="font-size:13px;font-weight:500;margin-bottom:3px">${r.name}</div>
+          <div style="font-size:11px;color:var(--muted)">${r.meta}</div>
+        </div>
+        <span style="font-size:18px;color:var(--muted)">↓</span>
+      </div>`).join('')}
+      <div style="background:var(--surface2);border:0.5px dashed var(--border);border-radius:14px;padding:20px;text-align:center;margin-top:8px">
+        <div style="font-size:24px;margin-bottom:8px">+</div>
+        <div style="font-size:13px;font-weight:500;margin-bottom:4px">Generate new report</div>
+        <div style="font-size:12px;color:var(--muted)">Choose a district, region, or custom data set</div>
+      </div>`,
+
+    'AI Assistant': `
+      <div class="page-title">Policy AI</div>
+      <div class="page-sub">Generate analysis, summaries, and reports on demand.</div>
+      <div class="rainbow-line"></div>
+      <div class="chat-wrap">
+        <span style="font-size:16px;color:var(--dim)">🔍</span>
+        <span class="chat-placeholder">Summarize funding gaps in [district]</span>
+        <div class="chat-send">↑</div>
+      </div>
+      <div class="prompt-chips">
+        <span class="prompt-chip">Compare [District A] vs [District B]</span>
+        <span class="prompt-chip">What drives absenteeism in [county]?</span>
+        <span class="prompt-chip">Generate executive summary for [district]</span>
+        <span class="prompt-chip">Broadband access trends 2020–2024</span>
+      </div>
+      <div class="section-label">AI response</div>
+      <div class="ai-response">
+        <div class="ai-tag"><div class="ai-glow" style="background:linear-gradient(135deg,var(--purple),var(--blue))"></div><span class="ai-name" style="color:var(--purple)">EduBridge AI</span></div>
+        <p class="ai-text">[District] shows a <span style="color:var(--red);font-weight:500">$[X] per-pupil funding gap</span> compared to the state average, correlating with a <span style="color:var(--orange);font-weight:500">[X]% lower graduation rate</span>. Chronic absenteeism is <span style="color:var(--purple);font-weight:500">[X] points above state median</span>, driven primarily by transportation access in rural zones.</p>
+        <button style="margin-top:12px;background:#14102a;border:0.5px solid #3535a0;border-radius:8px;padding:8px 16px;color:var(--purple);font-size:12px;cursor:pointer;font-family:inherit">Export as PDF report ↓</button>
+      </div>`
+  },
+
+  general: {
+    'Map': `
+      <div class="page-title">Explore equity data</div>
+      <div class="page-sub">Browse educational opportunity across the country.</div>
+      <div class="layer-pills">
+        <span class="layer-pill on" onclick="togglePill(this)">Equity score</span>
+        <span class="layer-pill" onclick="togglePill(this)">Funding</span>
+        <span class="layer-pill" onclick="togglePill(this)">Broadband</span>
+        <span class="layer-pill" onclick="togglePill(this)">Transport</span>
+        <span class="layer-pill" onclick="togglePill(this)">Grad rate</span>
+      </div>
+      <div class="map-area">
+        <div class="map-grid-bg"></div>
+        <div class="map-pin" style="top:35%;left:40%;background:var(--blue);box-shadow:0 0 10px #6e8ef766"><div class="map-pin-label">Durham Co.</div></div>
+        <div class="map-pin" style="top:50%;left:58%;background:var(--orange);box-shadow:0 0 10px #f5a34566"><div class="map-pin-label">Wake Co.</div></div>
+        <div class="map-pin" style="top:62%;left:30%;background:var(--red);box-shadow:0 0 10px #f56e6e66"><div class="map-pin-label">Harnett Co.</div></div>
+        <div class="map-pin" style="top:25%;left:65%;background:var(--green);box-shadow:0 0 10px #5fcf9f66"><div class="map-pin-label">Person Co.</div></div>
+        <div class="map-pin" style="top:45%;left(22%;background:var(--purple);box-shadow:0 0 10px #a77bf566"><div class="map-pin-label">Orange Co.</div></div>
+      </div>
+      <div class="section-label">About this data</div>
+      <div class="card">
+        <p style="font-size:13px;color:#aaa;line-height:1.6">EduBridge aggregates public data on school funding, broadband access, transportation, graduation rates, and teacher shortages to generate county and district-level equity scores. Set a role to personalize what you see.</p>
+        <button style="margin-top:12px;background:linear-gradient(135deg,#1a1a30,#1e1030);border:0.5px solid var(--blue);border-radius:10px;padding:10px 16px;color:var(--blue);font-size:12px;cursor:pointer;font-family:inherit;width:100%">Set your role for personalized insights</button>
+      </div>`,
+
+    'AI Assistant': `
+      <div class="page-title">Ask EduBridge</div>
+      <div class="page-sub">Open-ended questions about education equity.</div>
+      <div class="rainbow-line"></div>
+      <div class="chat-wrap">
+        <span style="font-size:16px;color:var(--dim)">🔍</span>
+        <span class="chat-placeholder">Ask anything about education equity…</span>
+        <div class="chat-send">↑</div>
+      </div>
+      <div class="prompt-chips">
+        <span class="prompt-chip">What is an equity score?</span>
+        <span class="prompt-chip">How does broadband affect graduation?</span>
+        <span class="prompt-chip">Which states have the biggest funding gaps?</span>
+        <span class="prompt-chip">What causes teacher shortages?</span>
+      </div>
+      <div class="section-label">AI response</div>
+      <div class="ai-response">
+        <div class="ai-tag"><div class="ai-glow" style="background:linear-gradient(135deg,var(--orange),var(--purple))"></div><span class="ai-name" style="color:var(--orange)">EduBridge AI</span></div>
+        <p class="ai-text">Educational equity scores combine funding, broadband access, transportation, graduation rates, and teacher availability into a single 0–100 index. Counties below <span style="color:var(--orange);font-weight:500">50</span> face systemic barriers that compound over time. Set your role to get answers specific to your situation.</p>
+      </div>`,
+
+    'Community': `
+      <div class="page-title">Community resources</div>
+      <div class="page-sub">Programs and events across all categories.</div>
+      <div class="layer-pills">
+        <span class="layer-pill on" onclick="togglePill(this)">All</span>
+        <span class="layer-pill" onclick="togglePill(this)">Free</span>
+        <span class="layer-pill" onclick="togglePill(this)">Virtual</span>
+        <span class="layer-pill" onclick="togglePill(this)">K–12</span>
+        <span class="layer-pill" onclick="togglePill(this)">College</span>
+      </div>
+      ${[
+        {tag:'tag-tutor',label:'TUTORING',name:'[Organization Name]',meta:'[Date] · [Location] · Free',desc:'Open enrollment tutoring across all subjects and grade levels.'},
+        {tag:'tag-stem',label:'STEM',name:'[Program Name]',meta:'[Date] · Virtual · Free',desc:'Online STEM enrichment open to all students grades 6–12.'},
+        {tag:'tag-scholar',label:'SCHOLARSHIP',name:'[Scholarship Name]',meta:'Deadline [Date]',desc:'Annual scholarship for students demonstrating financial need.'},
+      ].map(e => `
+      <div class="card">
+        <span class="resource-tag ${e.tag}">${e.label}</span>
+        <div style="font-size:14px;font-weight:500;margin-bottom:3px">${e.name}</div>
+        <div style="font-size:11px;color:var(--muted);margin-bottom:8px">${e.meta}</div>
+        <div style="font-size:12px;color:#aaa;line-height:1.5">${e.desc}</div>
+        <div class="resource-actions">
+          <button class="res-btn">❤️ Save</button>
+          <button class="res-btn">📅 Calendar</button>
+        </div>
+      </div>`).join('')}`,
+
+    'Profile': `
+      <div style="text-align:center;padding:32px 0 24px">
+        <div style="width:64px;height:64px;border-radius:50%;background:linear-gradient(135deg,var(--orange),var(--purple));display:flex;align-items:center;justify-content:center;font-size:24px;margin:0 auto 12px">🔭</div>
+        <div style="font-size:18px;font-weight:500">Exploring as Guest</div>
+        <div style="font-size:12px;color:var(--muted);margin-top:4px">Set a role to personalize your experience</div>
+      </div>
+      <div class="rainbow-line"></div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:20px">
+        ${['Parent','Student','Policymaker','Explorer'].map((r,i) => `
+        <div class="card" style="text-align:center;cursor:pointer;padding:16px" onclick="switchRole('${['parent','student','policy','general'][i]}')">
+          <div style="font-size:20px;margin-bottom:6px">${['👨‍👩‍👧','🎒','🏛️','🔭'][i]}</div>
+          <div style="font-size:13px;font-weight:500">${r}</div>
+        </div>`).join('')}
+      </div>`
+  }
+};
+
+let currentRole = null;
+let currentTab = 0;
+
+function selectRole(role) {
+  const ps = document.getElementById('profile-screen');
+  ps.classList.add('exit');
+  setTimeout(() => {
+    ps.style.display = 'none';
+    initApp(role);
+  }, 600);
+}
+
+function initApp(role) {
+  currentRole = role;
+  currentTab = ROLES[role].defaultTab;
+  const app = document.getElementById('app');
+  updateRolePill();
+  buildNav();
+  buildContent();
+  app.classList.add('visible');
+}
+
+function updateRolePill() {
+  const r = ROLES[currentRole];
+  document.getElementById('role-dot').style.background = r.color;
+  document.getElementById('role-pill-label').textContent = r.label;
+  // mark current in dropdown
+  document.querySelectorAll('.role-option').forEach((el,i) => {
+    const roles = ['parent','student','policy','general'];
+    el.classList.toggle('current', roles[i] === currentRole);
+  });
+}
+
+function buildNav() {
+  const nav = document.getElementById('app-nav');
+  const tabs = ROLES[currentRole].tabs;
+  // remove old tabs
+  nav.querySelectorAll('.nav-tab').forEach(t => t.remove());
+  tabs.forEach((tab, i) => {
+    const el = document.createElement('div');
+    el.className = 'nav-tab' + (i === currentTab ? ' active' : '');
+    el.textContent = tab;
+    el.onclick = () => goTab(i);
+    nav.insertBefore(el, nav.querySelector('.nav-underline'));
+  });
+  positionUnderline();
+}
+
+function buildContent() {
+  const container = document.getElementById('app-content');
+  container.innerHTML = '';
+  const tabs = ROLES[currentRole].tabs;
+  tabs.forEach((tab, i) => {
+    const panel = document.createElement('div');
+    panel.className = 'tab-panel' + (i === currentTab ? ' active' : '');
+    panel.id = 'panel-' + i;
+    panel.innerHTML = (CONTENT[currentRole] && CONTENT[currentRole][tab]) || `<div class="page-title">${tab}</div><div class="page-sub">Content coming soon.</div>`;
+    container.appendChild(panel);
+  });
+}
+
+function goTab(idx) {
+  if (idx === currentTab) return;
+  const old = document.getElementById('panel-' + currentTab);
+  if (old) old.classList.remove('active');
+  document.querySelectorAll('.nav-tab')[currentTab]?.classList.remove('active');
+  currentTab = idx;
+  const next = document.getElementById('panel-' + currentTab);
+  if (next) next.classList.add('active');
+  document.querySelectorAll('.nav-tab')[currentTab]?.classList.add('active');
+  positionUnderline();
+}
+
+function positionUnderline() {
+  const tabs = document.querySelectorAll('.nav-tab');
+  const underline = document.getElementById('nav-underline');
+  if (!tabs[currentTab]) return;
+  const tab = tabs[currentTab];
+  underline.style.left = tab.offsetLeft + 'px';
+  underline.style.width = tab.offsetWidth + 'px';
+>>>>>>> 3f0a90a695747ea56160f9d8ac67114890e87eaf
 }
 
 function toggleDropdown(e) {
@@ -1429,6 +2449,7 @@ function toggleDropdown(e) {
   document.getElementById('role-dropdown').classList.toggle('open');
 }
 
+<<<<<<< HEAD
 function switchRole(r) {
   document.getElementById('role-dropdown').classList.remove('open');
   if (r===role) return;
@@ -1527,6 +2548,40 @@ function submitAIRec() {
     aiRecCallCount++;
   }, 1300);
 }
+=======
+function switchRole(role) {
+  document.getElementById('role-dropdown').classList.remove('open');
+  if (role === currentRole) return;
+  // fade out content
+  const content = document.getElementById('app-content');
+  const nav = document.getElementById('app-nav');
+  content.style.opacity = '0';
+  content.style.transform = 'translateY(8px)';
+  content.style.transition = 'opacity 0.2s, transform 0.2s';
+  nav.style.opacity = '0';
+  nav.style.transition = 'opacity 0.2s';
+  setTimeout(() => {
+    currentRole = role;
+    currentTab = ROLES[role].defaultTab;
+    updateRolePill();
+    buildNav();
+    buildContent();
+    content.style.opacity = '1';
+    content.style.transform = 'translateY(0)';
+    nav.style.opacity = '1';
+  }, 220);
+}
+
+document.addEventListener('click', () => {
+  document.getElementById('role-dropdown')?.classList.remove('open');
+});
+
+function togglePill(el) {
+  el.classList.toggle('on');
+}
+
+window.addEventListener('resize', positionUnderline);
+>>>>>>> 3f0a90a695747ea56160f9d8ac67114890e87eaf
 </script>
 </body>
 </html>

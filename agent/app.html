@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Opportunity Access</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  :root{
+    --bg:#F4F4F6; --surface:#FFFFFF; --line:#E6E6EA; --ink:#1C1C1E; --muted:#6E6E73; --faint:#AEAEB2;
+    --funding:#C98A2E; --funding-bg:#FBF1E1;
+    --income:#3E8E6E; --income-bg:#E7F3ED;
+    --tech:#3E6FB0; --tech-bg:#E8F0FA;
+    --transit:#6E6E73; --transit-bg:#ECECEE;
+    --low:#C15B4A; --mid:#E0A83E; --high:#3E8E6E;
+  }
+  *{box-sizing:border-box; -webkit-tap-highlight-color:transparent;}
+  body{ margin:0; background:#DADADE; min-height:100vh; display:flex; align-items:center; justify-content:center; padding:24px 0;
+    font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","Helvetica Neue",sans-serif; }
+  .device{ width:375px; height:812px; background:var(--bg); border-radius:40px; overflow:hidden; position:relative;
+    box-shadow:0 20px 50px rgba(0,0,0,0.25); border:8px solid #111; }
+  .status{ display:flex; justify-content:space-between; padding:14px 22px 2px; font-size:13px; font-weight:600; color:var(--ink); }
+  .scroll{ height:100%; overflow-y:auto; padding-bottom:100px; }
+  .view{ display:none; }
+  .view.active{ display:block; }
+
+  header.head{ padding:8px 20px 12px; display:flex; align-items:baseline; justify-content:space-between; }
+  header.head .t{ font-size:19px; font-weight:700; }
+  header.head .live{ font-size:10.5px; font-weight:600; color:var(--income); background:var(--income-bg); padding:3px 8px; border-radius:8px; }
+
+  .card{ background:var(--surface); border:1px solid var(--line); border-radius:16px; margin:0 20px 16px; padding:14px; }
+  .card h2{ font-size:13.5px; font-weight:600; margin:0 0 4px; }
+  .card .note{ font-size:11px; color:var(--faint); margin:0 0 10px; }
+
+  .chips{ display:flex; gap:7px; flex-wrap:wrap; margin-bottom:10px; }
+  .chip{ font-size:11.5px; font-weight:500; padding:6px 10px; border-radius:18px; cursor:pointer; display:flex; align-items:center; gap:5px; opacity:0.5; transition:opacity .15s; }
+  .chip.on{ opacity:1; }
+  .chip .sw{ width:6px; height:6px; border-radius:50%; }
+  .chip.transit{ background:var(--transit-bg); color:var(--transit); }
+  .chip.funding{ background:var(--funding-bg); color:var(--funding); }
+  .chip.income{ background:var(--income-bg); color:var(--income); }
+  .chip.tech{ background:var(--tech-bg); color:var(--tech); }
+
+  .mapwindow{ border:1px solid var(--line); border-radius:12px; overflow:hidden; background:#EFEFF1; }
+  .winbar{ display:flex; align-items:center; gap:6px; padding:7px 10px; background:#E4E4E7; border-bottom:1px solid var(--line); }
+  .winbar .dots{ display:flex; gap:4px; }
+  .winbar .dots span{ width:7px; height:7px; border-radius:50%; background:#C7C7CB; }
+  .winbar .addr{ flex:1; text-align:center; font-size:10px; color:var(--muted); background:#fff; border-radius:6px; padding:2px 8px; margin:0 4px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+  .mapframe{ position:relative; height:230px; }
+  .mapframe iframe{ width:100%; height:100%; display:block; border:0; background:#EFEFF1; }
+  .overlay-svg{ position:absolute; inset:0; pointer-events:none; width:100%; height:100%; }
+  .layer{ opacity:0; transition:opacity .3s; }
+  .layer.show{ opacity:1; }
+  .openmap{ position:absolute; bottom:8px; right:8px; font-size:10.5px; font-weight:600; color:#fff; background:rgba(28,28,30,0.75);
+    padding:6px 10px; border-radius:20px; text-decoration:none; display:flex; align-items:center; gap:4px; z-index:5; }
+  .legend{ display:flex; align-items:center; gap:6px; margin-top:8px; font-size:10px; color:var(--muted); }
+  .legend .bar{ flex:1; height:6px; border-radius:3px; background:linear-gradient(90deg, var(--low), var(--mid), var(--high)); }
+
+  @keyframes travel{ from{ offset-distance:0%; opacity:0; } 8%{ opacity:1; } 92%{ opacity:1; } to{ offset-distance:100%; opacity:0; } }
+  .particle{ animation: travel 2.2s linear infinite; }
+  #fpath1{ offset-path: path('M35,215 C70,160 95,120 118,60'); }
+  #fpath2{ offset-path: path('M115,215 C118,160 118,120 118,60'); }
+  #fpath3{ offset-path: path('M200,215 C170,160 145,120 121,60'); }
+  #fpath4{ offset-path: path('M280,215 C230,150 165,110 122,60'); }
+  @keyframes ringout{ 0%{ r:5; opacity:0.9; } 100%{ r:24; opacity:0; } }
+  .ring{ animation:ringout 1.9s ease-out infinite; }
+
+  table.zonetable{ width:100%; border-collapse:collapse; font-size:12px; }
+  table.zonetable th{ text-align:left; font-weight:500; color:var(--muted); font-size:10.5px; padding:0 4px 6px; border-bottom:1px solid var(--line); }
+  table.zonetable td{ padding:8px 4px; border-bottom:1px solid var(--line); color:var(--ink); }
+  table.zonetable tr:last-child td{ border-bottom:none; }
+  .tag{ font-size:9.5px; padding:2px 7px; border-radius:8px; font-weight:600; }
+  .tag.high{ background:var(--funding-bg); color:var(--funding); }
+  .tag.mid{ background:var(--tech-bg); color:var(--tech); }
+  .tag.low{ background:var(--income-bg); color:var(--income); }
+
+  .addrow{ margin-top:10px; width:100%; padding:9px; border-radius:10px; border:1px dashed var(--faint); background:none; color:var(--muted); font-size:12px; font-weight:500; cursor:pointer; }
+  .analyzebtn{ width:100%; padding:13px; border:none; border-radius:14px; background:var(--ink); color:#fff; font-size:13.5px; font-weight:600; cursor:pointer; margin-top:10px; }
+
+  /* bottom tab bar */
+  .tabbar{ position:absolute; left:0; right:0; bottom:0; height:82px; background:var(--surface); border-top:1px solid var(--line);
+    display:flex; padding-bottom:20px; z-index:40; }
+  .tabbtn{ flex:1; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:4px; font-size:10.5px;
+    color:var(--faint); background:none; border:none; cursor:pointer; position:relative; }
+  .tabbtn.active{ color:var(--ink); font-weight:600; }
+  .tabbtn .ic{ width:20px; height:20px; border-radius:6px; background:var(--line); }
+  .tabbtn.active .ic{ background:var(--ink); }
+  .tabbtn .dotnew{ position:absolute; top:2px; right:28%; width:7px; height:7px; border-radius:50%; background:var(--funding); display:none; }
+  .tabbtn .dotnew.show{ display:block; }
+
+  /* agent trace sheet */
+  .sheet{ position:absolute; left:0; right:0; bottom:0; background:var(--surface); border-radius:22px 22px 0 0;
+    box-shadow:0 -8px 30px rgba(0,0,0,0.15); transform:translateY(100%); transition:transform .35s ease; z-index:60;
+    max-height:90%; overflow-y:auto; padding:18px 20px 30px; }
+  .sheet.open{ transform:translateY(0); }
+  .sheet .handle{ width:36px; height:4px; background:var(--line); border-radius:2px; margin:0 auto 14px; }
+  .sheet h3{ font-size:16px; font-weight:700; margin:0 0 4px; }
+  .sheet .stepline{ font-size:12px; color:var(--muted); margin-bottom:16px; }
+  .closebtn{ position:absolute; top:14px; right:18px; font-size:13px; color:var(--muted); background:none; border:none; cursor:pointer; }
+
+  .agentrow{ display:flex; align-items:flex-start; gap:10px; margin-bottom:13px; opacity:0.3; transition:opacity .3s; }
+  .agentrow.on{ opacity:1; }
+  .agentrow .badge{ width:26px; height:26px; border-radius:8px; flex-shrink:0; display:flex; align-items:center; justify-content:center; font-size:11px; font-weight:700; color:#fff; }
+  .agentrow .name{ font-size:12.5px; font-weight:600; }
+  .agentrow .txt{ font-size:11.5px; color:var(--muted); margin-top:2px; line-height:1.4; }
+
+  .reportcard .title{ font-size:15px; font-weight:700; margin-bottom:4px; }
+  .reportcard .lede{ font-size:12px; color:var(--muted); margin-bottom:10px; line-height:1.5; }
+  .finding{ display:flex; gap:8px; padding:9px 0; border-top:1px solid var(--line); }
+  .finding .sw{ width:8px; height:8px; border-radius:50%; margin-top:5px; flex-shrink:0; }
+  .finding .t{ font-size:12px; line-height:1.45; }
+  .confidence{ font-size:10.5px; color:var(--faint); margin-top:10px; }
+  .placeholder{ font-size:12.5px; color:var(--faint); text-align:center; padding:20px 10px; }
+
+  /* trend charts */
+  .chartrow{ display:flex; align-items:baseline; justify-content:space-between; margin-bottom:8px; }
+  .chartrow .lbl{ font-size:11.5px; color:var(--muted); }
+  .chartrow .delta{ font-size:11px; font-weight:600; }
+  .delta.down{ color:var(--low); } .delta.up{ color:var(--high); }
+  svg.chart{ width:100%; height:70px; display:block; }
+  .barrow{ display:flex; align-items:center; gap:8px; font-size:11.5px; margin-bottom:8px; }
+  .barrow .name{ width:80px; flex-shrink:0; color:var(--ink); }
+  .barrow .track{ flex:1; height:8px; background:var(--bg); border-radius:4px; overflow:hidden; }
+  .barrow .fill{ height:100%; border-radius:4px; }
+  .barrow .n{ width:34px; text-align:right; color:var(--muted); font-size:10.5px; }
+
+  /* add zone modal */
+  .modalscrim{ position:absolute; inset:0; background:rgba(20,20,22,0.4); display:none; align-items:flex-end; z-index:70; }
+  .modalscrim.open{ display:flex; }
+  .modal{ background:var(--surface); width:100%; border-radius:20px 20px 0 0; padding:18px 20px 26px; }
+  .modal .handle{ width:36px; height:4px; background:var(--line); border-radius:2px; margin:0 auto 14px; }
+  .modal h3{ font-size:15.5px; font-weight:700; margin:0 0 12px; }
+  .field{ margin-bottom:12px; }
+  .field label{ display:block; font-size:11px; color:var(--muted); margin-bottom:5px; }
+  .field input, .field select{ width:100%; border:1px solid var(--line); border-radius:10px; padding:10px 11px; font-size:13px;
+    font-family:inherit; color:var(--ink); background:var(--bg); }
+  .modalbtns{ display:flex; gap:8px; margin-top:6px; }
+  .modalbtns button{ flex:1; padding:11px; border-radius:12px; font-size:13px; font-weight:600; cursor:pointer; border:none; }
+  .modalbtns .cancel{ background:var(--bg); color:var(--muted); }
+  .modalbtns .submit{ background:var(--ink); color:#fff; }
+</style>
+</head>
+<body>
+<div class="device">
+  <div class="status"><span>9:41</span><span>●●●●</span></div>
+
+  <div class="scroll">
+
+    <div class="view active" id="view-home">
+      <header class="head">
+        <span class="t">Opportunity access</span>
+        <span class="live">Live map</span>
+      </header>
+
+      <div class="card">
+        <h2>Multi-layer map</h2>
+        <div class="chips">
+          <div class="chip transit on" data-layer="transit"><span class="sw" style="background:var(--transit)"></span>Transit</div>
+          <div class="chip funding" data-layer="funding"><span class="sw" style="background:var(--funding)"></span>Funding flow</div>
+          <div class="chip income" data-layer="income"><span class="sw" style="background:var(--income)"></span>Income heatmap</div>
+          <div class="chip tech" data-layer="tech"><span class="sw" style="background:var(--tech)"></span>Tech access</div>
+        </div>
+
+        <div class="mapwindow">
+          <div class="winbar">
+            <div class="dots"><span></span><span></span><span></span></div>
+            <div class="addr">opportunity_distance_map.html</div>
+          </div>
+          <div class="mapframe">
+            <iframe src="opportunity_distance_map.html" title="Interactive opportunity distance map" loading="eager"></iframe>
+            <svg class="overlay-svg" viewBox="0 0 315 230" preserveAspectRatio="xMidYMid slice">
+              <defs>
+                <filter id="heatblur" x="-50%" y="-50%" width="200%" height="200%">
+                  <feGaussianBlur stdDeviation="9"></feGaussianBlur>
+                </filter>
+              </defs>
+              <g class="layer" id="ly-funding">
+                <path d="M35,215 C70,160 95,120 118,60" stroke="#C98A2E" stroke-width="2" fill="none" opacity="0.4"></path>
+                <path d="M115,215 C118,160 118,120 118,60" stroke="#C98A2E" stroke-width="4" fill="none" opacity="0.4"></path>
+                <path d="M200,215 C170,160 145,120 121,60" stroke="#C98A2E" stroke-width="2.5" fill="none" opacity="0.4"></path>
+                <path d="M280,215 C230,150 165,110 122,60" stroke="#C98A2E" stroke-width="1.5" fill="none" opacity="0.4"></path>
+                <circle class="particle" id="fpath1" r="3" fill="#C98A2E"></circle>
+                <circle class="particle" id="fpath2" r="4" fill="#C98A2E" style="animation-delay:0.5s"></circle>
+                <circle class="particle" id="fpath3" r="3" fill="#C98A2E" style="animation-delay:1s"></circle>
+                <circle class="particle" id="fpath4" r="2.5" fill="#C98A2E" style="animation-delay:1.5s"></circle>
+                <circle cx="118" cy="60" r="5" fill="#C98A2E"></circle>
+                <rect x="86" y="10" width="66" height="15" rx="4" fill="#FBF1E1"></rect>
+                <text x="119" y="20.5" font-size="8" fill="#C98A2E" text-anchor="middle" font-weight="700">$6.4M budget</text>
+              </g>
+              <g class="layer" id="ly-income" filter="url(#heatblur)"></g>
+              <g class="layer" id="ly-tech"></g>
+            </svg>
+            <a class="openmap" href="opportunity_distance_map.html" target="_blank">Open live map ↗</a>
+          </div>
+        </div>
+        <div class="legend" id="incomelegend" style="display:none;">
+          <span>Lower income</span><div class="bar"></div><span>Higher income</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>Build a report</h2>
+        <table class="zonetable" id="zonetable">
+          <tr><th>Zone</th><th>Signal</th><th>Risk</th></tr>
+          <tr><td>Eastover Elem.</td><td>Funding drop</td><td><span class="tag high">High</span></td></tr>
+          <tr><td>Albemarle Rd Elem.</td><td>Tech access</td><td><span class="tag mid">Watch</span></td></tr>
+          <tr><td>Lincoln High</td><td>Income shift</td><td><span class="tag low">Stable</span></td></tr>
+        </table>
+        <button class="addrow" id="addrow">+ Add a zone</button>
+        <button class="analyzebtn" id="analyzebtn">Analyze with agents</button>
+      </div>
+    </div>
+
+    <div class="view" id="view-reports">
+      <header class="head"><span class="t">Reports</span></header>
+
+      <div class="card">
+        <h2>Funding trend</h2>
+        <p class="note">Per-pupil funding, last 4 cycles</p>
+        <div class="chartrow"><span class="lbl">District 4</span><span class="delta down">▼ 12% vs last cycle</span></div>
+        <svg class="chart" viewBox="0 0 300 70" preserveAspectRatio="none">
+          <polyline points="10,20 100,26 190,34 290,50" fill="none" stroke="#C98A2E" stroke-width="2.5"></polyline>
+          <circle cx="10" cy="20" r="3" fill="#C98A2E"></circle>
+          <circle cx="100" cy="26" r="3" fill="#C98A2E"></circle>
+          <circle cx="190" cy="34" r="3" fill="#C98A2E"></circle>
+          <circle cx="290" cy="50" r="3" fill="#C98A2E"></circle>
+        </svg>
+      </div>
+
+      <div class="card">
+        <h2>Composite risk by zone</h2>
+        <p class="note">Blended funding, income, tech and transit signal</p>
+        <div class="barrow"><span class="name">Eastover</span><div class="track"><div class="fill" style="width:88%; background:var(--low)"></div></div><span class="n">0.81</span></div>
+        <div class="barrow"><span class="name">Albemarle Rd</span><div class="track"><div class="fill" style="width:58%; background:var(--mid)"></div></div><span class="n">0.52</span></div>
+        <div class="barrow"><span class="name">Lincoln High</span><div class="track"><div class="fill" style="width:30%; background:var(--high)"></div></div><span class="n">0.27</span></div>
+      </div>
+
+      <div class="card">
+        <h2>Latest agent report</h2>
+        <div class="reportcard" id="reportcard-live">
+          <div class="placeholder" id="reportplaceholder">Run "Analyze with agents" from Home to generate a report.</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="tabbar">
+    <button class="tabbtn active" data-view="view-home"><div class="ic"></div>Home</button>
+    <button class="tabbtn" data-view="view-reports"><div class="ic"></div>Reports<span class="dotnew" id="reportdot"></span></button>
+  </div>
+
+  <div class="sheet" id="sheet">
+    <button class="closebtn" id="closebtn">Close</button>
+    <div class="handle"></div>
+    <h3 id="sheettitle">Analyzing 3 zones</h3>
+    <div class="stepline" id="stepline">Dispatching to specialist agents…</div>
+
+    <div class="agentrow" data-a="orchestrator"><div class="badge" style="background:#8B8B90">OR</div>
+      <div><div class="name">Orchestrator</div><div class="txt">Reads the table and assigns each zone to specialist agents.</div></div></div>
+    <div class="agentrow" data-a="funding"><div class="badge" style="background:var(--funding)">FN</div>
+      <div><div class="name">Funding agent</div><div class="txt">Eastover received $890K this cycle, down 12% year over year.</div></div></div>
+    <div class="agentrow" data-a="income"><div class="badge" style="background:var(--income)">IN</div>
+      <div><div class="name">Income agent</div><div class="txt">Median household income near Eastover fell to $38,900, down 4%.</div></div></div>
+    <div class="agentrow" data-a="tech"><div class="badge" style="background:var(--tech)">TC</div>
+      <div><div class="name">Tech access agent</div><div class="txt">Home broadband coverage near Eastover sits at 46%.</div></div></div>
+    <div class="agentrow" data-a="transit"><div class="badge" style="background:var(--transit)">TR</div>
+      <div><div class="name">Transit agent</div><div class="txt">Desert score 0.61 — above the 0.50 statewide average.</div></div></div>
+    <div class="agentrow" data-a="synth"><div class="badge" style="background:var(--ink)">SY</div>
+      <div><div class="name">Synthesis agent</div><div class="txt">Combining findings into one report — see the Reports tab.</div></div></div>
+  </div>
+
+  <div class="modalscrim" id="modalscrim">
+    <div class="modal">
+      <div class="handle"></div>
+      <h3>Add a zone</h3>
+      <div class="field"><label>County</label><input id="in-county" placeholder="e.g. Mecklenburg"></div>
+      <div class="field"><label>School name</label><input id="in-school" placeholder="e.g. Eastover Elementary"></div>
+      <div class="field"><label>Zip code</label><input id="in-zip" placeholder="e.g. 28211" inputmode="numeric"></div>
+      <div class="modalbtns">
+        <button class="cancel" id="modalcancel">Cancel</button>
+        <button class="submit" id="modalsubmit">Add zone</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  function seeded(seed){ let s = seed; return function(){ s = (s*9301+49297)%233280; return s/233280; }; }
+  const incomeGroup = document.getElementById('ly-income');
+  const rnd = seeded(42);
+  const colorFor = v => v < 0.4 ? '#C15B4A' : v < 0.65 ? '#E0A83E' : '#3E8E6E';
+  for(let i=0;i<26;i++){
+    const cx = 15 + rnd()*285, cy = 15 + rnd()*200, val = rnd(), r = 14 + val*20;
+    const c = document.createElementNS('http://www.w3.org/2000/svg','circle');
+    c.setAttribute('cx', cx.toFixed(1)); c.setAttribute('cy', cy.toFixed(1)); c.setAttribute('r', r.toFixed(1));
+    c.setAttribute('fill', colorFor(val)); c.setAttribute('opacity', (0.35 + val*0.25).toFixed(2));
+    incomeGroup.appendChild(c);
+  }
+  const techGroup = document.getElementById('ly-tech');
+  const techSeed = seeded(7);
+  for(let i=0;i<18;i++){
+    const cx = 15 + techSeed()*285, cy = 15 + techSeed()*200;
+    const dot = document.createElementNS('http://www.w3.org/2000/svg','circle');
+    dot.setAttribute('cx', cx.toFixed(1)); dot.setAttribute('cy', cy.toFixed(1)); dot.setAttribute('r','2.2');
+    dot.setAttribute('fill', '#3E6FB0'); dot.setAttribute('opacity','0.55');
+    techGroup.appendChild(dot);
+  }
+  [[100,70],[230,150],[170,190]].forEach((p,i)=>{
+    const dot = document.createElementNS('http://www.w3.org/2000/svg','circle');
+    dot.setAttribute('cx',p[0]); dot.setAttribute('cy',p[1]); dot.setAttribute('r','4'); dot.setAttribute('fill','#3E6FB0');
+    const ring = document.createElementNS('http://www.w3.org/2000/svg','circle');
+    ring.setAttribute('cx',p[0]); ring.setAttribute('cy',p[1]); ring.setAttribute('r','5'); ring.setAttribute('fill','none');
+    ring.setAttribute('stroke','#3E6FB0'); ring.setAttribute('stroke-width','1.5'); ring.setAttribute('class','ring');
+    ring.style.animationDelay = (i*0.6)+'s';
+    techGroup.appendChild(dot); techGroup.appendChild(ring);
+  });
+
+  document.querySelectorAll('.chip').forEach(chip=>{
+    chip.addEventListener('click', ()=>{
+      if(chip.dataset.layer === 'transit') return;
+      document.querySelectorAll('.chip').forEach(c=>{ if(c.dataset.layer!=='transit') c.classList.remove('on'); });
+      document.querySelectorAll('.layer').forEach(l=>l.classList.remove('show'));
+      document.getElementById('incomelegend').style.display = 'none';
+      chip.classList.add('on');
+      document.getElementById('ly-'+chip.dataset.layer).classList.add('show');
+      if(chip.dataset.layer === 'income') document.getElementById('incomelegend').style.display = 'flex';
+    });
+  });
+
+  document.querySelectorAll('.tabbtn').forEach(btn=>{
+    btn.addEventListener('click', ()=>{
+      document.querySelectorAll('.tabbtn').forEach(b=>b.classList.remove('active'));
+      document.querySelectorAll('.view').forEach(v=>v.classList.remove('active'));
+      btn.classList.add('active');
+      document.getElementById(btn.dataset.view).classList.add('active');
+      if(btn.dataset.view === 'view-reports') document.getElementById('reportdot').classList.remove('show');
+    });
+  });
+
+  const modalscrim = document.getElementById('modalscrim');
+  document.getElementById('addrow').addEventListener('click', ()=>{ modalscrim.classList.add('open'); });
+  document.getElementById('modalcancel').addEventListener('click', ()=>{ modalscrim.classList.remove('open'); });
+  document.getElementById('modalsubmit').addEventListener('click', ()=>{
+    const county = document.getElementById('in-county').value.trim();
+    const school = document.getElementById('in-school').value.trim();
+    const zip = document.getElementById('in-zip').value.trim();
+    if(!school){ document.getElementById('in-school').focus(); return; }
+    const t = document.getElementById('zonetable');
+    const row = document.createElement('tr');
+    const label = school + (county ? ' — ' + county : '') + (zip ? ' (' + zip + ')' : '');
+    row.innerHTML = '<td>'+label+'</td><td>Pending</td><td><span class="tag mid">Watch</span></td>';
+    t.appendChild(row);
+    document.getElementById('in-county').value = '';
+    document.getElementById('in-school').value = '';
+    document.getElementById('in-zip').value = '';
+    modalscrim.classList.remove('open');
+  });
+
+  const sheet = document.getElementById('sheet');
+  const stepline = document.getElementById('stepline');
+  const order = ['orchestrator','funding','income','tech','transit','synth'];
+
+  document.getElementById('analyzebtn').addEventListener('click', ()=>{
+    sheet.classList.add('open');
+    stepline.textContent = 'Dispatching to specialist agents…';
+    document.querySelectorAll('.agentrow').forEach(r=>r.classList.remove('on'));
+    order.forEach((a,i)=>{
+      setTimeout(()=>{
+        document.querySelector('.agentrow[data-a="'+a+'"]').classList.add('on');
+        if(a==='synth'){
+          stepline.textContent = 'Synthesis complete.';
+          document.getElementById('reportplaceholder').style.display = 'none';
+          const rc = document.getElementById('reportcard-live');
+          rc.innerHTML = `
+            <div class="title">Eastover Elementary is the priority zone</div>
+            <div class="lede">Funding, income, tech access and transit are all trending down together in the same zone — that overlap, not any single number, is what's driving the flag.</div>
+            <div class="finding"><span class="sw" style="background:var(--funding)"></span><span class="t">Funding down 12% to $890K this cycle, against a $6.4M district budget.</span></div>
+            <div class="finding"><span class="sw" style="background:var(--income)"></span><span class="t">Median household income fell 4% to $38,900, below the district median.</span></div>
+            <div class="finding"><span class="sw" style="background:var(--tech)"></span><span class="t">Home broadband at 46%, well under the 61% district average.</span></div>
+            <div class="finding"><span class="sw" style="background:var(--transit)"></span><span class="t">Transit desert score 0.61, worse than the 0.50 statewide average.</span></div>
+            <div class="confidence">Illustrative figures for this demo · sources: funding ledger, income survey, broadband survey, live transit map</div>`;
+          document.getElementById('reportdot').classList.add('show');
+          setTimeout(()=>{ sheet.classList.remove('open'); }, 900);
+        }
+      }, i*550);
+    });
+  });
+
+  document.getElementById('closebtn').addEventListener('click', ()=>{ sheet.classList.remove('open'); });
+</script>
+</body>
+</html>

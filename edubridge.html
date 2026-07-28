@@ -3,1025 +3,1063 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>EduBridge</title>
+<title>EduBridge — Closing the opportunity gap, county by county</title>
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
-
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
   :root {
-    --bg: #0a0a0f;
-    --surface: #12121a;
-    --surface2: #1a1a26;
-    --border: #2a2a3a;
-    --text: #f0f0f5;
-    --muted: #6a6a8a;
-    --dim: #3a3a55;
-    --blue: #6e8ef7;
-    --purple: #a77bf5;
-    --green: #5fcf9f;
-    --orange: #f5a345;
-    --red: #f56e6e;
+    --bg: #ffffff;
+    --bg-alt: #f6f7f9;
+    --surface: #ffffff;
+    --surface-alt: #f2f3f6;
+    --border: #e8e9ee;
+    --border-soft: #f0f1f4;
+    --ink: #17181c;
+    --muted: #7a7b85;
+    --faint: #b7b8c2;
+
+    --blue: #3e6ef6;      --blue-bg: #eef2fe;
+    --green: #1fa27a;     --green-bg: #e9f8f2;
+    --purple: #8a6df0;    --purple-bg: #f2effd;
+    --amber: #d99a2b;     --amber-bg: #fbf2e2;
+    --red: #e2604f;       --red-bg: #fdefec;
+
+    --low: #c15b4a; --mid: #e0a83e; --high: #1fa27a;
+
+    --ease: cubic-bezier(0.22, 1, 0.36, 1);
+    --maxw: 1180px;
   }
 
-  html, body {
-    height: 100%;
-    background: var(--bg);
-    color: var(--text);
-    font-family: 'Inter', sans-serif;
-    overflow: hidden;
+  html { scroll-behavior: smooth; }
+  body {
+    min-height: 100vh; background: var(--bg-alt); color: var(--ink);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
   }
+  a { color: inherit; }
+  img, svg { display: block; max-width: 100%; }
+  ::selection { background: var(--blue-bg); color: var(--blue); }
 
-  /* ─── PROFILE SELECTION ─── */
-  #profile-screen {
-    position: fixed; inset: 0;
-    background: var(--bg);
-    display: flex; flex-direction: column;
-    align-items: center; justify-content: center;
-    z-index: 100;
-    transition: opacity 0.6s ease, transform 0.6s ease;
-  }
+  .wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 28px; }
+  @media (max-width: 720px) { .wrap { padding: 0 18px; } }
 
-  #profile-screen.exit {
-    opacity: 0;
-    transform: scale(1.04);
-    pointer-events: none;
+  /* ============ SITE HEADER (app chrome, shown once you enter the app) ============ */
+  #site-header {
+    position: sticky; top: 0; z-index: 80; background: rgba(255,255,255,0.92); backdrop-filter: blur(14px);
+    border-bottom: 1px solid var(--border); display: none;
   }
-
-  .profile-logo {
-    font-size: 22px; font-weight: 600; letter-spacing: -0.5px;
-    margin-bottom: 56px; color: var(--text);
+  #site-header.visible { display: block; }
+  .header-inner { display: flex; align-items: center; gap: 22px; height: 66px; }
+  .header-logo { font-size: 18px; font-weight: 800; letter-spacing: -0.4px; color: var(--ink); flex-shrink: 0; }
+  .header-logo span { color: var(--blue); }
+  .header-tabs { display: flex; gap: 4px; flex: 1; overflow-x: auto; }
+  .header-tab {
+    display: flex; align-items: center; gap: 7px; padding: 9px 15px; border-radius: 12px;
+    font-size: 13px; font-weight: 600; color: var(--muted); cursor: pointer; white-space: nowrap;
+    transition: background 0.15s var(--ease), color 0.15s var(--ease);
   }
-  .profile-logo span {
-    background: linear-gradient(90deg, var(--blue), var(--purple));
-    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
-  }
-
-  .profile-heading {
-    font-size: 28px; font-weight: 500; letter-spacing: -0.5px;
-    margin-bottom: 8px; text-align: center;
-  }
-  .profile-sub {
-    font-size: 14px; color: var(--muted);
-    margin-bottom: 48px; text-align: center;
-  }
-
-  .profile-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 16px;
-    max-width: 720px;
-    width: 100%;
-    padding: 0 24px;
-  }
-
-  .profile-card {
-    background: var(--surface);
-    border: 0.5px solid var(--border);
-    border-radius: 16px;
-    padding: 28px 16px 24px;
-    display: flex; flex-direction: column; align-items: center; gap: 12px;
-    cursor: pointer;
-    transition: border-color 0.2s, background 0.2s, transform 0.2s;
-    text-align: center;
-  }
-  .profile-card:hover {
-    border-color: var(--blue);
-    background: #16162a;
-    transform: translateY(-3px);
-  }
-
-  .profile-icon {
-    width: 52px; height: 52px; border-radius: 50%;
-    display: flex; align-items: center; justify-content: center;
-    font-size: 22px;
-    margin-bottom: 4px;
-  }
-
-  .profile-card-name {
-    font-size: 14px; font-weight: 500; color: var(--text);
-  }
-  .profile-card-desc {
-    font-size: 11px; color: var(--muted); line-height: 1.4;
-  }
-
-  /* ─── MAIN APP ─── */
-  #app {
-    position: fixed; inset: 0;
-    display: flex; flex-direction: column;
-    opacity: 0; pointer-events: none;
-    transition: opacity 0.5s ease 0.3s;
-  }
-  #app.visible { opacity: 1; pointer-events: all; }
-
-  /* Header */
-  .app-header {
-    height: 56px; flex-shrink: 0;
-    display: flex; align-items: center; justify-content: space-between;
-    padding: 0 24px;
-    border-bottom: 0.5px solid var(--border);
-    background: rgba(10,10,15,0.9);
-    backdrop-filter: blur(12px);
-    position: relative; z-index: 10;
-  }
-
-  .header-logo { font-size: 16px; font-weight: 600; letter-spacing: -0.3px; }
-  .header-logo span {
-    background: linear-gradient(90deg, var(--blue), var(--purple));
-    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
-  }
-
+  .header-tab svg { width: 16px; height: 16px; }
+  .header-tab:hover { background: var(--bg-alt); }
+  .header-tab.active { background: var(--ink); color: #fff; }
   .role-pill {
-    display: flex; align-items: center; gap: 8px;
-    background: var(--surface2);
-    border: 0.5px solid var(--border);
-    border-radius: 20px; padding: 6px 14px;
-    cursor: pointer; font-size: 12px; color: var(--text);
-    transition: border-color 0.2s;
-    position: relative;
+    display: flex; align-items: center; gap: 8px; background: var(--surface-alt);
+    border: 1px solid var(--border); border-radius: 20px; padding: 8px 14px;
+    cursor: pointer; font-size: 12.5px; color: var(--ink); position: relative; font-weight: 600;
+    flex-shrink: 0;
   }
-  .role-pill:hover { border-color: var(--blue); }
-  .role-dot { width: 6px; height: 6px; border-radius: 50%; }
-
-  /* Role switcher dropdown */
+  .role-dot { width: 7px; height: 7px; border-radius: 50%; }
   .role-dropdown {
-    position: absolute; top: calc(100% + 8px); right: 0;
-    background: var(--surface2);
-    border: 0.5px solid var(--border);
-    border-radius: 14px; padding: 8px;
-    min-width: 180px;
-    opacity: 0; pointer-events: none;
-    transform: translateY(-6px);
-    transition: opacity 0.18s, transform 0.18s;
-    z-index: 50;
+    position: absolute; top: calc(100% + 8px); right: 0; background: #fff;
+    border: 1px solid var(--border); border-radius: 16px; padding: 6px;
+    min-width: 180px; z-index: 200; opacity: 0; pointer-events: none;
+    transform: translateY(-6px); transition: opacity 0.18s var(--ease), transform 0.18s var(--ease);
+    box-shadow: 0 12px 30px rgba(20,20,40,0.14);
   }
   .role-dropdown.open { opacity: 1; pointer-events: all; transform: translateY(0); }
-
   .role-option {
-    display: flex; align-items: center; gap: 10px;
-    padding: 10px 12px; border-radius: 10px;
-    cursor: pointer; font-size: 13px; color: var(--muted);
-    transition: background 0.15s, color 0.15s;
+    display: flex; align-items: center; gap: 9px; padding: 10px 11px; border-radius: 11px;
+    font-size: 12.5px; color: var(--muted); cursor: pointer; transition: background 0.12s, color 0.12s;
+    font-weight: 500;
   }
-  .role-option:hover { background: var(--surface); color: var(--text); }
-  .role-option.current { color: var(--text); }
-  .role-option-dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
+  .role-option:hover, .role-option.current { background: var(--bg-alt); color: var(--ink); }
+  .role-option-dot { width: 7px; height: 7px; border-radius: 50%; flex-shrink: 0; }
 
-  /* Nav */
-  .app-nav {
-    display: flex; gap: 2px;
-    padding: 0 16px;
-    border-bottom: 0.5px solid var(--border);
-    background: var(--bg);
-    position: relative;
+  /* ============ SPLASH / LANDING ============ */
+  #splash {
+    min-height: 100vh; display: flex; flex-direction: column;
+    background: radial-gradient(1100px 500px at 15% -10%, var(--blue-bg), transparent),
+                radial-gradient(900px 480px at 100% 0%, var(--purple-bg), transparent);
+    transition: opacity 0.5s var(--ease);
   }
-
-  .nav-tab {
-    padding: 12px 20px;
-    font-size: 13px; color: var(--muted);
-    cursor: pointer; position: relative;
-    transition: color 0.2s;
-    white-space: nowrap;
+  #splash.exit { opacity: 0; pointer-events: none; }
+  .splash-nav { padding: 26px 0; }
+  .splash-nav .wrap { display: flex; align-items: center; justify-content: space-between; }
+  .splash-logo { font-size: 19px; font-weight: 800; letter-spacing: -0.4px; }
+  .splash-logo span { color: var(--blue); }
+  .splash-nav-cta {
+    font-size: 13px; font-weight: 600; padding: 10px 18px; border-radius: 12px; background: var(--ink); color: #fff;
+    cursor: pointer;
   }
-  .nav-tab:hover { color: var(--text); }
-  .nav-tab.active { color: var(--text); }
-
-  .nav-underline {
-    position: absolute; bottom: 0; height: 2px;
-    background: linear-gradient(90deg, var(--blue), var(--purple));
-    border-radius: 2px 2px 0 0;
-    transition: left 0.25s cubic-bezier(.4,0,.2,1), width 0.25s cubic-bezier(.4,0,.2,1);
-  }
-
-  /* Content area */
-  .app-content {
-    flex: 1; overflow: hidden; position: relative;
-  }
-
-  .tab-panel {
-    position: absolute; inset: 0;
-    overflow-y: auto;
-    padding: 28px 28px 40px;
-    opacity: 0; pointer-events: none;
-    transform: translateY(10px);
-    transition: opacity 0.28s ease, transform 0.28s ease;
-  }
-  .tab-panel.active {
-    opacity: 1; pointer-events: all; transform: translateY(0);
-  }
-
-  /* ─── SHARED COMPONENTS ─── */
-  .rainbow-line {
-    height: 1.5px;
-    background: linear-gradient(90deg, var(--blue), var(--purple), var(--green), var(--orange));
-    border-radius: 2px; margin-bottom: 24px;
-  }
-
-  .section-label {
-    font-size: 11px; font-weight: 500; color: var(--muted);
-    text-transform: uppercase; letter-spacing: 0.8px;
-    margin-bottom: 12px;
-  }
-
-  .card {
-    background: var(--surface);
-    border: 0.5px solid var(--border);
-    border-radius: 14px;
-    padding: 18px;
-    margin-bottom: 12px;
-  }
-
-  .card-sm {
-    background: var(--surface);
-    border: 0.5px solid var(--border);
-    border-radius: 10px;
-    padding: 12px 14px;
-    margin-bottom: 8px;
-  }
-
-  .metric-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
-    margin-top: 14px;
-  }
-
-  .metric-box {
-    background: #0f0f1a;
-    border: 0.5px solid var(--border);
-    border-radius: 10px;
-    padding: 12px;
-  }
-  .metric-label { font-size: 10px; color: var(--muted); margin-bottom: 4px; }
-  .metric-value { font-size: 18px; font-weight: 500; color: var(--text); }
-
-  /* AI Chat */
-  .chat-wrap {
-    background: var(--surface);
-    border: 0.5px solid var(--border);
-    border-radius: 24px;
-    padding: 14px 18px;
-    display: flex; align-items: center; gap: 12px;
-    margin-bottom: 16px;
-    cursor: text;
-  }
-  .chat-placeholder { font-size: 14px; color: var(--dim); flex: 1; }
-  .chat-send {
-    width: 32px; height: 32px;
+  .splash-hero { flex: 1; display: flex; align-items: center; padding: 40px 0 60px; }
+  .splash-hero .wrap { display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 56px; align-items: center; }
+  @media (max-width: 860px) { .splash-hero .wrap { grid-template-columns: 1fr; } }
+  .splash-mark {
+    width: 52px; height: 52px; border-radius: 15px; margin-bottom: 26px;
     background: linear-gradient(135deg, var(--blue), var(--purple));
-    border-radius: 50%; display: flex; align-items: center; justify-content: center;
-    cursor: pointer; flex-shrink: 0;
-    font-size: 14px;
+    display: flex; align-items: center; justify-content: center;
   }
+  .splash-mark svg { width: 24px; height: 24px; }
+  .splash-title { font-size: clamp(34px, 5vw, 52px); font-weight: 800; letter-spacing: -1.4px; line-height: 1.06; margin-bottom: 18px; }
+  .splash-title em { font-style: normal; color: var(--blue); }
+  .splash-tagline { font-size: 16px; color: var(--muted); line-height: 1.6; max-width: 480px; margin-bottom: 30px; }
+  .splash-actions { display: flex; gap: 12px; align-items: center; flex-wrap: wrap; }
+  .btn-primary {
+    display: inline-flex; align-items: center; gap: 8px; background: var(--ink); color: #fff; font-weight: 600;
+    font-size: 14px; padding: 14px 22px; border-radius: 14px; cursor: pointer; border: none; font-family: inherit;
+  }
+  .btn-primary svg { width: 15px; height: 15px; }
+  .btn-ghost { font-size: 13.5px; font-weight: 600; color: var(--muted); cursor: pointer; padding: 14px 6px; }
+  .splash-card {
+    background: var(--surface); border: 1px solid var(--border); border-radius: 22px; padding: 26px;
+    box-shadow: 0 30px 70px rgba(30,35,60,0.09);
+  }
+  .splash-about-label { font-size: 10.5px; font-weight: 700; color: var(--faint); text-transform: uppercase; letter-spacing: 0.9px; margin-bottom: 8px; }
+  .splash-story { font-size: 13.5px; line-height: 1.7; color: #4a4b53; margin-bottom: 18px; }
+  .splash-about { font-size: 13px; line-height: 1.7; color: var(--muted); }
+  .splash-divider { height: 1px; background: var(--border-soft); margin: 18px 0; }
 
-  .prompt-chips { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 20px; }
+  /* ============ ROLE SELECT ============ */
+  #profile-screen {
+    min-height: 100vh; display: none; flex-direction: column; align-items: center; justify-content: center;
+    padding: 60px 24px; opacity: 0; transform: scale(0.98);
+    transition: opacity 0.5s var(--ease), transform 0.5s var(--ease);
+  }
+  #profile-screen.enter { display: flex; opacity: 1; transform: scale(1); }
+  #profile-screen.exit { opacity: 0; transform: scale(1.02); }
+  .profile-logo { font-size: 19px; font-weight: 800; letter-spacing: -0.4px; margin-bottom: 44px; }
+  .profile-logo span { color: var(--blue); }
+  .profile-heading { font-size: 28px; font-weight: 700; text-align: center; margin-bottom: 8px; letter-spacing: -0.6px; }
+  .profile-sub { font-size: 14px; color: var(--muted); text-align: center; margin-bottom: 40px; }
+  .role-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; width: 100%; max-width: 880px; }
+  @media (max-width: 760px) { .role-grid { grid-template-columns: repeat(2, 1fr); } }
+  .role-card {
+    background: var(--surface); border: 1px solid var(--border); border-radius: 18px;
+    padding: 22px 18px; display: flex; flex-direction: column; align-items: flex-start; gap: 12px;
+    cursor: pointer; text-align: left; transition: border-color 0.2s var(--ease), transform 0.15s var(--ease), box-shadow 0.2s var(--ease);
+  }
+  .role-card:hover { border-color: var(--blue); box-shadow: 0 14px 34px rgba(30,35,60,0.08); transform: translateY(-2px); }
+  .role-icon-wrap { width: 38px; height: 38px; border-radius: 11px; display: flex; align-items: center; justify-content: center; }
+  .role-icon-wrap svg { width: 18px; height: 18px; }
+  .role-card-name { font-size: 14.5px; font-weight: 700; }
+  .role-card-desc { font-size: 12px; color: var(--muted); line-height: 1.45; }
+
+  /* ============ APP (website body) ============ */
+  #app { display: none; }
+  #app.visible { display: block; }
+  .app-body { max-width: var(--maxw); margin: 0 auto; padding: 28px; }
+  @media (max-width: 720px) { .app-body { padding: 18px; } }
+  .tab-panel { display: none; }
+  .tab-panel.active { display: block; }
+
+  .accent-line { height: 3px; width: 40px; border-radius: 2px; margin-bottom: 18px; }
+  .page-title { font-size: 28px; font-weight: 800; letter-spacing: -0.7px; margin-bottom: 4px; }
+  .page-sub { font-size: 14px; color: var(--muted); margin-bottom: 24px; }
+  .section-label { font-size: 11px; font-weight: 700; color: var(--faint); text-transform: uppercase; letter-spacing: 0.8px; margin-bottom: 12px; }
+
+  .card { background: var(--surface); border: 1px solid var(--border); border-radius: 18px; padding: 18px; margin-bottom: 14px; }
+  .card-sm { background: var(--surface); border: 1px solid var(--border); border-radius: 13px; padding: 13px 15px; margin-bottom: 9px; }
+
+  .grid-cards { display: grid; grid-template-columns: 1fr; gap: 14px; }
+  @media (min-width: 640px) { .grid-cards { grid-template-columns: 1fr 1fr; } }
+  @media (min-width: 980px) { .grid-cards.cols-3 { grid-template-columns: 1fr 1fr 1fr; } }
+
+  .kpi-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 12px; margin-bottom: 20px; }
+  @media (min-width: 640px) { .kpi-grid { grid-template-columns: repeat(4,1fr); } }
+  .kpi-card { background: var(--surface); border: 1px solid var(--border); border-radius: 15px; padding: 16px; }
+  .kpi-label { font-size: 11px; color: var(--muted); margin-bottom: 6px; font-weight: 500; }
+  .kpi-value { font-size: 22px; font-weight: 800; }
+  .kpi-change { font-size: 11px; color: var(--muted); margin-top: 3px; }
+  .trend-bar-wrap { background: var(--bg-alt); border-radius: 3px; height: 6px; margin-top: 9px; overflow: hidden; }
+  .trend-bar { height: 100%; border-radius: 3px; }
+
+  .prompt-chips { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 18px; }
   .prompt-chip {
-    background: var(--surface2);
-    border: 0.5px solid var(--border);
-    border-radius: 20px; padding: 7px 14px;
-    font-size: 12px; color: #9494cc;
-    cursor: pointer;
-    transition: border-color 0.15s, color 0.15s;
+    background: var(--bg-alt); border: 1px solid var(--border); border-radius: 18px;
+    padding: 8px 15px; font-size: 12px; color: var(--ink); cursor: pointer; font-weight: 500;
+    transition: border-color 0.15s var(--ease), background 0.15s var(--ease);
   }
-  .prompt-chip:hover { border-color: var(--blue); color: var(--blue); }
+  .prompt-chip:hover { border-color: var(--blue); background: var(--blue-bg); color: var(--blue); }
 
-  .ai-response {
-    background: #0f0f1a;
-    border: 0.5px solid #2a2a40;
-    border-radius: 14px;
-    padding: 16px;
-    margin-bottom: 12px;
-  }
-  .ai-tag {
-    display: flex; align-items: center; gap: 6px;
-    margin-bottom: 10px;
-  }
-  .ai-glow {
-    width: 6px; height: 6px; border-radius: 50%;
-    background: linear-gradient(135deg, var(--blue), var(--purple));
-  }
-  .ai-name { font-size: 11px; font-weight: 500; color: var(--blue); }
-  .ai-text { font-size: 13px; color: #ccc; line-height: 1.6; }
+  .resource-tag { display: inline-block; border-radius: 7px; padding: 4px 10px; font-size: 10px; font-weight: 700; letter-spacing: 0.4px; margin-bottom: 9px; }
+  .tag-stem { background: var(--blue-bg); color: var(--blue); }
+  .tag-tutor { background: var(--green-bg); color: var(--green); }
+  .tag-policy { background: var(--purple-bg); color: var(--purple); }
+  .tag-scholar { background: var(--amber-bg); color: var(--amber); }
+  .tag-fafsa { background: var(--purple-bg); color: var(--purple); }
+  .resource-actions { display: flex; gap: 7px; margin-top: 13px; }
+  .res-btn { background: var(--bg-alt); border: 1px solid var(--border); border-radius: 9px; padding: 7px 12px; font-size: 11px; color: var(--muted); font-weight: 600; cursor: pointer; }
+  .res-btn:hover { color: var(--ink); border-color: var(--ink); }
 
-  /* Resource cards */
-  .resource-tag {
-    display: inline-block;
-    border-radius: 6px; padding: 3px 9px;
-    font-size: 10px; font-weight: 500;
-    margin-bottom: 8px;
-  }
-  .tag-stem { background: #1a1f35; border: 0.5px solid var(--blue); color: #8899ee; }
-  .tag-tutor { background: #0f1a18; border: 0.5px solid var(--green); color: var(--green); }
-  .tag-policy { background: #1a1020; border: 0.5px solid var(--purple); color: #c07af5; }
-  .tag-scholar { background: #1f1a0f; border: 0.5px solid var(--orange); color: var(--orange); }
-  .tag-fafsa { background: #1a0f20; border: 0.5px solid #c07af5; color: #c07af5; }
+  .layer-pills { display: flex; gap: 7px; overflow-x: auto; padding-bottom: 2px; margin-bottom: 14px; }
+  .layer-pill { background: var(--bg-alt); border: 1px solid var(--border); border-radius: 15px; padding: 7px 14px; font-size: 12px; color: var(--muted); font-weight: 600; cursor: pointer; white-space: nowrap; transition: all 0.15s var(--ease); flex-shrink: 0; display: flex; align-items: center; gap: 7px; opacity: 0.65; }
+  .layer-pill .sw { width: 7px; height: 7px; border-radius: 50%; }
+  .layer-pill.on { background: var(--ink); border-color: var(--ink); color: #fff; opacity: 1; }
 
-  .resource-actions { display: flex; gap: 8px; margin-top: 12px; }
-  .res-btn {
-    background: var(--surface2); border: 0.5px solid var(--border);
-    border-radius: 8px; padding: 6px 12px;
-    font-size: 11px; color: var(--muted);
-    cursor: pointer; transition: color 0.15s, border-color 0.15s;
-  }
-  .res-btn:hover { color: var(--text); border-color: var(--dim); }
-
-  /* Map */
-  .map-area {
-    background: #0c1018;
-    border: 0.5px solid #1e2535;
-    border-radius: 16px;
-    height: 280px;
-    position: relative;
-    overflow: hidden;
-    margin-bottom: 16px;
-    display: flex; align-items: center; justify-content: center;
-  }
-  .map-grid-bg {
-    position: absolute; inset: 0;
-    background-image: linear-gradient(#1a2030 1px, transparent 1px), linear-gradient(90deg, #1a2030 1px, transparent 1px);
-    background-size: 32px 32px;
-    opacity: 0.5;
-  }
-  .map-pin {
-    position: absolute; border-radius: 50%;
-    width: 12px; height: 12px;
-    cursor: pointer;
-    transition: transform 0.2s;
-  }
-  .map-pin:hover { transform: scale(1.4); }
-  .map-pin-label {
-    position: absolute;
-    background: var(--surface2);
-    border: 0.5px solid var(--border);
-    border-radius: 8px;
-    padding: 4px 8px;
-    font-size: 10px; color: var(--text);
-    white-space: nowrap;
-    pointer-events: none;
-    opacity: 0;
-    transition: opacity 0.15s;
-    top: -28px; left: 50%; transform: translateX(-50%);
-  }
-  .map-pin:hover .map-pin-label { opacity: 1; }
-
-  .layer-pills { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 14px; }
-  .layer-pill {
-    background: var(--surface); border: 0.5px solid var(--border);
-    border-radius: 16px; padding: 6px 14px;
-    font-size: 12px; color: var(--muted);
-    cursor: pointer; transition: all 0.15s;
-  }
-  .layer-pill.on { background: #1a1a30; border-color: var(--blue); color: var(--blue); }
-
-  /* Report cards for policymaker */
-  .report-card {
-    background: var(--surface);
-    border: 0.5px solid var(--border);
-    border-radius: 14px;
-    padding: 18px;
-    margin-bottom: 10px;
-    display: flex; align-items: center; gap: 16px;
-    cursor: pointer;
-    transition: border-color 0.15s;
-  }
+  .divider { height: 1px; background: var(--border-soft); margin: 18px 0; }
+  .avatar { width: 62px; height: 62px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 20px; font-weight: 700; color: #fff; flex-shrink: 0; }
+  .insight { border-left: 3px solid var(--blue); border-radius: 0 12px 12px 0; background: var(--bg-alt); padding: 13px 15px; margin-bottom: 9px; }
+  .insight-title { font-size: 13px; font-weight: 700; color: var(--blue); margin-bottom: 3px; }
+  .insight-body { font-size: 12px; color: var(--muted); line-height: 1.5; }
+  .report-card { background: var(--surface); border: 1px solid var(--border); border-radius: 15px; padding: 14px; display: flex; align-items: center; gap: 13px; margin-bottom: 9px; cursor: pointer; transition: border-color 0.15s var(--ease); }
   .report-card:hover { border-color: var(--purple); }
-  .report-icon {
-    width: 44px; height: 44px; border-radius: 10px;
-    background: #1a1030; border: 0.5px solid #3535a0;
-    display: flex; align-items: center; justify-content: center;
-    font-size: 18px; flex-shrink: 0;
+  .report-icon { width: 42px; height: 42px; border-radius: 11px; background: var(--purple-bg); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+  .report-icon svg { width: 19px; height: 19px; color: var(--purple); }
+
+  /* ---------- EXPLORE: two-column layout (map+agents / chat) ---------- */
+  .explore-grid { display: grid; grid-template-columns: 1fr; gap: 20px; }
+  @media (min-width: 980px) { .explore-grid { grid-template-columns: 1.2fr 0.8fr; align-items: start; } }
+
+  /* ---------- Map (from partner build) ---------- */
+  .mapwindow { border: 1px solid var(--border); border-radius: 16px; overflow: hidden; background: #eff0f2; }
+  .winbar { display: flex; align-items: center; gap: 6px; padding: 9px 12px; background: #e9eaee; border-bottom: 1px solid var(--border); }
+  .winbar .dots { display: flex; gap: 4px; }
+  .winbar .dots span { width: 7px; height: 7px; border-radius: 50%; background: #cfd0d6; }
+  .winbar .addr { flex: 1; text-align: center; font-size: 10.5px; color: var(--muted); background: #fff; border-radius: 6px; padding: 3px 10px; margin: 0 4px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .mapframe { position: relative; height: 300px; }
+  .mapframe iframe { width: 100%; height: 100%; display: block; border: 0; background: #eff0f2; }
+  .overlay-svg { position: absolute; inset: 0; pointer-events: none; width: 100%; height: 100%; }
+  .layer { opacity: 0; transition: opacity .3s; }
+  .layer.show { opacity: 1; }
+  .openmap { position: absolute; bottom: 10px; right: 10px; font-size: 11px; font-weight: 600; color: #fff; background: rgba(23,24,28,0.75);
+    padding: 7px 12px; border-radius: 20px; text-decoration: none; display: flex; align-items: center; gap: 4px; z-index: 5; }
+  .legend { display: flex; align-items: center; gap: 8px; margin-top: 10px; font-size: 10.5px; color: var(--muted); }
+  .legend .bar { flex: 1; height: 6px; border-radius: 3px; background: linear-gradient(90deg, var(--low), var(--mid), var(--high)); }
+
+  @keyframes travel { from { offset-distance: 0%; opacity: 0; } 8% { opacity: 1; } 92% { opacity: 1; } to { offset-distance: 100%; opacity: 0; } }
+  .particle { animation: travel 2.2s linear infinite; }
+  @keyframes ringout { 0% { r: 5; opacity: 0.9; } 100% { r: 24; opacity: 0; } }
+  .ring { animation: ringout 1.9s ease-out infinite; }
+
+  table.zonetable { width: 100%; border-collapse: collapse; font-size: 12.5px; }
+  table.zonetable th { text-align: left; font-weight: 600; color: var(--muted); font-size: 10.5px; padding: 0 4px 8px; border-bottom: 1px solid var(--border); }
+  table.zonetable td { padding: 10px 4px; border-bottom: 1px solid var(--border-soft); color: var(--ink); }
+  table.zonetable tr:last-child td { border-bottom: none; }
+  .tag { font-size: 10px; padding: 3px 8px; border-radius: 8px; font-weight: 700; }
+  .tag.high { background: var(--amber-bg); color: var(--amber); }
+  .tag.mid { background: var(--blue-bg); color: var(--blue); }
+  .tag.low { background: var(--green-bg); color: var(--green); }
+
+  .addrow { margin-top: 12px; width: 100%; padding: 10px; border-radius: 10px; border: 1px dashed var(--faint); background: none; color: var(--muted); font-size: 12.5px; font-weight: 600; cursor: pointer; font-family: inherit; }
+  .addrow:hover { border-color: var(--ink); color: var(--ink); }
+  .analyzebtn {
+    width: 100%; padding: 13px; border: none; border-radius: 14px; background: var(--ink); color: #fff;
+    font-size: 13px; font-weight: 700; cursor: pointer; margin-top: 12px; font-family: inherit;
+    display: flex; align-items: center; justify-content: center; gap: 8px;
   }
+  .analyzebtn svg { width: 14px; height: 14px; }
 
-  /* Insight cards */
-  .insight {
-    border-left: 2px solid var(--blue);
-    border-radius: 0 10px 10px 0;
-    background: #0f0f1a;
-    padding: 12px 14px;
-    margin-bottom: 8px;
+  /* ---------- Chat ---------- */
+  .chat-box { max-height: 360px; overflow-y: auto; margin-bottom: 12px; display: flex; flex-direction: column; gap: 10px; padding-right: 2px; }
+  .chat-input-row { display: flex; gap: 8px; align-items: center; }
+  .chat-input-row input {
+    flex: 1; background: var(--bg-alt); border: 1px solid var(--border); border-radius: 16px;
+    padding: 11px 15px; font-size: 12.5px; color: var(--ink); font-family: 'Inter', sans-serif; outline: none;
   }
-  .insight-title { font-size: 13px; font-weight: 500; color: var(--blue); margin-bottom: 3px; }
-  .insight-body { font-size: 12px; color: var(--muted); line-height: 1.4; }
+  .chat-input-row input:focus { border-color: var(--ink); }
+  .chat-send-btn { width: 36px; height: 36px; border-radius: 50%; flex-shrink: 0; cursor: pointer; background: var(--ink);
+    display: flex; align-items: center; justify-content: center; }
+  .chat-send-btn svg { width: 15px; height: 15px; color: #fff; }
+  .msg-user { display: flex; justify-content: flex-end; }
+  .msg-user p { background: var(--ink); color: #fff; font-size: 12.5px; padding: 10px 14px; border-radius: 15px 15px 3px 15px; max-width: 85%; line-height: 1.5; }
+  .msg-ai { display: flex; align-items: flex-start; gap: 8px; }
+  .msg-ai-dot { width: 6px; height: 6px; border-radius: 50%; margin-top: 7px; flex-shrink: 0; }
+  .msg-ai p { font-size: 12.5px; color: #35363d; line-height: 1.55; background: var(--bg-alt); border-radius: 15px 15px 15px 3px; padding: 11px 14px; }
+  .msg-thinking p { color: var(--faint) !important; font-style: italic; }
 
-  /* Stat row for policymaker dashboard */
-  .kpi-grid {
-    display: grid; grid-template-columns: repeat(4, 1fr);
-    gap: 10px; margin-bottom: 20px;
+  /* ---------- Reports charts ---------- */
+  .chartrow { display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 9px; }
+  .chartrow .lbl { font-size: 12px; color: var(--muted); }
+  .chartrow .delta { font-size: 11.5px; font-weight: 700; }
+  .delta.down { color: var(--red); } .delta.up { color: var(--green); }
+  svg.chart { width: 100%; height: 74px; display: block; }
+  .barrow { display: flex; align-items: center; gap: 9px; font-size: 12px; margin-bottom: 9px; }
+  .barrow .name { width: 96px; flex-shrink: 0; }
+  .barrow .track { flex: 1; height: 8px; background: var(--bg-alt); border-radius: 4px; overflow: hidden; }
+  .barrow .fill { height: 100%; border-radius: 4px; }
+  .barrow .n { width: 38px; text-align: right; color: var(--muted); font-size: 11px; }
+
+  /* ---------- Agent trace sheet (bottom sheet, adapted for web = centered modal panel) ---------- */
+  .sheet-scrim { position: fixed; inset: 0; background: rgba(20,20,25,0.4); z-index: 250; opacity: 0; pointer-events: none; transition: opacity 0.3s var(--ease); }
+  .sheet-scrim.open { opacity: 1; pointer-events: all; }
+  .sheet {
+    position: fixed; left: 50%; bottom: 0; transform: translate(-50%, 100%); width: min(560px, 92vw);
+    background: #fff; border-radius: 22px 22px 0 0; box-shadow: 0 -10px 50px rgba(20,20,30,0.2);
+    transition: transform 0.4s var(--ease); z-index: 260; max-height: 82vh; overflow-y: auto; padding: 12px 24px 30px;
   }
-  .kpi-card {
-    background: var(--surface);
-    border: 0.5px solid var(--border);
-    border-radius: 12px; padding: 16px 14px;
-  }
-  .kpi-label { font-size: 10px; color: var(--muted); margin-bottom: 6px; }
-  .kpi-value { font-size: 22px; font-weight: 500; }
-  .kpi-change { font-size: 10px; color: var(--muted); margin-top: 3px; }
+  .sheet.open { transform: translate(-50%, 0); }
+  .sheet-handle { width: 36px; height: 4px; background: var(--border); border-radius: 2px; margin: 0 auto 16px; }
+  .sheet h3 { font-size: 17px; font-weight: 800; margin-bottom: 4px; }
+  .sheet .stepline { font-size: 12px; color: var(--muted); margin-bottom: 18px; }
+  .closebtn { position: absolute; top: 16px; right: 20px; font-size: 12.5px; color: var(--muted); background: none; border: none; cursor: pointer; font-family: inherit; font-weight: 600; }
+  .agentrow { display: flex; align-items: flex-start; gap: 11px; margin-bottom: 14px; opacity: 0.3; transition: opacity 0.3s var(--ease); }
+  .agentrow.on { opacity: 1; }
+  .agentrow .badge { width: 28px; height: 28px; border-radius: 8px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 800; color: #fff; }
+  .agentrow .name { font-size: 12.5px; font-weight: 700; }
+  .agentrow .txt { font-size: 11.5px; color: var(--muted); margin-top: 2px; line-height: 1.45; }
+  .reportcard .title { font-size: 15.5px; font-weight: 800; margin-bottom: 5px; }
+  .reportcard .lede { font-size: 12.5px; color: var(--muted); margin-bottom: 11px; line-height: 1.55; }
+  .finding { display: flex; gap: 9px; padding: 10px 0; border-top: 1px solid var(--border-soft); }
+  .finding .sw { width: 8px; height: 8px; border-radius: 50%; margin-top: 5px; flex-shrink: 0; }
+  .finding .t { font-size: 12.5px; line-height: 1.5; }
+  .confidence { font-size: 10.5px; color: var(--faint); margin-top: 11px; }
+  .placeholder { font-size: 12.5px; color: var(--faint); text-align: center; padding: 22px 10px; }
 
-  /* Scrollbar */
-  .tab-panel::-webkit-scrollbar { width: 4px; }
-  .tab-panel::-webkit-scrollbar-track { background: transparent; }
-  .tab-panel::-webkit-scrollbar-thumb { background: var(--border); border-radius: 2px; }
+  /* ---------- Add-zone modal ---------- */
+  .modalscrim { position: fixed; inset: 0; background: rgba(20,20,22,0.4); display: none; align-items: center; justify-content: center; z-index: 270; }
+  .modalscrim.open { display: flex; }
+  .modal { background: var(--surface); width: min(420px, 92vw); border-radius: 20px; padding: 22px 24px 26px; }
+  .modal h3 { font-size: 16px; font-weight: 800; margin-bottom: 14px; }
+  .field { margin-bottom: 13px; }
+  .field label { display: block; font-size: 11.5px; color: var(--muted); margin-bottom: 6px; font-weight: 600; }
+  .field input { width: 100%; border: 1px solid var(--border); border-radius: 10px; padding: 11px 12px; font-size: 13px;
+    font-family: inherit; color: var(--ink); background: var(--bg-alt); outline: none; }
+  .field input:focus { border-color: var(--ink); }
+  .modalbtns { display: flex; gap: 9px; margin-top: 8px; }
+  .modalbtns button { flex: 1; padding: 12px; border-radius: 12px; font-size: 13px; font-weight: 700; cursor: pointer; border: none; font-family: inherit; }
+  .modalbtns .cancel { background: var(--bg-alt); color: var(--muted); }
+  .modalbtns .submit { background: var(--ink); color: #fff; }
 
-  /* Two col layout */
-  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
-
-  /* Page title */
-  .page-title { font-size: 20px; font-weight: 500; margin-bottom: 4px; letter-spacing: -0.3px; }
-  .page-sub { font-size: 13px; color: var(--muted); margin-bottom: 20px; }
-
-  /* Trend bar */
-  .trend-bar-wrap { background: #0f0f18; border-radius: 4px; height: 6px; margin-top: 6px; overflow: hidden; }
-  .trend-bar { height: 100%; border-radius: 4px; }
+  footer.site-footer { border-top: 1px solid var(--border); margin-top: 40px; padding: 26px 0 40px; }
+  footer.site-footer .wrap { display: flex; justify-content: space-between; align-items: center; font-size: 12px; color: var(--faint); flex-wrap: wrap; gap: 10px; }
 </style>
 </head>
 <body>
 
-<!-- ═══ PROFILE SELECTION ═══ -->
-<div id="profile-screen">
-  <div class="profile-logo">Edu<span>Bridge</span></div>
-  <h1 class="profile-heading">Who's using EduBridge?</h1>
-  <p class="profile-sub">Your experience will be personalized for you.</p>
-  <div class="profile-grid">
-
-    <div class="profile-card" onclick="selectRole('parent')">
-      <div class="profile-icon" style="background:#1a1a2e;border:0.5px solid #3535a0;">👨‍👩‍👧</div>
-      <div class="profile-card-name">Parent</div>
-      <div class="profile-card-desc">Find resources and understand your child's school</div>
+<!-- ================= SITE HEADER (app chrome) ================= -->
+<header id="site-header">
+  <div class="wrap header-inner">
+    <div class="header-logo">Edu<span>Bridge</span></div>
+    <nav class="header-tabs" id="header-tabs"></nav>
+    <div class="role-pill" onclick="toggleDropdown(event)">
+      <div class="role-dot" id="role-dot"></div>
+      <span id="role-pill-label">—</span>
+      <svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+      <div class="role-dropdown" id="role-dropdown">
+        <div class="role-option" onclick="switchRole('parent')"><div class="role-option-dot" style="background:var(--blue)"></div>Parent</div>
+        <div class="role-option" onclick="switchRole('student')"><div class="role-option-dot" style="background:var(--green)"></div>Student</div>
+        <div class="role-option" onclick="switchRole('policy')"><div class="role-option-dot" style="background:var(--purple)"></div>Policymaker</div>
+        <div class="role-option" onclick="switchRole('general')"><div class="role-option-dot" style="background:var(--amber)"></div>Explorer</div>
+      </div>
     </div>
+  </div>
+</header>
 
-    <div class="profile-card" onclick="selectRole('student')">
-      <div class="profile-icon" style="background:#0f1a18;border:0.5px solid #1a5040;">🎒</div>
-      <div class="profile-card-name">Student</div>
-      <div class="profile-card-desc">Discover scholarships, camps, and opportunities</div>
+<!-- ================= SPLASH / LANDING ================= -->
+<div id="splash">
+  <div class="splash-nav">
+    <div class="wrap">
+      <div class="splash-logo">Edu<span>Bridge</span></div>
+      <div class="splash-nav-cta" onclick="goToRoleSelect()">Get started</div>
     </div>
-
-    <div class="profile-card" onclick="selectRole('policy')">
-      <div class="profile-icon" style="background:#1a0f20;border:0.5px solid #50208a;">🏛️</div>
-      <div class="profile-card-name">Policymaker</div>
-      <div class="profile-card-desc">Analyze district data and generate reports</div>
+  </div>
+  <div class="splash-hero">
+    <div class="wrap">
+      <div>
+        <div class="splash-mark">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 2 8l10 5 10-5-10-5Z"/><path d="M6 10.5V16c0 1.5 2.7 3 6 3s6-1.5 6-3v-5.5"/><path d="M22 8v6"/></svg>
+        </div>
+        <h1 class="splash-title">Closing the opportunity gap, <em>county by county</em>.</h1>
+        <p class="splash-tagline">Two students twenty miles apart in North Carolina can have wildly different odds of graduating, simply because of where they live. EduBridge makes that gap visible — and connects families, students, and policymakers to the resources that close it.</p>
+        <div class="splash-actions">
+          <button class="btn-primary" onclick="goToRoleSelect()">
+            Get started
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg>
+          </button>
+          <span class="btn-ghost" onclick="goToRoleSelect()">Browse without an account →</span>
+        </div>
+      </div>
+      <div class="splash-card">
+        <div class="splash-about-label">Our story</div>
+        <p class="splash-story">EduBridge started with a simple observation: access to opportunity shouldn't depend on ZIP code. We built EduBridge to make the gap visible and put families, students, and policymakers in front of the resources that close it.</p>
+        <div class="splash-divider"></div>
+        <div class="splash-about-label">About us</div>
+        <p class="splash-about">We're a small team of educators, engineers, and former school-board staff. EduBridge combines public data with AI-guided search so every family and district can find what they need in one place.</p>
+      </div>
     </div>
-
-    <div class="profile-card" onclick="selectRole('general')">
-      <div class="profile-icon" style="background:#1a1510;border:0.5px solid #504020;">🔭</div>
-      <div class="profile-card-name">Explorer</div>
-      <div class="profile-card-desc">Browse equity data and explore freely</div>
-    </div>
-
   </div>
 </div>
 
-<!-- ═══ MAIN APP ═══ -->
-<div id="app">
-  <header class="app-header">
-    <div class="header-logo">Edu<span>Bridge</span></div>
-    <div class="role-pill" onclick="toggleDropdown(event)">
-      <div class="role-dot" id="role-dot"></div>
-      <span id="role-pill-label">Parent</span>
-      <span style="color:var(--muted);font-size:10px">▾</span>
-      <div class="role-dropdown" id="role-dropdown">
-        <div class="role-option" onclick="switchRole('parent')">
-          <div class="role-option-dot" style="background:#6e8ef7"></div> Parent
-        </div>
-        <div class="role-option" onclick="switchRole('student')">
-          <div class="role-option-dot" style="background:#5fcf9f"></div> Student
-        </div>
-        <div class="role-option" onclick="switchRole('policy')">
-          <div class="role-option-dot" style="background:#a77bf5"></div> Policymaker
-        </div>
-        <div class="role-option" onclick="switchRole('general')">
-          <div class="role-option-dot" style="background:#f5a345"></div> Explorer
-        </div>
-      </div>
+<!-- ================= ROLE SELECT ================= -->
+<div id="profile-screen">
+  <div class="profile-logo">Edu<span>Bridge</span></div>
+  <h1 class="profile-heading">Who's using EduBridge?</h1>
+  <p class="profile-sub">We'll personalize your experience.</p>
+  <div class="role-grid">
+    <div class="role-card" onclick="selectRole('parent')">
+      <div class="role-icon-wrap" style="background:var(--blue-bg)"><svg viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 21a6 6 0 0 0-12 0"/><circle cx="12" cy="9" r="4"/></svg></div>
+      <div class="role-card-name">Parent</div>
+      <div class="role-card-desc">Resources for your child's school</div>
     </div>
-  </header>
+    <div class="role-card" onclick="selectRole('student')">
+      <div class="role-icon-wrap" style="background:var(--green-bg)"><svg viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10 12 5 2 10l10 5 10-5Z"/><path d="M6 12v5c0 1.5 2.7 3 6 3s6-1.5 6-3v-5"/></svg></div>
+      <div class="role-card-name">Student</div>
+      <div class="role-card-desc">Scholarships, camps, opportunities</div>
+    </div>
+    <div class="role-card" onclick="selectRole('policy')">
+      <div class="role-icon-wrap" style="background:var(--purple-bg)"><svg viewBox="0 0 24 24" fill="none" stroke="var(--purple)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M5 21V10l7-6 7 6v11"/><path d="M9 21v-6h6v6"/></svg></div>
+      <div class="role-card-name">Policymaker</div>
+      <div class="role-card-desc">District data and reports</div>
+    </div>
+    <div class="role-card" onclick="selectRole('general')">
+      <div class="role-icon-wrap" style="background:var(--amber-bg)"><svg viewBox="0 0 24 24" fill="none" stroke="var(--amber)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M15 9l-2 5-5 2 2-5 5-2Z"/></svg></div>
+      <div class="role-card-name">Explorer</div>
+      <div class="role-card-desc">Browse freely, no account needed</div>
+    </div>
+  </div>
+</div>
 
-  <nav class="app-nav" id="app-nav">
-    <!-- tabs injected by JS -->
-    <div class="nav-underline" id="nav-underline"></div>
-  </nav>
+<!-- ================= APP ================= -->
+<div id="app">
+  <div class="app-body" id="app-body"></div>
+  <footer class="site-footer">
+    <div class="wrap">
+      <span>Edu<span style="color:var(--blue);font-weight:700">Bridge</span> · Illustrative demo data</span>
+      <span>Made for NC families, students, and districts</span>
+    </div>
+  </footer>
+</div>
 
-  <div class="app-content" id="app-content">
-    <!-- panels injected by JS -->
+<!-- Agent analysis sheet (global overlay, used from Explore tab) -->
+<div class="sheet-scrim" id="sheet-scrim" onclick="closeSheet()"></div>
+<div class="sheet" id="sheet">
+  <button class="closebtn" id="closebtn" onclick="closeSheet()">Close</button>
+  <div class="sheet-handle"></div>
+  <h3 id="sheettitle">Analyzing flagged zones</h3>
+  <div class="stepline" id="stepline">Dispatching to specialist agents…</div>
+  <div class="agentrow" data-a="orchestrator"><div class="badge" style="background:#8b8c96">OR</div>
+    <div><div class="name">Orchestrator</div><div class="txt">Reads the zone table and assigns each zone to a specialist agent.</div></div></div>
+  <div class="agentrow" data-a="funding"><div class="badge" style="background:var(--amber)">FN</div>
+    <div><div class="name">Funding agent</div><div class="txt">Top-flagged zone received $890K this cycle, down 12% year over year.</div></div></div>
+  <div class="agentrow" data-a="income"><div class="badge" style="background:var(--green)">IN</div>
+    <div><div class="name">Income agent</div><div class="txt">Median household income nearby fell to $38,900, down 4%.</div></div></div>
+  <div class="agentrow" data-a="tech"><div class="badge" style="background:var(--blue)">TC</div>
+    <div><div class="name">Tech access agent</div><div class="txt">Home broadband coverage sits at 46%, below the district average.</div></div></div>
+  <div class="agentrow" data-a="transit"><div class="badge" style="background:#8b8c96">TR</div>
+    <div><div class="name">Transit agent</div><div class="txt">Transit desert score 0.61 — above the 0.50 statewide average.</div></div></div>
+  <div class="agentrow" data-a="synth"><div class="badge" style="background:var(--ink)">SY</div>
+    <div><div class="name">Synthesis agent</div><div class="txt">Combining findings into one report.</div></div></div>
+  <div id="sheet-report" style="margin-top:6px"></div>
+</div>
+
+<!-- Add-zone modal (global overlay, used from Explore tab) -->
+<div class="modalscrim" id="modalscrim">
+  <div class="modal">
+    <div class="sheet-handle"></div>
+    <h3>Add a zone</h3>
+    <div class="field"><label>County</label><input id="in-county" placeholder="e.g. Mecklenburg"></div>
+    <div class="field"><label>School name</label><input id="in-school" placeholder="e.g. Eastover Elementary"></div>
+    <div class="field"><label>Zip code</label><input id="in-zip" placeholder="e.g. 28211" inputmode="numeric"></div>
+    <div class="modalbtns">
+      <button class="cancel" id="modalcancel" onclick="closeModal()">Cancel</button>
+      <button class="submit" id="modalsubmit">Add zone</button>
+    </div>
   </div>
 </div>
 
 <script>
+/* ============ ICONS ============ */
+const ICON = {
+  explore: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M15 9l-2 5-5 2 2-5 5-2Z"/></svg>',
+  community: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H7a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>',
+  profile: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 21a6 6 0 0 0-12 0"/><circle cx="12" cy="9" r="4"/></svg>',
+  dashboard: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><rect x="7" y="12" width="3" height="6"/><rect x="12" y="8" width="3" height="10"/><rect x="17" y="5" width="3" height="13"/></svg>',
+  reports: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"/><path d="M14 2v6h6"/><path d="M9 13h6"/><path d="M9 17h6"/></svg>',
+  opportunities: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 15 9l7 1-5 5 1.5 7L12 18.5 5.5 22 7 15 2 10l7-1 3-7Z"/></svg>',
+  send: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2 11 13"/><path d="M22 2 15 22l-4-9-9-4 20-7Z"/></svg>',
+  bolt: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 4 14h7l-1 8 9-12h-7l1-8Z"/></svg>',
+  doc: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"/><path d="M14 2v6h6"/></svg>'
+};
+
 const ROLES = {
-  parent: {
-    color: '#6e8ef7',
-    label: 'Parent',
-    tabs: ['AI Assistant', 'Map', 'Community', 'Profile'],
-    defaultTab: 0
-  },
-  student: {
-    color: '#5fcf9f',
-    label: 'Student',
-    tabs: ['Opportunities', 'Map', 'AI Assistant', 'Profile'],
-    defaultTab: 0
-  },
-  policy: {
-    color: '#a77bf5',
-    label: 'Policymaker',
-    tabs: ['Dashboard', 'Map', 'Reports', 'AI Assistant'],
-    defaultTab: 0
-  },
-  general: {
-    color: '#f5a345',
-    label: 'Explorer',
-    tabs: ['Map', 'AI Assistant', 'Community', 'Profile'],
-    defaultTab: 0
-  }
+  parent:  { color:'#3e6ef6', label:'Parent',      tabs:[{icon:'explore',label:'Explore'},{icon:'community',label:'Community'},{icon:'profile',label:'Profile'}], default:0 },
+  student: { color:'#1fa27a', label:'Student',     tabs:[{icon:'opportunities',label:'Opportunities'},{icon:'explore',label:'Explore'},{icon:'profile',label:'Profile'}], default:0 },
+  policy:  { color:'#8a6df0', label:'Policymaker', tabs:[{icon:'dashboard',label:'Dashboard'},{icon:'explore',label:'Explore'},{icon:'reports',label:'Reports'}], default:0 },
+  general: { color:'#d99a2b', label:'Explorer',    tabs:[{icon:'explore',label:'Explore'},{icon:'community',label:'Community'},{icon:'profile',label:'Profile'}], default:0 }
 };
 
+/* ============ CHAT (Ask EduBridge) ============ */
+let conversationHistory = [];
+const personaMap = { parent:'parent', student:'student', policy:'policymaker', general:'general' };
+
+function buildChatUI(accentColor) {
+  return `
+    <div class="card">
+      <div class="section-label" style="margin-bottom:14px">Ask EduBridge</div>
+      <div class="chat-box" id="chat-messages">
+        <div class="msg-ai">
+          <div class="msg-ai-dot" style="background:${accentColor}"></div>
+          <p>Hi! Ask me anything about NC schools — graduation rates, broadband access, funding gaps, EOG scores, absenteeism, and more.</p>
+        </div>
+      </div>
+      <div class="chat-input-row">
+        <input id="chat-input" type="text" placeholder="Ask about any NC school or county…" onkeydown="if(event.key==='Enter') sendChat()" />
+        <div class="chat-send-btn" onclick="sendChat()">${ICON.send}</div>
+      </div>
+    </div>
+  `;
+}
+
+async function sendChat() {
+  const input = document.getElementById('chat-input');
+  const chatBox = document.getElementById('chat-messages');
+  if (!input || !chatBox) return;
+  const message = input.value.trim();
+  if (!message) return;
+  input.value = '';
+
+  const userDiv = document.createElement('div');
+  userDiv.className = 'msg-user';
+  userDiv.innerHTML = `<p></p>`;
+  userDiv.querySelector('p').textContent = message;
+  chatBox.appendChild(userDiv);
+
+  const thinkDiv = document.createElement('div');
+  thinkDiv.className = 'msg-ai msg-thinking';
+  thinkDiv.id = 'chat-thinking';
+  thinkDiv.innerHTML = `<div class="msg-ai-dot" style="background:#c9cad2"></div><p>Thinking…</p>`;
+  chatBox.appendChild(thinkDiv);
+  chatBox.scrollTop = chatBox.scrollHeight;
+
+  conversationHistory.push({ role: 'user', content: message });
+
+  try {
+    const res = await fetch('http://127.0.0.1:5000/chat', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        message: message,
+        persona: personaMap[role] || 'general',
+        history: conversationHistory
+      })
+    });
+    const data = await res.json();
+    document.getElementById('chat-thinking')?.remove();
+
+    const aiDiv = document.createElement('div');
+    aiDiv.className = 'msg-ai';
+    const p = document.createElement('p');
+    p.textContent = data.response;
+    aiDiv.innerHTML = `<div class="msg-ai-dot" style="background:${ROLES[role].color}"></div>`;
+    aiDiv.appendChild(p);
+    chatBox.appendChild(aiDiv);
+    conversationHistory.push({ role: 'assistant', content: data.response });
+
+  } catch (err) {
+    document.getElementById('chat-thinking')?.remove();
+    const errDiv = document.createElement('div');
+    errDiv.className = 'msg-ai';
+    errDiv.innerHTML = `<div class="msg-ai-dot" style="background:#e2604f"></div><p style="color:#e2604f">Could not reach the agent server. Make sure it's running (python app.py) and reachable at 127.0.0.1:5000.</p>`;
+    chatBox.appendChild(errDiv);
+  }
+  chatBox.scrollTop = chatBox.scrollHeight;
+}
+
+function chipPrompt(text) {
+  const input = document.getElementById('chat-input');
+  if (input) { input.value = text; sendChat(); }
+}
+
+/* ============ EXPLORE: map + agent analysis (from partner build) ============ */
+function seeded(seed){ let s = seed; return function(){ s = (s*9301+49297)%233280; return s/233280; }; }
+const colorFor = v => v < 0.4 ? 'var(--low)' : v < 0.65 ? 'var(--mid)' : 'var(--high)';
+
+function buildExploreBlock(kind, accentColor) {
+  return `
+  <div class="card">
+    <div class="section-label">Multi-layer map</div>
+    <div class="layer-pills" id="layerpills-${kind}">
+      <span class="layer-pill on" data-layer="transit"><span class="sw" style="background:#8b8c96"></span>Transit</span>
+      <span class="layer-pill" data-layer="funding"><span class="sw" style="background:var(--amber)"></span>Funding flow</span>
+      <span class="layer-pill" data-layer="income"><span class="sw" style="background:var(--green)"></span>Income heatmap</span>
+      <span class="layer-pill" data-layer="tech"><span class="sw" style="background:var(--blue)"></span>Tech access</span>
+    </div>
+    <div class="mapwindow">
+      <div class="winbar">
+        <div class="dots"><span></span><span></span><span></span></div>
+        <div class="addr">map\\map.html</div>
+      </div>
+      <div class="mapframe" id="mapframe-${kind}">
+        <iframe src="map\\map.html" title="Interactive opportunity distance map" loading="lazy" onerror="this.style.display='none'"></iframe>
+        <svg class="overlay-svg" viewBox="0 0 315 230" preserveAspectRatio="xMidYMid slice">
+          <defs>
+            <filter id="heatblur-${kind}" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="9"></feGaussianBlur></filter>
+          </defs>
+          <g class="layer" id="ly-${kind}-funding">
+            <path d="M35,215 C70,160 95,120 118,60" stroke="#d99a2b" stroke-width="2" fill="none" opacity="0.45"></path>
+            <path d="M115,215 C118,160 118,120 118,60" stroke="#d99a2b" stroke-width="4" fill="none" opacity="0.45"></path>
+            <path d="M200,215 C170,160 145,120 121,60" stroke="#d99a2b" stroke-width="2.5" fill="none" opacity="0.45"></path>
+            <path d="M280,215 C230,150 165,110 122,60" stroke="#d99a2b" stroke-width="1.5" fill="none" opacity="0.45"></path>
+            <circle class="particle" r="3" fill="#d99a2b" style="offset-path:path('M35,215 C70,160 95,120 118,60')"></circle>
+            <circle class="particle" r="4" fill="#d99a2b" style="offset-path:path('M115,215 C118,160 118,120 118,60');animation-delay:.5s"></circle>
+            <circle class="particle" r="3" fill="#d99a2b" style="offset-path:path('M200,215 C170,160 145,120 121,60');animation-delay:1s"></circle>
+            <circle class="particle" r="2.5" fill="#d99a2b" style="offset-path:path('M280,215 C230,150 165,110 122,60');animation-delay:1.5s"></circle>
+            <circle cx="118" cy="60" r="5" fill="#d99a2b"></circle>
+            <rect x="82" y="10" width="72" height="15" rx="4" fill="#fbf2e2"></rect>
+            <text x="118" y="20.5" font-size="8" fill="#d99a2b" text-anchor="middle" font-weight="700">$6.4M budget</text>
+          </g>
+          <g class="layer" id="ly-${kind}-income" filter="url(#heatblur-${kind})"></g>
+          <g class="layer" id="ly-${kind}-tech"></g>
+          <g class="layer show" id="ly-${kind}-transit"></g>
+        </svg>
+        <a class="openmap" href="map\\map.html" target="_blank">Open live map ↗</a>
+      </div>
+    </div>
+    <div class="legend" id="incomelegend-${kind}" style="display:none;"><span>Lower income</span><div class="bar"></div><span>Higher income</span></div>
+  </div>
+
+  <div class="card">
+    <div class="section-label">Build a report</div>
+    <table class="zonetable" id="zonetable-${kind}">
+      <tr><th>Zone</th><th>Signal</th><th>Risk</th></tr>
+      <tr><td>Eastover Elem.</td><td>Funding drop</td><td><span class="tag high">High</span></td></tr>
+      <tr><td>Albemarle Rd Elem.</td><td>Tech access</td><td><span class="tag mid">Watch</span></td></tr>
+      <tr><td>Lincoln High</td><td>Income shift</td><td><span class="tag low">Stable</span></td></tr>
+    </table>
+    <button class="addrow" id="addrow-${kind}">+ Add a zone</button>
+    <button class="analyzebtn" id="analyzebtn-${kind}" style="background:${accentColor}">${ICON.bolt} Analyze with agents</button>
+  </div>
+  `;
+}
+
+function wireExploreBlock(kind) {
+  const mapframe = document.getElementById('mapframe-' + kind);
+  if (!mapframe) return;
+
+  // seed income heatmap
+  const incomeGroup = document.getElementById('ly-' + kind + '-income');
+  if (incomeGroup && incomeGroup.children.length === 0) {
+    const rnd = seeded(42);
+    for (let i=0;i<24;i++){
+      const cx = 15 + rnd()*285, cy = 15 + rnd()*200, val = rnd(), r = 14 + val*20;
+      const c = document.createElementNS('http://www.w3.org/2000/svg','circle');
+      c.setAttribute('cx', cx.toFixed(1)); c.setAttribute('cy', cy.toFixed(1)); c.setAttribute('r', r.toFixed(1));
+      c.setAttribute('fill', val < 0.4 ? '#c15b4a' : val < 0.65 ? '#e0a83e' : '#1fa27a');
+      c.setAttribute('opacity', (0.35 + val*0.25).toFixed(2));
+      incomeGroup.appendChild(c);
+    }
+  }
+  // seed tech access dots + rings
+  const techGroup = document.getElementById('ly-' + kind + '-tech');
+  if (techGroup && techGroup.children.length === 0) {
+    const techSeed = seeded(7);
+    for (let i=0;i<16;i++){
+      const cx = 15 + techSeed()*285, cy = 15 + techSeed()*200;
+      const dot = document.createElementNS('http://www.w3.org/2000/svg','circle');
+      dot.setAttribute('cx', cx.toFixed(1)); dot.setAttribute('cy', cy.toFixed(1)); dot.setAttribute('r','2.2');
+      dot.setAttribute('fill', '#3e6ef6'); dot.setAttribute('opacity','0.55');
+      techGroup.appendChild(dot);
+    }
+    [[100,70],[230,150],[170,190]].forEach((p,i)=>{
+      const dot = document.createElementNS('http://www.w3.org/2000/svg','circle');
+      dot.setAttribute('cx',p[0]); dot.setAttribute('cy',p[1]); dot.setAttribute('r','4'); dot.setAttribute('fill','#3e6ef6');
+      const ring = document.createElementNS('http://www.w3.org/2000/svg','circle');
+      ring.setAttribute('cx',p[0]); ring.setAttribute('cy',p[1]); ring.setAttribute('r','5'); ring.setAttribute('fill','none');
+      ring.setAttribute('stroke','#3e6ef6'); ring.setAttribute('stroke-width','1.5'); ring.setAttribute('class','ring');
+      ring.style.animationDelay = (i*0.6)+'s';
+      techGroup.appendChild(dot); techGroup.appendChild(ring);
+    });
+  }
+  // seed transit dots (default-on layer)
+  const transitGroup = document.getElementById('ly-' + kind + '-transit');
+  if (transitGroup && transitGroup.children.length === 0) {
+    const tRnd = seeded(23);
+    for (let i=0;i<10;i++){
+      const cx = 20 + tRnd()*275, cy = 20 + tRnd()*190;
+      const dot = document.createElementNS('http://www.w3.org/2000/svg','circle');
+      dot.setAttribute('cx', cx.toFixed(1)); dot.setAttribute('cy', cy.toFixed(1)); dot.setAttribute('r','2.4');
+      dot.setAttribute('fill', '#8b8c96'); dot.setAttribute('opacity','0.55');
+      transitGroup.appendChild(dot);
+    }
+  }
+
+  const pills = document.getElementById('layerpills-' + kind);
+  if (pills) {
+    pills.querySelectorAll('.layer-pill').forEach(chip => {
+      chip.onclick = () => {
+        pills.querySelectorAll('.layer-pill').forEach(c => c.classList.remove('on'));
+        mapframe.querySelectorAll('.layer').forEach(l => l.classList.remove('show'));
+        const legend = document.getElementById('incomelegend-' + kind);
+        if (legend) legend.style.display = 'none';
+        chip.classList.add('on');
+        const layer = document.getElementById('ly-' + kind + '-' + chip.dataset.layer);
+        if (layer) layer.classList.add('show');
+        if (chip.dataset.layer === 'income' && legend) legend.style.display = 'flex';
+      };
+    });
+  }
+
+  const addBtn = document.getElementById('addrow-' + kind);
+  if (addBtn) addBtn.onclick = () => openModal(kind);
+
+  const analyzeBtn = document.getElementById('analyzebtn-' + kind);
+  if (analyzeBtn) analyzeBtn.onclick = () => openSheet();
+}
+
+/* Add-zone modal */
+let modalTargetKind = null;
+function openModal(kind) { modalTargetKind = kind; document.getElementById('modalscrim').classList.add('open'); }
+function closeModal() { document.getElementById('modalscrim').classList.remove('open'); }
+document.getElementById('modalsubmit').addEventListener('click', () => {
+  const county = document.getElementById('in-county').value.trim();
+  const school = document.getElementById('in-school').value.trim();
+  const zip = document.getElementById('in-zip').value.trim();
+  if (!school) { document.getElementById('in-school').focus(); return; }
+  const t = document.getElementById('zonetable-' + modalTargetKind);
+  if (t) {
+    const row = document.createElement('tr');
+    const label = school + (county ? ' — ' + county : '') + (zip ? ' (' + zip + ')' : '');
+    const tdLabel = document.createElement('td'); tdLabel.textContent = label;
+    row.appendChild(tdLabel);
+    row.innerHTML += '<td>Pending</td><td><span class="tag mid">Watch</span></td>';
+    t.appendChild(row);
+  }
+  document.getElementById('in-county').value = '';
+  document.getElementById('in-school').value = '';
+  document.getElementById('in-zip').value = '';
+  closeModal();
+});
+
+/* Agent analysis sheet */
+const sheetOrder = ['orchestrator','funding','income','tech','transit','synth'];
+function openSheet() {
+  document.getElementById('sheet-scrim').classList.add('open');
+  document.getElementById('sheet').classList.add('open');
+  document.getElementById('stepline').textContent = 'Dispatching to specialist agents…';
+  document.getElementById('sheet-report').innerHTML = '';
+  document.querySelectorAll('.agentrow').forEach(r => r.classList.remove('on'));
+  sheetOrder.forEach((a,i) => {
+    setTimeout(() => {
+      document.querySelector(`.agentrow[data-a="${a}"]`).classList.add('on');
+      if (a === 'synth') {
+        document.getElementById('stepline').textContent = 'Synthesis complete.';
+        document.getElementById('sheet-report').innerHTML = `
+          <div class="divider"></div>
+          <div class="reportcard">
+            <div class="title">Eastover Elementary is the priority zone</div>
+            <div class="lede">Funding, income, tech access and transit are all trending down together in the same zone — that overlap, not any single number, is what's driving the flag.</div>
+            <div class="finding"><span class="sw" style="background:var(--amber)"></span><span class="t">Funding down 12% to $890K this cycle, against a $6.4M district budget.</span></div>
+            <div class="finding"><span class="sw" style="background:var(--green)"></span><span class="t">Median household income fell 4% to $38,900, below the district median.</span></div>
+            <div class="finding"><span class="sw" style="background:var(--blue)"></span><span class="t">Home broadband at 46%, well under the 61% district average.</span></div>
+            <div class="finding"><span class="sw" style="background:#8b8c96"></span><span class="t">Transit desert score 0.61, worse than the 0.50 statewide average.</span></div>
+            <div class="confidence">Illustrative figures for this demo · sources: funding ledger, income survey, broadband survey, live transit map</div>
+          </div>`;
+      }
+    }, i * 550);
+  });
+}
+function closeSheet() {
+  document.getElementById('sheet-scrim').classList.remove('open');
+  document.getElementById('sheet').classList.remove('open');
+}
+
+/* ============ CONTENT ============ */
 const CONTENT = {
-  parent: {
-    'AI Assistant': `
-      <div class="page-title">Good morning.</div>
-      <div class="page-sub">Ask anything about your child's school or district.</div>
-      <div class="rainbow-line"></div>
-      <div class="chat-wrap">
-        <span style="font-size:16px;color:var(--dim)">🔍</span>
-        <span class="chat-placeholder">Why is my district underperforming?</span>
-        <div class="chat-send">↑</div>
-      </div>
-      <div class="prompt-chips">
-        <span class="prompt-chip">How does transportation affect attendance?</span>
-        <span class="prompt-chip">Broadband access in my ZIP</span>
-        <span class="prompt-chip">Compare nearby schools</span>
-        <span class="prompt-chip">Find free tutoring near me</span>
-        <span class="prompt-chip">What is my district's equity score?</span>
-      </div>
-      <div class="section-label">AI Response</div>
-      <div class="ai-response">
-        <div class="ai-tag"><div class="ai-glow"></div><span class="ai-name">EduBridge AI</span></div>
-        <p class="ai-text">Students in your area have <span style="color:var(--purple);font-weight:500">[X]% lower broadband access</span> than the state average. Transportation barriers contribute to higher absenteeism — roughly <span style="color:var(--orange);font-weight:500">[X] days missed per year</span> above the state median. Here are nearby resources.</p>
-        <div class="metric-grid">
-          <div class="metric-box"><div class="metric-label">Funding gap</div><div class="metric-value" style="color:var(--red)">$[X]</div></div>
-          <div class="metric-box"><div class="metric-label">Broadband</div><div class="metric-value" style="color:var(--orange)">[X]%</div></div>
-          <div class="metric-box"><div class="metric-label">Grad rate</div><div class="metric-value" style="color:var(--green)">[X]%</div></div>
-        </div>
-        <div style="margin-top:12px;background:#0a1210;border:0.5px solid #1a3028;border-radius:10px;padding:12px">
-          <div style="font-size:11px;color:var(--green);font-weight:500;margin-bottom:6px">📍 Nearby resources</div>
-          <div style="font-size:12px;color:var(--muted);margin-bottom:4px">[Organization] · [X] mi away · Free tutoring</div>
-          <div style="font-size:12px;color:var(--muted)">[Organization] · [X] mi away · Internet assistance</div>
-        </div>
-      </div>`,
+  parent: [
+    () => `<div class="page-title">Explore</div>
+     <div class="page-sub">Your district on the map, live agent analysis, and AI Q&A.</div>
+     <div class="accent-line" style="background:var(--blue)"></div>
+     <div class="explore-grid">
+       <div>${buildExploreBlock('parent', 'var(--blue)')}</div>
+       <div>
+         <div class="prompt-chips">
+           <span class="prompt-chip" onclick="chipPrompt('How does transportation affect attendance in Durham County?')">Transport & attendance</span>
+           <span class="prompt-chip" onclick="chipPrompt('What is the broadband access rate in Wake County?')">Broadband near me</span>
+         </div>
+         ${buildChatUI('#3e6ef6')}
+       </div>
+     </div>`,
+    () => `<div class="page-title">Community</div>
+     <div class="page-sub">Programs and events near you.</div>
+     <div class="accent-line" style="background:var(--blue)"></div>
+     <div class="layer-pills">
+       <span class="layer-pill on">Near me</span>
+       <span class="layer-pill">Free</span>
+       <span class="layer-pill">Virtual</span>
+       <span class="layer-pill">K–5</span>
+     </div>
+     <div class="grid-cards cols-3">
+     ${[
+       {tag:'tag-tutor',l:'TUTORING',n:'[Tutoring Organization]',m:'[Date] · [Location] · Free',d:'After-school tutoring in math and reading. Open enrollment.'},
+       {tag:'tag-stem',l:'STEM CAMP',n:'[STEM Program Name]',m:'[Date] · [Location] · Free',d:'Hands-on science and coding for grades 4–8.'},
+       {tag:'tag-fafsa',l:'FAFSA WORKSHOP',n:'[Workshop Organization]',m:'[Date] · Virtual · Free',d:'Step-by-step FAFSA help with financial aid advisors.'},
+       {tag:'tag-scholar',l:'SCHOLARSHIP',n:'[Scholarship Program]',m:'Deadline [Date] · $[X,XXX]',d:'Need-based award for students in [District].'},
+     ].map(e=>`
+     <div class="card">
+       <span class="resource-tag ${e.tag}">${e.l}</span>
+       <div style="font-size:14px;font-weight:700;margin-bottom:3px">${e.n}</div>
+       <div style="font-size:11px;color:var(--muted);margin-bottom:9px">${e.m}</div>
+       <div style="font-size:12px;color:#4a4b53;line-height:1.55">${e.d}</div>
+       <div class="resource-actions"><button class="res-btn">Save</button><button class="res-btn">Calendar</button><button class="res-btn">Map</button></div>
+     </div>`).join('')}
+     </div>`,
+    () => `<div style="display:flex;align-items:center;gap:16px;margin-bottom:24px">
+       <div class="avatar" style="background:var(--blue)">A</div>
+       <div><div style="font-size:19px;font-weight:800">[Your name]</div><div style="font-size:12px;color:var(--muted);margin-top:2px">Parent · [District] · NC</div></div>
+     </div>
+     <div class="accent-line" style="background:var(--blue)"></div>
+     <div class="section-label">Personalized insights</div>
+     <div class="insight"><div class="insight-title">Broadband assistance</div><div class="insight-body">You may qualify for discounted internet. Add your ZIP to check.</div></div>
+     <div class="insight" style="border-left-color:var(--green)"><div class="insight-title" style="color:var(--green)">STEM camp nearby</div><div class="insight-body">An event [X] miles away matches your child's grade level.</div></div>
+     <div class="insight" style="border-left-color:var(--amber)"><div class="insight-title" style="color:var(--amber)">District report updated</div><div class="insight-body">Funding data for your district was refreshed this week.</div></div>
+     <div class="section-label" style="margin-top:22px">Your details</div>
+     ${['ZIP code','School district',"Child's grade",'School name'].map(f=>`
+     <div class="card-sm" style="display:flex;justify-content:space-between;align-items:center">
+       <span style="font-size:13px;color:var(--muted)">${f}</span>
+       <span style="font-size:12px;color:var(--faint)">Not set</span>
+     </div>`).join('')}`
+  ],
 
-    'Map': `
-      <div class="page-title">Equity map</div>
-      <div class="page-sub">Explore educational data across counties and districts.</div>
-      <div class="layer-pills">
-        <span class="layer-pill on" onclick="togglePill(this)">Equity score</span>
-        <span class="layer-pill" onclick="togglePill(this)">Funding</span>
-        <span class="layer-pill" onclick="togglePill(this)">Broadband</span>
-        <span class="layer-pill" onclick="togglePill(this)">Transport</span>
-        <span class="layer-pill" onclick="togglePill(this)">Grad rate</span>
-      </div>
-      <div class="map-area">
-        <div class="map-grid-bg"></div>
-        <div class="map-pin" style="top:38%;left:40%;background:#6e8ef7;box-shadow:0 0 10px #6e8ef766"><div class="map-pin-label">Durham Co.</div></div>
-        <div class="map-pin" style="top:55%;left:58%;background:#a77bf5;box-shadow:0 0 10px #a77bf566"><div class="map-pin-label">Wake Co.</div></div>
-        <div class="map-pin" style="top:45%;left:28%;background:#5fcf9f;box-shadow:0 0 10px #5fcf9f66"><div class="map-pin-label">Orange Co.</div></div>
-        <div class="map-pin" style="top:25%;left:62%;background:#f5a345;box-shadow:0 0 10px #f5a34566"><div class="map-pin-label">Person Co.</div></div>
-        <div class="map-pin" style="top:65%;left:44%;background:#f56e6e;box-shadow:0 0 10px #f56e6e66"><div class="map-pin-label">Harnett Co.</div></div>
-        <div style="position:absolute;bottom:12px;right:12px;display:flex;gap:8px">
-          <div style="display:flex;align-items:center;gap:4px"><div style="width:8px;height:8px;background:#6e8ef7;border-radius:50%"></div><span style="font-size:10px;color:var(--muted)">High</span></div>
-          <div style="display:flex;align-items:center;gap:4px"><div style="width:8px;height:8px;background:#f5a345;border-radius:50%"></div><span style="font-size:10px;color:var(--muted)">Mid</span></div>
-          <div style="display:flex;align-items:center;gap:4px"><div style="width:8px;height:8px;background:#f56e6e;border-radius:50%"></div><span style="font-size:10px;color:var(--muted)">Low</span></div>
-        </div>
-      </div>
-      <div class="section-label">Selected county</div>
-      <div class="card">
-        <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:12px">
-          <div>
-            <div style="font-size:16px;font-weight:500">[County Name]</div>
-            <div style="font-size:11px;color:var(--muted);margin-top:2px">[State] · Tap a pin to select</div>
-          </div>
-          <div style="font-size:28px;font-weight:600;background:linear-gradient(90deg,var(--blue),var(--purple));-webkit-background-clip:text;-webkit-text-fill-color:transparent">[XX]</div>
-        </div>
-        <div style="display:flex;flex-direction:column;gap:0">
-          ${['Funding per pupil', 'Broadband access', 'Transportation index', 'Graduation rate', 'Teacher shortages'].map(m => `
-          <div style="display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:0.5px solid var(--border)">
-            <span style="font-size:12px;color:var(--muted)">${m}</span>
-            <span style="font-size:12px;font-weight:500;color:var(--text)">[—]</span>
-          </div>`).join('')}
-        </div>
-      </div>`,
+  student: [
+    () => `<div class="page-title">Your opportunities</div>
+     <div class="page-sub">Filtered for your grade and ZIP.</div>
+     <div class="accent-line" style="background:var(--green)"></div>
+     <div class="layer-pills">
+       <span class="layer-pill on">All</span>
+       <span class="layer-pill">Scholarships</span>
+       <span class="layer-pill">Internships</span>
+       <span class="layer-pill">STEM</span>
+     </div>
+     <div class="grid-cards cols-3">
+     ${[
+       {tag:'tag-scholar',l:'SCHOLARSHIP',n:'[Scholarship Name]',m:'Deadline [Date] · Up to $[X,XXX]',d:'Need-based award for [grade] students. Essays required.'},
+       {tag:'tag-stem',l:'STEM INTERNSHIP',n:'[Company / Org Name]',m:'[Date range] · [Location] · Paid',d:'Summer internship in engineering or CS for rising juniors and seniors.'},
+       {tag:'tag-tutor',l:'FREE TUTORING',n:'[Tutoring Program]',m:'Ongoing · Virtual · Free',d:'Weekly sessions in math, science, and writing.'},
+     ].map(e=>`
+     <div class="card">
+       <span class="resource-tag ${e.tag}">${e.l}</span>
+       <div style="font-size:14px;font-weight:700;margin-bottom:3px">${e.n}</div>
+       <div style="font-size:11px;color:var(--muted);margin-bottom:9px">${e.m}</div>
+       <div style="font-size:12px;color:#4a4b53;line-height:1.55">${e.d}</div>
+       <div class="resource-actions"><button class="res-btn">Save</button><button class="res-btn">Remind me</button><button class="res-btn">Apply</button></div>
+     </div>`).join('')}
+     </div>`,
+    () => `<div class="page-title">Explore</div>
+     <div class="page-sub">Programs near you, live agent analysis, and AI Q&A.</div>
+     <div class="accent-line" style="background:var(--green)"></div>
+     <div class="explore-grid">
+       <div>${buildExploreBlock('student', 'var(--green)')}</div>
+       <div>
+         <div class="prompt-chips">
+           <span class="prompt-chip" onclick="chipPrompt('What scholarships are available for NC high school students?')">Scholarships for me</span>
+           <span class="prompt-chip" onclick="chipPrompt('How do I apply for FAFSA?')">FAFSA help</span>
+         </div>
+         ${buildChatUI('#1fa27a')}
+       </div>
+     </div>`,
+    () => `<div style="display:flex;align-items:center;gap:16px;margin-bottom:24px">
+       <div class="avatar" style="background:var(--green)">A</div>
+       <div><div style="font-size:19px;font-weight:800">[Your name]</div><div style="font-size:12px;color:var(--muted);margin-top:2px">Student · Grade [X] · [School]</div></div>
+     </div>
+     <div class="accent-line" style="background:var(--green)"></div>
+     <div class="section-label">Saved opportunities</div>
+     <div class="card-sm" style="display:flex;justify-content:space-between"><span style="font-size:13px;color:var(--muted)">Saved scholarships</span><span style="font-size:13px">—</span></div>
+     <div class="card-sm" style="display:flex;justify-content:space-between"><span style="font-size:13px;color:var(--muted)">Upcoming deadlines</span><span style="font-size:13px">—</span></div>
+     <div class="section-label" style="margin-top:22px">Your details</div>
+     ${['ZIP code','Grade level','School name','Interests'].map(f=>`
+     <div class="card-sm" style="display:flex;justify-content:space-between;align-items:center">
+       <span style="font-size:13px;color:var(--muted)">${f}</span>
+       <span style="font-size:12px;color:var(--faint)">Not set</span>
+     </div>`).join('')}`
+  ],
 
-    'Community': `
-      <div class="page-title">Community resources</div>
-      <div class="page-sub">Programs, events, and support near you.</div>
-      <div class="layer-pills">
-        <span class="layer-pill on" onclick="togglePill(this)">Near me</span>
-        <span class="layer-pill" onclick="togglePill(this)">Free</span>
-        <span class="layer-pill" onclick="togglePill(this)">Virtual</span>
-        <span class="layer-pill" onclick="togglePill(this)">K–5</span>
-        <span class="layer-pill" onclick="togglePill(this)">Middle</span>
-        <span class="layer-pill" onclick="togglePill(this)">High school</span>
-      </div>
-      ${[
-        {tag:'tag-tutor',label:'TUTORING',name:'[Tutoring Organization]',meta:'[Date] · [Location] · Free',desc:'After-school tutoring in math and reading. Open enrollment, no waitlist.'},
-        {tag:'tag-stem',label:'STEM CAMP',name:'[STEM Program Name]',meta:'[Date] · [Location] · Free',desc:'Hands-on science and coding for grades 4–8. Limited spots available.'},
-        {tag:'tag-fafsa',label:'FAFSA WORKSHOP',name:'[Workshop Organization]',meta:'[Date] · Virtual · Free',desc:'Step-by-step FAFSA completion help with financial aid advisors.'},
-        {tag:'tag-scholar',label:'SCHOLARSHIPS',name:'[Scholarship Program]',meta:'Deadline [Date] · [Amount]',desc:'Need-based scholarship for high school seniors in [District].'},
-      ].map(e => `
-      <div class="card">
-        <span class="resource-tag ${e.tag}">${e.label}</span>
-        <div style="font-size:14px;font-weight:500;margin-bottom:3px">${e.name}</div>
-        <div style="font-size:11px;color:var(--muted);margin-bottom:8px">${e.meta}</div>
-        <div style="font-size:12px;color:#aaa;line-height:1.5">${e.desc}</div>
-        <div class="resource-actions">
-          <button class="res-btn">❤️ Save</button>
-          <button class="res-btn">📅 Calendar</button>
-          <button class="res-btn">📍 Map</button>
-        </div>
-      </div>`).join('')}`,
+  policy: [
+    () => `<div class="page-title">District overview</div>
+     <div class="page-sub">Equity metrics across your region.</div>
+     <div class="accent-line" style="background:var(--purple)"></div>
+     <div class="kpi-grid">
+       <div class="kpi-card"><div class="kpi-label">Avg equity score</div><div class="kpi-value" style="color:var(--amber)">[XX]</div><div class="kpi-change">↓ [X] from last year</div></div>
+       <div class="kpi-card"><div class="kpi-label">Funding gap</div><div class="kpi-value" style="color:var(--red)">$[X]B</div><div class="kpi-change">Statewide</div></div>
+       <div class="kpi-card"><div class="kpi-label">Broadband gap</div><div class="kpi-value" style="color:var(--purple)">[X]%</div><div class="kpi-change">Below state avg</div></div>
+       <div class="kpi-card"><div class="kpi-label">Teacher shortage</div><div class="kpi-value" style="color:var(--blue)">[X]K</div><div class="kpi-change">Open positions</div></div>
+     </div>
+     <div class="section-label">Districts</div>
+     <div class="grid-cards">
+     ${['[District A]','[District B]','[District C]','[District D]'].map((d,i)=>`
+     <div class="card-sm">
+       <div style="display:flex;justify-content:space-between;margin-bottom:8px">
+         <span style="font-size:13px;font-weight:700">${d}</span>
+         <span style="font-size:12px;color:var(--muted)">Score: [XX]</span>
+       </div>
+       <div class="trend-bar-wrap"><div class="trend-bar" style="width:${[72,54,38,61][i]}%;background:${['#3e6ef6','#d99a2b','#e2604f','#1fa27a'][i]}"></div></div>
+     </div>`).join('')}
+     </div>`,
+    () => `<div class="page-title">Explore</div>
+     <div class="page-sub">District map, live agent analysis, and AI Q&A.</div>
+     <div class="accent-line" style="background:var(--purple)"></div>
+     <div class="explore-grid">
+       <div>${buildExploreBlock('policy', 'var(--purple)')}</div>
+       <div>
+         <div class="prompt-chips">
+           <span class="prompt-chip" onclick="chipPrompt('Compare Vance County vs Wake County on graduation rates and internet access')">Vance vs Wake</span>
+           <span class="prompt-chip" onclick="chipPrompt('Which NC counties have the largest funding gaps?')">Funding gaps</span>
+         </div>
+         ${buildChatUI('#8a6df0')}
+       </div>
+     </div>`,
+    () => `<div class="page-title">Reports</div>
+     <div class="page-sub">Exportable summaries and analysis.</div>
+     <div class="accent-line" style="background:var(--purple)"></div>
+     <div class="section-label">Recent</div>
+     ${[
+       {n:'[District] Equity Summary',m:'Generated [date] · PDF'},
+       {n:'Statewide Funding Gap Analysis',m:'Generated [date] · PDF'},
+       {n:'Broadband Access by County',m:'Generated [date] · CSV + PDF'},
+       {n:'Teacher Shortage — [Region]',m:'Generated [date] · PDF'},
+     ].map(r=>`
+     <div class="report-card">
+       <div class="report-icon">${ICON.doc}</div>
+       <div style="flex:1"><div style="font-size:13px;font-weight:700;margin-bottom:2px">${r.n}</div><div style="font-size:11px;color:var(--muted)">${r.m}</div></div>
+       <span style="font-size:16px;color:var(--faint)">↓</span>
+     </div>`).join('')}
+     <div class="section-label" style="margin-top:18px">Funding trend</div>
+     <div class="card">
+       <div class="chartrow"><span class="lbl">District 4</span><span class="delta down">▼ 12% vs last cycle</span></div>
+       <svg class="chart" viewBox="0 0 300 70" preserveAspectRatio="none">
+         <polyline points="10,20 100,26 190,34 290,50" fill="none" stroke="#d99a2b" stroke-width="2.5"/>
+         <circle cx="10" cy="20" r="3" fill="#d99a2b"/><circle cx="100" cy="26" r="3" fill="#d99a2b"/>
+         <circle cx="190" cy="34" r="3" fill="#d99a2b"/><circle cx="290" cy="50" r="3" fill="#d99a2b"/>
+       </svg>
+     </div>
+     <div class="card">
+       <div class="section-label">Composite risk by zone</div>
+       <div class="barrow"><span class="name">Eastover</span><div class="track"><div class="fill" style="width:88%;background:var(--red)"></div></div><span class="n">0.81</span></div>
+       <div class="barrow"><span class="name">Albemarle Rd</span><div class="track"><div class="fill" style="width:58%;background:var(--amber)"></div></div><span class="n">0.52</span></div>
+       <div class="barrow"><span class="name">Lincoln High</span><div class="track"><div class="fill" style="width:30%;background:var(--green)"></div></div><span class="n">0.27</span></div>
+     </div>`
+  ],
 
-    'Profile': `
-      <div style="display:flex;align-items:center;gap:16px;margin-bottom:24px">
-        <div style="width:60px;height:60px;border-radius:50%;background:linear-gradient(135deg,var(--blue),var(--purple));display:flex;align-items:center;justify-content:center;font-size:22px;font-weight:600;color:#fff;flex-shrink:0">[A]</div>
-        <div>
-          <div style="font-size:18px;font-weight:500">[Your name]</div>
-          <div style="font-size:12px;color:var(--muted);margin-top:2px">Parent · [District] · [State]</div>
-        </div>
-      </div>
-      <div class="rainbow-line"></div>
-      <div class="section-label">Personalized insights</div>
-      <div class="insight"><div class="insight-title">Broadband assistance</div><div class="insight-body">You may qualify for discounted internet. Add your ZIP to check eligibility.</div></div>
-      <div class="insight" style="border-left-color:var(--green)"><div class="insight-title" style="color:var(--green)">STEM camp nearby</div><div class="insight-body">An event [X] miles away matches your child's grade level.</div></div>
-      <div class="insight" style="border-left-color:var(--orange)"><div class="insight-title" style="color:var(--orange)">District report updated</div><div class="insight-body">Funding data for your district was refreshed this week.</div></div>
-      <div class="section-label" style="margin-top:20px">Your details</div>
-      ${['ZIP code', 'School district', "Child's grade", 'School name'].map(f => `
-      <div class="card-sm" style="display:flex;justify-content:space-between;align-items:center">
-        <span style="font-size:13px;color:var(--muted)">${f}</span>
-        <span style="font-size:12px;color:var(--dim)">[Not set]</span>
-      </div>`).join('')}`
-  },
-
-  student: {
-    'Opportunities': `
-      <div class="page-title">Your opportunities</div>
-      <div class="page-sub">Filtered for your grade and ZIP code.</div>
-      <div class="layer-pills">
-        <span class="layer-pill on" onclick="togglePill(this)">All</span>
-        <span class="layer-pill" onclick="togglePill(this)">Scholarships</span>
-        <span class="layer-pill" onclick="togglePill(this)">Internships</span>
-        <span class="layer-pill" onclick="togglePill(this)">STEM</span>
-        <span class="layer-pill" onclick="togglePill(this)">College prep</span>
-        <span class="layer-pill" onclick="togglePill(this)">Free</span>
-      </div>
-      ${[
-        {tag:'tag-scholar',label:'SCHOLARSHIP',name:'[Scholarship Name]',meta:'Deadline [Date] · Up to $[X,XXX]',desc:'Need-based award for [grade] students in [district]. Essays required.'},
-        {tag:'tag-stem',label:'STEM INTERNSHIP',name:'[Company / Org Name]',meta:'[Date range] · [Location] · Paid',desc:'Summer internship in engineering or computer science for rising juniors and seniors.'},
-        {tag:'tag-tutor',label:'FREE TUTORING',name:'[Tutoring Program]',meta:'Ongoing · Virtual · Free',desc:'Weekly sessions in math, science, and writing. Available to all grade levels.'},
-        {tag:'tag-policy',label:'COLLEGE PREP',name:'[Program Name]',meta:'[Date] · [Location] · Free',desc:'Application workshops, essay reviews, and financial aid guidance for seniors.'},
-      ].map(e => `
-      <div class="card">
-        <span class="resource-tag ${e.tag}">${e.label}</span>
-        <div style="font-size:14px;font-weight:500;margin-bottom:3px">${e.name}</div>
-        <div style="font-size:11px;color:var(--muted);margin-bottom:8px">${e.meta}</div>
-        <div style="font-size:12px;color:#aaa;line-height:1.5">${e.desc}</div>
-        <div class="resource-actions">
-          <button class="res-btn">❤️ Save</button>
-          <button class="res-btn">📅 Remind me</button>
-          <button class="res-btn">🔗 Apply</button>
-        </div>
-      </div>`).join('')}`,
-
-    'Map': `
-      <div class="page-title">Programs near you</div>
-      <div class="page-sub">See opportunities on the map.</div>
-      <div class="layer-pills">
-        <span class="layer-pill on" onclick="togglePill(this)">Programs</span>
-        <span class="layer-pill" onclick="togglePill(this)">Schools</span>
-        <span class="layer-pill" onclick="togglePill(this)">Colleges</span>
-      </div>
-      <div class="map-area">
-        <div class="map-grid-bg"></div>
-        <div class="map-pin" style="top:42%;left:38%;background:var(--green);box-shadow:0 0 10px #5fcf9f66"><div class="map-pin-label">Tutoring center</div></div>
-        <div class="map-pin" style="top:52%;left:60%;background:var(--blue);box-shadow:0 0 10px #6e8ef766"><div class="map-pin-label">STEM camp</div></div>
-        <div class="map-pin" style="top:30%;left:50%;background:var(--orange);box-shadow:0 0 10px #f5a34566"><div class="map-pin-label">Scholarship workshop</div></div>
-      </div>
-      <div class="section-label">[X] programs found near [ZIP]</div>
-      ${['[Tutoring Center Name] · [X] mi · Free','[STEM Camp] · [X] mi · Grades 6–12','[College Prep Workshop] · [X] mi · Free'].map(p => `
-      <div class="card-sm" style="display:flex;justify-content:space-between;align-items:center">
-        <span style="font-size:13px;color:var(--text)">${p}</span>
-        <span style="font-size:18px;cursor:pointer">›</span>
-      </div>`).join('')}`,
-
-    'AI Assistant': `
-      <div class="page-title">Ask EduBridge</div>
-      <div class="page-sub">Get answers about your academic future.</div>
-      <div class="rainbow-line"></div>
-      <div class="chat-wrap">
-        <span style="font-size:16px;color:var(--dim)">🔍</span>
-        <span class="chat-placeholder">What scholarships can I apply for?</span>
-        <div class="chat-send">↑</div>
-      </div>
-      <div class="prompt-chips">
-        <span class="prompt-chip">Scholarships for [grade] students</span>
-        <span class="prompt-chip">STEM camps near me</span>
-        <span class="prompt-chip">How do I apply for FAFSA?</span>
-        <span class="prompt-chip">What colleges accept students from my district?</span>
-      </div>
-      <div class="section-label">AI response</div>
-      <div class="ai-response">
-        <div class="ai-tag"><div class="ai-glow" style="background:linear-gradient(135deg,var(--green),var(--blue))"></div><span class="ai-name" style="color:var(--green)">EduBridge AI</span></div>
-        <p class="ai-text">Based on your grade and ZIP, you may qualify for <span style="color:var(--green);font-weight:500">[X] scholarships</span> currently open. The nearest STEM opportunity is <span style="color:var(--blue);font-weight:500">[X] miles away</span> and accepts rolling applications. Your district's graduation rate is <span style="color:var(--orange);font-weight:500">[X]%</span> — here's how that compares.</p>
-      </div>`,
-
-    'Profile': `
-      <div style="display:flex;align-items:center;gap:16px;margin-bottom:24px">
-        <div style="width:60px;height:60px;border-radius:50%;background:linear-gradient(135deg,var(--green),var(--blue));display:flex;align-items:center;justify-content:center;font-size:22px;font-weight:600;color:#fff">[A]</div>
-        <div>
-          <div style="font-size:18px;font-weight:500">[Your name]</div>
-          <div style="font-size:12px;color:var(--muted);margin-top:2px">Student · Grade [X] · [School]</div>
-        </div>
-      </div>
-      <div class="rainbow-line"></div>
-      <div class="section-label">Saved opportunities</div>
-      <div class="card-sm" style="display:flex;justify-content:space-between"><span style="font-size:13px;color:var(--muted)">Saved scholarships</span><span style="font-size:13px;color:var(--text)">—</span></div>
-      <div class="card-sm" style="display:flex;justify-content:space-between"><span style="font-size:13px;color:var(--muted)">Upcoming deadlines</span><span style="font-size:13px;color:var(--text)">—</span></div>
-      <div class="card-sm" style="display:flex;justify-content:space-between"><span style="font-size:13px;color:var(--muted)">Saved programs</span><span style="font-size:13px;color:var(--text)">—</span></div>
-      <div class="section-label" style="margin-top:20px">Your details</div>
-      ${['ZIP code','Grade level','School name','Interests'].map(f => `
-      <div class="card-sm" style="display:flex;justify-content:space-between;align-items:center">
-        <span style="font-size:13px;color:var(--muted)">${f}</span>
-        <span style="font-size:12px;color:var(--dim)">[Not set]</span>
-      </div>`).join('')}`
-  },
-
-  policy: {
-    'Dashboard': `
-      <div class="page-title">District overview</div>
-      <div class="page-sub">Equity metrics across your selected region.</div>
-      <div class="rainbow-line"></div>
-      <div class="kpi-grid">
-        <div class="kpi-card"><div class="kpi-label">Avg equity score</div><div class="kpi-value" style="color:var(--orange)">[XX]</div><div class="kpi-change">↓ [X] from last year</div></div>
-        <div class="kpi-card"><div class="kpi-label">Funding gap</div><div class="kpi-value" style="color:var(--red)">$[X]B</div><div class="kpi-change">Statewide</div></div>
-        <div class="kpi-card"><div class="kpi-label">Broadband gap</div><div class="kpi-value" style="color:var(--purple)">[X]%</div><div class="kpi-change">Below state avg</div></div>
-        <div class="kpi-card"><div class="kpi-label">Teacher shortage</div><div class="kpi-value" style="color:var(--blue)">[X]K</div><div class="kpi-change">Open positions</div></div>
-      </div>
-      <div class="section-label">District breakdown</div>
-      ${['[District A]','[District B]','[District C]','[District D]'].map((d,i) => `
-      <div class="card-sm">
-        <div style="display:flex;justify-content:space-between;margin-bottom:6px">
-          <span style="font-size:13px;font-weight:500">${d}</span>
-          <span style="font-size:12px;color:var(--muted)">Score: [XX]</span>
-        </div>
-        <div class="trend-bar-wrap"><div class="trend-bar" style="width:${[72,54,38,61][i]}%;background:${['var(--blue)','var(--orange)','var(--red)','var(--green)'][i]}"></div></div>
-      </div>`).join('')}
-      <div class="section-label" style="margin-top:20px">Quick actions</div>
-      <div class="two-col">
-        <div class="card" style="cursor:pointer"><div style="font-size:18px;margin-bottom:6px">📊</div><div style="font-size:13px;font-weight:500">Generate report</div><div style="font-size:11px;color:var(--muted);margin-top:3px">Export district summary</div></div>
-        <div class="card" style="cursor:pointer"><div style="font-size:18px;margin-bottom:6px">⚖️</div><div style="font-size:13px;font-weight:500">Compare districts</div><div style="font-size:11px;color:var(--muted);margin-top:3px">Side-by-side metrics</div></div>
-      </div>`,
-
-    'Map': `
-      <div class="page-title">Equity map</div>
-      <div class="page-sub">District and county-level data visualization.</div>
-      <div class="layer-pills">
-        <span class="layer-pill on" onclick="togglePill(this)">Equity score</span>
-        <span class="layer-pill" onclick="togglePill(this)">Funding</span>
-        <span class="layer-pill" onclick="togglePill(this)">Broadband</span>
-        <span class="layer-pill" onclick="togglePill(this)">Transport</span>
-        <span class="layer-pill" onclick="togglePill(this)">Absenteeism</span>
-        <span class="layer-pill" onclick="togglePill(this)">Teacher shortage</span>
-      </div>
-      <div class="map-area">
-        <div class="map-grid-bg"></div>
-        <div class="map-pin" style="top:38%;left:40%;background:var(--blue);box-shadow:0 0 10px #6e8ef766"><div class="map-pin-label">District A</div></div>
-        <div class="map-pin" style="top:55%;left:58%;background:var(--orange);box-shadow:0 0 10px #f5a34566"><div class="map-pin-label">District B</div></div>
-        <div class="map-pin" style="top:45%;left:28%;background:var(--red);box-shadow:0 0 10px #f56e6e66"><div class="map-pin-label">District C</div></div>
-        <div class="map-pin" style="top:25%;left:62%;background:var(--green);box-shadow:0 0 10px #5fcf9f66"><div class="map-pin-label">District D</div></div>
-      </div>
-      <div class="card">
-        <div style="font-size:14px;font-weight:500;margin-bottom:12px">[Selected District]</div>
-        ${['Funding per pupil','Broadband access','Chronic absenteeism','Grad rate','Open teaching positions'].map(m => `
-        <div style="display:flex;justify-content:space-between;align-items:center;padding:7px 0;border-bottom:0.5px solid var(--border)">
-          <span style="font-size:12px;color:var(--muted)">${m}</span>
-          <span style="font-size:12px;font-weight:500">[—]</span>
-        </div>`).join('')}
-        <button style="margin-top:12px;width:100%;background:#14102a;border:0.5px solid #3535a0;border-radius:10px;padding:10px;color:var(--purple);font-size:12px;cursor:pointer;font-family:inherit">✦ Generate district report</button>
-      </div>`,
-
-    'Reports': `
-      <div class="page-title">Reports</div>
-      <div class="page-sub">Exportable summaries and analysis.</div>
-      <div class="rainbow-line"></div>
-      <div class="section-label">Recent reports</div>
-      ${[
-        {icon:'📊',name:'[District] Equity Summary',meta:'Generated [date] · PDF · [X] pages'},
-        {icon:'📉',name:'Statewide Funding Gap Analysis',meta:'Generated [date] · PDF · [X] pages'},
-        {icon:'🗺️',name:'Broadband Access by County',meta:'Generated [date] · CSV + PDF'},
-        {icon:'👩‍🏫',name:'Teacher Shortage Report — [Region]',meta:'Generated [date] · PDF · [X] pages'},
-      ].map(r => `
-      <div class="report-card">
-        <div class="report-icon">${r.icon}</div>
-        <div style="flex:1">
-          <div style="font-size:13px;font-weight:500;margin-bottom:3px">${r.name}</div>
-          <div style="font-size:11px;color:var(--muted)">${r.meta}</div>
-        </div>
-        <span style="font-size:18px;color:var(--muted)">↓</span>
-      </div>`).join('')}
-      <div style="background:var(--surface2);border:0.5px dashed var(--border);border-radius:14px;padding:20px;text-align:center;margin-top:8px">
-        <div style="font-size:24px;margin-bottom:8px">+</div>
-        <div style="font-size:13px;font-weight:500;margin-bottom:4px">Generate new report</div>
-        <div style="font-size:12px;color:var(--muted)">Choose a district, region, or custom data set</div>
-      </div>`,
-
-    'AI Assistant': `
-      <div class="page-title">Policy AI</div>
-      <div class="page-sub">Generate analysis, summaries, and reports on demand.</div>
-      <div class="rainbow-line"></div>
-      <div class="chat-wrap">
-        <span style="font-size:16px;color:var(--dim)">🔍</span>
-        <span class="chat-placeholder">Summarize funding gaps in [district]</span>
-        <div class="chat-send">↑</div>
-      </div>
-      <div class="prompt-chips">
-        <span class="prompt-chip">Compare [District A] vs [District B]</span>
-        <span class="prompt-chip">What drives absenteeism in [county]?</span>
-        <span class="prompt-chip">Generate executive summary for [district]</span>
-        <span class="prompt-chip">Broadband access trends 2020–2024</span>
-      </div>
-      <div class="section-label">AI response</div>
-      <div class="ai-response">
-        <div class="ai-tag"><div class="ai-glow" style="background:linear-gradient(135deg,var(--purple),var(--blue))"></div><span class="ai-name" style="color:var(--purple)">EduBridge AI</span></div>
-        <p class="ai-text">[District] shows a <span style="color:var(--red);font-weight:500">$[X] per-pupil funding gap</span> compared to the state average, correlating with a <span style="color:var(--orange);font-weight:500">[X]% lower graduation rate</span>. Chronic absenteeism is <span style="color:var(--purple);font-weight:500">[X] points above state median</span>, driven primarily by transportation access in rural zones.</p>
-        <button style="margin-top:12px;background:#14102a;border:0.5px solid #3535a0;border-radius:8px;padding:8px 16px;color:var(--purple);font-size:12px;cursor:pointer;font-family:inherit">Export as PDF report ↓</button>
-      </div>`
-  },
-
-  general: {
-    'Map': `
-      <div class="page-title">Explore equity data</div>
-      <div class="page-sub">Browse educational opportunity across the country.</div>
-      <div class="layer-pills">
-        <span class="layer-pill on" onclick="togglePill(this)">Equity score</span>
-        <span class="layer-pill" onclick="togglePill(this)">Funding</span>
-        <span class="layer-pill" onclick="togglePill(this)">Broadband</span>
-        <span class="layer-pill" onclick="togglePill(this)">Transport</span>
-        <span class="layer-pill" onclick="togglePill(this)">Grad rate</span>
-      </div>
-      <div class="map-area">
-        <div class="map-grid-bg"></div>
-        <div class="map-pin" style="top:35%;left:40%;background:var(--blue);box-shadow:0 0 10px #6e8ef766"><div class="map-pin-label">Durham Co.</div></div>
-        <div class="map-pin" style="top:50%;left:58%;background:var(--orange);box-shadow:0 0 10px #f5a34566"><div class="map-pin-label">Wake Co.</div></div>
-        <div class="map-pin" style="top:62%;left:30%;background:var(--red);box-shadow:0 0 10px #f56e6e66"><div class="map-pin-label">Harnett Co.</div></div>
-        <div class="map-pin" style="top:25%;left:65%;background:var(--green);box-shadow:0 0 10px #5fcf9f66"><div class="map-pin-label">Person Co.</div></div>
-        <div class="map-pin" style="top:45%;left(22%;background:var(--purple);box-shadow:0 0 10px #a77bf566"><div class="map-pin-label">Orange Co.</div></div>
-      </div>
-      <div class="section-label">About this data</div>
-      <div class="card">
-        <p style="font-size:13px;color:#aaa;line-height:1.6">EduBridge aggregates public data on school funding, broadband access, transportation, graduation rates, and teacher shortages to generate county and district-level equity scores. Set a role to personalize what you see.</p>
-        <button style="margin-top:12px;background:linear-gradient(135deg,#1a1a30,#1e1030);border:0.5px solid var(--blue);border-radius:10px;padding:10px 16px;color:var(--blue);font-size:12px;cursor:pointer;font-family:inherit;width:100%">Set your role for personalized insights</button>
-      </div>`,
-
-    'AI Assistant': `
-      <div class="page-title">Ask EduBridge</div>
-      <div class="page-sub">Open-ended questions about education equity.</div>
-      <div class="rainbow-line"></div>
-      <div class="chat-wrap">
-        <span style="font-size:16px;color:var(--dim)">🔍</span>
-        <span class="chat-placeholder">Ask anything about education equity…</span>
-        <div class="chat-send">↑</div>
-      </div>
-      <div class="prompt-chips">
-        <span class="prompt-chip">What is an equity score?</span>
-        <span class="prompt-chip">How does broadband affect graduation?</span>
-        <span class="prompt-chip">Which states have the biggest funding gaps?</span>
-        <span class="prompt-chip">What causes teacher shortages?</span>
-      </div>
-      <div class="section-label">AI response</div>
-      <div class="ai-response">
-        <div class="ai-tag"><div class="ai-glow" style="background:linear-gradient(135deg,var(--orange),var(--purple))"></div><span class="ai-name" style="color:var(--orange)">EduBridge AI</span></div>
-        <p class="ai-text">Educational equity scores combine funding, broadband access, transportation, graduation rates, and teacher availability into a single 0–100 index. Counties below <span style="color:var(--orange);font-weight:500">50</span> face systemic barriers that compound over time. Set your role to get answers specific to your situation.</p>
-      </div>`,
-
-    'Community': `
-      <div class="page-title">Community resources</div>
-      <div class="page-sub">Programs and events across all categories.</div>
-      <div class="layer-pills">
-        <span class="layer-pill on" onclick="togglePill(this)">All</span>
-        <span class="layer-pill" onclick="togglePill(this)">Free</span>
-        <span class="layer-pill" onclick="togglePill(this)">Virtual</span>
-        <span class="layer-pill" onclick="togglePill(this)">K–12</span>
-        <span class="layer-pill" onclick="togglePill(this)">College</span>
-      </div>
-      ${[
-        {tag:'tag-tutor',label:'TUTORING',name:'[Organization Name]',meta:'[Date] · [Location] · Free',desc:'Open enrollment tutoring across all subjects and grade levels.'},
-        {tag:'tag-stem',label:'STEM',name:'[Program Name]',meta:'[Date] · Virtual · Free',desc:'Online STEM enrichment open to all students grades 6–12.'},
-        {tag:'tag-scholar',label:'SCHOLARSHIP',name:'[Scholarship Name]',meta:'Deadline [Date]',desc:'Annual scholarship for students demonstrating financial need.'},
-      ].map(e => `
-      <div class="card">
-        <span class="resource-tag ${e.tag}">${e.label}</span>
-        <div style="font-size:14px;font-weight:500;margin-bottom:3px">${e.name}</div>
-        <div style="font-size:11px;color:var(--muted);margin-bottom:8px">${e.meta}</div>
-        <div style="font-size:12px;color:#aaa;line-height:1.5">${e.desc}</div>
-        <div class="resource-actions">
-          <button class="res-btn">❤️ Save</button>
-          <button class="res-btn">📅 Calendar</button>
-        </div>
-      </div>`).join('')}`,
-
-    'Profile': `
-      <div style="text-align:center;padding:32px 0 24px">
-        <div style="width:64px;height:64px;border-radius:50%;background:linear-gradient(135deg,var(--orange),var(--purple));display:flex;align-items:center;justify-content:center;font-size:24px;margin:0 auto 12px">🔭</div>
-        <div style="font-size:18px;font-weight:500">Exploring as Guest</div>
-        <div style="font-size:12px;color:var(--muted);margin-top:4px">Set a role to personalize your experience</div>
-      </div>
-      <div class="rainbow-line"></div>
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:20px">
-        ${['Parent','Student','Policymaker','Explorer'].map((r,i) => `
-        <div class="card" style="text-align:center;cursor:pointer;padding:16px" onclick="switchRole('${['parent','student','policy','general'][i]}')">
-          <div style="font-size:20px;margin-bottom:6px">${['👨‍👩‍👧','🎒','🏛️','🔭'][i]}</div>
-          <div style="font-size:13px;font-weight:500">${r}</div>
-        </div>`).join('')}
-      </div>`
-  }
+  general: [
+    () => `<div class="page-title">Explore equity data</div>
+     <div class="page-sub">Browse the map, run agent analysis, or ask a question — no account needed.</div>
+     <div class="accent-line" style="background:var(--amber)"></div>
+     <div class="explore-grid">
+       <div>${buildExploreBlock('general', 'var(--amber)')}</div>
+       <div>
+         <div class="prompt-chips">
+           <span class="prompt-chip" onclick="chipPrompt('What is an equity score and how is it calculated?')">What is an equity score?</span>
+           <span class="prompt-chip" onclick="chipPrompt('Which NC counties have the biggest funding gaps?')">Biggest funding gaps</span>
+         </div>
+         ${buildChatUI('#d99a2b')}
+       </div>
+     </div>`,
+    () => `<div class="page-title">Community resources</div>
+     <div class="page-sub">Programs across all categories.</div>
+     <div class="accent-line" style="background:var(--amber)"></div>
+     <div class="layer-pills">
+       <span class="layer-pill on">All</span>
+       <span class="layer-pill">Free</span>
+       <span class="layer-pill">Virtual</span>
+     </div>
+     <div class="grid-cards cols-3">
+     ${[
+       {tag:'tag-tutor',l:'TUTORING',n:'[Organization Name]',m:'[Date] · [Location] · Free',d:'Open enrollment tutoring across all subjects and grade levels.'},
+       {tag:'tag-stem',l:'STEM',n:'[Program Name]',m:'[Date] · Virtual · Free',d:'Online STEM enrichment for students grades 6–12.'},
+       {tag:'tag-scholar',l:'SCHOLARSHIP',n:'[Scholarship Name]',m:'Deadline [Date]',d:'Annual award for students demonstrating financial need.'},
+     ].map(e=>`
+     <div class="card">
+       <span class="resource-tag ${e.tag}">${e.l}</span>
+       <div style="font-size:14px;font-weight:700;margin-bottom:3px">${e.n}</div>
+       <div style="font-size:11px;color:var(--muted);margin-bottom:9px">${e.m}</div>
+       <div style="font-size:12px;color:#4a4b53;line-height:1.55">${e.d}</div>
+       <div class="resource-actions"><button class="res-btn">Save</button><button class="res-btn">Calendar</button></div>
+     </div>`).join('')}
+     </div>`,
+    () => `<div style="text-align:center;padding:34px 0 26px">
+       <div style="width:64px;height:64px;border-radius:50%;background:var(--amber);display:flex;align-items:center;justify-content:center;margin:0 auto 14px;color:#fff">
+         <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M15 9l-2 5-5 2 2-5 5-2Z"/></svg>
+       </div>
+       <div style="font-size:19px;font-weight:800">Exploring as Guest</div>
+       <div style="font-size:12px;color:var(--muted);margin-top:3px">Set a role to personalize</div>
+     </div>
+     <div class="accent-line" style="background:var(--amber);margin-left:auto;margin-right:auto"></div>
+     <div class="role-grid" style="max-width:none">
+       ${['Parent','Student','Policymaker','Explorer'].map((r,i)=>`
+       <div class="role-card" style="text-align:center;align-items:center" onclick="switchRole('${['parent','student','policy','general'][i]}')">
+         <div style="color:${['#3e6ef6','#1fa27a','#8a6df0','#d99a2b'][i]}">${[ICON.profile,ICON.opportunities,ICON.dashboard,ICON.explore][i]}</div>
+         <div class="role-card-name">${r}</div>
+       </div>`).join('')}
+     </div>`
+  ]
 };
 
-let currentRole = null;
-let currentTab = 0;
+let role = null, tab = 0;
 
-function selectRole(role) {
-  const ps = document.getElementById('profile-screen');
-  ps.classList.add('exit');
+/* ============ SPLASH / ROLE-SELECT NAVIGATION ============ */
+function goToRoleSelect() {
+  document.getElementById('splash').classList.add('exit');
   setTimeout(() => {
-    ps.style.display = 'none';
-    initApp(role);
-  }, 600);
+    document.getElementById('splash').style.display = 'none';
+    document.getElementById('profile-screen').classList.add('enter');
+  }, 480);
 }
 
-function initApp(role) {
-  currentRole = role;
-  currentTab = ROLES[role].defaultTab;
-  const app = document.getElementById('app');
-  updateRolePill();
-  buildNav();
-  buildContent();
-  app.classList.add('visible');
+function selectRole(r) {
+  document.getElementById('profile-screen').classList.remove('enter');
+  document.getElementById('profile-screen').classList.add('exit');
+  setTimeout(() => { document.getElementById('profile-screen').style.display = 'none'; initApp(r); }, 480);
 }
 
-function updateRolePill() {
-  const r = ROLES[currentRole];
-  document.getElementById('role-dot').style.background = r.color;
-  document.getElementById('role-pill-label').textContent = r.label;
-  // mark current in dropdown
+function initApp(r) {
+  role = r; tab = ROLES[r].default;
+  conversationHistory = [];
+  document.getElementById('site-header').classList.add('visible');
+  updatePill(); buildTabs(); buildPanels();
+  document.getElementById('app').classList.add('visible');
+  window.scrollTo({ top: 0, behavior: 'instant' in window ? 'instant' : 'auto' });
+}
+
+function updatePill() {
+  const R = ROLES[role];
+  document.getElementById('role-dot').style.background = R.color;
+  document.getElementById('role-pill-label').textContent = R.label;
   document.querySelectorAll('.role-option').forEach((el,i) => {
-    const roles = ['parent','student','policy','general'];
-    el.classList.toggle('current', roles[i] === currentRole);
+    el.classList.toggle('current', ['parent','student','policy','general'][i] === role);
   });
 }
 
-function buildNav() {
-  const nav = document.getElementById('app-nav');
-  const tabs = ROLES[currentRole].tabs;
-  // remove old tabs
-  nav.querySelectorAll('.nav-tab').forEach(t => t.remove());
-  tabs.forEach((tab, i) => {
+function buildTabs() {
+  const bar = document.getElementById('header-tabs');
+  bar.innerHTML = '';
+  ROLES[role].tabs.forEach((t,i) => {
     const el = document.createElement('div');
-    el.className = 'nav-tab' + (i === currentTab ? ' active' : '');
-    el.textContent = tab;
+    el.className = 'header-tab' + (i===tab?' active':'');
+    el.innerHTML = `${ICON[t.icon]}<span>${t.label}</span>`;
     el.onclick = () => goTab(i);
-    nav.insertBefore(el, nav.querySelector('.nav-underline'));
-  });
-  positionUnderline();
-}
-
-function buildContent() {
-  const container = document.getElementById('app-content');
-  container.innerHTML = '';
-  const tabs = ROLES[currentRole].tabs;
-  tabs.forEach((tab, i) => {
-    const panel = document.createElement('div');
-    panel.className = 'tab-panel' + (i === currentTab ? ' active' : '');
-    panel.id = 'panel-' + i;
-    panel.innerHTML = (CONTENT[currentRole] && CONTENT[currentRole][tab]) || `<div class="page-title">${tab}</div><div class="page-sub">Content coming soon.</div>`;
-    container.appendChild(panel);
+    bar.appendChild(el);
   });
 }
 
-function goTab(idx) {
-  if (idx === currentTab) return;
-  const old = document.getElementById('panel-' + currentTab);
-  if (old) old.classList.remove('active');
-  document.querySelectorAll('.nav-tab')[currentTab]?.classList.remove('active');
-  currentTab = idx;
-  const next = document.getElementById('panel-' + currentTab);
-  if (next) next.classList.add('active');
-  document.querySelectorAll('.nav-tab')[currentTab]?.classList.add('active');
-  positionUnderline();
+function buildPanels() {
+  const body = document.getElementById('app-body');
+  body.innerHTML = '';
+  CONTENT[role].forEach((fn,i) => {
+    const p = document.createElement('div');
+    p.className = 'tab-panel' + (i===tab?' active':'');
+    p.id = 'p'+i;
+    p.innerHTML = fn();
+    body.appendChild(p);
+  });
+  wireExploreBlock(role);
 }
 
-function positionUnderline() {
-  const tabs = document.querySelectorAll('.nav-tab');
-  const underline = document.getElementById('nav-underline');
-  if (!tabs[currentTab]) return;
-  const tab = tabs[currentTab];
-  underline.style.left = tab.offsetLeft + 'px';
-  underline.style.width = tab.offsetWidth + 'px';
+function goTab(i) {
+  if (i===tab) return;
+  document.getElementById('p'+tab)?.classList.remove('active');
+  document.querySelectorAll('.header-tab')[tab]?.classList.remove('active');
+  tab = i;
+  document.getElementById('p'+tab)?.classList.add('active');
+  document.querySelectorAll('.header-tab')[tab]?.classList.add('active');
+  wireExploreBlock(role);
 }
 
 function toggleDropdown(e) {
@@ -1029,38 +1067,20 @@ function toggleDropdown(e) {
   document.getElementById('role-dropdown').classList.toggle('open');
 }
 
-function switchRole(role) {
+function switchRole(r) {
   document.getElementById('role-dropdown').classList.remove('open');
-  if (role === currentRole) return;
-  // fade out content
-  const content = document.getElementById('app-content');
-  const nav = document.getElementById('app-nav');
-  content.style.opacity = '0';
-  content.style.transform = 'translateY(8px)';
-  content.style.transition = 'opacity 0.2s, transform 0.2s';
-  nav.style.opacity = '0';
-  nav.style.transition = 'opacity 0.2s';
+  if (r===role) return;
+  const body = document.getElementById('app-body');
+  body.style.cssText = 'opacity:0;transition:opacity 0.2s;';
   setTimeout(() => {
-    currentRole = role;
-    currentTab = ROLES[role].defaultTab;
-    updateRolePill();
-    buildNav();
-    buildContent();
-    content.style.opacity = '1';
-    content.style.transform = 'translateY(0)';
-    nav.style.opacity = '1';
-  }, 220);
+    role=r; tab=ROLES[r].default;
+    conversationHistory = [];
+    updatePill(); buildTabs(); buildPanels();
+    body.style.cssText = 'opacity:1;transition:opacity 0.2s;';
+  }, 200);
 }
 
-document.addEventListener('click', () => {
-  document.getElementById('role-dropdown')?.classList.remove('open');
-});
-
-function togglePill(el) {
-  el.classList.toggle('on');
-}
-
-window.addEventListener('resize', positionUnderline);
+document.addEventListener('click', () => document.getElementById('role-dropdown')?.classList.remove('open'));
 </script>
 </body>
 </html>
