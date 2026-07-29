@@ -1,264 +1,732 @@
+import os
 import json
-from typing import List, Dict, Optional, Literal, Any, TypedDict
+import re
+import pandas as pd
+
+from typing import List, Dict, Optional, Any
+from dotenv import load_dotenv
 from pydantic import BaseModel, Field
+
 from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain_core.prompts import ChatPromptTemplate
 
-# ==========================================
-# PERSONAS
-# ==========================================
-PersonaType = Literal["student", "parent", "policymaker", "general"]
 
-# ==========================================
-# PYDANTIC SCHEMAS
-# ==========================================
-class Entities(BaseModel):
-    schools: List[str] = Field(default_factory=list)
-    districts: List[str] = Field(default_factory=list)
-    counties: List[str] = Field(default_factory=list)
-    grade_levels: List[str] = Field(default_factory=list)
-    subject_areas: List[str] = Field(default_factory=list)
-    demographics: List[str] = Field(default_factory=list)
+load_dotenv(
+    dotenv_path=os.path.join(
+        os.path.dirname(__file__),
+        ".env"
+    )
+)
 
-class Agent1Output(BaseModel):
-    persona: PersonaType
-    original_query: str
-    clarification_needed: bool
-    clarifying_question: Optional[str] = None
-    intent_tags: List[str]
-    entities: Entities
-    sub_questions: List[str]
 
-class RouteItem(BaseModel):
-    sub_question: str
-    data_source: Literal["internal_dataset", "web_search"]
-    target_fields_or_query: str
-    priority: int
-    persona_weight_adjustment: Optional[Dict[str, float]] = None
+# ===============================
+# GEMINI MODEL
+# ===============================
 
-class Agent2Plan(BaseModel):
-    original_query: str
-    persona: PersonaType
-    retrieval_plan: List[RouteItem]
+api_key = (
+    os.getenv("GOOGLE_API_KEY")
+    or os.getenv("GEMINI_API_KEY")
+)
 
-class InternalRecord(BaseModel):
-    field_name: str
-    value: Any
-    data_year: str
-    entity_name: str
-    data_gap: bool = False
-    gap_reason: Optional[str] = None
 
-class WebRecord(BaseModel):
-    query_used: str
-    extracted_fact: str
-    source_url: str
-    publication_date: Optional[str] = None
-    data_unavailable: bool = False
+llm = ChatGoogleGenerativeAI(
+    model="gemini-3.6-flash",
+    google_api_key=api_key,
+    temperature=0,
+    max_tokens=1400,
+    timeout=40,
+    max_retries=1,
+)
 
-class Agent3MergedResult(BaseModel):
-    internal_data: List[InternalRecord]
-    web_data: List[WebRecord]
 
-class PolicyRecommendation(BaseModel):
-    title: str
-    description: str
-    policy_lever: str
 
-class Agent4Synthesis(BaseModel):
-    persona: PersonaType
-    key_findings: List[str]
-    ranked_options: Optional[List[Dict[str, Any]]] = None
-    data_sources: List[str]
-    data_gaps: List[str]
-    policy_recommendations: List[PolicyRecommendation] = Field(default_factory=list)
-    confidence_level: Literal["high", "medium", "low"]
+# ===============================
+# DATASETS
+# ===============================
 
-class FinalChatResponse(BaseModel):
-    persona: PersonaType
-    formatted_response: str
-    data_gap_notice: Optional[str] = None
-    suggested_followup: Optional[str] = None
+BASE_DIR = os.path.abspath(
+    os.path.join(os.path.dirname(__file__), "..")
+)
 
-# ==========================================
-# LANGGRAPH STATE
-# ==========================================
-class ChatbotState(TypedDict):
-    persona: PersonaType
-    raw_user_input: str
-    agent1_output: Optional[dict]
-    agent2_plan: Optional[dict]
-    agent3_data: Optional[dict]
-    agent4_synthesis: Optional[dict]
-    final_response: Optional[dict]
+DATA_DIR = os.path.join(BASE_DIR, "data-files")
 
-# ==========================================
-# LLM
-# ==========================================
-<<<<<<< HEAD
-llm = ChatGoogleGenerativeAI(model="gemini-pro", temperature=0.1)
-=======
-llm = ChatGoogleGenerativeAI(model="gemini-1.5-flash", temperature=0.1)
->>>>>>> 3f0a90a695747ea56160f9d8ac67114890e87eaf
+_cache = {}
 
-# ==========================================
-# AGENT 1: Intake & Clarification
-# ==========================================
-agent1_prompt = ChatPromptTemplate.from_messages([
-    ("system", """You are Agent 1 (Intake & Clarification) for an NC Education Equity Chatbot.
-Your job is to parse the user's raw query and extract intent, entities, and sub-questions.
 
-Persona context: {persona}
+DATASET_MAP = {
 
-Output MUST be valid JSON adhering to this structure:
-{{
-  "persona": "{persona}",
-  "original_query": "...",
-  "clarification_needed": boolean,
-  "clarifying_question": "string or null",
-  "intent_tags": ["school_profile", "school_comparison", "county_overview", "metric_lookup", "policy_question", "general_education_equity", "news_or_recent_event"],
-  "entities": {{
-    "schools": [], "districts": [], "counties": [], "grade_levels": [], "subject_areas": [], "demographics": []
-  }},
-  "sub_questions": []
-}}
+    "performance":
+        "2025spg",
 
-RULES:
-- If school/county is ambiguous, set clarification_needed = true and provide EXACTLY ONE clarifying question.
-- Do NOT answer the query yet.
-"""),
-    ("user", "{raw_user_input}")
-])
+    "graduation":
+        "2025gradrates",
 
-def run_agent_1(state: ChatbotState) -> ChatbotState:
-    chain = agent1_prompt | llm.with_structured_output(Agent1Output)
-    res = chain.invoke({"persona": state["persona"], "raw_user_input": state["raw_user_input"]})
-    state["agent1_output"] = res.dict()
-    return state
+    "attendance":
+        "2025absent",
 
-# ==========================================
-# AGENT 2: Decomposition & Data Routing
-# ==========================================
-agent2_prompt = ChatPromptTemplate.from_messages([
-    ("system", """You are Agent 2 (Decomposition & Routing Agent). Build an execution retrieval plan based on Agent 1's output.
+    "poverty":
+        "frl-ratios",
 
-Data Routing Rules:
-1. Internal Dataset: Contains SPG scores (math/ELA/science), poverty rates, absentee rates, graduation rates, internet access, transportation scores, demographic breakdowns.
-2. Web Search: Route here for recent news, state-level policy updates, NCES/DPI recent policy rules, general background topics.
+    "teachers":
+        "nc_county_attrition"
+}
 
-Persona Weighting Strategy for Comparisons:
-- Policymaker: Weights policy-relevant metrics (funding, internet access, state baseline gaps, poverty index).
-- Parent: Weights school safety, graduation rates, internet access, student academic growth.
-- Student: Weights access to resources, courses, internet, basic performance.
-- General: Balanced weighting.
 
-Output JSON conforming to Agent2Plan schema.
-"""),
-    ("user", "Agent 1 Payload: {agent1_payload}")
-])
 
-def run_agent_2(state: ChatbotState) -> ChatbotState:
-    chain = agent2_prompt | llm.with_structured_output(Agent2Plan)
-    res = chain.invoke({"agent1_payload": json.dumps(state["agent1_output"])})
-    state["agent2_plan"] = res.dict()
-    return state
+def load_dataset(name):
 
-# ==========================================
-# AGENT 3A: Internal Data Retrieval
-# ==========================================
-def run_agent_3_internal(plan: dict) -> List[InternalRecord]:
+    print("LOADING DATASET:", name)
+
+    if name in _cache:
+        return _cache[name]
+
+    csv_path = os.path.join(
+        DATA_DIR,
+        name + ".csv"
+    )
+
+    xlsx_path = os.path.join(
+        DATA_DIR,
+        name + ".xlsx"
+    )
+
+    if os.path.exists(csv_path):
+
+        df = pd.read_csv(
+            csv_path,
+            low_memory=False
+        )
+
+    elif os.path.exists(xlsx_path):
+
+        df = pd.read_excel(
+            xlsx_path
+        )
+
+    else:
+
+        print("DATASET NOT FOUND:", name)
+        df = pd.DataFrame()
+
+
+    _cache[name] = df
+
+    return df
+
+
+
+# ===============================
+# EDUCATION KNOWLEDGE
+# ===============================
+
+
+def load_equity_context():
+
+    path = os.path.join(
+        DATA_DIR,
+        "education_context.txt"
+    )
+
+    if os.path.exists(path):
+
+        with open(
+            path,
+            "r",
+            encoding="utf-8"
+        ) as f:
+
+            return f.read()
+
+
+    return """
+Education inequity refers to unequal access
+to resources, opportunities, and outcomes.
+
+Major contributors include:
+- school funding differences
+- broadband access
+- transportation barriers
+- poverty
+- teacher shortages
+- chronic absenteeism
+- unequal access to advanced courses
+"""
+
+
+
+# ===============================
+# DATA ROUTING
+# ===============================
+
+
+def detect_topics(question):
+
+    q = question.lower()
+
+    topics = []
+
+    if any(x in q for x in [
+        "score",
+        "performance",
+        "ranking",
+        "rank",
+        "grade",
+        "top",
+        "best",
+        "highest",
+        "lowest",
+        "school"
+    ]):
+        topics.append("performance")
+
+
+    if any(x in q for x in [
+        "graduate",
+        "graduation",
+        "diploma"
+    ]):
+        topics.append("graduation")
+
+
+    if any(x in q for x in [
+        "attendance",
+        "absent",
+        "truancy"
+    ]):
+        topics.append("attendance")
+
+
+    if any(x in q for x in [
+        "poverty",
+        "income",
+        "free lunch",
+        "frl"
+    ]):
+        topics.append("poverty")
+
+
+    if any(x in q for x in [
+        "teacher",
+        "turnover",
+        "shortage"
+    ]):
+        topics.append("teachers")
+
+
+    return topics
+
+
+
+def search_internal_datasets(question):
+
+    topics = detect_topics(question)
+
     results = []
-    for item in plan.get("retrieval_plan", []):
-        if item["data_source"] == "internal_dataset":
-            results.append(InternalRecord(
-                field_name=item["target_fields_or_query"],
-                value="84.2%",
-                data_year="2023-2024",
-                entity_name="Robeson County Schools",
-                data_gap=False
-            ))
+
+    limit = 10
+
+    match = re.search(
+        r"top\s+(\d+)",
+        question.lower()
+    )
+
+    if match:
+        limit = int(match.group(1))
+
+
+    question_lower = question.lower()
+
+
+    for topic in topics:
+
+        filename = DATASET_MAP.get(topic)
+
+        if not filename:
+            continue
+
+
+        df = load_dataset(filename)
+
+
+        if df.empty:
+            continue
+
+
+        # clean columns
+        df.columns = [
+            str(c).strip()
+            for c in df.columns
+        ]
+
+
+        filtered = df.copy()
+
+
+        # -----------------------------
+        # LOCATION FILTERING
+        # -----------------------------
+
+        location_words = []
+
+        possible_locations = [
+            "durham",
+            "wake",
+            "mecklenburg",
+            "orange",
+            "guilford",
+            "forsyth",
+            "buncombe",
+            "johnston",
+            "cumberland",
+            "davidson",
+            "alamance",
+            "chatham"
+        ]
+
+
+        for word in possible_locations:
+
+            if word in question_lower:
+                location_words.append(word)
+
+
+
+        # Apply location filter only if user specified one
+
+        if location_words:
+
+
+            for col in filtered.columns:
+
+
+                if any(key in col.lower() for key in [
+                    "county",
+                    "district",
+                    "lea",
+                    "name",
+                    "school"
+                ]):
+
+
+                    matches = filtered[
+                        filtered[col]
+                        .fillna("")
+                        .astype(str)
+                        .str.lower()
+                        .apply(
+                            lambda x:
+                            any(
+                                loc in x
+                                for loc in location_words
+                            )
+                        )
+                    ]
+
+
+                    if not matches.empty:
+
+                        filtered = matches
+
+                        break
+
+
+
+        # -----------------------------
+        # RANKING LOGIC
+        # -----------------------------
+
+
+        score_col = None
+
+
+        if "spg_score" in filtered.columns:
+
+            score_col = "spg_score"
+
+
+        else:
+
+            score_columns = [
+                c for c in filtered.columns
+                if "score" in c.lower()
+            ]
+
+
+            if score_columns:
+                score_col = score_columns[0]
+
+
+
+        if score_col:
+
+
+            filtered[score_col] = pd.to_numeric(
+                filtered[score_col],
+                errors="coerce"
+            )
+
+
+            filtered = filtered.sort_values(
+                by=score_col,
+                ascending=False
+            )
+
+
+
+        # -----------------------------
+        # KEEP IMPORTANT COLUMNS
+        # -----------------------------
+
+
+        keep_cols = [
+
+            c for c in filtered.columns
+
+            if any(key in c.lower() for key in [
+
+                "name",
+                "school",
+                "county",
+                "district",
+                "score",
+                "grade",
+                "rate",
+                "percent",
+                "pct",
+                "span"
+
+            ])
+
+        ]
+
+
+        if keep_cols:
+
+            filtered = filtered[keep_cols]
+
+
+
+        records = (
+
+            filtered
+            .head(limit)
+            .fillna("")
+            .to_dict(
+                orient="records"
+            )
+
+        )
+
+
+        results.append({
+
+            "topic": topic,
+
+            "records": records
+
+        })
+
+
+
     return results
 
-# ==========================================
-# AGENT 3B: Web Search Retrieval
-# ==========================================
-def run_agent_3_web(plan: dict) -> List[WebRecord]:
-    results = []
-    for item in plan.get("retrieval_plan", []):
-        if item["data_source"] == "web_search":
-            results.append(WebRecord(
-                query_used=item["target_fields_or_query"],
-                extracted_fact="NC DPI announced a $12M digital inclusion grant targeting tier 1 counties in late 2023.",
-                source_url="https://www.dpi.nc.gov/news/broadband-grants-2023",
-                publication_date="2023-11-15",
-                data_unavailable=False
-            ))
-    return results
 
-def run_agent_3(state: ChatbotState) -> ChatbotState:
-    plan = state["agent2_plan"]
-    internal_res = run_agent_3_internal(plan)
-    web_res = run_agent_3_web(plan)
-    merged = Agent3MergedResult(internal_data=internal_res, web_data=web_res)
-    state["agent3_data"] = merged.dict()
-    return state
+# ===============================
+# PERSONA STYLE
+# ===============================
 
-# ==========================================
-# AGENT 4: Synthesis & Policy Recommendation
-# ==========================================
-agent4_prompt = ChatPromptTemplate.from_messages([
-    ("system", """You are Agent 4 (Synthesis & Policy Recommendation Agent).
-Synthesize data from internal and web sources.
 
-Persona: {persona}
+PERSONAS = {
 
-Task Instructions:
-1. Aggregate data and weight metrics according to persona priorities.
-2. Flag data quality issues: outdated data years, missing data gaps, conflicts.
-3. IF persona == 'policymaker': Generate 2-3 actionable policy recommendations using NC levers (e.g. NC Broadband Infrastructure Office, DPI Allotment Policy, PRC allocations).
-4. IF persona == 'parent' or 'student': Translate metrics (SPG, absentee rates) into plain language context.
-5. Set confidence_level (high/medium/low).
 
-Return JSON matching Agent4Synthesis schema.
-"""),
-    ("user", "Retrieved Data: {agent3_payload}")
+"student":
+"""
+Speak like a mentor.
+
+Explain complicated ideas simply.
+Avoid policy jargon.
+Help the student understand why this matters.
+Be encouraging.
+""",
+
+
+"parent":
+"""
+Speak like a school counselor.
+
+Focus on how issues affect children.
+Give practical explanations and possible actions.
+""",
+
+
+"policymaker":
+"""
+Speak like an education analyst.
+
+Use evidence, trends, metrics,
+and policy implications.
+""",
+
+
+"general":
+"""
+Explain clearly for someone learning
+about education equity.
+Balance examples and explanation.
+""",
+
+
+"map_parent":
+"""
+Explain NC map information to a parent.
+Reference counties and schools when available.
+Connect data to a child's experience.
+""",
+
+
+"map_student":
+"""
+Explain map information to a student.
+Be direct, understandable, and encouraging.
+""",
+
+
+"map_policy":
+"""
+Analyze map information like a policy researcher.
+Discuss patterns, disparities, and measurements.
+"""
+
+}
+
+
+
+# ===============================
+# RESPONSE FORMAT
+# ===============================
+
+
+class EducationResponse(BaseModel):
+
+    formatted_response: str = Field(
+        description="""
+        Complete final answer.
+        Must directly answer the question.
+        Ranking questions require numbered lists or markdown tables.
+        Include NC-specific examples whenever possible.
+        """
+    )
+
+    suggested_followup: Optional[str] = Field(
+        default=None,
+        description="One useful follow-up question."
+    )
+
+
+
+# ===============================
+# PROMPT
+# ===============================
+
+
+prompt = ChatPromptTemplate.from_messages([
+
+
+(
+"system",
+
+"""
+You are EduBridge AI.
+
+You help users understand education inequity,
+especially in North Carolina.
+
+User persona:
+{persona_style}
+
+Education context:
+{equity_context}
+
+Is this a ranking question:
+{is_ranking}
+
+Your job:
+
+- Explain education inequity clearly
+- Analyze NC school data when available
+- Connect problems to real causes
+- Suggest possible solutions
+
+
+IMPORTANT RULES:
+
+1. Answer the user's exact question first.
+
+2. If the user asks for:
+- top schools
+- best schools
+- rankings
+- highest/lowest performing schools
+
+You MUST use this format:
+
+Start with a short 1-2 sentence introduction.
+
+Then provide a numbered list:
+
+1. School Name — County/District
+   - Why it stands out
+   - Important programs, rankings, or opportunities
+
+2. School Name — County/District
+   - Why it stands out
+   - Important programs, rankings, or opportunities
+
+Continue until the requested number of schools is reached.
+
+After the ranking list, include:
+
+Equity Context
+
+Explain:
+- differences in school access
+- AP/IB/CTE opportunities
+- socioeconomic factors
+- transportation or enrollment barriers
+
+Do NOT use markdown tables for ranking questions.
+Do NOT answer only as a paragraph.
+
+3. If the user asks "why" or "how":
+
+Use:
+
+## Explanation
+
+## NC Context
+
+## What Can Be Done
+
+4. Always include:
+- NC school names when relevant
+- NC county/district names when relevant
+- programs/resources when available
+- practical next steps
+
+5. Use the dataset context as the source of truth.
+
+6. If dataset information is unavailable, say:
+"Based on available NC education information..."
+and do not pretend a statistic came from the dataset.
+
+7. Be specific. Avoid generic education explanations.
+
+"""
+),
+
+
+(
+"user",
+
+"""
+Conversation history:
+
+{history}
+
+
+User question:
+
+{question}
+
+
+Relevant NC dataset information:
+
+{dataset}
+
+"""
+)
+
 ])
+# ===============================
+# MAIN FUNCTION
+# ===============================
 
-def run_agent_4(state: ChatbotState) -> ChatbotState:
-    chain = agent4_prompt | llm.with_structured_output(Agent4Synthesis)
-    res = chain.invoke({
-        "persona": state["persona"],
-        "agent3_payload": json.dumps(state["agent3_data"])
+
+def process_education_query(
+        message,
+        persona="general",
+        history=None):
+
+
+    if history is None:
+        history = []
+
+
+    dataset = search_internal_datasets(message)
+
+    print("DATASET FOUND:")
+    print(json.dumps(dataset, indent=2)[:2000])
+
+
+    history_text = "\n".join(
+        [
+            f"{x.get('role')}: {x.get('content')}"
+            for x in history[-5:]
+        ]
+    )
+
+
+    is_ranking = any(
+        word in message.lower()
+        for word in [
+            "top",
+            "best",
+            "ranking",
+            "highest",
+            "lowest"
+        ]
+    )
+
+
+    chain = (
+        prompt
+        |
+        llm
+    )
+
+
+    response = chain.invoke({
+
+        "question": message,
+
+        "dataset": json.dumps(
+            dataset,
+            indent=2
+        ),
+
+        "history": history_text,
+
+        "persona_style": PERSONAS.get(
+            persona,
+            PERSONAS["general"]
+        ),
+
+        "equity_context": load_equity_context(),
+
+        "is_ranking": str(is_ranking)
+
     })
-    state["agent4_synthesis"] = res.dict()
-    return state
 
-# ==========================================
-# AGENT 5: Response Formatting
-# ==========================================
-agent5_prompt = ChatPromptTemplate.from_messages([
-    ("system", """You are Agent 5 (Response Formatting Agent).
-Turn the Agent 4 synthesis into the final user-facing response.
 
-Persona Tone Guidelines:
-- Student: Casual, clear, motivating. Avoid jargon.
-- Parent: Warm, practical, action-oriented. Focus on impact on their child.
-- Policymaker: Precise, data-forward, professional. Lead with findings and policy recommendations.
-- General: Balanced, informative, accessible.
+    answer = response.content
 
-Formatting Rules:
-- Inline citations required (e.g., "per 2023 NC DPI data").
-- Use short Markdown tables if comparing 3+ schools or metrics.
-- Acknowledge data gaps honestly if present.
-- Always include ONE optional, natural follow-up prompt at the end.
 
-Return JSON matching FinalChatResponse schema.
-"""),
-    ("user", "Synthesis Payload: {agent4_payload}")
-])
+    if isinstance(answer, list):
+        answer = "".join(
+            item.get("text", "")
+            for item in answer
+            if isinstance(item, dict)
+        )
 
-def run_agent_5(state: ChatbotState) -> ChatbotState:
-    chain = agent5_prompt | llm.with_structured_output(FinalChatResponse)
-    res = chain.invoke({"agent4_payload": json.dumps(state["agent4_synthesis"])})
-    state["final_response"] = res.dict()
-    return state
+
+    return str(answer)
