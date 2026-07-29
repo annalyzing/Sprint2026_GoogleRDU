@@ -512,7 +512,7 @@
     border: 1px solid rgba(255,255,255,0.2);
     transition: background 0.2s;
   }
-  .openmap:hover { background: rgba(31,31,31,0.95); }
+  .openmap:hover { background: rgba(20, 21, 23, 0.95); }
   .legend { display: none; }
 
   @keyframes travel { from { offset-distance: 0%; opacity: 0; } 8% { opacity: 1; } 92% { opacity: 1; } to { offset-distance: 100%; opacity: 0; } }
@@ -746,7 +746,7 @@
     width: min(380px, calc(100vw - 36px));
     background: rgba(255,255,255,0.95); backdrop-filter: blur(20px);
     border: 1px solid var(--border); border-radius: 24px;
-    box-shadow: 0 16px 40px rgba(0,0,0,0.14);
+    box-shadow: 0 16px 40px rgba(114, 136, 245, 0.943);
     display: flex; flex-direction: column; overflow: hidden;
     transform: scale(0.95) translateY(12px); opacity: 0; pointer-events: none;
     transition: transform 0.22s var(--ease), opacity 0.22s var(--ease);
@@ -763,7 +763,7 @@
     width: 28px; height: 28px; border-radius: 50%; background: var(--blue);
     display: flex; align-items: center; justify-content: center; flex-shrink: 0;
   }
-  .map-ai-logo svg { width: 14px; height: 14px; color: #fff; }
+  .map-ai-logo svg { width: 14px; height: 14px; color: #f2eeee; }
   .map-ai-title { font-size: 13px; font-weight: 700; color: var(--ink); line-height: 1.2; }
   .map-ai-sub { font-size: 10.5px; color: var(--muted); }
   .map-ai-close {
@@ -805,14 +805,14 @@
   #map-ai-fab {
     position: absolute; bottom: 24px; right: 24px; z-index: 20;
     display: flex; align-items: center; gap: 10px;
-    background: rgba(31,31,31,0.88); backdrop-filter: blur(16px);
-    color: #fff; border: 1px solid rgba(255,255,255,0.2); border-radius: 999px;
+    background: rgb(239, 240, 244); backdrop-filter: blur(16px);
+    color: #2744ec; border: 1px solid rgba(255, 255, 255, 0.97); border-radius: 999px;
     padding: 10px 20px 10px 14px; cursor: pointer;
     box-shadow: 0 8px 28px rgba(0,0,0,0.25);
     transition: all 0.2s var(--ease);
     font-family: inherit;
   }
-  #map-ai-fab:hover { background: rgba(26,115,232,0.95); transform: translateY(-2px); box-shadow: 0 10px 32px rgba(26,115,232,0.4); }
+  #map-ai-fab:hover { background: rgba(247, 248, 249, 0.995); transform: translateY(-2px); box-shadow: 0 10px 32px rgba(26,115,232,0.4); }
   #map-ai-fab.hidden { opacity: 0; pointer-events: none; transform: translateY(8px); }
   .map-ai-fab-icon {
     width: 28px; height: 28px; border-radius: 50%; background: var(--blue);
