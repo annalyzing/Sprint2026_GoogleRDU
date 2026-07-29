@@ -1,0 +1,3 @@
+agency_id,agency_url,agency_lang,agency_name,agency_phone,agency_timezone,agency_fare_url,tts_agency_name
+238,http://www.gotriangle.org/,en,GoTriangle,(919) 485-RIDE,America/New_York,http://www.gotriangle.org/fares-and-passes,
+241,http://godurhamtransit.org/,en,GoDurham,,America/New_York,,

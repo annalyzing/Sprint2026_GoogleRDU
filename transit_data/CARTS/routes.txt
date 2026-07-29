@@ -1,0 +1,4 @@
+route_id,route_short_name,route_long_name,route_desc,route_url,route_color,route_text_color,route_type
+102357,Blue Route,Blue Route,,,0300b8,,3
+102358,Orange Route,Orange Route,,,f8a059,,3
+102359,Green Route,Green Route,,,039b31,,3

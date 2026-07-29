@@ -1,0 +1,305 @@
+stop_id,stop_code,stop_name,stop_desc,stop_lat,stop_lon,location_type,wheelchair_boarding
+1452,1452,Mason St at Old Mill Village Dr (NB) Apex Town Hal,Mason St at Old Mill Village Dr (NB) Apex Town Hall,35.732839,-78.845471,0,0
+16093,16093,Apex Senior Center Main Entrance ,,35.73374,-78.847074,0,0
+16097,16097,Hunter St at Ambergate Stn,,35.7355652354673,-78.8478285199414,0,0
+16099,16099,N Salem St at Center St,,35.7325866902635,-78.8503523717174,0,0
+16101,16101,N Salem St a E Moore St,,35.7287562715532,-78.8531166927532,0,0
+1593,1593,W Williams St at Hunter St (NB),,35.736411,-78.862941,0,0
+16017,16017,W Williams St at Apex Peakway (NB),,35.738837,-78.865363,0,0
+1725,1725,W Williams St at Haddon Hall Dr (NB),,35.743772,-78.870595,0,0
+16021,16021,Beaver Crk Comm Dr at Chick-fil-A (WB),,35.745855,-78.874754,0,0
+16023,16023,Beaver Crk Comm Dr at Beaver Crk Greenway (WB),,35.7468,-78.878228,0,0
+16027,16027,Beaver Crk Comm Dr at Diamond Dove Ln (WB),,35.741207,-78.893545,0,0
+16029,16029,Kelly Rd at Evening Star Dr (SB),,35.736275,-78.896151,0,0
+16031,16031,Chapel Ridge Rd at Olive Chapel Professional Park,,35.737313,-78.888764,0,0
+11437,11437,Macedonia Lake Dr at Tryon Manor Dr,,35.751695,-78.746263,0,0
+11454,11454,Walnut St at Crossroads Manor Ct,,35.749962,-78.741193,0,0
+11455,11455,Jones Franklin Rd at Tryon Rd (NB),,35.746165,-78.737539,0,0
+11740,11740,Crossroads Blvd at Jones Franklin Rd (NB),,35.755277,-78.730927,0,0
+11748,11748,Crossroads Blvd at Caitboo Ave (NB),,35.758002,-78.733146,0,0
+11734,11734,Crossroads Plaza (WB),,35.7604,-78.735932,0,0
+1913,1913,Dillard Dr at Meeting St (EB),,35.755968,-78.743456,0,0
+11348,11348,Walnut St at Dillard Dr,,35.756266,-78.741311,0,0
+11246,11246,Walnut St at Meeting St,,35.759606,-78.742683,0,0
+1706,1706,Walnut St at Donaldson Dr,,35.764225,-78.749194,0,0
+1705,1705,Walnut St at Nottingham Dr,Walnut St at Nottingham Dr ,35.7651766100631,-78.7524012477637,0,0
+11172,11172,Walnut St at Glenpark Pl,,35.766408,-78.756256,0,0
+1587,1587,Walnut St at Cary Towne Center,,35.770342,-78.761494,0,0
+11039,11039,SE Maynard Rd at Cary Towne Blvd (NB),,35.775482,-78.764058,0,0
+11041,11041,SE Maynard Rd at Village Greenway,,35.780349,-78.764094,0,0
+11044,11044,SE Maynard Rd at Quinard Dr,,35.785306,-78.764058,0,0
+11046,11046,SE Maynard Rd at Tate St,,35.7883938126799,-78.7637778379785,0,0
+11048,11048,SE Maynard Rd at Reed St,,35.790238,-78.763636,0,0
+11001,11001,E Chatham St at NE Maynard Rd ,E Chatham St at NE Maynard Rd,35.792058,-78.76463,0,0
+11452,11452,E Chatham St at Chatham Square (WB),,35.79163,-78.76719,0,0
+11239,11239,E Chatham St at Reedy Creek Rd (WB),,35.7908949727353,-78.7702392798805,0,0
+11033,11033,E Chatham St at Ward St,,35.789519,-78.772868,0,0
+11031,11031,E Chatham St at Templeton St,,35.787616,-78.77723,0,0
+11440,11440,Cary Depot North Platform,,35.7882717721624,-78.7822528947742,0,0
+11161,11161,NC 55 at Walmart,,35.786646,-78.869821,0,0
+11159,11159,High House Rd at Cranborne Ln,,35.78874,-78.862297,0,0
+11155,11155,High House Rd at Terrastone Pl,,35.78947,-78.854617,0,0
+11153,11153,High House Rd at Cornerstone Dr,,35.7900514179499,-78.8500269562022,0,0
+11151,11151,High House Rd at Davis Dr (EB),,35.791711,-78.846287,0,0
+11197,11197,High House Rd at Legault Dr,,35.792808,-78.838879,0,0
+11169,11169,High House Rd at Preston Soccer Fields,,35.790639,-78.8328,0,0
+11122,11122,High House Rd at SW Cary Pkwy (EB),,35.788425,-78.828499,0,0
+11022,11022,Cary Senior Center at Bond Park,,35.785524,-78.826284,0,0
+11391,11391,"Maury O'Dell Place at Bond Park Community Center",,35.786138,-78.825014,0,0
+11021,11021,High House Rd at Bond Park Dr (EB),,35.785406,-78.820994,0,0
+11018,11018,High House Rd at Castalia Dr (EB),,35.784698,-78.818669,0,0
+11400,11400,High House Rd at NW Maynard Rd (EB),,35.783386,-78.810469,0,0
+11016,11016,High House Rd at Edgehill Pky,High House Rd at Edgehill Parkway,35.783263,-78.807415,0,0
+11014,11014,High House Rd at Gold Meadow Dr,,35.783469,-78.802494,0,0
+11393,11393,High House Rd at Highland Village Dr (EB),,35.783346,-78.798719,0,0
+11163,11163,Highland Village (EB),,35.784115,-78.796217,0,0
+11123,11123,High House Rd at W Chatham St (EB),,35.782937,-78.794159,0,0
+11226,11226,W Chatham St at Willow St,,35.784326,-78.792219,0,0
+11124,11124,W Chatham St at S Dixon Ave (EB),,35.786723,-78.787606,0,0
+1398,1398,Cary Depot South Platform,,35.788188623678,-78.7818049658421,0,0
+11289,11289,Chapel Hill Rd at W Boundary St/Northwoods Gwy (WB,Chapel Hill Rd at W Boundary St/Northwoods Greenway (WB),35.793715,-78.789655,0,0
+11291,11291,Chapel Hill Rd at Middleton Ave (WB),,35.796638,-78.793505,0,0
+11293,11293,NW Maynard Rd at Chapel Hill Rd,,35.798444,-78.796758,0,0
+11295,11295,James Jackson Ave at NW Maynard Rd,,35.796057,-78.801438,0,0
+11297,11297,260 James Jackson Ave,,35.795718,-78.805666,0,0
+11299,11299,Cary Public Works (James Jackson Ave) (WB),,35.796787,-78.80853,0,0
+11301,11301,James Jackson Ave at Towerview Ct (WB),,35.798859,-78.810872,0,0
+11303,11303,James Jackson Ave at NW Cary Pkwy,,35.801011,-78.816879,0,0
+11305,11305,NW Cary Pkwy at Village Market Pl (NB),,35.804451,-78.813411,0,0
+11307,11307,Chapel Hill Rd at NW Cary Pkwy,,35.807692,-78.813073,0,0
+11309,11309,Chapel Hill Rd at Morrisville Pkwy (NB),,35.809984,-78.816208,0,0
+11311,11311,Chapel Hill Rd at Weston Pkwy,,35.81307,-78.818871,0,0
+11313,11313,Weston Pkwy at Wildfell Trail (EB),,35.815293,-78.814488,0,0
+11315,11315,Weston Pkwy at Sheldon Dr (EB),,35.816556,-78.811613,0,0
+11317,11317,Weston Pkwy at Cascade Pointe Ln (EB),,35.819098,-78.81005,0,0
+11319,11319,Weston Pkwy at Stamford Dr (EB),,35.8211958897827,-78.8081804697621,0,0
+11320,11320,Weston Pkwy at Evans Rd (EB),,35.82683,-78.804779,0,0
+11321,11321,Weston Pkwy at Centregreen Way,,35.827482,-78.799174,0,0
+11323,11323,Weston Pkwy at Norwell Blvd (EB),,35.828789,-78.790404,0,0
+11325,11325,Weston Pkwy at Black Creek Greenway,,35.830504,-78.784717,0,0
+11137,11137,Weston Pkwy at Winstead Dr (EB),,35.831099,-78.782832,0,0
+11218,11218,Weston Pky at Southhill Dr,Weston Parkway at Southill Dr,35.830779,-78.776721,0,0
+11219,11219,Harrison Oaks Blvd at Weston Pky,,35.829629,-78.772336,0,0
+11142,11142,Harrison Oaks Blvd at N Harrison Ave,,35.830585,-78.767551,0,0
+11287,11287,N Harrison Ave at Adams St,,35.790614,-78.783145,0,0
+1364,1364,N Harrison Ave at W Johnson St (NB),,35.793838,-78.783072,0,0
+1400,1400,N Harrison Ave at Kingswood Dr,,35.796678,-78.782972,0,0
+11095,11095,N Harrison Ave at St Charles Pl,,35.801782,-78.782801,0,0
+1714,1714,N Harrison Ave at Harrison Pointe Dr,N Harrison Ave at Harrison Pointe Dr (outbound),35.806475,-78.782774,0,0
+1403,1403,N Harrison Ave at E Dynasty Dr (NB),,35.809588,-78.781199,0,0
+1360,1360,N Harrison Ave at Melody Ln,Harrison Ave at Melody Ln,35.813321,-78.777095,0,0
+1580,1580,N Harrison Ave at Reedy Creek Rd,N Harrison Ave at Reedy Creek Rd (NB),35.816694,-78.773337,0,0
+1774,1774,N Harrison Ave at Cary Pkwy (Cary Academy) (NB),,35.819648,-78.771214,0,0
+101,101,Centennial Biomedical Campus (SB),,35.797477,-78.705152,0,0
+8186,8186,Trinity Rd at Thornberry St,,35.798493,-78.710049,0,0
+8196,8196,Trinity Rd at Youth Center Dr (WB),,35.798802,-78.716364,0,0
+8207,8207,Trinity Rd at Peter Karmanos Jr Dr,,35.799586,-78.725632,0,0
+11653,11653,Trinity Rd at Nowell Rd (WB),,35.801415,-78.731249,0,0
+11654,11654,Corporate Center Dr at Trinity Rd (SB),,35.803103,-78.734821,0,0
+11655,11655,Corporate Center Dr at Play Golf Wy (SB),,35.799879,-78.737714,0,0
+11656,11656,Corporate Center Dr at Conference Dr (SB),,35.797711,-78.738727,0,0
+11657,11657,Corporate Center Dr at Ralph A Walker Ln,,35.795277,-78.739499,0,0
+11658,11658,Corporate Center Dr at Chapel Hill Rd (SB),,35.791516,-78.739925,0,0
+11659,11659,Chapel Hill Rd at Trinity Rd (WB),,35.79511,-78.751398,0,0
+11660,11660,Chapel Hill Rd at Carriage Woods Cir,,35.796554,-78.756767,0,0
+11661,11661,Chapel Hill Rd at Crestview Center,,35.79613,-78.760321,0,0
+11112,11112,NE Maynard Rd at Reedy Creek Rd (WB),,35.801735,-78.767904,0,0
+11113,11113,NE Maynard Rd at Gregory Dr (WB),,35.803114,-78.774328,0,0
+11114,11114,NE Maynard Rd at Grande Heights Dr (WB),,35.803114,-78.779944,0,0
+1362,1362,N Harrison Ave at Northwoods Market,,35.801496,-78.783133,0,0
+1363,1363,N Harrison Ave at Queen Elizabeth Dr,,35.79566,-78.783209,0,0
+1399,1399,N Harrison Ave at W Johnson St (SB),,35.793708,-78.783234,0,0
+11502,11502,S Walker St at Downtown Park,,35.784583,-78.778677,0,0
+11504,11504,Walnut St at Walker St (WB),,35.782565,-78.778832,0,0
+11228,11228,S Academy St at Downtown Cary Park,,35.783635,-78.781178,0,0
+1365,1365,S Academy St at Waldo St,,35.786402,-78.78117,0,0
+11125,11125,W Chatham St at N Dixon Ave (WB),,35.786801,-78.788407,0,0
+11003,11003,E Chatham St at S Walker St,,35.787444,-78.778285,0,0
+11030,11030,E Chatham St at Hunter St,,35.787624,-78.775191,0,0
+11032,11032,E Chatham St at E Circle Dr,,35.789255,-78.772862,0,0
+11501,11501,Town Hall Parking Deck,,35.790163,-78.780054,0,0
+11503,11503,N Walker St at Waldo St,,35.786713,-78.778689,0,0
+11241,11241,Crescentcommons Dr,Crescent Commons Dr ,35.735432,-78.782017,0,0
+1345,1345,Tryon Rd at Kildaire Farm Rd,,35.738049,-78.782978,0,0
+11128,11128,Kildaire Farm Rd at WakeMed Cary (NB),,35.741237,-78.780016,0,0
+11175,11175,Kildaire Farm Rd at Laver Dr,,35.747502,-78.78235,0,0
+11075,11075,Kildaire Farm Rd at McEnroe Ct,,35.750801,-78.782803,0,0
+11077,11077,Kildaire Farm Rd at Troon Village Ln,,35.754888,-78.782664,0,0
+11078,11078,Kildaire Farm Rd at SE Cary Pkwy (NB),,35.757571,-78.782865,0,0
+11081,11081,Kildaire Farm Rd at High Meadow Dr (NB),,35.76228,-78.783306,0,0
+11099,11099,Kildaire Farm Rd near Farmington Woods Dr,Kildaire Farm Rd at Farmington Woods Dr,35.7640728809877,-78.7833713760001,0,0
+11181,11181,Kildaire Farm Rd at  Kilmayne Dr (NB),,35.769125,-78.781771,0,0
+11097,11097,Kildaire Farm Rd at SE Maynard Rd,,35.771626,-78.7816,0,0
+1397,1397,Kildaire Farm Rd at E Cornwall Rd (NB),Kildaire Farm Rd at Cornwall Rd (NB),35.77493,-78.78155,0,0
+11195,11195,Kildaire Farm Rd at Byrum St,Kildaire Farm Road at Byrum Street,35.780944,-78.78039,0,0
+1165,1165,Laura Duncan Rd at Vineyard Station,,35.735576,-78.843081,0,0
+16005,16005,Apex Peakway at Laura Duncan Rd,,35.738116,-78.842433,0,0
+16007,16007,Apex Peakway at Ambergate Station,,35.741476,-78.846851,0,0
+11751,11751,N Salem St at Apex Peakway (NB),,35.741478,-78.849227,0,0
+11752,11752,N Salem St at Key Ring Dr,,35.7468,-78.851563,0,0
+11753,11753,SW Cary Pkwy at Laura Duncan Rd,,35.763771,-78.823277,0,0
+11754,11754,Old Apex Rd at Chatham St (NB),,35.771728,-78.807201,0,0
+11755,11755,Old Apex Rd at Swift Commons Ln,,35.773735,-78.806548,0,0
+11756,11756,Old Apex Rd at Berentwood Dr,,35.775223,-78.806116,0,0
+11757,11757,Old Apex Rd at SW Maynard Rd (EB),,35.777219,-78.804107,0,0
+11229,11229,E Chatham St at Reedy Creek Rd (EB),,35.791127,-78.768611,0,0
+11002,11002,E Chatham St at Chatham Square (EB),,35.791744,-78.765733,0,0
+11047,11047,SE Maynard Rd at Chatham St,,35.790265,-78.76389,0,0
+11045,11045,SE Maynard Rd at Freeman Center,,35.788295,-78.764051,0,0
+11043,11043,SE Maynard Rd at Sloan Dr,,35.7842028608443,-78.7643142798134,0,0
+11042,11042,SE Maynard Rd at East Cary Middle,SE Maynard Rd at East Cary Middle School,35.781009,-78.764325,0,0
+11040,11040,SE Maynard Rd at Cary Village Square,,35.7767,-78.764309,0,0
+1375,1375,Walnut St at Cary Commons,,35.770067,-78.761534,0,0
+1376,1376,Walnut St at Sturdivant Dr,,35.766941,-78.75754,0,0
+1704,1704,Walnut St at Lawrence Rd,,35.764956,-78.752464,0,0
+11182,11182,Walnut St at Ledsome Ln,Walnut St at Ledsome Lane,35.763587,-78.748005,0,0
+11034,11034,Dillard Dr at Meeting St (WB),,35.756205,-78.743975,0,0
+11234,11234,Crossroads Plaza (EB),,35.760163,-78.735827,0,0
+11248,11248,Crossroads Blvd at Caitboo Ave (SB),,35.758765,-78.734096,0,0
+11240,11240,Crossroads Blvd at Jones Franklin Rd (SB),,35.755217,-78.731373,0,0
+11343,11343,Jones Franklin Rd at Dillard Dr,,35.753036,-78.731442,0,0
+11341,11341,Jones Franklin Rd at Almanac Dr,,35.749969,-78.734987,0,0
+11339,11339,Jones Franklin Rd at Tryon Rd (SB),,35.746069,-78.737807,0,0
+11433,11433,Tryon Manor Dr at Tryon Springs Rd,,35.747353,-78.745744,0,0
+11435,11435,Tryon Manor Dr at Woodfield Lake Rd,,35.749901,-78.746508,0,0
+9322,9322,Western Blvd at Jones Franklin,Western Blvd at Jones Franklin Rd,35.785207,-78.720693,0,0
+1383,1383,Buck Jones Rd at Xebec Way,,35.7836248447671,-78.7236881985478,0,0
+1789,1789,Buck Jones Rd at Chesthill Dr,,35.78146,-78.727406,0,0
+1386,1386,Buck Jones Rd at Barclay Dr ,,35.778345,-78.731499,0,0
+1385,1385,Buck Jones Rd at Farm Gate Rd (WB),,35.773779,-78.735896,0,0
+1380,1380,Buck Jones Rd at Nottingham Dr (WB),,35.768813,-78.740815,0,0
+1388,1388,Nottingham Dr at Buck Jones Rd (WB),,35.76781,-78.741828,0,0
+1389,1389,Nottingham Dr at Harlon Dr,,35.767446,-78.74644,0,0
+1377,1377,Donaldson Dr at  Hamilton Ct,,35.765469,-78.748753,0,0
+11350,11350,Walnut St at Cary Towne Blvd (WB),,35.775752,-78.768265,0,0
+11352,11352,Walnut St at  Ralph Dr (WB),,35.778016,-78.771285,0,0
+11126,11126,W Chatham St at W Park St (SB),,35.785711,-78.791278,0,0
+11220,11220,High House Rd at W Chatham St (WB),,35.78296,-78.793735,0,0
+11700,11700,High House Rd at Highland Village Dr (WB),,35.783476,-78.796918,0,0
+11701,11701,Old Apex Rd at NW Maynard Rd (WB),,35.776819,-78.805181,0,0
+11702,11702,Old Apex Rd at Young Landing Ct,,35.773124,-78.806993,0,0
+11703,11703,Old Apex Rd at Chatham St (SB),,35.770864,-78.807733,0,0
+11704,11704,Old Apex Rd at SW Cary Pkwy,,35.762306,-78.82138,0,0
+11705,11705,N Salem St at All Wheel Dr,,35.747797,-78.851992,0,0
+16009,16009,N Salem St at Apex Peakway (SB),,35.740682,-78.849079,0,0
+11371,11371,N Salem St at Hunter St (SB),,35.736205,-78.849074,0,0
+16095,16095,Center St at N Salem St,,35.732284,-78.849915,0,0
+11092,11092,S Academy St at Charlie Gaddy Ln,S Academy St. at Charlie Gaddy Ln,35.783962,-78.78132,0,0
+11331,11331,Walnut St at Walker St (EB),,35.782435,-78.778745,0,0
+11333,11333,Walnut St at Ralph Dr (EB),,35.777897,-78.77147,0,0
+11335,11335,Walnut St at Cary Towne Blvd (EB),,35.775356,-78.767706,0,0
+1390,1390,Donaldson Dr at Patrick Cir,,35.765479,-78.748571,0,0
+11027,11027,Nottingham Dr at Karen Ct,,35.767313,-78.746295,0,0
+1585,1585,Nottingham Dr at Buck Jones Rd (EB),,35.767659,-78.741768,0,0
+1379,1379,Buck Jones Rd at Nottingham Dr (EB),,35.7682,-78.740705,0,0
+1381,1381,Buck Jones Rd at Farm Gate Rd,Buck Jones Rd at Farm Gate Rd ,35.7725178165744,-78.7373138211556,0,0
+9060,9060,Buck Jones Rd at Bashford Rd ,,35.776515,-78.73236,0,0
+9061,9061,Buck Jones Rd at Portree Pl,,35.77974,-78.729855,0,0
+9325,9325,Buck Jones Rd at Wilmot Dr,,35.781676,-78.726698,0,0
+9062,9062,Buck Jones Rd at Fieldspring Ln,,35.783414,-78.723799,0,0
+9063,9063,Jones Franklin Rd at Buck Jones Rd,,35.784033,-78.721804,0,0
+16033,16033,Olive Chapel Rd at Western Wake Crisis Ministry,,35.736816,-78.890137,0,0
+16035,16035,Kelly Rd at Publix Pointe (NB),,35.738028,-78.895671,0,0
+16037,16037,Beaver Creek Commons Dr at Diamond Dove Ln (EB),,35.740821,-78.893927,0,0
+16039,16039,Beaver Creek Comm Dr at Beaver Crk Crossings W,,35.745216,-78.888646,0,0
+16041,16041,Beaver Creek Commons Dr at Regal Cinemas,,35.747255,-78.883581,0,0
+16043,16043,Beaver Creek Comm Dr at Beaver Crk Grnway (EB),,35.746706,-78.878278,0,0
+16045,16045,"Beaver Creek Commons Dr at Lowe's (EB)",,35.745468,-78.874547,0,0
+1731,1731,W Williams St at Haddon Hall Dr (SB),,35.743802,-78.871002,0,0
+16049,16049,W Williams St at Healthplex Way (SB),,35.740806,-78.867814,0,0
+1723,1723,W Williams St at Apex Peakway (SB),,35.738247,-78.865063,0,0
+1447,1447,W Williams St at Olive Chapel Rd (SB),,35.736155,-78.863075,0,0
+16055,16055,W Williams St at Bryan Dr (Post Office),,35.733557,-78.861665,0,0
+16057,16057,W Williams St at Upchurch St,,35.728588,-78.857491,0,0
+16059,16059,E Williams St at Salem St,,35.727216,-78.854493,0,0
+16061,16061,E Williams St at S Hughes St (Park and Ride (SB)),,35.726105,-78.851297,0,0
+16063,16063,E Williams St at Apex Village Center (SB),,35.724946,-78.848173,0,0
+16065,16065,E Williams St at Perry Rd,,35.720795,-78.843994,0,0
+16067,16067,E Williams St at Apex Peakway,,35.71916,-78.843082,0,0
+1183,1183,Apex Peakway at S Hughes St (Cambridge Village),,35.717491,-78.844572,0,0
+16071,16071,Apex Peakway at Norris Park,,35.714045,-78.850733,0,0
+16073,16073,Apex Peakway at Shackleton Rd,,35.714521,-78.855948,0,0
+16075,16075,Tingen Rd at Baberton Dr,,35.716528,-78.857636,0,0
+16077,16077,Tingen Rd at Peace Haven Pl,,35.717794,-78.856513,0,0
+16079,16079,Tingen Rd at Sparta Ln,,35.720186,-78.855802,0,0
+16081,16081,James St at Germaine St,,35.72266,-78.852845,0,0
+16083,16083,James St at E Williams St,,35.723031,-78.846483,0,0
+16085,16085,E Williams St at S Mason St (Apex MS NB),,35.725827,-78.8501,0,0
+1450,1450,Apex Park and Ride (Compare Foods),,35.72651,-78.851219,0,0
+1167,1167,E Chatham St & S Mason St,,35.729231956313,-78.8479195501963,0,0
+11194,11194,Kildaire Farm Rd at Walnut St,,35.782199,-78.780535,0,0
+1366,1366,Kildaire Farm Rd at W Cornwall Rd (SB),Kildaire Farm Rd at Cornwall Rd (SB),35.776018,-78.781832,0,0
+1367,1367,Kildaire Farm Rd at Mayfair Plaza,,35.77256,-78.781881,0,0
+11176,11176,Kildaire Farm Rd at Kilmayne Dr (SB),,35.769812,-78.781936,0,0
+11082,11082,Kildaire Farm Rd at Wrenn Dr,,35.765216,-78.783546,0,0
+11080,11080,Kildaire Farm Rd at High Meadow Dr OB,,35.761134,-78.78353,0,0
+11079,11079,KiIdaire Farm Rd at SW Cary Pkwy (SB),,35.757432,-78.783135,0,0
+11076,11076,Kildaire Farm Rd at Queensferry Rd,,35.750652,-78.783061,0,0
+11174,11174,Kildaire Farm Rd at Glasgow Rd,,35.747579,-78.782626,0,0
+11198,11198,1700 Kildaire Farm Rd,,35.744935,-78.781669,0,0
+11074,11074,Kildaire Farm Rd at WakeMed Cary (SB),,35.74123,-78.780359,0,0
+11409,11409,Kildaire Farm Rd at Advent Court,,35.735908,-78.77929,0,0
+11244,11244,Crescent Commons Dr at Kildaire Farm Rd,,35.734769,-78.779284,0,0
+11397,11397,Highland Village (WB),,35.784228,-78.79619,0,0
+11165,11165,High House Rd at Old Apex Rd,,35.78357,-78.800158,0,0
+11166,11166,High House Rd at Bayoak Dr,,35.783697,-78.804446,0,0
+11167,11167,High House Rd at NW Maynard Rd (WB),,35.783487,-78.808425,0,0
+11401,11401,High House Rd at Maynard Crossing,,35.7836395969176,-78.8118899650508,0,0
+11019,11019,High House Rd at Castalia Dr (WB),,35.784896,-78.818582,0,0
+11020,11020,High House Rd at  Bond Park Dr (WB),,35.785621,-78.820947,0,0
+11143,11143,High House Rd at NW Cary Pkwy (WB),,35.788759,-78.82839,0,0
+11222,11222,High House Rd at Prestonwood Pky,High House Rd at Prestonwood Parkway,35.792995,-78.838668,0,0
+11247,11247,High House Road at Bradford Plaza Way,High House Rd at Bradford,35.792285,-78.845336,0,0
+11150,11150,High House Rd at Davis Dr (WB),,35.79138,-78.84774,0,0
+11152,11152,High House Rd at Stone Creek Village,,35.790056,-78.850962,0,0
+11154,11154,High House Rd at Spring Vista Way,,35.789683,-78.855399,0,0
+11196,11196,High House Rd at Widdington Ln,,35.789034,-78.860496,0,0
+11158,11158,High House Rd at Sir Walker Ln,,35.788951,-78.863152,0,0
+1441,1441,NC 55 at High House Rd,,35.787175,-78.87109,0,0
+1228,1228,N Harrison Ave at Harrison Square,,35.829156,-78.769337,0,0
+11250,11250,Weston Pkwy at Realtors Way,,35.830365,-78.774519,0,0
+11252,11252,2400 Weston Pkwy,,35.831406,-78.778165,0,0
+11254,11254,Weston Pkwy at Winstead Dr (WB),,35.83141,-78.782788,0,0
+11256,11256,Weston Pkwy at Norwell Blvd (WB),,35.829036,-78.791202,0,0
+11257,11257,Weston Pkwy at MetLife Way,,35.828557,-78.7985,0,0
+11258,11258,11800 Weston Pkwy,,35.827054,-78.802872,0,0
+11260,11260,Weston Pkwy at Evans Rd (WB),,35.826895,-78.805357,0,0
+11262,11262,Weston Pkwy at Stamford Dr (WB),,35.8213809622157,-78.808385658764,0,0
+11264,11264,Weston Pkwy at Cascade Pointe Ln (WB),,35.819266,-78.810339,0,0
+11266,11266,Weston Pkwy at Sheldon Dr (WB),,35.816719,-78.811804,0,0
+11268,11268,Weston Pkwy at Wildfell Trail (WB),,35.81525,-78.815071,0,0
+11270,11270,Chapel Hill Rd at Summit Ridge Loop,,35.812249,-78.818115,0,0
+11272,11272,Chapel Hill Rd at Morrisville Pkwy (SB),,35.809689,-78.816438,0,0
+11273,11273,Chapel Hill Rd at Market Center Dr,,35.807925,-78.814332,0,0
+11274,11274,NW Cary Pkwy at Village Market Pl (SB),,35.804613,-78.813676,0,0
+11276,11276,James Jackson Ave at Grisdale Ln,,35.800282,-78.815021,0,0
+11278,11278,James Jackson Ave at Towerview Ct (EB),,35.799131,-78.811473,0,0
+11280,11280,Cary Public Works (James Jackson Ave) (EB),,35.796643,-78.80863,0,0
+11282,11282,333 James Jackson Ave,,35.795753,-78.807078,0,0
+11057,11057,NW Maynard Rd at Carrousel Ln,,35.795776,-78.800554,0,0
+11284,11284,Chapel Hill Rd at NW Maynard Rd,,35.798396,-78.795663,0,0
+11286,11286,Chapel Hill Rd at W Boundary St/Northwoods Greenwa,Chapel Hill Rd at W Boundary St/Northwoods Greenway (EB),35.793596,-78.789785,0,0
+16013,16013,Hunter St at Hillcrest Rd,,35.735441,-78.857171,0,0
+11094,11094,N Harrison Ave at Renaissance Park Pl,,35.825724,-78.770537,0,0
+11087,11087,N Harrison Ave at Research Dr,,35.821312,-78.771208,0,0
+1582,1582,N Harrison Ave at NW Cary Pky (SB),,35.818777,-78.771862,0,0
+1581,1581,N Harrison Ave at Reedy Creek Rd (SB),,35.815963,-78.774487,0,0
+1404,1404,N Harrison Ave at Homestead Dr,,35.813866,-78.77686,0,0
+1361,1361,N Harrison Ave at W Dynasty Dr (SB),,35.810109,-78.781029,0,0
+1713,1713,N Harrison Ave at Grande Heights Dr,,35.80512,-78.783057,0,0
+12000,12000,NE Maynard Rd at Grande Heights Dr (EB),,35.802917,-78.778896,0,0
+11053,11053,NE Maynard Rd at Gregory Dr (EB),,35.802923,-78.774305,0,0
+11051,11051,NE Maynard Rd at Appledown Dr,,35.802762,-78.770921,0,0
+11209,11209,NE Maynard Rd at Reedy Creek Rd (EB),,35.801159,-78.767586,0,0
+11069,11069,Chapel Hill Rd at NE Maynard Rd (EB),,35.795302,-78.762364,0,0
+11601,11601,Chapel Hill Rd at Trinity Rd (EB),,35.794406,-78.750384,0,0
+11602,11602,Corporate Center Dr at Chapel Hill Rd (NB),,35.791573,-78.739627,0,0
+11603,11603,Corporate Center Dr at Handsworth Ln,,35.795778,-78.739281,0,0
+11604,11604,Corporate Center Dr at Conference Dr (NB),,35.797929,-78.738461,0,0
+11605,11605,Corporate Center Dr at Play Golf Way (NB),,35.800288,-78.737255,0,0
+11606,11606,Trinity Rd at Nowell Rd (EB),,35.80118,-78.73125,0,0
+12007,12007,Trinity Rd at Edwards Mill Rd (EB),,35.799643,-78.726769,0,0
+12008,12008,Trinity Rd at Youth Center Dr (EB),,35.798617,-78.716142,0,0
+16087,16087,S Salem St at Williams St,,35.727836,-78.853603,0,0
+16089,16089,S Salem St at Moore St,,35.728765,-78.852957,0,0
+16091,16091,N Salem St at The Depot,,35.732186,-78.85045,0,0

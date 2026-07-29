@@ -1,0 +1,2 @@
+agency_id,fare_id,price,currency_type,payment_method,transfers,transfer_duration
+560,1717,1.25,USD,0,,3600

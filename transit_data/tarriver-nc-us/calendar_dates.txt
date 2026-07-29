@@ -1,0 +1,11 @@
+service_id,date,holiday_name,exception_type
+c_2172_b_1369_d_32,20261226,Christmas Holiday,2
+c_2172_b_1369_d_32,20261128,Thanksgiving Holiday,2
+c_2172_b_1369_d_31,20270118,Martin Luther King Jr. Day,2
+c_2172_b_1369_d_31,20270101,New Year's Day,2
+c_2172_b_1369_d_31,20261225,Christmas Day,2
+c_2172_b_1369_d_31,20261224,Christmas Holiday,2
+c_2172_b_1369_d_31,20261127,Thanksgiving Holiday,2
+c_2172_b_1369_d_31,20261126,Thanksgiving Day,2
+c_2172_b_1369_d_31,20261111,Veterans Day,2
+c_2172_b_1369_d_31,20260907,Labor Day,2

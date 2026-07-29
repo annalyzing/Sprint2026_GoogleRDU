@@ -1,0 +1,11 @@
+stop_id,stop_code,stop_name,stop_desc,stop_lat,stop_lon,stop_url,location_type,parent_station,stop_timezone,wheelchair_boarding
+1,,Dillsboro,,35.369661,-83.249303,,0,,,1
+2,,Harold's Supermarket,,35.37219,-83.241945,,0,,,1
+5,,Jackson County Library,,35.373714,-83.228299,,0,,,1
+6,,Town of Sylva,,35.373515,-83.222744,,0,,,1
+6b,,Community Buliding,,35.388888,-83.205332,,0,,,1
+7,,Harris Regional Hospital,,35.385508,-83.202256,,0,,,1
+8,,Kel Save Drug Store,,35.373993,-83.212405,,0,,,1
+9,,Walmart,,35.361354,-83.203727,,0,,,1
+10,,The Haven at the Oaks ,,35.354482,-83.207296,,0,,,1
+12,,Southwestern Community College,,35.3485263614864,-83.2082640515899,,0,,,1

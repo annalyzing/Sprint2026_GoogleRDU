@@ -1,0 +1,13 @@
+route_id,direction_id,direction
+4694,0,No direction
+4693,1,Outbound
+4693,0,Inbound
+4692,1,Outbound
+4692,0,Inbound
+4691,0,No direction
+4690,0,No direction
+4689,0,No direction
+4688,0,No direction
+4687,0,No direction
+4686,0,No direction
+4685,0,No direction

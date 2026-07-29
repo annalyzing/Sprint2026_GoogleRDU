@@ -1,0 +1,18 @@
+route_id,agency_id,route_short_name,route_long_name,route_desc,route_type,route_url,route_color,route_text_color,route_sort_order
+1,0,"1","1: Guess Rd - Horton Rd - Riverside HS",,3,,ed5328,ffffff,1
+2,0,"2","2: E. Main St – Angier Ave – Brier Creek",,3,,0047ba,ffffff,3
+3,0,"3","3: Holloway St – Village – Glenview Stn",,3,,4aa237,ffffff,5
+4,0,"4","4: N. Roxboro – Duke Regnl - Milton Rd",,3,,8743bf,ffffff,6
+5,0,"5","5: Fayetteville St – NCCU – Southpoint",,3,,862633,ffffff,8
+6,0,"6","6: Duke VA - Duke Rgnl - Danube Ln",,3,,ed5328,ffffff,9
+7,0,"7","7: Forest Hills – S. Rox– MLK Pkwy",,3,,8743bf,ffffff,10
+8,0,"8","8: Lawson St – NCCU – Durham Tech",,3,,db60d5,ffffff,12
+9,0,"9","9: DEARBORN - DUKE RGNL - BEN FRKLN BLVD",,3,,e6b505,ffffff,13
+10,0,"10","10: Chapl Hill Rd – S. Square – New Hope",,3,,f08bc5,ffffff,15
+11,0,"11","11: W. Main – Duke/VA – Hillsborough",,3,,272a67,ffffff,17
+12,0,"12","12: E. Main St – NCCU – Falls Pointe",,3,,00a2e8,ffffff,20
+112,0,"11B","11B: W. Main – Duke/VA – Constitution",,3,,008ecc,ffffff,18
+161,0,"16","16: Holloway St – Village – Southern HS",,3,,2f6524,ffffff,22
+412,0,"4B","Seven Oaks",,3,,631d60,ffffff,7
+1012,0,"10B","10B: Chpl Hill Rd – S. Square – Shannon",,3,,cc66a5,ffffff,16
+1311,0,"13","13:  Village – Main St - Bacon St",,3,,2de151,ffffff,21

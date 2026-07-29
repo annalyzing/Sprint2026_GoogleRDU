@@ -1,0 +1,10 @@
+route_id,agency_id,route_short_name,route_long_name,route_type,route_color,route_text_color
+5624,4124,,Blue Route,3,1F77B4,FFFFFF
+5625,4124,,Brown Route,3,8C564B,FFFFFF
+5626,4124,,Express AM,3,969696,FFFFFF
+5627,4124,,Express PM,3,636363,FFFFFF
+5628,4124,,Green Route,3,2CA02C,FFFFFF
+5629,4124,,Orange Route,3,FF7F0E,000000
+5630,4124,,Purple Route,3,62269E,FFFFFF
+5631,4124,,Red Route,3,D62728,FFFFFF
+5632,4124,,Yellow Route,3,FFDD00,000000

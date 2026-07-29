@@ -1,0 +1,9 @@
+stop_id,stop_code,stop_name,stop_desc,stop_lat,stop_lon,stop_url,location_type,parent_station,stop_timezone,wheelchair_boarding
+1397596,,Ingles ,,35.1573060510215,-83.3925466321612,,0,,,
+1353924,,Westgate Terrace Apartments ,,35.1628043201154,-83.4001578465927,,0,,,
+1353925,,Westgate Plaza ,,35.1642644756079,-83.3992293416791,,0,,,
+1353927,,Macon County Library,,35.159135753805,-83.3822042761669,,0,,,
+1353928,,Wal-Mart ,,35.1665853561383,-83.3654923314554,,0,,,
+1353929,,Oak Forest Apartments ,,35.1731468901219,-83.3773428219691,,0,,,
+3600594,,Holly Springs Ingles,,35.1819711962058,-83.3549948322413,,0,,,
+1353931,,Main Street Gazebo ,,35.1819652609647,-83.3810436144312,,0,,,

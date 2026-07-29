@@ -1,0 +1,2 @@
+agency_id,agency_name,agency_url,agency_timezone,agency_phone,agency_fare_url,agency_lang,agency_email
+ICATS,Iredell County Area Transit System,https://rideicats.com,America/New_York,704-873-9393,https://www.iredellcountync.gov/1118/Routes,En,icatsfeedback@iredellcountync.gov

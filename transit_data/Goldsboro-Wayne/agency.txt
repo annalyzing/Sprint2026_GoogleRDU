@@ -1,0 +1,2 @@
+agency_id,agency_name,agency_url,agency_timezone,agency_lang,agency_phone,agency_fare_url,agency_email
+Goldsboro_Wayne-191,Goldsboro-Wayne Transportation Authority,http://ridegwta.com/,US/Eastern,EN,919-736-1374	,,

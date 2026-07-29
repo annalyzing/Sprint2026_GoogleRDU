@@ -1,0 +1,2 @@
+agency_id,agency_name,agency_url,agency_timezone,agency_lang,agency_phone,agency_fare_url,agency_email
+PART,Piedmont Authority for Regional Transportation,http://www.partnc.org/,America/New_York,en,1-336-883-7278,https://www.partnc.org/101/Fares-Passes,contactus@partnc.org

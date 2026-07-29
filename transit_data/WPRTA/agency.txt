@@ -1,0 +1,2 @@
+agency_id,agency_name,agency_url,agency_timezone,agency_lang,agency_phone,agency_fare_url,agency_email
+greenway,Greenway Public Transportation,http://www.mygreenway.org/,America/New_York,en,828-465-7634,http://www.mygreenway.org/how/fares.html,

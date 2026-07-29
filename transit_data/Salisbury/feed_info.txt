@@ -1,0 +1,2 @@
+feed_publisher_name,feed_publisher_url,feed_lang
+"TransLoc, Inc.",https://www.transloc.com,en

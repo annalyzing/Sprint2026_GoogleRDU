@@ -1,0 +1,2 @@
+agency_id,agency_name,agency_url,agency_timezone,agency_lang,agency_phone,agency_fare_url,agency_email
+237,"Chapel Hill Transit",https://www.chapelhillnc.gov/Town-Government/Departments-and-Offices/Transit,America/New_York,en-US,919-968-2743,https://www.chapelhillnc.gov/Town-Government/Departments-and-Offices/Transit/Transit-Fee-Schedule,chtransit@chapelhillnc.gov

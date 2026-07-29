@@ -1,0 +1,4 @@
+route_id,route_short_name,route_long_name,route_desc,route_url,route_color,route_text_color,route_type
+ECTB,,Enka Candler Trailblazer,,https://www.buncombecounty.org/common/transportation/EnkaCandlerTrailblazerBrochure-English.pdf,,,3
+BMTB,,Black Mountain Trailblazer,,https://www.buncombecounty.org/common/transportation/BlackMtnTrailblazerBrochure-English.pdf,,,3
+NBTB,,North Buncombe Trailblazer,,https://www.buncombecounty.org/common/transportation/NorthBuncombeTrailblazerBrochure-English.pdf,,,3

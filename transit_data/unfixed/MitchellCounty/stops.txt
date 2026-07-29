@@ -1,0 +1,11 @@
+stop_id,stop_code,stop_name,stop_desc,stop_lat,stop_lon,stop_url,location_type,parent_station,stop_timezone,wheelchair_boarding
+2907635,,Wagonmaster,,35.916833203228,-82.041200840383,,0,,,
+2907636,,Deer Park Apartments,,35.9234117226903,-82.040388480095,,0,,,
+2907637,,Walnut Avenue Apartments,,35.9178054742745,-82.0625524992664,,0,,,
+2907639,,Spruce Pine (Canipes),,35.9150345103693,-82.0666597464015,,0,,,
+2907638,,Ingles,,35.9148724353233,-82.0749945992259,,0,,,
+3463570,,Brad Ragan & The Green's,,35.90704,-82.08848,,0,,,
+2907640,,Grassy Creek (US Cellular),,35.8919683009509,-82.066023434173,,0,,,
+2907641,,Walmart,,35.8705550132322,-82.0449242247496,,0,,,
+2907643,,North Toe Apartments,,35.9072530240661,-82.0666879467352,,0,,,
+2907642,,Mayland Community College,,35.9341628807812,-82.0168466703932,,0,,,

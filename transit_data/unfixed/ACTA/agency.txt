@@ -1,0 +1,2 @@
+agency_id,agency_name,agency_url,agency_timezone,agency_lang,agency_phone,agency_fare_url,agency_email
+Ashe-9,Ashe County Transportation Authority,http://www.actatravels.com/,US/Eastern,en,336-977-2595,http://www.actatravels.com/?page_id=47,info@actatravel.com

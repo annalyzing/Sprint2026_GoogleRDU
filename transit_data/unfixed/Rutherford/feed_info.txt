@@ -1,0 +1,2 @@
+feed_publisher_name,feed_publisher_url,feed_lang,feed_start_date,feed_end_date,feed_version
+ITRE,https://www.rutherfordcountync.gov/document_center/Transit/TARC%20Schedule%207-1-14(1).pdf,EN,20250101,20291231,

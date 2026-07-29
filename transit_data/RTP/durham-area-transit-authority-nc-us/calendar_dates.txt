@@ -1,0 +1,22 @@
+service_id,date,holiday_name,exception_type
+c_71383_b_85114_d_64,20251231,GoDurham - New Year's Eve (Sunday Level Service),1
+c_71383_b_85114_d_64,20251127,GoDurham - Thanksgiving (Sunday Level Service),1
+c_71383_b_85114_d_64,20250901,GoDurham - Labor Day (Sunday Level Service),1
+c_71383_b_85114_d_64,20250704,GoDurham - July 4th,1
+c_71383_b_85114_d_31,20251231,GoDurham - New Year's Eve (Sunday Level Service),2
+c_71383_b_85114_d_31,20251225,GoDurham - Christmas Day - No Service,2
+c_71383_b_85114_d_31,20251224,Christmas Eve - Service Ends @ 7pm,2
+c_71383_b_85114_d_31,20251127,GoDurham - Thanksgiving (Sunday Level Service),2
+c_71383_b_85114_d_31,20250901,GoDurham - Labor Day (Sunday Level Service),2
+c_71383_b_85114_d_31,20250704,GoDurham - July 4th,2
+c_70619_b_none_d_0,20251224,Christmas Eve - Service Ends @ 7pm,1
+c_70617_b_83063_d_64,20251231,GoDurham - New Year's Eve (Sunday Level Service),1
+c_70617_b_83063_d_64,20251127,GoDurham - Thanksgiving (Sunday Level Service),1
+c_70617_b_83063_d_64,20250901,GoDurham - Labor Day (Sunday Level Service),1
+c_70617_b_83063_d_64,20250704,GoDurham - July 4th,1
+c_70617_b_83063_d_31,20251231,GoDurham - New Year's Eve (Sunday Level Service),2
+c_70617_b_83063_d_31,20251225,GoDurham - Christmas Day - No Service,2
+c_70617_b_83063_d_31,20251224,Christmas Eve - Service Ends @ 7pm,2
+c_70617_b_83063_d_31,20251127,GoDurham - Thanksgiving (Sunday Level Service),2
+c_70617_b_83063_d_31,20250901,GoDurham - Labor Day (Sunday Level Service),2
+c_70617_b_83063_d_31,20250704,GoDurham - July 4th,2

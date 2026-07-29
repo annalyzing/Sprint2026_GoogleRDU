@@ -1,0 +1,28 @@
+service_id,date,holiday_name,exception_type
+c_24123_b_33692_d_64,20221225,Christmas Day - No service,2
+c_24123_b_33692_d_64,20221125,Thanksgiving - Friday after,1
+c_24123_b_33692_d_64,20221124,Thanksgiving Day - Sunday Service,1
+c_24123_b_33692_d_64,20220905,Labor Day 2021,1
+c_24123_b_33692_d_64,20220704,Independence Day - Sunday Service,1
+c_24123_b_33692_d_64,20220530,Memorial Day - Sunday Service,1
+c_24123_b_33692_d_63,20220704,Independence Day - Sunday Service,2
+c_24123_b_33692_d_31,20221125,Thanksgiving - Friday after,2
+c_24123_b_33692_d_31,20221124,Thanksgiving Day - Sunday Service,2
+c_24123_b_33692_d_31,20220905,Labor Day 2021,2
+c_24123_b_33692_d_31,20220704,Independence Day - Sunday Service,2
+c_24123_b_33692_d_31,20220530,Memorial Day - Sunday Service,2
+c_23933_b_33246_d_64,20221225,Christmas Day - No Service,2
+c_23933_b_33246_d_64,20221125,Day after Thanksgiving - Sunday Service,1
+c_23933_b_33246_d_64,20220905,Labor Day 2021 - Sunday ,1
+c_23933_b_33246_d_64,20220704,Independence Day - Sunday Service,1
+c_23933_b_33246_d_64,20220530,Memorial Day - Sunday Service,1
+c_23933_b_33246_d_31,20221125,Day after Thanksgiving - Sunday Service,2
+c_23933_b_33246_d_31,20221124,Thanksgiving Day - No Service,2
+c_23933_b_33246_d_31,20220905,Labor Day 2021 - Sunday ,2
+c_23933_b_33246_d_31,20220704,Independence Day - Sunday Service,2
+c_23933_b_33246_d_31,20220530,Memorial Day - Sunday Service,2
+c_23933_b_33246_d_16,20221125,Day after Thanksgiving - Sunday Service,2
+c_23933_b_33246_d_15,20221124,Thanksgiving Day - No Service,2
+c_23933_b_33246_d_15,20220905,Labor Day 2021 - Sunday ,2
+c_23933_b_33246_d_15,20220704,Independence Day - Sunday Service,2
+c_23933_b_33246_d_15,20220530,Memorial Day - Sunday Service,2

@@ -1,0 +1,405 @@
+stop_id,stop_code,stop_name,stop_desc,stop_lat,stop_lon,location_type,wheelchair_boarding
+1742,1576,RDU Airport at Terminal 1,,35.874489,-78.790445,0,1
+1741,1577,RDU Airport at Terminal 2,,35.876036,-78.793056,0,1
+12728,1608,Airport Blvd at Slater Rd (WB),,35.858505,-78.821282,0,0
+12726,1239,Slater Rd at Copley Pkwy (NB),,35.861319,-78.822121,0,0
+12060,1218,Slater Rd at Carrington Mill Blvd (WB),,35.867717,-78.827998,0,1
+1733,1000,Regional Transit Center (RTC),,35.874227,-78.8379,0,1
+12059,1217,Slater Rd at Carrington Mill Blvd (EB),,35.867254,-78.827736,0,1
+12725,1238,Slater Rd at Copley Pkwy (SB),,35.86193,-78.82277,0,0
+12727,1607,Airport Blvd at Slater Rd (EB),,35.85878,-78.820104,0,0
+12654,8119,Blue Ridge Rd at Westchase Blvd (SB),,35.800694,-78.707491,0,1
+12656,8124,Blue Ridge Rd at Trinity Rd (SB),,35.797431,-78.707808,0,1
+1853,1187,Hillsborough St at Meredith College (EB),,35.794227,-78.688547,0,1
+12680,8597,Hillsborough St at Turner St (EB),,35.792676,-78.683112,0,1
+12218,8273,Hillsborough St at Friendly Dr (EB),,35.789555,-78.676498,0,1
+12670,8274,Hillsborough St at Gardner St (EB),,35.7884148536949,-78.6713724416322,0,1
+12672,8277,Hillsborough St at Enterprise St (NCSU Bell Tower),,35.786467,-78.663746,0,1
+12222,8280,Hillsborough St at Forest Rd (EB),,35.784577,-78.658949,0,1
+12701,8884,Morgan St at Tryon Hill Dr,,35.780958,-78.655911,0,0
+12703,9437,Morgan St at Boylan Ave,,35.779898,-78.649307,0,0
+12705,9000,West St at Raleigh Union Station,,35.777538,-78.646168,0,0
+12760,8892,Hargett St at McDowell St,,35.77831,-78.64148,0,0
+2214,8909,Blount St at GoRaleigh Station,,35.77775,-78.636704,0,0
+1428,3239,Manning Dr at UNC Hospitals (WB),,35.903536,-79.051829,0,1
+12452,3223,S Columbia St at Health Sciences Library (NB),,35.905524,-79.05328,0,1
+1425,3437,S Columbia St at Sitterson Hall (NB),Relocation from -79.053219 35.909299,35.910061,-79.05371,0,1
+1424,3178,S Columbia St at Abernethy Hall (NB),,35.91143,-79.054574,0,1
+1426,3427,E Franklin St at Coffee Shop (EB),,35.913681,-79.054139,0,1
+1470,3257,E Franklin St at Planetarium (EB),,35.914868,-79.051015,0,1
+2296,3255,E Franklin St at S Boundary St (EB),,35.916814,-79.045973,0,1
+1474,3269,E Franklin St at Davie Cir (EB),,35.918381,-79.039681,0,1
+1476,3266,E Franklin St at Elizabeth St (EB),,35.924471,-79.037961,0,1
+1494,3264,E Franklin St at Plant Rd (EB),,35.926755,-79.035676,0,1
+1496,3260,E Franklin St at Estes Dr (EB),,35.929951,-79.03384,0,1
+1498,3367,E Franklin St at Couch Rd (EB),,35.932374,-79.031771,0,1
+1500,3365,E Franklin St at Elliott Rd (EB),,35.935353,-79.02856,0,1
+1502,3453,E Franklin St at Eastgate Crossing (EB),,35.936752,-79.026063,0,1
+11435,1901,McFarland Dr at Witherspoon Blvd (EB),,35.950597,-78.990066,0,1
+1068,6075,Westgate Dr at South Square (SB),,35.966156,-78.961103,0,1
+12186,5980,University Dr at Martin Luther King Jr Pkwy (WB),,35.963085,-78.960194,0,1
+1549,1078,Erwin Rd at Center for Living Dr (NB),,35.999137,-78.952677,0,1
+1550,1553,Erwin Rd at Towerview Rd (NB),,36.003767,-78.95056,0,1
+12616,5460,Erwin Rd at LaSalle St (EB),,36.00798,-78.945586,0,1
+12160,5165,Erwin Rd at Downing St (EB),,36.008651,-78.943858,0,1
+12188,6012,Erwin Rd at Fulton St (EB),,36.008111,-78.937749,0,1
+1560,1590,Trent Dr at Erwin Rd (NB),,36.008608,-78.933583,0,1
+12631,5952,Chapel Hill St at Duke St (EB),,35.996915,-78.908997,0,1
+12805,5012,Durham Station (Parking Deck),,35.995843,-78.905206,0,0
+1735,1777,Slater Rd at Sheraton Hotel (WB),,35.87602,-78.83729,0,1
+1683,1563,Slater Rd at Emperor Blvd (WB),,35.878153,-78.84399,0,1
+1680,1499,Slater Rd at Page Rd (WB),,35.879881,-78.846564,0,1
+1700,1558,Slater Rd at Creekstone Dr (WB),,35.88147,-78.848568,0,1
+1706,1514,Miami Blvd at Central Park Dr,,35.887331,-78.849416,0,1
+1705,1705,Miami Blvd at Guardian Dr,,35.894293,-78.847825,0,1
+1702,1854,Miami Blvd at Chin Page Rd,,35.897033,-78.848934,0,1
+12796,2029,Miami Blvd at Cornwallis Rd (NB),,35.90184,-78.8511,0,0
+12794,2027,Miami Blvd at Patriot Dr (NB),,35.91144,-78.85072,0,0
+12792,2025,Miami Blvd at Stirrup Creek Dr (NB),,35.92043,-78.84849,0,0
+12790,2023,Miami Blvd at TW Alexander Dr (NB),,35.92487,-78.84608,0,0
+12788,2021,Miami Blvd at Lumley Rd (NB),,35.93144,-78.84307,0,0
+12786,6273,Miami Blvd at Methodist St,,35.936408,-78.842153,0,0
+12784,6263,Miami Blvd at Ellis Rd (Bethesda ES),,35.941286,-78.838949,0,0
+12782,6449,Ellis Rd at Brookville Ln (WB),,35.939292,-78.846663,0,0
+12780,6452,Ellis Rd at Advancement Av (WB),,35.938382,-78.851537,0,0
+12778,2019,Ellis Rd at Feeney St (WB),,35.93961,-78.85449,0,0
+12776,5773,Lawson St at Durham Tech (WB),,35.974426,-78.880625,0,0
+12774,6016,Lawson St at Bacon St (WB),,35.974347,-78.884613,0,0
+12772,5851,Lawson St at Ridgeway Ave (WB),,35.973945,-78.887482,0,0
+12770,5532,Alston ave at Dupree St (NB),,35.976341,-78.89288,0,0
+12184,5934,Duke St at Jackson St (NB),,35.995168,-78.90868,0,1
+12807,57748,Pettigrew St at Parking Deck,,35.995794,-78.904739,0,0
+12768,6317,Pettigrew St at Mangum St (EB),,35.994043,-78.901596,0,0
+12769,5204,Alston St at Dupree St (SB),,35.976624,-78.89298,0,0
+12771,6052,Lawson St at Ridgeway Ave (EB),,35.973764,-78.887444,0,0
+12773,6130,Lawson St at Bacon St (EB),,35.974109,-78.885176,0,0
+12775,5316,Lawson St at DTCC Public Safety (EB),,35.974269,-78.880608,0,0
+12777,2020,Ellis Rd at Feeney St (EB),,35.93905,-78.85339,0,0
+12779,6451,Ellis Rd at Advancement Av (EB),,35.938272,-78.851801,0,0
+12781,6450,Ellis Rd at New Haven Ln (EB),,35.939434,-78.84591,0,0
+12783,6520,Miami Blvd at Ellis Rd (SB),,35.942016,-78.83885,0,0
+12785,6266,Miami Blvd at New Haven Dr,,35.936362,-78.842472,0,0
+12787,2022,Miami Blvd at Lumley Rd (SB),,35.93129,-78.84341,0,0
+12789,2024,Miami Blvd at TW Alexander Dr (SB),,35.92346,-78.84717,0,0
+12791,6261,Miami Blvd at Stirrup Creek Dr (PBM Graphics),,35.920127,-78.848983,0,0
+12793,2026,Miami Blvd at Patriot Dr (SB),,35.9115,-78.85101,0,0
+12795,2028,Miami Blvd at Cornwallis Rd (SB),,35.90198,-78.8515,0,0
+1708,1855,Miami Blvd at Chin Page Rd (across),,35.897284,-78.849334,0,1
+1701,1513,Miami Blvd at Guardian Dr (across),,35.894751,-78.848321,0,0
+1699,1566,Slater Rd at Miami Blvd (EB),,35.881665,-78.849232,0,1
+1679,1221,Slater Rd at Page Rd (EB),,35.879671,-78.846614,0,1
+1684,1222,Slater Rd at Emperor Blvd (EB),,35.877982,-78.843286,0,1
+1734,1776,Slater Rd at GoTriangle (EB),,35.875999,-78.837494,0,1
+12724,2002,Union Station - Bus Platform B,,35.778487,-78.646812,0,0
+12704,8184,Morgan St at Glenwood Ave,,35.779955,-78.648372,0,0
+12666,8240,Hillsborough St at Brooks Ave (WB),,35.788853,-78.672712,0,1
+12228,8587,Hillsborough St at Meredith College (WB),,35.794378,-78.688472,0,1
+1837,1748,District Drive Park-and-Ride,,35.805546,-78.710834,0,1
+1432,3360,South Rd at Student Stores (WB),,35.909768,-79.047842,0,1
+1469,3383,N Columbia St at Rosemary St (NB),,35.913778,-79.05595,0,1
+1698,1557,NC 54 at New Millennium Way (WB),,35.887089,-78.855556,0,1
+1687,1861,NC 54 at Rodbell St (WB),,35.89262,-78.8654,0,1
+1685,1863,NC 54 at Park Office Dr (WB),,35.89636,-78.87331,0,1
+12804,2031,NC 54 at TW Alexander Dr (WB),,35.89887,-78.87947,0,0
+12798,2033,TW Alexander Dr at Reserach Commons (NB),,35.90554,-78.87834,0,0
+12800,2035,TW Alexander Dr at Cornwallis Rd (NB),,35.92007,-78.87518,0,0
+12802,2037,TW Alexander Dr at Moore Dr (EB),,35.92465,-78.86413,0,0
+12731,9477,Martin St at Dawson St,Relocated from -78.642730  35.777110,35.777133,-78.643083,0,0
+12723,9917,Harrington St at Martin St,,35.777624,-78.645052,0,0
+12702,8815,Morgan St at Hillsborough St,,35.781756,-78.655473,0,0
+12212,8235,Hillsborough St at Forest Rd (WB),,35.784813,-78.659062,0,1
+12664,8237,Hillsborough St at Enterprise St (WB),,35.786819,-78.664281,0,1
+12226,8584,Hillsborough St at Shepherd St (WB),,35.790304,-78.678742,0,1
+12678,8586,Hillsborough St at Faircloth St (WB),,35.793354,-78.684009,0,1
+12206,8129,Blue Ridge Rd at Trinity Rd (NB),,35.797941,-78.707561,0,1
+12204,8120,Blue Ridge Rd at Westchase Blvd (NB),,35.801235,-78.707248,0,1
+12801,2036,TW Alexander Dr at Moore Dr (WB),,35.92488,-78.86347,0,0
+12799,2034,T.W. Alexander Dr at Cornwallis Rd (SB),,35.92013,-78.87565,0,0
+12797,2032,TW Alexander Dr at Reserach Commons (SB),,35.905,-78.87867,0,0
+12803,2030,NC 54 at TW Alexander Dr (EB),,35.898591,-78.87915,0,0
+1658,1864,NC 54 at Research Triangle High School (EB),,35.89605,-78.87315,0,1
+1686,1860,NC 54 at Rodbell St (EB),,35.89198,-78.86472,0,1
+1688,1556,NC 54 at New Millennium Way (EB),,35.887396,-78.856426,0,1
+12651,8002,Wilmington St at Morgan St,,35.779933,-78.638028,0,1
+1942,9674,Edenton St at Salisbury St (WB),,35.781328,-78.640255,0,1
+12202,8071,Edenton St at Harrington St (WB),,35.781471,-78.644369,0,1
+12659,8228,Hillsborough St at Glenwood Ave (WB),,35.78084,-78.64844,0,1
+1467,3149,Eubanks Rd Park-and-Ride,,35.970832,-79.070581,0,1
+1421,3421,N Columbia St at W Franklin St (SB),,35.9134,-79.05604,0,1
+1661,1865,NC 54 at Triangle Dr (WB),,35.900327,-78.884784,0,1
+1648,1871,NC 54 at S Alston Ave (WB),,35.90079,-78.889864,0,1
+1645,1872,NC 54 at NC 55 (WB),,35.902436,-78.894799,0,1
+12156,5063,NC 54 at Residence Inn Blvd (WB),,35.902743,-78.89819,0,1
+12157,5129,NC 54 at The Hamptons Apts (WB),,35.902813,-78.903274,0,1
+1466,1171,NC 54 at Blanchard Rd (WB),,35.902797,-78.906619,0,1
+12171,5441,NC 54 at Waterford Valley Dr (WB),,35.903231,-78.909291,0,1
+12172,5443,NC 54 at Revere Rd (WB),,35.904018,-78.911836,0,1
+12694,5374,NC 54 at Barbee Rd (WB),,35.905808,-78.917778,0,0
+12187,6000,NC 54 at Pine Glen Trail (WB),,35.907326,-78.92281,0,1
+1454,1175,NC 54 at Fayetteville Rd (WB),,35.910134,-78.932028,0,1
+11439,1892,Fayetteville Rd at Renaissance Pkwy (SB),,35.901545,-78.939995,0,1
+12154,1406,Renaissance Pkwy at Southpoint Mall (WB),,35.903619,-78.946711,0,1
+12197,6252,Renaissance Pkwy at Renaissance Village (WB),,35.902963,-78.953911,0,1
+1449,1804,Renaissance Pkwy at Leonardo Dr (WB),,35.901163823837,-78.9589557509345,0,1
+1446,1613,NC 54 at Falconbridge Rd (WB),,35.911198,-78.985477,0,1
+1445,1211,NC 54 at Meadowmont Ln (WB),,35.902662,-79.009706,0,1
+1443,3014,Raleigh Rd at Burning Tree Dr (WB),,35.906632,-79.019143,0,1
+1440,3387,Raleigh Rd at Glen Lennox Shopping Center (WB),,35.908412,-79.024814,0,1
+1439,3114,Raleigh Rd at UNC Administration (WB),,35.909578,-79.030225,0,1
+1434,3431,South Rd at Country Club Rd (WB),,35.910742,-79.04289,0,1
+1431,3215,South Rd at Kenan Labs (WB),,35.90873,-79.051114,0,1
+1418,3226,Pittsboro St at Credit Union (SB),,35.906906,-79.054892,0,1
+1416,3221,Mason Farm Rd at Ambulatory Care Center (EB),,35.90212,-79.054326,0,1
+1427,3436,East Dr at Mason Farm Rd (EB),,35.901392,-79.051456,0,1
+11442,3237,East Dr at Jackson Cir (NB),,35.9019,-79.050701,0,1
+12720,2001,Union Station - Bus Platform A,,35.778472,-78.646468,0,0
+12707,6408,Martin St at McDowell St (EB),,35.776952,-78.641444,0,0
+11851,1969,Salisbury St at Davie St (SB),,35.775082,-78.640386,0,1
+11852,1970,Salisbury St at South St (SB),,35.771774,-78.640662,0,1
+1807,1299,Western Blvd at Boylan Ave (WB),,35.771872,-78.653227,0,1
+11378,9809,Western Blvd at Hunt Dr (WB),,35.77525,-78.656954,0,0
+12224,8524,Western Blvd at Ashe Ave (WB),,35.777677,-78.662236,0,1
+1803,1301,Western Blvd at Morrill Dr (WB),,35.7813,-78.676367,0,1
+1851,1276,Western Blvd at Whitmore Dr (WB),,35.784838,-78.689437,0,1
+12658,8226,Western Blvd at Merendino St (WB),,35.785689,-78.705119,0,1
+12668,8264,Western Blvd at Powell Dr (WB),,35.78663,-78.712852,0,1
+1833,1227,Jones Franklin Rd at Hunt Club Ln (SB),,35.783075,-78.72185,0,1
+1801,1771,Jones Franklin Rd at Vann St (SB),,35.780667,-78.721226,0,1
+1798,1881,Jones Franklin Rd at Ft Sumter Rd (SB),,35.772237,-78.722794,0,1
+1796,1311,Jones Franklin Rd at Capital Center Dr (SB),,35.765977,-78.72604,0,1
+1786,1306,Jones Franklin Rd at Centerview Dr (SB),,35.762194,-78.727598,0,1
+1784,1308,Jones Franklin Rd at Woodsdale Rd (SB),,35.760165,-78.728358,0,1
+1781,1272,Jones Franklin Rd at Crossroads Blvd (SB),,35.755177,-78.730226,0,1
+1780,1274,Dillard Dr at Jones Franklin Rd (WB),,35.754203,-78.733513,0,1
+1779,1292,Dillard Dr at Columbus Ave (WB),,35.754985,-78.735969,0,1
+1776,1313,Dillard Dr at Walnut St (WB),,35.75562,-78.739594,0,1
+1765,11034,Dillard Dr at Meeting St (WB),,35.756284,-78.7437,0,1
+1763,1294,Dillard Dr at Piney Plains Rd (WB),,35.755771,-78.748637,0,1
+1747,1323,Piney Plains Rd at Scarlet Sky Ln (WB),,35.749813,-78.752889,0,1
+1745,1321,Piney Plains Rd at Tryon Rd (WB),,35.746747,-78.754288,0,1
+1744,1315,Tryon Rd at Cary Pkwy (WB),,35.743922,-78.761545,0,1
+12142,1312,Tryon Rd at New Waverly Pl (WB),,35.741181,-78.777101,0,1
+1609,1318,Tryon Rd at WakeMed Cary Hospital (WB),,35.73934,-78.780863,0,1
+1594,1720,Lake Pine Plaza Park-and-Ride,,35.745055,-78.823615,0,0
+1598,1262,Lake Pine Dr at Pine Plaza Dr (EB),,35.745452,-78.820297,0,1
+1606,1162,Laura Duncan Rd at Knollwood Dr (SB),,35.744462,-78.836561,0,1
+1603,1164,Laura Duncan Rd at Apex Peakway (SB),,35.737345,-78.842512,0,1
+1584,1596,Mason St at Apex Town Hall (SB),,35.733075,-78.845538,0,1
+1602,1166,Mason St at Chatham St (SB),,35.729333,-78.847396,0,1
+1582,1449,Hughes St at Williams St (SB),,35.726566,-78.851345,0,1
+12137,1183,Apex Peakway at Hughes St (WB),,35.71749,-78.84457,0,1
+12174,5507,Chapel Hill St at Gregson St (WB),,35.997049,-78.909564,0,1
+1561,1104,Trent Dr at Erwin Rd (SB),,36.008588,-78.933797,0,1
+1558,1105,Erwin Rd at Fulton St (WB),,36.008289,-78.9378,0,1
+12190,6068,Erwin Rd at Downing St (WB),,36.008863,-78.943709,0,1
+12618,5531,Erwin Rd at LaSalle St (WB),,36.008142,-78.945698,0,1
+12164,5255,Erwin Rd at Lambeth Cir (WB),,36.006834,-78.947226,0,1
+12602,5145,Erwin Rd at Morreene Rd (SB),,36.003729,-78.950986,0,1
+1548,1107,Erwin Rd at Cameron Blvd (SB),,35.999002,-78.952947,0,1
+12636,6036,University Dr at Martin Luther King Jr Pkwy (EB),,35.962673,-78.960325,0,1
+12608,5361,Westgate Dr at South Square (NB),,35.965571,-78.960702,0,1
+12194,6197,Witherspoon Blvd at McFarland Dr (SB),,35.9509,-78.989783,0,1
+12642,6198,Mt Moriah Rd at Danziger Dr (NB),,35.949483,-78.99434,0,1
+1501,3273,E Franklin St at Eastgate Crossing (WB),,35.936871,-79.026386,0,1
+1499,3366,E Franklin St at Elliott Rd (WB),,35.934751,-79.029877,0,1
+1497,3368,E Franklin St at Couch Rd (WB),,35.932363,-79.032237,0,1
+1495,3259,E Franklin St at Estes Dr (WB),,35.928714,-79.034711,0,1
+1493,3263,E Franklin St at Vet Hospital (WB),,35.926733,-79.036116,0,1
+1475,3265,E Franklin St at Elizabeth St (WB),,35.924249,-79.038433,0,1
+1473,3251,E Franklin St at Carolina Ave (WB),,35.918222,-79.040219,0,1
+1472,3256,E Franklin St at N Boundary St (WB),,35.916783,-79.046576,0,1
+1471,3258,E Franklin St at Pickard Ln (WB),,35.915208,-79.050645,0,1
+1423,3428,E Franklin St at Varsity Theatre (WB),,35.913655,-79.054886,0,1
+1422,3179,S Columbia St at Fraternity Ct (SB),,35.911654,-79.05503,0,1
+1419,3211,Pittsboro St at McCauley St (SB),,35.908897,-79.054816,0,1
+1430,3214,South Rd at Coker Hall (EB),,35.908609,-79.051501,0,1
+1433,3359,South Rd at Fetzer Gym (EB),,35.909599,-79.047563,0,1
+1435,3430,South Rd at Country Club Rd (EB),,35.910582,-79.042619,0,1
+1438,3386,Raleigh Rd at UNC Administration (EB),,35.909329,-79.030355,0,1
+1441,3396,Raleigh Rd at Hamilton Rd (EB),,35.907745,-79.023157,0,1
+1442,3013,Raleigh Rd at Finley Golf Course Rd (EB),,35.906531,-79.019783,0,1
+1444,1143,NC 54 at Friday Center Dr,,35.902407,-79.010246,0,1
+1447,1144,NC 54 at Falconbridge Rd (EB),,35.910408,-78.986322,0,1
+12166,5363,NC 54 at Fayetteville Rd (EB),,35.910112,-78.932814,0,1
+1461,1805,NC 54 at Amhurst St (EB),,35.907155,-78.922743,0,1
+12158,5131,NC 54 at Seasons of Southpoint (EB),,35.90643,-78.920381,0,1
+12169,5373,NC 54 at Barbee Rd (EB),,35.904926,-78.915647,0,1
+1463,1781,NC 54 at Revere Rd (EB),,35.903212,-78.9099,0,1
+1465,1160,NC 54 at Blanchard Rd (EB),,35.902634,-78.906531,0,1
+2298,1893,NC 54 at The Hamptons Apts (EB),,35.90265,-78.903462,0,1
+1642,1161,NC 54 at Residence Inn Blvd (EB),,35.902581,-78.8983,0,1
+12179,5690,NC 54 at NC 55 (EB),,35.902199,-78.894698,0,1
+12198,6274,NC 54 at S Alston Ave (EB),,35.9006,-78.88952,0,1
+1660,1866,NC 54 at Triangle Dr (EB),,35.900099,-78.884709,0,1
+1718,1398,Cary Depot (South Platform),,35.788181,-78.781819,0,1
+1820,11032,E Chatham St at Circle Dr (EB),,35.789253,-78.77286,0,1
+1821,11002,E Chatham St at Chatham Square (EB),,35.79176,-78.765734,0,1
+1823,1842,Chatham St at WakeMed Soccer Park (EB),,35.790431,-78.753918,0,1
+12710,6411,Hillsborough St at Bashford Rd (EB),,35.788513,-78.742584,0,0
+12712,6413,Hillsborough St at Wolfwood Dr (EB),,35.786686,-78.731971,0,0
+10952,9322,Western Blvd at Jones Franklin Rd,,35.785215,-78.720693,0,1
+12683,9065,Western Blvd at Heather Dr (EB),,35.786404,-78.713748,0,1
+12232,9066,Western Blvd at Deboy St (EB),,35.785869,-78.706524,0,1
+1852,1303,Western Blvd at Clanton St (EB),,35.784575,-78.689832,0,1
+1802,1277,Western Blvd at Dan Allen Dr (EB),,35.781668,-78.678005,0,1
+12808,2038,Western Blvd at Pullen Rd (EB),,35.778998,-78.668014,0,0
+1808,8569,Western Blvd at Hunt Dr (EB),,35.774628,-78.656522,0,0
+1806,1281,Western Blvd at Boylan Ave (EB),,35.771348,-78.652937,0,1
+1938,1283,Wilmington St at South St,,35.770634,-78.638524,0,0
+1939,1284,Wilmington St at Cabarrus St,,35.7747260712875,-78.6383663048296,0,0
+1599,1169,Hughes St at Estate Dr (NB),,35.720356,-78.85023,0,1
+1583,1450,Hughes St at Williams St (NB),,35.726431,-78.851223,0,1
+1601,1167,Chatham St at Mason St (EB),,35.729243,-78.84796,0,1
+1585,1452,Mason St at Old Mill Village Dr (NB) Apex Town Hal,,35.732821,-78.845484,0,1
+1604,1165,Laura Duncan Rd at Apex Peakway (NB),,35.735576,-78.843045,0,1
+1605,1163,Laura Duncan Rd at US 64 (NB),,35.74678,-78.83574,0,1
+1610,1345,Tryon Rd at Kildaire Farm Rd (EB),,35.738251,-78.782395,0,1
+1743,1267,Tryon Rd at SE Cary Pkwy (EB),,35.743611,-78.761856,0,1
+1746,1320,Piney Plains Rd at Tryon Rd (EB),,35.747795,-78.753595,0,1
+1748,1322,Piney Plains Rd at Scarlet Sky Ln (EB),,35.749759,-78.752668,0,1
+1764,1295,Dillard Dr at Piney Plains Rd (EB),,35.75566,-78.748423,0,1
+11641,1913,Dillard Dr at Meeting St (EB),,35.755996,-78.743611,0,1
+1775,1269,Dillard Dr at Walnut St (EB),,35.755416,-78.73969,0,1
+1778,1270,Dillard Dr at Corning Rd (EB),,35.755029,-78.737097,0,1
+1777,1271,Dillard Dr at Jones Franklin Rd (EB),,35.754032,-78.733557,0,1
+1782,1310,Jones Franklin Rd at Crossroads Blvd (NB),,35.755097,-78.730017,0,1
+1783,1309,Jones Franklin Rd at Wayne St (NB),,35.759192,-78.728478,0,1
+1785,1273,Jones Franklin Rd at Penwood Dr (NB),,35.761707,-78.727575,0,1
+1797,1305,Jones Franklin Rd at Capital Center Dr (NB),,35.766113,-78.725589,0,1
+1800,1772,Jones Franklin Rd at Vann St (NB),,35.781298,-78.721181,0,1
+12732,9063,Jones Franklin Rd at Buck Jones Rd,,35.784166,-78.721769,0,0
+12763,8185,Morgan St at Dawson St,,35.779716,-78.643604,0,0
+11833,1945,Hillsborough St at Jones Franklin Rd (WB),,35.786492,-78.720291,0,1
+12713,6414,Hillsborough St at Wolfwood Dr (WB),,35.786639,-78.730828,0,0
+12711,6412,Hillsborough St at Bashford Rd (WB),,35.78868,-78.74256,0,0
+1824,1843,Chatham St at WakeMed Soccer Park (WB),,35.790468,-78.753288,0,1
+1822,11001,E Chatham St at NE Maynard Rd (WB),,35.792055,-78.764655,0,1
+1819,11033,E Chatham St at Ward St (WB),,35.789544,-78.772843,0,1
+1381,8030,Triangle Town Center P&R,,35.863731,-78.576753,0,0
+12744,8607,S Main St at Wake Dr,,35.94765,-78.53515,0,0
+12746,8609,S Main St at Ligon Mill Rd,,35.949368,-78.531609,0,0
+12748,8611,S Main St at Rodgers Rd (Factory),,35.95235,-78.52774,0,0
+12740,2003,S Main St at NC 98 (NB),,35.964807,-78.517807,0,0
+12742,1810,Holding Ave at Brooks St (WB),,35.97108,-78.51127,0,0
+12182,5793,Fayetteville Rd at Crooked Creek Pkwy (NB),,35.912101,-78.933752,0,1
+12155,5020,Fayetteville Rd at Laurel Springs Dr (NB),,35.913671,-78.933016,0,1
+12192,6153,Fayetteville Rd at Dunhill Dr (NB),,35.916207,-78.931636,0,1
+12648,6475,Fayetteville Rd at Sutton Station (NB),,35.919157,-78.92972,0,1
+12170,5391,Fayetteville Rd at Geneva Dr (NB),,35.920996,-78.92844,0,1
+1545,1182,Woodcroft Pkwy at Fayetteville Rd (WB),,35.923977,-78.927926,0,1
+11859,1938,Woodcroft Pkwy at Homeplace II (WB),,35.922679,-78.931466,0,1
+1541,1203,Woodcroft Pkwy at Highgate Dr (WB),,35.922145,-78.935741,0,1
+1522,1778,Woodcroft Pkwy at Weathersfield Dr (WB),,35.923268,-78.940477,0,1
+1076,5782,Woodcroft Pkwy at Autumn Woods Dr,,35.923826,-78.944202,0,1
+1078,5212,Woodcroft Pkwy at Sandstone Ridge Dr (WB),,35.921848,-78.948992,0,1
+1081,5244,Woodcroft Shopping Center (WB),,35.922695,-78.955644,0,1
+1514,1207,Hope Valley Rd at Garrett Rd (SB),,35.921245,-78.958596,0,1
+1513,1208,NC 54 at Dresden Dr (WB),,35.918226,-78.964821,0,1
+1504,1145,NC 54 at Leigh Farm Rd (WB),,35.915012,-78.978419,0,1
+12718,3138,Jones Ferry Park-and-Ride,,35.90152,-79.09036,0,0
+12730,3573,Jones Ferry Rd at Willow Creek SC (EB),,35.90488,-79.088803,0,0
+11995,3489,Jones Ferry Rd at Davie Rd (EB),,35.906746,-79.083097,0,1
+11998,3505,E Main St at Weaver St Realty (EB),,35.910398,-79.070722,0,1
+12743,1098,Elm Ave at White St (EB),,35.97533,-78.51018,0,0
+12741,2004,S Main St at NC 98 (SB),,35.965389,-78.517966,0,0
+12749,1830,S Main St at Rodgers Rd (Wake Forest MS),,35.95315,-78.52746,0,0
+12747,1831,S Main St at Ligon Mill Rd/ Walmart,,35.94998,-78.53085,0,0
+12745,1832,S Main St at Aldi Food Market,,35.94777,-78.53539,0,0
+11996,3504,E Main St at Jade Palace (WB),,35.910459,-79.071399,0,1
+11997,3631,Jones Ferry Rd at Alabama Ave (WB),,35.90647,-79.084536,0,1
+12729,3140,Jones Ferry Rd at Willow Creek SC (WB),,35.905126,-79.088718,0,0
+2203,9704,Morgan St at McDowell St,,35.779597,-78.641139,0,0
+1188,8187,E Morgan St at S Wilmington St,,35.779508,-78.63729,0,0
+10494,8620,New Bern Ave at S Tarboro Rd,,35.77981,-78.62302,0,0
+1957,1891,New Bern Ave at Wake Med,,35.786068,-78.588989,0,0
+12750,2005,Wendell Falls Pkwy at Taylor Rd (Publix),,35.775958,-78.433371,0,0
+12752,2007,Wendell Falls Pkwy at Martin Pond Rd (EB),,35.769195,-78.419323,0,0
+2014,1889,E 4th St at Wendell Park-and-Ride,,35.7826,-78.36716,0,0
+12754,2009,Pony Rd at Duggins Oak Dr (EB),,35.81627,-78.330221,0,0
+2016,1888,Zebulon Park-and-Ride,,35.8217,-78.3235,0,0
+12756,2011,Arendell Av at Gannon Av (NB),,35.825038,-78.315028,0,0
+12758,2013,Arendell Av at Judd St (NB),,35.831422,-78.319217,0,0
+12759,2014,Gannon Av at Zebulon Commons (WB),,35.828963,-78.296822,0,0
+12733,57746,Willard St at Durham Station,,35.996339,-78.907641,0,0
+12646,6286,Chapel Dr at Duke University Rd (NB),,35.998206,-78.93349,0,1
+12766,2017,Shiloh Glenn Dr at Lower Shiloh Way (WB),,35.86609,-78.83995,0,0
+12764,2015,Shiloh Glenn Dr at Walmart (WB),,35.865891,-78.846247,0,0
+12151,1253,Watkins Rd at Wake Tech RTP Campus (EB),,35.852111,-78.8395,0,1
+12152,1254,Watkins Rd at Perimeter Park Dr (EB),,35.85097,-78.831586,0,1
+12107,1325,McCrimmon Pkwy at Airport Blvd (EB),,35.848781,-78.827512,0,1
+12150,1327,McCrimmon Pkwy at Competition Center Dr (EB),,35.842573,-78.819957,0,1
+12110,1329,Evans Rd at Aviation Pkwy (WB),,35.832685,-78.813885,0,1
+12112,1331,Weston Pkwy at Evans Rd (SB),,35.826047,-78.806548,0,1
+12114,11266,Weston Pkwy at Shelton Dr (SB),,35.816719,-78.811804,0,1
+12115,11270,Chapel Hill Rd at Summit Ridge Loop (EB),,35.812261,-78.818074,0,1
+12116,11272,Chapel Hill Rd at Morrisville Pkwy (EB),,35.809797,-78.816458,0,1
+12118,1339,Chapel Hill Rd at Market Center Dr (EB),,35.807895,-78.814297,0,1
+12120,11284,Chapel Hill Rd at Maynard Rd (EB),,35.798396,-78.795663,0,1
+12121,11286,Chapel Hill Rd at Boundary St (EB),,35.793596,-78.789785,0,1
+12123,11289,Chapel Hill Rd at Boundary St (WB),,35.793693,-78.789662,0,1
+12124,11291,Chapel Hill Rd at Middleton Rd (WB),,35.796556,-78.793394,0,1
+12126,11307,Chapel Hill Rd at NW Cary Pkwy (WB),,35.807726,-78.813113,0,1
+12127,11309,Chapel Hill Rd at Ridgemere Dr (WB),,35.809984,-78.816208,0,1
+12128,11311,Chapel Hill Rd at Weston Pkwy (WB),,35.813037,-78.818867,0,1
+12129,11315,Weston Pkwy at Shelton Dr (NB),,35.816506,-78.811589,0,1
+12130,1330,Evans Rd at Weston Pkwy (NB),,35.826982,-78.806431,0,1
+12131,1328,McCrimmon Pkwy at Aviation Pkwy (WB),,35.83347,-78.81486,0,1
+12132,1326,McCrimmon Pkwy at Competition Center Dr (WB),,35.843071,-78.819662,0,1
+12133,1324,McCrimmon Pkwy at Airport Blvd (WB),,35.848984,-78.827312,0,1
+12069,1251,Watkins Rd at Perimeter Park Dr (WB),,35.851144,-78.831116,0,1
+12067,1252,Watkins Rd at Wake Tech RTP Campus (WB),,35.852355,-78.83946,0,1
+12765,2016,Shiloh Glenn Dr at Walmart (EB),,35.865747,-78.846176,0,0
+12767,2018,Shiloh Glenn Dr at Lower Shiloh Way (EB),,35.866136,-78.839689,0,0
+1600,1168,Hughes St at Estate Dr (SB),,35.719682,-78.850196,0,1
+12147,1184,Apex Peakway at Hughes St (EB),,35.71707,-78.844449,0,1
+12148,1234,North Main Athletic Complex Park-and-Ride (EB),,35.669518,-78.83641,0,1
+12149,1236,Main St at Center St (SB),,35.650752,-78.83375,0,1
+12688,1410,S Main St at Rex Hospital (SB),,35.64266,-78.8332,0,1
+12687,1414,Ralph Stephens Rd at Collins Crossings Rd,,35.632754,-78.832196,0,1
+12757,2012,Gannon Av at Arendell Ave (WB),,35.82396,-78.315578,0,0
+12755,2010,Pony Rd at Duggins Oak Dr (WB),,35.816768,-78.330028,0,0
+2015,1890,E 4th St at Wendell Park-and-Ride,,35.78278,-78.36787,0,0
+12753,2008,Wendell Falls Pkwy at Martin Pond Rd (WB),,35.769468,-78.419372,0,0
+12751,2006,Wendell Falls Pkwy at Taylor Rd (WB),,35.776136,-78.433061,0,0
+11636,9923,New Bern Ave at WakeMed (across),,35.786435,-78.589186,0,0
+10526,8654,E Edenton St at N Tarboro Rd,,35.780554,-78.622071,0,0
+10534,8662,E Edenton St at N Wilmington St,,35.78122,-78.63778,0,0
+12685,9483,Hillsborough St at St Marys St (EB),,35.78079,-78.65028,0,1
+11836,1956,Efland-Cheeks Community Center,,36.083808,-79.191009,0,1
+1488,1758,Churton St at King St (SB),,36.076357,-79.099519,0,1
+12690,1412,S Main St at Village Walk Dr (NB),,35.63754,-78.8358,0,1
+12689,1411,S Main St at Rex Hospital (NB),,35.64272,-78.833,0,1
+12135,1235,Main St at Center St (NB),,35.650752,-78.83355,0,1
+12136,1231,North Main Athletic Complex Park-and-Ride (WB),,35.66964,-78.83674,0,1
+1190,8003,Wilmington St at Jones St,,35.781779,-78.637932,0,0
+1218,8006,Wilmington St at North St,,35.784834,-78.637756,0,0
+12761,9384,Peace St at Blount St,,35.787801,-78.63624,0,0
+11816,1941,Fulton St at Elder St (SB),,36.009849,-78.937363,0,1
+11701,1927,Erwin Rd at Emergency Dr (EB),,36.007943,-78.935492,0,1
+12622,5743,Trent Dr at Duke Hospital South (EB),,36.004556,-78.934979,0,1
+12647,6334,Chapel Dr at Duke University Rd (SB),,35.997927,-78.933567,0,1
+12638,6104,Fulton St at Erwin Rd (NB),,36.008858,-78.937193,0,1
+1483,1845,Durham Tech OCC Park-and-Ride (NB),,36.040707,-79.091865,0,1
+11838,1958,Mebane Cone Health Park-and-Ride,,36.074559,-79.270028,0,1
+11837,1957,E Washington St at S 5th St (Mebane City Hall),,36.095602,-79.267429,0,1
+11869,1975,Durham Tech OCC Park-and-Ride (SB),,36.040963,-79.092389,0,1
+1487,1762,Churton St at Nash & Kollack St (NB),,36.073886,-79.099278,0,1
+1503,1209,NC 54 at Quadrangle Dr (EB),,35.914681,-78.978589,0,1
+1512,1146,NC 54 at Copper Ridge Dr (EB),,35.918083,-78.964677,0,1
+12196,6215,Hope Valley Rd at Garrett Rd (NB),,35.920731,-78.958915,0,1
+1080,5894,Woodcroft Shopping Center (EB),,35.922524,-78.955599,0,1
+1079,5026,Woodcroft Pkwy at Winterberry Ridge Dr (EB),,35.921686,-78.949124,0,1
+1520,1150,Woodcroft Pkwy at Old Fox Trail (EB),,35.923387,-78.945229,0,1
+1523,1780,Woodcroft Pkwy at Weathersfield Dr (EB),,35.923088,-78.940454,0,1
+1540,1151,Woodcroft Pkwy at Highgate Dr (EB),,35.922215,-78.936406,0,1
+11858,1939,"Woodcroft Pkwy at Parson's Chase (EB)",,35.922093,-78.931847,0,1
+1544,1152,Woodcroft Pkwy at Fayetteville Rd (EB),,35.923688,-78.928024,0,1
+12177,5598,Fayetteville Rd at Geneva Dr (SB),,35.920971,-78.928829,0,1
+12620,5633,Fayetteville Rd at Sutton Station (SB),,35.919183,-78.930111,0,1
+12629,5854,Fayetteville Rd at Dunhill Dr (SB),,35.916309,-78.932001,0,1
+12175,5517,Fayetteville Rd at Laurel Springs Dr (SB),,35.913491,-78.933378,0,1
+12599,5078,Trent Dr at Duke Hospital South (WB),,36.004782,-78.934914,0,1
+12762,9472,N Blount St at E Peace St,,35.78816,-78.63612,0,0
+1953,8059,Salisbury St at Lane St,,35.785113,-78.639924,0,0
+1186,8062,N Salisbury St at W Edenton St,,35.781499,-78.640122,0,0
+12201,8063,Salisbury St at Morgan St (SB),,35.779922,-78.640177,0,1

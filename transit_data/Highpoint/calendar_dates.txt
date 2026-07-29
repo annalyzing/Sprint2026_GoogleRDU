@@ -1,0 +1,8 @@
+service_id,date,exception_type
+Effective_2025-0203-Sa,20241224,1
+Effective_2025-0203-Weekday,20250418,2
+Effective_2025-0203-Weekday,20250526,2
+Effective_2025-0203-Weekday,20250704,2
+Effective_2025-0203-Weekday,20250901,2
+Effective_2025-0203-Weekday,20251120,2
+Effective_2025-0203-Weekday,20251225,2

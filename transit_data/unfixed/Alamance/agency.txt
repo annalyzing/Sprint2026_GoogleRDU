@@ -1,0 +1,2 @@
+agency_id,agency_name,agency_url,agency_timezone,agency_lang,agency_phone,agency_fare_url,agency_email
+ACTA-1,Alamance County Transportation Authority,https://www.acta-nc.com/,US/Eastern,EN,(336) 222-0565,,exec@acta-nc.com

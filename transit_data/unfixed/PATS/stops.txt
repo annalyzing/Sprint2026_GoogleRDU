@@ -1,0 +1,21 @@
+stop_id,stop_code,stop_name,stop_desc,stop_lat,stop_lon,stop_url,location_type,parent_station,stop_timezone,wheelchair_boarding
+1,,County Courthouse,,36.393431,-78.983933,,0,,,1
+2,,Christian Help Center,,36.393824,-78.982051,,0,,,1
+3,,Harris Gardens,,36.399119,-78.969652,,0,,,1
+4,,PFMC/PFDC,,36.401939,-78.977769,,0,,,1
+5,,Meadow Wood Apts,,36.416425,-78.963276,,0,,,1
+6,,Cavel Village (Old Post Office),,36.430231,-78.966179,,0,,,1
+7,,Pine Ridge Apartments,,36.422854,-78.971961,,0,,,1
+8,,Red Oak Apartments,,36.424495,-78.975236,,0,,,1
+9,,PCC (Building E),,36.430923,-78.979959,,0,,,1
+10,,PMH,,36.40828,-78.984759,,0,,,1
+11,,Roses/Food Lion,,36.409049,-78.976746,,0,,,1
+13,,Huck Sansbury Park/PATS,,36.396352,-78.992169,,0,,,1
+15,,Roxboro Square (DSS/Health),,36.391545,-78.990255,,0,,,1
+17,,Walmart (2nd Door),,36.376181,-78.98511,,0,,,1
+18,,Bernie&apos;s Blessing,,36.345888,-78.991062,,0,,,1
+19,,Weatherly Heights,,36.374103,-78.991859,,0,,,1
+20,,Lee Gardens,,36.381582,-78.986914,,0,,,1
+21,,Library,,36.389966,-78.985742,,0,,,1
+14,,Senior Center,,36.393329,-78.999261,,0,,,1
+12,,Tractor Supply,,36.405104,-78.977108,,0,,,1

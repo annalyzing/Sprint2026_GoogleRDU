@@ -1,0 +1,6 @@
+rider_category_id,rider_category_description
+5,Youth
+6,Disabled
+15,Reduced Fare
+3,Child
+15,Reduced

@@ -1,0 +1,2 @@
+agency_id,agency_name,agency_url,agency_timezone,agency_lang,agency_phone,agency_fare_url,agency_email
+Mitchell-121,Mitchell County Transportation,https://www.mitchellcounty.org/,US/Eastern,EN,828-688-4715,,

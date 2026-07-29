@@ -1,0 +1,51 @@
+trip_id,route_id,service_id,trip_headsign,trip_short_name,direction_id,shape_id,wheelchair_accessible,bikes_allowed,block_id,block_name
+4058968,35015,69784,Loop,Riedsville trip1,0," 115929",,,12623,Reidsville Block 
+4058969,35015,69784,Loop,Riedsville trip2,0," 115929",,,12623,Reidsville Block 
+4058970,35015,69784,Loop,Riedsville trip3,0," 115929",,,12623,Reidsville Block 
+4058971,35015,69784,Loop,Riedsville trip4,0," 115929",,,12623,Reidsville Block 
+4058972,35015,69784,Loop,Riedsville trip5,0," 115929",,,12623,Reidsville Block 
+4058973,35015,69784,Loop,Riedsville trip6,0," 115929",,,12623,Reidsville Block 
+4058974,35015,69784,Loop,Riedsville trip7,0," 115929",,,12623,Reidsville Block 
+4058975,35015,69784,Loop,Riedsville trip8,0," 115929",,,12623,Reidsville Block 
+4058976,35015,69784,Loop,Riedsville trip9,0," 115929",,,12623,Reidsville Block 
+4058982,35016,69784,Loop,WestRock trip1,0," 115930",,,12626,West Rock Block 
+4058983,35016,69784,Loop,WestRock trip2,0," 115930",,,12626,West Rock Block 
+4058984,35016,69784,Loop,WestRock trip3,0," 115930",,,12626,West Rock Block 
+4058985,35016,69784,Loop,WestRock trip4,0," 115930",,,12626,West Rock Block 
+4058986,35016,69784,Loop,WestRock trip5,0," 115930",,,12626,West Rock Block 
+4058987,35016,69784,Loop,WestRock trip6,0," 115930",,,12626,West Rock Block 
+4058988,35016,69784,Loop,WestRock trip7,0," 115930",,,12626,West Rock Block 
+4058989,35016,69784,Loop,WestRock trip8,0," 115930",,,12626,West Rock Block 
+4058990,35016,69784,Loop,WestRock trip9,0," 115930",,,12626,West Rock Block 
+4174932,35047,75466,Loop,Eden Connector trip1,0," 116080",,,,
+4174933,35047,75466,Loop,Eden Connector trip2,0," 116080",,,,
+4174934,35047,75466,Loop,Eden Connector trip3,0," 116080",,,,
+4174935,35047,75466,Loop,Eden Connector trip4,0," 116080",,,,
+4174937,35047,75466,Loop,Eden Connector trip5,0," 116080",,,,
+4174938,35047,75466,Loop,Eden Connector trip6,0," 116080",,,,
+4174939,35047,75466,Loop,Eden Connector trip7,0," 116080",,,,
+4174940,35047,75466,Loop,Eden Connector trip8,0," 116080",,,,
+4174942,35046,75466,Loop,Reidsville Connector trip1,0," 116082",,,,
+4174943,35046,75466,Loop,Reidsville Connector trip2,0," 116082",,,,
+4174944,35046,75466,Loop,Reidsville Connector trip3,0," 116082",,,,
+4174945,35046,75466,Loop,Reidsville Connector trip4,0," 116082",,,,
+4174948,35046,75466,Loop,Reidsville Connector trip5,0," 116082",,,,
+4174949,35046,75466,Loop,Reidsville Connector trip6,0," 116082",,,,
+4174950,35046,75466,Loop,Reidsville Connector trip7,0," 116082",,,,
+4174952,35048,75466,Loop,West Rock Connector trip1,0," 116083",,,,
+4174953,35048,75466,Loop,West Rock Connector trip2,0," 116083",,,,
+4174954,35048,75466,Loop,West Rock Connector trip3,0," 116083",,,,
+4174955,35048,75466,Loop,West Rock Connector trip4,0," 116083",,,,
+4174958,35048,75466,Loop,West Rock Connector trip5,0," 116083",,,,
+4174959,35048,75466,Loop,West Rock Connector trip6,0," 116083",,,,
+4174960,35048,75466,Loop,West Rock Connector trip7,0," 116083",,,,
+4056127,35013,69784,Loop,Eden trip1,0," 133990",,,12621,Eden Block 
+4195226,35013,69784,Loop,Eden trip2,0," 133990",,,12621,Eden Block 
+4195227,35013,69784,Loop,Eden trip3,0," 133990",,,12621,Eden Block 
+4195228,35013,69784,Loop,Eden trip4,0," 133990",,,12621,Eden Block 
+4195229,35013,69784,Loop,Eden trip5,0," 133990",,,12621,Eden Block 
+4195230,35013,69784,Loop,Eden trip6,0," 133990",,,12621,Eden Block 
+4195231,35013,69784,Loop,Eden trip7,0," 133990",,,12621,Eden Block 
+4195232,35013,69784,Loop,Eden trip8,0," 133990",,,12621,Eden Block 
+4195233,35013,69784,Loop,Eden trip9,0," 133990",,,12621,Eden Block 
+4058981,35014,69784,Loop,Reverse Eden ,0," 133991",,,,

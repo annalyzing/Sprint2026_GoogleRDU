@@ -1,0 +1,2 @@
+agency_id,agency_name,agency_url,agency_timezone,agency_lang,agency_phone,agency_fare_url,agency_email
+Rutherford-161,Rutherford County Transit,https://www.rutherfordcountync.gov/departments/transit/index.php,US/Eastern,EN,828.287.6339,,kerry.giles@rutherfordcountync.gov

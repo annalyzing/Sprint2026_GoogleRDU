@@ -1,0 +1,2 @@
+feed_publisher_name,feed_publisher_url,feed_lang,feed_start_date,feed_end_date
+Iredell County Area Transit System,https://rideicats.com,En,20250102,20251231

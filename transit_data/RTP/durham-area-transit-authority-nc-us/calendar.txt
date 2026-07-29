@@ -1,0 +1,7 @@
+service_id,service_name,monday,tuesday,wednesday,thursday,friday,saturday,sunday,start_date,end_date
+c_71383_b_85114_d_64,11/11B Regular Service - 2025 (Jun 14) (Sunday only),0,0,0,0,0,0,1,20250614,20251231
+c_71383_b_85114_d_32,11/11B Regular Service - 2025 (Jun 14) (Saturday only),0,0,0,0,0,1,0,20250614,20251231
+c_71383_b_85114_d_31,11/11B Regular Service - 2025 (Jun 14) (Weekday),1,1,1,1,1,0,0,20250614,20251231
+c_70617_b_83063_d_64,Regular Service - 2024 (Aug 24) (Sunday only),0,0,0,0,0,0,1,20240824,20251231
+c_70617_b_83063_d_32,Regular Service - 2024 (Aug 24) (Saturday only),0,0,0,0,0,1,0,20240824,20251231
+c_70617_b_83063_d_31,Regular Service - 2024 (Aug 24) (Weekday),1,1,1,1,1,0,0,20240824,20251231

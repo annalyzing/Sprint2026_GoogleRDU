@@ -1,0 +1,6 @@
+route_id,agency_id,route_short_name,route_long_name,route_desc,route_type,route_url,route_color,route_text_color
+5929,233,"30","Blue Route",Lexington,3,,8080FF,FFFFFF
+5930,233,"32","Green Route",Thomasville Connector,3,,008000,FFFFFF
+5931,233,"31","Orange Route",Lexington Connector,3,,FF8000,000000
+5932,233,"33","Red Route",Thomasville,3,,FF0000,FFFFFF
+5933,233,"34","Yellow Route (Saturday)",Saturday Thomasville Connector,3,,EDED15,000000

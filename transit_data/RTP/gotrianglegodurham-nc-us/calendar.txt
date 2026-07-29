@@ -1,0 +1,10 @@
+service_id,service_name,monday,tuesday,wednesday,thursday,friday,saturday,sunday,start_date,end_date
+c_24123_b_33692_d_64,FEB 2022 (Sunday only),0,0,0,0,0,0,1,20220201,20221231
+c_24123_b_33692_d_63,FEB 2022 (No Sunday),1,1,1,1,1,1,0,20220201,20221231
+c_24123_b_33692_d_32,FEB 2022 (Saturday only),0,0,0,0,0,1,0,20220201,20221231
+c_24123_b_33692_d_31,FEB 2022 (Weekday),1,1,1,1,1,0,0,20220201,20221231
+c_23933_b_33246_d_64,Contingency Plan (November 2021) (Sunday only),0,0,0,0,0,0,1,20211121,20221231
+c_23933_b_33246_d_32,Contingency Plan (November 2021) (Saturday only),0,0,0,0,0,1,0,20211121,20221231
+c_23933_b_33246_d_31,Contingency Plan (November 2021) (Weekday),1,1,1,1,1,0,0,20211121,20221231
+c_23933_b_33246_d_16,Contingency Plan (November 2021) (Friday only),0,0,0,0,1,0,0,20211121,20221231
+c_23933_b_33246_d_15,Contingency Plan (November 2021) (MTuWTh),1,1,1,1,0,0,0,20211121,20221231

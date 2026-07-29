@@ -1,0 +1,4 @@
+trip_id,route_id,service_id,trip_headsign,trip_short_name,direction_id,shape_id,wheelchair_accessible,bikes_allowed,block_id,block_name
+9922038,130824,113329,,Gaston College/Transit Deviated Fixed Route,0,GT,,,,
+9923892,130824,113336,,Gaston College/Transit Deviated Fixed Route (All Year),0,GT-AllYear,,,,
+9923893,130825,113337,,Southridge Business Park/Bessemer City-Transit Deviated Fixed Route,0,BC,,,,

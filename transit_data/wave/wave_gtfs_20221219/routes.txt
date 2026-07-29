@@ -1,0 +1,13 @@
+route_id,route_short_name,route_long_name,route_type,route_color,route_text_color,route_url
+1,101,Princess Place,3,7B4A39,FFFFFF,https://www.wavetransit.com/wp-content/uploads/2020/01/Web-Version-202-101-Map.pdf
+3,103,Oleander East,3,872687,FFFFFF,https://www.wavetransit.com/wp-content/uploads/2020/01/Web-Version-2020-103-Map.pdf
+4,104,East,3,ED1C24,FFFFFF,https://www.wavetransit.com/wp-content/uploads/2020/01/Web-Version-2020-104-Map.pdf
+5,105,Medical Center,3,8BB836,FFFFFF,https://www.wavetransit.com/wp-content/uploads/2020/01/2020-105-Pocket-Map.pdf
+6,106,Shipyard Blvd,3,1F7835,FFFFFF,https://www.wavetransit.com/wp-content/uploads/2020/01/2020-106-Pocket-Map.pdf
+7,107,College Rd,3,009FDA,FFFFFF,https://www.wavetransit.com/wp-content/uploads/2020/01/WAVE-Rt-107-1_20-prf3.pdf
+8,108,Market Street,3,FDB813,FFFFFF,https://www.wavetransit.com/wp-content/uploads/2020/01/2020-108-Pocket-Map.pdf
+21,201,Carolina Beach Rd,3,6D6E70,FFFFFF,https://www.wavetransit.com/wp-content/uploads/2021/09/Rt-201-Oct21-prf1.pdf
+22,202,Oleander West,3,00519C,FFFFFF,https://www.wavetransit.com/wp-content/uploads/2020/01/2020-202-Pocket-Map.pdf
+23,203,Port City Trolley,3,231F20,FFFFFF,https://www.wavetransit.com/wp-content/uploads/2021/08/203-Trolley-Sept2021-web.pdf
+25,205,Long Leaf Park,3,EC008C,FFFFFF,https://www.wavetransit.com/wp-content/uploads/2020/01/2020-205-Pocket-Map.pdf
+30,210,South 17th St,3,54B9DF,FFFFFF,https://www.wavetransit.com/wp-content/uploads/2020/01/WAVE-Rt-210-1_20-prf3.pdf

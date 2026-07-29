@@ -1,0 +1,21 @@
+trip_id,route_id,service_id,trip_headsign,trip_short_name,direction_id,shape_id,wheelchair_accessible,bikes_allowed,block_id,block_name
+7917364,102359,71800,Green Route,0645,0,1,,,Green,Green
+7917365,102359,71800,Green Route,0953,0,1,,,Green,Green
+7917366,102359,71800,Green Route,0759,0,2,,,Green,Green
+7917367,102359,71800,Green Route,1258,0,2,,,Green,Green
+7917368,102359,71800,Green Route,1100,0,3,,,Green,Green
+7917655,102359,71800,Green Route,1128,0,4,,,Green,Green
+7917656,102359,71800,Green Route,1455,0,5,,,Green,Green
+7917657,102359,71800,Green Route,1706,0,6,,,Green,Green
+7918019,102358,71800,Orange Route,0724,0,10,,,Orange,Orange
+7918020,102358,71800,Orange Route,0854,0,11,,,Orange,Orange
+7918021,102358,71800,Orange Route,1020,0,12,,,Orange,Orange
+7918022,102358,71800,Orange Route,1151,0,12,,,Orange,Orange
+7918023,102358,71800,Orange Route,1320,0,12,,,Orange,Orange
+7918024,102358,71800,Orange Route,14449,0,12,,,Orange,Orange
+7918025,102358,71800,Orange Route,1616,0,13,,,Orange,Orange
+7918026,102357,71800,Blue Route,0645,0,14,,,Blue,Blue
+7918027,102357,71800,Blue Route,0840,0,14,,,Blue,Blue
+7918028,102357,71800,Blue Route,1038,0,14,,,Blue,Blue
+7918029,102357,71800,Blue Route,1237,0,14,,,Blue,Blue
+7918030,102357,71800,Blue Route,1433,0,15,,,Blue,Blue

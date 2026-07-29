@@ -1,0 +1,10 @@
+﻿route_id,agency_id,route_short_name,route_long_name,route_desc,route_type,route_url,route_color,route_text_color,route_sort_order,continuous_pickup,continuous_drop_off
+1,greenway,1,West Hickory,,3,,ffcc00,FFFFFF,,,
+2,greenway,2,NC 127/Springs Rd,,3,,0066ff,FFFFFF,,,
+3,greenway,3,Hickory/HWY 70/Newton,,3,,FF0000,FFFFFF,,,
+4,greenway,4,Newton/HWY 70/Hickory,,3,,FF0000,FFFFFF,,,
+5,greenway,5,Hwy 70/Conover,,3,,33cc33,FFFFFF,,,
+6,greenway,6,Conover/Hwy 70,,3,,33cc33,FFFFFF,,,
+7,greenway,7,Tate Blvd/Hwy 127,,3,,D830FB,FFFFFF,,,
+Morganton,greenway,Morganton Loop,Burke Flex Route,,3,,6495ED,0000AE,,,
+Taylorsville,greenway,Taylorsville Flex,Taylorsville Flex Route,,3,,dea8eb,FFFFFF,,,

@@ -1,0 +1,6 @@
+route_id,route_short_name,route_long_name,route_desc,route_url,route_color,route_text_color,route_type
+8609,3,Blue,Route 3 Blue,,0000ff,ffffff,3
+8610,4,Orange,4 Orange Weekend Express,,ff8000,ffffff,3
+8611,5,Purple,5 Purple Weekend Express,,a747e0,ffffff,3
+8302,1,Green,,,01c301,ffffff,3
+8566,2,Red,,,ff0000,ffffff,3

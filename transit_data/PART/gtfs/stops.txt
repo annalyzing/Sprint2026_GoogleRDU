@@ -1,0 +1,186 @@
+stop_id,stop_code,stop_name,stop_desc,stop_lat,stop_lon,zone_id,stop_url,location_type,parent_station,stop_timezone,wheelchair_boarding
+2800000,100,PART Coble Transportation Center,,36.093585,-79.959124,,,1,,,1
+8030800,101,Motel 6,,36.076902,-79.957981,,,,,,
+8030445,102,Harris Teeter Distribution Center (call 336-883-7278 for pickup at least 30 minutes in advance),Must call in for pickup or drop off,36.087105,-79.93062,,,,,,
+7970132,103,4th & Chestnut,,36.098659,-80.242264,,http://www.partnc.org/park-ride-locations/,,,,1
+7974466,105,5th & Chestnut (Drop off only for Routes 1 & 17),Drop off only for Routes 1 and 17,36.100325,-80.242328,,http://www.partnc.org/park-ride-locations/,,,,1
+8030446,106,Pactiv (Radar Rd) (call 336-883-7278 for pickup at least 30 minutes in advance),Must call in for pickup or drop off,36.089324,-79.934575,,,,,,
+8030447,107,HAECO (Radar Rd) (call 336-883-7278 for pickup at least 30 minutes in advance),Must call in for pickup or drop off,36.093507,-79.932869,,,,,,
+8051809,108,HAECO / Harris Teeter Warehouse (call 336-883-7278 for pickup at least 30 minutes in advance),Must call in for pickup or drop off,36.096918,-79.928553,,,,,,
+2804967,109,GTCC Aviation II (call 336-883-7278 for pickup at least 30 minutes in advance),Must call in for pickup or drop off,36.098276,-79.924164,,,,,,
+8030449,111,Harris Teeter Perishable (call 336-883-7278 for pickup at least 30 minutes in advance),Must call in for pickup or drop off,36.0941994334713,-79.9239908158779,,,,,,
+8030450,112,N Chimney Rock & W Market (call 336-883-7278 for pickup at least 30 minutes in advance),Must call in for pickup or drop off,36.076436,-79.918353,,,,,,
+7988577,114,Centennial & Hawthorne,,35.964564,-80.00205,,,,,,
+7988168,115,Centennial & Hawthorne,,35.96375999,-80.00228461,,,,,,
+8034620,116,Citation & International Dr (call 336-883-7278 for pickup at least 30 minutes in advance),Must call in for pickup or drop off,36.077487,-79.936579,,,,,,
+8034621,117,Twisted Paper (Cessna Dr) (call 336-883-7278 for pickup at least 30 minutes in advance),Must call in for pickup or drop off,36.081835,-79.941245,,,,,,
+8034622,118,Cessna & Boeing Dr (call 336-883-7278 for pickup at least 30 minutes in advance),Must call in for pickup or drop off,36.082676,-79.945765,,,,,,
+8034623,119,Arby's (call 336-883-7278 for pickup at least 30 minutes in advance),Must call in for pickup or drop off,36.082771,-79.955403,,,,,,
+8030789,120,Embassy Suites (call 336-883-7278 for pickup at least 30 minutes in advance),Must call in for pickup or drop off,36.083553,-79.963042,,,,,,
+2804968,121,Qorvo (call 336-883-7278 for pickup at least 30 minutes in advance),Must call in for pickup or drop off,36.072876,-79.965478,,,,,,
+8030799,122,Hotel Area (National Service Rd) (call 336-883-7278 for pickup at least 30 minutes in advance),Must call in for pickup or drop off,36.077346,-79.960269,,,,,,
+7988167,123,Centennial & Charlotte,,35.979343,-80.001549,,,,,,1
+8030798,124,Airpark West (call 336-883-7278 for pickup at least 30 minutes in advance),Must call in for pickup or drop off,36.081126,-79.963567,,,,,,
+9216579,125,Volvo Truck NA (call 336-883-7278 for pickup at least 30 minutes in advance),Must call in for pickup or drop off,36.082265,-79.966078,,,,,,
+8030792,129,Gallimore Dairy & Sedgebrook (call 336-883-7278 for pickup at least 30 minutes in advance),Must call in for pickup or drop off,36.064225,-79.961919,,,,,,
+7986779,130,W Washington & Greene,,36.070229,-79.791929,,,,,,1
+7974462,131,WS Journal (5th Street),,36.098463,-80.214834,,,,,,
+7986778,132,W Washington & Blandwood,,36.07032,-79.795616,,,,,,1
+8030791,134,Bojangles (call 336-883-7278 for pickup at least 30 minutes in advance),Must call in for pickup or drop off,36.073484,-79.960176,,,,,,1
+7988578,135,Centennial & Charlotte (Food Lion),,35.979073,-80.00135,,,,,,1
+7986780,138,Freeman Mill & Coliseum,,36.042844,-79.81607,,,,,,
+7986281,139,Freeman Mill & Lovett,,36.043777,-79.815178,,,,,,1
+8030444,140,Industries of the Blind (call 336-883-7278 for pickup at least 30 minutes in advance),Must call in for pickup or drop off,36.080239,-79.927802,,,,,,
+7986764,141,Graham Park & Ride,,36.056415,-79.398812,,http://www.partnc.org/park-ride-locations/,,,,1
+7985844,142,Greensboro Depot (Slip 17),,36.069278,-79.787083,,,,,,1
+8033960,146,High Point Clinical Trials (call 336-883-7278 for pickup at least 30 minutes in advance),Must call in for pickup or drop off,36.048116,-79.954425,,,,,,
+7986282,153,Four Seasons,,36.04046,-79.841821,,http://www.partnc.org/park-ride-locations/,,,,1
+7989453,155,Coliseum & Freeman Mill,,36.043139,-79.817528,,,,,,
+7988579,158,Marathon (Oak Hollow Village),,35.995572,-79.995885,,,,,,
+7998667,160,South Asheboro Park & Ride,,35.670612,-79.830686,,http://www.partnc.org/park-ride-locations/,,,,1
+8040165,161,Regency & Tudor (call 336-883-7278 for pickup at least 30 minutes in advance),Must call in for pickup or drop off,36.057659,-79.950564,,,,,,
+8033957,163,Simply Southern (call 336-883-7278 for pickup at least 30 minutes in advance),Must call in for pickup or drop off,36.068179,-79.951716,,,,,,
+8077462,165,Airpark North (Burgess Rd) (call 336-883-7278 for pickup at least 30 minutes in advance),Must call in for pickup or drop off,36.10003254,-79.96177165,,,,,,
+7974463,166,5th & MLK Jr Dr.,,36.100515,-80.227999,,,,,,1
+7998663,169,North Asheboro Park & Ride,,35.746007,-79.807614,,http://www.partnc.org/park-ride-locations/,,,,1
+2804972,171,Spectrum (call 336-883-7278 for pickup at least 30 minutes in advance),Must call in for pickup or drop off,36.119175,-79.957587,,,,,,1
+8034589,172,Truist 1 (call 336-883-7278 for pickup at least 30 minutes in advance),Must call in for pickup or drop off,36.1130762,-79.9551771,,,,,,
+7988166,174,Hwy 68 & Lassiter (Oak Hollow Village),,35.995947,-79.995956,,,,,,
+9783416,175,Farmers Market (call 336-883-7278 for pickup at least 30 minutes in advance),Must call in for pickup or drop off,36.087766,-79.99184,,,,,,1
+7999793,183,Randolph Hospital,,35.71096219,-79.81284671,,,,,,1
+7988165,186,Hwy 68 & Ramsay,,36.028623643013,-79.9700761289749,,,,,,
+7988580,190,Hwy 68 & Sutton Way,,36.0272922186843,-79.9707459336948,,,,,,
+7989457,193,Thomasville Park & Ride,,35.89853,-80.091653,,http://www.partnc.org/park-ride-locations/,,,,1
+7986774,195,Ambulatory Care Center,,35.900436,-79.05587,,,,,,1
+8030790,197,Centerport & Triad Center  (call 336-883-7278 for pickup at least 30 minutes in advance),Must call in for pickup or drop off,36.08573653,-79.96303707,,,,,,
+7970131,198,Winston-Salem Transportation Center (L1),,36.099293,-80.245134,,,,,,1
+8631247,199,Winston-Salem Transportation Center (A1 or A2),,36.099389,-80.245667,,,,,,1
+7986280,200,Freeman Mill & Florida,,36.0524996693857,-79.8066118662357,,,,,,1
+7998664,205,Randleman Park & Ride,,35.8214331,-79.82291579,,http://www.partnc.org/park-ride-locations/,,,,1
+8018247,206,RSVP Communications (call 336-883-7278 for pickup at least 30 minutes in advance),Must call in for pickup or drop off,36.103808,-79.983543,,,,,,
+2804963,207,USPS (call 336-883-7278 for pickup at least 30 minutes in advance),Must call in for pickup or drop off,36.105685,-79.982891,,,,,,
+2804964,208,Bull Ridge (call 336-883-7278 for pickup at least 30 minutes in advance),Must call in for pickup or drop off,36.110942,-79.9801,,,,,,
+2804965,209,Market America (call 336-883-7278 for pickup at least 30 minutes in advance),Must call in for pickup or drop off,36.119595,-79.966336,,,,,,
+8018248,210,Hayward Baker (call 336-883-7278 for pickup at least 30 minutes in advance),Must call in for pickup or drop off,36.101988,-79.988435,,,,,,
+8018249,211,Little Santee near Carolina Boiler (call 336-883-7278 for pickup at least 30 minutes in advance),Must call in for pickup or drop off,36.09629,-79.99091,,,,,,
+8034591,212,ECPI/Cornerstone (call 336-883-7278 for pickup at least 30 minutes in advance),Must call in for pickup or drop off,36.111247,-79.960259,,,,,,
+8018253,213,Caldwell Building (call 336-883-7278 for pickup at least 30 minutes in advance),Must call in for pickup or drop off,36.088618,-79.983565,,,,,,
+8018254,214,415 Westcliff (call 336-883-7278 for pickup at least 30 minutes in advance),Must call in for pickup or drop off,36.086963,-79.974277,,,,,,
+8030448,215,GTCC Aviation III / Honda Aircraft (call 336-883-7278 for pickup at least 30 minutes in advance),Must call in for pickup or drop off,36.099396,-79.921374,,,,,,
+8030793,216,TE Connectivity (719 Pegg Rd) (call 336-883-7278 for pickup at least 30 minutes in advance),Must call in for pickup or drop off,36.069026,-79.969613,,,,,,
+9004709,218,PTI Airport Lower-Level Entrance 7 (call 336-883-7278 for pickup at least 30 minutes in advance),Must call in for pickup or drop off,36.106227,-79.935692,,,,,,1
+8030795,219,Pegg & Thorndike (call 336-883-7278 for pickup at least 30 minutes in advance),Must call in for pickup or drop off,36.073543,-79.971243,,,,,,
+8033958,221,Alorica (call 336-883-7278 for pickup at least 30 minutes in advance),Must call in for pickup or drop off,36.062814,-79.951514,,,,,,
+9783417,222,Airpark East (call 336-883-7278 for pickup at least 30 minutes in advance),Must call in for pickup or drop off,36.075847,-79.94626,,,,,,1
+8018250,224,Little Santee & Triad (call 336-883-7278 for pickup at least 30 minutes in advance),Must call in for pickup or drop off,36.094466,-79.99083,,,,,,
+7988169,225,High Point Terminal (Outer Slip),,35.957429,-80.00704,,http://www.partnc.org/park-ride-locations/,,,,1
+8018251,228,Coca Cola (call 336-883-7278 for pickup at least 30 minutes in advance),Must call in for pickup or drop off,36.097018,-79.983866,,,,,,
+8018252,229,Standard & Triad (call 336-883-7278 for pickup at least 30 minutes in advance),Must call in for pickup or drop off,36.09435,-79.982349,,,,,,
+8018255,230,Westcliff & Industrial Village (call 336-883-7278 for pickup at least 30 minutes in advance),Must call in for pickup or drop off,36.08926,-79.974239,,,,,,
+2804966,231,FedEx Freight (call 336-883-7278 for pickup at least 30 minutes in advance),Must call in for pickup or drop off,36.092122,-79.976209,,,,,,
+8018881,232,Camco (Landmark Rd Access) (call 336-883-7278 for pickup at least 30 minutes in advance),Must call in for pickup or drop off,36.094991,-79.97692,,,,,,
+8018882,233,Landmark & Market (call 336-883-7278 for pickup at least 30 minutes in advance),Must call in for pickup or drop off,36.098797,-79.976373,,,,,,
+7998662,234,Randolph Hospital,,35.711119,-79.812592,,,,,,1
+7974465,236,Innovation Quarter (5th & Patterson),,36.10044984,-80.24107084,,,,,,1
+7970133,237,Innovation Quarter (4th & Research),,36.09916253,-80.23797154,,,,,,1
+7970134,238,4th & MLK,,36.0994328862849,-80.2290136367083,,,,,,1
+8018883,239,Camco (Market St Access) (call 336-883-7278 for pickup at least 30 minutes in advance),Must call in for pickup or drop off,36.095545,-79.971489,,,,,,
+7974464,240,5th & Research,,36.10059234,-80.23755513,,,,,,1
+7986761,242,Bennett College (E Washington St),,36.069226,-79.779058,,,,,,1
+7986762,243,E Gate City Blvd & Florida,,36.056767,-79.747594,,,,,,1
+7989452,248,Coliseum & W Florida,,36.051802,-79.822548,,,,,,1
+7990399,249,Coliseum & W Florida,,36.051415,-79.822269,,,,,,
+2804971,253,N Regional at Business Park (call 336-883-7278 for pickup at least 30 minutes in advance),Must call in for pickup or drop off,36.114457,-79.954563,,,,,,
+8030797,254,Piedmont Triad Pkwy & National Service Rd (call 336-883-7278 for pickup at least 30 minutes in advance),Must call in for pickup or drop off,36.084069,-79.974039,,,,,,
+8033956,255,Triad Freightliner (call 336-883-7278 for pickup at least 30 minutes in advance),Must call in for pickup or drop off,36.077042,-79.947167,,,,,,
+2804970,256,Lawrence Transportation (call 336-883-7278 for pickup at least 30 minutes in advance),Must call in for pickup or drop off,36.05461,-79.940069,,,,,,
+7992469,257,Bennett College (E Washington St),,36.06932,-79.778966,,,,,,1
+7970135,261,Kernersville Town Hall Park & Ride,,36.118435,-80.072179,,http://www.partnc.org/park-ride-locations/,,,,1
+7998661,272,S Fayetteville & Scarboro,,35.705292,-79.814122,,,,,,
+7999794,273,S Fayetteville & Scarboro,,35.705293,-79.81427,,,,,,
+7998660,278,Randolph Community College,,35.674008,-79.82741,,,,,,
+7999795,279,Randolph Community College,,35.674093,-79.827485,,,,,,
+7989450,280,Arlington & Gate City Blvd,,36.065297,-79.789319,,,,,,1
+8033959,282,Aetna (call 336-883-7278 for pickup at least 30 minutes in advance),Must call in for pickup or drop off,36.051288,-79.955625,,,,,,
+7970150,286,FedEx Ground,,36.10911,-80.03436,,,,,,
+8033961,289,Meeting Way & Mendenhall Oaks (call 336-883-7278 for pickup at least 30 minutes in advance),Must call in for pickup or drop off,36.047037,-79.959616,,,,,,
+7975742,291,Old Greensboro Rd,,36.110141,-80.027419,,,,,,
+7970140,292,Old Greensboro Rd,,36.109939,-80.026847,,,,,,
+8030796,293,HAECO (Piedmont Triad Pkwy) (call 336-883-7278 for pickup at least 30 minutes in advance),Must call in for pickup or drop off,36.080344,-79.973724,,,,,,
+7990396,294,MLK Jr. Dr. & Oneka,,35.963782,-79.986047,,,,,,
+7989455,295,MLK Jr. Dr. & Hoskins,,35.964248,-79.985773,,,,,,
+7990397,296,MLK Jr. Dr. & Hendrix,,35.964339,-79.955287,,,,,,
+7989454,297,MLK Jr. Dr. & Hendrix,,35.964507,-79.954721,,,,,,
+7980843,298,Excelsior St at Union Station,,36.093896,-80.228431,,,,,,1
+8034590,299,Truist 2 (call 336-883-7278 for pickup at least 30 minutes in advance),Must call in for pickup or drop off,36.112637,-79.95775,,,,,,
+7986765,300,Alamance Community College,,36.065911,-79.35752,,http://www.partnc.org/park-ride-locations/,,,,1
+7970141,301,Amazon,,36.106703,-80.022,,,,,,1
+9004708,318,PTI Airport Lower-Level Entrance 1 (call 336-883-7278 for pickup at least 30 minutes in advance),Must call in for pickup or drop off,36.104817,-79.937489,,,,,,1
+9002999,365,Airpark North (Burgess Rd) (call 336-883-7278 for pickup at least 30 minutes in advance),Must call in for pickup or drop off,36.100275,-79.961879,,,,,,
+7986763,391,Alamance Regional Medical Center Park & Ride,,36.062713,-79.4985931779099,,http://www.partnc.org/park-ride-locations/,,,,1
+7990395,397,GTCC High Point,,35.9462682,-80.00324475,,,,,,1
+7989456,398,GTCC High Point,,35.946352,-80.003535,,,,,,1
+7970137,405,VA Health Care Center,,36.093485,-80.048593,,,,,,1
+7970138,406,Kernersville Medical Center Park & Ride Lot,,36.092249,-80.045678,,http://www.partnc.org/park-ride-locations/,,,,
+7975296,407,Kernersville Medical Center Park & Ride Lot,,36.092347,-80.045799,,http://www.partnc.org/park-ride-locations/,,,,1
+7990398,500,Coliseum & Freeman Mill,,36.04319,-79.817234,,,,,,
+2804969,510,Polo (call 336-883-7278 for pickup at least 30 minutes in advance),Must call in for pickup or drop off,36.053691,-79.945741,,,,,,1
+9783412,515,GTCC Cameron Campus (call 336-883-7278 for pickup at least 30 minutes in advance),Must call in for pickup or drop off,36.139859,-79.969869,,,,,,
+9783413,520,FedEx Airport (call 336-883-7278 for pickup at least 30 minutes in advance),Must call in for pickup or drop off,36.118531,-79.919559,,,,,,
+9783414,525,Cone Health Med Ctr High Point (call 336-883-7278 for pickup at least 30 minutes in advance),Must call in for pickup or drop off,36.04412,-79.964397,,,,,,
+9783415,530,Walmart Precision Way (call 336-883-7278 for pickup at least 30 minutes in advance),Must call in for pickup or drop off,36.029492,-79.964809,,,,,,
+8004769,600,NC Zoo,,35.631122,-79.765453,,,,,,1
+7986766,1958,Mebane Cone Health Park & Ride,,36.074612,-79.269913,,,,,,1
+7992466,3053,MLK Jr Blvd & Estes (YMCA),,35.9336662,-79.0556793,,,,,,1
+7992463,3178,Abernethy Hall on S Columiba,,35.911446,-79.054665,,,,,,1
+7986770,3179,S Columbia St at Fraternity Ct,,35.9117184211,-79.0550173684,,,,,,1
+7986773,3220,Mason Farm Road at Marsico Hall,,35.902283,-79.05476,,,,,,
+7992460,3221,Mason Farm Road at EPA,,35.90212,-79.054325,,,,,,
+7992462,3223,Health Sciences Library on S Columbia,,35.905414,-79.053469,,,,,,1
+7986771,3226,Pittsboro St at SECU,,35.906893,-79.05487,,,,,,1
+7986772,3238,"UNC Hospitals (Manning Dr, Dogwood Deck)",,35.90316,-79.051249,,,,,,1
+7992461,3239,"UNC Hospitals (Manning Dr, CG Lot)",,35.903568,-79.051806,,,,,,1
+7992464,3383,Columbia & Rosemary,,35.913753,-79.05604,,,,,,1
+7986769,3421,N Columbia St at W Franklin St,,35.913403,-79.05604,,,,,,1
+7986767,3444,MLK Jr Blvd & Airport,,35.932538,-79.055699,,,,,,
+7986768,3448,MLK Jr Blvd & Umstead,,35.923781,-79.05481,,,,,,
+7992465,3449,MLK Jr Blvd & Hillsborough (Midtown Market),,35.924483,-79.054242,,,,,,
+7990401,4083,W Market St & Greene St (Old Courthouse),,36.07252,-79.79264,,,,,,1
+7986279,4166,W Washington & Eugene St,,36.070485,-79.793514,,,,,,1
+8030451,4551,Swing Rd & Swing Ct (call 336-883-7278 for pickup at least 30 minutes in advance),Must call in for pickup or drop off,36.073089,-79.910226,,,,,,1
+7989451,4644,Gate City Blvd & Glenwood (UNC-G),,36.063094,-79.810276,,,,,,1
+7999791,4649,Gate City & Ellington,,36.055932,-79.830786,,,,,,1
+7999792,4654,Gate City & Meadowview,,36.046544,-79.837994,,,,,,1
+7998665,4676,Gate City & Meadowview,,36.046546,-79.837535,,,,,,1
+7998666,4680,Gate City & Patterson,,36.057002,-79.829084,,,,,,1
+7990400,4684,Gate City Blvd & Glenwood (UNC-G),,36.062884,-79.81063,,,,,,1
+7986777,4773,Freeman Mill & Florida,,36.052063,-79.806684,,,,,,1
+7986283,100A2,Coble Transportation Center (A2),,36.093638,-79.959285,,http://www.partnc.org/park-ride-locations/,0,2800000,,1
+7985654,100A4,Coble Transportation Center (A4),,36.093938,-79.959214,,http://www.partnc.org/park-ride-locations/,0,2800000,,1
+7980844,100B1,Coble Transportation Center (B1),,36.093436,-79.95927,,http://www.partnc.org/park-ride-locations/,0,2800000,,1
+7988164,100B3,Coble Transportation Center (B3),,36.09379,-79.959196,,http://www.partnc.org/park-ride-locations/,0,2800000,,1
+7970142,100B4,Coble Transportation Center (B4),,36.093939,-79.959179,,http://www.partnc.org/park-ride-locations/,0,2800000,,1
+8015796,100C1,Coble Transportation Center (C1),,36.093403,-79.959056,,http://www.partnc.org/park-ride-locations/,0,2800000,,1
+8039699,100C2,Coble Transportation Center (C2),,36.093522,-79.959018,,http://www.partnc.org/park-ride-locations/,0,2800000,,1
+8034296,100C3,Coble Transportation Center (C3),,36.09367,-79.959001,,http://www.partnc.org/park-ride-locations/,0,2800000,,1
+8030788,100D1,Coble Transportation Center (D1),,36.093389,-79.959012,,http://www.partnc.org/park-ride-locations/,0,2800000,,1
+8032704,100D2,Coble Transportation Center (D2),,36.093582,-79.958952,,http://www.partnc.org/park-ride-locations/,0,2800000,,1
+9003000,100D3,Coble Transportation Center (D3),,36.093681,-79.958924,,http://www.partnc.org/park-ride-locations/,0,2800000,,1
+9003001,521,GTCC-AV1 (call 336-883-7278 for pickup at least 30 minutes in advance),Must call in for pickup or drop off,36.095976,-79.952692,,,,,,1
+9003002,302,Mateer Storage Trailer (call 336-883-7278 for pickup at least 30 minutes in advance),Must call in for pickup or drop off,36.090199,-79.953745,,,,,,
+9003003,303,Out of the Garden (call 336-883-7278 for pickup at least 30 minutes in advance),Must call in for pickup or drop off,36.068629,-79.962171,,,,,,1
+10768750,217,Gilbarco Veeder-Root,Must call in for pickup or drop off,36.088235,-79.92511,,,,,,
+10767824,305,Main & University,,35.939059,-79.996374,,,,,,1
+10766898,306,Main & College,,35.939111,-79.996814,,,,,,1
+9476666,47735,Novant Forsyth Medical Center (shelter by hospital entrance),,36.07618,-80.29812,,,,,,1
+34874,34874,North Main Street at Hartley Drive,,35.99202,-80.02957,,,,,,1
+33964,33964,North University Pkwy at North Main Street,,35.99348,-80.02829,,,,,,1
+9475906,47201,Martin Luther King Jr Drive at Cromartie Street,,36.0917,-80.22757,,,,,,1
+9477310,47185,Martin Luther King Jr Drive At Union Station,,36.09379,-80.22768,,,,,,1
+9587063,11536,Novant Forsyth Medical Center (by valet parking lot),,36.07624,-80.29852,,,,,,1
+9475198,47473,Hawthorne Rd At Baptist Medical (by parking deck),,36.09011,-80.26564,,,,,,1
+9475696,10783,Martin Luther King Jr Drive at Rams Drive,,36.09083,-80.22779,,,,,,1
+10768752,148,High Point Regional Hospital (by Triad Adult & Pediatric Med),,35.962914,-80.012056,,,,,,1
+10768751,149,High Point Regional Hospital (by helicopter pad),,35.962974,-80.012224,,,,,,1
+10768753,360,Hawthorne Rd At Baptist Medical (School of Medicine entrance),,36.09,-80.26586,,,,,,1
+8122586,4276,E Gate City/Aster Drive,,36.057221,-79.747799,,,,,,1

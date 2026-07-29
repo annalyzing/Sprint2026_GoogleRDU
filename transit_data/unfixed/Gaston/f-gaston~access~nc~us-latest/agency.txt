@@ -1,0 +1,2 @@
+agency_id,agency_name,agency_url,agency_timezone,agency_lang,agency_phone,agency_fare_url,agency_email
+,Gaston County ACCES,https://www.cityofgastonia.com/city-bus-service.html,US/Eastern,en,704-866-3254,https://www.gastongov.com/164/ACCESS---Transportation,julio.paredes@gastonianc.gov

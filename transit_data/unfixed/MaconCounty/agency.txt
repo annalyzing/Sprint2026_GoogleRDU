@@ -1,0 +1,2 @@
+agency_id,agency_name,agency_url,agency_timezone,agency_lang,agency_phone,agency_fare_url,agency_email
+Macon-113,Macon County Transit,http://www.macontransit.org/,US/Eastern,,(828) 349-2222,,

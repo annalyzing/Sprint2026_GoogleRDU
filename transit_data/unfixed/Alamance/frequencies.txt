@@ -1,0 +1,2 @@
+trip_id,start_time,end_time,headway_secs,exact_times
+10052855,06:50:00,14:47:00,4200,1

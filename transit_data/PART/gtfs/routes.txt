@@ -1,0 +1,9 @@
+route_id,agency_id,route_short_name,route_long_name,route_desc,route_type,route_url,route_color,route_text_color,route_sort_order,continuous_pickup,continuous_drop_off
+1,PART,1,Winston Salem Express,,3,http://www.partnc.org/165/route-1/,9A3ABA,FFFFFF,,,
+2,PART,2,Greensboro Express,,3,http://www.partnc.org/166/route-2/,3ABA62,FFFFFF,,,
+3,PART,3,High Point Express,,3,http://www.partnc.org/168/route-3/,6C6CC1,FFFFFF,,,
+4,PART,4,Alamance Burlington Express,,3,http://www.partnc.org/170/route-4/,D4260F,FFFFFF,,,
+9,PART,9,Davidson County Greensboro Express,,3,http://www.partnc.org/173/route-9/,07875C,FFFFFF,,,
+10,PART,10,Randolph Express,,3,http://www.partnc.org/174/route-10/,E87F0E,FFFFFF,,,
+17,PART,17,Kernersville Express,,3,https://www.partnc.org/179/Route-17,272EF5,FFFFFF,,,
+74,PART,74,Winston Salem High Point Express,,3,https://partnc.org/484/Route-74,5D1010,FFFFFF,,,

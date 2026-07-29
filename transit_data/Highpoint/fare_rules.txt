@@ -1,0 +1,13 @@
+fare_id,route_id
+Regular Fare,12
+Regular Fare,16
+Regular Fare,20
+Regular Fare,14
+Regular Fare,15
+Regular Fare,13
+Regular Fare,17
+Regular Fare,18
+Regular Fare,19
+Regular Fare,11
+Regular Fare,10
+Regular Fare,25

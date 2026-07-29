@@ -1,0 +1,7 @@
+service_id,service_description
+c_71383_b_85114_d_64,11/11B Regular Service - 2025 (Jun 14) (Sunday only)
+c_71383_b_85114_d_32,11/11B Regular Service - 2025 (Jun 14) (Saturday only)
+c_71383_b_85114_d_31,11/11B Regular Service - 2025 (Jun 14) (Weekday)
+c_70617_b_83063_d_64,Regular Service - 2024 (Aug 24) (Sunday only)
+c_70617_b_83063_d_32,Regular Service - 2024 (Aug 24) (Saturday only)
+c_70617_b_83063_d_31,Regular Service - 2024 (Aug 24) (Weekday)

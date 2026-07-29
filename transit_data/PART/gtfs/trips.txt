@@ -1,0 +1,343 @@
+route_id,service_id,trip_id,trip_headsign,direction_id,block_id,shape_id,wheelchair_accessible,bikes_allowed
+1,MF,1_WS_eastbound_T01,Coble Transportation Center,0,101,1WStoCTC,1,1
+1,MF,1_WS_eastbound_T02,Coble Transportation Center,0,102,1WStoCTC,1,1
+1,MF,1_WS_eastbound_T03,Coble Transportation Center,0,101,1WStoCTC,1,1
+1,MF,1_WS_eastbound_T04,Coble Transportation Center,0,102,1WStoCTC,1,1
+1,MF,1_WS_eastbound_T05,Coble Transportation Center,0,101,1WStoCTC,1,1
+1,MF,1_WS_eastbound_T06,Coble Transportation Center,0,102,1WStoCTC,1,1
+1,MF,1_WS_eastbound_T07,Coble Transportation Center,0,101,1WStoCTC,1,1
+1,MF,1_WS_eastbound_T08,Coble Transportation Center,0,102,1WStoCTC,1,1
+1,MF,1_WS_eastbound_T09,Coble Transportation Center,0,102,1WStoCTC,1,1
+1,MF,1_WS_eastbound_T10,Coble Transportation Center,0,102,1WStoCTC,1,1
+1,MF,1_WS_eastbound_T11,Coble Transportation Center,0,102,1WStoCTC,1,1
+1,MF,1_WS_eastbound_T12,Coble Transportation Center,0,102,1WStoCTC,1,1
+1,MF,1_WS_eastbound_T13,Coble Transportation Center,0,103,1WStoCTC,1,1
+1,MF,1_WS_eastbound_T14,Coble Transportation Center,0,103,1WStoCTC,1,1
+1,MF,1_WS_eastbound_T15,Coble Transportation Center,0,104,1WStoCTC,1,1
+1,MF,1_WS_eastbound_T16,Coble Transportation Center,0,103,1WStoCTC,1,1
+1,MF,1_WS_eastbound_T17,Coble Transportation Center,0,104,1WStoCTC,1,1
+1,MF,1_WS_eastbound_T18,Coble Transportation Center,0,103,1WStoCTC,1,1
+1,MF,1_WS_eastbound_T19,Coble Transportation Center,0,104,1WStoCTC,1,1
+1,MF,1_WS_eastbound_T20,Coble Transportation Center,0,103,1WStoCTC,1,1
+1,MF,1_WS_eastbound_T21,Coble Transportation Center,0,104,1WStoCTC,1,1
+1,MF,1_WS_eastbound_T22,Coble Transportation Center,0,103,1WStoCTC,1,1
+1,MF,1_WS_eastbound_T23,Coble Transportation Center,0,103,1WStoCTC,1,1
+1,MF,1_WS_westbound_T01,Winston-Salem Transportation Center,1,101,1CTCtoWS,1,1
+1,MF,1_WS_westbound_T02,Winston-Salem Transportation Center,1,102,1CTCtoWS,1,1
+1,MF,1_WS_westbound_T03,Winston-Salem Transportation Center,1,101,1CTCtoWS,1,1
+1,MF,1_WS_westbound_T04,Winston-Salem Transportation Center,1,102,1CTCtoWS,1,1
+1,MF,1_WS_westbound_T05,Winston-Salem Transportation Center,1,101,1CTCtoWS,1,1
+1,MF,1_WS_westbound_T06,Winston-Salem Transportation Center,1,102,1CTCtoWS,1,1
+1,MF,1_WS_westbound_T07,Winston-Salem Transportation Center,1,101,1CTCtoWS,1,1
+1,MF,1_WS_westbound_T08,Winston-Salem Transportation Center,1,102,1CTCtoWS,1,1
+1,MF,1_WS_westbound_T09,Winston-Salem Transportation Center,1,102,1CTCtoWS,1,1
+1,MF,1_WS_westbound_T10,Winston-Salem Transportation Center,1,102,1CTCtoWS,1,1
+1,MF,1_WS_westbound_T11,Winston-Salem Transportation Center,1,102,1CTCtoWS,1,1
+1,MF,1_WS_westbound_T12,Winston-Salem Transportation Center,1,103,1CTCtoWS,1,1
+1,MF,1_WS_westbound_T13,Winston-Salem Transportation Center,1,103,1CTCtoWS,1,1
+1,MF,1_WS_westbound_T14,Winston-Salem Transportation Center,1,103,1CTCtoWS,1,1
+1,MF,1_WS_westbound_T15,Winston-Salem Transportation Center,1,104,1CTCtoWS,1,1
+1,MF,1_WS_westbound_T16,Winston-Salem Transportation Center,1,103,1CTCtoWS,1,1
+1,MF,1_WS_westbound_T17,Winston-Salem Transportation Center,1,104,1CTCtoWS,1,1
+1,MF,1_WS_westbound_T18,Winston-Salem Transportation Center,1,103,1CTCtoWS,1,1
+1,MF,1_WS_westbound_T19,Winston-Salem Transportation Center,1,104,1CTCtoWS,1,1
+1,MF,1_WS_westbound_T20,Winston-Salem Transportation Center,1,103,1CTCtoWS,1,1
+1,MF,1_WS_westbound_T21,Winston-Salem Transportation Center,1,104,1CTCtoWS,1,1
+1,MF,1_WS_westbound_T22,Winston-Salem Transportation Center,1,103,1CTCtoWS,1,1
+1,MF,1_Last_WS_westbound_T01,Winston-Salem Transportation Center,1,103,1CTCtoWS,1,1
+1,Sa,1_WS_eastbound_Sat_T01,Coble Transportation Center,0,106,1WStoCTC,1,1
+1,Sa,1_WS_eastbound_Sat_T02,Coble Transportation Center,0,106,1WStoCTC,1,1
+1,Sa,1_WS_eastbound_Sat_T03,Coble Transportation Center,0,106,1WStoCTC,1,1
+1,Sa,1_WS_eastbound_Sat_T04,Coble Transportation Center,0,106,1WStoCTC,1,1
+1,Sa,1_WS_eastbound_Sat_T05,Coble Transportation Center,0,106,1WStoCTC,1,1
+1,Sa,1_WS_eastbound_Sat_T06,Coble Transportation Center,0,106,1WStoCTC,1,1
+1,Sa,1_WS_eastbound_Sat_T07,Coble Transportation Center,0,106,1WStoCTC,1,1
+1,Sa,1_WS_eastbound_Sat_T08,Coble Transportation Center,0,107,1WStoCTC,1,1
+1,Sa,1_WS_eastbound_Sat_T09,Coble Transportation Center,0,107,1WStoCTC,1,1
+1,Sa,1_WS_eastbound_Sat_T10,Coble Transportation Center,0,107,1WStoCTC,1,1
+1,Sa,1_WS_eastbound_Sat_T11,Coble Transportation Center,0,107,1WStoCTC,1,1
+1,Sa,1_WS_eastbound_Sat_T12,Coble Transportation Center,0,107,1WStoCTC,1,1
+1,Sa,1_WS_eastbound_Sat_T13,Coble Transportation Center,0,107,1WStoCTC,1,1
+1,Sa,1_WS_eastbound_Sat_T14,Coble Transportation Center,0,107,1WStoCTC,1,1
+1,Sa,1_WS_eastbound_Sat_T15,Coble Transportation Center,0,107,1WStoCTC,1,1
+1,Sa,1_WS_westbound_Sat_T01,Winston-Salem Transportation Center,1,106,1CTCtoWS,1,1
+1,Sa,1_WS_westbound_Sat_T02,Winston-Salem Transportation Center,1,106,1CTCtoWS,1,1
+1,Sa,1_WS_westbound_Sat_T03,Winston-Salem Transportation Center,1,106,1CTCtoWS,1,1
+1,Sa,1_WS_westbound_Sat_T04,Winston-Salem Transportation Center,1,106,1CTCtoWS,1,1
+1,Sa,1_WS_westbound_Sat_T05,Winston-Salem Transportation Center,1,106,1CTCtoWS,1,1
+1,Sa,1_WS_westbound_Sat_T06,Winston-Salem Transportation Center,1,106,1CTCtoWS,1,1
+1,Sa,1_WS_westbound_Sat_T07,Winston-Salem Transportation Center,1,107,1CTCtoWS,1,1
+1,Sa,1_WS_westbound_Sat_T08,Winston-Salem Transportation Center,1,107,1CTCtoWS,1,1
+1,Sa,1_WS_westbound_Sat_T09,Winston-Salem Transportation Center,1,107,1CTCtoWS,1,1
+1,Sa,1_WS_westbound_Sat_T10,Winston-Salem Transportation Center,1,107,1CTCtoWS,1,1
+1,Sa,1_WS_westbound_Sat_T11,Winston-Salem Transportation Center,1,107,1CTCtoWS,1,1
+1,Sa,1_WS_westbound_Sat_T12,Winston-Salem Transportation Center,1,107,1CTCtoWS,1,1
+1,Sa,1_WS_westbound_Sat_T13,Winston-Salem Transportation Center,1,107,1CTCtoWS,1,1
+1,Sa,1_WS_westbound_Sat_T14,Winston-Salem Transportation Center,1,107,1CTCtoWS,1,1
+1,Sa,1_Last_WS_westbound_Sat_T01,Winston-Salem Transportation Center,1,107,1CTCtoWS,1,1
+2,MF,2_GB_westbound_T01,Coble Transportation Center,0,201,2GBtoCTC,1,1
+2,MF,2_GB_westbound_T02,Coble Transportation Center,0,202,2GBtoCTC,1,1
+2,MF,2_GB_westbound_T03,Coble Transportation Center,0,201,2GBtoCTC,1,1
+2,MF,2_GB_westbound_T04,Coble Transportation Center,0,202,2GBtoCTC,1,1
+2,MF,2_GB_westbound_T05,Coble Transportation Center,0,201,2GBtoCTC,1,1
+2,MF,2_GB_westbound_T06,Coble Transportation Center,0,202,2GBtoCTC,1,1
+2,MF,2_GB_westbound_T07,Coble Transportation Center,0,201,2GBtoCTC,1,1
+2,MF,2_GB_westbound_T08,Coble Transportation Center,0,202,2GBtoCTC,1,1
+2,MF,2_GB_westbound_T09,Coble Transportation Center,0,202,2GBtoCTC,1,1
+2,MF,2_GB_westbound_T10,Coble Transportation Center,0,202,2GBtoCTC,1,1
+2,MF,2_GB_westbound_T11,Coble Transportation Center,0,202,2GBtoCTC,1,1
+2,MF,2_GB_westbound_T12,Coble Transportation Center,0,202,2GBtoCTC,1,1
+2,MF,2_GB_westbound_T13,Coble Transportation Center,0,203,2GBtoCTC,1,1
+2,MF,2_GB_westbound_T14,Coble Transportation Center,0,203,2GBtoCTC,1,1
+2,MF,2_GB_westbound_T15,Coble Transportation Center,0,204,2GBtoCTC,1,1
+2,MF,2_GB_westbound_T16,Coble Transportation Center,0,203,2GBtoCTC,1,1
+2,MF,2_GB_westbound_T17,Coble Transportation Center,0,204,2GBtoCTC,1,1
+2,MF,2_GB_westbound_T18,Coble Transportation Center,0,203,2GBtoCTC,1,1
+2,MF,2_GB_westbound_T19,Coble Transportation Center,0,204,2GBtoCTC,1,1
+2,MF,2_GB_westbound_T20,Coble Transportation Center,0,203,2GBtoCTC,1,1
+2,MF,2_GB_westbound_T21,Coble Transportation Center,0,204,2GBtoCTC,1,1
+2,MF,2_GB_westbound_T22,Coble Transportation Center,0,203,2GBtoCTC,1,1
+2,MF,2_GB_westbound_T23,Coble Transportation Center,0,203,2GBtoCTC,1,1
+2,MF,2_GB_eastbound_T01,Greensboro Depot,1,201,2CTCtoGB,1,1
+2,MF,2_GB_eastbound_T02,Greensboro Depot,1,202,2CTCtoGB,1,1
+2,MF,2_GB_eastbound_T03,Greensboro Depot,1,201,2CTCtoGB,1,1
+2,MF,2_GB_eastbound_T04,Greensboro Depot,1,202,2CTCtoGB,1,1
+2,MF,2_GB_eastbound_T05,Greensboro Depot,1,201,2CTCtoGB,1,1
+2,MF,2_GB_eastbound_T06,Greensboro Depot,1,202,2CTCtoGB,1,1
+2,MF,2_GB_eastbound_T07,Greensboro Depot,1,201,2CTCtoGB,1,1
+2,MF,2_GB_eastbound_T08,Greensboro Depot,1,202,2CTCtoGB,1,1
+2,MF,2_GB_eastbound_T09,Greensboro Depot,1,202,2CTCtoGB,1,1
+2,MF,2_GB_eastbound_T10,Greensboro Depot,1,202,2CTCtoGB,1,1
+2,MF,2_GB_eastbound_T11,Greensboro Depot,1,202,2CTCtoGB,1,1
+2,MF,2_GB_eastbound_T12,Greensboro Depot,1,203,2CTCtoGB,1,1
+2,MF,2_GB_eastbound_T13,Greensboro Depot,1,203,2CTCtoGB,1,1
+2,MF,2_GB_eastbound_T14,Greensboro Depot,1,203,2CTCtoGB,1,1
+2,MF,2_GB_eastbound_T15,Greensboro Depot,1,204,2CTCtoGB,1,1
+2,MF,2_GB_eastbound_T16,Greensboro Depot,1,203,2CTCtoGB,1,1
+2,MF,2_GB_eastbound_T17,Greensboro Depot,1,204,2CTCtoGB,1,1
+2,MF,2_GB_eastbound_T18,Greensboro Depot,1,203,2CTCtoGB,1,1
+2,MF,2_GB_eastbound_T19,Greensboro Depot,1,204,2CTCtoGB,1,1
+2,MF,2_GB_eastbound_T20,Greensboro Depot,1,203,2CTCtoGB,1,1
+2,MF,2_GB_eastbound_T21,Greensboro Depot,1,204,2CTCtoGB,1,1
+2,MF,2_GB_eastbound_T22,Greensboro Depot,1,203,2CTCtoGB,1,1
+2,MF,2_Last_GB_eastbound_T01,Greensboro Depot,1,203,2CTCtoGB,1,1
+2,Sa,2_GB_westbound_Sat_T01,Coble Transportation Center,0,206,2GBtoCTC,1,1
+2,Sa,2_GB_westbound_Sat_T02,Coble Transportation Center,0,206,2GBtoCTC,1,1
+2,Sa,2_GB_westbound_Sat_T03,Coble Transportation Center,0,206,2GBtoCTC,1,1
+2,Sa,2_GB_westbound_Sat_T04,Coble Transportation Center,0,206,2GBtoCTC,1,1
+2,Sa,2_GB_westbound_Sat_T05,Coble Transportation Center,0,206,2GBtoCTC,1,1
+2,Sa,2_GB_westbound_Sat_T06,Coble Transportation Center,0,206,2GBtoCTC,1,1
+2,Sa,2_GB_westbound_Sat_T07,Coble Transportation Center,0,206,2GBtoCTC,1,1
+2,Sa,2_GB_westbound_Sat_T08,Coble Transportation Center,0,207,2GBtoCTC,1,1
+2,Sa,2_GB_westbound_Sat_T09,Coble Transportation Center,0,207,2GBtoCTC,1,1
+2,Sa,2_GB_westbound_Sat_T10,Coble Transportation Center,0,207,2GBtoCTC,1,1
+2,Sa,2_GB_westbound_Sat_T11,Coble Transportation Center,0,207,2GBtoCTC,1,1
+2,Sa,2_GB_westbound_Sat_T12,Coble Transportation Center,0,207,2GBtoCTC,1,1
+2,Sa,2_GB_westbound_Sat_T13,Coble Transportation Center,0,207,2GBtoCTC,1,1
+2,Sa,2_GB_westbound_Sat_T14,Coble Transportation Center,0,207,2GBtoCTC,1,1
+2,Sa,2_GB_westbound_Sat_T15,Coble Transportation Center,0,207,2GBtoCTC,1,1
+2,Sa,2_GB_eastbound_Sat_T01,Greensboro Depot,1,206,2CTCtoGB,1,1
+2,Sa,2_GB_eastbound_Sat_T02,Greensboro Depot,1,206,2CTCtoGB,1,1
+2,Sa,2_GB_eastbound_Sat_T03,Greensboro Depot,1,206,2CTCtoGB,1,1
+2,Sa,2_GB_eastbound_Sat_T04,Greensboro Depot,1,206,2CTCtoGB,1,1
+2,Sa,2_GB_eastbound_Sat_T05,Greensboro Depot,1,206,2CTCtoGB,1,1
+2,Sa,2_GB_eastbound_Sat_T06,Greensboro Depot,1,206,2CTCtoGB,1,1
+2,Sa,2_GB_eastbound_Sat_T07,Greensboro Depot,1,207,2CTCtoGB,1,1
+2,Sa,2_GB_eastbound_Sat_T08,Greensboro Depot,1,207,2CTCtoGB,1,1
+2,Sa,2_GB_eastbound_Sat_T09,Greensboro Depot,1,207,2CTCtoGB,1,1
+2,Sa,2_GB_eastbound_Sat_T10,Greensboro Depot,1,207,2CTCtoGB,1,1
+2,Sa,2_GB_eastbound_Sat_T11,Greensboro Depot,1,207,2CTCtoGB,1,1
+2,Sa,2_GB_eastbound_Sat_T12,Greensboro Depot,1,207,2CTCtoGB,1,1
+2,Sa,2_GB_eastbound_Sat_T13,Greensboro Depot,1,207,2CTCtoGB,1,1
+2,Sa,2_GB_eastbound_Sat_T14,Greensboro Depot,1,207,2CTCtoGB,1,1
+2,Sa,2_Last_GB_eastbound_Sat_T01,Greensboro Depot,1,207,2CTCtoGB,1,1
+3,MF,3_HP_northbound_T01,Coble Transportation Center,0,301,3HPtoCTC,1,1
+3,MF,3_HP_northbound_T02,Coble Transportation Center,0,302,3HPtoCTC,1,1
+3,MF,3_HP_northbound_T03,Coble Transportation Center,0,301,3HPtoCTC,1,1
+3,MF,3_HP_northbound_T04,Coble Transportation Center,0,302,3HPtoCTC,1,1
+3,MF,3_HP_northbound_T05,Coble Transportation Center,0,301,3HPtoCTC,1,1
+3,MF,3_HP_northbound_T06,Coble Transportation Center,0,302,3HPtoCTC,1,1
+3,MF,3_HP_northbound_T07,Coble Transportation Center,0,301,3HPtoCTC,1,1
+3,MF,3_HP_northbound_T08,Coble Transportation Center,0,302,3HPtoCTC,1,1
+3,MF,3_HP_northbound_T09,Coble Transportation Center,0,302,3HPtoCTC,1,1
+3,MF,3_HP_northbound_T10,Coble Transportation Center,0,302,3HPtoCTC,1,1
+3,MF,3_HP_northbound_T11,Coble Transportation Center,0,302,3HPtoCTC,1,1
+3,MF,3_HP_northbound_T12,Coble Transportation Center,0,302,3HPtoCTC,1,1
+3,MF,3_HP_northbound_T13,Coble Transportation Center,0,303,3HPtoCTC,1,1
+3,MF,3_HP_northbound_T14,Coble Transportation Center,0,303,3HPtoCTC,1,1
+3,MF,3_HP_northbound_T15,Coble Transportation Center,0,304,3HPtoCTC,1,1
+3,MF,3_HP_northbound_T16,Coble Transportation Center,0,303,3HPtoCTC,1,1
+3,MF,3_HP_northbound_T17,Coble Transportation Center,0,304,3HPtoCTC,1,1
+3,MF,3_HP_northbound_T18,Coble Transportation Center,0,303,3HPtoCTC,1,1
+3,MF,3_HP_northbound_T19,Coble Transportation Center,0,304,3HPtoCTC,1,1
+3,MF,3_HP_northbound_T20,Coble Transportation Center,0,303,3HPtoCTC,1,1
+3,MF,3_HP_northbound_T21,Coble Transportation Center,0,304,3HPtoCTC,1,1
+3,MF,3_HP_northbound_T22,Coble Transportation Center,0,303,3HPtoCTC,1,1
+3,MF,3_HP_northbound_T23,Coble Transportation Center,0,303,3HPtoCTC,1,1
+3,MF,3_HP_southbound_T01,High Point Broad Ave Terminal,1,301,3CTCtoHP,1,1
+3,MF,3_HP_southbound_T02,High Point Broad Ave Terminal,1,302,3CTCtoHP,1,1
+3,MF,3_HP_southbound_T03,High Point Broad Ave Terminal,1,301,3CTCtoHP,1,1
+3,MF,3_HP_southbound_T04,High Point Broad Ave Terminal,1,302,3CTCtoHP,1,1
+3,MF,3_HP_southbound_T05,High Point Broad Ave Terminal,1,301,3CTCtoHP,1,1
+3,MF,3_HP_southbound_T06,High Point Broad Ave Terminal,1,302,3CTCtoHP,1,1
+3,MF,3_HP_southbound_T07,High Point Broad Ave Terminal,1,301,3CTCtoHP,1,1
+3,MF,3_HP_southbound_T08,High Point Broad Ave Terminal,1,302,3CTCtoHP,1,1
+3,MF,3_HP_southbound_T09,High Point Broad Ave Terminal,1,302,3CTCtoHP,1,1
+3,MF,3_HP_southbound_T10,High Point Broad Ave Terminal,1,302,3CTCtoHP,1,1
+3,MF,3_HP_southbound_T11,High Point Broad Ave Terminal,1,302,3CTCtoHP,1,1
+3,MF,3_HP_southbound_T12,High Point Broad Ave Terminal,1,303,3CTCtoHP,1,1
+3,MF,3_HP_southbound_T13,High Point Broad Ave Terminal,1,303,3CTCtoHP,1,1
+3,MF,3_HP_southbound_T14,High Point Broad Ave Terminal,1,303,3CTCtoHP,1,1
+3,MF,3_HP_southbound_T15,High Point Broad Ave Terminal,1,304,3CTCtoHP,1,1
+3,MF,3_HP_southbound_T16,High Point Broad Ave Terminal,1,303,3CTCtoHP,1,1
+3,MF,3_HP_southbound_T17,High Point Broad Ave Terminal,1,304,3CTCtoHP,1,1
+3,MF,3_HP_southbound_T18,High Point Broad Ave Terminal,1,303,3CTCtoHP,1,1
+3,MF,3_HP_southbound_T19,High Point Broad Ave Terminal,1,304,3CTCtoHP,1,1
+3,MF,3_HP_southbound_T20,High Point Broad Ave Terminal,1,303,3CTCtoHP,1,1
+3,MF,3_HP_southbound_T21,High Point Broad Ave Terminal,1,304,3CTCtoHP,1,1
+3,MF,3_HP_southbound_T22,High Point Broad Ave Terminal,1,303,3CTCtoHP,1,1
+3,MF,3_Last_HP_southbound_T01,High Point Broad Ave Terminal,1,303,3CTCtoHP,1,1
+3,Sa,3_HP_northbound_Sat_T01,Coble Transportation Center,0,306,3HPtoCTC,1,1
+3,Sa,3_HP_northbound_Sat_T02,Coble Transportation Center,0,306,3HPtoCTC,1,1
+3,Sa,3_HP_northbound_Sat_T03,Coble Transportation Center,0,306,3HPtoCTC,1,1
+3,Sa,3_HP_northbound_Sat_T04,Coble Transportation Center,0,306,3HPtoCTC,1,1
+3,Sa,3_HP_northbound_Sat_T05,Coble Transportation Center,0,306,3HPtoCTC,1,1
+3,Sa,3_HP_northbound_Sat_T06,Coble Transportation Center,0,306,3HPtoCTC,1,1
+3,Sa,3_HP_northbound_Sat_T07,Coble Transportation Center,0,306,3HPtoCTC,1,1
+3,Sa,3_HP_northbound_Sat_T08,Coble Transportation Center,0,307,3HPtoCTC,1,1
+3,Sa,3_HP_northbound_Sat_T09,Coble Transportation Center,0,307,3HPtoCTC,1,1
+3,Sa,3_HP_northbound_Sat_T10,Coble Transportation Center,0,307,3HPtoCTC,1,1
+3,Sa,3_HP_northbound_Sat_T11,Coble Transportation Center,0,307,3HPtoCTC,1,1
+3,Sa,3_HP_northbound_Sat_T12,Coble Transportation Center,0,307,3HPtoCTC,1,1
+3,Sa,3_HP_northbound_Sat_T13,Coble Transportation Center,0,307,3HPtoCTC,1,1
+3,Sa,3_HP_northbound_Sat_T14,Coble Transportation Center,0,307,3HPtoCTC,1,1
+3,Sa,3_HP_northbound_Sat_T15,Coble Transportation Center,0,307,3HPtoCTC,1,1
+3,Sa,3_HP_southbound_Sat_T01,High Point Broad Ave Terminal,1,306,3CTCtoHP,1,1
+3,Sa,3_HP_southbound_Sat_T02,High Point Broad Ave Terminal,1,306,3CTCtoHP,1,1
+3,Sa,3_HP_southbound_Sat_T03,High Point Broad Ave Terminal,1,306,3CTCtoHP,1,1
+3,Sa,3_HP_southbound_Sat_T04,High Point Broad Ave Terminal,1,306,3CTCtoHP,1,1
+3,Sa,3_HP_southbound_Sat_T05,High Point Broad Ave Terminal,1,306,3CTCtoHP,1,1
+3,Sa,3_HP_southbound_Sat_T06,High Point Broad Ave Terminal,1,306,3CTCtoHP,1,1
+3,Sa,3_HP_southbound_Sat_T07,High Point Broad Ave Terminal,1,307,3CTCtoHP,1,1
+3,Sa,3_HP_southbound_Sat_T08,High Point Broad Ave Terminal,1,307,3CTCtoHP,1,1
+3,Sa,3_HP_southbound_Sat_T09,High Point Broad Ave Terminal,1,307,3CTCtoHP,1,1
+3,Sa,3_HP_southbound_Sat_T10,High Point Broad Ave Terminal,1,307,3CTCtoHP,1,1
+3,Sa,3_HP_southbound_Sat_T11,High Point Broad Ave Terminal,1,307,3CTCtoHP,1,1
+3,Sa,3_HP_southbound_Sat_T12,High Point Broad Ave Terminal,1,307,3CTCtoHP,1,1
+3,Sa,3_HP_southbound_Sat_T13,High Point Broad Ave Terminal,1,307,3CTCtoHP,1,1
+3,Sa,3_HP_southbound_Sat_T14,High Point Broad Ave Terminal,1,307,3CTCtoHP,1,1
+3,Sa,3_Last_HP_southbound_Sat_T01,High Point Broad Ave Terminal,1,307,3CTCtoHP,1,1
+4,MF,4_AB_eastbound_1_T01,UNC Hospitals,1,401,B4GBtoCH,1,1
+4,MF,4_AB_eastbound_1_T02,UNC Hospitals,1,402,B4GBtoCH,1,1
+4,MF,4_AB_eastbound_2_T01,UNC Hospitals,1,403,A4CTCtoCH,1,1
+4,MF,4_AB_eastbound_2_T02,UNC Hospitals,1,404,A4CTCtoCH,1,1
+4,MF,4_AB_eastbound_2_T03,UNC Hospitals,1,405,A4CTCtoCH,1,1
+4,MF,4_AB_eastbound_3_T01,UNC Hospitals,1,401,D4MBtoCH,1,1
+4,MF,4_AB_eastbound_3_T02,UNC Hospitals,1,406,D4MBtoCH,1,1
+4,MF,4_AB_eastbound_4_T01,UNC Hospitals,1,402,C4ACCtoCH,1,1
+4,MF,4_AB_westbound_1_T01,Mebane Cone Health,0,401,B4CHtoMB,1,1
+4,MF,4_AB_westbound_1_T02,Mebane Cone Health,0,406,B4CHtoMB,1,1
+4,MF,4_AB_westbound_2_T01,Alamance Community College,0,402,C4CHtoACC,1,1
+4,MF,4_AB_westbound_3_T01,Coble Transportation Center,0,401,A4CHtoCTC,1,1
+4,MF,4_AB_westbound_3_T02,Coble Transportation Center,0,402,A4CHtoCTC,1,1
+4,MF,4_AB_westbound_3_T03,Coble Transportation Center,0,403,A4CHtoCTC,1,1
+4,MF,4_AB_westbound_3_T04,Coble Transportation Center,0,404,A4CHtoCTC,1,1
+4,MF,4_AB_westbound_3_T05,Coble Transportation Center,0,405,A4CHtoCTC,1,1
+4,MF,4_AB_westbound_3_T06,Coble Transportation Center,0,406,A4CHtoCTC,1,1
+9,MF,9_DA_northbound_T01,Greensboro Depot,0,901,9THtoGB,1,1
+9,MF,9_DA_northbound_T02,Greensboro Depot,0,902,9THtoGB,1,1
+9,MF,9_DA_northbound_T03,Greensboro Depot,0,901,9THtoGB,1,1
+9,MF,9_DA_northbound_T04,Greensboro Depot,0,902,9THtoGB,1,1
+9,MF,9_DA_northbound_T05,Greensboro Depot,0,902,9THtoGB,1,1
+9,MF,9_DA_northbound_T06,Greensboro Depot,0,903,9THtoGB,1,1
+9,MF,9_DA_northbound_T07,Greensboro Depot,0,903,9THtoGB,1,1
+9,MF,9_DA_northbound_T08,Greensboro Depot,0,903,9THtoGB,1,1
+9,MF,9_DA_northbound_T09,Greensboro Depot,0,904,9THtoGB,1,1
+9,MF,9_DA_northbound_T10,Greensboro Depot,0,903,9THtoGB,1,1
+9,MF,9_DA_southbound_T01,Thomasville Park & Ride,1,902,9GBtoTH,1,1
+9,MF,9_DA_southbound_T02,Thomasville Park & Ride,1,901,9GBtoTH,1,1
+9,MF,9_DA_southbound_T03,Thomasville Park & Ride,1,902,9GBtoTH,1,1
+9,MF,9_DA_southbound_T04,Thomasville Park & Ride,1,902,9GBtoTH,1,1
+9,MF,9_DA_southbound_T05,Thomasville Park & Ride,1,902,9GBtoTH,1,1
+9,MF,9_DA_southbound_T06,Thomasville Park & Ride,1,903,9GBtoTH,1,1
+9,MF,9_DA_southbound_T07,Thomasville Park & Ride,1,903,9GBtoTH,1,1
+9,MF,9_DA_southbound_T08,Thomasville Park & Ride,1,904,9GBtoTH,1,1
+9,MF,9_DA_southbound_T09,Thomasville Park & Ride,1,903,9GBtoTH,1,1
+9,MF,9_Last_DA_southbound_T01,Thomasville Park & Ride,1,904,9GBtoTH,1,1
+10,MF,10_RA_northbound_1_T01,Greensboro Depot,0,1001,A10ABtoGB,1,1
+10,MF,10_RA_northbound_1_T02,Greensboro Depot,0,1003,A10ABtoGB,1,1
+10,MF,10_RA_northbound_1_T03,Greensboro Depot,0,1002,A10ABtoGB,1,1
+10,MF,10_RA_northbound_2_T01,Greensboro Depot,0,1001,C10ABtoGB,1,1
+10,MF,10_RA_northbound_2_T02,Greensboro Depot,0,1001,C10ABtoGB,1,1
+10,MF,10_RA_northbound_2_T03,Greensboro Depot,0,1004,C10ABtoGB,1,1
+10,MF,10_RA_northbound_2_T04,Greensboro Depot,0,1005,C10ABtoGB,1,1
+10,MF,10_RA_northbound_2_T05,Greensboro Depot,0,1006,C10ABtoGB,1,1
+10,MFPS2,10_Last_RA_northbound_PeakSeason2_T01,Greensboro Depot,0,1004,C10ABtoGB,1,1
+10,MFW,10_Last_RA_northbound_Winter_T01,Greensboro Depot,0,1004,A10ABtoGB,1,1
+10,MFW1,10_Last_RA_northbound_Winter_1_T01,Greensboro Depot,0,1004,A10ABtoGB,1,1
+10,MF,10_RA_southbound_1_T01,S Asheboro Park & Ride,1,1002,A10GBtoAB,1,1
+10,MF,10_RA_southbound_1_T02,S Asheboro Park & Ride,1,1005,A10GBtoAB,1,1
+10,MF,10_RA_southbound_2_T01,NC Zoo,1,1001,C10GBtoAB,1,1
+10,MF,10_RA_southbound_2_T02,NC Zoo,1,1002,C10GBtoAB,1,1
+10,MF,10_RA_southbound_2_T03,NC Zoo,1,1001,C10GBtoAB,1,1
+10,MF,10_RA_southbound_2_T04,NC Zoo,1,1004,C10GBtoAB,1,1
+10,MF,10_RA_southbound_2_T05,NC Zoo,1,1005,C10GBtoAB,1,1
+10,MFPS2,10_2nd_to_last_RA_southbound_PeakSeason2_T01,NC Zoo,1,1004,C10GBtoAB,1,1
+10,MFW,10_2nd_to_last_RA_southbound_Winter_T01,S Asheboro Park & Ride,1,1004,A10GBtoAB,1,1
+10,MFW1,10_2nd_to_last_RA_southbound_Winter_1_T01,S Asheboro Park & Ride,1,1004,A10GBtoAB,1,1
+10,MF,10_Last_RA_southbound_T01,S Asheboro Park & Ride,1,1006,A10GBtoAB,1,1
+17,MF,17_First_KV_westbound_T01,Winston-Salem Transportation Center,1,1701,B17KVtoWS,1,1
+17,MF,17_KV_westbound_T01,Winston-Salem Transportation Center,1,1702,A17CTCtoWS,1,1
+17,MF,17_KV_westbound_T02,Winston-Salem Transportation Center,1,1701,A17CTCtoWS,1,1
+17,MF,17_KV_westbound_T03,Winston-Salem Transportation Center,1,1702,A17CTCtoWS,1,1
+17,MF,17_KV_westbound_T04,Winston-Salem Transportation Center,1,1701,A17CTCtoWS,1,1
+17,MF,17_KV_westbound_T05,Winston-Salem Transportation Center,1,1702,A17CTCtoWS,1,1
+17,MF,17_KV_westbound_T06,Winston-Salem Transportation Center,1,1703,A17CTCtoWS,1,1
+17,MF,17_KV_westbound_T07,Winston-Salem Transportation Center,1,1704,A17CTCtoWS,1,1
+17,MF,17_KV_westbound_T08,Winston-Salem Transportation Center,1,1703,A17CTCtoWS,1,1
+17,MF,17_KV_westbound_T09,Winston-Salem Transportation Center,1,1704,A17CTCtoWS,1,1
+17,MF,17_KV_westbound_T10,Winston-Salem Transportation Center,1,1703,A17CTCtoWS,1,1
+17,MF,17_KV_westbound_T11,Winston-Salem Transportation Center,1,1704,A17CTCtoWS,1,1
+17,MF,17_First_KV_eastbound_T01,Coble Transportation Center,0,1702,B17KVtoCTC,1,1
+17,MF,17_KV_eastbound_T01,Coble Transportation Center,0,1701,A17WStoCTC,1,1
+17,MF,17_KV_eastbound_T02,Coble Transportation Center,0,1702,A17WStoCTC,1,1
+17,MF,17_KV_eastbound_T03,Coble Transportation Center,0,1701,A17WStoCTC,1,1
+17,MF,17_KV_eastbound_T04,Coble Transportation Center,0,1702,A17WStoCTC,1,1
+17,MF,17_KV_eastbound_T05,Coble Transportation Center,0,1701,A17WStoCTC,1,1
+17,MF,17_KV_eastbound_T06,Coble Transportation Center,0,1703,A17WStoCTC,1,1
+17,MF,17_KV_eastbound_T07,Coble Transportation Center,0,1704,A17WStoCTC,1,1
+17,MF,17_KV_eastbound_T08,Coble Transportation Center,0,1703,A17WStoCTC,1,1
+17,MF,17_KV_eastbound_T09,Coble Transportation Center,0,1704,A17WStoCTC,1,1
+17,MF,17_KV_eastbound_T10,Coble Transportation Center,0,1703,A17WStoCTC,1,1
+17,MF,17_Last_KV_eastbound_T01,Coble Transportation Center,0,1704,C17WStoCTCnoVET,1,1
+74,MF,74_Westbound_first_half_T01,Novant Forsyth Medical Center,1,7401,A74HPtoWS,1,1
+74,MF,74_Westbound_first_half_T02,Novant Forsyth Medical Center,1,7402,A74HPtoWS,1,1
+74,MF,74_Westbound_first_half_T03,Novant Forsyth Medical Center,1,7401,A74HPtoWS,1,1
+74,MF,74_Westbound_first_half_T04,Novant Forsyth Medical Center,1,7402,A74HPtoWS,1,1
+74,MF,74_Westbound_first_half_T05,Novant Forsyth Medical Center,1,7401,A74HPtoWS,1,1
+74,MF,74_Westbound_first_half_T06,Novant Forsyth Medical Center,1,7402,A74HPtoWS,1,1
+74,MF,74_Westbound_first_half_T07,Novant Forsyth Medical Center,1,7401,A74HPtoWS,1,1
+74,MF,74_Westbound_first_half_T08,Novant Forsyth Medical Center,1,7402,A74HPtoWS,1,1
+74,MF,74_Westbound_second_half_T01,Novant Forsyth Medical Center,1,7405,B74HPtoWS,1,1
+74,MF,74_Westbound_second_half_T02,Novant Forsyth Medical Center,1,7404,B74HPtoWS,1,1
+74,MF,74_Westbound_second_half_T03,Novant Forsyth Medical Center,1,7405,B74HPtoWS,1,1
+74,MF,74_Westbound_second_half_T04,Novant Forsyth Medical Center,1,7404,B74HPtoWS,1,1
+74,MF,74_Westbound_second_half_T05,Novant Forsyth Medical Center,1,7405,B74HPtoWS,1,1
+74,MF,74_Westbound_second_half_T06,Novant Forsyth Medical Center,1,7404,B74HPtoWS,1,1
+74,MF,74_Last_two_Westbound_T01,Winston-Salem Transportation Center,1,7405,C74HPtoWS,1,1
+74,MF,74_Last_two_Westbound_T02,Winston-Salem Transportation Center,1,7404,C74HPtoWS,1,1
+74,MF,74_Eastbound_first_trip_T01,High Point Terminal (Outer Slip),0,7402,C74WStoHP,1,1
+74,MF,74_Eastbound_first_half_T01,High Point Terminal (Outer Slip),0,7401,A74WStoHP,1,1
+74,MF,74_Eastbound_first_half_T02,High Point Terminal (Outer Slip),0,7402,A74WStoHP,1,1
+74,MF,74_Eastbound_first_half_T03,High Point Terminal (Outer Slip),0,7401,A74WStoHP,1,1
+74,MF,74_Eastbound_first_half_T04,High Point Terminal (Outer Slip),0,7402,A74WStoHP,1,1
+74,MF,74_Eastbound_first_half_T05,High Point Terminal (Outer Slip),0,7401,A74WStoHP,1,1
+74,MF,74_Eastbound_first_half_T06,High Point Terminal (Outer Slip),0,7402,A74WStoHP,1,1
+74,MF,74_Eastbound_first_half_T07,High Point Terminal (Outer Slip),0,7405,A74WStoHP,1,1
+74,MF,74_Eastbound_second_half_T01,High Point Terminal (Outer Slip),0,7404,B74WStoHP,1,1
+74,MF,74_Eastbound_second_half_T02,High Point Terminal (Outer Slip),0,7405,B74WStoHP,1,1
+74,MF,74_Eastbound_second_half_T03,High Point Terminal (Outer Slip),0,7404,B74WStoHP,1,1
+74,MF,74_Eastbound_second_half_T04,High Point Terminal (Outer Slip),0,7405,B74WStoHP,1,1
+74,MF,74_Eastbound_second_half_T05,High Point Terminal (Outer Slip),0,7404,B74WStoHP,1,1
+74,MF,74_Eastbound_second_half_T06,High Point Terminal (Outer Slip),0,7405,B74WStoHP,1,1
+74,MF,74_Eastbound_second_half_T07,High Point Terminal (Outer Slip),0,7404,B74WStoHP,1,1

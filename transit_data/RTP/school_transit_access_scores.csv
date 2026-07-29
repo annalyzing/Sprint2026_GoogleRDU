@@ -1,0 +1,55 @@
+school_name,nearest_stop_distance_m,stops_within_radius,avg_daily_trips_nearby,lat,lon,county,sch_type,sch_ptype,sch_ctype,transit_desert_score
+Research Triangle High School,88.1,12,8.8,35.89349680767411,-78.86555765020238,Durham,Regular School,None,Traditional,0.64
+East Wake School of Arts Education and G,957.0,0,0.0,35.81257521047229,-78.42465048098067,Wake,Regular School,Cooperative Innovative HS,Traditional,0.631
+East Wake School of Integrated Technolog,972.0,0,0.0,35.812706716799276,-78.42472274176679,Wake,Regular School,Cooperative Innovative HS,Traditional,0.623
+East Wake School of Engineering,999.2,0,0.0,35.81291024974622,-78.42489696646702,Wake,Regular School,Cooperative Innovative HS,Traditional,0.616
+East Wake School of Health Science,1001.7,0,0.0,35.81308820655212,-78.42470538952517,Wake,Regular School,Cooperative Innovative HS,Traditional,0.608
+Wake ForestRolesville High,1085.0,0,0.0,35.98412462450861,-78.51559030139349,Wake,Regular School,None,Traditional,0.601
+Knightdale High,1101.2,0,0.0,35.810652423384596,-78.47614668543731,Wake,Regular School,None,Traditional,0.594
+Millbrook High,89.8,9,30.0,35.865031576275214,-78.60357150153929,Wake,Regular School,Magnet,Traditional,0.591
+Panther Creek High,1450.6,0,0.0,35.82987980256954,-78.8884249303302,Wake,Regular School,None,Traditional,0.586
+East Chapel Hill High,156.9,3,14.7,35.961325904487886,-79.03232667756394,Orange,Regular School,None,Traditional,0.583
+Leesville Road High,1750.0,0,0.0,35.89083663493653,-78.71850696628779,Wake,Regular School,None,Traditional,0.579
+East Wake Academy,1851.9,0,0.0,35.831397723870865,-78.3068424512872,Wake,Regular School,None,Year Round,0.571
+Green Hope High,639.7,2,0.0,35.80442515547057,-78.86737115777683,Wake,Regular School,None,Traditional,0.569
+Heritage High,3731.9,0,0.0,35.941798630923486,-78.51028204535841,Wake,Regular School,None,Traditional,0.564
+Middle College HS @ DTCC,40.8,43,19.4,35.97391571826345,-78.88047630681136,Durham,Regular School,Early College,Traditional,0.557
+Wakefield High,4111.3,0,0.0,35.947980486672755,-78.57042949205783,Wake,Regular School,None,Traditional,0.556
+Rolesville Middle School,7021.0,0,0.0,35.91573249985352,-78.4802035235404,Wake,Regular School,None,Year Round,0.549
+C A Dillon School,11869.3,0,0.0,36.149636401296625,-78.79319999946628,Statewide,Alternative Education,None,Traditional,0.542
+Pine Valley and Bowling Green Schools,12099.6,0,0.0,36.14215739506814,-78.78621220524568,Statewide,Alternative Education,None,Year Round,0.534
+The Whitaker School PRTF,12807.6,0,0.0,36.14033245061952,-78.77694210553393,Statewide,Alternative Education,Hospital,Year Round,0.527
+Northern High,154.2,12,24.6,36.095351742070356,-78.91335091068999,Durham,Regular School,None,Traditional,0.527
+Franklin Academy,556.2,1,10.0,35.970581303842465,-78.50852075306766,Wake,Regular School,None,Year Round,0.522
+Polk Correctional Institution,13564.0,0,0.0,36.14205755397407,-78.76877861278044,Statewide,Regular School,None,Traditional,0.519
+City of Medicine Academy,41.3,31,33.4,36.05406512680825,-78.90298220526735,Durham,Regular School,Cooperative Innovative HS,Traditional,0.519
+Hillside New Tech High,24.3,26,70.2,35.95305962004405,-78.9054566792458,Durham,Regular School,Cooperative Innovative HS,Traditional,0.512
+Franklinton High,15064.8,0,0.0,36.1042064044974,-78.4572974209643,Franklin,Regular School,None,Traditional,0.512
+Athens Drive High,113.6,11,42.0,35.7688022061862,-78.71067687794816,Wake,Regular School,None,Traditional,0.508
+Southern High,280.7,8,23.8,36.00008560257049,-78.82848881431907,Durham,Regular School,None,Traditional,0.507
+Granville Early College High,18626.3,0,0.0,36.124860714965564,-78.67414698272788,Granville,Regular School,Early College,Traditional,0.505
+S Granville HS of Integ Tech & Lead,18640.4,0,0.0,36.12448190491586,-78.67361932438006,Granville,Regular School,None,Traditional,0.494
+S Granville High of Health Sci,18640.4,0,0.0,36.12448190491586,-78.67361932438006,Granville,Regular School,None,Traditional,0.494
+Lakeview School,69.4,30,37.0,36.03815490749054,-78.8776360379854,Durham,Alternative Education,None,Traditional,0.489
+C E Jordan High,279.4,20,11.8,35.923829028271406,-78.96264090076285,Durham,Regular School,None,Traditional,0.487
+Wake Early College of Health and Science,17.6,23,127.9,35.78500358443578,-78.58407196852048,Wake,Regular School,Early College,Modified,0.483
+Riverside High,384.3,2,32.5,36.06558535236917,-78.94303218572745,Durham,Regular School,None,Traditional,0.482
+Franklin County Early College,20154.4,0,0.0,36.085232227290966,-78.33205461791462,Franklin,Regular School,Early College,Traditional,0.482
+PACE Academy,122.2,29,27.5,35.93898866192145,-79.01832541029636,Orange,Regular School,None,Traditional,0.481
+Southern School of Engineering,481.9,6,25.3,36.00143892374558,-78.83264866789068,Durham,Regular School,Cooperative Innovative HS,Traditional,0.476
+Kestrel Heights School,153.3,33,22.5,35.89636153961404,-78.89037739594592,Durham,Regular School,None,Traditional,0.459
+Voyager Academy,102.8,54,31.1,36.04577328122282,-78.89624725865004,Durham,Regular School,None,Traditional,0.454
+Phillips High,134.3,21,52.0,35.78832229142099,-78.61622860284032,Wake,Alternative Education,None,Traditional,0.441
+J D Clement Early College HS,101.8,64,33.4,35.97098067794733,-78.89590326535887,Durham,Regular School,Early College,Traditional,0.436
+Durham's Performance Learning Center,48.6,67,42.0,35.98936234233501,-78.87902883025284,Durham,Alternative Education,None,Traditional,0.432
+Raleigh Charter High School,110.4,18,118.9,35.79613601273132,-78.64766435475282,Wake,Regular School,None,Traditional,0.43
+Durham School of the Arts,44.3,59,76.3,36.00266243845216,-78.90657634860301,Durham,Regular School,Magnet,Modified,0.426
+Cary High,316.0,16,36.6,35.77279964551135,-78.76602397595346,Wake,Regular School,None,Traditional,0.422
+Sanderson High,512.8,7,39.4,35.860662680343744,-78.64788175504688,Wake,Regular School,None,Traditional,0.41
+Longview,226.4,19,77.7,35.78538441690682,-78.61035844718566,Wake,Exceptional Children,None,Traditional,0.385
+William G Enloe High,230.9,17,84.1,35.784594110172975,-78.60424473197543,Wake,Regular School,Magnet,Traditional,0.378
+Wake NCSU STEM ECHS,638.4,7,80.9,35.773045948553815,-78.66693065934749,Wake,Regular School,Early College, ,0.351
+Needham Broughton High,142.5,32,93.1,35.789801908537086,-78.65238802373071,Wake,Regular School,Magnet,Traditional,0.35
+NC Correctional Inst for Women,173.2,26,146.8,35.76570534151028,-78.62275305453431,Statewide,Regular School,None,Traditional,0.326
+Hillside High,422.1,26,70.2,35.956166242677796,-78.90258538572886,Durham,Regular School,None,Traditional,0.319
+Gov. Morehead School for the Blind,372.8,38,95.2,35.78090476481171,-78.6600439297807,Statewide,Alternative Education,None, ,0.259

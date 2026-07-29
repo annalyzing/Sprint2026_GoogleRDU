@@ -1,0 +1,6 @@
+service_id,monday,tuesday,wednesday,thursday,friday,saturday,sunday,start_date,end_date
+MF,1,1,1,1,1,0,0,20260316,20261231
+Sa,0,0,0,0,0,1,0,20260316,20261231
+MFPS2,1,1,1,1,1,0,0,20260401,20261031
+MFW,1,1,1,1,1,0,0,20261101,20261231
+MFW1,1,1,1,1,1,0,0,20260316,20260331

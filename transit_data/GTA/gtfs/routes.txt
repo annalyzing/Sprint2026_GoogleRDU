@@ -1,0 +1,18 @@
+route_id,agency_id,route_short_name,route_long_name,route_desc,route_type,route_url,route_color,route_text_color
+5906,232,"2","Route 2 - Four Seasons",Four Seasons,3,,F56600,000000
+5910,232,"3","Route 3 -  North Elm/Church Street", North Elm/Church Street,3,,F5F500,000000
+5913,232,"4","Route 4 - Martin Luther King Jr. Drive / Benbow Road / Willow Road ",Martin Luther King Jr. Drive,3,,05A100,000000
+5914,232,"5","Route 5 - Gorrell Street ",Gorrell Street ,3,,83A4E6,FFFFFF
+5916,232,"6","Route 6 - Summit Avenue",Summit Avenue,3,,9305A6,FFFFFF
+5918,232,"7","Route 7 - Friendly Avenue",Friendly Ave,3,,752D00,FFFFFF
+5919,232,"8","Route 8 - Battleground Avenue",Battleground,3,,FF03C4,FFFFFF
+5920,232,"9","Route 9 - West Market ",W Market,3,,941347,FFFFFF
+5922,232,"11","Route 11 - Gate City Boulevard ",Gate City ,3,,D1CA00,FFFFFF
+5924,232,"13","Route 13 -Randleman Road",Randleman,3,,77A3ED,FFFFFF
+5925,232,"12","Route 12 - Elm-Eugene",Elm-Eugene,3,,000000,FFFFFF
+5927,232,"Southtown","Route 12A - Southtown Connector",12A,3,,032B6E,FFFFFF
+5934,232,"17","Route 17 - Lawndale",Lawndale,3,,79F279,000000
+5935,232,"14","Route 14 - Bessemer Avenue / Phillips Avenue",Bessemer,3,,E681F7,000000
+5936,232,"15","Route 15 - Yanceyville Street / Brightwood School",Yanceyville,3,,FA9C3E,000000
+6084,232,"HT","Hopper Trolley",Hopper Trolley,3,,F70031,053A20
+6349,232,"CMP","Route 1 - Crossmax Purple",CrossMax Purple,3,,8555D9,FFFFFF

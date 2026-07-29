@@ -1,0 +1,7 @@
+route_id,route_type,route_short_name,route_long_name,agency_id,route_desc,route_color,route_url,route_text_color,route_sort_order
+"Rt1","3","R1","Route 1","40095",,336699,,,"1"
+"Rt2","3","R2","Route 2","40095",,FF0000,,,"2"
+"Rt3","3","R3","Route 3","40095",,339933,,,"3"
+"Rt4","3","R4","Route 4","40095",,993399,,,"4"
+"Rt5","3","R5","Route 5","40095",,A49901,,,"5"
+"Rt6","3","R6","Route 6","40095",,FF9900,,,"6"

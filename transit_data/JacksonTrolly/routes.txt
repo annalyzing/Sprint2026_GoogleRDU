@@ -1,0 +1,2 @@
+route_id,route_short_name,route_long_name,route_desc,route_url,route_color,route_text_color,route_type
+34311,,The Jackson Trolley,,https://www.jacksoncountytransit.com/jackson-trolley,800000,ffffff,3

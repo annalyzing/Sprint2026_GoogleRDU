@@ -1,0 +1,6 @@
+route_id,agency_id,route_short_name,route_long_name,route_type,route_color,route_text_color
+5082,3521,,101 Purple ,3,9467BD,
+5084,3521,,102 Green,3,2CA02C,
+5085,3521,,103 Orange,3,FF7F0E,
+5086,3521,,104 Blue,3,1F77B4,
+5087,3521,,Express Route,3,D62728,

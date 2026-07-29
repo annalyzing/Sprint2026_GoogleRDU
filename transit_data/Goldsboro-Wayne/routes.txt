@@ -1,0 +1,6 @@
+route_id,route_short_name,route_long_name,route_desc,route_url,route_color,route_text_color,route_type
+27164,Green,Green Route,,,166837,ffffff,3
+27165,Purple,Purple Route,,,800080,ffffff,3
+27166,Red,Red Route,,,800000,ffffff,3
+27162,Yellow,Yellow Route,,,f0b80f,ffffff,3
+27163,Blue,Blue Route,,,00349E,ffffff,3

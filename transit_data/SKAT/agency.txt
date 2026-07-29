@@ -1,0 +1,2 @@
+agency_id,agency_name,agency_url,agency_timezone,agency_lang,agency_phone,agency_fare_url,agency_email
+Rockingham-157,skat Transit,http://www.rideskat.org/,US/Eastern,EN,(336) - 347 - 2287,http://www.rideskat.org/fares,

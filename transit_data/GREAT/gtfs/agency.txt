@@ -1,0 +1,2 @@
+agency_name,agency_url,agency_timezone,agency_id,agency_lang,agency_phone,agency_fare_url,agency_email
+"Greenville Area Transit","https://www.greenvillenc.gov/government/public-works/great-b","America/New_York","40095","en","252-329-2489",,

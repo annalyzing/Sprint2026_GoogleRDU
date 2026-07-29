@@ -1,0 +1,2 @@
+agency_id,agency_name,agency_url,agency_timezone,agency_lang,agency_phone,agency_fare_url,agency_email
+9d9c5821-0c65-4ad9-ad6c-5a1fa388ac87,GoCary,https://gocary.org,America/New_York,en,919-485-7433,https://gocary.org/fares-passes-gocary,bettertransit@gocary.org

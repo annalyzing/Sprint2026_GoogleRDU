@@ -1,0 +1,282 @@
+"""
+real_school_level_disparity_analysis.py
+==============================================
+First-ever SCHOOL-LEVEL (not county-aggregated) analysis of transit access
+vs. education outcomes, using your actual local pipeline output joined to
+the real NC School Performance Grades file. Every chart title states
+exactly what's plotted, what the test means, and what n/scope applies —
+per the request for "more detail in dictionary and graph titles."
+
+INPUTS (both real, both already on disk):
+  - cleaned_statewide_transit_school_metrics.csv  (your local pipeline run:
+    2,425 schools, 21 agencies loaded, statewide NC)
+  - 2025spg.csv  (NC DPI School Performance Grades)
+
+JOIN: fuzzy match on normalized school_name + exact county match (same
+normalization logic validated earlier — Elementary/Elem, Middle/MS, etc.)
+
+ANALYSIS (the full disparity toolkit, at school level this time, not
+county-aggregated — much larger n, much more granular):
+  1. Bivariate correlation, each raw transit metric vs. achievement
+  2. Quartile gap analysis — actual percentage-point achievement gap
+     between best- and worst-access schools
+  3. Zero-vs-any-stops group comparison (Mann-Whitney U)
+  4. In-service-area-only subset (excludes structurally uncovered schools)
+  5. Interaction effect: does transit matter MORE in high-poverty schools?
+  6. Variance partitioning: unique contribution beyond poverty (Title I)
+"""
+
+import pandas as pd
+import numpy as np
+from scipy import stats
+import matplotlib.pyplot as plt
+import matplotlib.cm as mpl_cm
+import matplotlib.colors as mcolors
+import statsmodels.api as sm
+import statsmodels.formula.api as smf
+from rapidfuzz import process, fuzz
+import re
+from pathlib import Path
+
+BASE_DIR = Path(__file__).resolve().parent
+TRANSIT_CSV = BASE_DIR / "cleaned_statewide_transit_school_metrics.csv"
+SPG_CSV = BASE_DIR / "2025spg.csv"
+OUT_DIR = BASE_DIR / "output" / "real_analysis"
+OUT_DIR.mkdir(parents=True, exist_ok=True)
+
+# ---------------------------------------------------------------------------
+# NAME NORMALIZATION (validated earlier — Elem/Elementary, MS/Middle, etc.)
+# ---------------------------------------------------------------------------
+_NAME_REPLACEMENTS = {
+    r"\belem\b": "elementary", r"\bele\b": "elementary",
+    r"\bmid\b": "middle", r"\bms\b": "middle", r"\bhs\b": "high",
+    r"\bschl\b": "school", r"\bsch\b": "school",
+    r"\bearly coll\b": "early college", r"\bec\b": "early college",
+    r"\bacad\b": "academy", r"&": "and",
+}
+
+
+def normalize_school_name(name: str) -> str:
+    name = str(name).lower().strip()
+    name = re.sub(r"[^\w\s&]", " ", name)
+    for pattern, repl in _NAME_REPLACEMENTS.items():
+        name = re.sub(pattern, repl, name)
+    name = re.sub(r"\bschool\b", "", name)
+    name = re.sub(r"\s+", " ", name).strip()
+    return name
+
+
+# ---------------------------------------------------------------------------
+# 1. LOAD BOTH REAL FILES
+# ---------------------------------------------------------------------------
+transit = pd.read_csv(TRANSIT_CSV)
+print(f"Transit metrics: {len(transit)} schools, {transit['n_agencies_loaded'].iloc[0]} agencies, "
+      f"{transit['county'].nunique()} counties")
+
+spg = pd.read_csv(SPG_CSV, low_memory=False)
+sch = spg[(spg["subgroup"] == "ALL") & (spg["agency_level"] == "SCH")].copy()
+sch = sch.dropna(subset=["ach_score"])
+sch["is_title_i"] = (sch["title_i"] == "Y").astype(int)
+print(f"Achievement data: {len(sch)} schools (subgroup=ALL, school-level rows)")
+
+# ---------------------------------------------------------------------------
+# 2. FUZZY MATCH school_name + county (exact county, fuzzy name)
+# ---------------------------------------------------------------------------
+transit["name_norm"] = transit["school_name"].apply(normalize_school_name)
+transit["county_norm"] = transit["county"].astype(str).str.strip().str.lower()
+sch["name_norm"] = sch["name"].apply(normalize_school_name)
+sch["county_norm"] = sch["county"].astype(str).str.strip().str.lower()
+
+matched_rows, unmatched_rows = [], []
+for _, t_row in transit.iterrows():
+    county_subset = sch[sch["county_norm"] == t_row["county_norm"]]
+    if county_subset.empty:
+        unmatched_rows.append({**t_row.to_dict(), "reason": "no achievement schools in this county"})
+        continue
+    choices = county_subset["name_norm"].tolist()
+    result = process.extractOne(t_row["name_norm"], choices, scorer=fuzz.token_sort_ratio)
+    if result and result[1] >= 85:
+        _, score, idx = result
+        merged = {**t_row.to_dict(), **county_subset.iloc[idx].to_dict(), "match_score": score}
+        matched_rows.append(merged)
+    else:
+        unmatched_rows.append({**t_row.to_dict(), "reason": f"best score {result[1] if result else 0:.0f} < 85"})
+
+matched = pd.DataFrame(matched_rows)
+unmatched = pd.DataFrame(unmatched_rows)
+match_rate = round(len(matched) / len(transit) * 100, 1)
+print(f"\nMatched: {len(matched)}/{len(transit)} schools ({match_rate}%)")
+print(f"Unmatched: {len(unmatched)} (saved to unmatched_schools.csv)")
+unmatched.to_csv(f"{OUT_DIR}/unmatched_schools.csv", index=False)
+matched.to_csv(f"{OUT_DIR}/school_level_matched.csv", index=False)
+
+if match_rate < 70:
+    print("WARNING: match rate below 70% — results below may be biased toward "
+          "whichever schools happened to match. Check unmatched_schools.csv.")
+
+# ---------------------------------------------------------------------------
+# 3. BIVARIATE CORRELATION — detailed titles
+# ---------------------------------------------------------------------------
+print("\n" + "=" * 70)
+print("1. BIVARIATE CORRELATION — school level, n=%d" % len(matched))
+print("=" * 70)
+
+METRICS = {
+    "nearest_stop_distance_m": "Distance to Nearest Transit Stop (meters, straight-line)",
+    "stops_within_radius": "Transit Stop Density (count of stops within 800m / ~10-min walk)",
+    "avg_daily_trips_nearby": "Transit Service Frequency (avg. weekday trips at nearby stops)",
+}
+
+bivariate_results = []
+for col, label in METRICS.items():
+    data = matched[[col, "ach_score"]].dropna()
+    r, p = stats.pearsonr(data[col], data["ach_score"])
+    rho, p_s = stats.spearmanr(data[col], data["ach_score"])
+
+    plt.figure(figsize=(8, 6.5))
+    n_pts = len(data)
+    alpha = 0.8 if n_pts < 300 else max(0.12, 300 / n_pts)
+    plt.scatter(data[col], data["ach_score"], alpha=alpha, s=35, color="#2c7fb8", edgecolor="none")
+    z = np.polyfit(data[col], data["ach_score"], 1)
+    x_line = np.linspace(data[col].min(), data[col].max(), 100)
+    plt.plot(x_line, np.polyval(z, x_line), color="#c0392b", linestyle="--", linewidth=1.5,
+              label="Linear trend (reference only)")
+    plt.xlabel(label, fontsize=11)
+    plt.ylabel("School Achievement Score (0–100, NC DPI SPG 'ach_score')", fontsize=11)
+    plt.title(
+        f"{label}\nvs. School Achievement Score — All NC Public Schools (n={n_pts})\n"
+        f"Pearson r={r:+.3f} (p={p:.3g})   Spearman ρ={rho:+.3f} (p={p_s:.3g})",
+        fontsize=11
+    )
+    plt.legend(fontsize=9)
+    plt.tight_layout()
+    safe = col
+    plt.savefig(f"{OUT_DIR}/school_level_{safe}.png", dpi=150)
+    plt.close()
+
+    sig = " [SIGNIFICANT p<0.05]" if p < 0.05 else " [not significant]"
+    print(f"{label}:\n  Pearson r={r:+.4f} (p={p:.4g}){sig}   Spearman rho={rho:+.4f} (p={p_s:.4g})   n={n_pts}")
+    bivariate_results.append({"metric": label, "pearson_r": r, "pearson_p": p, "spearman_rho": rho, "spearman_p": p_s, "n": n_pts})
+
+# ---------------------------------------------------------------------------
+# 4. QUARTILE GAP ANALYSIS
+# ---------------------------------------------------------------------------
+print("\n" + "=" * 70)
+print("2. QUARTILE GAP ANALYSIS — actual achievement gap in points")
+print("=" * 70)
+
+for col, label in METRICS.items():
+    data = matched[[col, "ach_score"]].dropna().copy()
+    higher_is_worse = col != "stops_within_radius" and col != "avg_daily_trips_nearby"
+    try:
+        data["quartile"] = pd.qcut(data[col], 4, duplicates="drop")
+    except ValueError:
+        print(f"{label}: too many tied values (likely zero-inflated) to form 4 clean quartiles — skipping")
+        continue
+    q_labels = sorted(data["quartile"].unique())
+    q_means = data.groupby("quartile", observed=True)["ach_score"].agg(["mean", "std", "count"])
+    print(f"\n{label} — quartile means:")
+    print(q_means.to_string())
+
+    groups = [g["ach_score"].values for _, g in data.groupby("quartile", observed=True)]
+    if len(groups) < 2:
+        print(f"  SKIPPED: this variable is so zero-inflated ({(data[col]==0).mean()*100:.1f}% "
+              f"are exactly 0) that quartile splitting collapses to {len(groups)} group — "
+              "not a quartile analysis failure, it's telling you the variable itself is "
+              "mostly one value. The zero-vs-any-stops test below is the correct comparison "
+              "for a variable shaped like this, not a quartile split.")
+        continue
+    h_stat, p_val = stats.kruskal(*groups)
+    gap = q_means["mean"].iloc[-1] - q_means["mean"].iloc[0]
+    sig = " [SIGNIFICANT]" if p_val < 0.05 else " [not significant]"
+    print(f"  Gap (last quartile - first quartile): {gap:+.2f} achievement points")
+    print(f"  Kruskal-Wallis across quartiles: p={p_val:.4g}{sig}")
+
+    plt.figure(figsize=(8, 6))
+    data.boxplot(column="ach_score", by="quartile", ax=plt.gca())
+    plt.suptitle("")
+    plt.title(f"School Achievement by {label}\nSplit into Quartiles — Kruskal-Wallis p={p_val:.3g}, n={len(data)}", fontsize=11)
+    plt.xlabel(f"{label} (Quartile 1 = lowest value → Quartile 4 = highest value)")
+    plt.ylabel("School Achievement Score (0–100)")
+    plt.xticks(rotation=20, ha="right", fontsize=8)
+    plt.tight_layout()
+    plt.savefig(f"{OUT_DIR}/school_quartile_{col}.png", dpi=150)
+    plt.close()
+
+# ---------------------------------------------------------------------------
+# 5. ZERO-VS-ANY-STOPS GROUP COMPARISON
+# ---------------------------------------------------------------------------
+print("\n" + "=" * 70)
+print("3. ZERO-STOPS-NEARBY vs. ANY-STOPS-NEARBY — Mann-Whitney U")
+print("=" * 70)
+zero_grp = matched[matched["stops_within_radius"] == 0]["ach_score"].dropna()
+any_grp = matched[matched["stops_within_radius"] > 0]["ach_score"].dropna()
+print(f"Zero-stops schools: n={len(zero_grp)}, mean achievement={zero_grp.mean():.2f}")
+print(f"Any-stops schools:  n={len(any_grp)}, mean achievement={any_grp.mean():.2f}")
+if len(zero_grp) >= 5 and len(any_grp) >= 5:
+    u, p = stats.mannwhitneyu(zero_grp, any_grp, alternative="two-sided")
+    diff = zero_grp.mean() - any_grp.mean()
+    sig = " [SIGNIFICANT]" if p < 0.05 else " [not significant]"
+    print(f"Mann-Whitney U p={p:.4g}{sig}   Difference: {diff:+.2f} achievement points")
+
+    plt.figure(figsize=(6.5, 6))
+    plt.boxplot([zero_grp, any_grp], tick_labels=[f"Zero stops nearby\n(n={len(zero_grp)})", f"≥1 stop nearby\n(n={len(any_grp)})"])
+    plt.ylabel("School Achievement Score (0–100)")
+    plt.title(f"Achievement: Schools With vs. Without Any Nearby Transit Stop\nMann-Whitney p={p:.3g}, difference={diff:+.2f} pts")
+    plt.tight_layout()
+    plt.savefig(f"{OUT_DIR}/school_zero_vs_any_stops.png", dpi=150)
+    plt.close()
+
+# ---------------------------------------------------------------------------
+# 6. IN-SERVICE-AREA-ONLY SUBSET
+# ---------------------------------------------------------------------------
+print("\n" + "=" * 70)
+print("4. IN-SERVICE-AREA-ONLY — excludes schools with no plausible coverage")
+print("=" * 70)
+in_area = matched[matched["in_service_area"] == True]
+print(f"{len(matched)} -> {len(in_area)} schools after excluding out-of-coverage outliers\n")
+for col, label in METRICS.items():
+    data = in_area[[col, "ach_score"]].dropna()
+    if len(data) < 10:
+        continue
+    r, p = stats.pearsonr(data[col], data["ach_score"])
+    sig = " [SIGNIFICANT]" if p < 0.05 else ""
+    print(f"{label}: r={r:+.4f} (p={p:.4g}){sig}   n={len(data)}")
+
+# ---------------------------------------------------------------------------
+# 7. INTERACTION EFFECT — transit x poverty (Title I)
+# ---------------------------------------------------------------------------
+print("\n" + "=" * 70)
+print("5. INTERACTION EFFECT — does transit matter MORE in high-poverty schools?")
+print("=" * 70)
+for col, label in METRICS.items():
+    data = matched[[col, "is_title_i", "ach_score"]].dropna().rename(columns={col: "transit_var", "is_title_i": "poverty"})
+    if len(data) < 30:
+        continue
+    model = smf.ols("ach_score ~ transit_var * poverty", data=data).fit()
+    inter_p = model.pvalues.get("transit_var:poverty", np.nan)
+    sig = " [SIGNIFICANT INTERACTION]" if inter_p < 0.05 else " [no significant interaction]"
+    print(f"{label}: interaction p={inter_p:.4g}{sig}")
+
+# ---------------------------------------------------------------------------
+# 8. VARIANCE PARTITIONING
+# ---------------------------------------------------------------------------
+print("\n" + "=" * 70)
+print("6. VARIANCE PARTITIONING — transit's unique contribution beyond Title I")
+print("=" * 70)
+for col, label in METRICS.items():
+    data = matched[[col, "is_title_i", "ach_score"]].dropna()
+    if len(data) < 30:
+        continue
+    Xa = sm.add_constant(data[["is_title_i"]])
+    model_a = sm.OLS(data["ach_score"], Xa).fit()
+    Xb = sm.add_constant(data[["is_title_i", col]])
+    model_b = sm.OLS(data["ach_score"], Xb).fit()
+    unique_r2 = model_b.rsquared - model_a.rsquared
+    print(f"{label}:")
+    print(f"  R² (Title I alone): {model_a.rsquared:.4f}   R² (Title I + transit): {model_b.rsquared:.4f}")
+    print(f"  Transit's unique contribution: {unique_r2:+.4f} ({unique_r2*100:+.2f}pp of variance)\n")
+
+print("=" * 70)
+print("DONE. All charts saved with descriptive titles stating metric, test, and n.")
+print("=" * 70)

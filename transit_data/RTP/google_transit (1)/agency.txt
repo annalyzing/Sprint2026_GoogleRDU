@@ -1,0 +1,2 @@
+agency_id,agency_name,agency_url,agency_timezone,agency_lang,agency_phone,agency_fare_url,agency_email
+f42c368f-0d16-403f-9c7c-493c9beb84ef,GoTriangle,https://gotriangle.org/,America/New_York,en,919-485-7433,https://gotriangle.org/fares-passes,customerservice@gotriangle.org

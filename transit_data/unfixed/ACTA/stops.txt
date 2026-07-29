@@ -1,0 +1,9 @@
+stop_id,stop_code,stop_name,stop_desc,stop_lat,stop_lon,stop_url,location_type,parent_station,stop_timezone,wheelchair_boarding
+1593210,,Ashe Services for Aging (Generations Ashe),,36.3874156403973,-81.4994725240256,,0,,,
+1593211,,Ingles,,36.3808858638174,-81.4885868998553,,0,,,
+1593212,,Wal-Mart,,36.3899391500155,-81.4814313815779,,0,,,
+1593213,,Mountain Village Apartments,,36.4184250357074,-81.4549173976291,,0,,,
+1593214,,Big Lots,,36.4211932211294,-81.4579082898192,,0,,,
+1593215,,Food Lion,,36.421331569154,-81.4589011111682,,0,,,
+1789793,,Historic Ashe Apartments (1st Parking Lot Gentry Street),,36.4176609991772,-81.479685943469,,0,,,
+1593218,,Main Street - West Jefferson,,36.4025275839082,-81.4925676155055,,0,,,

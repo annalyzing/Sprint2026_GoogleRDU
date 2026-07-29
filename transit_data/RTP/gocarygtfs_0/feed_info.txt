@@ -1,0 +1,2 @@
+feed_publisher_name,feed_publisher_url,feed_lang,default_lang,feed_start_date,feed_end_date,feed_version,feed_contact_email,feed_contact_url
+GoCary,https://gocary.org,en,en,20260509,20261204,2026-04-18 Spring Bid 3,bettertransit@gocary.org,https://gocary.org

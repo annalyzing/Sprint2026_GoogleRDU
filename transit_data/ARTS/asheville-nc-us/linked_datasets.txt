@@ -1,0 +1,3 @@
+url,trip_updates,vehicle_positions,service_alerts,authentication_type,authentication_info_url,api_key_parameter_name
+https://api.goswift.ly/real-time/art-asheville/gtfs-rt-trip-updates?apiKey=TU_VP_API_KEY,true,false,false,header,https://goswift.ly/realtime-api-key,AUTHORIZATION
+https://api.goswift.ly/real-time/art-asheville/gtfs-rt-vehicle-positions?apiKey=TU_VP_API_KEY,false,true,false,header,https://goswift.ly/realtime-api-key,AUTHORIZATION

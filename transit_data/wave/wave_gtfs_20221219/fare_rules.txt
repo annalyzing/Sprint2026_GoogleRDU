@@ -1,0 +1,13 @@
+fare_id,route_id
+adult,1
+adult,3
+adult,4
+adult,5
+adult,6
+adult,7
+adult,8
+adult,21
+adult,22
+free,23
+adult,25
+adult,30

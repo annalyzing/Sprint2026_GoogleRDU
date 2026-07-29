@@ -1,0 +1,13 @@
+route_id,agency_id,route_short_name,route_long_name,route_type,route_color,route_text_color
+14,HPTS,14,Westchester Drive,3,a8a800,ffffff
+25,HPTS,25,GTCC/Jamestown,3,7a009e,ffffff
+16,HPTS,16,Leonard Avenue,3,ff64df,ffffff
+18,HPTS,18,E Green Drive,3,e600a9,ffffff
+20,HPTS,20,Kearns Avenue,3,e60000,ffffff
+15,HPTS,15,Oak Hollow Mall,3,A92023,ffffff
+10,HPTS,10,N Main Street,3,268700,ffffff
+11,HPTS,11,S Main Street,3,ff6400,ffffff
+13,HPTS,13,Montlieu Avenue,3,004da8,ffffff
+17,HPTS,17,Washington Drive,3,a900e6,ffffff
+12,HPTS,12,W Green Drive,3,A92023,ffffff
+19,HPTS,19,English Road,3,e6e600,ffffff

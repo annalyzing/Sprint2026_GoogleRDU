@@ -1,0 +1,6 @@
+route_id,direction_id,direction
+5929,0,Loop
+5932,0,Loop
+5930,0,Loop
+5931,0,Loop
+5933,0,Loop

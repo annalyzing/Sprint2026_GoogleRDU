@@ -1,0 +1,2 @@
+agency_id,agency_name,agency_url,agency_timezone,agency_phone,agency_fare_url,agency_lang,agency_email
+HPTS,High Point Transit System,https://www.hptransit.org,America/New_York,(336) 889-7433,https://www.highpointnc.gov/619/Fares,en,transit@highpointnc.gov

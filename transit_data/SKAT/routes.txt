@@ -1,0 +1,8 @@
+route_id,route_short_name,route_long_name,route_desc,route_url,route_color,route_text_color,route_type
+35013,,Eden,,,008000,,3
+35014,,Reverse Eden,,,008000,,3
+35015,,Reidsville,,,008000,,3
+35016,,Western Rockingham,,,008000,,3
+35046,,Reidsville Connector,,,008000,,3
+35047,,Eden Connector,,,008000,,3
+35048,,W Rockingham Connector,,,008000,,3

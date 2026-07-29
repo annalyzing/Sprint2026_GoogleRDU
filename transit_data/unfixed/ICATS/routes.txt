@@ -1,0 +1,4 @@
+route_id,agency_id,route_short_name,route_long_name,route_type,route_color,route_text_color
+4f2a4648,ICATS,MM,Mooresville Main,3,598200,ffffff
+5de92f4d,ICATS,The,Statesville Bloom,3,005baa,ffffff
+f9e3f8aa,ICATS,Iredell,Express,3,e05200,ffffff

@@ -1,0 +1,10 @@
+route_id,route_type,route_short_name,route_long_name,agency_id,route_desc,route_color,route_url,route_text_color,route_sort_order
+"4","3","E","Express","1",,B9CCE2,,,"4"
+"8","3","O","Orange","1",,DF9245,,,"6"
+"11","3","P","Purple","1",,985BA5,,,"8"
+"14","3","GY","Gray","1",,58595B,,,"10"
+"31","3","R","Red","1",,DF4B5C,,,"11"
+"32","3","GR","Green","1",,58BF96,,,"12"
+"10","3","POP","POP105","1",,849C41,,,"13"
+"29","3","T","Teal","1",,009999,,,"14"
+"30","3","M","Maroon","1",,9A0027,,,"15"

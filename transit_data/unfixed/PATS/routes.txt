@@ -1,0 +1,2 @@
+route_id,route_short_name,route_long_name,route_desc,route_url,route_color,route_text_color,route_type
+red,,Roxboro Uptown Shuttle,,https://www.personcountync.gov/government/departments-i-z/transportation-pats/roxboro-uptown-shuttle,FF0000,FFFFFF,3

@@ -1,0 +1,8 @@
+trip_id,route_id,service_id,trip_headsign,trip_short_name,direction_id,shape_id,wheelchair_accessible,bikes_allowed,block_id,block_name
+PATS_first_trip_0745_T01,red,weekday,,,0,,1,2,,
+PATS_first_trip_0900_T01,red,weekday,,,0,,1,2,,
+PATS_first_trip_1015_T01,red,weekday,Roxboro Square,,0,,1,2,,
+PATS_first_trip_1015_T02,red,weekday,Roxboro Square,,0,,1,2,,
+PATS_first_trip_1015_T03,red,weekday,Roxboro Square,,0,,1,2,,
+PATS_first_trip_1431_T01,red,weekday,Roxboro Square,,0,,1,2,,
+PATS_first_trip_last _trip_T01,red,weekday,Roxboro Square,,0,,1,2,,

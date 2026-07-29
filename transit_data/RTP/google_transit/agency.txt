@@ -1,0 +1,2 @@
+agency_id,agency_name,agency_url,agency_timezone,agency_lang,agency_phone,agency_fare_url,agency_email
+0,GoDurham,https://godurhamtransit.org/,America/New_York,en,919-485-7433,https://godurhamtransit.org/godurham-fares-passes,support@availtec.com

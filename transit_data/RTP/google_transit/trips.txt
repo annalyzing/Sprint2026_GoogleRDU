@@ -1,0 +1,3208 @@
+route_id,service_id,trip_id,trip_headsign,direction_id,block_id,shape_id,wheelchair_accessible,bikes_allowed
+1,2,t20E-b3F8-sl2,"1: Guess Rd - Horton Rd - Riverside HS",1,1016,17843_shp,0,0
+1,2,t22C-b402-sl2,"1: Guess Rd - Horton Rd - Riverside HS",1,1026,17843_shp,0,0
+1,2,t258-b3F8-sl2,"1: Horton & Guess",0,1016,17845_shp,0,0
+1,2,t272-b3F8-sl2,"1: Guess Rd - Horton Rd - Riverside HS",1,1016,17843_shp,0,0
+1,2,t276-b402-sl2,"1: Horton & Guess",0,1026,17845_shp,0,0
+1,2,t290-b402-sl2,"1: Guess Rd - Horton Rd - Riverside HS",1,1026,17843_shp,0,0
+1,2,t2BC-b3F8-sl2,"1: Horton & Guess",0,1016,17845_shp,0,0
+1,2,t2D6-b3F8-sl2,"1: Guess Rd - Horton Rd - Riverside HS",1,1016,17843_shp,0,0
+1,2,t2DA-b402-sl2,"1: Horton & Guess",0,1026,17845_shp,0,0
+1,2,t2F4-b402-sl2,"1: Guess Rd - Horton Rd - Riverside HS",1,1026,17843_shp,0,0
+1,2,t320-b3F8-sl2,"1: Horton & Guess",0,1016,17845_shp,0,0
+1,2,t33A-b3F8-sl2,"1: Guess Rd - Horton Rd - Riverside HS",1,1016,17843_shp,0,0
+1,2,t33E-b402-sl2,"1: Horton & Guess",0,1026,17845_shp,0,0
+1,2,t358-b402-sl2,"1: Guess Rd - Horton Rd - Riverside HS",1,1026,17843_shp,0,0
+1,2,t384-b3F8-sl2,"1: Horton & Guess",0,1016,17845_shp,0,0
+1,2,t39E-b3F8-sl2,"1: Guess Rd - Horton Rd - Riverside HS",1,1016,17843_shp,0,0
+1,2,t3A2-b402-sl2,"1: Horton & Guess",0,1026,17845_shp,0,0
+1,2,t3BC-b402-sl2,"1: Guess Rd - Horton Rd - Riverside HS",1,1026,17843_shp,0,0
+1,2,t3E8-b3F8-sl2,"1: Horton & Guess",0,1016,17845_shp,0,0
+1,2,t402-b3F8-sl2,"1: Guess Rd - Horton Rd - Riverside HS",1,1016,17843_shp,0,0
+1,2,t406-b402-sl2,"1: Horton & Guess",0,1026,17845_shp,0,0
+1,2,t420-b402-sl2,"1: Guess Rd - Horton Rd - Riverside HS",1,1026,17843_shp,0,0
+1,2,t44C-b3F8-sl2,"1: Horton & Guess",0,1016,17845_shp,0,0
+1,2,t466-b3F8-sl2,"1: Guess Rd - Horton Rd - Riverside HS",1,1016,17843_shp,0,0
+1,2,t46A-b402-sl2,"1: Horton & Guess",0,1026,17845_shp,0,0
+1,2,t484-b402-sl2,"1: Guess Rd - Horton Rd - Riverside HS",1,1026,17843_shp,0,0
+1,2,t4B0-b3F8-sl2,"1: Horton & Guess",0,1016,17845_shp,0,0
+1,2,t4CA-b3F8-sl2,"1: Guess Rd - Horton Rd - Riverside HS",1,1016,17843_shp,0,0
+1,2,t4CE-b402-sl2,"1: Horton & Guess",0,1026,17845_shp,0,0
+1,2,t4E8-b402-sl2,"1: Guess Rd - Horton Rd - Riverside HS",1,1026,17843_shp,0,0
+1,2,t514-b3F8-sl2,"1: Horton & Guess",0,1016,17845_shp,0,0
+1,2,t52E-b3F8-sl2,"1: Guess Rd - Horton Rd - Riverside HS",1,1016,17843_shp,0,0
+1,2,t532-b402-sl2,"1: Horton & Guess",0,1026,17845_shp,0,0
+1,2,t54C-b402-sl2,"1: Guess Rd - Horton Rd - Riverside HS",1,1026,17843_shp,0,0
+1,2,t578-b3F8-sl2,"1: Horton & Guess",0,1016,17845_shp,0,0
+1,2,t592-b3F8-sl2,"1: Guess Rd - Horton Rd - Riverside HS",1,1016,17843_shp,0,0
+1,2,t596-b402-sl2,"1: Horton & Guess",0,1026,17845_shp,0,0
+1,2,t5B0-b402-sl2,"1: Guess Rd - Horton Rd - Riverside HS",1,1026,17843_shp,0,0
+1,2,t5DC-b3F8-sl2,"1: Horton & Guess",0,1016,17845_shp,0,0
+1,2,t5F6-b3F8-sl2,"1: Guess Rd - Horton Rd - Riverside HS",1,1016,17843_shp,0,0
+1,2,t5FA-b402-sl2,"1: Horton & Guess",0,1026,17845_shp,0,0
+1,2,t614-b402-sl2,"1: Guess Rd - Horton Rd - Riverside HS",1,1026,17843_shp,0,0
+1,2,t640-b3F8-sl2,"1: Horton & Guess",0,1016,17845_shp,0,0
+1,2,t65A-b3F8-sl2,"1: Guess Rd - Horton Rd - Riverside HS",1,1016,17843_shp,0,0
+1,2,t65E-b402-sl2,"1: Horton & Guess",0,1026,17845_shp,0,0
+1,2,t678-b402-sl2,"1: Guess Rd - Horton Rd - Riverside HS",1,1026,17843_shp,0,0
+1,2,t6A4-b3F8-sl2,"1: Horton & Guess",0,1016,17845_shp,0,0
+1,2,t6BE-b3F8-sl2,"1: Guess Rd - Horton Rd - Riverside HS",1,1016,17843_shp,0,0
+1,2,t6C2-b402-sl2,"1: Horton & Guess",0,1026,17845_shp,0,0
+1,2,t6DC-b402-sl2,"1: Guess Rd - Horton Rd - Riverside HS",1,1026,17843_shp,0,0
+1,2,t708-b3F8-sl2,"1: Horton & Guess",0,1016,17845_shp,0,0
+1,2,t722-b3F8-sl2,"1: Guess Rd - Horton Rd - Riverside HS",1,1016,17843_shp,0,0
+1,2,t726-b402-sl2,"1: Horton & Guess",0,1026,17845_shp,0,0
+1,2,t740-b402-sl2,"1: Guess Rd - Horton Rd - Riverside HS",1,1026,17843_shp,0,0
+1,2,t76C-b3F8-sl2,"1: Horton & Guess",0,1016,17845_shp,0,0
+1,2,t786-b3F8-sl2,"1: Guess Rd - Horton Rd - Riverside HS",1,1016,17843_shp,0,0
+1,2,t78A-b402-sl2,"1: Horton & Guess",0,1026,17845_shp,0,0
+1,2,t7A4-b402-sl2,"1: Guess Rd - Horton Rd - Riverside HS",1,1026,17843_shp,0,0
+1,2,t7D0-b3F8-sl2,"1: Horton & Guess",0,1016,17845_shp,0,0
+1,2,t7EA-b3F8-sl2,"1: Guess Rd - Horton Rd - Riverside HS",1,1016,17843_shp,0,0
+1,2,t7EE-b402-sl2,"1: Horton & Guess",0,1026,17845_shp,0,0
+1,2,t808-b402-sl2,"1: Guess Rd - Horton Rd - Riverside HS",1,1026,17843_shp,0,0
+1,2,t834-b3F8-sl2,"1: Horton & Guess",0,1016,17845_shp,0,0
+1,2,t84E-b3F8-sl2,"1: Guess Rd - Horton Rd - Riverside HS",1,1016,17843_shp,0,0
+1,2,t852-b402-sl2,"1: Horton & Guess",0,1026,17845_shp,0,0
+1,2,t86C-b402-sl2,"1: Guess Rd - Horton Rd - Riverside HS",1,1026,17843_shp,0,0
+1,2,t898-b3F8-sl2,"1: Horton & Guess",0,1016,17845_shp,0,0
+1,2,t8B2-b3F8-sl2,"1: Guess Rd - Horton Rd - Riverside HS",1,1016,17843_shp,0,0
+1,2,t8B6-b402-sl2,"1: Horton & Guess",0,1026,17845_shp,0,0
+1,2,t8D0-b402-sl2,"1: Guess Rd - Horton Rd - Riverside HS",1,1026,17843_shp,0,0
+1,2,t8FC-b3F8-sl2,"1: Horton & Guess",0,1016,17845_shp,0,0
+1,2,t916-b3F8-sl2,"1: Guess Rd - Horton Rd - Riverside HS",1,1016,17843_shp,0,0
+1,2,t91A-b402-sl2,"1: Horton & Guess",0,1026,17863_shp,0,0
+1,2,t960-b3F8-sl2,"1: Horton & Guess",0,1016,17845_shp,0,0
+1,3,t272-b3F9-sl3,"1: Guess Rd - Horton Rd - Riverside HS",1,1017,17841_shp,0,0
+1,3,t290-b403-sl3,"1: Guess Rd - Horton Rd - Riverside HS",1,1027,17841_shp,0,0
+1,3,t2BC-b3F9-sl3,"1: Horton & Guess",0,1017,17846_shp,0,0
+1,3,t2D6-b3F9-sl3,"1: Guess Rd - Horton Rd - Riverside HS",1,1017,17841_shp,0,0
+1,3,t2DA-b403-sl3,"1: Horton & Guess",0,1027,17846_shp,0,0
+1,3,t2F4-b403-sl3,"1: Guess Rd - Horton Rd - Riverside HS",1,1027,17841_shp,0,0
+1,3,t320-b3F9-sl3,"1: Horton & Guess",0,1017,17846_shp,0,0
+1,3,t33A-b3F9-sl3,"1: Guess Rd - Horton Rd - Riverside HS",1,1017,17841_shp,0,0
+1,3,t33E-b403-sl3,"1: Horton & Guess",0,1027,17846_shp,0,0
+1,3,t358-b403-sl3,"1: Guess Rd - Horton Rd - Riverside HS",1,1027,17841_shp,0,0
+1,3,t384-b3F9-sl3,"1: Horton & Guess",0,1017,17846_shp,0,0
+1,3,t39E-b3F9-sl3,"1: Guess Rd - Horton Rd - Riverside HS",1,1017,17841_shp,0,0
+1,3,t3A2-b403-sl3,"1: Horton & Guess",0,1027,17846_shp,0,0
+1,3,t3BC-b403-sl3,"1: Guess Rd - Horton Rd - Riverside HS",1,1027,17841_shp,0,0
+1,3,t3E8-b3F9-sl3,"1: Horton & Guess",0,1017,17846_shp,0,0
+1,3,t402-b3F9-sl3,"1: Guess Rd - Horton Rd - Riverside HS",1,1017,17841_shp,0,0
+1,3,t406-b403-sl3,"1: Horton & Guess",0,1027,17846_shp,0,0
+1,3,t420-b403-sl3,"1: Guess Rd - Horton Rd - Riverside HS",1,1027,17841_shp,0,0
+1,3,t44C-b3F9-sl3,"1: Horton & Guess",0,1017,17846_shp,0,0
+1,3,t466-b3F9-sl3,"1: Guess Rd - Horton Rd - Riverside HS",1,1017,17841_shp,0,0
+1,3,t46A-b403-sl3,"1: Horton & Guess",0,1027,17846_shp,0,0
+1,3,t484-b403-sl3,"1: Guess Rd - Horton Rd - Riverside HS",1,1027,17841_shp,0,0
+1,3,t4B0-b3F9-sl3,"1: Horton & Guess",0,1017,17846_shp,0,0
+1,3,t4CA-b3F9-sl3,"1: Guess Rd - Horton Rd - Riverside HS",1,1017,17841_shp,0,0
+1,3,t4CE-b403-sl3,"1: Horton & Guess",0,1027,17846_shp,0,0
+1,3,t4E8-b403-sl3,"1: Guess Rd - Horton Rd - Riverside HS",1,1027,17841_shp,0,0
+1,3,t514-b3F9-sl3,"1: Horton & Guess",0,1017,17846_shp,0,0
+1,3,t52E-b3F9-sl3,"1: Guess Rd - Horton Rd - Riverside HS",1,1017,17841_shp,0,0
+1,3,t532-b403-sl3,"1: Horton & Guess",0,1027,17846_shp,0,0
+1,3,t54C-b403-sl3,"1: Guess Rd - Horton Rd - Riverside HS",1,1027,17841_shp,0,0
+1,3,t578-b3F9-sl3,"1: Horton & Guess",0,1017,17846_shp,0,0
+1,3,t592-b3F9-sl3,"1: Guess Rd - Horton Rd - Riverside HS",1,1017,17841_shp,0,0
+1,3,t596-b403-sl3,"1: Horton & Guess",0,1027,17846_shp,0,0
+1,3,t5B0-b403-sl3,"1: Guess Rd - Horton Rd - Riverside HS",1,1027,17841_shp,0,0
+1,3,t5DC-b3F9-sl3,"1: Horton & Guess",0,1017,17846_shp,0,0
+1,3,t5F6-b3F9-sl3,"1: Guess Rd - Horton Rd - Riverside HS",1,1017,17841_shp,0,0
+1,3,t5FA-b403-sl3,"1: Horton & Guess",0,1027,17846_shp,0,0
+1,3,t614-b403-sl3,"1: Guess Rd - Horton Rd - Riverside HS",1,1027,17841_shp,0,0
+1,3,t640-b3F9-sl3,"1: Horton & Guess",0,1017,17846_shp,0,0
+1,3,t65A-b3F9-sl3,"1: Guess Rd - Horton Rd - Riverside HS",1,1017,17841_shp,0,0
+1,3,t65E-b403-sl3,"1: Horton & Guess",0,1027,17846_shp,0,0
+1,3,t678-b403-sl3,"1: Guess Rd - Horton Rd - Riverside HS",1,1027,17841_shp,0,0
+1,3,t6A4-b3F9-sl3,"1: Horton & Guess",0,1017,17846_shp,0,0
+1,3,t6BE-b3F9-sl3,"1: Guess Rd - Horton Rd - Riverside HS",1,1017,17841_shp,0,0
+1,3,t6C2-b403-sl3,"1: Horton & Guess",0,1027,17846_shp,0,0
+1,3,t6DC-b403-sl3,"1: Guess Rd - Horton Rd - Riverside HS",1,1027,17841_shp,0,0
+1,3,t708-b3F9-sl3,"1: Horton & Guess",0,1017,17846_shp,0,0
+1,3,t722-b3F9-sl3,"1: Guess Rd - Horton Rd - Riverside HS",1,1017,17841_shp,0,0
+1,3,t726-b403-sl3,"1: Horton & Guess",0,1027,17846_shp,0,0
+1,3,t740-b403-sl3,"1: Guess Rd - Horton Rd - Riverside HS",1,1027,17841_shp,0,0
+1,3,t76C-b3F9-sl3,"1: Horton & Guess",0,1017,17846_shp,0,0
+1,3,t786-b3F9-sl3,"1: Guess Rd - Horton Rd - Riverside HS",1,1017,17841_shp,0,0
+1,3,t78A-b403-sl3,"1: Horton & Guess",0,1027,17846_shp,0,0
+1,3,t7A4-b403-sl3,"1: Guess Rd - Horton Rd - Riverside HS",1,1027,17841_shp,0,0
+1,3,t7D0-b3F9-sl3,"1: Horton & Guess",0,1017,17846_shp,0,0
+1,3,t7EA-b3F9-sl3,"1: Guess Rd - Horton Rd - Riverside HS",1,1017,17841_shp,0,0
+1,3,t7EE-b403-sl3,"1: Horton & Guess",0,1027,17864_shp,0,0
+1,3,t834-b3F9-sl3,"1: Horton & Guess",0,1017,17864_shp,0,0
+1,4,t205-b3FA-sl4,"1: Guess Rd - Horton Rd - Riverside HS",1,1018,17842_shp,0,0
+1,4,t223-b404-sl4,"1: Guess Rd - Horton Rd - Riverside HS",1,1028,17842_shp,0,0
+1,4,t258-b3FA-sl4,"Riverside HS",0,1018,18270_shp,0,0
+1,4,t269-b40E-sl4,"1: Guess Rd - Horton Rd - Riverside HS",1,1038,17842_shp,0,0
+1,4,t276-b404-sl4,"Riverside HS",0,1028,18270_shp,0,0
+1,4,t282-b3FA-sl4,"Durham Station",1,1018,18261_shp,0,0
+1,4,t2BC-b40E-sl4,"Riverside HS",0,1038,18270_shp,0,0
+1,4,t2C8-b404-sl4,"Durham Station",1,1028,18261_shp,0,0
+1,4,t2DA-b3FA-sl4,"Riverside HS",0,1018,18270_shp,0,0
+1,4,t2E6-b40E-sl4,"Durham Station",1,1038,18261_shp,0,0
+1,4,t320-b404-sl4,"Riverside HS",0,1028,18270_shp,0,0
+1,4,t32C-b3FA-sl4,"Durham Station",1,1018,18261_shp,0,0
+1,4,t33E-b40E-sl4,"Riverside HS",0,1038,18270_shp,0,0
+1,4,t34A-b404-sl4,"Durham Station",1,1028,18261_shp,0,0
+1,4,t384-b3FA-sl4,"Riverside HS",0,1018,18270_shp,0,0
+1,4,t390-b40E-sl4,"Durham Station",1,1038,18261_shp,0,0
+1,4,t3A2-b404-sl4,"Riverside HS",0,1028,18270_shp,0,0
+1,4,t3AE-b3FA-sl4,"Durham Station",1,1018,18261_shp,0,0
+1,4,t3E8-b40E-sl4,"Riverside HS",0,1038,18270_shp,0,0
+1,4,t3F4-b404-sl4,"Durham Station",1,1028,18261_shp,0,0
+1,4,t406-b3FA-sl4,"Riverside HS",0,1018,18270_shp,0,0
+1,4,t412-b40E-sl4,"Durham Station",1,1038,18261_shp,0,0
+1,4,t44C-b404-sl4,"Riverside HS",0,1028,18270_shp,0,0
+1,4,t458-b3FA-sl4,"Durham Station",1,1018,18261_shp,0,0
+1,4,t46A-b40E-sl4,"Riverside HS",0,1038,18270_shp,0,0
+1,4,t476-b404-sl4,"Durham Station",1,1028,18261_shp,0,0
+1,4,t4B0-b3FA-sl4,"Riverside HS",0,1018,18270_shp,0,0
+1,4,t4BC-b40E-sl4,"Durham Station",1,1038,18261_shp,0,0
+1,4,t4CE-b404-sl4,"Riverside HS",0,1028,18270_shp,0,0
+1,4,t4DA-b3FA-sl4,"Durham Station",1,1018,18261_shp,0,0
+1,4,t514-b40E-sl4,"Riverside HS",0,1038,18270_shp,0,0
+1,4,t520-b404-sl4,"Durham Station",1,1028,18261_shp,0,0
+1,4,t532-b3FA-sl4,"Riverside HS",0,1018,18270_shp,0,0
+1,4,t53E-b40E-sl4,"Durham Station",1,1038,18261_shp,0,0
+1,4,t578-b404-sl4,"Riverside HS",0,1028,18270_shp,0,0
+1,4,t584-b3FA-sl4,"Durham Station",1,1018,18261_shp,0,0
+1,4,t596-b40E-sl4,"Riverside HS",0,1038,18270_shp,0,0
+1,4,t5A2-b404-sl4,"Durham Station",1,1028,18261_shp,0,0
+1,4,t5DC-b3FA-sl4,"Riverside HS",0,1018,18270_shp,0,0
+1,4,t5E8-b40E-sl4,"Durham Station",1,1038,18261_shp,0,0
+1,4,t5FA-b404-sl4,"Riverside HS",0,1028,18270_shp,0,0
+1,4,t606-b3FA-sl4,"Durham Station",1,1018,18261_shp,0,0
+1,4,t640-b40E-sl4,"Riverside HS",0,1038,18270_shp,0,0
+1,4,t64C-b404-sl4,"Durham Station",1,1028,18261_shp,0,0
+1,4,t65E-b3FA-sl4,"Riverside HS",0,1018,18270_shp,0,0
+1,4,t66A-b40E-sl4,"Durham Station",1,1038,18261_shp,0,0
+1,4,t6A4-b404-sl4,"Riverside HS",0,1028,18270_shp,0,0
+1,4,t6B0-b3FA-sl4,"Durham Station",1,1018,18261_shp,0,0
+1,4,t6C2-b40E-sl4,"Riverside HS",0,1038,18270_shp,0,0
+1,4,t6CE-b404-sl4,"Durham Station",1,1028,18261_shp,0,0
+1,4,t708-b3FA-sl4,"Riverside HS",0,1018,18270_shp,0,0
+1,4,t714-b40E-sl4,"Durham Station",1,1038,18261_shp,0,0
+1,4,t726-b404-sl4,"Riverside HS",0,1028,18270_shp,0,0
+1,4,t732-b3FA-sl4,"Durham Station",1,1018,18261_shp,0,0
+1,4,t76C-b40E-sl4,"1: Horton & Guess",0,1038,17862_shp,0,0
+1,4,t778-b404-sl4,"Durham Station",1,1028,18261_shp,0,0
+1,4,t78A-b3FA-sl4,"1: Horton & Guess",0,1018,17844_shp,0,0
+1,4,t7A4-b3FA-sl4,"1: Guess Rd - Horton Rd - Riverside HS",1,1018,17842_shp,0,0
+1,4,t7D0-b404-sl4,"1: Horton & Guess",0,1028,17844_shp,0,0
+1,4,t7EA-b404-sl4,"1: Guess Rd - Horton Rd - Riverside HS",1,1028,17842_shp,0,0
+1,4,t7EE-b3FA-sl4,"1: Horton & Guess",0,1018,17844_shp,0,0
+1,4,t808-b3FA-sl4,"1: Guess Rd - Horton Rd - Riverside HS",1,1018,17842_shp,0,0
+1,4,t834-b404-sl4,"1: Horton & Guess",0,1028,17844_shp,0,0
+1,4,t84E-b404-sl4,"1: Guess Rd - Horton Rd - Riverside HS",1,1028,17842_shp,0,0
+1,4,t852-b3FA-sl4,"1: Horton & Guess",0,1018,17844_shp,0,0
+1,4,t86C-b3FA-sl4,"1: Guess Rd - Horton Rd - Riverside HS",1,1018,17842_shp,0,0
+1,4,t898-b404-sl4,"1: Horton & Guess",0,1028,17844_shp,0,0
+1,4,t8B2-b404-sl4,"1: Guess Rd - Horton Rd - Riverside HS",1,1028,17842_shp,0,0
+1,4,t8B6-b3FA-sl4,"1: Horton & Guess",0,1018,17844_shp,0,0
+1,4,t8D0-b3FA-sl4,"1: Guess Rd - Horton Rd - Riverside HS",1,1018,17842_shp,0,0
+1,4,t8FC-b404-sl4,"1: Horton & Guess",0,1028,17844_shp,0,0
+1,4,t916-b404-sl4,"1: Guess Rd - Horton Rd - Riverside HS",1,1028,17842_shp,0,0
+1,4,t91A-b3FA-sl4,"1: Horton & Guess",0,1018,17862_shp,0,0
+1,4,t960-b404-sl4,"1: Horton & Guess",0,1028,17844_shp,0,0
+10,2,t20D-b2720-sl2,"10: Durham Station",1,10016,18251_shp,0,0
+10,2,t22B-b272A-sl2,"10: Durham Station",1,10026,18251_shp,0,0
+10,2,t258-b2720-sl2,"10: New Hope Commons",0,10016,18169_shp,0,0
+10,2,t263-b2734-sl2,"10: Durham Station",1,10036,18173_shp,0,0
+10,2,t276-b272A-sl2,"10: New Hope Commons",0,10026,18169_shp,0,0
+10,2,t284-b2720-sl2,"10: Durham Station",1,10016,18173_shp,0,0
+10,2,t2BC-b2734-sl2,"10: New Hope Commons",0,10036,18169_shp,0,0
+10,2,t2CA-b272A-sl2,"10: Durham Station",1,10026,18173_shp,0,0
+10,2,t2DA-b2720-sl2,"10: New Hope Commons",0,10016,18169_shp,0,0
+10,2,t2E8-b2734-sl2,"10: Durham Station",1,10036,18173_shp,0,0
+10,2,t320-b272A-sl2,"10: New Hope Commons",0,10026,18169_shp,0,0
+10,2,t32E-b2720-sl2,"10: Durham Station",1,10016,18173_shp,0,0
+10,2,t33E-b2734-sl2,"10: New Hope Commons",0,10036,18169_shp,0,0
+10,2,t34C-b272A-sl2,"10: Durham Station",1,10026,18173_shp,0,0
+10,2,t384-b2720-sl2,"10: New Hope Commons",0,10016,18169_shp,0,0
+10,2,t392-b2734-sl2,"10: Durham Station",1,10036,18173_shp,0,0
+10,2,t3A2-b272A-sl2,"10: New Hope Commons",0,10026,18169_shp,0,0
+10,2,t3B0-b2720-sl2,"10: Durham Station",1,10016,18173_shp,0,0
+10,2,t3E8-b2734-sl2,"10: New Hope Commons",0,10036,18169_shp,0,0
+10,2,t3F6-b272A-sl2,"10: Durham Station",1,10026,18173_shp,0,0
+10,2,t406-b2720-sl2,"10: New Hope Commons",0,10016,18169_shp,0,0
+10,2,t414-b2734-sl2,"10: Durham Station",1,10036,18173_shp,0,0
+10,2,t44C-b272A-sl2,"10: New Hope Commons",0,10026,18169_shp,0,0
+10,2,t45A-b2720-sl2,"10: Durham Station",1,10016,18173_shp,0,0
+10,2,t46A-b2734-sl2,"10: New Hope Commons",0,10036,18169_shp,0,0
+10,2,t478-b272A-sl2,"10: Durham Station",1,10026,18173_shp,0,0
+10,2,t4B0-b2720-sl2,"10: New Hope Commons",0,10016,18169_shp,0,0
+10,2,t4BE-b2734-sl2,"10: Durham Station",1,10036,18173_shp,0,0
+10,2,t4CE-b272A-sl2,"10: New Hope Commons",0,10026,18169_shp,0,0
+10,2,t4DC-b2720-sl2,"10: Durham Station",1,10016,18173_shp,0,0
+10,2,t514-b2734-sl2,"10: New Hope Commons",0,10036,18169_shp,0,0
+10,2,t522-b272A-sl2,"10: Durham Station",1,10026,18173_shp,0,0
+10,2,t532-b2720-sl2,"10: New Hope Commons",0,10016,18169_shp,0,0
+10,2,t540-b2734-sl2,"10: Durham Station",1,10036,18173_shp,0,0
+10,2,t578-b272A-sl2,"10: New Hope Commons",0,10026,18169_shp,0,0
+10,2,t586-b2720-sl2,"10: Durham Station",1,10016,18173_shp,0,0
+10,2,t596-b2734-sl2,"10: New Hope Commons",0,10036,18169_shp,0,0
+10,2,t5A4-b272A-sl2,"10: Durham Station",1,10026,18173_shp,0,0
+10,2,t5DC-b2720-sl2,"10: New Hope Commons",0,10016,18169_shp,0,0
+10,2,t5EA-b2734-sl2,"10: Durham Station",1,10036,18173_shp,0,0
+10,2,t5FA-b272A-sl2,"10: New Hope Commons",0,10026,18169_shp,0,0
+10,2,t608-b2720-sl2,"10: Durham Station",1,10016,18173_shp,0,0
+10,2,t640-b2734-sl2,"10: New Hope Commons",0,10036,18169_shp,0,0
+10,2,t64E-b272A-sl2,"10: Durham Station",1,10026,18173_shp,0,0
+10,2,t65E-b2720-sl2,"10: New Hope Commons",0,10016,18169_shp,0,0
+10,2,t66C-b2734-sl2,"10: Durham Station",1,10036,18173_shp,0,0
+10,2,t6A4-b272A-sl2,"10: New Hope Commons",0,10026,18169_shp,0,0
+10,2,t6B2-b2720-sl2,"10: Durham Station",1,10016,18173_shp,0,0
+10,2,t6C2-b2734-sl2,"10: New Hope Commons",0,10036,18169_shp,0,0
+10,2,t6D0-b272A-sl2,"10: Durham Station",1,10026,18173_shp,0,0
+10,2,t708-b2720-sl2,"10: New Hope Commons",0,10016,18169_shp,0,0
+10,2,t716-b2734-sl2,"10: Durham Station",1,10036,18173_shp,0,0
+10,2,t726-b272A-sl2,"10: New Hope Commons",0,10026,18169_shp,0,0
+10,2,t734-b2720-sl2,"10: Durham Station",1,10016,18173_shp,0,0
+10,2,t76C-b2734-sl2,"10: Chapl Hill Rd – S. Square – New Hope",0,10036,18163_shp,0,0
+10,2,t777-b272A-sl2,"10: Durham Station",1,10026,18166_shp,0,0
+10,2,t78A-b2720-sl2,"10: New Hope Commons",0,10016,18169_shp,0,0
+10,2,t798-b2734-sl2,"10: Durham Station",1,10036,18173_shp,0,0
+10,2,t7D0-b272A-sl2,"10: Chapl Hill Rd – S. Square – New Hope",0,10026,18163_shp,0,0
+10,2,t7DB-b2720-sl2,"10: Durham Station",1,10016,18166_shp,0,0
+10,2,t7EE-b2734-sl2,"10: New Hope Commons",0,10036,18169_shp,0,0
+10,2,t7FC-b272A-sl2,"10: Durham Station",1,10026,18173_shp,0,0
+10,2,t834-b2720-sl2,"10: Chapl Hill Rd – S. Square – New Hope",0,10016,18163_shp,0,0
+10,2,t83F-b2734-sl2,"10: Durham Station",1,10036,18166_shp,0,0
+10,2,t852-b272A-sl2,"10: New Hope Commons",0,10026,18169_shp,0,0
+10,2,t860-b2720-sl2,"10: Durham Station",1,10016,18173_shp,0,0
+10,2,t898-b2734-sl2,"10: Chapl Hill Rd – S. Square – New Hope",0,10036,18163_shp,0,0
+10,2,t8A3-b272A-sl2,"10: Durham Station",1,10026,18166_shp,0,0
+10,2,t8B6-b2720-sl2,"10: New Hope Commons",0,10016,18169_shp,0,0
+10,2,t8C4-b2734-sl2,"10: Durham Station",1,10036,18173_shp,0,0
+10,2,t8FC-b272A-sl2,"10: Chapl Hill Rd – S. Square – New Hope",0,10026,18143_shp,0,0
+10,2,t907-b2720-sl2,"10: Durham Station",1,10016,18166_shp,0,0
+10,2,t91A-b2734-sl2,"10: New Hope Commons",0,10036,18140_shp,0,0
+10,2,t960-b2720-sl2,"10: Westgate Dr",0,10016,18161_shp,0,0
+10,3,t263-b2721-sl3,"10: Durham Station",1,10017,18167_shp,0,0
+10,3,t284-b272B-sl3,"10: Durham Station",1,10027,18174_shp,0,0
+10,3,t2BC-b2721-sl3,"10: Chapl Hill Rd – S. Square – New Hope",0,10017,18164_shp,0,0
+10,3,t2C7-b2735-sl3,"10: Durham Station",1,10037,18167_shp,0,0
+10,3,t2DA-b272B-sl3,"10: New Hope Commons",0,10027,18170_shp,0,0
+10,3,t2E8-b2721-sl3,"10: Durham Station",1,10017,18174_shp,0,0
+10,3,t320-b2735-sl3,"10: Chapl Hill Rd – S. Square – New Hope",0,10037,18164_shp,0,0
+10,3,t32B-b272B-sl3,"10: Durham Station",1,10027,18167_shp,0,0
+10,3,t33E-b2721-sl3,"10: New Hope Commons",0,10017,18170_shp,0,0
+10,3,t34C-b2735-sl3,"10: Durham Station",1,10037,18174_shp,0,0
+10,3,t384-b272B-sl3,"10: Chapl Hill Rd – S. Square – New Hope",0,10027,18164_shp,0,0
+10,3,t38F-b2721-sl3,"10: Durham Station",1,10017,18167_shp,0,0
+10,3,t3A2-b2735-sl3,"10: New Hope Commons",0,10037,18170_shp,0,0
+10,3,t3B0-b272B-sl3,"10: Durham Station",1,10027,18174_shp,0,0
+10,3,t3E8-b2721-sl3,"10: Chapl Hill Rd – S. Square – New Hope",0,10017,18164_shp,0,0
+10,3,t3F3-b2735-sl3,"10: Durham Station",1,10037,18167_shp,0,0
+10,3,t406-b272B-sl3,"10: New Hope Commons",0,10027,18170_shp,0,0
+10,3,t414-b2721-sl3,"10: Durham Station",1,10017,18174_shp,0,0
+10,3,t44C-b2735-sl3,"10: Chapl Hill Rd – S. Square – New Hope",0,10037,18164_shp,0,0
+10,3,t457-b272B-sl3,"10: Durham Station",1,10027,18167_shp,0,0
+10,3,t46A-b2721-sl3,"10: New Hope Commons",0,10017,18170_shp,0,0
+10,3,t478-b2735-sl3,"10: Durham Station",1,10037,18174_shp,0,0
+10,3,t4B0-b272B-sl3,"10: Chapl Hill Rd – S. Square – New Hope",0,10027,18164_shp,0,0
+10,3,t4BB-b2721-sl3,"10: Durham Station",1,10017,18167_shp,0,0
+10,3,t4CE-b2735-sl3,"10: New Hope Commons",0,10037,18170_shp,0,0
+10,3,t4DC-b272B-sl3,"10: Durham Station",1,10027,18174_shp,0,0
+10,3,t514-b2721-sl3,"10: Chapl Hill Rd – S. Square – New Hope",0,10017,18164_shp,0,0
+10,3,t51F-b2735-sl3,"10: Durham Station",1,10037,18167_shp,0,0
+10,3,t532-b272B-sl3,"10: New Hope Commons",0,10027,18170_shp,0,0
+10,3,t540-b2721-sl3,"10: Durham Station",1,10017,18174_shp,0,0
+10,3,t578-b2735-sl3,"10: Chapl Hill Rd – S. Square – New Hope",0,10037,18164_shp,0,0
+10,3,t583-b272B-sl3,"10: Durham Station",1,10027,18167_shp,0,0
+10,3,t596-b2721-sl3,"10: New Hope Commons",0,10017,18170_shp,0,0
+10,3,t5A4-b2735-sl3,"10: Durham Station",1,10037,18174_shp,0,0
+10,3,t5DC-b272B-sl3,"10: Chapl Hill Rd – S. Square – New Hope",0,10027,18164_shp,0,0
+10,3,t5E7-b2721-sl3,"10: Durham Station",1,10017,18167_shp,0,0
+10,3,t5FA-b2735-sl3,"10: New Hope Commons",0,10037,18170_shp,0,0
+10,3,t608-b272B-sl3,"10: Durham Station",1,10027,18174_shp,0,0
+10,3,t640-b2721-sl3,"10: Chapl Hill Rd – S. Square – New Hope",0,10017,18164_shp,0,0
+10,3,t64B-b2735-sl3,"10: Durham Station",1,10037,18167_shp,0,0
+10,3,t65E-b272B-sl3,"10: New Hope Commons",0,10027,18170_shp,0,0
+10,3,t66C-b2721-sl3,"10: Durham Station",1,10017,18174_shp,0,0
+10,3,t6A4-b2735-sl3,"10: Chapl Hill Rd – S. Square – New Hope",0,10037,18164_shp,0,0
+10,3,t6AF-b272B-sl3,"10: Durham Station",1,10027,18167_shp,0,0
+10,3,t6C2-b2721-sl3,"10: New Hope Commons",0,10017,18170_shp,0,0
+10,3,t6D0-b2735-sl3,"10: Durham Station",1,10037,18174_shp,0,0
+10,3,t708-b272B-sl3,"10: Chapl Hill Rd – S. Square – New Hope",0,10027,18164_shp,0,0
+10,3,t713-b2721-sl3,"10: Durham Station",1,10017,18167_shp,0,0
+10,3,t726-b2735-sl3,"10: New Hope Commons",0,10037,18170_shp,0,0
+10,3,t734-b272B-sl3,"10: Durham Station",1,10027,18174_shp,0,0
+10,3,t76C-b2721-sl3,"10: Chapl Hill Rd – S. Square – New Hope",0,10017,18164_shp,0,0
+10,3,t777-b2735-sl3,"10: Durham Station",1,10037,18167_shp,0,0
+10,3,t78A-b272B-sl3,"10: New Hope Commons",0,10027,18170_shp,0,0
+10,3,t798-b2721-sl3,"10: Durham Station",1,10017,18174_shp,0,0
+10,3,t7D0-b2735-sl3,"10: Chapl Hill Rd – S. Square – New Hope",0,10037,18144_shp,0,0
+10,3,t7DB-b272B-sl3,"10: Durham Station",1,10027,18167_shp,0,0
+10,3,t7EE-b2721-sl3,"10: New Hope Commons",0,10017,18141_shp,0,0
+10,3,t834-b272B-sl3,"10: Westgate Dr",0,10027,18171_shp,0,0
+10,4,t20D-b2722-sl4,"10: Durham Station",1,10018,18067_shp,0,0
+10,4,t22B-b272C-sl4,"10: Durham Station",1,10028,18067_shp,0,0
+10,4,t258-b2722-sl4,"10: New Hope Commons",0,10018,18168_shp,0,0
+10,4,t263-b2736-sl4,"10: Durham Station",1,10038,18172_shp,0,0
+10,4,t276-b272C-sl4,"10: New Hope Commons",0,10028,18168_shp,0,0
+10,4,t284-b2722-sl4,"10: Durham Station",1,10018,18172_shp,0,0
+10,4,t2BC-b2736-sl4,"10: New Hope Commons",0,10038,18168_shp,0,0
+10,4,t2CA-b272C-sl4,"10: Durham Station",1,10028,18172_shp,0,0
+10,4,t2DA-b2722-sl4,"10: New Hope Commons",0,10018,18168_shp,0,0
+10,4,t2E8-b2736-sl4,"10: Durham Station",1,10038,18172_shp,0,0
+10,4,t320-b272C-sl4,"10: New Hope Commons",0,10028,18168_shp,0,0
+10,4,t32E-b2722-sl4,"10: Durham Station",1,10018,18172_shp,0,0
+10,4,t33E-b2736-sl4,"10: New Hope Commons",0,10038,18168_shp,0,0
+10,4,t34C-b272C-sl4,"10: Durham Station",1,10028,18172_shp,0,0
+10,4,t384-b2722-sl4,"10: New Hope Commons",0,10018,18168_shp,0,0
+10,4,t392-b2736-sl4,"10: Durham Station",1,10038,18172_shp,0,0
+10,4,t3A2-b272C-sl4,"10: New Hope Commons",0,10028,18168_shp,0,0
+10,4,t3B0-b2722-sl4,"10: Durham Station",1,10018,18172_shp,0,0
+10,4,t3E8-b2736-sl4,"10: New Hope Commons",0,10038,18168_shp,0,0
+10,4,t3F6-b272C-sl4,"10: Durham Station",1,10028,18172_shp,0,0
+10,4,t406-b2722-sl4,"10: New Hope Commons",0,10018,18168_shp,0,0
+10,4,t414-b2736-sl4,"10: Durham Station",1,10038,18172_shp,0,0
+10,4,t44C-b272C-sl4,"10: New Hope Commons",0,10028,18168_shp,0,0
+10,4,t45A-b2722-sl4,"10: Durham Station",1,10018,18172_shp,0,0
+10,4,t46A-b2736-sl4,"10: New Hope Commons",0,10038,18168_shp,0,0
+10,4,t478-b272C-sl4,"10: Durham Station",1,10028,18172_shp,0,0
+10,4,t4B0-b2722-sl4,"10: New Hope Commons",0,10018,18168_shp,0,0
+10,4,t4BE-b2736-sl4,"10: Durham Station",1,10038,18172_shp,0,0
+10,4,t4CE-b272C-sl4,"10: New Hope Commons",0,10028,18168_shp,0,0
+10,4,t4DC-b2722-sl4,"10: Durham Station",1,10018,18172_shp,0,0
+10,4,t514-b2736-sl4,"10: New Hope Commons",0,10038,18168_shp,0,0
+10,4,t522-b272C-sl4,"10: Durham Station",1,10028,18172_shp,0,0
+10,4,t532-b2722-sl4,"10: New Hope Commons",0,10018,18168_shp,0,0
+10,4,t540-b2736-sl4,"10: Durham Station",1,10038,18172_shp,0,0
+10,4,t578-b272C-sl4,"10: New Hope Commons",0,10028,18168_shp,0,0
+10,4,t586-b2722-sl4,"10: Durham Station",1,10018,18172_shp,0,0
+10,4,t596-b2736-sl4,"10: New Hope Commons",0,10038,18168_shp,0,0
+10,4,t5A4-b272C-sl4,"10: Durham Station",1,10028,18172_shp,0,0
+10,4,t5DC-b2722-sl4,"10: New Hope Commons",0,10018,18168_shp,0,0
+10,4,t5EA-b2736-sl4,"10: Durham Station",1,10038,18172_shp,0,0
+10,4,t5FA-b272C-sl4,"10: New Hope Commons",0,10028,18168_shp,0,0
+10,4,t608-b2722-sl4,"10: Durham Station",1,10018,18172_shp,0,0
+10,4,t640-b2736-sl4,"10: New Hope Commons",0,10038,18168_shp,0,0
+10,4,t64E-b272C-sl4,"10: Durham Station",1,10028,18172_shp,0,0
+10,4,t65E-b2722-sl4,"10: New Hope Commons",0,10018,18168_shp,0,0
+10,4,t66C-b2736-sl4,"10: Durham Station",1,10038,18172_shp,0,0
+10,4,t6A4-b272C-sl4,"10: New Hope Commons",0,10028,18168_shp,0,0
+10,4,t6B2-b2722-sl4,"10: Durham Station",1,10018,18172_shp,0,0
+10,4,t6C2-b2736-sl4,"10: New Hope Commons",0,10038,18168_shp,0,0
+10,4,t6D0-b272C-sl4,"10: Durham Station",1,10028,18172_shp,0,0
+10,4,t708-b2722-sl4,"10: New Hope Commons",0,10018,18168_shp,0,0
+10,4,t716-b2736-sl4,"10: Durham Station",1,10038,18172_shp,0,0
+10,4,t726-b272C-sl4,"10: New Hope Commons",0,10028,18168_shp,0,0
+10,4,t734-b2722-sl4,"10: Durham Station",1,10018,18172_shp,0,0
+10,4,t76C-b2736-sl4,"10: Chapl Hill Rd – S. Square – New Hope",0,10038,18162_shp,0,0
+10,4,t777-b272C-sl4,"10: Durham Station",1,10028,18165_shp,0,0
+10,4,t78A-b2722-sl4,"10: New Hope Commons",0,10018,18168_shp,0,0
+10,4,t798-b2736-sl4,"10: Durham Station",1,10038,18172_shp,0,0
+10,4,t7D0-b272C-sl4,"10: Chapl Hill Rd – S. Square – New Hope",0,10028,18162_shp,0,0
+10,4,t7DB-b2722-sl4,"10: Durham Station",1,10018,18165_shp,0,0
+10,4,t7EE-b2736-sl4,"10: New Hope Commons",0,10038,18168_shp,0,0
+10,4,t7FC-b272C-sl4,"10: Durham Station",1,10028,18172_shp,0,0
+10,4,t834-b2722-sl4,"10: Chapl Hill Rd – S. Square – New Hope",0,10018,18162_shp,0,0
+10,4,t83F-b2736-sl4,"10: Durham Station",1,10038,18165_shp,0,0
+10,4,t852-b272C-sl4,"10: New Hope Commons",0,10028,18168_shp,0,0
+10,4,t860-b2722-sl4,"10: Durham Station",1,10018,18172_shp,0,0
+10,4,t898-b2736-sl4,"10: Chapl Hill Rd – S. Square – New Hope",0,10038,18162_shp,0,0
+10,4,t8A3-b272C-sl4,"10: Durham Station",1,10028,18165_shp,0,0
+10,4,t8B6-b2722-sl4,"10: New Hope Commons",0,10018,18168_shp,0,0
+10,4,t8C4-b2736-sl4,"10: Durham Station",1,10038,18172_shp,0,0
+10,4,t8FC-b272C-sl4,"10: Chapl Hill Rd – S. Square – New Hope",0,10028,18142_shp,0,0
+10,4,t907-b2722-sl4,"10: Durham Station",1,10018,18165_shp,0,0
+10,4,t91A-b2736-sl4,"10: New Hope Commons",0,10038,18139_shp,0,0
+10,4,t960-b2722-sl4,"10: Westgate Dr",0,10018,18160_shp,0,0
+1012,2,t27E-b27E8-sl2,"10B: Chpl Hill Rd – S. Square – Shannon",1,10216,18255_shp,0,0
+1012,2,t2CB-b27E8-sl2,"10B: Westgate Dr",0,10216,18252_shp,0,0
+1012,2,t2CB-b27F2-sl2,"10B: Westgate Dr",1,10226,18253_shp,0,0
+1012,2,t2E2-b27E8-sl2,"10B: Chpl Hill Rd – S. Square – Shannon",1,10216,18255_shp,0,0
+1012,2,t2E9-b27F2-sl2,"10B: Westgate Dr",0,10226,18254_shp,0,0
+1012,2,t32F-b27E8-sl2,"10B: Westgate Dr",0,10216,18252_shp,0,0
+1012,2,t32F-b27F2-sl2,"10B: Westgate Dr",1,10226,18253_shp,0,0
+1012,2,t346-b27E8-sl2,"10B: Chpl Hill Rd – S. Square – Shannon",1,10216,18255_shp,0,0
+1012,2,t34D-b27F2-sl2,"10B: Westgate Dr",0,10226,18254_shp,0,0
+1012,2,t393-b27E8-sl2,"10B: Westgate Dr",0,10216,18252_shp,0,0
+1012,2,t393-b27F2-sl2,"10B: Westgate Dr",1,10226,18253_shp,0,0
+1012,2,t3AA-b27E8-sl2,"10B: Chpl Hill Rd – S. Square – Shannon",1,10216,18255_shp,0,0
+1012,2,t3B1-b27F2-sl2,"10B: Westgate Dr",0,10226,18254_shp,0,0
+1012,2,t3F7-b27E8-sl2,"10B: Westgate Dr",0,10216,18252_shp,0,0
+1012,2,t3F7-b27F2-sl2,"10B: Westgate Dr",1,10226,18253_shp,0,0
+1012,2,t40E-b27E8-sl2,"10B: Chpl Hill Rd – S. Square – Shannon",1,10216,18255_shp,0,0
+1012,2,t415-b27F2-sl2,"10B: Westgate Dr",0,10226,18254_shp,0,0
+1012,2,t45B-b27E8-sl2,"10B: Westgate Dr",0,10216,18252_shp,0,0
+1012,2,t45B-b27F2-sl2,"10B: Westgate Dr",1,10226,18253_shp,0,0
+1012,2,t472-b27E8-sl2,"10B: Chpl Hill Rd – S. Square – Shannon",1,10216,18255_shp,0,0
+1012,2,t479-b27F2-sl2,"10B: Westgate Dr",0,10226,18254_shp,0,0
+1012,2,t4BF-b27E8-sl2,"10B: Westgate Dr",0,10216,18252_shp,0,0
+1012,2,t4BF-b27F2-sl2,"10B: Westgate Dr",1,10226,18253_shp,0,0
+1012,2,t4D6-b27E8-sl2,"10B: Chpl Hill Rd – S. Square – Shannon",1,10216,18255_shp,0,0
+1012,2,t4DD-b27F2-sl2,"10B: Westgate Dr",0,10226,18254_shp,0,0
+1012,2,t523-b27E8-sl2,"10B: Westgate Dr",0,10216,18252_shp,0,0
+1012,2,t523-b27F2-sl2,"10B: Westgate Dr",1,10226,18253_shp,0,0
+1012,2,t53A-b27E8-sl2,"10B: Chpl Hill Rd – S. Square – Shannon",1,10216,18255_shp,0,0
+1012,2,t541-b27F2-sl2,"10B: Westgate Dr",0,10226,18254_shp,0,0
+1012,2,t587-b27E8-sl2,"10B: Westgate Dr",0,10216,18252_shp,0,0
+1012,2,t587-b27F2-sl2,"10B: Westgate Dr",1,10226,18253_shp,0,0
+1012,2,t59E-b27E8-sl2,"10B: Chpl Hill Rd – S. Square – Shannon",1,10216,18255_shp,0,0
+1012,2,t5A5-b27F2-sl2,"10B: Westgate Dr",0,10226,18254_shp,0,0
+1012,2,t5EB-b27E8-sl2,"10B: Westgate Dr",0,10216,18252_shp,0,0
+1012,2,t5EB-b27F2-sl2,"10B: Westgate Dr",1,10226,18253_shp,0,0
+1012,2,t602-b27E8-sl2,"10B: Chpl Hill Rd – S. Square – Shannon",1,10216,18255_shp,0,0
+1012,2,t609-b27F2-sl2,"10B: Westgate Dr",0,10226,18254_shp,0,0
+1012,2,t64F-b27E8-sl2,"10B: Westgate Dr",0,10216,18252_shp,0,0
+1012,2,t64F-b27F2-sl2,"10B: Westgate Dr",1,10226,18253_shp,0,0
+1012,2,t666-b27E8-sl2,"10B: Chpl Hill Rd – S. Square – Shannon",1,10216,18255_shp,0,0
+1012,2,t66D-b27F2-sl2,"10B: Westgate Dr",0,10226,18254_shp,0,0
+1012,2,t6B3-b27E8-sl2,"10B: Westgate Dr",0,10216,18252_shp,0,0
+1012,2,t6B3-b27F2-sl2,"10B: Westgate Dr",1,10226,18253_shp,0,0
+1012,2,t6CA-b27E8-sl2,"10B: Chpl Hill Rd – S. Square – Shannon",1,10216,18255_shp,0,0
+1012,2,t6D1-b27F2-sl2,"10B: Westgate Dr",0,10226,18257_shp,0,0
+1012,2,t717-b27E8-sl2,"10B: Westgate Dr",0,10216,18256_shp,0,0
+1012,4,t27E-b27EA-sl4,"10B: Chpl Hill Rd – S. Square – Shannon",1,10218,18071_shp,0,0
+1012,4,t2CB-b27EA-sl4,"10B: Westgate Dr",0,10218,18068_shp,0,0
+1012,4,t2CB-b27F4-sl4,"10B: Westgate Dr",1,10228,18069_shp,0,0
+1012,4,t2E2-b27EA-sl4,"10B: Chpl Hill Rd – S. Square – Shannon",1,10218,18071_shp,0,0
+1012,4,t2E9-b27F4-sl4,"10B: Westgate Dr",0,10228,18070_shp,0,0
+1012,4,t32F-b27EA-sl4,"10B: Westgate Dr",0,10218,18068_shp,0,0
+1012,4,t32F-b27F4-sl4,"10B: Westgate Dr",1,10228,18069_shp,0,0
+1012,4,t346-b27EA-sl4,"10B: Chpl Hill Rd – S. Square – Shannon",1,10218,18071_shp,0,0
+1012,4,t34D-b27F4-sl4,"10B: Westgate Dr",0,10228,18070_shp,0,0
+1012,4,t393-b27EA-sl4,"10B: Westgate Dr",0,10218,18068_shp,0,0
+1012,4,t393-b27F4-sl4,"10B: Westgate Dr",1,10228,18069_shp,0,0
+1012,4,t3AA-b27EA-sl4,"10B: Chpl Hill Rd – S. Square – Shannon",1,10218,18071_shp,0,0
+1012,4,t3B1-b27F4-sl4,"10B: Westgate Dr",0,10228,18070_shp,0,0
+1012,4,t3F7-b27EA-sl4,"10B: Westgate Dr",0,10218,18068_shp,0,0
+1012,4,t3F7-b27F4-sl4,"10B: Westgate Dr",1,10228,18069_shp,0,0
+1012,4,t40E-b27EA-sl4,"10B: Chpl Hill Rd – S. Square – Shannon",1,10218,18071_shp,0,0
+1012,4,t415-b27F4-sl4,"10B: Westgate Dr",0,10228,18070_shp,0,0
+1012,4,t45B-b27EA-sl4,"10B: Westgate Dr",0,10218,18068_shp,0,0
+1012,4,t45B-b27F4-sl4,"10B: Westgate Dr",1,10228,18069_shp,0,0
+1012,4,t472-b27EA-sl4,"10B: Chpl Hill Rd – S. Square – Shannon",1,10218,18071_shp,0,0
+1012,4,t479-b27F4-sl4,"10B: Westgate Dr",0,10228,18070_shp,0,0
+1012,4,t4BF-b27EA-sl4,"10B: Westgate Dr",0,10218,18068_shp,0,0
+1012,4,t4BF-b27F4-sl4,"10B: Westgate Dr",1,10228,18069_shp,0,0
+1012,4,t4D6-b27EA-sl4,"10B: Chpl Hill Rd – S. Square – Shannon",1,10218,18071_shp,0,0
+1012,4,t4DD-b27F4-sl4,"10B: Westgate Dr",0,10228,18070_shp,0,0
+1012,4,t523-b27EA-sl4,"10B: Westgate Dr",0,10218,18068_shp,0,0
+1012,4,t523-b27F4-sl4,"10B: Westgate Dr",1,10228,18069_shp,0,0
+1012,4,t53A-b27EA-sl4,"10B: Chpl Hill Rd – S. Square – Shannon",1,10218,18071_shp,0,0
+1012,4,t541-b27F4-sl4,"10B: Westgate Dr",0,10228,18070_shp,0,0
+1012,4,t587-b27EA-sl4,"10B: Westgate Dr",0,10218,18068_shp,0,0
+1012,4,t587-b27F4-sl4,"10B: Westgate Dr",1,10228,18069_shp,0,0
+1012,4,t59E-b27EA-sl4,"10B: Chpl Hill Rd – S. Square – Shannon",1,10218,18071_shp,0,0
+1012,4,t5A5-b27F4-sl4,"10B: Westgate Dr",0,10228,18070_shp,0,0
+1012,4,t5EB-b27EA-sl4,"10B: Westgate Dr",0,10218,18068_shp,0,0
+1012,4,t5EB-b27F4-sl4,"10B: Westgate Dr",1,10228,18069_shp,0,0
+1012,4,t602-b27EA-sl4,"10B: Chpl Hill Rd – S. Square – Shannon",1,10218,18071_shp,0,0
+1012,4,t609-b27F4-sl4,"10B: Westgate Dr",0,10228,18070_shp,0,0
+1012,4,t64F-b27EA-sl4,"10B: Westgate Dr",0,10218,18068_shp,0,0
+1012,4,t64F-b27F4-sl4,"10B: Westgate Dr",1,10228,18069_shp,0,0
+1012,4,t666-b27EA-sl4,"10B: Chpl Hill Rd – S. Square – Shannon",1,10218,18071_shp,0,0
+1012,4,t66D-b27F4-sl4,"10B: Westgate Dr",0,10228,18070_shp,0,0
+1012,4,t6B3-b27EA-sl4,"10B: Westgate Dr",0,10218,18068_shp,0,0
+1012,4,t6B3-b27F4-sl4,"10B: Westgate Dr",1,10228,18069_shp,0,0
+1012,4,t6CA-b27EA-sl4,"10B: Chpl Hill Rd – S. Square – Shannon",1,10218,18071_shp,0,0
+1012,4,t6D1-b27F4-sl4,"10B: Westgate Dr",0,10228,18073_shp,0,0
+1012,4,t717-b27EA-sl4,"10B: Westgate Dr",0,10218,18072_shp,0,0
+11,2,t20A-b2B08-sl2,"11: Durham Station",1,11016,17835_shp,0,0
+11,2,t228-b2B12-sl2,"11: Durham Station",1,11026,17835_shp,0,0
+11,2,t258-b2B08-sl2,"11: Hillsborough Rd",0,11016,17840_shp,0,0
+11,2,t26E-b2B08-sl2,"11: Durham Station",1,11016,17835_shp,0,0
+11,2,t276-b2B12-sl2,"11: Hillsborough Rd",0,11026,17840_shp,0,0
+11,2,t28C-b2B12-sl2,"11: Durham Station",1,11026,17835_shp,0,0
+11,2,t2BC-b2B08-sl2,"11: Hillsborough Rd",0,11016,17840_shp,0,0
+11,2,t2D2-b2B08-sl2,"11: Durham Station",1,11016,17835_shp,0,0
+11,2,t2DA-b2B12-sl2,"11: Hillsborough Rd",0,11026,17840_shp,0,0
+11,2,t2F0-b2B12-sl2,"11: Durham Station",1,11026,17835_shp,0,0
+11,2,t320-b2B08-sl2,"11: Hillsborough Rd",0,11016,17840_shp,0,0
+11,2,t336-b2B08-sl2,"11: Durham Station",1,11016,17835_shp,0,0
+11,2,t33E-b2B12-sl2,"11: Hillsborough Rd",0,11026,17840_shp,0,0
+11,2,t354-b2B12-sl2,"11: Durham Station",1,11026,17835_shp,0,0
+11,2,t384-b2B08-sl2,"11: Hillsborough Rd",0,11016,17840_shp,0,0
+11,2,t39A-b2B08-sl2,"11: Durham Station",1,11016,17835_shp,0,0
+11,2,t3A2-b2B12-sl2,"11: Hillsborough Rd",0,11026,17840_shp,0,0
+11,2,t3B8-b2B12-sl2,"11: Durham Station",1,11026,17835_shp,0,0
+11,2,t3E8-b2B08-sl2,"11: Hillsborough Rd",0,11016,17840_shp,0,0
+11,2,t3FE-b2B08-sl2,"11: Durham Station",1,11016,17835_shp,0,0
+11,2,t406-b2B12-sl2,"11: Hillsborough Rd",0,11026,17840_shp,0,0
+11,2,t41C-b2B12-sl2,"11: Durham Station",1,11026,17835_shp,0,0
+11,2,t44C-b2B08-sl2,"11: Hillsborough Rd",0,11016,17840_shp,0,0
+11,2,t462-b2B08-sl2,"11: Durham Station",1,11016,17835_shp,0,0
+11,2,t46A-b2B12-sl2,"11: Hillsborough Rd",0,11026,17840_shp,0,0
+11,2,t480-b2B12-sl2,"11: Durham Station",1,11026,17835_shp,0,0
+11,2,t4B0-b2B08-sl2,"11: Hillsborough Rd",0,11016,17840_shp,0,0
+11,2,t4C6-b2B08-sl2,"11: Durham Station",1,11016,17835_shp,0,0
+11,2,t4CE-b2B12-sl2,"11: Hillsborough Rd",0,11026,17840_shp,0,0
+11,2,t4E4-b2B12-sl2,"11: Durham Station",1,11026,17835_shp,0,0
+11,2,t514-b2B08-sl2,"11: Hillsborough Rd",0,11016,17840_shp,0,0
+11,2,t52A-b2B08-sl2,"11: Durham Station",1,11016,17835_shp,0,0
+11,2,t532-b2B12-sl2,"11: Hillsborough Rd",0,11026,17840_shp,0,0
+11,2,t548-b2B12-sl2,"11: Durham Station",1,11026,17835_shp,0,0
+11,2,t578-b2B08-sl2,"11: Hillsborough Rd",0,11016,17840_shp,0,0
+11,2,t58E-b2B08-sl2,"11: Durham Station",1,11016,17835_shp,0,0
+11,2,t596-b2B12-sl2,"11: Hillsborough Rd",0,11026,17840_shp,0,0
+11,2,t5AC-b2B12-sl2,"11: Durham Station",1,11026,17835_shp,0,0
+11,2,t5DC-b2B08-sl2,"11: Hillsborough Rd",0,11016,17840_shp,0,0
+11,2,t5F2-b2B08-sl2,"11: Durham Station",1,11016,17835_shp,0,0
+11,2,t5FA-b2B12-sl2,"11: Hillsborough Rd",0,11026,17840_shp,0,0
+11,2,t610-b2B12-sl2,"11: Durham Station",1,11026,17835_shp,0,0
+11,2,t640-b2B08-sl2,"11: Hillsborough Rd",0,11016,17840_shp,0,0
+11,2,t656-b2B08-sl2,"11: Durham Station",1,11016,17835_shp,0,0
+11,2,t65E-b2B12-sl2,"11: Hillsborough Rd",0,11026,17840_shp,0,0
+11,2,t674-b2B12-sl2,"11: Durham Station",1,11026,17835_shp,0,0
+11,2,t6A4-b2B08-sl2,"11: Hillsborough Rd",0,11016,17840_shp,0,0
+11,2,t6BA-b2B08-sl2,"11: Durham Station",1,11016,17835_shp,0,0
+11,2,t6C2-b2B12-sl2,"11: Hillsborough Rd",0,11026,17840_shp,0,0
+11,2,t6D8-b2B12-sl2,"11: Durham Station",1,11026,17835_shp,0,0
+11,2,t708-b2B08-sl2,"11: Hillsborough Rd",0,11016,17840_shp,0,0
+11,2,t71E-b2B08-sl2,"11: Durham Station",1,11016,17835_shp,0,0
+11,2,t726-b2B12-sl2,"11: Hillsborough Rd",0,11026,17860_shp,0,0
+11,2,t76C-b2B08-sl2,"11: Hillsborough Rd",0,11016,17840_shp,0,0
+11,2,t782-b2B08-sl2,"11: Durham Station",1,11016,17835_shp,0,0
+11,2,t7D0-b2B08-sl2,"11: Hillsborough Rd",0,11016,17840_shp,0,0
+11,2,t7E6-b2B08-sl2,"11: Durham Station",1,11016,17835_shp,0,0
+11,2,t834-b2B08-sl2,"11: Hillsborough Rd",0,11016,17840_shp,0,0
+11,2,t84A-b2B08-sl2,"11: Durham Station",1,11016,17835_shp,0,0
+11,2,t898-b2B08-sl2,"11: Hillsborough Rd",0,11016,17840_shp,0,0
+11,2,t8AE-b2B08-sl2,"11: Durham Station",1,11016,17835_shp,0,0
+11,2,t8FC-b2B08-sl2,"11: Hillsborough Rd",0,11016,17840_shp,0,0
+11,2,t912-b2B08-sl2,"11: Durham Station",1,11016,17835_shp,0,0
+11,2,t960-b2B08-sl2,"11: Hillsborough Rd",0,11016,17840_shp,0,0
+11,3,t26E-b2B09-sl3,"11: Durham Station",1,11017,17839_shp,0,0
+11,3,t2BC-b2B09-sl3,"11: Hillsborough Rd",0,11017,17836_shp,0,0
+11,3,t2D2-b2B09-sl3,"11: Durham Station",1,11017,17839_shp,0,0
+11,3,t320-b2B09-sl3,"11: Hillsborough Rd",0,11017,17836_shp,0,0
+11,3,t336-b2B09-sl3,"11: Durham Station",1,11017,17839_shp,0,0
+11,3,t384-b2B09-sl3,"11: Hillsborough Rd",0,11017,17836_shp,0,0
+11,3,t39A-b2B09-sl3,"11: Durham Station",1,11017,17839_shp,0,0
+11,3,t3E8-b2B09-sl3,"11: Hillsborough Rd",0,11017,17836_shp,0,0
+11,3,t3FE-b2B09-sl3,"11: Durham Station",1,11017,17839_shp,0,0
+11,3,t44C-b2B09-sl3,"11: Hillsborough Rd",0,11017,17836_shp,0,0
+11,3,t462-b2B09-sl3,"11: Durham Station",1,11017,17839_shp,0,0
+11,3,t4B0-b2B09-sl3,"11: Hillsborough Rd",0,11017,17836_shp,0,0
+11,3,t4C6-b2B09-sl3,"11: Durham Station",1,11017,17839_shp,0,0
+11,3,t514-b2B09-sl3,"11: Hillsborough Rd",0,11017,17836_shp,0,0
+11,3,t52A-b2B09-sl3,"11: Durham Station",1,11017,17839_shp,0,0
+11,3,t578-b2B09-sl3,"11: Hillsborough Rd",0,11017,17836_shp,0,0
+11,3,t58E-b2B09-sl3,"11: Durham Station",1,11017,17839_shp,0,0
+11,3,t5DC-b2B09-sl3,"11: Hillsborough Rd",0,11017,17836_shp,0,0
+11,3,t5F2-b2B09-sl3,"11: Durham Station",1,11017,17839_shp,0,0
+11,3,t640-b2B09-sl3,"11: Hillsborough Rd",0,11017,17836_shp,0,0
+11,3,t656-b2B09-sl3,"11: Durham Station",1,11017,17839_shp,0,0
+11,3,t6A4-b2B09-sl3,"11: Hillsborough Rd",0,11017,17836_shp,0,0
+11,3,t6BA-b2B09-sl3,"11: Durham Station",1,11017,17839_shp,0,0
+11,3,t708-b2B09-sl3,"11: Hillsborough Rd",0,11017,17836_shp,0,0
+11,3,t71E-b2B09-sl3,"11: Durham Station",1,11017,17839_shp,0,0
+11,3,t76C-b2B09-sl3,"11: Hillsborough Rd",0,11017,17836_shp,0,0
+11,3,t782-b2B09-sl3,"11: Durham Station",1,11017,17839_shp,0,0
+11,3,t7D0-b2B09-sl3,"11: Hillsborough Rd",0,11017,17836_shp,0,0
+11,3,t7E6-b2B09-sl3,"11: Durham Station",1,11017,17839_shp,0,0
+11,3,t834-b2B09-sl3,"11: Hillsborough Rd",0,11017,17861_shp,0,0
+11,4,t20A-b2B0A-sl4,"11: Durham Station",1,11018,17838_shp,0,0
+11,4,t228-b2B14-sl4,"11: Durham Station",1,11028,17838_shp,0,0
+11,4,t258-b2B0A-sl4,"11: Hillsborough Rd",0,11018,17837_shp,0,0
+11,4,t26E-b2B0A-sl4,"11: Durham Station",1,11018,17838_shp,0,0
+11,4,t276-b2B14-sl4,"11: Hillsborough Rd",0,11028,17837_shp,0,0
+11,4,t28C-b2B14-sl4,"11: Durham Station",1,11028,17838_shp,0,0
+11,4,t2BC-b2B0A-sl4,"11: Hillsborough Rd",0,11018,17837_shp,0,0
+11,4,t2D2-b2B0A-sl4,"11: Durham Station",1,11018,17838_shp,0,0
+11,4,t2DA-b2B14-sl4,"11: Hillsborough Rd",0,11028,17837_shp,0,0
+11,4,t2F0-b2B14-sl4,"11: Durham Station",1,11028,17838_shp,0,0
+11,4,t320-b2B0A-sl4,"11: Hillsborough Rd",0,11018,17837_shp,0,0
+11,4,t336-b2B0A-sl4,"11: Durham Station",1,11018,17838_shp,0,0
+11,4,t33E-b2B14-sl4,"11: Hillsborough Rd",0,11028,17837_shp,0,0
+11,4,t357-b2B14-sl4,"11: Durham Station",1,11028,17838_shp,0,0
+11,4,t384-b2B0A-sl4,"11: Hillsborough Rd",0,11018,17837_shp,0,0
+11,4,t39D-b2B0A-sl4,"11: Durham Station",1,11018,17838_shp,0,0
+11,4,t3A2-b2BD2-sl4,"11: Hillsborough Rd",0,11218,17837_shp,0,0
+11,4,t3BB-b2BD2-sl4,"11: Durham Station",1,11218,17838_shp,0,0
+11,4,t3E8-b2BDC-sl4,"11: Hillsborough Rd",0,11228,17837_shp,0,0
+11,4,t401-b2BDC-sl4,"11: Durham Station",1,11228,17838_shp,0,0
+11,4,t406-b2BE6-sl4,"11: Hillsborough Rd",0,11238,17837_shp,0,0
+11,4,t41F-b2BE6-sl4,"11: Durham Station",1,11238,17838_shp,0,0
+11,4,t44C-b2B14-sl4,"11: Hillsborough Rd",0,11028,17837_shp,0,0
+11,4,t465-b2B14-sl4,"11: Durham Station",1,11028,17838_shp,0,0
+11,4,t46A-b2B0A-sl4,"11: Hillsborough Rd",0,11018,17837_shp,0,0
+11,4,t483-b2B0A-sl4,"11: Durham Station",1,11018,17838_shp,0,0
+11,4,t4B0-b2BD2-sl4,"11: Hillsborough Rd",0,11218,17837_shp,0,0
+11,4,t4C9-b2BD2-sl4,"11: Durham Station",1,11218,17838_shp,0,0
+11,4,t4CE-b2BDC-sl4,"11: Hillsborough Rd",0,11228,17837_shp,0,0
+11,4,t4E7-b2BDC-sl4,"11: Durham Station",1,11228,17838_shp,0,0
+11,4,t514-b2B1E-sl4,"11: Hillsborough Rd",0,11038,17837_shp,0,0
+11,4,t52D-b2B1E-sl4,"11: Durham Station",1,11038,17838_shp,0,0
+11,4,t532-b2B14-sl4,"11: Hillsborough Rd",0,11028,17837_shp,0,0
+11,4,t54B-b2B14-sl4,"11: Durham Station",1,11028,17838_shp,0,0
+11,4,t578-b2B0A-sl4,"11: Hillsborough Rd",0,11018,17837_shp,0,0
+11,4,t591-b2B0A-sl4,"11: Durham Station",1,11018,17838_shp,0,0
+11,4,t596-b2BD2-sl4,"11: Hillsborough Rd",0,11218,17837_shp,0,0
+11,4,t5AF-b2BD2-sl4,"11: Durham Station",1,11218,17838_shp,0,0
+11,4,t5DC-b2BDC-sl4,"11: Hillsborough Rd",0,11228,17837_shp,0,0
+11,4,t5F5-b2BDC-sl4,"11: Durham Station",1,11228,17838_shp,0,0
+11,4,t5FA-b2B1E-sl4,"11: Hillsborough Rd",0,11038,17837_shp,0,0
+11,4,t613-b2B1E-sl4,"11: Durham Station",1,11038,17838_shp,0,0
+11,4,t640-b2B14-sl4,"11: Hillsborough Rd",0,11028,17837_shp,0,0
+11,4,t659-b2B14-sl4,"11: Durham Station",1,11028,17838_shp,0,0
+11,4,t65E-b2B0A-sl4,"11: Hillsborough Rd",0,11018,17837_shp,0,0
+11,4,t677-b2B0A-sl4,"11: Durham Station",1,11018,17838_shp,0,0
+11,4,t6A4-b2BD2-sl4,"11: Hillsborough Rd",0,11218,17837_shp,0,0
+11,4,t6BD-b2BD2-sl4,"11: Durham Station",1,11218,17838_shp,0,0
+11,4,t6C2-b2BDC-sl4,"11: Hillsborough Rd",0,11228,17837_shp,0,0
+11,4,t6DB-b2BDC-sl4,"11: Durham Station",1,11228,17838_shp,0,0
+11,4,t708-b2B1E-sl4,"11: Hillsborough Rd",0,11038,17837_shp,0,0
+11,4,t71E-b2B28-sl4,"11: Durham Station",1,11048,17838_shp,0,0
+11,4,t726-b2B14-sl4,"11: Hillsborough Rd",0,11028,17859_shp,0,0
+11,4,t76C-b2B28-sl4,"11: Hillsborough Rd",0,11048,17837_shp,0,0
+11,4,t782-b2B28-sl4,"11: Durham Station",1,11048,17838_shp,0,0
+11,4,t7D0-b2B28-sl4,"11: Hillsborough Rd",0,11048,17837_shp,0,0
+11,4,t7E6-b2B28-sl4,"11: Durham Station",1,11048,17838_shp,0,0
+11,4,t834-b2B28-sl4,"11: Hillsborough Rd",0,11048,17837_shp,0,0
+11,4,t84A-b2B28-sl4,"11: Durham Station",1,11048,17838_shp,0,0
+11,4,t898-b2B28-sl4,"11: Hillsborough Rd",0,11048,17837_shp,0,0
+11,4,t8AE-b2B28-sl4,"11: Durham Station",1,11048,17838_shp,0,0
+11,4,t8FC-b2B28-sl4,"11: Hillsborough Rd",0,11048,17837_shp,0,0
+11,4,t912-b2B28-sl4,"11: Durham Station",1,11048,17838_shp,0,0
+11,4,t960-b2B28-sl4,"11: Hillsborough Rd",0,11048,17837_shp,0,0
+112,2,t21B-b2BD0-sl2,"11B: Durham Station",1,11216,18149_shp,0,0
+112,2,t261-b2BDA-sl2,"11B: Durham Station",1,11226,18149_shp,0,0
+112,2,t267-b2BD0-sl2,"11B: Constitution Dr",0,11216,18155_shp,0,0
+112,2,t27F-b2BD0-sl2,"11B: Durham Station",1,11216,18149_shp,0,0
+112,2,t285-b2BDA-sl2,"11B: Constitution Dr",0,11226,18155_shp,0,0
+112,2,t2C5-b2BDA-sl2,"11B: Durham Station",1,11226,18149_shp,0,0
+112,2,t2CB-b2BD0-sl2,"11B: Constitution Dr",0,11216,18155_shp,0,0
+112,2,t2E3-b2BD0-sl2,"11B: Durham Station",1,11216,18149_shp,0,0
+112,2,t2E9-b2BDA-sl2,"11B: Constitution Dr",0,11226,18155_shp,0,0
+112,2,t329-b2BDA-sl2,"11B: Durham Station",1,11226,18149_shp,0,0
+112,2,t32F-b2BD0-sl2,"11B: Constitution Dr",0,11216,18155_shp,0,0
+112,2,t347-b2BD0-sl2,"11B: Durham Station",1,11216,18149_shp,0,0
+112,2,t34D-b2BDA-sl2,"11B: Constitution Dr",0,11226,18155_shp,0,0
+112,2,t38D-b2BDA-sl2,"11B: Durham Station",1,11226,18149_shp,0,0
+112,2,t393-b2BD0-sl2,"11B: Constitution Dr",0,11216,18155_shp,0,0
+112,2,t3AB-b2BD0-sl2,"11B: Durham Station",1,11216,18149_shp,0,0
+112,2,t3B1-b2BDA-sl2,"11B: Constitution Dr",0,11226,18155_shp,0,0
+112,2,t3F1-b2BDA-sl2,"11B: Durham Station",1,11226,18149_shp,0,0
+112,2,t3F7-b2BD0-sl2,"11B: Constitution Dr",0,11216,18155_shp,0,0
+112,2,t40F-b2BD0-sl2,"11B: Durham Station",1,11216,18149_shp,0,0
+112,2,t415-b2BDA-sl2,"11B: Constitution Dr",0,11226,18155_shp,0,0
+112,2,t455-b2BDA-sl2,"11B: Durham Station",1,11226,18149_shp,0,0
+112,2,t45B-b2BD0-sl2,"11B: Constitution Dr",0,11216,18155_shp,0,0
+112,2,t473-b2BD0-sl2,"11B: Durham Station",1,11216,18149_shp,0,0
+112,2,t479-b2BDA-sl2,"11B: Constitution Dr",0,11226,18155_shp,0,0
+112,2,t4B9-b2BDA-sl2,"11B: Durham Station",1,11226,18149_shp,0,0
+112,2,t4BF-b2BD0-sl2,"11B: Constitution Dr",0,11216,18155_shp,0,0
+112,2,t4D7-b2BD0-sl2,"11B: Durham Station",1,11216,18149_shp,0,0
+112,2,t4DD-b2BDA-sl2,"11B: Constitution Dr",0,11226,18155_shp,0,0
+112,2,t51D-b2BDA-sl2,"11B: Durham Station",1,11226,18149_shp,0,0
+112,2,t523-b2BD0-sl2,"11B: Constitution Dr",0,11216,18155_shp,0,0
+112,2,t53B-b2BD0-sl2,"11B: Durham Station",1,11216,18149_shp,0,0
+112,2,t541-b2BDA-sl2,"11B: Constitution Dr",0,11226,18155_shp,0,0
+112,2,t581-b2BDA-sl2,"11B: Durham Station",1,11226,18149_shp,0,0
+112,2,t587-b2BD0-sl2,"11B: Constitution Dr",0,11216,18155_shp,0,0
+112,2,t59F-b2BD0-sl2,"11B: Durham Station",1,11216,18149_shp,0,0
+112,2,t5A5-b2BDA-sl2,"11B: Constitution Dr",0,11226,18155_shp,0,0
+112,2,t5E5-b2BDA-sl2,"11B: Durham Station",1,11226,18149_shp,0,0
+112,2,t5EB-b2BD0-sl2,"11B: Constitution Dr",0,11216,18155_shp,0,0
+112,2,t603-b2BD0-sl2,"11B: Durham Station",1,11216,18149_shp,0,0
+112,2,t609-b2BDA-sl2,"11B: Constitution Dr",0,11226,18155_shp,0,0
+112,2,t649-b2BDA-sl2,"11B: Durham Station",1,11226,18149_shp,0,0
+112,2,t64F-b2BD0-sl2,"11B: Constitution Dr",0,11216,18155_shp,0,0
+112,2,t667-b2BD0-sl2,"11B: Durham Station",1,11216,18149_shp,0,0
+112,2,t66D-b2BDA-sl2,"11B: Constitution Dr",0,11226,18155_shp,0,0
+112,2,t6AD-b2BDA-sl2,"11B: Durham Station",1,11226,18149_shp,0,0
+112,2,t6B3-b2BD0-sl2,"11B: Constitution Dr",0,11216,18155_shp,0,0
+112,2,t6CB-b2BD0-sl2,"11B: Durham Station",1,11216,18149_shp,0,0
+112,2,t6D1-b2BDA-sl2,"11B: Constitution Dr",0,11226,18155_shp,0,0
+112,2,t711-b2BDA-sl2,"11B: Durham Station",1,11226,18149_shp,0,0
+112,2,t717-b2BD0-sl2,"11B: Constitution Dr",0,11216,18155_shp,0,0
+112,2,t735-b2BDA-sl2,"11B: Constitution Dr",0,11226,18146_shp,0,0
+112,2,t73E-b2BD0-sl2,"11B: Durham Station",1,11216,18149_shp,0,0
+112,2,t775-b2BDA-sl2,"11B: American Dr",1,11226,18152_shp,0,0
+112,2,t78A-b2BD0-sl2,"11B: Constitution Dr",0,11216,18155_shp,0,0
+112,2,t7A2-b2BD0-sl2,"11B: Durham Station",1,11216,18149_shp,0,0
+112,2,t7EE-b2BD0-sl2,"11B: Constitution Dr",0,11216,18155_shp,0,0
+112,2,t806-b2BD0-sl2,"11B: Durham Station",1,11216,18149_shp,0,0
+112,2,t852-b2BD0-sl2,"11B: Constitution Dr",0,11216,18155_shp,0,0
+112,2,t86A-b2BD0-sl2,"11B: Durham Station",1,11216,18149_shp,0,0
+112,2,t8B6-b2BD0-sl2,"11B: Constitution Dr",0,11216,18155_shp,0,0
+112,2,t8CE-b2BD0-sl2,"11B: Durham Station",1,11216,18149_shp,0,0
+112,2,t91A-b2BD0-sl2,"11B: Constitution Dr",0,11216,18155_shp,0,0
+112,2,t932-b2BD0-sl2,"11B: American Dr",1,11216,18152_shp,0,0
+112,3,t28E-b2BD1-sl3,"11B: Durham Station",1,11217,18150_shp,0,0
+112,3,t2DA-b2BD1-sl3,"11B: Constitution Dr",0,11217,18156_shp,0,0
+112,3,t2F2-b2BD1-sl3,"11B: Durham Station",1,11217,18150_shp,0,0
+112,3,t33E-b2BD1-sl3,"11B: Constitution Dr",0,11217,18156_shp,0,0
+112,3,t356-b2BD1-sl3,"11B: Durham Station",1,11217,18150_shp,0,0
+112,3,t3A2-b2BD1-sl3,"11B: Constitution Dr",0,11217,18156_shp,0,0
+112,3,t3BA-b2BD1-sl3,"11B: Durham Station",1,11217,18150_shp,0,0
+112,3,t406-b2BD1-sl3,"11B: Constitution Dr",0,11217,18156_shp,0,0
+112,3,t41E-b2BD1-sl3,"11B: Durham Station",1,11217,18150_shp,0,0
+112,3,t46A-b2BD1-sl3,"11B: Constitution Dr",0,11217,18156_shp,0,0
+112,3,t482-b2BD1-sl3,"11B: Durham Station",1,11217,18150_shp,0,0
+112,3,t4CE-b2BD1-sl3,"11B: Constitution Dr",0,11217,18156_shp,0,0
+112,3,t4E6-b2BD1-sl3,"11B: Durham Station",1,11217,18150_shp,0,0
+112,3,t532-b2BD1-sl3,"11B: Constitution Dr",0,11217,18156_shp,0,0
+112,3,t54A-b2BD1-sl3,"11B: Durham Station",1,11217,18150_shp,0,0
+112,3,t596-b2BD1-sl3,"11B: Constitution Dr",0,11217,18156_shp,0,0
+112,3,t5AE-b2BD1-sl3,"11B: Durham Station",1,11217,18150_shp,0,0
+112,3,t5FA-b2BD1-sl3,"11B: Constitution Dr",0,11217,18156_shp,0,0
+112,3,t612-b2BD1-sl3,"11B: Durham Station",1,11217,18150_shp,0,0
+112,3,t65E-b2BD1-sl3,"11B: Constitution Dr",0,11217,18156_shp,0,0
+112,3,t676-b2BD1-sl3,"11B: Durham Station",1,11217,18150_shp,0,0
+112,3,t6C2-b2BD1-sl3,"11B: Constitution Dr",0,11217,18156_shp,0,0
+112,3,t6DA-b2BD1-sl3,"11B: Durham Station",1,11217,18150_shp,0,0
+112,3,t726-b2BD1-sl3,"11B: Constitution Dr",0,11217,18156_shp,0,0
+112,3,t73E-b2BD1-sl3,"11B: Durham Station",1,11217,18150_shp,0,0
+112,3,t78A-b2BD1-sl3,"11B: Constitution Dr",0,11217,18156_shp,0,0
+112,3,t7A2-b2BD1-sl3,"11B: Durham Station",1,11217,18150_shp,0,0
+112,3,t7EE-b2BD1-sl3,"11B: Constitution Dr",0,11217,18147_shp,0,0
+112,3,t806-b2BD1-sl3,"11B: American Dr",1,11217,18153_shp,0,0
+112,4,t21B-b2BD2-sl4,"11B: Durham Station",1,11218,18148_shp,0,0
+112,4,t261-b2BDC-sl4,"11B: Durham Station",1,11228,18148_shp,0,0
+112,4,t267-b2BD2-sl4,"11B: Constitution Dr",0,11218,18154_shp,0,0
+112,4,t27F-b2BD2-sl4,"11B: Durham Station",1,11218,18148_shp,0,0
+112,4,t285-b2BDC-sl4,"11B: Constitution Dr",0,11228,18154_shp,0,0
+112,4,t2C5-b2BDC-sl4,"11B: Durham Station",1,11228,18148_shp,0,0
+112,4,t2CB-b2BD2-sl4,"11B: Constitution Dr",0,11218,18154_shp,0,0
+112,4,t2E3-b2BD2-sl4,"11B: Durham Station",1,11218,18148_shp,0,0
+112,4,t2E9-b2BDC-sl4,"11B: Constitution Dr",0,11228,18154_shp,0,0
+112,4,t329-b2BDC-sl4,"11B: Durham Station",1,11228,18148_shp,0,0
+112,4,t32F-b2BD2-sl4,"11B: Constitution Dr",0,11218,18154_shp,0,0
+112,4,t34D-b2BDC-sl4,"11B: Constitution Dr",0,11228,18154_shp,0,0
+112,4,t351-b2BE6-sl4,"11B: Durham Station",1,11238,18260_shp,0,0
+112,4,t352-b2BD2-sl4,"11B: Durham Station",1,11218,18148_shp,0,0
+112,4,t393-b2BE6-sl4,"11B: Constitution Dr",0,11238,18154_shp,0,0
+112,4,t398-b2BDC-sl4,"11B: Durham Station",1,11228,18148_shp,0,0
+112,4,t3B1-b2B14-sl4,"11B: Constitution Dr",0,11028,18154_shp,0,0
+112,4,t3B6-b2BE6-sl4,"11B: Durham Station",1,11238,18148_shp,0,0
+112,4,t3F7-b2B0A-sl4,"11B: Constitution Dr",0,11018,18154_shp,0,0
+112,4,t3FC-b2B14-sl4,"11B: Durham Station",1,11028,18148_shp,0,0
+112,4,t415-b2BD2-sl4,"11B: Constitution Dr",0,11218,18154_shp,0,0
+112,4,t41A-b2B0A-sl4,"11B: Durham Station",1,11018,18148_shp,0,0
+112,4,t45B-b2BDC-sl4,"11B: Constitution Dr",0,11228,18154_shp,0,0
+112,4,t460-b2BD2-sl4,"11B: Durham Station",1,11218,18148_shp,0,0
+112,4,t479-b2BE6-sl4,"11B: Constitution Dr",0,11238,18154_shp,0,0
+112,4,t47E-b2BDC-sl4,"11B: Durham Station",1,11228,18148_shp,0,0
+112,4,t4BF-b2B14-sl4,"11B: Constitution Dr",0,11028,18154_shp,0,0
+112,4,t4C4-b2BE6-sl4,"11B: Durham Station",1,11238,18148_shp,0,0
+112,4,t4DD-b2B0A-sl4,"11B: Constitution Dr",0,11018,18154_shp,0,0
+112,4,t4E2-b2B14-sl4,"11B: Durham Station",1,11028,18148_shp,0,0
+112,4,t523-b2BD2-sl4,"11B: Constitution Dr",0,11218,18154_shp,0,0
+112,4,t528-b2B0A-sl4,"11B: Durham Station",1,11018,18148_shp,0,0
+112,4,t541-b2BDC-sl4,"11B: Constitution Dr",0,11228,18154_shp,0,0
+112,4,t546-b2BD2-sl4,"11B: Durham Station",1,11218,18148_shp,0,0
+112,4,t587-b2B1E-sl4,"11B: Constitution Dr",0,11038,18154_shp,0,0
+112,4,t58C-b2BDC-sl4,"11B: Durham Station",1,11228,18148_shp,0,0
+112,4,t5A5-b2B14-sl4,"11B: Constitution Dr",0,11028,18154_shp,0,0
+112,4,t5AA-b2B1E-sl4,"11B: Durham Station",1,11038,18148_shp,0,0
+112,4,t5EB-b2B0A-sl4,"11B: Constitution Dr",0,11018,18154_shp,0,0
+112,4,t5F0-b2B14-sl4,"11B: Durham Station",1,11028,18148_shp,0,0
+112,4,t609-b2BD2-sl4,"11B: Constitution Dr",0,11218,18154_shp,0,0
+112,4,t60E-b2B0A-sl4,"11B: Durham Station",1,11018,18148_shp,0,0
+112,4,t64F-b2BDC-sl4,"11B: Constitution Dr",0,11228,18154_shp,0,0
+112,4,t654-b2BD2-sl4,"11B: Durham Station",1,11218,18148_shp,0,0
+112,4,t66D-b2B1E-sl4,"11B: Constitution Dr",0,11038,18154_shp,0,0
+112,4,t672-b2BDC-sl4,"11B: Durham Station",1,11228,18148_shp,0,0
+112,4,t6B3-b2B14-sl4,"11B: Constitution Dr",0,11028,18154_shp,0,0
+112,4,t6B8-b2B1E-sl4,"11B: Durham Station",1,11038,18148_shp,0,0
+112,4,t6D1-b2B0A-sl4,"11B: Constitution Dr",0,11018,18154_shp,0,0
+112,4,t6D6-b2B14-sl4,"11B: Durham Station",1,11028,18148_shp,0,0
+112,4,t717-b2BD2-sl4,"11B: Constitution Dr",0,11218,18154_shp,0,0
+112,4,t71C-b2B0A-sl4,"11B: American Dr",1,11018,18151_shp,0,0
+112,4,t735-b2BDC-sl4,"11B: Constitution Dr",0,11228,18145_shp,0,0
+112,4,t73A-b2BD2-sl4,"11B: Durham Station",1,11218,18148_shp,0,0
+112,4,t780-b2BDC-sl4,"11B: American Dr",1,11228,18151_shp,0,0
+112,4,t78A-b2BD2-sl4,"11B: Constitution Dr",0,11218,18154_shp,0,0
+112,4,t7A2-b2BD2-sl4,"11B: Durham Station",1,11218,18148_shp,0,0
+112,4,t7EE-b2BD2-sl4,"11B: Constitution Dr",0,11218,18154_shp,0,0
+112,4,t806-b2BD2-sl4,"11B: Durham Station",1,11218,18148_shp,0,0
+112,4,t852-b2BD2-sl4,"11B: Constitution Dr",0,11218,18154_shp,0,0
+112,4,t86A-b2BD2-sl4,"11B: Durham Station",1,11218,18148_shp,0,0
+112,4,t8B6-b2BD2-sl4,"11B: Constitution Dr",0,11218,18154_shp,0,0
+112,4,t8CE-b2BD2-sl4,"11B: Durham Station",1,11218,18148_shp,0,0
+112,4,t91A-b2BD2-sl4,"11B: Constitution Dr",0,11218,18145_shp,0,0
+112,4,t932-b2BD2-sl4,"11B: American Dr",1,11218,18151_shp,0,0
+12,2,t207-b3210-sl2,"12: NC 55 at NC 54",0,12816,17754_shp,0,0
+12,2,t20D-b3210-sl2,"12: Durham Station",1,12816,17818_shp,0,0
+12,2,t258-b321A-sl2,"12: NC 55 at NC 54",0,12826,17815_shp,0,0
+12,2,t25C-b322E-sl2,"12: NC 55 at NC 54",0,12846,17754_shp,0,0
+12,2,t262-b322E-sl2,"12: Durham Station",1,12846,17818_shp,0,0
+12,2,t276-b3224-sl2,"12: NC 55 at NC 54",0,12836,17815_shp,0,0
+12,2,t280-b321A-sl2,"12: Durham Station",1,12826,17818_shp,0,0
+12,2,t2BC-b3238-sl2,"12: NC 55 at NC 54",0,12856,17815_shp,0,0
+12,2,t2C6-b3224-sl2,"12: Durham Station",1,12836,17818_shp,0,0
+12,2,t2DA-b3210-sl2,"12: NC 55 at NC 54",0,12816,17815_shp,0,0
+12,2,t2E4-b3238-sl2,"12: Durham Station",1,12856,17818_shp,0,0
+12,2,t320-b322E-sl2,"12: NC 55 at NC 54",0,12846,17815_shp,0,0
+12,2,t32A-b3210-sl2,"12: Durham Station",1,12816,17818_shp,0,0
+12,2,t33E-b321A-sl2,"12: NC 55 at NC 54",0,12826,17815_shp,0,0
+12,2,t348-b322E-sl2,"12: Durham Station",1,12846,17818_shp,0,0
+12,2,t384-b3224-sl2,"12: NC 55 at NC 54",0,12836,17815_shp,0,0
+12,2,t38E-b321A-sl2,"12: Durham Station",1,12826,17818_shp,0,0
+12,2,t3A2-b3238-sl2,"12: NC 55 at NC 54",0,12856,17815_shp,0,0
+12,2,t3AC-b3224-sl2,"12: Durham Station",1,12836,17818_shp,0,0
+12,2,t3E8-b3210-sl2,"12: NC 55 at NC 54",0,12816,17815_shp,0,0
+12,2,t3F2-b3238-sl2,"12: Durham Station",1,12856,17818_shp,0,0
+12,2,t406-b322E-sl2,"12: NC 55 at NC 54",0,12846,17815_shp,0,0
+12,2,t410-b3210-sl2,"12: Durham Station",1,12816,17818_shp,0,0
+12,2,t44C-b321A-sl2,"12: NC 55 at NC 54",0,12826,17815_shp,0,0
+12,2,t456-b322E-sl2,"12: Durham Station",1,12846,17818_shp,0,0
+12,2,t46A-b3224-sl2,"12: NC 55 at NC 54",0,12836,17815_shp,0,0
+12,2,t474-b321A-sl2,"12: Durham Station",1,12826,17818_shp,0,0
+12,2,t4B0-b3238-sl2,"12: NC 55 at NC 54",0,12856,17815_shp,0,0
+12,2,t4BA-b3224-sl2,"12: Durham Station",1,12836,17818_shp,0,0
+12,2,t4CE-b3210-sl2,"12: NC 55 at NC 54",0,12816,17815_shp,0,0
+12,2,t4D8-b3238-sl2,"12: Durham Station",1,12856,17818_shp,0,0
+12,2,t514-b322E-sl2,"12: NC 55 at NC 54",0,12846,17815_shp,0,0
+12,2,t51E-b3210-sl2,"12: Durham Station",1,12816,17818_shp,0,0
+12,2,t532-b321A-sl2,"12: NC 55 at NC 54",0,12826,17815_shp,0,0
+12,2,t53C-b322E-sl2,"12: Durham Station",1,12846,17818_shp,0,0
+12,2,t578-b3224-sl2,"12: NC 55 at NC 54",0,12836,17815_shp,0,0
+12,2,t582-b321A-sl2,"12: Durham Station",1,12826,17818_shp,0,0
+12,2,t596-b3238-sl2,"12: NC 55 at NC 54",0,12856,17815_shp,0,0
+12,2,t5A0-b3224-sl2,"12: Durham Station",1,12836,17818_shp,0,0
+12,2,t5DC-b3210-sl2,"12: NC 55 at NC 54",0,12816,17815_shp,0,0
+12,2,t5E6-b3238-sl2,"12: Durham Station",1,12856,17818_shp,0,0
+12,2,t5FA-b322E-sl2,"12: NC 55 at NC 54",0,12846,17815_shp,0,0
+12,2,t604-b3210-sl2,"12: Durham Station",1,12816,17818_shp,0,0
+12,2,t640-b321A-sl2,"12: NC 55 at NC 54",0,12826,17815_shp,0,0
+12,2,t64F-b322E-sl2,"12: Durham Station",1,12846,17818_shp,0,0
+12,2,t65E-b3224-sl2,"12: NC 55 at NC 54",0,12836,17815_shp,0,0
+12,2,t66D-b321A-sl2,"12: Durham Station",1,12826,17818_shp,0,0
+12,2,t6A4-b3238-sl2,"12: NC 55 at NC 54",0,12856,17815_shp,0,0
+12,2,t6B3-b3224-sl2,"12: Durham Station",1,12836,17818_shp,0,0
+12,2,t6C2-b3210-sl2,"12: NC 55 at NC 54",0,12816,17815_shp,0,0
+12,2,t6D1-b3238-sl2,"12: Durham Station",1,12856,17818_shp,0,0
+12,2,t708-b322E-sl2,"12: NC 55 at NC 54",0,12846,17815_shp,0,0
+12,2,t717-b3210-sl2,"12: Durham Station",1,12816,17818_shp,0,0
+12,2,t726-b321A-sl2,"12: NC 55 at NC 54",0,12826,17815_shp,0,0
+12,2,t735-b322E-sl2,"12: Durham Station",1,12846,17818_shp,0,0
+12,2,t76C-b2EF0-sl2,"12: NC 55 at NC 54",0,12016,17815_shp,0,0
+12,2,t77B-b321A-sl2,"12: Durham Station",1,12826,17818_shp,0,0
+12,2,t78A-b322E-sl2,"12: NC 55 at NC 54",0,12846,17815_shp,0,0
+12,2,t799-b2EF0-sl2,"12: Durham Station",1,12016,17818_shp,0,0
+12,2,t7D0-b321A-sl2,"12: NC 55 at NC 54",0,12826,17815_shp,0,0
+12,2,t7DF-b322E-sl2,"12: Durham Station",1,12846,17818_shp,0,0
+12,2,t7EE-b2EF0-sl2,"12: NC 55 at NC 54",0,12016,17815_shp,0,0
+12,2,t7FD-b321A-sl2,"12: Durham Station",1,12826,17818_shp,0,0
+12,2,t834-b322E-sl2,"12: NC 55 at NC 54",0,12846,17815_shp,0,0
+12,2,t843-b2EF0-sl2,"12: Durham Station",1,12016,17818_shp,0,0
+12,2,t852-b321A-sl2,"12: NC 55 at NC 54",0,12826,17815_shp,0,0
+12,2,t861-b322E-sl2,"12: Durham Station",1,12846,17818_shp,0,0
+12,2,t898-b2EF0-sl2,"12: NC 55 at NC 54",0,12016,17815_shp,0,0
+12,2,t8A7-b321A-sl2,"12: Durham Station",1,12826,17818_shp,0,0
+12,2,t8B6-b322E-sl2,"12: NC 55 at NC 54",0,12846,17815_shp,0,0
+12,2,t8C5-b2EF0-sl2,"12: Durham Station",1,12016,17818_shp,0,0
+12,2,t8FC-b321A-sl2,"12: NC 55 at NC 54",0,12826,17812_shp,0,0
+12,2,t90B-b322E-sl2,"12: Durham Station",1,12846,17818_shp,0,0
+12,2,t91A-b2EF0-sl2,"12: NC 55 at NC 54",0,12016,17812_shp,0,0
+12,2,t960-b322E-sl2,"12: NC 55 at NC 54",0,12846,17812_shp,0,0
+12,3,t26B-b2EF1-sl3,"12: NC 55 at NC 54",0,12017,17767_shp,0,0
+12,3,t271-b2EF1-sl3,"12: Durham Station",1,12017,17819_shp,0,0
+12,3,t289-b2EFB-sl3,"12: NC 55 at NC 54",0,12027,17767_shp,0,0
+12,3,t28F-b2EFB-sl3,"12: Durham Station",1,12027,17819_shp,0,0
+12,3,t2BC-b2EF1-sl3,"12: NC 55 at NC 54",0,12017,17816_shp,0,0
+12,3,t2CF-b2F05-sl3,"12: NC 55 at NC 54",0,12037,17767_shp,0,0
+12,3,t2D5-b2F05-sl3,"12: Durham Station",1,12037,17819_shp,0,0
+12,3,t2DA-b2EFB-sl3,"12: NC 55 at NC 54",0,12027,17816_shp,0,0
+12,3,t2E9-b2EF1-sl3,"12: Durham Station",1,12017,17819_shp,0,0
+12,3,t320-b2F05-sl3,"12: NC 55 at NC 54",0,12037,17816_shp,0,0
+12,3,t32F-b2EFB-sl3,"12: Durham Station",1,12027,17819_shp,0,0
+12,3,t33E-b2EF1-sl3,"12: NC 55 at NC 54",0,12017,17816_shp,0,0
+12,3,t34D-b2F05-sl3,"12: Durham Station",1,12037,17819_shp,0,0
+12,3,t384-b2EFB-sl3,"12: NC 55 at NC 54",0,12027,17816_shp,0,0
+12,3,t393-b2EF1-sl3,"12: Durham Station",1,12017,17819_shp,0,0
+12,3,t3A2-b2F05-sl3,"12: NC 55 at NC 54",0,12037,17816_shp,0,0
+12,3,t3B1-b2EFB-sl3,"12: Durham Station",1,12027,17819_shp,0,0
+12,3,t3E8-b2EF1-sl3,"12: NC 55 at NC 54",0,12017,17816_shp,0,0
+12,3,t3F7-b2F05-sl3,"12: Durham Station",1,12037,17819_shp,0,0
+12,3,t406-b2EFB-sl3,"12: NC 55 at NC 54",0,12027,17816_shp,0,0
+12,3,t415-b2EF1-sl3,"12: Durham Station",1,12017,17819_shp,0,0
+12,3,t44C-b2F05-sl3,"12: NC 55 at NC 54",0,12037,17816_shp,0,0
+12,3,t45B-b2EFB-sl3,"12: Durham Station",1,12027,17819_shp,0,0
+12,3,t46A-b2EF1-sl3,"12: NC 55 at NC 54",0,12017,17816_shp,0,0
+12,3,t479-b2F05-sl3,"12: Durham Station",1,12037,17819_shp,0,0
+12,3,t4B0-b2EFB-sl3,"12: NC 55 at NC 54",0,12027,17816_shp,0,0
+12,3,t4BF-b2EF1-sl3,"12: Durham Station",1,12017,17819_shp,0,0
+12,3,t4CE-b2F05-sl3,"12: NC 55 at NC 54",0,12037,17816_shp,0,0
+12,3,t4DD-b2EFB-sl3,"12: Durham Station",1,12027,17819_shp,0,0
+12,3,t514-b2EF1-sl3,"12: NC 55 at NC 54",0,12017,17816_shp,0,0
+12,3,t523-b2F05-sl3,"12: Durham Station",1,12037,17819_shp,0,0
+12,3,t532-b2EFB-sl3,"12: NC 55 at NC 54",0,12027,17816_shp,0,0
+12,3,t541-b2EF1-sl3,"12: Durham Station",1,12017,17819_shp,0,0
+12,3,t578-b2F05-sl3,"12: NC 55 at NC 54",0,12037,17816_shp,0,0
+12,3,t587-b2EFB-sl3,"12: Durham Station",1,12027,17819_shp,0,0
+12,3,t596-b2EF1-sl3,"12: NC 55 at NC 54",0,12017,17816_shp,0,0
+12,3,t5A5-b2F05-sl3,"12: Durham Station",1,12037,17819_shp,0,0
+12,3,t5DC-b2EFB-sl3,"12: NC 55 at NC 54",0,12027,17816_shp,0,0
+12,3,t5EB-b2EF1-sl3,"12: Durham Station",1,12017,17819_shp,0,0
+12,3,t5FA-b2F05-sl3,"12: NC 55 at NC 54",0,12037,17816_shp,0,0
+12,3,t609-b2EFB-sl3,"12: Durham Station",1,12027,17819_shp,0,0
+12,3,t640-b2EF1-sl3,"12: NC 55 at NC 54",0,12017,17816_shp,0,0
+12,3,t64F-b2F05-sl3,"12: Durham Station",1,12037,17819_shp,0,0
+12,3,t65E-b2EFB-sl3,"12: NC 55 at NC 54",0,12027,17816_shp,0,0
+12,3,t66D-b2EF1-sl3,"12: Durham Station",1,12017,17819_shp,0,0
+12,3,t6A4-b2F05-sl3,"12: NC 55 at NC 54",0,12037,17816_shp,0,0
+12,3,t6B3-b2EFB-sl3,"12: Durham Station",1,12027,17819_shp,0,0
+12,3,t6C2-b2EF1-sl3,"12: NC 55 at NC 54",0,12017,17816_shp,0,0
+12,3,t6D1-b2F05-sl3,"12: Durham Station",1,12037,17819_shp,0,0
+12,3,t708-b2EFB-sl3,"12: NC 55 at NC 54",0,12027,17816_shp,0,0
+12,3,t717-b2EF1-sl3,"12: Durham Station",1,12017,17819_shp,0,0
+12,3,t726-b2F05-sl3,"12: NC 55 at NC 54",0,12037,17816_shp,0,0
+12,3,t735-b2EFB-sl3,"12: Durham Station",1,12027,17819_shp,0,0
+12,3,t76C-b2EF1-sl3,"12: NC 55 at NC 54",0,12017,17816_shp,0,0
+12,3,t77B-b2F05-sl3,"12: Durham Station",1,12037,17819_shp,0,0
+12,3,t78A-b2EFB-sl3,"12: NC 55 at NC 54",0,12027,17816_shp,0,0
+12,3,t799-b2EF1-sl3,"12: Durham Station",1,12017,17819_shp,0,0
+12,3,t7D0-b2F05-sl3,"12: NC 55 at NC 54",0,12037,17813_shp,0,0
+12,3,t7DF-b2EFB-sl3,"12: Durham Station",1,12027,17819_shp,0,0
+12,3,t7EE-b2EF1-sl3,"12: NC 55 at NC 54",0,12017,17813_shp,0,0
+12,3,t834-b2EFB-sl3,"12: NC 55 at NC 54",0,12027,17813_shp,0,0
+12,4,t207-b3212-sl4,"12: NC 55 at NC 54",0,12818,17768_shp,0,0
+12,4,t20D-b3212-sl4,"12: Durham Station",1,12818,17817_shp,0,0
+12,4,t258-b321C-sl4,"12: NC 55 at NC 54",0,12828,17814_shp,0,0
+12,4,t25C-b3230-sl4,"12: NC 55 at NC 54",0,12848,17768_shp,0,0
+12,4,t262-b3230-sl4,"12: Durham Station",1,12848,17817_shp,0,0
+12,4,t276-b3226-sl4,"12: NC 55 at NC 54",0,12838,17814_shp,0,0
+12,4,t280-b321C-sl4,"12: Durham Station",1,12828,17817_shp,0,0
+12,4,t2BC-b323A-sl4,"12: NC 55 at NC 54",0,12858,17814_shp,0,0
+12,4,t2C6-b3226-sl4,"12: Durham Station",1,12838,17817_shp,0,0
+12,4,t2DA-b3212-sl4,"12: NC 55 at NC 54",0,12818,17814_shp,0,0
+12,4,t2E4-b323A-sl4,"12: Durham Station",1,12858,17817_shp,0,0
+12,4,t320-b3230-sl4,"12: NC 55 at NC 54",0,12848,17814_shp,0,0
+12,4,t32A-b3212-sl4,"12: Durham Station",1,12818,17817_shp,0,0
+12,4,t33E-b321C-sl4,"12: NC 55 at NC 54",0,12828,17814_shp,0,0
+12,4,t348-b3230-sl4,"12: Durham Station",1,12848,17817_shp,0,0
+12,4,t384-b3226-sl4,"12: NC 55 at NC 54",0,12838,17814_shp,0,0
+12,4,t38E-b321C-sl4,"12: Durham Station",1,12828,17817_shp,0,0
+12,4,t3A2-b323A-sl4,"12: NC 55 at NC 54",0,12858,17814_shp,0,0
+12,4,t3AC-b3226-sl4,"12: Durham Station",1,12838,17817_shp,0,0
+12,4,t3E8-b3212-sl4,"12: NC 55 at NC 54",0,12818,17814_shp,0,0
+12,4,t3F2-b323A-sl4,"12: Durham Station",1,12858,17817_shp,0,0
+12,4,t406-b3230-sl4,"12: NC 55 at NC 54",0,12848,17814_shp,0,0
+12,4,t410-b3212-sl4,"12: Durham Station",1,12818,17817_shp,0,0
+12,4,t44C-b321C-sl4,"12: NC 55 at NC 54",0,12828,17814_shp,0,0
+12,4,t456-b3230-sl4,"12: Durham Station",1,12848,17817_shp,0,0
+12,4,t46A-b3226-sl4,"12: NC 55 at NC 54",0,12838,17814_shp,0,0
+12,4,t474-b321C-sl4,"12: Durham Station",1,12828,17817_shp,0,0
+12,4,t4B0-b323A-sl4,"12: NC 55 at NC 54",0,12858,17814_shp,0,0
+12,4,t4BA-b3226-sl4,"12: Durham Station",1,12838,17817_shp,0,0
+12,4,t4CE-b3212-sl4,"12: NC 55 at NC 54",0,12818,17814_shp,0,0
+12,4,t4D8-b323A-sl4,"12: Durham Station",1,12858,17817_shp,0,0
+12,4,t514-b3230-sl4,"12: NC 55 at NC 54",0,12848,17814_shp,0,0
+12,4,t51E-b3212-sl4,"12: Durham Station",1,12818,17817_shp,0,0
+12,4,t532-b321C-sl4,"12: NC 55 at NC 54",0,12828,17814_shp,0,0
+12,4,t53C-b3230-sl4,"12: Durham Station",1,12848,17817_shp,0,0
+12,4,t578-b3226-sl4,"12: NC 55 at NC 54",0,12838,17814_shp,0,0
+12,4,t582-b321C-sl4,"12: Durham Station",1,12828,17817_shp,0,0
+12,4,t596-b323A-sl4,"12: NC 55 at NC 54",0,12858,17814_shp,0,0
+12,4,t5A0-b3226-sl4,"12: Durham Station",1,12838,17817_shp,0,0
+12,4,t5DC-b3212-sl4,"12: NC 55 at NC 54",0,12818,17814_shp,0,0
+12,4,t5E6-b323A-sl4,"12: Durham Station",1,12858,17817_shp,0,0
+12,4,t5FA-b3230-sl4,"12: NC 55 at NC 54",0,12848,17814_shp,0,0
+12,4,t604-b3212-sl4,"12: Durham Station",1,12818,17817_shp,0,0
+12,4,t640-b321C-sl4,"12: NC 55 at NC 54",0,12828,17814_shp,0,0
+12,4,t64F-b3230-sl4,"12: Durham Station",1,12848,17817_shp,0,0
+12,4,t65E-b3226-sl4,"12: NC 55 at NC 54",0,12838,17814_shp,0,0
+12,4,t66D-b321C-sl4,"12: Durham Station",1,12828,17817_shp,0,0
+12,4,t6A4-b323A-sl4,"12: NC 55 at NC 54",0,12858,17814_shp,0,0
+12,4,t6B3-b3226-sl4,"12: Durham Station",1,12838,17817_shp,0,0
+12,4,t6C2-b3212-sl4,"12: NC 55 at NC 54",0,12818,17814_shp,0,0
+12,4,t6D1-b323A-sl4,"12: Durham Station",1,12858,17817_shp,0,0
+12,4,t708-b3230-sl4,"12: NC 55 at NC 54",0,12848,17814_shp,0,0
+12,4,t717-b3212-sl4,"12: Durham Station",1,12818,17817_shp,0,0
+12,4,t726-b321C-sl4,"12: NC 55 at NC 54",0,12828,17814_shp,0,0
+12,4,t735-b3230-sl4,"12: Durham Station",1,12848,17817_shp,0,0
+12,4,t76C-b2EF2-sl4,"12: NC 55 at NC 54",0,12018,17814_shp,0,0
+12,4,t77B-b321C-sl4,"12: Durham Station",1,12828,17817_shp,0,0
+12,4,t78A-b3230-sl4,"12: NC 55 at NC 54",0,12848,17814_shp,0,0
+12,4,t799-b2EF2-sl4,"12: Durham Station",1,12018,17817_shp,0,0
+12,4,t7D0-b321C-sl4,"12: NC 55 at NC 54",0,12828,17814_shp,0,0
+12,4,t7DF-b3230-sl4,"12: Durham Station",1,12848,17817_shp,0,0
+12,4,t7EE-b2EF2-sl4,"12: NC 55 at NC 54",0,12018,17814_shp,0,0
+12,4,t7FD-b321C-sl4,"12: Durham Station",1,12828,17817_shp,0,0
+12,4,t834-b3230-sl4,"12: NC 55 at NC 54",0,12848,17814_shp,0,0
+12,4,t843-b2EF2-sl4,"12: Durham Station",1,12018,17817_shp,0,0
+12,4,t852-b321C-sl4,"12: NC 55 at NC 54",0,12828,17814_shp,0,0
+12,4,t861-b3230-sl4,"12: Durham Station",1,12848,17817_shp,0,0
+12,4,t898-b2EF2-sl4,"12: NC 55 at NC 54",0,12018,17814_shp,0,0
+12,4,t8A7-b321C-sl4,"12: Durham Station",1,12828,17817_shp,0,0
+12,4,t8B6-b3230-sl4,"12: NC 55 at NC 54",0,12848,17814_shp,0,0
+12,4,t8C5-b2EF2-sl4,"12: Durham Station",1,12018,17817_shp,0,0
+12,4,t8FC-b321C-sl4,"12: NC 55 at NC 54",0,12828,17811_shp,0,0
+12,4,t90B-b3230-sl4,"12: Durham Station",1,12848,17817_shp,0,0
+12,4,t91A-b2EF2-sl4,"12: NC 55 at NC 54",0,12018,17811_shp,0,0
+12,4,t960-b3230-sl4,"12: NC 55 at NC 54",0,12848,17811_shp,0,0
+1311,2,t2C6-b32D8-sl2,"13: Durham Tech",0,13016,17773_shp,0,0
+1311,2,t2E2-b32D8-sl2,"13: The Village",1,13016,17776_shp,0,0
+1311,2,t32A-b32D8-sl2,"13: Durham Tech",0,13016,17773_shp,0,0
+1311,2,t346-b32D8-sl2,"13: The Village",1,13016,17776_shp,0,0
+1311,2,t38E-b32D8-sl2,"13: Durham Tech",0,13016,17773_shp,0,0
+1311,2,t3AA-b32D8-sl2,"13: The Village",1,13016,17776_shp,0,0
+1311,2,t3F2-b32D8-sl2,"13: Durham Tech",0,13016,17773_shp,0,0
+1311,2,t40E-b32D8-sl2,"13: The Village",1,13016,17776_shp,0,0
+1311,2,t456-b32D8-sl2,"13: Durham Tech",0,13016,17773_shp,0,0
+1311,2,t472-b32D8-sl2,"13: The Village",1,13016,17776_shp,0,0
+1311,2,t4BA-b32D8-sl2,"13: Durham Tech",0,13016,17773_shp,0,0
+1311,2,t4D6-b32D8-sl2,"13: The Village",1,13016,17776_shp,0,0
+1311,2,t51E-b32E2-sl2,"13: Durham Tech",0,13026,17773_shp,0,0
+1311,2,t53A-b32E2-sl2,"13: The Village",1,13026,17776_shp,0,0
+1311,2,t582-b32E2-sl2,"13: Durham Tech",0,13026,17773_shp,0,0
+1311,2,t59E-b32E2-sl2,"13: The Village",1,13026,17776_shp,0,0
+1311,2,t5E6-b32E2-sl2,"13: Durham Tech",0,13026,17773_shp,0,0
+1311,2,t602-b32E2-sl2,"13: The Village",1,13026,17776_shp,0,0
+1311,2,t64A-b32E2-sl2,"13: Durham Tech",0,13026,17773_shp,0,0
+1311,2,t666-b32E2-sl2,"13: The Village",1,13026,17776_shp,0,0
+1311,2,t6AE-b32E2-sl2,"13: Durham Tech",0,13026,17773_shp,0,0
+1311,2,t6CA-b32E2-sl2,"13: The Village",1,13026,17776_shp,0,0
+1311,2,t712-b32E2-sl2,"13: Durham Tech",0,13026,17773_shp,0,0
+1311,2,t72E-b32E2-sl2,"13: The Village",1,13026,17776_shp,0,0
+1311,2,t776-b32E2-sl2,"13: Durham Tech",0,13026,17773_shp,0,0
+1311,2,t792-b32E2-sl2,"13: The Village",1,13026,17780_shp,0,0
+1311,3,t2C6-b32D9-sl3,"13: Durham Tech",0,13017,17775_shp,0,0
+1311,3,t2E2-b32D9-sl3,"13: The Village",1,13017,17778_shp,0,0
+1311,3,t32A-b32D9-sl3,"13: Durham Tech",0,13017,17775_shp,0,0
+1311,3,t346-b32D9-sl3,"13: The Village",1,13017,17778_shp,0,0
+1311,3,t38E-b32D9-sl3,"13: Durham Tech",0,13017,17775_shp,0,0
+1311,3,t3AA-b32D9-sl3,"13: The Village",1,13017,17778_shp,0,0
+1311,3,t3F2-b32D9-sl3,"13: Durham Tech",0,13017,17775_shp,0,0
+1311,3,t40E-b32D9-sl3,"13: The Village",1,13017,17778_shp,0,0
+1311,3,t456-b32D9-sl3,"13: Durham Tech",0,13017,17775_shp,0,0
+1311,3,t472-b32D9-sl3,"13: The Village",1,13017,17778_shp,0,0
+1311,3,t4BA-b32D9-sl3,"13: Durham Tech",0,13017,17775_shp,0,0
+1311,3,t4D6-b32D9-sl3,"13: The Village",1,13017,17778_shp,0,0
+1311,3,t51E-b32E3-sl3,"13: Durham Tech",0,13027,17775_shp,0,0
+1311,3,t53A-b32E3-sl3,"13: The Village",1,13027,17778_shp,0,0
+1311,3,t582-b32E3-sl3,"13: Durham Tech",0,13027,17775_shp,0,0
+1311,3,t59E-b32E3-sl3,"13: The Village",1,13027,17778_shp,0,0
+1311,3,t5E6-b32E3-sl3,"13: Durham Tech",0,13027,17775_shp,0,0
+1311,3,t602-b32E3-sl3,"13: The Village",1,13027,17778_shp,0,0
+1311,3,t64A-b32E3-sl3,"13: Durham Tech",0,13027,17775_shp,0,0
+1311,3,t666-b32E3-sl3,"13: The Village",1,13027,17778_shp,0,0
+1311,3,t6AE-b32E3-sl3,"13: Durham Tech",0,13027,17775_shp,0,0
+1311,3,t6CA-b32E3-sl3,"13: The Village",1,13027,17778_shp,0,0
+1311,3,t712-b32E3-sl3,"13: Durham Tech",0,13027,17775_shp,0,0
+1311,3,t72E-b32E3-sl3,"13: The Village",1,13027,17778_shp,0,0
+1311,3,t776-b32E3-sl3,"13: Durham Tech",0,13027,17775_shp,0,0
+1311,3,t792-b32E3-sl3,"13: The Village",1,13027,17781_shp,0,0
+1311,4,t2C6-b32DA-sl4,"13: Durham Tech",0,13018,17777_shp,0,0
+1311,4,t2E2-b32DA-sl4,"13: The Village",1,13018,17774_shp,0,0
+1311,4,t32A-b32DA-sl4,"13: Durham Tech",0,13018,17777_shp,0,0
+1311,4,t346-b32DA-sl4,"13: The Village",1,13018,17774_shp,0,0
+1311,4,t38E-b32DA-sl4,"13: Durham Tech",0,13018,17777_shp,0,0
+1311,4,t3AA-b32DA-sl4,"13: The Village",1,13018,17774_shp,0,0
+1311,4,t3F2-b32DA-sl4,"13: Durham Tech",0,13018,17777_shp,0,0
+1311,4,t40E-b32DA-sl4,"13: The Village",1,13018,17774_shp,0,0
+1311,4,t456-b32DA-sl4,"13: Durham Tech",0,13018,17777_shp,0,0
+1311,4,t472-b32DA-sl4,"13: The Village",1,13018,17774_shp,0,0
+1311,4,t4BA-b32DA-sl4,"13: Durham Tech",0,13018,17777_shp,0,0
+1311,4,t4D6-b32DA-sl4,"13: The Village",1,13018,17774_shp,0,0
+1311,4,t51E-b32E4-sl4,"13: Durham Tech",0,13028,17777_shp,0,0
+1311,4,t53A-b32E4-sl4,"13: The Village",1,13028,17774_shp,0,0
+1311,4,t582-b32E4-sl4,"13: Durham Tech",0,13028,17777_shp,0,0
+1311,4,t59E-b32E4-sl4,"13: The Village",1,13028,17774_shp,0,0
+1311,4,t5E6-b32E4-sl4,"13: Durham Tech",0,13028,17777_shp,0,0
+1311,4,t602-b32E4-sl4,"13: The Village",1,13028,17774_shp,0,0
+1311,4,t64A-b32E4-sl4,"13: Durham Tech",0,13028,17777_shp,0,0
+1311,4,t666-b32E4-sl4,"13: The Village",1,13028,17774_shp,0,0
+1311,4,t6AE-b32E4-sl4,"13: Durham Tech",0,13028,17777_shp,0,0
+1311,4,t6CA-b32E4-sl4,"13: The Village",1,13028,17774_shp,0,0
+1311,4,t712-b32E4-sl4,"13: Durham Tech",0,13028,17777_shp,0,0
+1311,4,t72E-b32E4-sl4,"13: The Village",1,13028,17774_shp,0,0
+1311,4,t776-b32E4-sl4,"13: Durham Tech",0,13028,17777_shp,0,0
+1311,4,t792-b32E4-sl4,"13: The Village",1,13028,17779_shp,0,0
+161,2,t203-b3E90-sl2,"16: Southern HS",0,16016,17832_shp,0,0
+161,2,t212-b3E9A-sl2,"16: Southern HS",0,16026,17832_shp,0,0
+161,2,t214-b3E90-sl2,"16: Durham Station",1,16016,17831_shp,0,0
+161,2,t223-b3E9A-sl2,"16: Durham Station",1,16026,17831_shp,0,0
+161,2,t258-b3E90-sl2,"16: Southern HS",0,16016,17830_shp,0,0
+161,2,t26C-b3E9A-sl2,"16: Southern HS",0,16026,17830_shp,0,0
+161,2,t273-b3E90-sl2,"16: Durham Station",1,16016,17831_shp,0,0
+161,2,t287-b3E9A-sl2,"16: Durham Station",1,16026,17831_shp,0,0
+161,2,t28F-b3E90-sl2,"16: Southern HS",0,16016,17830_shp,0,0
+161,2,t2D0-b3E9A-sl2,"16: Southern HS",0,16026,17830_shp,0,0
+161,2,t2D2-b3E90-sl2,"16: Durham Station",1,16016,17831_shp,0,0
+161,2,t2EE-b3E90-sl2,"16: Southern HS",0,16016,17830_shp,0,0
+161,2,t2EE-b3E9A-sl2,"16: Durham Station",1,16026,17831_shp,0,0
+161,2,t334-b3E90-sl2,"16: Durham Station",1,16016,17831_shp,0,0
+161,2,t334-b3E9A-sl2,"16: Southern HS",0,16026,17830_shp,0,0
+161,2,t352-b3E90-sl2,"16: Southern HS",0,16016,17830_shp,0,0
+161,2,t352-b3E9A-sl2,"16: Durham Station",1,16026,17831_shp,0,0
+161,2,t398-b3E90-sl2,"16: Durham Station",1,16016,17831_shp,0,0
+161,2,t398-b3E9A-sl2,"16: Southern HS",0,16026,17830_shp,0,0
+161,2,t3B6-b3E90-sl2,"16: Southern HS",0,16016,17830_shp,0,0
+161,2,t3B6-b3E9A-sl2,"16: Durham Station",1,16026,17831_shp,0,0
+161,2,t3FC-b3E90-sl2,"16: Durham Station",1,16016,17831_shp,0,0
+161,2,t3FC-b3E9A-sl2,"16: Southern HS",0,16026,17830_shp,0,0
+161,2,t41A-b3E90-sl2,"16: Southern HS",0,16016,17830_shp,0,0
+161,2,t41A-b3E9A-sl2,"16: Durham Station",1,16026,17831_shp,0,0
+161,2,t460-b3E90-sl2,"16: Durham Station",1,16016,17831_shp,0,0
+161,2,t460-b3E9A-sl2,"16: Southern HS",0,16026,17830_shp,0,0
+161,2,t47E-b3E90-sl2,"16: Southern HS",0,16016,17830_shp,0,0
+161,2,t47E-b3E9A-sl2,"16: Durham Station",1,16026,17831_shp,0,0
+161,2,t4C4-b3E90-sl2,"16: Durham Station",1,16016,17831_shp,0,0
+161,2,t4C4-b3E9A-sl2,"16: Southern HS",0,16026,17830_shp,0,0
+161,2,t4E2-b3E90-sl2,"16: Southern HS",0,16016,17830_shp,0,0
+161,2,t4E2-b3E9A-sl2,"16: Durham Station",1,16026,17831_shp,0,0
+161,2,t528-b3E90-sl2,"16: Durham Station",1,16016,17831_shp,0,0
+161,2,t528-b3E9A-sl2,"16: Southern HS",0,16026,17830_shp,0,0
+161,2,t546-b3E90-sl2,"16: Southern HS",0,16016,17830_shp,0,0
+161,2,t546-b3E9A-sl2,"16: Durham Station",1,16026,17831_shp,0,0
+161,2,t58C-b3E90-sl2,"16: Durham Station",1,16016,17831_shp,0,0
+161,2,t58C-b3E9A-sl2,"16: Southern HS",0,16026,17830_shp,0,0
+161,2,t5AA-b3E90-sl2,"16: Southern HS",0,16016,17830_shp,0,0
+161,2,t5AA-b3E9A-sl2,"16: Durham Station",1,16026,17831_shp,0,0
+161,2,t5F0-b3E90-sl2,"16: Durham Station",1,16016,17831_shp,0,0
+161,2,t5F0-b3E9A-sl2,"16: Southern HS",0,16026,17830_shp,0,0
+161,2,t60E-b3E90-sl2,"16: Southern HS",0,16016,17830_shp,0,0
+161,2,t60E-b3E9A-sl2,"16: Durham Station",1,16026,17831_shp,0,0
+161,2,t654-b3E90-sl2,"16: Durham Station",1,16016,17831_shp,0,0
+161,2,t654-b3E9A-sl2,"16: Southern HS",0,16026,17830_shp,0,0
+161,2,t672-b3E90-sl2,"16: Southern HS",0,16016,17830_shp,0,0
+161,2,t672-b3E9A-sl2,"16: Durham Station",1,16026,17831_shp,0,0
+161,2,t6B8-b3E90-sl2,"16: Durham Station",1,16016,17831_shp,0,0
+161,2,t6B8-b3E9A-sl2,"16: Southern HS",0,16026,17830_shp,0,0
+161,2,t6D6-b3E90-sl2,"16: Southern HS",0,16016,17830_shp,0,0
+161,2,t6D6-b3E9A-sl2,"16: Durham Station",1,16026,17831_shp,0,0
+161,2,t71C-b3E90-sl2,"16: Durham Station",1,16016,17831_shp,0,0
+161,2,t71C-b3E9A-sl2,"16: Southern HS",0,16026,17830_shp,0,0
+161,2,t73A-b3E9A-sl2,"16: Durham Station",1,16026,17831_shp,0,0
+161,2,t76C-b3E90-sl2,"16: Southern HS",0,16016,17830_shp,0,0
+161,2,t787-b3E90-sl2,"16: Durham Station",1,16016,17831_shp,0,0
+161,2,t78A-b3E9A-sl2,"16: Southern HS",0,16026,17830_shp,0,0
+161,2,t7A5-b3E9A-sl2,"16: Durham Station",1,16026,17831_shp,0,0
+161,2,t7D0-b3E90-sl2,"16: Southern HS",0,16016,17830_shp,0,0
+161,2,t7EB-b3E90-sl2,"16: Durham Station",1,16016,17831_shp,0,0
+161,2,t7EE-b3E9A-sl2,"16: Southern HS",0,16026,17830_shp,0,0
+161,2,t809-b3E9A-sl2,"16: Durham Station",1,16026,17831_shp,0,0
+161,2,t834-b3E90-sl2,"16: Southern HS",0,16016,17830_shp,0,0
+161,2,t84F-b3E90-sl2,"16: Durham Station",1,16016,17831_shp,0,0
+161,2,t852-b3E9A-sl2,"16: Southern HS",0,16026,17830_shp,0,0
+161,2,t86D-b3E9A-sl2,"16: Durham Station",1,16026,17831_shp,0,0
+161,2,t898-b3E90-sl2,"16: Southern HS",0,16016,17830_shp,0,0
+161,2,t8B3-b3E90-sl2,"16: Durham Station",1,16016,17831_shp,0,0
+161,2,t8B6-b3E9A-sl2,"16: Southern HS",0,16026,17830_shp,0,0
+161,2,t8D1-b3E9A-sl2,"16: Durham Station",1,16026,17831_shp,0,0
+161,2,t8FC-b3E90-sl2,"16: Southern HS",0,16016,17830_shp,0,0
+161,2,t917-b3E90-sl2,"16: Durham Station",1,16016,17831_shp,0,0
+161,2,t91A-b3E9A-sl2,"16: Southern HS",0,16026,17869_shp,0,0
+161,2,t935-b3E9A-sl2,"16: Durham Station",1,16026,17751_shp,0,0
+161,2,t960-b3E90-sl2,"16: Southern HS",0,16016,17830_shp,0,0
+161,2,t97B-b3E90-sl2,"16: Durham Station",1,16016,17751_shp,0,0
+161,3,t267-b3E91-sl3,"16: Southern HS",0,16017,17828_shp,0,0
+161,3,t278-b3E91-sl3,"16: Durham Station",1,16017,17834_shp,0,0
+161,3,t285-b3E9B-sl3,"16: Southern HS",0,16027,17828_shp,0,0
+161,3,t2BC-b3E91-sl3,"16: Southern HS",0,16017,17833_shp,0,0
+161,3,t2BE-b3E9B-sl3,"16: Durham Station",1,16027,17834_shp,0,0
+161,3,t2D7-b3E91-sl3,"16: Durham Station",1,16017,17834_shp,0,0
+161,3,t2DA-b3E9B-sl3,"16: Southern HS",0,16027,17833_shp,0,0
+161,3,t2F5-b3E9B-sl3,"16: Durham Station",1,16027,17834_shp,0,0
+161,3,t320-b3E91-sl3,"16: Southern HS",0,16017,17833_shp,0,0
+161,3,t33B-b3E91-sl3,"16: Durham Station",1,16017,17834_shp,0,0
+161,3,t33E-b3E9B-sl3,"16: Southern HS",0,16027,17833_shp,0,0
+161,3,t359-b3E9B-sl3,"16: Durham Station",1,16027,17834_shp,0,0
+161,3,t384-b3E91-sl3,"16: Southern HS",0,16017,17833_shp,0,0
+161,3,t39F-b3E91-sl3,"16: Durham Station",1,16017,17834_shp,0,0
+161,3,t3A2-b3E9B-sl3,"16: Southern HS",0,16027,17833_shp,0,0
+161,3,t3BD-b3E9B-sl3,"16: Durham Station",1,16027,17834_shp,0,0
+161,3,t3E8-b3E91-sl3,"16: Southern HS",0,16017,17833_shp,0,0
+161,3,t403-b3E91-sl3,"16: Durham Station",1,16017,17834_shp,0,0
+161,3,t406-b3E9B-sl3,"16: Southern HS",0,16027,17833_shp,0,0
+161,3,t421-b3E9B-sl3,"16: Durham Station",1,16027,17834_shp,0,0
+161,3,t44C-b3E91-sl3,"16: Southern HS",0,16017,17833_shp,0,0
+161,3,t467-b3E91-sl3,"16: Durham Station",1,16017,17834_shp,0,0
+161,3,t46A-b3E9B-sl3,"16: Southern HS",0,16027,17833_shp,0,0
+161,3,t485-b3E9B-sl3,"16: Durham Station",1,16027,17834_shp,0,0
+161,3,t4B0-b3E91-sl3,"16: Southern HS",0,16017,17833_shp,0,0
+161,3,t4CB-b3E91-sl3,"16: Durham Station",1,16017,17834_shp,0,0
+161,3,t4CE-b3E9B-sl3,"16: Southern HS",0,16027,17833_shp,0,0
+161,3,t4E9-b3E9B-sl3,"16: Durham Station",1,16027,17834_shp,0,0
+161,3,t514-b3E91-sl3,"16: Southern HS",0,16017,17833_shp,0,0
+161,3,t52F-b3E91-sl3,"16: Durham Station",1,16017,17834_shp,0,0
+161,3,t532-b3E9B-sl3,"16: Southern HS",0,16027,17833_shp,0,0
+161,3,t54D-b3E9B-sl3,"16: Durham Station",1,16027,17834_shp,0,0
+161,3,t578-b3E91-sl3,"16: Southern HS",0,16017,17833_shp,0,0
+161,3,t593-b3E91-sl3,"16: Durham Station",1,16017,17834_shp,0,0
+161,3,t596-b3E9B-sl3,"16: Southern HS",0,16027,17833_shp,0,0
+161,3,t5B1-b3E9B-sl3,"16: Durham Station",1,16027,17834_shp,0,0
+161,3,t5DC-b3E91-sl3,"16: Southern HS",0,16017,17833_shp,0,0
+161,3,t5F7-b3E91-sl3,"16: Durham Station",1,16017,17834_shp,0,0
+161,3,t5FA-b3E9B-sl3,"16: Southern HS",0,16027,17833_shp,0,0
+161,3,t615-b3E9B-sl3,"16: Durham Station",1,16027,17834_shp,0,0
+161,3,t640-b3E91-sl3,"16: Southern HS",0,16017,17833_shp,0,0
+161,3,t65B-b3E91-sl3,"16: Durham Station",1,16017,17834_shp,0,0
+161,3,t65E-b3E9B-sl3,"16: Southern HS",0,16027,17833_shp,0,0
+161,3,t679-b3E9B-sl3,"16: Durham Station",1,16027,17834_shp,0,0
+161,3,t6A4-b3E91-sl3,"16: Southern HS",0,16017,17833_shp,0,0
+161,3,t6BF-b3E91-sl3,"16: Durham Station",1,16017,17834_shp,0,0
+161,3,t6C2-b3E9B-sl3,"16: Southern HS",0,16027,17833_shp,0,0
+161,3,t6DD-b3E9B-sl3,"16: Durham Station",1,16027,17834_shp,0,0
+161,3,t708-b3E91-sl3,"16: Southern HS",0,16017,17833_shp,0,0
+161,3,t723-b3E91-sl3,"16: Durham Station",1,16017,17834_shp,0,0
+161,3,t726-b3E9B-sl3,"16: Southern HS",0,16027,17833_shp,0,0
+161,3,t741-b3E9B-sl3,"16: Durham Station",1,16027,17834_shp,0,0
+161,3,t76C-b3E91-sl3,"16: Southern HS",0,16017,17833_shp,0,0
+161,3,t787-b3E91-sl3,"16: Durham Station",1,16017,17834_shp,0,0
+161,3,t78A-b3E9B-sl3,"16: Southern HS",0,16027,17833_shp,0,0
+161,3,t7A5-b3E9B-sl3,"16: Durham Station",1,16027,17834_shp,0,0
+161,3,t7D0-b3E91-sl3,"16: Southern HS",0,16017,17833_shp,0,0
+161,3,t7EB-b3E91-sl3,"16: Durham Station",1,16017,17834_shp,0,0
+161,3,t7EE-b3E9B-sl3,"16: Southern HS",0,16027,17870_shp,0,0
+161,3,t809-b3E9B-sl3,"16: Durham Station",1,16027,17766_shp,0,0
+161,3,t834-b3E91-sl3,"16: Southern HS",0,16017,17870_shp,0,0
+161,3,t84F-b3E91-sl3,"16: Durham Station",1,16017,17766_shp,0,0
+161,4,t203-b3E92-sl4,"16: Southern HS",0,16018,17829_shp,0,0
+161,4,t212-b3E9C-sl4,"16: Southern HS",0,16028,17829_shp,0,0
+161,4,t214-b3E92-sl4,"16: Durham Station",1,16018,17826_shp,0,0
+161,4,t223-b3E9C-sl4,"16: Durham Station",1,16028,17826_shp,0,0
+161,4,t258-b3E92-sl4,"16: Southern HS",0,16018,17827_shp,0,0
+161,4,t26C-b3E9C-sl4,"16: Southern HS",0,16028,17827_shp,0,0
+161,4,t273-b3E92-sl4,"16: Durham Station",1,16018,17826_shp,0,0
+161,4,t287-b3E9C-sl4,"16: Durham Station",1,16028,17826_shp,0,0
+161,4,t28F-b3E92-sl4,"16: Southern HS",0,16018,17827_shp,0,0
+161,4,t2D0-b3E9C-sl4,"16: Southern HS",0,16028,17827_shp,0,0
+161,4,t2D2-b3E92-sl4,"16: Durham Station",1,16018,17826_shp,0,0
+161,4,t2EE-b3E92-sl4,"16: Southern HS",0,16018,17827_shp,0,0
+161,4,t2EE-b3E9C-sl4,"16: Durham Station",1,16028,17826_shp,0,0
+161,4,t334-b3E92-sl4,"16: Durham Station",1,16018,17826_shp,0,0
+161,4,t334-b3E9C-sl4,"16: Southern HS",0,16028,17827_shp,0,0
+161,4,t352-b3E92-sl4,"16: Southern HS",0,16018,17827_shp,0,0
+161,4,t352-b3E9C-sl4,"16: Durham Station",1,16028,17826_shp,0,0
+161,4,t398-b3E92-sl4,"16: Durham Station",1,16018,17826_shp,0,0
+161,4,t398-b3E9C-sl4,"16: Southern HS",0,16028,17827_shp,0,0
+161,4,t3B6-b3E92-sl4,"16: Southern HS",0,16018,17827_shp,0,0
+161,4,t3B6-b3E9C-sl4,"16: Durham Station",1,16028,17826_shp,0,0
+161,4,t3FC-b3E92-sl4,"16: Durham Station",1,16018,17826_shp,0,0
+161,4,t3FC-b3E9C-sl4,"16: Southern HS",0,16028,17827_shp,0,0
+161,4,t41A-b3E92-sl4,"16: Southern HS",0,16018,17827_shp,0,0
+161,4,t41A-b3E9C-sl4,"16: Durham Station",1,16028,17826_shp,0,0
+161,4,t460-b3E92-sl4,"16: Durham Station",1,16018,17826_shp,0,0
+161,4,t460-b3E9C-sl4,"16: Southern HS",0,16028,17827_shp,0,0
+161,4,t47E-b3E92-sl4,"16: Southern HS",0,16018,17827_shp,0,0
+161,4,t47E-b3E9C-sl4,"16: Durham Station",1,16028,17826_shp,0,0
+161,4,t4C4-b3E92-sl4,"16: Durham Station",1,16018,17826_shp,0,0
+161,4,t4C4-b3E9C-sl4,"16: Southern HS",0,16028,17827_shp,0,0
+161,4,t4E2-b3E92-sl4,"16: Southern HS",0,16018,17827_shp,0,0
+161,4,t4E2-b3E9C-sl4,"16: Durham Station",1,16028,17826_shp,0,0
+161,4,t528-b3E92-sl4,"16: Durham Station",1,16018,17826_shp,0,0
+161,4,t528-b3E9C-sl4,"16: Southern HS",0,16028,17827_shp,0,0
+161,4,t546-b3E92-sl4,"16: Southern HS",0,16018,17827_shp,0,0
+161,4,t546-b3E9C-sl4,"16: Durham Station",1,16028,17826_shp,0,0
+161,4,t58C-b3E92-sl4,"16: Durham Station",1,16018,17826_shp,0,0
+161,4,t58C-b3E9C-sl4,"16: Southern HS",0,16028,17827_shp,0,0
+161,4,t5AA-b3E92-sl4,"16: Southern HS",0,16018,17827_shp,0,0
+161,4,t5AA-b3E9C-sl4,"16: Durham Station",1,16028,17826_shp,0,0
+161,4,t5F0-b3E92-sl4,"16: Durham Station",1,16018,17826_shp,0,0
+161,4,t5F0-b3E9C-sl4,"16: Southern HS",0,16028,17827_shp,0,0
+161,4,t60E-b3E92-sl4,"16: Southern HS",0,16018,17827_shp,0,0
+161,4,t60E-b3E9C-sl4,"16: Durham Station",1,16028,17826_shp,0,0
+161,4,t654-b3E92-sl4,"16: Durham Station",1,16018,17826_shp,0,0
+161,4,t654-b3E9C-sl4,"16: Southern HS",0,16028,17827_shp,0,0
+161,4,t672-b3E92-sl4,"16: Southern HS",0,16018,17827_shp,0,0
+161,4,t672-b3E9C-sl4,"16: Durham Station",1,16028,17826_shp,0,0
+161,4,t6B8-b3E92-sl4,"16: Durham Station",1,16018,17826_shp,0,0
+161,4,t6B8-b3E9C-sl4,"16: Southern HS",0,16028,17827_shp,0,0
+161,4,t6D6-b3E92-sl4,"16: Southern HS",0,16018,17827_shp,0,0
+161,4,t6D6-b3E9C-sl4,"16: Durham Station",1,16028,17826_shp,0,0
+161,4,t71C-b3E92-sl4,"16: Durham Station",1,16018,17826_shp,0,0
+161,4,t71C-b3E9C-sl4,"16: Southern HS",0,16028,17827_shp,0,0
+161,4,t73A-b3E9C-sl4,"16: Durham Station",1,16028,17826_shp,0,0
+161,4,t76C-b3E92-sl4,"16: Southern HS",0,16018,17827_shp,0,0
+161,4,t787-b3E92-sl4,"16: Durham Station",1,16018,17826_shp,0,0
+161,4,t78A-b3E9C-sl4,"16: Southern HS",0,16028,17827_shp,0,0
+161,4,t7A5-b3E9C-sl4,"16: Durham Station",1,16028,17826_shp,0,0
+161,4,t7D0-b3E92-sl4,"16: Southern HS",0,16018,17827_shp,0,0
+161,4,t7EB-b3E92-sl4,"16: Durham Station",1,16018,17826_shp,0,0
+161,4,t7EE-b3E9C-sl4,"16: Southern HS",0,16028,17827_shp,0,0
+161,4,t809-b3E9C-sl4,"16: Durham Station",1,16028,17826_shp,0,0
+161,4,t834-b3E92-sl4,"16: Southern HS",0,16018,17827_shp,0,0
+161,4,t84F-b3E92-sl4,"16: Durham Station",1,16018,17826_shp,0,0
+161,4,t852-b3E9C-sl4,"16: Southern HS",0,16028,17827_shp,0,0
+161,4,t86D-b3E9C-sl4,"16: Durham Station",1,16028,17826_shp,0,0
+161,4,t898-b3E92-sl4,"16: Southern HS",0,16018,17827_shp,0,0
+161,4,t8B3-b3E92-sl4,"16: Durham Station",1,16018,17826_shp,0,0
+161,4,t8B6-b3E9C-sl4,"16: Southern HS",0,16028,17827_shp,0,0
+161,4,t8D1-b3E9C-sl4,"16: Durham Station",1,16028,17826_shp,0,0
+161,4,t8FC-b3E92-sl4,"16: Southern HS",0,16018,17827_shp,0,0
+161,4,t917-b3E92-sl4,"16: Durham Station",1,16018,17826_shp,0,0
+161,4,t91A-b3E9C-sl4,"16: Southern HS",0,16028,17868_shp,0,0
+161,4,t935-b3E9C-sl4,"16: Durham Station",1,16028,17771_shp,0,0
+161,4,t960-b3E92-sl4,"16: Southern HS",0,16018,17827_shp,0,0
+161,4,t97B-b3E92-sl4,"16: Durham Station",1,16018,17771_shp,0,0
+2,2,t20A-b7E0-sl2,"2: Durham Station",1,2016,17911_shp,0,0
+2,2,t228-b7EA-sl2,"2: Durham Station",1,2026,17911_shp,0,0
+2,2,t258-b7E0-sl2,"Brier Creek",0,2016,18275_shp,0,0
+2,2,t26E-b7F4-sl2,"2: Durham Station",1,2036,17911_shp,0,0
+2,2,t276-b7EA-sl2,"Brier Creek",0,2026,18275_shp,0,0
+2,2,t285-b7E0-sl2,"2: Durham Station",1,2016,17911_shp,0,0
+2,2,t2BC-b7F4-sl2,"Brier Creek",0,2036,18275_shp,0,0
+2,2,t2CB-b7EA-sl2,"2: Durham Station",1,2026,17911_shp,0,0
+2,2,t2DA-b7E0-sl2,"2: Brier Creek",0,2016,17915_shp,0,0
+2,2,t2E9-b7F4-sl2,"2: Durham Station",1,2036,17911_shp,0,0
+2,2,t320-b7EA-sl2,"2: Brier Creek",0,2026,17915_shp,0,0
+2,2,t32F-b7E0-sl2,"2: Durham Station",1,2016,17911_shp,0,0
+2,2,t33E-b7F4-sl2,"2: Brier Creek",0,2036,17915_shp,0,0
+2,2,t34D-b7EA-sl2,"2: Durham Station",1,2026,17911_shp,0,0
+2,2,t384-b7E0-sl2,"2: Brier Creek",0,2016,17915_shp,0,0
+2,2,t393-b7F4-sl2,"2: Durham Station",1,2036,17911_shp,0,0
+2,2,t3A2-b7EA-sl2,"2: Brier Creek",0,2026,17915_shp,0,0
+2,2,t3B1-b7E0-sl2,"2: Durham Station",1,2016,17911_shp,0,0
+2,2,t3E8-b7F4-sl2,"2: Brier Creek",0,2036,17915_shp,0,0
+2,2,t3F7-b7EA-sl2,"2: Durham Station",1,2026,17911_shp,0,0
+2,2,t406-b7E0-sl2,"2: Brier Creek",0,2016,17915_shp,0,0
+2,2,t415-b7F4-sl2,"2: Durham Station",1,2036,17911_shp,0,0
+2,2,t44C-b7EA-sl2,"2: Brier Creek",0,2026,17915_shp,0,0
+2,2,t45B-b7E0-sl2,"2: Durham Station",1,2016,17911_shp,0,0
+2,2,t46A-b7F4-sl2,"2: Brier Creek",0,2036,17915_shp,0,0
+2,2,t47B-b7EA-sl2,"2: Durham Station",1,2026,17911_shp,0,0
+2,2,t4B0-b7E0-sl2,"2: Brier Creek",0,2016,17915_shp,0,0
+2,2,t4C1-b7F4-sl2,"2: Durham Station",1,2036,17911_shp,0,0
+2,2,t4CE-b7EA-sl2,"2: Brier Creek",0,2026,17915_shp,0,0
+2,2,t4DF-b7E0-sl2,"2: Durham Station",1,2016,17911_shp,0,0
+2,2,t514-b7F4-sl2,"2: Brier Creek",0,2036,17915_shp,0,0
+2,2,t525-b7EA-sl2,"2: Durham Station",1,2026,17911_shp,0,0
+2,2,t532-b7E0-sl2,"2: Brier Creek",0,2016,17915_shp,0,0
+2,2,t543-b7F4-sl2,"2: Durham Station",1,2036,17911_shp,0,0
+2,2,t578-b7EA-sl2,"2: Brier Creek",0,2026,17915_shp,0,0
+2,2,t589-b7E0-sl2,"2: Durham Station",1,2016,17911_shp,0,0
+2,2,t596-b7F4-sl2,"2: Brier Creek",0,2036,17915_shp,0,0
+2,2,t5A7-b7EA-sl2,"2: Durham Station",1,2026,17911_shp,0,0
+2,2,t5DC-b7E0-sl2,"2: Brier Creek",0,2016,17915_shp,0,0
+2,2,t5ED-b7F4-sl2,"2: Durham Station",1,2036,17911_shp,0,0
+2,2,t5FA-b7EA-sl2,"2: Brier Creek",0,2026,17915_shp,0,0
+2,2,t60B-b7E0-sl2,"2: Durham Station",1,2016,17911_shp,0,0
+2,2,t640-b7F4-sl2,"2: Brier Creek",0,2036,17915_shp,0,0
+2,2,t651-b7EA-sl2,"2: Durham Station",1,2026,17911_shp,0,0
+2,2,t65E-b7E0-sl2,"2: Brier Creek",0,2016,17915_shp,0,0
+2,2,t66F-b7F4-sl2,"2: Durham Station",1,2036,17911_shp,0,0
+2,2,t6A4-b7EA-sl2,"2: Brier Creek",0,2026,17915_shp,0,0
+2,2,t6B5-b7E0-sl2,"2: Durham Station",1,2016,17911_shp,0,0
+2,2,t6C2-b7F4-sl2,"2: Brier Creek",0,2036,17915_shp,0,0
+2,2,t6D3-b7EA-sl2,"2: Durham Station",1,2026,17911_shp,0,0
+2,2,t708-b7E0-sl2,"2: Brier Creek",0,2016,17915_shp,0,0
+2,2,t719-b7F4-sl2,"2: Durham Station",1,2036,17911_shp,0,0
+2,2,t726-b7EA-sl2,"2: Brier Creek",0,2026,17915_shp,0,0
+2,2,t737-b7E0-sl2,"2: Durham Station",1,2016,17911_shp,0,0
+2,2,t76C-b7F4-sl2,"2: Brier Creek",0,2036,17915_shp,0,0
+2,2,t77D-b7EA-sl2,"2: Durham Station",1,2026,17911_shp,0,0
+2,2,t78A-b7E0-sl2,"2: Brier Creek",0,2016,17915_shp,0,0
+2,2,t798-b7F4-sl2,"2: Durham Station",1,2036,17911_shp,0,0
+2,2,t7D0-b7EA-sl2,"2: Brier Creek",0,2026,17915_shp,0,0
+2,2,t7DE-b7E0-sl2,"2: Durham Station",1,2016,17911_shp,0,0
+2,2,t7EE-b7F4-sl2,"2: Brier Creek",0,2036,17915_shp,0,0
+2,2,t7FC-b7EA-sl2,"2: Durham Station",1,2026,17911_shp,0,0
+2,2,t834-b7E0-sl2,"2: Brier Creek",0,2016,17915_shp,0,0
+2,2,t842-b7F4-sl2,"2: Durham Station",1,2036,17911_shp,0,0
+2,2,t852-b7EA-sl2,"2: Brier Creek",0,2026,17915_shp,0,0
+2,2,t860-b7E0-sl2,"2: Durham Station",1,2016,17911_shp,0,0
+2,2,t898-b7F4-sl2,"2: Brier Creek",0,2036,17915_shp,0,0
+2,2,t8A6-b7EA-sl2,"2: Durham Station",1,2026,17911_shp,0,0
+2,2,t8B6-b7E0-sl2,"2: Brier Creek",0,2016,17915_shp,0,0
+2,2,t8C4-b7F4-sl2,"2: Durham Station",1,2036,17911_shp,0,0
+2,2,t8FC-b7EA-sl2,"2: Brier Creek",0,2026,17908_shp,0,0
+2,2,t90A-b7E0-sl2,"2: Durham Station",1,2016,17911_shp,0,0
+2,2,t91A-b7F4-sl2,"2: Brier Creek",0,2036,17908_shp,0,0
+2,2,t960-b7E0-sl2,"2: Brier Creek",0,2016,17908_shp,0,0
+2,3,t26E-b7E1-sl3,"2: Durham Station",1,2017,17912_shp,0,0
+2,3,t28C-b7EB-sl3,"2: Durham Station",1,2027,17912_shp,0,0
+2,3,t2BC-b7E1-sl3,"2: Brier Creek",0,2017,17916_shp,0,0
+2,3,t2D2-b7F5-sl3,"2: Durham Station",1,2037,17912_shp,0,0
+2,3,t2DA-b7EB-sl3,"2: Brier Creek",0,2027,17916_shp,0,0
+2,3,t2E8-b7E1-sl3,"2: Durham Station",1,2017,17912_shp,0,0
+2,3,t320-b7F5-sl3,"2: Brier Creek",0,2037,17916_shp,0,0
+2,3,t32E-b7EB-sl3,"2: Durham Station",1,2027,17912_shp,0,0
+2,3,t33E-b7E1-sl3,"2: Brier Creek",0,2017,17916_shp,0,0
+2,3,t34C-b7F5-sl3,"2: Durham Station",1,2037,17912_shp,0,0
+2,3,t384-b7EB-sl3,"2: Brier Creek",0,2027,17916_shp,0,0
+2,3,t392-b7E1-sl3,"2: Durham Station",1,2017,17912_shp,0,0
+2,3,t3A2-b7F5-sl3,"2: Brier Creek",0,2037,17916_shp,0,0
+2,3,t3B0-b7EB-sl3,"2: Durham Station",1,2027,17912_shp,0,0
+2,3,t3E8-b7E1-sl3,"2: Brier Creek",0,2017,17916_shp,0,0
+2,3,t3F6-b7F5-sl3,"2: Durham Station",1,2037,17912_shp,0,0
+2,3,t406-b7EB-sl3,"2: Brier Creek",0,2027,17916_shp,0,0
+2,3,t414-b7E1-sl3,"2: Durham Station",1,2017,17912_shp,0,0
+2,3,t44C-b7F5-sl3,"2: Brier Creek",0,2037,17916_shp,0,0
+2,3,t45A-b7EB-sl3,"2: Durham Station",1,2027,17912_shp,0,0
+2,3,t46A-b7E1-sl3,"2: Brier Creek",0,2017,17916_shp,0,0
+2,3,t478-b7F5-sl3,"2: Durham Station",1,2037,17912_shp,0,0
+2,3,t4B0-b7EB-sl3,"2: Brier Creek",0,2027,17916_shp,0,0
+2,3,t4BE-b7E1-sl3,"2: Durham Station",1,2017,17912_shp,0,0
+2,3,t4CE-b7F5-sl3,"2: Brier Creek",0,2037,17916_shp,0,0
+2,3,t4DC-b7EB-sl3,"2: Durham Station",1,2027,17912_shp,0,0
+2,3,t514-b7E1-sl3,"2: Brier Creek",0,2017,17916_shp,0,0
+2,3,t522-b7F5-sl3,"2: Durham Station",1,2037,17912_shp,0,0
+2,3,t532-b7EB-sl3,"2: Brier Creek",0,2027,17916_shp,0,0
+2,3,t540-b7E1-sl3,"2: Durham Station",1,2017,17912_shp,0,0
+2,3,t578-b7F5-sl3,"2: Brier Creek",0,2037,17916_shp,0,0
+2,3,t586-b7EB-sl3,"2: Durham Station",1,2027,17912_shp,0,0
+2,3,t596-b7E1-sl3,"2: Brier Creek",0,2017,17916_shp,0,0
+2,3,t5A4-b7F5-sl3,"2: Durham Station",1,2037,17912_shp,0,0
+2,3,t5DC-b7EB-sl3,"2: Brier Creek",0,2027,17916_shp,0,0
+2,3,t5EA-b7E1-sl3,"2: Durham Station",1,2017,17912_shp,0,0
+2,3,t5FA-b7F5-sl3,"2: Brier Creek",0,2037,17916_shp,0,0
+2,3,t608-b7EB-sl3,"2: Durham Station",1,2027,17912_shp,0,0
+2,3,t640-b7E1-sl3,"2: Brier Creek",0,2017,17916_shp,0,0
+2,3,t64E-b7F5-sl3,"2: Durham Station",1,2037,17912_shp,0,0
+2,3,t65E-b7EB-sl3,"2: Brier Creek",0,2027,17916_shp,0,0
+2,3,t66C-b7E1-sl3,"2: Durham Station",1,2017,17912_shp,0,0
+2,3,t6A4-b7F5-sl3,"2: Brier Creek",0,2037,17916_shp,0,0
+2,3,t6B2-b7EB-sl3,"2: Durham Station",1,2027,17912_shp,0,0
+2,3,t6C2-b7E1-sl3,"2: Brier Creek",0,2017,17916_shp,0,0
+2,3,t6D0-b7F5-sl3,"2: Durham Station",1,2037,17912_shp,0,0
+2,3,t708-b7EB-sl3,"2: Brier Creek",0,2027,17916_shp,0,0
+2,3,t716-b7E1-sl3,"2: Durham Station",1,2017,17912_shp,0,0
+2,3,t726-b7F5-sl3,"2: Brier Creek",0,2037,17916_shp,0,0
+2,3,t734-b7EB-sl3,"2: Durham Station",1,2027,17912_shp,0,0
+2,3,t76C-b7E1-sl3,"2: Brier Creek",0,2017,17916_shp,0,0
+2,3,t77A-b7F5-sl3,"2: Durham Station",1,2037,17912_shp,0,0
+2,3,t78A-b7EB-sl3,"2: Brier Creek",0,2027,17916_shp,0,0
+2,3,t798-b7E1-sl3,"2: Durham Station",1,2017,17912_shp,0,0
+2,3,t7D0-b7F5-sl3,"2: Brier Creek",0,2037,17909_shp,0,0
+2,3,t7DE-b7EB-sl3,"2: Durham Station",1,2027,17912_shp,0,0
+2,3,t7EE-b7E1-sl3,"2: Brier Creek",0,2017,17909_shp,0,0
+2,3,t834-b7EB-sl3,"2: Brier Creek",0,2027,17909_shp,0,0
+2,4,t20A-b7E2-sl4,"2: Durham Station",1,2018,17910_shp,0,0
+2,4,t228-b7EC-sl4,"2: Durham Station",1,2028,17910_shp,0,0
+2,4,t258-b7E2-sl4,"Brier Creek",0,2018,18077_shp,0,0
+2,4,t26E-b7F6-sl4,"2: Durham Station",1,2038,17910_shp,0,0
+2,4,t276-b7EC-sl4,"Brier Creek",0,2028,18077_shp,0,0
+2,4,t285-b7E2-sl4,"2: Durham Station",1,2018,17910_shp,0,0
+2,4,t2BC-b7F6-sl4,"Brier Creek",0,2038,18077_shp,0,0
+2,4,t2CB-b7EC-sl4,"2: Durham Station",1,2028,17910_shp,0,0
+2,4,t2DA-b7E2-sl4,"2: Brier Creek",0,2018,17914_shp,0,0
+2,4,t2E9-b7F6-sl4,"2: Durham Station",1,2038,17910_shp,0,0
+2,4,t320-b7EC-sl4,"2: Brier Creek",0,2028,17914_shp,0,0
+2,4,t32F-b7E2-sl4,"2: Durham Station",1,2018,17910_shp,0,0
+2,4,t33E-b7F6-sl4,"2: Brier Creek",0,2038,17914_shp,0,0
+2,4,t34D-b7EC-sl4,"2: Durham Station",1,2028,17910_shp,0,0
+2,4,t384-b7E2-sl4,"2: Brier Creek",0,2018,17914_shp,0,0
+2,4,t393-b7F6-sl4,"2: Durham Station",1,2038,17910_shp,0,0
+2,4,t3A2-b7EC-sl4,"2: Brier Creek",0,2028,17914_shp,0,0
+2,4,t3B1-b7E2-sl4,"2: Durham Station",1,2018,17910_shp,0,0
+2,4,t3E8-b7F6-sl4,"2: Brier Creek",0,2038,17914_shp,0,0
+2,4,t3F7-b7EC-sl4,"2: Durham Station",1,2028,17910_shp,0,0
+2,4,t406-b7E2-sl4,"2: Brier Creek",0,2018,17914_shp,0,0
+2,4,t415-b7F6-sl4,"2: Durham Station",1,2038,17910_shp,0,0
+2,4,t44C-b7EC-sl4,"2: Brier Creek",0,2028,17914_shp,0,0
+2,4,t45B-b7E2-sl4,"2: Durham Station",1,2018,17910_shp,0,0
+2,4,t46A-b7F6-sl4,"2: Brier Creek",0,2038,17914_shp,0,0
+2,4,t47B-b7EC-sl4,"2: Durham Station",1,2028,17910_shp,0,0
+2,4,t4B0-b7E2-sl4,"2: Brier Creek",0,2018,17914_shp,0,0
+2,4,t4C1-b7F6-sl4,"2: Durham Station",1,2038,17910_shp,0,0
+2,4,t4CE-b7EC-sl4,"2: Brier Creek",0,2028,17914_shp,0,0
+2,4,t4DF-b7E2-sl4,"2: Durham Station",1,2018,17910_shp,0,0
+2,4,t514-b7F6-sl4,"2: Brier Creek",0,2038,17914_shp,0,0
+2,4,t525-b7EC-sl4,"2: Durham Station",1,2028,17910_shp,0,0
+2,4,t532-b7E2-sl4,"2: Brier Creek",0,2018,17914_shp,0,0
+2,4,t543-b7F6-sl4,"2: Durham Station",1,2038,17910_shp,0,0
+2,4,t578-b7EC-sl4,"2: Brier Creek",0,2028,17914_shp,0,0
+2,4,t589-b7E2-sl4,"2: Durham Station",1,2018,17910_shp,0,0
+2,4,t596-b7F6-sl4,"2: Brier Creek",0,2038,17914_shp,0,0
+2,4,t5A7-b7EC-sl4,"2: Durham Station",1,2028,17910_shp,0,0
+2,4,t5DC-b7E2-sl4,"2: Brier Creek",0,2018,17914_shp,0,0
+2,4,t5ED-b7F6-sl4,"2: Durham Station",1,2038,17910_shp,0,0
+2,4,t5FA-b7EC-sl4,"2: Brier Creek",0,2028,17914_shp,0,0
+2,4,t60B-b7E2-sl4,"2: Durham Station",1,2018,17910_shp,0,0
+2,4,t640-b7F6-sl4,"2: Brier Creek",0,2038,17914_shp,0,0
+2,4,t651-b7EC-sl4,"2: Durham Station",1,2028,17910_shp,0,0
+2,4,t65E-b7E2-sl4,"2: Brier Creek",0,2018,17914_shp,0,0
+2,4,t66F-b7F6-sl4,"2: Durham Station",1,2038,17910_shp,0,0
+2,4,t6A4-b7EC-sl4,"2: Brier Creek",0,2028,17914_shp,0,0
+2,4,t6B5-b7E2-sl4,"2: Durham Station",1,2018,17910_shp,0,0
+2,4,t6C2-b7F6-sl4,"2: Brier Creek",0,2038,17914_shp,0,0
+2,4,t6D3-b7EC-sl4,"2: Durham Station",1,2028,17910_shp,0,0
+2,4,t708-b7E2-sl4,"2: Brier Creek",0,2018,17914_shp,0,0
+2,4,t719-b7F6-sl4,"2: Durham Station",1,2038,17910_shp,0,0
+2,4,t726-b7EC-sl4,"2: Brier Creek",0,2028,17914_shp,0,0
+2,4,t737-b7E2-sl4,"2: Durham Station",1,2018,17910_shp,0,0
+2,4,t76C-b7F6-sl4,"2: Brier Creek",0,2038,17914_shp,0,0
+2,4,t77D-b7EC-sl4,"2: Durham Station",1,2028,17910_shp,0,0
+2,4,t78A-b7E2-sl4,"2: Brier Creek",0,2018,17914_shp,0,0
+2,4,t798-b7F6-sl4,"2: Durham Station",1,2038,17910_shp,0,0
+2,4,t7D0-b7EC-sl4,"2: Brier Creek",0,2028,17914_shp,0,0
+2,4,t7DE-b7E2-sl4,"2: Durham Station",1,2018,17910_shp,0,0
+2,4,t7EE-b7F6-sl4,"2: Brier Creek",0,2038,17914_shp,0,0
+2,4,t7FC-b7EC-sl4,"2: Durham Station",1,2028,17910_shp,0,0
+2,4,t834-b7E2-sl4,"2: Brier Creek",0,2018,17914_shp,0,0
+2,4,t842-b7F6-sl4,"2: Durham Station",1,2038,17910_shp,0,0
+2,4,t852-b7EC-sl4,"2: Brier Creek",0,2028,17914_shp,0,0
+2,4,t860-b7E2-sl4,"2: Durham Station",1,2018,17910_shp,0,0
+2,4,t898-b7F6-sl4,"2: Brier Creek",0,2038,17914_shp,0,0
+2,4,t8A6-b7EC-sl4,"2: Durham Station",1,2028,17910_shp,0,0
+2,4,t8B6-b7E2-sl4,"2: Brier Creek",0,2018,17914_shp,0,0
+2,4,t8C4-b7F6-sl4,"2: Durham Station",1,2038,17910_shp,0,0
+2,4,t8FC-b7EC-sl4,"2: Brier Creek",0,2028,17913_shp,0,0
+2,4,t90A-b7E2-sl4,"2: Durham Station",1,2018,17910_shp,0,0
+2,4,t91A-b7F6-sl4,"2: Brier Creek",0,2038,17913_shp,0,0
+2,4,t960-b7E2-sl4,"2: Brier Creek",0,2018,17913_shp,0,0
+3,2,t211-bBC8-sl2,"3: Durham Station",1,3016,17824_shp,0,0
+3,2,t22F-bBD2-sl2,"3: Durham Station",1,3026,17824_shp,0,0
+3,2,t258-bBC8-sl2,"3: Glenview Station",0,3016,17821_shp,0,0
+3,2,t275-bBC8-sl2,"3: Durham Station",1,3016,17824_shp,0,0
+3,2,t276-bBD2-sl2,"3: Glenview Station",0,3026,17821_shp,0,0
+3,2,t287-bBDC-sl2,"Durham Station",1,3036,18278_shp,0,0
+3,2,t293-bBD2-sl2,"3: Durham Station",1,3026,17824_shp,0,0
+3,2,t2BC-bBC8-sl2,"3: Glenview Station",0,3016,17821_shp,0,0
+3,2,t2C6-bBDC-sl2,"3: Glenview Station",0,3036,17821_shp,0,0
+3,2,t2CD-bBE6-sl2,"Durham Station",1,3046,18278_shp,0,0
+3,2,t2D9-bBC8-sl2,"3: Durham Station",1,3016,17824_shp,0,0
+3,2,t2DA-bBD2-sl2,"3: Glenview Station",0,3026,17821_shp,0,0
+3,2,t2E3-bBDC-sl2,"3: Durham Station",1,3036,17824_shp,0,0
+3,2,t2E4-bBE6-sl2,"3: Glenview Station",0,3046,17821_shp,0,0
+3,2,t2F7-bBD2-sl2,"3: Durham Station",1,3026,17824_shp,0,0
+3,2,t320-bBC8-sl2,"3: Glenview Station",0,3016,17821_shp,0,0
+3,2,t329-bBE6-sl2,"3: Durham Station",1,3046,17824_shp,0,0
+3,2,t32A-bBDC-sl2,"3: Glenview Station",0,3036,17821_shp,0,0
+3,2,t33D-bBC8-sl2,"3: Durham Station",1,3016,17824_shp,0,0
+3,2,t33E-bBD2-sl2,"3: Glenview Station",0,3026,17821_shp,0,0
+3,2,t347-bBDC-sl2,"3: Durham Station",1,3036,17824_shp,0,0
+3,2,t348-bBE6-sl2,"3: Glenview Station",0,3046,17821_shp,0,0
+3,2,t35B-bBD2-sl2,"3: Durham Station",1,3026,17824_shp,0,0
+3,2,t384-bBC8-sl2,"3: Glenview Station",0,3016,17821_shp,0,0
+3,2,t38D-bBE6-sl2,"3: Durham Station",1,3046,17824_shp,0,0
+3,2,t38E-bBDC-sl2,"3: Glenview Station",0,3036,17821_shp,0,0
+3,2,t3A1-bBC8-sl2,"3: Durham Station",1,3016,17824_shp,0,0
+3,2,t3A2-bBD2-sl2,"3: Glenview Station",0,3026,17821_shp,0,0
+3,2,t3AB-bBDC-sl2,"3: Durham Station",1,3036,17824_shp,0,0
+3,2,t3AC-bBE6-sl2,"3: Glenview Station",0,3046,17821_shp,0,0
+3,2,t3BF-bBD2-sl2,"3: Durham Station",1,3026,17824_shp,0,0
+3,2,t3E8-bBC8-sl2,"3: Glenview Station",0,3016,17821_shp,0,0
+3,2,t3F1-bBE6-sl2,"3: Durham Station",1,3046,17824_shp,0,0
+3,2,t3F2-bBDC-sl2,"3: Glenview Station",0,3036,17821_shp,0,0
+3,2,t405-bBC8-sl2,"3: Durham Station",1,3016,17824_shp,0,0
+3,2,t406-bBD2-sl2,"3: Glenview Station",0,3026,17821_shp,0,0
+3,2,t40F-bBDC-sl2,"3: Durham Station",1,3036,17824_shp,0,0
+3,2,t410-bBE6-sl2,"3: Glenview Station",0,3046,17821_shp,0,0
+3,2,t423-bBD2-sl2,"3: Durham Station",1,3026,17824_shp,0,0
+3,2,t44C-bBC8-sl2,"3: Glenview Station",0,3016,17821_shp,0,0
+3,2,t455-bBE6-sl2,"3: Durham Station",1,3046,17824_shp,0,0
+3,2,t456-bBDC-sl2,"3: Glenview Station",0,3036,17821_shp,0,0
+3,2,t469-bBC8-sl2,"3: Durham Station",1,3016,17824_shp,0,0
+3,2,t46A-bBD2-sl2,"3: Glenview Station",0,3026,17821_shp,0,0
+3,2,t473-bBDC-sl2,"3: Durham Station",1,3036,17824_shp,0,0
+3,2,t474-bBE6-sl2,"3: Glenview Station",0,3046,17821_shp,0,0
+3,2,t487-bBD2-sl2,"3: Durham Station",1,3026,17824_shp,0,0
+3,2,t4B0-bBC8-sl2,"3: Glenview Station",0,3016,17821_shp,0,0
+3,2,t4B9-bBE6-sl2,"3: Durham Station",1,3046,17824_shp,0,0
+3,2,t4BA-bBDC-sl2,"3: Glenview Station",0,3036,17821_shp,0,0
+3,2,t4CD-bBC8-sl2,"3: Durham Station",1,3016,17824_shp,0,0
+3,2,t4CE-bBD2-sl2,"3: Glenview Station",0,3026,17821_shp,0,0
+3,2,t4D7-bBF0-sl2,"3: Durham Station",1,3056,17824_shp,0,0
+3,2,t4D8-bBE6-sl2,"3: Glenview Station",0,3046,17821_shp,0,0
+3,2,t4EB-bBD2-sl2,"3: Durham Station",1,3026,17824_shp,0,0
+3,2,t514-bBC8-sl2,"3: Glenview Station",0,3016,17821_shp,0,0
+3,2,t51D-bBFA-sl2,"3: Durham Station",1,3066,17824_shp,0,0
+3,2,t51E-bBF0-sl2,"3: Glenview Station",0,3056,17821_shp,0,0
+3,2,t531-bBC8-sl2,"3: Durham Station",1,3016,17824_shp,0,0
+3,2,t532-bBD2-sl2,"3: Glenview Station",0,3026,17821_shp,0,0
+3,2,t53B-bBF0-sl2,"3: Durham Station",1,3056,17824_shp,0,0
+3,2,t53C-bBFA-sl2,"3: Glenview Station",0,3066,17821_shp,0,0
+3,2,t54F-bBD2-sl2,"3: Durham Station",1,3026,17824_shp,0,0
+3,2,t578-bBC8-sl2,"3: Glenview Station",0,3016,17821_shp,0,0
+3,2,t581-bBFA-sl2,"3: Durham Station",1,3066,17824_shp,0,0
+3,2,t582-bBF0-sl2,"3: Glenview Station",0,3056,17821_shp,0,0
+3,2,t595-bBC8-sl2,"3: Durham Station",1,3016,17824_shp,0,0
+3,2,t596-bBD2-sl2,"3: Glenview Station",0,3026,17821_shp,0,0
+3,2,t59F-bBF0-sl2,"3: Durham Station",1,3056,17824_shp,0,0
+3,2,t5A0-bBFA-sl2,"3: Glenview Station",0,3066,17821_shp,0,0
+3,2,t5B3-bBD2-sl2,"3: Durham Station",1,3026,17824_shp,0,0
+3,2,t5DC-bBC8-sl2,"3: Glenview Station",0,3016,17821_shp,0,0
+3,2,t5E5-bBFA-sl2,"3: Durham Station",1,3066,17824_shp,0,0
+3,2,t5E6-bBF0-sl2,"3: Glenview Station",0,3056,17821_shp,0,0
+3,2,t5F9-bBC8-sl2,"3: Durham Station",1,3016,17824_shp,0,0
+3,2,t5FA-bBD2-sl2,"3: Glenview Station",0,3026,17821_shp,0,0
+3,2,t603-bBF0-sl2,"3: Durham Station",1,3056,17824_shp,0,0
+3,2,t604-bBFA-sl2,"3: Glenview Station",0,3066,17821_shp,0,0
+3,2,t617-bBD2-sl2,"3: Durham Station",1,3026,17824_shp,0,0
+3,2,t640-bBC8-sl2,"3: Glenview Station",0,3016,17821_shp,0,0
+3,2,t649-bBFA-sl2,"3: Durham Station",1,3066,17824_shp,0,0
+3,2,t64A-bBF0-sl2,"3: Glenview Station",0,3056,17821_shp,0,0
+3,2,t65D-bBC8-sl2,"3: Durham Station",1,3016,17824_shp,0,0
+3,2,t65E-bBD2-sl2,"3: Glenview Station",0,3026,17821_shp,0,0
+3,2,t667-bBF0-sl2,"3: Durham Station",1,3056,17824_shp,0,0
+3,2,t668-bBFA-sl2,"3: Glenview Station",0,3066,17821_shp,0,0
+3,2,t67B-bBD2-sl2,"3: Durham Station",1,3026,17824_shp,0,0
+3,2,t6A4-bBC8-sl2,"3: Glenview Station",0,3016,17821_shp,0,0
+3,2,t6AD-bBFA-sl2,"3: Durham Station",1,3066,17824_shp,0,0
+3,2,t6AE-bBF0-sl2,"3: Glenview Station",0,3056,17821_shp,0,0
+3,2,t6C1-bBC8-sl2,"3: Durham Station",1,3016,17824_shp,0,0
+3,2,t6C2-bBD2-sl2,"3: Glenview Station",0,3026,17821_shp,0,0
+3,2,t6CB-bBF0-sl2,"3: Durham Station",1,3056,17824_shp,0,0
+3,2,t6CC-bBFA-sl2,"3: Glenview Station",0,3066,17821_shp,0,0
+3,2,t6DF-bBD2-sl2,"3: Durham Station",1,3026,17824_shp,0,0
+3,2,t708-bBC8-sl2,"3: Glenview Station",0,3016,17821_shp,0,0
+3,2,t711-bBFA-sl2,"3: Durham Station",1,3066,17824_shp,0,0
+3,2,t71C-bBF0-sl2,"3: Glenview Station",0,3056,17866_shp,0,0
+3,2,t725-bBC8-sl2,"3: Durham Station",1,3016,17824_shp,0,0
+3,2,t726-bBD2-sl2,"3: Glenview Station",0,3026,17821_shp,0,0
+3,2,t735-bBFA-sl2,"3: Glenview Station",0,3066,17866_shp,0,0
+3,2,t743-bBD2-sl2,"3: Durham Station",1,3026,17824_shp,0,0
+3,2,t76C-bBC8-sl2,"3: Glenview Station",0,3016,17821_shp,0,0
+3,2,t78A-bBD2-sl2,"3: Glenview Station",0,3026,17821_shp,0,0
+3,2,t78C-bBC8-sl2,"3: Durham Station",1,3016,17824_shp,0,0
+3,2,t7D0-bBC8-sl2,"3: Glenview Station",0,3016,17821_shp,0,0
+3,2,t7D2-bBD2-sl2,"3: Durham Station",1,3026,17824_shp,0,0
+3,2,t7EE-bBD2-sl2,"3: Glenview Station",0,3026,17821_shp,0,0
+3,2,t7F0-bBC8-sl2,"3: Durham Station",1,3016,17824_shp,0,0
+3,2,t834-bBC8-sl2,"3: Glenview Station",0,3016,17821_shp,0,0
+3,2,t836-bBD2-sl2,"3: Durham Station",1,3026,17824_shp,0,0
+3,2,t852-bBD2-sl2,"3: Glenview Station",0,3026,17821_shp,0,0
+3,2,t854-bBC8-sl2,"3: Durham Station",1,3016,17824_shp,0,0
+3,2,t898-bBC8-sl2,"3: Glenview Station",0,3016,17821_shp,0,0
+3,2,t89A-bBD2-sl2,"3: Durham Station",1,3026,17824_shp,0,0
+3,2,t8B6-bBD2-sl2,"3: Glenview Station",0,3026,17821_shp,0,0
+3,2,t8B8-bBC8-sl2,"3: Durham Station",1,3016,17824_shp,0,0
+3,2,t8FC-bBC8-sl2,"3: Glenview Station",0,3016,17821_shp,0,0
+3,2,t8FE-bBD2-sl2,"3: Durham Station",1,3026,17824_shp,0,0
+3,2,t91A-bBD2-sl2,"3: Glenview Station",0,3026,17866_shp,0,0
+3,2,t91C-bBC8-sl2,"3: Durham Station",1,3016,17824_shp,0,0
+3,2,t960-bBC8-sl2,"3: Glenview Station",0,3016,17866_shp,0,0
+3,3,t278-bBC9-sl3,"3: Durham Station",1,3017,17825_shp,0,0
+3,3,t2BC-bBC9-sl3,"3: Glenview Station",0,3017,17822_shp,0,0
+3,3,t2BE-bBD3-sl3,"3: Durham Station",1,3027,17825_shp,0,0
+3,3,t2DA-bBD3-sl3,"3: Glenview Station",0,3027,17822_shp,0,0
+3,3,t2DC-bBC9-sl3,"3: Durham Station",1,3017,17825_shp,0,0
+3,3,t320-bBC9-sl3,"3: Glenview Station",0,3017,17822_shp,0,0
+3,3,t322-bBD3-sl3,"3: Durham Station",1,3027,17825_shp,0,0
+3,3,t33E-bBD3-sl3,"3: Glenview Station",0,3027,17822_shp,0,0
+3,3,t340-bBC9-sl3,"3: Durham Station",1,3017,17825_shp,0,0
+3,3,t384-bBC9-sl3,"3: Glenview Station",0,3017,17822_shp,0,0
+3,3,t386-bBD3-sl3,"3: Durham Station",1,3027,17825_shp,0,0
+3,3,t3A2-bBD3-sl3,"3: Glenview Station",0,3027,17822_shp,0,0
+3,3,t3A4-bBC9-sl3,"3: Durham Station",1,3017,17825_shp,0,0
+3,3,t3E8-bBC9-sl3,"3: Glenview Station",0,3017,17822_shp,0,0
+3,3,t3EA-bBD3-sl3,"3: Durham Station",1,3027,17825_shp,0,0
+3,3,t406-bBD3-sl3,"3: Glenview Station",0,3027,17822_shp,0,0
+3,3,t408-bBC9-sl3,"3: Durham Station",1,3017,17825_shp,0,0
+3,3,t44C-bBC9-sl3,"3: Glenview Station",0,3017,17822_shp,0,0
+3,3,t44E-bBD3-sl3,"3: Durham Station",1,3027,17825_shp,0,0
+3,3,t46A-bBD3-sl3,"3: Glenview Station",0,3027,17822_shp,0,0
+3,3,t46C-bBC9-sl3,"3: Durham Station",1,3017,17825_shp,0,0
+3,3,t4B0-bBC9-sl3,"3: Glenview Station",0,3017,17822_shp,0,0
+3,3,t4B2-bBD3-sl3,"3: Durham Station",1,3027,17825_shp,0,0
+3,3,t4CE-bBD3-sl3,"3: Glenview Station",0,3027,17822_shp,0,0
+3,3,t4D0-bBDD-sl3,"3: Durham Station",1,3037,17825_shp,0,0
+3,3,t514-bBDD-sl3,"3: Glenview Station",0,3037,17822_shp,0,0
+3,3,t516-bBD3-sl3,"3: Durham Station",1,3027,17825_shp,0,0
+3,3,t532-bBD3-sl3,"3: Glenview Station",0,3027,17822_shp,0,0
+3,3,t534-bBDD-sl3,"3: Durham Station",1,3037,17825_shp,0,0
+3,3,t578-bBDD-sl3,"3: Glenview Station",0,3037,17822_shp,0,0
+3,3,t57A-bBD3-sl3,"3: Durham Station",1,3027,17825_shp,0,0
+3,3,t596-bBD3-sl3,"3: Glenview Station",0,3027,17822_shp,0,0
+3,3,t598-bBDD-sl3,"3: Durham Station",1,3037,17825_shp,0,0
+3,3,t5DC-bBDD-sl3,"3: Glenview Station",0,3037,17822_shp,0,0
+3,3,t5DE-bBE7-sl3,"3: Durham Station",1,3047,17825_shp,0,0
+3,3,t5FA-bBE7-sl3,"3: Glenview Station",0,3047,17822_shp,0,0
+3,3,t5FC-bBDD-sl3,"3: Durham Station",1,3037,17825_shp,0,0
+3,3,t640-bBDD-sl3,"3: Glenview Station",0,3037,17822_shp,0,0
+3,3,t642-bBE7-sl3,"3: Durham Station",1,3047,17825_shp,0,0
+3,3,t65E-bBE7-sl3,"3: Glenview Station",0,3047,17822_shp,0,0
+3,3,t660-bBDD-sl3,"3: Durham Station",1,3037,17825_shp,0,0
+3,3,t6A4-bBDD-sl3,"3: Glenview Station",0,3037,17822_shp,0,0
+3,3,t6A6-bBE7-sl3,"3: Durham Station",1,3047,17825_shp,0,0
+3,3,t6C2-bBE7-sl3,"3: Glenview Station",0,3047,17822_shp,0,0
+3,3,t6C4-bBDD-sl3,"3: Durham Station",1,3037,17825_shp,0,0
+3,3,t708-bBDD-sl3,"3: Glenview Station",0,3037,17822_shp,0,0
+3,3,t70A-bBE7-sl3,"3: Durham Station",1,3047,17825_shp,0,0
+3,3,t726-bBE7-sl3,"3: Glenview Station",0,3047,17822_shp,0,0
+3,3,t728-bBF1-sl3,"3: Durham Station",1,3057,17825_shp,0,0
+3,3,t76C-bBF1-sl3,"3: Glenview Station",0,3057,17822_shp,0,0
+3,3,t76E-bBE7-sl3,"3: Durham Station",1,3047,17825_shp,0,0
+3,3,t78A-bBE7-sl3,"3: Glenview Station",0,3047,17822_shp,0,0
+3,3,t78C-bBF1-sl3,"3: Durham Station",1,3057,17825_shp,0,0
+3,3,t7D0-bBF1-sl3,"3: Glenview Station",0,3057,17822_shp,0,0
+3,3,t7D2-bBE7-sl3,"3: Durham Station",1,3047,17825_shp,0,0
+3,3,t7EE-bBE7-sl3,"3: Glenview Station",0,3047,17867_shp,0,0
+3,3,t7F0-bBF1-sl3,"3: Durham Station",1,3057,17825_shp,0,0
+3,3,t834-bBF1-sl3,"3: Glenview Station",0,3057,17867_shp,0,0
+3,4,t211-bBCA-sl4,"3: Durham Station",1,3018,17823_shp,0,0
+3,4,t22F-bBD4-sl4,"3: Durham Station",1,3028,17823_shp,0,0
+3,4,t258-bBCA-sl4,"3: Glenview Station",0,3018,17820_shp,0,0
+3,4,t275-bBCA-sl4,"3: Durham Station",1,3018,17823_shp,0,0
+3,4,t276-bBD4-sl4,"3: Glenview Station",0,3028,17820_shp,0,0
+3,4,t287-bBDE-sl4,"Durham Station",1,3038,18078_shp,0,0
+3,4,t293-bBD4-sl4,"3: Durham Station",1,3028,17823_shp,0,0
+3,4,t2BC-bBCA-sl4,"3: Glenview Station",0,3018,17820_shp,0,0
+3,4,t2C6-bBDE-sl4,"3: Glenview Station",0,3038,17820_shp,0,0
+3,4,t2CD-bBE8-sl4,"Durham Station",1,3048,18078_shp,0,0
+3,4,t2D9-bBCA-sl4,"3: Durham Station",1,3018,17823_shp,0,0
+3,4,t2DA-bBD4-sl4,"3: Glenview Station",0,3028,17820_shp,0,0
+3,4,t2E3-bBDE-sl4,"3: Durham Station",1,3038,17823_shp,0,0
+3,4,t2E4-bBE8-sl4,"3: Glenview Station",0,3048,17820_shp,0,0
+3,4,t2F7-bBD4-sl4,"3: Durham Station",1,3028,17823_shp,0,0
+3,4,t320-bBCA-sl4,"3: Glenview Station",0,3018,17820_shp,0,0
+3,4,t329-bBE8-sl4,"3: Durham Station",1,3048,17823_shp,0,0
+3,4,t32A-bBDE-sl4,"3: Glenview Station",0,3038,17820_shp,0,0
+3,4,t33D-bBCA-sl4,"3: Durham Station",1,3018,17823_shp,0,0
+3,4,t33E-bBD4-sl4,"3: Glenview Station",0,3028,17820_shp,0,0
+3,4,t347-bBDE-sl4,"3: Durham Station",1,3038,17823_shp,0,0
+3,4,t348-bBE8-sl4,"3: Glenview Station",0,3048,17820_shp,0,0
+3,4,t35B-bBD4-sl4,"3: Durham Station",1,3028,17823_shp,0,0
+3,4,t384-bBCA-sl4,"3: Glenview Station",0,3018,17820_shp,0,0
+3,4,t38D-bBE8-sl4,"3: Durham Station",1,3048,17823_shp,0,0
+3,4,t38E-bBDE-sl4,"3: Glenview Station",0,3038,17820_shp,0,0
+3,4,t3A1-bBCA-sl4,"3: Durham Station",1,3018,17823_shp,0,0
+3,4,t3A2-bBD4-sl4,"3: Glenview Station",0,3028,17820_shp,0,0
+3,4,t3AB-bBDE-sl4,"3: Durham Station",1,3038,17823_shp,0,0
+3,4,t3AC-bBE8-sl4,"3: Glenview Station",0,3048,17820_shp,0,0
+3,4,t3BF-bBD4-sl4,"3: Durham Station",1,3028,17823_shp,0,0
+3,4,t3E8-bBCA-sl4,"3: Glenview Station",0,3018,17820_shp,0,0
+3,4,t3F1-bBE8-sl4,"3: Durham Station",1,3048,17823_shp,0,0
+3,4,t3F2-bBDE-sl4,"3: Glenview Station",0,3038,17820_shp,0,0
+3,4,t405-bBCA-sl4,"3: Durham Station",1,3018,17823_shp,0,0
+3,4,t406-bBD4-sl4,"3: Glenview Station",0,3028,17820_shp,0,0
+3,4,t40F-bBDE-sl4,"3: Durham Station",1,3038,17823_shp,0,0
+3,4,t410-bBE8-sl4,"3: Glenview Station",0,3048,17820_shp,0,0
+3,4,t423-bBD4-sl4,"3: Durham Station",1,3028,17823_shp,0,0
+3,4,t44C-bBCA-sl4,"3: Glenview Station",0,3018,17820_shp,0,0
+3,4,t455-bBE8-sl4,"3: Durham Station",1,3048,17823_shp,0,0
+3,4,t456-bBDE-sl4,"3: Glenview Station",0,3038,17820_shp,0,0
+3,4,t469-bBCA-sl4,"3: Durham Station",1,3018,17823_shp,0,0
+3,4,t46A-bBD4-sl4,"3: Glenview Station",0,3028,17820_shp,0,0
+3,4,t473-bBDE-sl4,"3: Durham Station",1,3038,17823_shp,0,0
+3,4,t474-bBE8-sl4,"3: Glenview Station",0,3048,17820_shp,0,0
+3,4,t487-bBD4-sl4,"3: Durham Station",1,3028,17823_shp,0,0
+3,4,t4B0-bBCA-sl4,"3: Glenview Station",0,3018,17820_shp,0,0
+3,4,t4B9-bBE8-sl4,"3: Durham Station",1,3048,17823_shp,0,0
+3,4,t4BA-bBDE-sl4,"3: Glenview Station",0,3038,17820_shp,0,0
+3,4,t4CD-bBCA-sl4,"3: Durham Station",1,3018,17823_shp,0,0
+3,4,t4CE-bBD4-sl4,"3: Glenview Station",0,3028,17820_shp,0,0
+3,4,t4D7-bBF2-sl4,"3: Durham Station",1,3058,17823_shp,0,0
+3,4,t4D8-bBE8-sl4,"3: Glenview Station",0,3048,17820_shp,0,0
+3,4,t4EB-bBD4-sl4,"3: Durham Station",1,3028,17823_shp,0,0
+3,4,t514-bBCA-sl4,"3: Glenview Station",0,3018,17820_shp,0,0
+3,4,t51D-bBFC-sl4,"3: Durham Station",1,3068,17823_shp,0,0
+3,4,t51E-bBF2-sl4,"3: Glenview Station",0,3058,17820_shp,0,0
+3,4,t531-bBCA-sl4,"3: Durham Station",1,3018,17823_shp,0,0
+3,4,t532-bBD4-sl4,"3: Glenview Station",0,3028,17820_shp,0,0
+3,4,t53B-bBF2-sl4,"3: Durham Station",1,3058,17823_shp,0,0
+3,4,t53C-bBFC-sl4,"3: Glenview Station",0,3068,17820_shp,0,0
+3,4,t54F-bBD4-sl4,"3: Durham Station",1,3028,17823_shp,0,0
+3,4,t578-bBCA-sl4,"3: Glenview Station",0,3018,17820_shp,0,0
+3,4,t581-bBFC-sl4,"3: Durham Station",1,3068,17823_shp,0,0
+3,4,t582-bBF2-sl4,"3: Glenview Station",0,3058,17820_shp,0,0
+3,4,t595-bBCA-sl4,"3: Durham Station",1,3018,17823_shp,0,0
+3,4,t596-bBD4-sl4,"3: Glenview Station",0,3028,17820_shp,0,0
+3,4,t59F-bBF2-sl4,"3: Durham Station",1,3058,17823_shp,0,0
+3,4,t5A0-bBFC-sl4,"3: Glenview Station",0,3068,17820_shp,0,0
+3,4,t5B3-bBD4-sl4,"3: Durham Station",1,3028,17823_shp,0,0
+3,4,t5DC-bBCA-sl4,"3: Glenview Station",0,3018,17820_shp,0,0
+3,4,t5E5-bBFC-sl4,"3: Durham Station",1,3068,17823_shp,0,0
+3,4,t5E6-bBF2-sl4,"3: Glenview Station",0,3058,17820_shp,0,0
+3,4,t5F9-bBCA-sl4,"3: Durham Station",1,3018,17823_shp,0,0
+3,4,t5FA-bBD4-sl4,"3: Glenview Station",0,3028,17820_shp,0,0
+3,4,t603-bBF2-sl4,"3: Durham Station",1,3058,17823_shp,0,0
+3,4,t604-bBFC-sl4,"3: Glenview Station",0,3068,17820_shp,0,0
+3,4,t617-bBD4-sl4,"3: Durham Station",1,3028,17823_shp,0,0
+3,4,t640-bBCA-sl4,"3: Glenview Station",0,3018,17820_shp,0,0
+3,4,t649-bBFC-sl4,"3: Durham Station",1,3068,17823_shp,0,0
+3,4,t64A-bBF2-sl4,"3: Glenview Station",0,3058,17820_shp,0,0
+3,4,t65D-bBCA-sl4,"3: Durham Station",1,3018,17823_shp,0,0
+3,4,t65E-bBD4-sl4,"3: Glenview Station",0,3028,17820_shp,0,0
+3,4,t667-bBF2-sl4,"3: Durham Station",1,3058,17823_shp,0,0
+3,4,t668-bBFC-sl4,"3: Glenview Station",0,3068,17820_shp,0,0
+3,4,t67B-bBD4-sl4,"3: Durham Station",1,3028,17823_shp,0,0
+3,4,t6A4-bBCA-sl4,"3: Glenview Station",0,3018,17820_shp,0,0
+3,4,t6AD-bBFC-sl4,"3: Durham Station",1,3068,17823_shp,0,0
+3,4,t6AE-bBF2-sl4,"3: Glenview Station",0,3058,17820_shp,0,0
+3,4,t6C1-bBCA-sl4,"3: Durham Station",1,3018,17823_shp,0,0
+3,4,t6C2-bBD4-sl4,"3: Glenview Station",0,3028,17820_shp,0,0
+3,4,t6CB-bBF2-sl4,"3: Durham Station",1,3058,17823_shp,0,0
+3,4,t6CC-bBFC-sl4,"3: Glenview Station",0,3068,17820_shp,0,0
+3,4,t6DF-bBD4-sl4,"3: Durham Station",1,3028,17823_shp,0,0
+3,4,t708-bBCA-sl4,"3: Glenview Station",0,3018,17820_shp,0,0
+3,4,t711-bBFC-sl4,"3: Durham Station",1,3068,17823_shp,0,0
+3,4,t71C-bBF2-sl4,"3: Glenview Station",0,3058,17865_shp,0,0
+3,4,t725-bBCA-sl4,"3: Durham Station",1,3018,17823_shp,0,0
+3,4,t726-bBD4-sl4,"3: Glenview Station",0,3028,17820_shp,0,0
+3,4,t735-bBFC-sl4,"3: Glenview Station",0,3068,17865_shp,0,0
+3,4,t743-bBD4-sl4,"3: Durham Station",1,3028,17823_shp,0,0
+3,4,t76C-bBCA-sl4,"3: Glenview Station",0,3018,17820_shp,0,0
+3,4,t78A-bBD4-sl4,"3: Glenview Station",0,3028,17820_shp,0,0
+3,4,t78C-bBCA-sl4,"3: Durham Station",1,3018,17823_shp,0,0
+3,4,t7D0-bBCA-sl4,"3: Glenview Station",0,3018,17820_shp,0,0
+3,4,t7D2-bBD4-sl4,"3: Durham Station",1,3028,17823_shp,0,0
+3,4,t7EE-bBD4-sl4,"3: Glenview Station",0,3028,17820_shp,0,0
+3,4,t7F0-bBCA-sl4,"3: Durham Station",1,3018,17823_shp,0,0
+3,4,t834-bBCA-sl4,"3: Glenview Station",0,3018,17820_shp,0,0
+3,4,t836-bBD4-sl4,"3: Durham Station",1,3028,17823_shp,0,0
+3,4,t852-bBD4-sl4,"3: Glenview Station",0,3028,17820_shp,0,0
+3,4,t854-bBCA-sl4,"3: Durham Station",1,3018,17823_shp,0,0
+3,4,t898-bBCA-sl4,"3: Glenview Station",0,3018,17820_shp,0,0
+3,4,t89A-bBD4-sl4,"3: Durham Station",1,3028,17823_shp,0,0
+3,4,t8B6-bBD4-sl4,"3: Glenview Station",0,3028,17820_shp,0,0
+3,4,t8B8-bBCA-sl4,"3: Durham Station",1,3018,17823_shp,0,0
+3,4,t8FC-bBCA-sl4,"3: Glenview Station",0,3018,17820_shp,0,0
+3,4,t8FE-bBD4-sl4,"3: Durham Station",1,3028,17823_shp,0,0
+3,4,t91A-bBD4-sl4,"3: Glenview Station",0,3028,17865_shp,0,0
+3,4,t91C-bBCA-sl4,"3: Durham Station",1,3018,17823_shp,0,0
+3,4,t960-bBCA-sl4,"3: Glenview Station",0,3018,17865_shp,0,0
+4,2,t1FE-bFB0-sl2,"4: Durham Station",1,4016,18109_shp,0,0
+4,2,t21C-bFBA-sl2,"4: Durham Station",1,4026,18109_shp,0,0
+4,2,t258-bFB0-sl2,"4: Tom Wilkinson",0,4016,18106_shp,0,0
+4,2,t262-bFC4-sl2,"4: Durham Station",1,4036,18109_shp,0,0
+4,2,t276-bFBA-sl2,"4: Tom Wilkinson",0,4026,18106_shp,0,0
+4,2,t280-bFB0-sl2,"4: Durham Station",1,4016,18109_shp,0,0
+4,2,t2BC-bFC4-sl2,"4: Tom Wilkinson",0,4036,18106_shp,0,0
+4,2,t2C6-bFBA-sl2,"4: Durham Station",1,4026,18109_shp,0,0
+4,2,t2DA-bFB0-sl2,"4: Tom Wilkinson",0,4016,18106_shp,0,0
+4,2,t2E4-bFC4-sl2,"4: Durham Station",1,4036,18109_shp,0,0
+4,2,t320-bFBA-sl2,"4: Tom Wilkinson",0,4026,18106_shp,0,0
+4,2,t32A-bFB0-sl2,"4: Durham Station",1,4016,18109_shp,0,0
+4,2,t33E-bFC4-sl2,"4: Tom Wilkinson",0,4036,18106_shp,0,0
+4,2,t348-bFBA-sl2,"4: Durham Station",1,4026,18109_shp,0,0
+4,2,t384-bFB0-sl2,"4: Tom Wilkinson",0,4016,18106_shp,0,0
+4,2,t38E-bFC4-sl2,"4: Durham Station",1,4036,18109_shp,0,0
+4,2,t3A2-bFBA-sl2,"4: Tom Wilkinson",0,4026,18106_shp,0,0
+4,2,t3AC-bFB0-sl2,"4: Durham Station",1,4016,18109_shp,0,0
+4,2,t3E8-bFC4-sl2,"4: Tom Wilkinson",0,4036,18106_shp,0,0
+4,2,t3F2-bFBA-sl2,"4: Durham Station",1,4026,18109_shp,0,0
+4,2,t406-bFB0-sl2,"4: Tom Wilkinson",0,4016,18106_shp,0,0
+4,2,t410-bFC4-sl2,"4: Durham Station",1,4036,18109_shp,0,0
+4,2,t44C-bFBA-sl2,"4: Tom Wilkinson",0,4026,18106_shp,0,0
+4,2,t456-bFB0-sl2,"4: Durham Station",1,4016,18109_shp,0,0
+4,2,t46A-bFC4-sl2,"4: Tom Wilkinson",0,4036,18106_shp,0,0
+4,2,t474-bFBA-sl2,"4: Durham Station",1,4026,18109_shp,0,0
+4,2,t4B0-bFB0-sl2,"4: Tom Wilkinson",0,4016,18106_shp,0,0
+4,2,t4BA-bFC4-sl2,"4: Durham Station",1,4036,18109_shp,0,0
+4,2,t4CE-bFBA-sl2,"4: Tom Wilkinson",0,4026,18106_shp,0,0
+4,2,t4D8-bFB0-sl2,"4: Durham Station",1,4016,18109_shp,0,0
+4,2,t514-bFC4-sl2,"4: Tom Wilkinson",0,4036,18106_shp,0,0
+4,2,t51E-bFBA-sl2,"4: Durham Station",1,4026,18109_shp,0,0
+4,2,t52F-bFCE-sl2,"4: Durham Station",1,4046,18280_shp,0,0
+4,2,t532-bFB0-sl2,"4: Tom Wilkinson",0,4016,18106_shp,0,0
+4,2,t53C-bFC4-sl2,"4: Durham Station",1,4036,18109_shp,0,0
+4,2,t54D-bFD8-sl2,"4: Durham Station",1,4056,18280_shp,0,0
+4,2,t578-bFBA-sl2,"4: Tom Wilkinson",0,4026,18106_shp,0,0
+4,2,t582-bFB0-sl2,"4: Durham Station",1,4016,18109_shp,0,0
+4,2,t593-bFE2-sl2,"4: Durham Station",1,4066,18280_shp,0,0
+4,2,t596-bFC4-sl2,"4: Tom Wilkinson",0,4036,18106_shp,0,0
+4,2,t5A7-bFBA-sl2,"4: Durham Station",1,4026,18109_shp,0,0
+4,2,t5A7-bFCE-sl2,"4: Durham Station",1,4046,18280_shp,0,0
+4,2,t5DC-bFB0-sl2,"4: Tom Wilkinson",0,4016,18106_shp,0,0
+4,2,t5ED-bFC4-sl2,"4: Durham Station",1,4036,18109_shp,0,0
+4,2,t5ED-bFD8-sl2,"4: Durham Station",1,4056,18280_shp,0,0
+4,2,t5FA-bFCE-sl2,"4: Tom Wilkinson",0,4046,18106_shp,0,0
+4,2,t60B-bFB0-sl2,"4: Durham Station",1,4016,18109_shp,0,0
+4,2,t60B-bFE2-sl2,"4: Durham Station",1,4066,18280_shp,0,0
+4,2,t640-bFD8-sl2,"4: Tom Wilkinson",0,4056,18106_shp,0,0
+4,2,t651-bFBA-sl2,"4: Durham Station",1,4026,18280_shp,0,0
+4,2,t651-bFCE-sl2,"4: Durham Station",1,4046,18109_shp,0,0
+4,2,t65E-bFE2-sl2,"4: Tom Wilkinson",0,4066,18106_shp,0,0
+4,2,t66F-bFC4-sl2,"4: Durham Station",1,4036,18280_shp,0,0
+4,2,t66F-bFD8-sl2,"4: Durham Station",1,4056,18109_shp,0,0
+4,2,t6A4-bFBA-sl2,"4: Tom Wilkinson",0,4026,18106_shp,0,0
+4,2,t6B5-bFB0-sl2,"4: Durham Station",1,4016,18280_shp,0,0
+4,2,t6B5-bFE2-sl2,"4: Durham Station",1,4066,18109_shp,0,0
+4,2,t6C2-bFC4-sl2,"4: Tom Wilkinson",0,4036,18106_shp,0,0
+4,2,t6D3-bFBA-sl2,"4: Durham Station",1,4026,18109_shp,0,0
+4,2,t6D3-bFCE-sl2,"4: Durham Station",1,4046,18280_shp,0,0
+4,2,t708-bFB0-sl2,"4: Tom Wilkinson",0,4016,18106_shp,0,0
+4,2,t712-bFC4-sl2,"4: Durham Station",1,4036,18109_shp,0,0
+4,2,t726-bFCE-sl2,"4: Tom Wilkinson",0,4046,18106_shp,0,0
+4,2,t730-bFB0-sl2,"4: Durham Station",1,4016,18109_shp,0,0
+4,2,t76C-bFC4-sl2,"4: Tom Wilkinson",0,4036,18106_shp,0,0
+4,2,t776-bFCE-sl2,"4: Durham Station",1,4046,18109_shp,0,0
+4,2,t78A-bFB0-sl2,"4: Tom Wilkinson",0,4016,18106_shp,0,0
+4,2,t794-bFC4-sl2,"4: Durham Station",1,4036,18109_shp,0,0
+4,2,t7D0-bFCE-sl2,"4: Tom Wilkinson",0,4046,18106_shp,0,0
+4,2,t7DA-bFB0-sl2,"4: Durham Station",1,4016,18109_shp,0,0
+4,2,t7EE-bFC4-sl2,"4: Tom Wilkinson",0,4036,18106_shp,0,0
+4,2,t7F8-bFCE-sl2,"4: Durham Station",1,4046,18109_shp,0,0
+4,2,t834-bFB0-sl2,"4: Tom Wilkinson",0,4016,18106_shp,0,0
+4,2,t83E-bFC4-sl2,"4: Durham Station",1,4036,18109_shp,0,0
+4,2,t852-bFCE-sl2,"4: Tom Wilkinson",0,4046,18106_shp,0,0
+4,2,t85C-bFB0-sl2,"4: Durham Station",1,4016,18109_shp,0,0
+4,2,t898-bFC4-sl2,"4: Tom Wilkinson",0,4036,18106_shp,0,0
+4,2,t8A2-bFCE-sl2,"4: Durham Station",1,4046,18109_shp,0,0
+4,2,t8B6-bFB0-sl2,"4: Tom Wilkinson",0,4016,18106_shp,0,0
+4,2,t8C0-bFC4-sl2,"4: Durham Station",1,4036,18109_shp,0,0
+4,2,t8FC-bFCE-sl2,"4: Tom Wilkinson",0,4046,18112_shp,0,0
+4,2,t906-bFB0-sl2,"4: Durham Station",1,4016,18109_shp,0,0
+4,2,t91A-bFC4-sl2,"4: Tom Wilkinson",0,4036,18112_shp,0,0
+4,2,t960-bFB0-sl2,"4: Tom Wilkinson",0,4016,18106_shp,0,0
+4,3,t262-bFB1-sl3,"4: Durham Station",1,4017,18110_shp,0,0
+4,3,t280-bFBB-sl3,"4: Durham Station",1,4027,18110_shp,0,0
+4,3,t2BC-bFB1-sl3,"4: Tom Wilkinson",0,4017,18107_shp,0,0
+4,3,t2C6-bFC5-sl3,"4: Durham Station",1,4037,18110_shp,0,0
+4,3,t2DA-bFBB-sl3,"4: Tom Wilkinson",0,4027,18107_shp,0,0
+4,3,t2E4-bFB1-sl3,"4: Durham Station",1,4017,18110_shp,0,0
+4,3,t320-bFC5-sl3,"4: Tom Wilkinson",0,4037,18107_shp,0,0
+4,3,t32A-bFBB-sl3,"4: Durham Station",1,4027,18110_shp,0,0
+4,3,t33E-bFB1-sl3,"4: Tom Wilkinson",0,4017,18107_shp,0,0
+4,3,t348-bFC5-sl3,"4: Durham Station",1,4037,18110_shp,0,0
+4,3,t384-bFBB-sl3,"4: Tom Wilkinson",0,4027,18107_shp,0,0
+4,3,t38E-bFB1-sl3,"4: Durham Station",1,4017,18110_shp,0,0
+4,3,t3A2-bFC5-sl3,"4: Tom Wilkinson",0,4037,18107_shp,0,0
+4,3,t3AC-bFBB-sl3,"4: Durham Station",1,4027,18110_shp,0,0
+4,3,t3E8-bFB1-sl3,"4: Tom Wilkinson",0,4017,18107_shp,0,0
+4,3,t3F2-bFC5-sl3,"4: Durham Station",1,4037,18110_shp,0,0
+4,3,t406-bFBB-sl3,"4: Tom Wilkinson",0,4027,18107_shp,0,0
+4,3,t410-bFB1-sl3,"4: Durham Station",1,4017,18110_shp,0,0
+4,3,t44C-bFC5-sl3,"4: Tom Wilkinson",0,4037,18107_shp,0,0
+4,3,t456-bFBB-sl3,"4: Durham Station",1,4027,18110_shp,0,0
+4,3,t46A-bFB1-sl3,"4: Tom Wilkinson",0,4017,18107_shp,0,0
+4,3,t474-bFC5-sl3,"4: Durham Station",1,4037,18110_shp,0,0
+4,3,t4B0-bFBB-sl3,"4: Tom Wilkinson",0,4027,18107_shp,0,0
+4,3,t4BA-bFB1-sl3,"4: Durham Station",1,4017,18110_shp,0,0
+4,3,t4CE-bFC5-sl3,"4: Tom Wilkinson",0,4037,18107_shp,0,0
+4,3,t4D8-bFBB-sl3,"4: Durham Station",1,4027,18110_shp,0,0
+4,3,t514-bFB1-sl3,"4: Tom Wilkinson",0,4017,18107_shp,0,0
+4,3,t51E-bFC5-sl3,"4: Durham Station",1,4037,18110_shp,0,0
+4,3,t532-bFBB-sl3,"4: Tom Wilkinson",0,4027,18107_shp,0,0
+4,3,t53C-bFB1-sl3,"4: Durham Station",1,4017,18110_shp,0,0
+4,3,t578-bFC5-sl3,"4: Tom Wilkinson",0,4037,18107_shp,0,0
+4,3,t582-bFBB-sl3,"4: Durham Station",1,4027,18110_shp,0,0
+4,3,t596-bFB1-sl3,"4: Tom Wilkinson",0,4017,18107_shp,0,0
+4,3,t5A0-bFC5-sl3,"4: Durham Station",1,4037,18110_shp,0,0
+4,3,t5DC-bFBB-sl3,"4: Tom Wilkinson",0,4027,18107_shp,0,0
+4,3,t5E6-bFB1-sl3,"4: Durham Station",1,4017,18110_shp,0,0
+4,3,t5FA-bFC5-sl3,"4: Tom Wilkinson",0,4037,18107_shp,0,0
+4,3,t604-bFBB-sl3,"4: Durham Station",1,4027,18110_shp,0,0
+4,3,t640-bFB1-sl3,"4: Tom Wilkinson",0,4017,18107_shp,0,0
+4,3,t64A-bFC5-sl3,"4: Durham Station",1,4037,18110_shp,0,0
+4,3,t65E-bFBB-sl3,"4: Tom Wilkinson",0,4027,18107_shp,0,0
+4,3,t668-bFB1-sl3,"4: Durham Station",1,4017,18110_shp,0,0
+4,3,t6A4-bFC5-sl3,"4: Tom Wilkinson",0,4037,18107_shp,0,0
+4,3,t6AE-bFBB-sl3,"4: Durham Station",1,4027,18110_shp,0,0
+4,3,t6C2-bFB1-sl3,"4: Tom Wilkinson",0,4017,18107_shp,0,0
+4,3,t6CC-bFC5-sl3,"4: Durham Station",1,4037,18110_shp,0,0
+4,3,t708-bFBB-sl3,"4: Tom Wilkinson",0,4027,18107_shp,0,0
+4,3,t712-bFB1-sl3,"4: Durham Station",1,4017,18110_shp,0,0
+4,3,t726-bFC5-sl3,"4: Tom Wilkinson",0,4037,18107_shp,0,0
+4,3,t730-bFBB-sl3,"4: Durham Station",1,4027,18110_shp,0,0
+4,3,t76C-bFB1-sl3,"4: Tom Wilkinson",0,4017,18107_shp,0,0
+4,3,t776-bFC5-sl3,"4: Durham Station",1,4037,18110_shp,0,0
+4,3,t78A-bFBB-sl3,"4: Tom Wilkinson",0,4027,18107_shp,0,0
+4,3,t794-bFB1-sl3,"4: Durham Station",1,4017,18110_shp,0,0
+4,3,t7D0-bFC5-sl3,"4: Tom Wilkinson",0,4037,18113_shp,0,0
+4,3,t7DA-bFBB-sl3,"4: Durham Station",1,4027,18110_shp,0,0
+4,3,t7EE-bFB1-sl3,"4: Tom Wilkinson",0,4017,18113_shp,0,0
+4,3,t834-bFBB-sl3,"4: Tom Wilkinson",0,4027,18107_shp,0,0
+4,4,t1FE-bFB2-sl4,"4: Durham Station",1,4018,18108_shp,0,0
+4,4,t21C-bFBC-sl4,"4: Durham Station",1,4028,18108_shp,0,0
+4,4,t258-bFB2-sl4,"4: Tom Wilkinson",0,4018,18105_shp,0,0
+4,4,t262-bFC6-sl4,"4: Durham Station",1,4038,18108_shp,0,0
+4,4,t276-bFBC-sl4,"4: Tom Wilkinson",0,4028,18105_shp,0,0
+4,4,t280-bFB2-sl4,"4: Durham Station",1,4018,18108_shp,0,0
+4,4,t2BC-bFC6-sl4,"4: Tom Wilkinson",0,4038,18105_shp,0,0
+4,4,t2C6-bFBC-sl4,"4: Durham Station",1,4028,18108_shp,0,0
+4,4,t2DA-bFB2-sl4,"4: Tom Wilkinson",0,4018,18105_shp,0,0
+4,4,t2E4-bFC6-sl4,"4: Durham Station",1,4038,18108_shp,0,0
+4,4,t320-bFBC-sl4,"4: Tom Wilkinson",0,4028,18105_shp,0,0
+4,4,t32A-bFB2-sl4,"4: Durham Station",1,4018,18108_shp,0,0
+4,4,t33E-bFC6-sl4,"4: Tom Wilkinson",0,4038,18105_shp,0,0
+4,4,t348-bFBC-sl4,"4: Durham Station",1,4028,18108_shp,0,0
+4,4,t384-bFB2-sl4,"4: Tom Wilkinson",0,4018,18105_shp,0,0
+4,4,t38E-bFC6-sl4,"4: Durham Station",1,4038,18108_shp,0,0
+4,4,t3A2-bFBC-sl4,"4: Tom Wilkinson",0,4028,18105_shp,0,0
+4,4,t3AC-bFB2-sl4,"4: Durham Station",1,4018,18108_shp,0,0
+4,4,t3E8-bFC6-sl4,"4: Tom Wilkinson",0,4038,18105_shp,0,0
+4,4,t3F2-bFBC-sl4,"4: Durham Station",1,4028,18108_shp,0,0
+4,4,t406-bFB2-sl4,"4: Tom Wilkinson",0,4018,18105_shp,0,0
+4,4,t410-bFC6-sl4,"4: Durham Station",1,4038,18108_shp,0,0
+4,4,t44C-bFBC-sl4,"4: Tom Wilkinson",0,4028,18105_shp,0,0
+4,4,t456-bFB2-sl4,"4: Durham Station",1,4018,18108_shp,0,0
+4,4,t46A-bFC6-sl4,"4: Tom Wilkinson",0,4038,18105_shp,0,0
+4,4,t474-bFBC-sl4,"4: Durham Station",1,4028,18108_shp,0,0
+4,4,t4B0-bFB2-sl4,"4: Tom Wilkinson",0,4018,18105_shp,0,0
+4,4,t4BA-bFC6-sl4,"4: Durham Station",1,4038,18108_shp,0,0
+4,4,t4CE-bFBC-sl4,"4: Tom Wilkinson",0,4028,18105_shp,0,0
+4,4,t4D8-bFB2-sl4,"4: Durham Station",1,4018,18108_shp,0,0
+4,4,t514-bFC6-sl4,"4: Tom Wilkinson",0,4038,18105_shp,0,0
+4,4,t51E-bFBC-sl4,"4: Durham Station",1,4028,18108_shp,0,0
+4,4,t52F-bFD0-sl4,"4: Durham Station",1,4048,18080_shp,0,0
+4,4,t532-bFB2-sl4,"4: Tom Wilkinson",0,4018,18105_shp,0,0
+4,4,t53C-bFC6-sl4,"4: Durham Station",1,4038,18108_shp,0,0
+4,4,t54D-bFDA-sl4,"4: Durham Station",1,4058,18080_shp,0,0
+4,4,t578-bFBC-sl4,"4: Tom Wilkinson",0,4028,18105_shp,0,0
+4,4,t582-bFB2-sl4,"4: Durham Station",1,4018,18108_shp,0,0
+4,4,t593-bFE4-sl4,"4: Durham Station",1,4068,18080_shp,0,0
+4,4,t596-bFC6-sl4,"4: Tom Wilkinson",0,4038,18105_shp,0,0
+4,4,t5A7-bFBC-sl4,"4: Durham Station",1,4028,18108_shp,0,0
+4,4,t5A7-bFD0-sl4,"4: Durham Station",1,4048,18080_shp,0,0
+4,4,t5DC-bFB2-sl4,"4: Tom Wilkinson",0,4018,18105_shp,0,0
+4,4,t5ED-bFC6-sl4,"4: Durham Station",1,4038,18108_shp,0,0
+4,4,t5ED-bFDA-sl4,"4: Durham Station",1,4058,18080_shp,0,0
+4,4,t5FA-bFD0-sl4,"4: Tom Wilkinson",0,4048,18105_shp,0,0
+4,4,t60B-bFB2-sl4,"4: Durham Station",1,4018,18108_shp,0,0
+4,4,t60B-bFE4-sl4,"4: Durham Station",1,4068,18080_shp,0,0
+4,4,t640-bFDA-sl4,"4: Tom Wilkinson",0,4058,18105_shp,0,0
+4,4,t651-bFBC-sl4,"4: Durham Station",1,4028,18080_shp,0,0
+4,4,t651-bFD0-sl4,"4: Durham Station",1,4048,18108_shp,0,0
+4,4,t65E-bFE4-sl4,"4: Tom Wilkinson",0,4068,18105_shp,0,0
+4,4,t66F-bFC6-sl4,"4: Durham Station",1,4038,18080_shp,0,0
+4,4,t66F-bFDA-sl4,"4: Durham Station",1,4058,18108_shp,0,0
+4,4,t6A4-bFBC-sl4,"4: Tom Wilkinson",0,4028,18105_shp,0,0
+4,4,t6B5-bFB2-sl4,"4: Durham Station",1,4018,18080_shp,0,0
+4,4,t6B5-bFE4-sl4,"4: Durham Station",1,4068,18108_shp,0,0
+4,4,t6C2-bFC6-sl4,"4: Tom Wilkinson",0,4038,18105_shp,0,0
+4,4,t6D3-bFBC-sl4,"4: Durham Station",1,4028,18108_shp,0,0
+4,4,t6D3-bFD0-sl4,"4: Durham Station",1,4048,18080_shp,0,0
+4,4,t708-bFB2-sl4,"4: Tom Wilkinson",0,4018,18105_shp,0,0
+4,4,t712-bFC6-sl4,"4: Durham Station",1,4038,18108_shp,0,0
+4,4,t726-bFD0-sl4,"4: Tom Wilkinson",0,4048,18105_shp,0,0
+4,4,t730-bFB2-sl4,"4: Durham Station",1,4018,18108_shp,0,0
+4,4,t76C-bFC6-sl4,"4: Tom Wilkinson",0,4038,18105_shp,0,0
+4,4,t776-bFD0-sl4,"4: Durham Station",1,4048,18108_shp,0,0
+4,4,t78A-bFB2-sl4,"4: Tom Wilkinson",0,4018,18105_shp,0,0
+4,4,t794-bFC6-sl4,"4: Durham Station",1,4038,18108_shp,0,0
+4,4,t7D0-bFD0-sl4,"4: Tom Wilkinson",0,4048,18105_shp,0,0
+4,4,t7DA-bFB2-sl4,"4: Durham Station",1,4018,18108_shp,0,0
+4,4,t7EE-bFC6-sl4,"4: Tom Wilkinson",0,4038,18105_shp,0,0
+4,4,t7F8-bFD0-sl4,"4: Durham Station",1,4048,18108_shp,0,0
+4,4,t834-bFB2-sl4,"4: Tom Wilkinson",0,4018,18105_shp,0,0
+4,4,t83E-bFC6-sl4,"4: Durham Station",1,4038,18108_shp,0,0
+4,4,t852-bFD0-sl4,"4: Tom Wilkinson",0,4048,18105_shp,0,0
+4,4,t85C-bFB2-sl4,"4: Durham Station",1,4018,18108_shp,0,0
+4,4,t898-bFC6-sl4,"4: Tom Wilkinson",0,4038,18105_shp,0,0
+4,4,t8A2-bFD0-sl4,"4: Durham Station",1,4048,18108_shp,0,0
+4,4,t8B6-bFB2-sl4,"4: Tom Wilkinson",0,4018,18105_shp,0,0
+4,4,t8C0-bFC6-sl4,"4: Durham Station",1,4038,18108_shp,0,0
+4,4,t8FC-bFD0-sl4,"4: Tom Wilkinson",0,4048,18111_shp,0,0
+4,4,t906-bFB2-sl4,"4: Durham Station",1,4018,18108_shp,0,0
+4,4,t91A-bFC6-sl4,"4: Tom Wilkinson",0,4038,18111_shp,0,0
+4,4,t960-bFB2-sl4,"4: Tom Wilkinson",0,4018,18105_shp,0,0
+412,2,t587-bFCE-sl2,"4: Seven Oaks",0,4046,18279_shp,0,0
+412,2,t5A5-bFD8-sl2,"4: Seven Oaks",0,4056,18279_shp,0,0
+412,2,t5EB-bFE2-sl2,"4: Seven Oaks",0,4066,18279_shp,0,0
+412,2,t609-bFBA-sl2,"4: Seven Oaks",0,4026,18279_shp,0,0
+412,2,t64F-bFC4-sl2,"4: Seven Oaks",0,4036,18279_shp,0,0
+412,2,t66D-bFB0-sl2,"4: Seven Oaks",0,4016,18279_shp,0,0
+412,2,t6B3-bFCE-sl2,"4: Seven Oaks",0,4046,18279_shp,0,0
+412,2,t6D1-bFD8-sl2,"4: Seven Oaks",0,4056,18279_shp,0,0
+412,2,t717-bFE2-sl2,"4: Seven Oaks",0,4066,18279_shp,0,0
+412,2,t735-bFBA-sl2,"4: Seven Oaks",0,4026,18279_shp,0,0
+412,4,t587-bFD0-sl4,"4: Seven Oaks",0,4048,18079_shp,0,0
+412,4,t5A5-bFDA-sl4,"4: Seven Oaks",0,4058,18079_shp,0,0
+412,4,t5EB-bFE4-sl4,"4: Seven Oaks",0,4068,18079_shp,0,0
+412,4,t609-bFBC-sl4,"4: Seven Oaks",0,4028,18079_shp,0,0
+412,4,t64F-bFC6-sl4,"4: Seven Oaks",0,4038,18079_shp,0,0
+412,4,t66D-bFB2-sl4,"4: Seven Oaks",0,4018,18079_shp,0,0
+412,4,t6B3-bFD0-sl4,"4: Seven Oaks",0,4048,18079_shp,0,0
+412,4,t6D1-bFDA-sl4,"4: Seven Oaks",0,4058,18079_shp,0,0
+412,4,t717-bFE4-sl4,"4: Seven Oaks",0,4068,18079_shp,0,0
+412,4,t735-bFBC-sl4,"4: Seven Oaks",0,4028,18079_shp,0,0
+5,2,t205-b1398-sl2,"5: Durham Station",1,5016,17795_shp,0,0
+5,2,t223-b13A2-sl2,"5: Durham Station",1,5026,17795_shp,0,0
+5,2,t258-b1398-sl2,"5: Southpoint",0,5016,17792_shp,0,0
+5,2,t269-b13AC-sl2,"5: Durham Station",1,5036,17795_shp,0,0
+5,2,t276-b13A2-sl2,"5: Southpoint",0,5026,17792_shp,0,0
+5,2,t278-b1398-sl2,"5: Durham Station",1,5016,17795_shp,0,0
+5,2,t287-b13B6-sl2,"5: Durham Station",1,5046,17795_shp,0,0
+5,2,t2BC-b13AC-sl2,"5: Southpoint",0,5036,17792_shp,0,0
+5,2,t2BE-b13A2-sl2,"5: Durham Station",1,5026,17795_shp,0,0
+5,2,t2CB-b1398-sl2,"5: Southpoint",0,5016,17792_shp,0,0
+5,2,t2CD-b13C0-sl2,"5: Durham Station",1,5056,17795_shp,0,0
+5,2,t2DA-b13B6-sl2,"5: Southpoint",0,5046,17792_shp,0,0
+5,2,t2DC-b13AC-sl2,"5: Durham Station",1,5036,17795_shp,0,0
+5,2,t2E9-b13A2-sl2,"5: Southpoint",0,5026,17792_shp,0,0
+5,2,t2EB-b1398-sl2,"5: Durham Station",1,5016,17795_shp,0,0
+5,2,t320-b13C0-sl2,"5: Southpoint",0,5056,17792_shp,0,0
+5,2,t322-b13B6-sl2,"5: Durham Station",1,5046,17795_shp,0,0
+5,2,t32F-b13AC-sl2,"5: Southpoint",0,5036,17792_shp,0,0
+5,2,t331-b13A2-sl2,"5: Durham Station",1,5026,17795_shp,0,0
+5,2,t33E-b1398-sl2,"5: Southpoint",0,5016,17792_shp,0,0
+5,2,t340-b13C0-sl2,"5: Durham Station",1,5056,17795_shp,0,0
+5,2,t34D-b13B6-sl2,"5: Southpoint",0,5046,17792_shp,0,0
+5,2,t34F-b13AC-sl2,"5: Durham Station",1,5036,17795_shp,0,0
+5,2,t35A-b13CA-sl2,"5: Durham Station",1,5066,17795_shp,0,0
+5,2,t384-b13A2-sl2,"5: Southpoint",0,5026,17792_shp,0,0
+5,2,t38C-b1398-sl2,"5: Durham Station",1,5016,17795_shp,0,0
+5,2,t393-b13C0-sl2,"5: Southpoint",0,5056,17792_shp,0,0
+5,2,t39B-b13B6-sl2,"5: Durham Station",1,5046,17795_shp,0,0
+5,2,t3A2-b13AC-sl2,"5: Southpoint",0,5036,17792_shp,0,0
+5,2,t3AA-b13A2-sl2,"5: Durham Station",1,5026,17795_shp,0,0
+5,2,t3B1-b13CA-sl2,"5: Southpoint",0,5066,17792_shp,0,0
+5,2,t3B9-b13C0-sl2,"5: Durham Station",1,5056,17795_shp,0,0
+5,2,t3E8-b1398-sl2,"5: Southpoint",0,5016,17792_shp,0,0
+5,2,t3F0-b13AC-sl2,"5: Durham Station",1,5036,17795_shp,0,0
+5,2,t3F7-b13B6-sl2,"5: Southpoint",0,5046,17792_shp,0,0
+5,2,t3FF-b13CA-sl2,"5: Durham Station",1,5066,17795_shp,0,0
+5,2,t406-b13A2-sl2,"5: Southpoint",0,5026,17792_shp,0,0
+5,2,t40E-b1398-sl2,"5: Durham Station",1,5016,17795_shp,0,0
+5,2,t415-b13C0-sl2,"5: Southpoint",0,5056,17792_shp,0,0
+5,2,t41D-b13B6-sl2,"5: Durham Station",1,5046,17795_shp,0,0
+5,2,t44C-b13AC-sl2,"5: Southpoint",0,5036,17792_shp,0,0
+5,2,t454-b13A2-sl2,"5: Durham Station",1,5026,17795_shp,0,0
+5,2,t45B-b13CA-sl2,"5: Southpoint",0,5066,17792_shp,0,0
+5,2,t463-b13C0-sl2,"5: Durham Station",1,5056,17795_shp,0,0
+5,2,t46A-b1398-sl2,"5: Southpoint",0,5016,17792_shp,0,0
+5,2,t472-b13AC-sl2,"5: Durham Station",1,5036,17795_shp,0,0
+5,2,t479-b13B6-sl2,"5: Southpoint",0,5046,17792_shp,0,0
+5,2,t481-b13CA-sl2,"5: Durham Station",1,5066,17795_shp,0,0
+5,2,t4B0-b13A2-sl2,"5: Southpoint",0,5026,17792_shp,0,0
+5,2,t4B8-b1398-sl2,"5: Durham Station",1,5016,17795_shp,0,0
+5,2,t4BF-b13C0-sl2,"5: Southpoint",0,5056,17792_shp,0,0
+5,2,t4C7-b13B6-sl2,"5: Durham Station",1,5046,17795_shp,0,0
+5,2,t4CE-b13AC-sl2,"5: Southpoint",0,5036,17792_shp,0,0
+5,2,t4D6-b13A2-sl2,"5: Durham Station",1,5026,17795_shp,0,0
+5,2,t4DD-b13CA-sl2,"5: Southpoint",0,5066,17792_shp,0,0
+5,2,t4E5-b13C0-sl2,"5: Durham Station",1,5056,17795_shp,0,0
+5,2,t514-b1398-sl2,"5: Southpoint",0,5016,17792_shp,0,0
+5,2,t51C-b13AC-sl2,"5: Durham Station",1,5036,17795_shp,0,0
+5,2,t523-b13B6-sl2,"5: Southpoint",0,5046,17792_shp,0,0
+5,2,t52B-b13CA-sl2,"5: Durham Station",1,5066,17795_shp,0,0
+5,2,t532-b13A2-sl2,"5: Southpoint",0,5026,17792_shp,0,0
+5,2,t53A-b1398-sl2,"5: Durham Station",1,5016,17795_shp,0,0
+5,2,t541-b13C0-sl2,"5: Southpoint",0,5056,17792_shp,0,0
+5,2,t549-b13B6-sl2,"5: Durham Station",1,5046,17795_shp,0,0
+5,2,t578-b13AC-sl2,"5: Southpoint",0,5036,17792_shp,0,0
+5,2,t580-b13A2-sl2,"5: Durham Station",1,5026,17795_shp,0,0
+5,2,t587-b13D4-sl2,"5: Southpoint",0,5076,17792_shp,0,0
+5,2,t58F-b13C0-sl2,"5: Durham Station",1,5056,17795_shp,0,0
+5,2,t596-b1398-sl2,"5: Southpoint",0,5016,17792_shp,0,0
+5,2,t59E-b13AC-sl2,"5: Durham Station",1,5036,17795_shp,0,0
+5,2,t5A5-b13B6-sl2,"5: Southpoint",0,5046,17792_shp,0,0
+5,2,t5AD-b13D4-sl2,"5: Durham Station",1,5076,17795_shp,0,0
+5,2,t5DC-b13A2-sl2,"5: Southpoint",0,5026,17792_shp,0,0
+5,2,t5E4-b1398-sl2,"5: Durham Station",1,5016,17795_shp,0,0
+5,2,t5EB-b13C0-sl2,"5: Southpoint",0,5056,17792_shp,0,0
+5,2,t5F3-b13B6-sl2,"5: Durham Station",1,5046,17795_shp,0,0
+5,2,t5FA-b13AC-sl2,"5: Southpoint",0,5036,17792_shp,0,0
+5,2,t602-b13A2-sl2,"5: Durham Station",1,5026,17795_shp,0,0
+5,2,t609-b13D4-sl2,"5: Southpoint",0,5076,17792_shp,0,0
+5,2,t611-b13C0-sl2,"5: Durham Station",1,5056,17795_shp,0,0
+5,2,t640-b1398-sl2,"5: Southpoint",0,5016,17792_shp,0,0
+5,2,t648-b13AC-sl2,"5: Durham Station",1,5036,17795_shp,0,0
+5,2,t64F-b13B6-sl2,"5: Southpoint",0,5046,17792_shp,0,0
+5,2,t657-b13D4-sl2,"5: Durham Station",1,5076,17795_shp,0,0
+5,2,t65E-b13A2-sl2,"5: Southpoint",0,5026,17792_shp,0,0
+5,2,t666-b1398-sl2,"5: Durham Station",1,5016,17795_shp,0,0
+5,2,t66D-b13C0-sl2,"5: Southpoint",0,5056,17792_shp,0,0
+5,2,t675-b13B6-sl2,"5: Durham Station",1,5046,17795_shp,0,0
+5,2,t6A4-b13AC-sl2,"5: Southpoint",0,5036,17792_shp,0,0
+5,2,t6AC-b13A2-sl2,"5: Durham Station",1,5026,17795_shp,0,0
+5,2,t6B3-b13D4-sl2,"5: Southpoint",0,5076,17792_shp,0,0
+5,2,t6BB-b13C0-sl2,"5: Durham Station",1,5056,17795_shp,0,0
+5,2,t6C2-b1398-sl2,"5: Southpoint",0,5016,17792_shp,0,0
+5,2,t6CA-b13AC-sl2,"5: Durham Station",1,5036,17795_shp,0,0
+5,2,t6D1-b13B6-sl2,"5: Southpoint",0,5046,17792_shp,0,0
+5,2,t6D9-b13D4-sl2,"5: Durham Station",1,5076,17795_shp,0,0
+5,2,t708-b13A2-sl2,"5: Southpoint",0,5026,17792_shp,0,0
+5,2,t710-b1398-sl2,"5: Durham Station",1,5016,17795_shp,0,0
+5,2,t717-b13C0-sl2,"RT 5: Southpoint",0,5056,17797_shp,0,0
+5,2,t726-b13AC-sl2,"5: Southpoint",0,5036,17792_shp,0,0
+5,2,t72E-b13A2-sl2,"5: Durham Station",1,5026,17795_shp,0,0
+5,2,t735-b13D4-sl2,"RT 5: Southpoint",0,5076,17797_shp,0,0
+5,2,t76C-b1398-sl2,"5: Southpoint",0,5016,17792_shp,0,0
+5,2,t774-b13AC-sl2,"5: Durham Station",1,5036,17795_shp,0,0
+5,2,t78A-b13A2-sl2,"5: Southpoint",0,5026,17792_shp,0,0
+5,2,t792-b1398-sl2,"5: Durham Station",1,5016,17795_shp,0,0
+5,2,t7D0-b13AC-sl2,"5: Southpoint",0,5036,17792_shp,0,0
+5,2,t7D8-b13A2-sl2,"5: Durham Station",1,5026,17795_shp,0,0
+5,2,t7EE-b1398-sl2,"5: Southpoint",0,5016,17792_shp,0,0
+5,2,t7F6-b13AC-sl2,"5: Durham Station",1,5036,17795_shp,0,0
+5,2,t834-b13A2-sl2,"5: Southpoint",0,5026,17792_shp,0,0
+5,2,t83C-b1398-sl2,"5: Durham Station",1,5016,17795_shp,0,0
+5,2,t852-b13AC-sl2,"5: Southpoint",0,5036,17792_shp,0,0
+5,2,t85A-b13A2-sl2,"5: Durham Station",1,5026,17795_shp,0,0
+5,2,t898-b1398-sl2,"5: Southpoint",0,5016,17792_shp,0,0
+5,2,t8A0-b13AC-sl2,"5: Durham Station",1,5036,17795_shp,0,0
+5,2,t8B6-b13A2-sl2,"5: Southpoint",0,5026,17792_shp,0,0
+5,2,t8BE-b1398-sl2,"5: Durham Station",1,5016,17795_shp,0,0
+5,2,t8FC-b13AC-sl2,"5: Southpoint",0,5036,18281_shp,0,0
+5,2,t904-b13A2-sl2,"5: Durham Station",1,5026,17795_shp,0,0
+5,2,t91A-b1398-sl2,"5: Southpoint",0,5016,18281_shp,0,0
+5,2,t960-b13A2-sl2,"5: Southpoint",0,5026,18281_shp,0,0
+5,3,t26C-b1399-sl3,"5: Durham Station",1,5017,17796_shp,0,0
+5,3,t28A-b13A3-sl3,"5: Durham Station",1,5027,17796_shp,0,0
+5,3,t2BC-b1399-sl3,"5: Southpoint",0,5017,17793_shp,0,0
+5,3,t2D0-b13AD-sl3,"5: Durham Station",1,5037,17796_shp,0,0
+5,3,t2DA-b13A3-sl3,"5: Southpoint",0,5027,17793_shp,0,0
+5,3,t2E2-b1399-sl3,"5: Durham Station",1,5017,17796_shp,0,0
+5,3,t320-b13AD-sl3,"5: Southpoint",0,5037,17793_shp,0,0
+5,3,t328-b13A3-sl3,"5: Durham Station",1,5027,17796_shp,0,0
+5,3,t33E-b1399-sl3,"5: Southpoint",0,5017,17793_shp,0,0
+5,3,t346-b13AD-sl3,"5: Durham Station",1,5037,17796_shp,0,0
+5,3,t384-b13A3-sl3,"5: Southpoint",0,5027,17793_shp,0,0
+5,3,t38C-b1399-sl3,"5: Durham Station",1,5017,17796_shp,0,0
+5,3,t3A2-b13AD-sl3,"5: Southpoint",0,5037,17793_shp,0,0
+5,3,t3AA-b13A3-sl3,"5: Durham Station",1,5027,17796_shp,0,0
+5,3,t3E8-b1399-sl3,"5: Southpoint",0,5017,17793_shp,0,0
+5,3,t3F0-b13AD-sl3,"5: Durham Station",1,5037,17796_shp,0,0
+5,3,t406-b13A3-sl3,"5: Southpoint",0,5027,17793_shp,0,0
+5,3,t40E-b1399-sl3,"5: Durham Station",1,5017,17796_shp,0,0
+5,3,t44C-b13AD-sl3,"5: Southpoint",0,5037,17793_shp,0,0
+5,3,t454-b13A3-sl3,"5: Durham Station",1,5027,17796_shp,0,0
+5,3,t46A-b1399-sl3,"5: Southpoint",0,5017,17793_shp,0,0
+5,3,t472-b13AD-sl3,"5: Durham Station",1,5037,17796_shp,0,0
+5,3,t4B0-b13A3-sl3,"5: Southpoint",0,5027,17793_shp,0,0
+5,3,t4B8-b1399-sl3,"5: Durham Station",1,5017,17796_shp,0,0
+5,3,t4CE-b13AD-sl3,"5: Southpoint",0,5037,17793_shp,0,0
+5,3,t4D6-b13A3-sl3,"5: Durham Station",1,5027,17796_shp,0,0
+5,3,t514-b1399-sl3,"5: Southpoint",0,5017,17793_shp,0,0
+5,3,t51C-b13AD-sl3,"5: Durham Station",1,5037,17796_shp,0,0
+5,3,t532-b13A3-sl3,"5: Southpoint",0,5027,17793_shp,0,0
+5,3,t53A-b1399-sl3,"5: Durham Station",1,5017,17796_shp,0,0
+5,3,t578-b13AD-sl3,"5: Southpoint",0,5037,17793_shp,0,0
+5,3,t580-b13A3-sl3,"5: Durham Station",1,5027,17796_shp,0,0
+5,3,t596-b1399-sl3,"5: Southpoint",0,5017,17793_shp,0,0
+5,3,t59E-b13AD-sl3,"5: Durham Station",1,5037,17796_shp,0,0
+5,3,t5DC-b13A3-sl3,"5: Southpoint",0,5027,17793_shp,0,0
+5,3,t5E4-b1399-sl3,"5: Durham Station",1,5017,17796_shp,0,0
+5,3,t5FA-b13AD-sl3,"5: Southpoint",0,5037,17793_shp,0,0
+5,3,t602-b13A3-sl3,"5: Durham Station",1,5027,17796_shp,0,0
+5,3,t640-b1399-sl3,"5: Southpoint",0,5017,17793_shp,0,0
+5,3,t648-b13AD-sl3,"5: Durham Station",1,5037,17796_shp,0,0
+5,3,t65E-b13A3-sl3,"5: Southpoint",0,5027,17793_shp,0,0
+5,3,t666-b1399-sl3,"5: Durham Station",1,5017,17796_shp,0,0
+5,3,t6A4-b13AD-sl3,"5: Southpoint",0,5037,17793_shp,0,0
+5,3,t6AC-b13A3-sl3,"5: Durham Station",1,5027,17796_shp,0,0
+5,3,t6C2-b1399-sl3,"5: Southpoint",0,5017,17793_shp,0,0
+5,3,t6CA-b13AD-sl3,"5: Durham Station",1,5037,17796_shp,0,0
+5,3,t708-b13A3-sl3,"5: Southpoint",0,5027,17793_shp,0,0
+5,3,t710-b1399-sl3,"5: Durham Station",1,5017,17796_shp,0,0
+5,3,t726-b13AD-sl3,"5: Southpoint",0,5037,17793_shp,0,0
+5,3,t72E-b13A3-sl3,"5: Durham Station",1,5027,17796_shp,0,0
+5,3,t76C-b1399-sl3,"5: Southpoint",0,5017,17793_shp,0,0
+5,3,t774-b13AD-sl3,"5: Durham Station",1,5037,17796_shp,0,0
+5,3,t78A-b13A3-sl3,"5: Southpoint",0,5027,17793_shp,0,0
+5,3,t792-b1399-sl3,"5: Durham Station",1,5017,17796_shp,0,0
+5,3,t7D0-b13AD-sl3,"RT 5: Southpoint",0,5037,17790_shp,0,0
+5,3,t7D8-b13A3-sl3,"5: Durham Station",1,5027,17796_shp,0,0
+5,3,t7EE-b1399-sl3,"RT 5: Southpoint",0,5017,17790_shp,0,0
+5,3,t834-b13A3-sl3,"RT 5: Southpoint",0,5027,17790_shp,0,0
+5,4,t205-b139A-sl4,"5: Durham Station",1,5018,17794_shp,0,0
+5,4,t223-b13A4-sl4,"5: Durham Station",1,5028,17794_shp,0,0
+5,4,t258-b139A-sl4,"5: Southpoint",0,5018,17791_shp,0,0
+5,4,t269-b13AE-sl4,"5: Durham Station",1,5038,17794_shp,0,0
+5,4,t276-b13A4-sl4,"5: Southpoint",0,5028,17791_shp,0,0
+5,4,t278-b139A-sl4,"5: Durham Station",1,5018,17794_shp,0,0
+5,4,t287-b13B8-sl4,"5: Durham Station",1,5048,17794_shp,0,0
+5,4,t2BC-b13AE-sl4,"5: Southpoint",0,5038,17791_shp,0,0
+5,4,t2BE-b13A4-sl4,"5: Durham Station",1,5028,17794_shp,0,0
+5,4,t2CB-b139A-sl4,"5: Southpoint",0,5018,17791_shp,0,0
+5,4,t2CD-b13C2-sl4,"5: Durham Station",1,5058,17794_shp,0,0
+5,4,t2DA-b13B8-sl4,"5: Southpoint",0,5048,17791_shp,0,0
+5,4,t2DC-b13AE-sl4,"5: Durham Station",1,5038,17794_shp,0,0
+5,4,t2E9-b13A4-sl4,"5: Southpoint",0,5028,17791_shp,0,0
+5,4,t2EB-b139A-sl4,"5: Durham Station",1,5018,17794_shp,0,0
+5,4,t320-b13C2-sl4,"5: Southpoint",0,5058,17791_shp,0,0
+5,4,t322-b13B8-sl4,"5: Durham Station",1,5048,17794_shp,0,0
+5,4,t32F-b13AE-sl4,"5: Southpoint",0,5038,17791_shp,0,0
+5,4,t331-b13A4-sl4,"5: Durham Station",1,5028,17794_shp,0,0
+5,4,t33E-b139A-sl4,"5: Southpoint",0,5018,17791_shp,0,0
+5,4,t340-b13C2-sl4,"5: Durham Station",1,5058,17794_shp,0,0
+5,4,t34D-b13B8-sl4,"5: Southpoint",0,5048,17791_shp,0,0
+5,4,t34F-b13AE-sl4,"5: Durham Station",1,5038,17794_shp,0,0
+5,4,t35A-b13CC-sl4,"5: Durham Station",1,5068,17794_shp,0,0
+5,4,t384-b13A4-sl4,"5: Southpoint",0,5028,17791_shp,0,0
+5,4,t38C-b139A-sl4,"5: Durham Station",1,5018,17794_shp,0,0
+5,4,t393-b13C2-sl4,"5: Southpoint",0,5058,17791_shp,0,0
+5,4,t39B-b13B8-sl4,"5: Durham Station",1,5048,17794_shp,0,0
+5,4,t3A2-b13AE-sl4,"5: Southpoint",0,5038,17791_shp,0,0
+5,4,t3AA-b13A4-sl4,"5: Durham Station",1,5028,17794_shp,0,0
+5,4,t3B1-b13CC-sl4,"5: Southpoint",0,5068,17791_shp,0,0
+5,4,t3B9-b13C2-sl4,"5: Durham Station",1,5058,17794_shp,0,0
+5,4,t3E8-b139A-sl4,"5: Southpoint",0,5018,17791_shp,0,0
+5,4,t3F0-b13AE-sl4,"5: Durham Station",1,5038,17794_shp,0,0
+5,4,t3F7-b13B8-sl4,"5: Southpoint",0,5048,17791_shp,0,0
+5,4,t3FF-b13CC-sl4,"5: Durham Station",1,5068,17794_shp,0,0
+5,4,t406-b13A4-sl4,"5: Southpoint",0,5028,17791_shp,0,0
+5,4,t40E-b139A-sl4,"5: Durham Station",1,5018,17794_shp,0,0
+5,4,t415-b13C2-sl4,"5: Southpoint",0,5058,17791_shp,0,0
+5,4,t41D-b13B8-sl4,"5: Durham Station",1,5048,17794_shp,0,0
+5,4,t44C-b13AE-sl4,"5: Southpoint",0,5038,17791_shp,0,0
+5,4,t454-b13A4-sl4,"5: Durham Station",1,5028,17794_shp,0,0
+5,4,t45B-b13CC-sl4,"5: Southpoint",0,5068,17791_shp,0,0
+5,4,t463-b13C2-sl4,"5: Durham Station",1,5058,17794_shp,0,0
+5,4,t46A-b139A-sl4,"5: Southpoint",0,5018,17791_shp,0,0
+5,4,t472-b13AE-sl4,"5: Durham Station",1,5038,17794_shp,0,0
+5,4,t479-b13B8-sl4,"5: Southpoint",0,5048,17791_shp,0,0
+5,4,t481-b13CC-sl4,"5: Durham Station",1,5068,17794_shp,0,0
+5,4,t4B0-b13A4-sl4,"5: Southpoint",0,5028,17791_shp,0,0
+5,4,t4B8-b139A-sl4,"5: Durham Station",1,5018,17794_shp,0,0
+5,4,t4BF-b13C2-sl4,"5: Southpoint",0,5058,17791_shp,0,0
+5,4,t4C7-b13B8-sl4,"5: Durham Station",1,5048,17794_shp,0,0
+5,4,t4CE-b13AE-sl4,"5: Southpoint",0,5038,17791_shp,0,0
+5,4,t4D6-b13A4-sl4,"5: Durham Station",1,5028,17794_shp,0,0
+5,4,t4DD-b13CC-sl4,"5: Southpoint",0,5068,17791_shp,0,0
+5,4,t4E5-b13C2-sl4,"5: Durham Station",1,5058,17794_shp,0,0
+5,4,t514-b139A-sl4,"5: Southpoint",0,5018,17791_shp,0,0
+5,4,t51C-b13AE-sl4,"5: Durham Station",1,5038,17794_shp,0,0
+5,4,t523-b13B8-sl4,"5: Southpoint",0,5048,17791_shp,0,0
+5,4,t52B-b13CC-sl4,"5: Durham Station",1,5068,17794_shp,0,0
+5,4,t532-b13A4-sl4,"5: Southpoint",0,5028,17791_shp,0,0
+5,4,t53A-b139A-sl4,"5: Durham Station",1,5018,17794_shp,0,0
+5,4,t541-b13C2-sl4,"5: Southpoint",0,5058,17791_shp,0,0
+5,4,t549-b13B8-sl4,"5: Durham Station",1,5048,17794_shp,0,0
+5,4,t578-b13AE-sl4,"5: Southpoint",0,5038,17791_shp,0,0
+5,4,t580-b13A4-sl4,"5: Durham Station",1,5028,17794_shp,0,0
+5,4,t587-b13CC-sl4,"5: Southpoint",0,5068,17791_shp,0,0
+5,4,t58F-b13C2-sl4,"5: Durham Station",1,5058,17794_shp,0,0
+5,4,t596-b139A-sl4,"5: Southpoint",0,5018,17791_shp,0,0
+5,4,t59E-b13AE-sl4,"5: Durham Station",1,5038,17794_shp,0,0
+5,4,t5A5-b13B8-sl4,"5: Southpoint",0,5048,17791_shp,0,0
+5,4,t5AD-b13CC-sl4,"5: Durham Station",1,5068,17794_shp,0,0
+5,4,t5DC-b13A4-sl4,"5: Southpoint",0,5028,17791_shp,0,0
+5,4,t5E4-b139A-sl4,"5: Durham Station",1,5018,17794_shp,0,0
+5,4,t5EB-b13C2-sl4,"5: Southpoint",0,5058,17791_shp,0,0
+5,4,t5F3-b13B8-sl4,"5: Durham Station",1,5048,17794_shp,0,0
+5,4,t5FA-b13AE-sl4,"5: Southpoint",0,5038,17791_shp,0,0
+5,4,t602-b13A4-sl4,"5: Durham Station",1,5028,17794_shp,0,0
+5,4,t609-b13CC-sl4,"5: Southpoint",0,5068,17791_shp,0,0
+5,4,t611-b13C2-sl4,"5: Durham Station",1,5058,17794_shp,0,0
+5,4,t640-b139A-sl4,"5: Southpoint",0,5018,17791_shp,0,0
+5,4,t648-b13AE-sl4,"5: Durham Station",1,5038,17794_shp,0,0
+5,4,t64F-b13B8-sl4,"5: Southpoint",0,5048,17791_shp,0,0
+5,4,t657-b13CC-sl4,"5: Durham Station",1,5068,17794_shp,0,0
+5,4,t65E-b13A4-sl4,"5: Southpoint",0,5028,17791_shp,0,0
+5,4,t666-b139A-sl4,"5: Durham Station",1,5018,17794_shp,0,0
+5,4,t66D-b13C2-sl4,"5: Southpoint",0,5058,17791_shp,0,0
+5,4,t675-b13B8-sl4,"5: Durham Station",1,5048,17794_shp,0,0
+5,4,t6A4-b13AE-sl4,"5: Southpoint",0,5038,17791_shp,0,0
+5,4,t6AC-b13A4-sl4,"5: Durham Station",1,5028,17794_shp,0,0
+5,4,t6B3-b13CC-sl4,"5: Southpoint",0,5068,17791_shp,0,0
+5,4,t6BB-b13C2-sl4,"5: Durham Station",1,5058,17794_shp,0,0
+5,4,t6C2-b139A-sl4,"5: Southpoint",0,5018,17791_shp,0,0
+5,4,t6CA-b13AE-sl4,"5: Durham Station",1,5038,17794_shp,0,0
+5,4,t6D1-b13B8-sl4,"5: Southpoint",0,5048,17791_shp,0,0
+5,4,t6D9-b13CC-sl4,"5: Durham Station",1,5068,17794_shp,0,0
+5,4,t708-b13A4-sl4,"5: Southpoint",0,5028,17791_shp,0,0
+5,4,t710-b139A-sl4,"5: Durham Station",1,5018,17794_shp,0,0
+5,4,t717-b13C2-sl4,"RT 5: Southpoint",0,5058,17789_shp,0,0
+5,4,t726-b13AE-sl4,"5: Southpoint",0,5038,17791_shp,0,0
+5,4,t72E-b13A4-sl4,"5: Durham Station",1,5028,17794_shp,0,0
+5,4,t735-b13CC-sl4,"RT 5: Southpoint",0,5068,17789_shp,0,0
+5,4,t76C-b139A-sl4,"5: Southpoint",0,5018,17791_shp,0,0
+5,4,t774-b13AE-sl4,"5: Durham Station",1,5038,17794_shp,0,0
+5,4,t78A-b13A4-sl4,"5: Southpoint",0,5028,17791_shp,0,0
+5,4,t792-b139A-sl4,"5: Durham Station",1,5018,17794_shp,0,0
+5,4,t7D0-b13AE-sl4,"5: Southpoint",0,5038,17791_shp,0,0
+5,4,t7D8-b13A4-sl4,"5: Durham Station",1,5028,17794_shp,0,0
+5,4,t7EE-b139A-sl4,"5: Southpoint",0,5018,17791_shp,0,0
+5,4,t7F6-b13AE-sl4,"5: Durham Station",1,5038,17794_shp,0,0
+5,4,t834-b13A4-sl4,"5: Southpoint",0,5028,17791_shp,0,0
+5,4,t83C-b139A-sl4,"5: Durham Station",1,5018,17794_shp,0,0
+5,4,t852-b13AE-sl4,"5: Southpoint",0,5038,17791_shp,0,0
+5,4,t85A-b13A4-sl4,"5: Durham Station",1,5028,17794_shp,0,0
+5,4,t898-b139A-sl4,"5: Southpoint",0,5018,17791_shp,0,0
+5,4,t8A0-b13AE-sl4,"5: Durham Station",1,5038,17794_shp,0,0
+5,4,t8B6-b13A4-sl4,"5: Southpoint",0,5028,17791_shp,0,0
+5,4,t8BE-b139A-sl4,"5: Durham Station",1,5018,17794_shp,0,0
+5,4,t8FC-b13AE-sl4,"5: Southpoint",0,5038,18081_shp,0,0
+5,4,t904-b13A4-sl4,"5: Durham Station",1,5028,17794_shp,0,0
+5,4,t91A-b139A-sl4,"5: Southpoint",0,5018,18081_shp,0,0
+5,4,t960-b13A4-sl4,"5: Southpoint",0,5028,18081_shp,0,0
+6,2,t209-b1780-sl2,"6: Duke VA - Duke Rgnl - Danube Ln",1,6016,17851_shp,0,0
+6,2,t20F-b178A-sl2,"6: Durham Station",1,6026,17853_shp,0,0
+6,2,t22D-b1794-sl2,"6: Durham Station",1,6036,17853_shp,0,0
+6,2,t258-b1780-sl2,"6: Danube Ln",0,6016,17856_shp,0,0
+6,2,t273-b179E-sl2,"6: Durham Station",1,6046,17853_shp,0,0
+6,2,t276-b178A-sl2,"6: Danube Ln",0,6026,17856_shp,0,0
+6,2,t291-b1780-sl2,"6: Durham Station",1,6016,17853_shp,0,0
+6,2,t2BC-b1794-sl2,"6: Danube Ln",0,6036,17856_shp,0,0
+6,2,t2D7-b178A-sl2,"6: Durham Station",1,6026,17853_shp,0,0
+6,2,t2DA-b179E-sl2,"6: Danube Ln",0,6046,17856_shp,0,0
+6,2,t2F5-b1794-sl2,"6: Durham Station",1,6036,17853_shp,0,0
+6,2,t320-b1780-sl2,"6: Danube Ln",0,6016,17856_shp,0,0
+6,2,t33B-b179E-sl2,"6: Durham Station",1,6046,17853_shp,0,0
+6,2,t33E-b178A-sl2,"6: Danube Ln",0,6026,17856_shp,0,0
+6,2,t359-b1780-sl2,"6: Durham Station",1,6016,17853_shp,0,0
+6,2,t384-b1794-sl2,"6: Danube Ln",0,6036,17856_shp,0,0
+6,2,t39F-b178A-sl2,"6: Durham Station",1,6026,17853_shp,0,0
+6,2,t3A2-b179E-sl2,"6: Danube Ln",0,6046,17856_shp,0,0
+6,2,t3BD-b1794-sl2,"6: Durham Station",1,6036,17853_shp,0,0
+6,2,t3E8-b1780-sl2,"6: Danube Ln",0,6016,17856_shp,0,0
+6,2,t403-b179E-sl2,"6: Durham Station",1,6046,17853_shp,0,0
+6,2,t406-b178A-sl2,"6: Danube Ln",0,6026,17856_shp,0,0
+6,2,t421-b1780-sl2,"6: Durham Station",1,6016,17853_shp,0,0
+6,2,t44C-b1794-sl2,"6: Danube Ln",0,6036,17856_shp,0,0
+6,2,t467-b178A-sl2,"6: Durham Station",1,6026,17853_shp,0,0
+6,2,t46A-b179E-sl2,"6: Danube Ln",0,6046,17856_shp,0,0
+6,2,t485-b1794-sl2,"6: Durham Station",1,6036,17853_shp,0,0
+6,2,t4B0-b1780-sl2,"6: Danube Ln",0,6016,17856_shp,0,0
+6,2,t4CB-b179E-sl2,"6: Durham Station",1,6046,17853_shp,0,0
+6,2,t4CE-b178A-sl2,"6: Danube Ln",0,6026,17856_shp,0,0
+6,2,t4E9-b1780-sl2,"6: Durham Station",1,6016,17853_shp,0,0
+6,2,t514-b1794-sl2,"6: Danube Ln",0,6036,17856_shp,0,0
+6,2,t52F-b178A-sl2,"6: Durham Station",1,6026,17853_shp,0,0
+6,2,t532-b179E-sl2,"6: Danube Ln",0,6046,17856_shp,0,0
+6,2,t54D-b1794-sl2,"6: Durham Station",1,6036,17853_shp,0,0
+6,2,t578-b1780-sl2,"6: Danube Ln",0,6016,17856_shp,0,0
+6,2,t593-b179E-sl2,"6: Durham Station",1,6046,17853_shp,0,0
+6,2,t596-b178A-sl2,"6: Danube Ln",0,6026,17856_shp,0,0
+6,2,t5B1-b1780-sl2,"6: Durham Station",1,6016,17853_shp,0,0
+6,2,t5DC-b1794-sl2,"6: Danube Ln",0,6036,17856_shp,0,0
+6,2,t5F7-b178A-sl2,"6: Durham Station",1,6026,17853_shp,0,0
+6,2,t5FA-b179E-sl2,"6: Danube Ln",0,6046,17856_shp,0,0
+6,2,t615-b1794-sl2,"6: Durham Station",1,6036,17853_shp,0,0
+6,2,t640-b1780-sl2,"6: Danube Ln",0,6016,17856_shp,0,0
+6,2,t65B-b179E-sl2,"6: Durham Station",1,6046,17853_shp,0,0
+6,2,t65E-b178A-sl2,"6: Danube Ln",0,6026,17856_shp,0,0
+6,2,t679-b1780-sl2,"6: Durham Station",1,6016,17853_shp,0,0
+6,2,t6A4-b1794-sl2,"6: Danube Ln",0,6036,17856_shp,0,0
+6,2,t6BF-b178A-sl2,"6: Durham Station",1,6026,17853_shp,0,0
+6,2,t6C2-b179E-sl2,"6: Danube Ln",0,6046,17856_shp,0,0
+6,2,t6DD-b1794-sl2,"6: Durham Station",1,6036,17853_shp,0,0
+6,2,t708-b1780-sl2,"6: Danube Ln",0,6016,17856_shp,0,0
+6,2,t723-b179E-sl2,"6: Durham Station",1,6046,17853_shp,0,0
+6,2,t726-b178A-sl2,"6: Danube Ln",0,6026,17856_shp,0,0
+6,2,t741-b1780-sl2,"6: Durham Station",1,6016,17853_shp,0,0
+6,2,t76C-b1794-sl2,"6: Danube Ln",0,6036,18282_shp,0,0
+6,2,t787-b178A-sl2,"6: Durham Station",1,6026,17853_shp,0,0
+6,2,t78A-b179E-sl2,"6: Danube Ln",0,6046,18282_shp,0,0
+6,2,t7A5-b1794-sl2,"6: Durham Station",1,6036,17853_shp,0,0
+6,2,t7D0-b1780-sl2,"6: Danube Ln",0,6016,18282_shp,0,0
+6,2,t7EB-b179E-sl2,"6: Durham Station",1,6046,17853_shp,0,0
+6,2,t7EE-b178A-sl2,"6: Danube Ln",0,6026,18282_shp,0,0
+6,2,t809-b1780-sl2,"6: Durham Station",1,6016,17853_shp,0,0
+6,2,t834-b1794-sl2,"6: Danube Ln",0,6036,18282_shp,0,0
+6,2,t84F-b178A-sl2,"6: Durham Station",1,6026,17853_shp,0,0
+6,2,t852-b179E-sl2,"6: Danube Ln",0,6046,18282_shp,0,0
+6,2,t86D-b1794-sl2,"6: Durham Station",1,6036,17853_shp,0,0
+6,2,t898-b1780-sl2,"6: Danube Ln",0,6016,18282_shp,0,0
+6,2,t8B3-b179E-sl2,"6: Durham Station",1,6046,17853_shp,0,0
+6,2,t8B6-b178A-sl2,"6: Danube Ln",0,6026,17872_shp,0,0
+6,2,t8D1-b1780-sl2,"6: Durham Station",1,6016,17853_shp,0,0
+6,2,t8FC-b1794-sl2,"6: Danube Ln",0,6036,17872_shp,0,0
+6,2,t91A-b179E-sl2,"6: Danube Ln",0,6046,17872_shp,0,0
+6,2,t960-b1780-sl2,"6: Duke VA - Duke Rgnl - Danube Ln",0,6016,17849_shp,0,0
+6,3,t26F-b1781-sl3,"6: Duke VA - Duke Rgnl - Danube Ln",1,6017,17852_shp,0,0
+6,3,t273-b178B-sl3,"6: Durham Station",1,6027,17854_shp,0,0
+6,3,t291-b1795-sl3,"6: Durham Station",1,6037,17854_shp,0,0
+6,3,t2BC-b1781-sl3,"6: Danube Ln",0,6017,17857_shp,0,0
+6,3,t2D7-b179F-sl3,"6: Durham Station",1,6047,17854_shp,0,0
+6,3,t2DA-b178B-sl3,"6: Danube Ln",0,6027,17857_shp,0,0
+6,3,t2F5-b1781-sl3,"6: Durham Station",1,6017,17854_shp,0,0
+6,3,t320-b1795-sl3,"6: Danube Ln",0,6037,17857_shp,0,0
+6,3,t33B-b178B-sl3,"6: Durham Station",1,6027,17854_shp,0,0
+6,3,t33E-b179F-sl3,"6: Danube Ln",0,6047,17857_shp,0,0
+6,3,t359-b1795-sl3,"6: Durham Station",1,6037,17854_shp,0,0
+6,3,t384-b1781-sl3,"6: Danube Ln",0,6017,17857_shp,0,0
+6,3,t39F-b179F-sl3,"6: Durham Station",1,6047,17854_shp,0,0
+6,3,t3A2-b178B-sl3,"6: Danube Ln",0,6027,17857_shp,0,0
+6,3,t3BD-b1781-sl3,"6: Durham Station",1,6017,17854_shp,0,0
+6,3,t3E8-b1795-sl3,"6: Danube Ln",0,6037,17857_shp,0,0
+6,3,t403-b178B-sl3,"6: Durham Station",1,6027,17854_shp,0,0
+6,3,t406-b179F-sl3,"6: Danube Ln",0,6047,17857_shp,0,0
+6,3,t421-b1795-sl3,"6: Durham Station",1,6037,17854_shp,0,0
+6,3,t44C-b1781-sl3,"6: Danube Ln",0,6017,17857_shp,0,0
+6,3,t467-b179F-sl3,"6: Durham Station",1,6047,17854_shp,0,0
+6,3,t46A-b178B-sl3,"6: Danube Ln",0,6027,17857_shp,0,0
+6,3,t485-b1781-sl3,"6: Durham Station",1,6017,17854_shp,0,0
+6,3,t4B0-b1795-sl3,"6: Danube Ln",0,6037,17857_shp,0,0
+6,3,t4CB-b178B-sl3,"6: Durham Station",1,6027,17854_shp,0,0
+6,3,t4CE-b179F-sl3,"6: Danube Ln",0,6047,17857_shp,0,0
+6,3,t4E9-b1795-sl3,"6: Durham Station",1,6037,17854_shp,0,0
+6,3,t514-b1781-sl3,"6: Danube Ln",0,6017,17857_shp,0,0
+6,3,t52F-b179F-sl3,"6: Durham Station",1,6047,17854_shp,0,0
+6,3,t532-b178B-sl3,"6: Danube Ln",0,6027,17857_shp,0,0
+6,3,t54D-b1781-sl3,"6: Durham Station",1,6017,17854_shp,0,0
+6,3,t578-b1795-sl3,"6: Danube Ln",0,6037,17857_shp,0,0
+6,3,t593-b178B-sl3,"6: Durham Station",1,6027,17854_shp,0,0
+6,3,t596-b179F-sl3,"6: Danube Ln",0,6047,17857_shp,0,0
+6,3,t5B1-b1795-sl3,"6: Durham Station",1,6037,17854_shp,0,0
+6,3,t5DC-b1781-sl3,"6: Danube Ln",0,6017,17857_shp,0,0
+6,3,t5F7-b179F-sl3,"6: Durham Station",1,6047,17854_shp,0,0
+6,3,t5FA-b178B-sl3,"6: Danube Ln",0,6027,17857_shp,0,0
+6,3,t615-b1781-sl3,"6: Durham Station",1,6017,17854_shp,0,0
+6,3,t640-b1795-sl3,"6: Danube Ln",0,6037,17857_shp,0,0
+6,3,t65B-b178B-sl3,"6: Durham Station",1,6027,17854_shp,0,0
+6,3,t65E-b179F-sl3,"6: Danube Ln",0,6047,17857_shp,0,0
+6,3,t679-b1795-sl3,"6: Durham Station",1,6037,17854_shp,0,0
+6,3,t6A4-b1781-sl3,"6: Danube Ln",0,6017,17857_shp,0,0
+6,3,t6BF-b179F-sl3,"6: Durham Station",1,6047,17854_shp,0,0
+6,3,t6C2-b178B-sl3,"6: Danube Ln",0,6027,17857_shp,0,0
+6,3,t6DD-b1781-sl3,"6: Durham Station",1,6017,17854_shp,0,0
+6,3,t708-b1795-sl3,"6: Danube Ln",0,6037,17857_shp,0,0
+6,3,t723-b178B-sl3,"6: Durham Station",1,6027,17854_shp,0,0
+6,3,t726-b179F-sl3,"6: Danube Ln",0,6047,17857_shp,0,0
+6,3,t741-b1795-sl3,"6: Durham Station",1,6037,17854_shp,0,0
+6,3,t76C-b1781-sl3,"6: Danube Ln",0,6017,17857_shp,0,0
+6,3,t787-b179F-sl3,"6: Durham Station",1,6047,17854_shp,0,0
+6,3,t78A-b178B-sl3,"6: Danube Ln",0,6027,17873_shp,0,0
+6,3,t7A5-b1781-sl3,"6: Durham Station",1,6017,17854_shp,0,0
+6,3,t7D0-b1795-sl3,"6: Danube Ln",0,6037,17873_shp,0,0
+6,3,t7EE-b179F-sl3,"6: Danube Ln",0,6047,17873_shp,0,0
+6,3,t834-b1781-sl3,"6: Duke VA - Duke Rgnl - Danube Ln",0,6017,17850_shp,0,0
+6,4,t209-b1782-sl4,"6: Duke VA - Duke Rgnl - Danube Ln",1,6018,17847_shp,0,0
+6,4,t20F-b178C-sl4,"6: Durham Station",1,6028,17855_shp,0,0
+6,4,t22D-b1796-sl4,"6: Durham Station",1,6038,17855_shp,0,0
+6,4,t258-b1782-sl4,"6: Danube Ln",0,6018,17858_shp,0,0
+6,4,t273-b17A0-sl4,"6: Durham Station",1,6048,17855_shp,0,0
+6,4,t276-b178C-sl4,"6: Danube Ln",0,6028,17858_shp,0,0
+6,4,t291-b1782-sl4,"6: Durham Station",1,6018,17855_shp,0,0
+6,4,t2BC-b1796-sl4,"6: Danube Ln",0,6038,17858_shp,0,0
+6,4,t2D7-b178C-sl4,"6: Durham Station",1,6028,17855_shp,0,0
+6,4,t2DA-b17A0-sl4,"6: Danube Ln",0,6048,17858_shp,0,0
+6,4,t2F5-b1796-sl4,"6: Durham Station",1,6038,17855_shp,0,0
+6,4,t320-b1782-sl4,"6: Danube Ln",0,6018,17858_shp,0,0
+6,4,t33B-b17A0-sl4,"6: Durham Station",1,6048,17855_shp,0,0
+6,4,t33E-b178C-sl4,"6: Danube Ln",0,6028,17858_shp,0,0
+6,4,t359-b1782-sl4,"6: Durham Station",1,6018,17855_shp,0,0
+6,4,t384-b1796-sl4,"6: Danube Ln",0,6038,17858_shp,0,0
+6,4,t39F-b178C-sl4,"6: Durham Station",1,6028,17855_shp,0,0
+6,4,t3A2-b17A0-sl4,"6: Danube Ln",0,6048,17858_shp,0,0
+6,4,t3BD-b1796-sl4,"6: Durham Station",1,6038,17855_shp,0,0
+6,4,t3E8-b1782-sl4,"6: Danube Ln",0,6018,17858_shp,0,0
+6,4,t403-b17A0-sl4,"6: Durham Station",1,6048,17855_shp,0,0
+6,4,t406-b178C-sl4,"6: Danube Ln",0,6028,17858_shp,0,0
+6,4,t421-b1782-sl4,"6: Durham Station",1,6018,17855_shp,0,0
+6,4,t44C-b1796-sl4,"6: Danube Ln",0,6038,17858_shp,0,0
+6,4,t467-b178C-sl4,"6: Durham Station",1,6028,17855_shp,0,0
+6,4,t46A-b17A0-sl4,"6: Danube Ln",0,6048,17858_shp,0,0
+6,4,t485-b1796-sl4,"6: Durham Station",1,6038,17855_shp,0,0
+6,4,t4B0-b1782-sl4,"6: Danube Ln",0,6018,17858_shp,0,0
+6,4,t4CB-b17A0-sl4,"6: Durham Station",1,6048,17855_shp,0,0
+6,4,t4CE-b178C-sl4,"6: Danube Ln",0,6028,17858_shp,0,0
+6,4,t4E9-b1782-sl4,"6: Durham Station",1,6018,17855_shp,0,0
+6,4,t514-b1796-sl4,"6: Danube Ln",0,6038,17858_shp,0,0
+6,4,t52F-b178C-sl4,"6: Durham Station",1,6028,17855_shp,0,0
+6,4,t532-b17A0-sl4,"6: Danube Ln",0,6048,17858_shp,0,0
+6,4,t54D-b1796-sl4,"6: Durham Station",1,6038,17855_shp,0,0
+6,4,t578-b1782-sl4,"6: Danube Ln",0,6018,17858_shp,0,0
+6,4,t593-b17A0-sl4,"6: Durham Station",1,6048,17855_shp,0,0
+6,4,t596-b178C-sl4,"6: Danube Ln",0,6028,17858_shp,0,0
+6,4,t5B1-b1782-sl4,"6: Durham Station",1,6018,17855_shp,0,0
+6,4,t5DC-b1796-sl4,"6: Danube Ln",0,6038,17858_shp,0,0
+6,4,t5F7-b178C-sl4,"6: Durham Station",1,6028,17855_shp,0,0
+6,4,t5FA-b17A0-sl4,"6: Danube Ln",0,6048,17858_shp,0,0
+6,4,t615-b1796-sl4,"6: Durham Station",1,6038,17855_shp,0,0
+6,4,t640-b1782-sl4,"6: Danube Ln",0,6018,17858_shp,0,0
+6,4,t65B-b17A0-sl4,"6: Durham Station",1,6048,17855_shp,0,0
+6,4,t65E-b178C-sl4,"6: Danube Ln",0,6028,17858_shp,0,0
+6,4,t679-b1782-sl4,"6: Durham Station",1,6018,17855_shp,0,0
+6,4,t6A4-b1796-sl4,"6: Danube Ln",0,6038,17858_shp,0,0
+6,4,t6BF-b178C-sl4,"6: Durham Station",1,6028,17855_shp,0,0
+6,4,t6C2-b17A0-sl4,"6: Danube Ln",0,6048,17858_shp,0,0
+6,4,t6DD-b1796-sl4,"6: Durham Station",1,6038,17855_shp,0,0
+6,4,t708-b1782-sl4,"6: Danube Ln",0,6018,17858_shp,0,0
+6,4,t723-b17A0-sl4,"6: Durham Station",1,6048,17855_shp,0,0
+6,4,t726-b178C-sl4,"6: Danube Ln",0,6028,17858_shp,0,0
+6,4,t741-b1782-sl4,"6: Durham Station",1,6018,17855_shp,0,0
+6,4,t76C-b1796-sl4,"6: Danube Ln",0,6038,18082_shp,0,0
+6,4,t787-b178C-sl4,"6: Durham Station",1,6028,17855_shp,0,0
+6,4,t78A-b17A0-sl4,"6: Danube Ln",0,6048,18082_shp,0,0
+6,4,t7A5-b1796-sl4,"6: Durham Station",1,6038,17855_shp,0,0
+6,4,t7D0-b1782-sl4,"6: Danube Ln",0,6018,18082_shp,0,0
+6,4,t7EB-b17A0-sl4,"6: Durham Station",1,6048,17855_shp,0,0
+6,4,t7EE-b178C-sl4,"6: Danube Ln",0,6028,18082_shp,0,0
+6,4,t809-b1782-sl4,"6: Durham Station",1,6018,17855_shp,0,0
+6,4,t834-b1796-sl4,"6: Danube Ln",0,6038,18082_shp,0,0
+6,4,t84F-b178C-sl4,"6: Durham Station",1,6028,17855_shp,0,0
+6,4,t852-b17A0-sl4,"6: Danube Ln",0,6048,18082_shp,0,0
+6,4,t86D-b1796-sl4,"6: Durham Station",1,6038,17855_shp,0,0
+6,4,t898-b1782-sl4,"6: Danube Ln",0,6018,18082_shp,0,0
+6,4,t8B3-b17A0-sl4,"6: Durham Station",1,6048,17855_shp,0,0
+6,4,t8B6-b178C-sl4,"6: Danube Ln",0,6028,17871_shp,0,0
+6,4,t8D1-b1782-sl4,"6: Durham Station",1,6018,17855_shp,0,0
+6,4,t8FC-b1796-sl4,"6: Danube Ln",0,6038,17871_shp,0,0
+6,4,t91A-b17A0-sl4,"6: Danube Ln",0,6048,17871_shp,0,0
+6,4,t960-b1782-sl4,"6: Duke VA - Duke Rgnl - Danube Ln",0,6018,17848_shp,0,0
+7,2,t219-b1B68-sl2,"7: Durham Station",1,7016,17902_shp,0,0
+7,2,t258-b1B68-sl2,"7: S. Roxboro",0,7016,17896_shp,0,0
+7,2,t25F-b1B72-sl2,"7: Durham Station",1,7026,17902_shp,0,0
+7,2,t275-b1B68-sl2,"7: Durham Station",1,7016,17899_shp,0,0
+7,2,t276-b1B72-sl2,"7: S. Roxboro",0,7026,17896_shp,0,0
+7,2,t293-b1B72-sl2,"7: Durham Station",1,7026,17899_shp,0,0
+7,2,t2BC-b1B68-sl2,"7: S. Roxboro",0,7016,17896_shp,0,0
+7,2,t2D9-b1B68-sl2,"7: Durham Station",1,7016,17899_shp,0,0
+7,2,t2DA-b1B72-sl2,"7: S. Roxboro",0,7026,17896_shp,0,0
+7,2,t2F7-b1B72-sl2,"7: Durham Station",1,7026,17899_shp,0,0
+7,2,t320-b1B68-sl2,"7: S. Roxboro",0,7016,17896_shp,0,0
+7,2,t33D-b1B68-sl2,"7: Durham Station",1,7016,17899_shp,0,0
+7,2,t33E-b1B72-sl2,"7: S. Roxboro",0,7026,17896_shp,0,0
+7,2,t35B-b1B72-sl2,"7: Durham Station",1,7026,17899_shp,0,0
+7,2,t384-b1B68-sl2,"7: S. Roxboro",0,7016,17896_shp,0,0
+7,2,t3A1-b1B68-sl2,"7: Durham Station",1,7016,17899_shp,0,0
+7,2,t3A2-b1B72-sl2,"7: S. Roxboro",0,7026,17896_shp,0,0
+7,2,t3BF-b1B72-sl2,"7: Durham Station",1,7026,17899_shp,0,0
+7,2,t3E8-b1B68-sl2,"7: S. Roxboro",0,7016,17896_shp,0,0
+7,2,t405-b1B68-sl2,"7: Durham Station",1,7016,17899_shp,0,0
+7,2,t406-b1B72-sl2,"7: S. Roxboro",0,7026,17896_shp,0,0
+7,2,t423-b1B72-sl2,"7: Durham Station",1,7026,17899_shp,0,0
+7,2,t44C-b1B68-sl2,"7: S. Roxboro",0,7016,17896_shp,0,0
+7,2,t469-b1B68-sl2,"7: Durham Station",1,7016,17899_shp,0,0
+7,2,t46A-b1B72-sl2,"7: S. Roxboro",0,7026,17896_shp,0,0
+7,2,t487-b1B72-sl2,"7: Durham Station",1,7026,17899_shp,0,0
+7,2,t4B0-b1B68-sl2,"7: S. Roxboro",0,7016,17896_shp,0,0
+7,2,t4CD-b1B68-sl2,"7: Durham Station",1,7016,17899_shp,0,0
+7,2,t4CE-b1B72-sl2,"7: S. Roxboro",0,7026,17896_shp,0,0
+7,2,t4EB-b1B72-sl2,"7: Durham Station",1,7026,17899_shp,0,0
+7,2,t514-b1B68-sl2,"7: S. Roxboro",0,7016,17896_shp,0,0
+7,2,t531-b1B68-sl2,"7: Durham Station",1,7016,17899_shp,0,0
+7,2,t532-b1B72-sl2,"7: S. Roxboro",0,7026,17896_shp,0,0
+7,2,t54F-b1B72-sl2,"7: Durham Station",1,7026,17899_shp,0,0
+7,2,t578-b1B68-sl2,"7: S. Roxboro",0,7016,17896_shp,0,0
+7,2,t595-b1B68-sl2,"7: Durham Station",1,7016,17899_shp,0,0
+7,2,t596-b1B72-sl2,"7: S. Roxboro",0,7026,17896_shp,0,0
+7,2,t5B3-b1B72-sl2,"7: Durham Station",1,7026,17899_shp,0,0
+7,2,t5DC-b1B68-sl2,"7: S. Roxboro",0,7016,17896_shp,0,0
+7,2,t5F9-b1B68-sl2,"7: Durham Station",1,7016,17899_shp,0,0
+7,2,t5FA-b1B72-sl2,"7: S. Roxboro",0,7026,17896_shp,0,0
+7,2,t617-b1B72-sl2,"7: Durham Station",1,7026,17899_shp,0,0
+7,2,t640-b1B68-sl2,"7: S. Roxboro",0,7016,17896_shp,0,0
+7,2,t65D-b1B68-sl2,"7: Durham Station",1,7016,17899_shp,0,0
+7,2,t65E-b1B72-sl2,"7: S. Roxboro",0,7026,17896_shp,0,0
+7,2,t67B-b1B72-sl2,"7: Durham Station",1,7026,17899_shp,0,0
+7,2,t6A4-b1B68-sl2,"7: S. Roxboro",0,7016,17896_shp,0,0
+7,2,t6C1-b1B68-sl2,"7: Durham Station",1,7016,17899_shp,0,0
+7,2,t6C2-b1B72-sl2,"7: S. Roxboro",0,7026,17896_shp,0,0
+7,2,t6DF-b1B72-sl2,"7: Durham Station",1,7026,17899_shp,0,0
+7,2,t708-b1B68-sl2,"7: S. Roxboro",0,7016,17896_shp,0,0
+7,2,t725-b1B68-sl2,"7: Durham Station",1,7016,17899_shp,0,0
+7,2,t726-b1B72-sl2,"7: S. Roxboro",0,7026,17896_shp,0,0
+7,2,t743-b1B72-sl2,"7: Durham Station",1,7026,17899_shp,0,0
+7,2,t76C-b1B68-sl2,"7: S. Roxboro",0,7016,17896_shp,0,0
+7,2,t789-b1B68-sl2,"7: Durham Station",1,7016,17899_shp,0,0
+7,2,t78A-b1B72-sl2,"7: S. Roxboro",0,7026,17896_shp,0,0
+7,2,t7A7-b1B72-sl2,"7: Durham Station",1,7026,17899_shp,0,0
+7,2,t7D0-b1B68-sl2,"7: S. Roxboro",0,7016,17896_shp,0,0
+7,2,t7ED-b1B68-sl2,"7: Durham Station",1,7016,17899_shp,0,0
+7,2,t7EE-b1B72-sl2,"7: S. Roxboro",0,7026,17896_shp,0,0
+7,2,t80B-b1B72-sl2,"7: Durham Station",1,7026,17899_shp,0,0
+7,2,t834-b1B68-sl2,"7: S. Roxboro",0,7016,17896_shp,0,0
+7,2,t851-b1B68-sl2,"7: Durham Station",1,7016,17899_shp,0,0
+7,2,t852-b1B72-sl2,"7: S. Roxboro",0,7026,17896_shp,0,0
+7,2,t86F-b1B72-sl2,"7: Durham Station",1,7026,17899_shp,0,0
+7,2,t898-b1B68-sl2,"7: S. Roxboro",0,7016,17896_shp,0,0
+7,2,t8B5-b1B68-sl2,"7: Durham Station",1,7016,17899_shp,0,0
+7,2,t8B6-b1B72-sl2,"7: S. Roxboro",0,7026,17896_shp,0,0
+7,2,t8D3-b1B72-sl2,"7: Durham Station",1,7026,17899_shp,0,0
+7,2,t8FC-b1B68-sl2,"7: S. Roxboro",0,7016,17896_shp,0,0
+7,2,t919-b1B68-sl2,"7: Durham Station",1,7016,17899_shp,0,0
+7,2,t91A-b1B72-sl2,"7: S. Roxboro",0,7026,17905_shp,0,0
+7,2,t960-b1B68-sl2,"7: S. Roxboro",0,7016,17896_shp,0,0
+7,3,t27D-b1B69-sl3,"7: Durham Station",1,7017,17903_shp,0,0
+7,3,t2BC-b1B69-sl3,"7: S. Roxboro",0,7017,17897_shp,0,0
+7,3,t2C3-b1B73-sl3,"7: Durham Station",1,7027,17903_shp,0,0
+7,3,t2D9-b1B69-sl3,"7: Durham Station",1,7017,17900_shp,0,0
+7,3,t2DA-b1B73-sl3,"7: S. Roxboro",0,7027,17897_shp,0,0
+7,3,t2F7-b1B73-sl3,"7: Durham Station",1,7027,17900_shp,0,0
+7,3,t320-b1B69-sl3,"7: S. Roxboro",0,7017,17897_shp,0,0
+7,3,t33D-b1B69-sl3,"7: Durham Station",1,7017,17900_shp,0,0
+7,3,t33E-b1B73-sl3,"7: S. Roxboro",0,7027,17897_shp,0,0
+7,3,t35B-b1B73-sl3,"7: Durham Station",1,7027,17900_shp,0,0
+7,3,t384-b1B69-sl3,"7: S. Roxboro",0,7017,17897_shp,0,0
+7,3,t3A1-b1B69-sl3,"7: Durham Station",1,7017,17900_shp,0,0
+7,3,t3A2-b1B73-sl3,"7: S. Roxboro",0,7027,17897_shp,0,0
+7,3,t3BF-b1B73-sl3,"7: Durham Station",1,7027,17900_shp,0,0
+7,3,t3E8-b1B69-sl3,"7: S. Roxboro",0,7017,17897_shp,0,0
+7,3,t405-b1B69-sl3,"7: Durham Station",1,7017,17900_shp,0,0
+7,3,t406-b1B73-sl3,"7: S. Roxboro",0,7027,17897_shp,0,0
+7,3,t423-b1B73-sl3,"7: Durham Station",1,7027,17900_shp,0,0
+7,3,t44C-b1B69-sl3,"7: S. Roxboro",0,7017,17897_shp,0,0
+7,3,t469-b1B69-sl3,"7: Durham Station",1,7017,17900_shp,0,0
+7,3,t46A-b1B73-sl3,"7: S. Roxboro",0,7027,17897_shp,0,0
+7,3,t487-b1B73-sl3,"7: Durham Station",1,7027,17900_shp,0,0
+7,3,t4B0-b1B69-sl3,"7: S. Roxboro",0,7017,17897_shp,0,0
+7,3,t4CD-b1B69-sl3,"7: Durham Station",1,7017,17900_shp,0,0
+7,3,t4CE-b1B73-sl3,"7: S. Roxboro",0,7027,17897_shp,0,0
+7,3,t4EB-b1B73-sl3,"7: Durham Station",1,7027,17900_shp,0,0
+7,3,t514-b1B69-sl3,"7: S. Roxboro",0,7017,17897_shp,0,0
+7,3,t531-b1B69-sl3,"7: Durham Station",1,7017,17900_shp,0,0
+7,3,t532-b1B73-sl3,"7: S. Roxboro",0,7027,17897_shp,0,0
+7,3,t54F-b1B73-sl3,"7: Durham Station",1,7027,17900_shp,0,0
+7,3,t578-b1B69-sl3,"7: S. Roxboro",0,7017,17897_shp,0,0
+7,3,t595-b1B69-sl3,"7: Durham Station",1,7017,17900_shp,0,0
+7,3,t596-b1B73-sl3,"7: S. Roxboro",0,7027,17897_shp,0,0
+7,3,t5B3-b1B73-sl3,"7: Durham Station",1,7027,17900_shp,0,0
+7,3,t5DC-b1B69-sl3,"7: S. Roxboro",0,7017,17897_shp,0,0
+7,3,t5F9-b1B69-sl3,"7: Durham Station",1,7017,17900_shp,0,0
+7,3,t5FA-b1B73-sl3,"7: S. Roxboro",0,7027,17897_shp,0,0
+7,3,t617-b1B73-sl3,"7: Durham Station",1,7027,17900_shp,0,0
+7,3,t640-b1B69-sl3,"7: S. Roxboro",0,7017,17897_shp,0,0
+7,3,t65D-b1B69-sl3,"7: Durham Station",1,7017,17900_shp,0,0
+7,3,t65E-b1B73-sl3,"7: S. Roxboro",0,7027,17897_shp,0,0
+7,3,t67B-b1B73-sl3,"7: Durham Station",1,7027,17900_shp,0,0
+7,3,t6A4-b1B69-sl3,"7: S. Roxboro",0,7017,17897_shp,0,0
+7,3,t6C1-b1B69-sl3,"7: Durham Station",1,7017,17900_shp,0,0
+7,3,t6C2-b1B73-sl3,"7: S. Roxboro",0,7027,17897_shp,0,0
+7,3,t6DF-b1B73-sl3,"7: Durham Station",1,7027,17900_shp,0,0
+7,3,t708-b1B69-sl3,"7: S. Roxboro",0,7017,17897_shp,0,0
+7,3,t725-b1B69-sl3,"7: Durham Station",1,7017,17900_shp,0,0
+7,3,t726-b1B73-sl3,"7: S. Roxboro",0,7027,17897_shp,0,0
+7,3,t743-b1B73-sl3,"7: Durham Station",1,7027,17900_shp,0,0
+7,3,t76C-b1B69-sl3,"7: S. Roxboro",0,7017,17897_shp,0,0
+7,3,t789-b1B69-sl3,"7: Durham Station",1,7017,17900_shp,0,0
+7,3,t78A-b1B73-sl3,"7: S. Roxboro",0,7027,17897_shp,0,0
+7,3,t7A7-b1B73-sl3,"7: Durham Station",1,7027,17900_shp,0,0
+7,3,t7D0-b1B69-sl3,"7: S. Roxboro",0,7017,17897_shp,0,0
+7,3,t7ED-b1B69-sl3,"7: Durham Station",1,7017,17900_shp,0,0
+7,3,t7EE-b1B73-sl3,"7: S. Roxboro",0,7027,17906_shp,0,0
+7,3,t834-b1B69-sl3,"7: S. Roxboro",0,7017,17897_shp,0,0
+7,4,t219-b1B6A-sl4,"7: Durham Station",1,7018,17901_shp,0,0
+7,4,t258-b1B6A-sl4,"7: S. Roxboro",0,7018,17895_shp,0,0
+7,4,t25F-b1B74-sl4,"7: Durham Station",1,7028,17901_shp,0,0
+7,4,t275-b1B6A-sl4,"7: Durham Station",1,7018,17898_shp,0,0
+7,4,t276-b1B74-sl4,"7: S. Roxboro",0,7028,17895_shp,0,0
+7,4,t293-b1B74-sl4,"7: Durham Station",1,7028,17898_shp,0,0
+7,4,t2BC-b1B6A-sl4,"7: S. Roxboro",0,7018,17895_shp,0,0
+7,4,t2D9-b1B6A-sl4,"7: Durham Station",1,7018,17898_shp,0,0
+7,4,t2DA-b1B74-sl4,"7: S. Roxboro",0,7028,17895_shp,0,0
+7,4,t2F7-b1B74-sl4,"7: Durham Station",1,7028,17898_shp,0,0
+7,4,t320-b1B6A-sl4,"7: S. Roxboro",0,7018,17895_shp,0,0
+7,4,t33D-b1B6A-sl4,"7: Durham Station",1,7018,17898_shp,0,0
+7,4,t33E-b1B74-sl4,"7: S. Roxboro",0,7028,17895_shp,0,0
+7,4,t35B-b1B74-sl4,"7: Durham Station",1,7028,17898_shp,0,0
+7,4,t384-b1B6A-sl4,"7: S. Roxboro",0,7018,17895_shp,0,0
+7,4,t3A1-b1B6A-sl4,"7: Durham Station",1,7018,17898_shp,0,0
+7,4,t3A2-b1B74-sl4,"7: S. Roxboro",0,7028,17895_shp,0,0
+7,4,t3BF-b1B74-sl4,"7: Durham Station",1,7028,17898_shp,0,0
+7,4,t3E8-b1B6A-sl4,"7: S. Roxboro",0,7018,17895_shp,0,0
+7,4,t405-b1B6A-sl4,"7: Durham Station",1,7018,17898_shp,0,0
+7,4,t406-b1B74-sl4,"7: S. Roxboro",0,7028,17895_shp,0,0
+7,4,t423-b1B74-sl4,"7: Durham Station",1,7028,17898_shp,0,0
+7,4,t44C-b1B6A-sl4,"7: S. Roxboro",0,7018,17895_shp,0,0
+7,4,t469-b1B6A-sl4,"7: Durham Station",1,7018,17898_shp,0,0
+7,4,t46A-b1B74-sl4,"7: S. Roxboro",0,7028,17895_shp,0,0
+7,4,t487-b1B74-sl4,"7: Durham Station",1,7028,17898_shp,0,0
+7,4,t4B0-b1B6A-sl4,"7: S. Roxboro",0,7018,17895_shp,0,0
+7,4,t4CD-b1B6A-sl4,"7: Durham Station",1,7018,17898_shp,0,0
+7,4,t4CE-b1B74-sl4,"7: S. Roxboro",0,7028,17895_shp,0,0
+7,4,t4EB-b1B74-sl4,"7: Durham Station",1,7028,17898_shp,0,0
+7,4,t514-b1B6A-sl4,"7: S. Roxboro",0,7018,17895_shp,0,0
+7,4,t531-b1B6A-sl4,"7: Durham Station",1,7018,17898_shp,0,0
+7,4,t532-b1B74-sl4,"7: S. Roxboro",0,7028,17895_shp,0,0
+7,4,t54F-b1B74-sl4,"7: Durham Station",1,7028,17898_shp,0,0
+7,4,t578-b1B6A-sl4,"7: S. Roxboro",0,7018,17895_shp,0,0
+7,4,t595-b1B6A-sl4,"7: Durham Station",1,7018,17898_shp,0,0
+7,4,t596-b1B74-sl4,"7: S. Roxboro",0,7028,17895_shp,0,0
+7,4,t5B3-b1B74-sl4,"7: Durham Station",1,7028,17898_shp,0,0
+7,4,t5DC-b1B6A-sl4,"7: S. Roxboro",0,7018,17895_shp,0,0
+7,4,t5F9-b1B6A-sl4,"7: Durham Station",1,7018,17898_shp,0,0
+7,4,t5FA-b1B74-sl4,"7: S. Roxboro",0,7028,17895_shp,0,0
+7,4,t617-b1B74-sl4,"7: Durham Station",1,7028,17898_shp,0,0
+7,4,t640-b1B6A-sl4,"7: S. Roxboro",0,7018,17895_shp,0,0
+7,4,t65D-b1B6A-sl4,"7: Durham Station",1,7018,17898_shp,0,0
+7,4,t65E-b1B74-sl4,"7: S. Roxboro",0,7028,17895_shp,0,0
+7,4,t67B-b1B74-sl4,"7: Durham Station",1,7028,17898_shp,0,0
+7,4,t6A4-b1B6A-sl4,"7: S. Roxboro",0,7018,17895_shp,0,0
+7,4,t6C1-b1B6A-sl4,"7: Durham Station",1,7018,17898_shp,0,0
+7,4,t6C2-b1B74-sl4,"7: S. Roxboro",0,7028,17895_shp,0,0
+7,4,t6DF-b1B74-sl4,"7: Durham Station",1,7028,17898_shp,0,0
+7,4,t708-b1B6A-sl4,"7: S. Roxboro",0,7018,17895_shp,0,0
+7,4,t725-b1B6A-sl4,"7: Durham Station",1,7018,17898_shp,0,0
+7,4,t726-b1B74-sl4,"7: S. Roxboro",0,7028,17895_shp,0,0
+7,4,t743-b1B74-sl4,"7: Durham Station",1,7028,17898_shp,0,0
+7,4,t76C-b1B6A-sl4,"7: S. Roxboro",0,7018,17895_shp,0,0
+7,4,t789-b1B6A-sl4,"7: Durham Station",1,7018,17898_shp,0,0
+7,4,t78A-b1B74-sl4,"7: S. Roxboro",0,7028,17895_shp,0,0
+7,4,t7A7-b1B74-sl4,"7: Durham Station",1,7028,17898_shp,0,0
+7,4,t7D0-b1B6A-sl4,"7: S. Roxboro",0,7018,17895_shp,0,0
+7,4,t7ED-b1B6A-sl4,"7: Durham Station",1,7018,17898_shp,0,0
+7,4,t7EE-b1B74-sl4,"7: S. Roxboro",0,7028,17895_shp,0,0
+7,4,t80B-b1B74-sl4,"7: Durham Station",1,7028,17898_shp,0,0
+7,4,t834-b1B6A-sl4,"7: S. Roxboro",0,7018,17895_shp,0,0
+7,4,t851-b1B6A-sl4,"7: Durham Station",1,7018,17898_shp,0,0
+7,4,t852-b1B74-sl4,"7: S. Roxboro",0,7028,17895_shp,0,0
+7,4,t86F-b1B74-sl4,"7: Durham Station",1,7028,17898_shp,0,0
+7,4,t898-b1B6A-sl4,"7: S. Roxboro",0,7018,17895_shp,0,0
+7,4,t8B5-b1B6A-sl4,"7: Durham Station",1,7018,17898_shp,0,0
+7,4,t8B6-b1B74-sl4,"7: S. Roxboro",0,7028,17895_shp,0,0
+7,4,t8D3-b1B74-sl4,"7: Durham Station",1,7028,17898_shp,0,0
+7,4,t8FC-b1B6A-sl4,"7: S. Roxboro",0,7018,17895_shp,0,0
+7,4,t919-b1B6A-sl4,"7: Durham Station",1,7018,17898_shp,0,0
+7,4,t91A-b1B74-sl4,"7: S. Roxboro",0,7028,17904_shp,0,0
+7,4,t960-b1B6A-sl4,"7: S. Roxboro",0,7018,17895_shp,0,0
+8,2,t209-b321A-sl2,"8: Durham Station",1,12826,18290_shp,0,0
+8,2,t227-b3224-sl2,"8: Durham Station",1,12836,18290_shp,0,0
+8,2,t267-b3210-sl2,"8: Cornwallis Rd",0,12816,18289_shp,0,0
+8,2,t26D-b3238-sl2,"8: Durham Station",1,12856,18290_shp,0,0
+8,2,t285-b322E-sl2,"8: Cornwallis Rd",0,12846,18289_shp,0,0
+8,2,t286-b3210-sl2,"8: Durham Station",1,12816,18290_shp,0,0
+8,2,t2CB-b321A-sl2,"8: Cornwallis Rd",0,12826,18289_shp,0,0
+8,2,t2CC-b322E-sl2,"8: Durham Station",1,12846,18290_shp,0,0
+8,2,t2E9-b3224-sl2,"8: Cornwallis Rd",0,12836,18289_shp,0,0
+8,2,t2EA-b321A-sl2,"8: Durham Station",1,12826,18290_shp,0,0
+8,2,t32F-b3238-sl2,"8: Cornwallis Rd",0,12856,18289_shp,0,0
+8,2,t330-b3224-sl2,"8: Durham Station",1,12836,18290_shp,0,0
+8,2,t34D-b3210-sl2,"8: Cornwallis Rd",0,12816,18289_shp,0,0
+8,2,t34E-b3238-sl2,"8: Durham Station",1,12856,18290_shp,0,0
+8,2,t393-b322E-sl2,"8: Cornwallis Rd",0,12846,18289_shp,0,0
+8,2,t394-b3210-sl2,"8: Durham Station",1,12816,18290_shp,0,0
+8,2,t3B1-b321A-sl2,"8: Cornwallis Rd",0,12826,18289_shp,0,0
+8,2,t3B2-b322E-sl2,"8: Durham Station",1,12846,18290_shp,0,0
+8,2,t3F7-b3224-sl2,"8: Cornwallis Rd",0,12836,18289_shp,0,0
+8,2,t3F8-b321A-sl2,"8: Durham Station",1,12826,18290_shp,0,0
+8,2,t415-b3238-sl2,"8: Cornwallis Rd",0,12856,18289_shp,0,0
+8,2,t416-b3224-sl2,"8: Durham Station",1,12836,18290_shp,0,0
+8,2,t45B-b3210-sl2,"8: Cornwallis Rd",0,12816,18289_shp,0,0
+8,2,t45C-b3238-sl2,"8: Durham Station",1,12856,18290_shp,0,0
+8,2,t479-b322E-sl2,"8: Cornwallis Rd",0,12846,18289_shp,0,0
+8,2,t47A-b3210-sl2,"8: Durham Station",1,12816,18290_shp,0,0
+8,2,t4BF-b321A-sl2,"8: Cornwallis Rd",0,12826,18289_shp,0,0
+8,2,t4C0-b322E-sl2,"8: Durham Station",1,12846,18290_shp,0,0
+8,2,t4DD-b3224-sl2,"8: Cornwallis Rd",0,12836,18289_shp,0,0
+8,2,t4DE-b321A-sl2,"8: Durham Station",1,12826,18290_shp,0,0
+8,2,t523-b3238-sl2,"8: Cornwallis Rd",0,12856,18289_shp,0,0
+8,2,t524-b3224-sl2,"8: Durham Station",1,12836,18290_shp,0,0
+8,2,t541-b3210-sl2,"8: Cornwallis Rd",0,12816,18289_shp,0,0
+8,2,t542-b3238-sl2,"8: Durham Station",1,12856,18290_shp,0,0
+8,2,t587-b322E-sl2,"8: Cornwallis Rd",0,12846,18289_shp,0,0
+8,2,t588-b3210-sl2,"8: Durham Station",1,12816,18290_shp,0,0
+8,2,t5A5-b321A-sl2,"8: Cornwallis Rd",0,12826,18289_shp,0,0
+8,2,t5A6-b322E-sl2,"8: Durham Station",1,12846,18290_shp,0,0
+8,2,t5EB-b3224-sl2,"8: Cornwallis Rd",0,12836,18289_shp,0,0
+8,2,t5ED-b321A-sl2,"8: Durham Station",1,12826,18290_shp,0,0
+8,2,t609-b3238-sl2,"8: Cornwallis Rd",0,12856,18289_shp,0,0
+8,2,t60B-b3224-sl2,"8: Durham Station",1,12836,18290_shp,0,0
+8,2,t64F-b3210-sl2,"8: Cornwallis Rd",0,12816,18289_shp,0,0
+8,2,t651-b3238-sl2,"8: Durham Station",1,12856,18290_shp,0,0
+8,2,t66D-b322E-sl2,"8: Cornwallis Rd",0,12846,18289_shp,0,0
+8,2,t66F-b3210-sl2,"8: Durham Station",1,12816,18290_shp,0,0
+8,2,t6B3-b321A-sl2,"8: Cornwallis Rd",0,12826,18289_shp,0,0
+8,2,t6B5-b322E-sl2,"8: Durham Station",1,12846,18290_shp,0,0
+8,2,t6D1-b3224-sl2,"8: Cornwallis Rd",0,12836,18289_shp,0,0
+8,2,t6D3-b321A-sl2,"8: Durham Station",1,12826,18290_shp,0,0
+8,2,t717-b3238-sl2,"8: Cornwallis Rd",0,12856,18289_shp,0,0
+8,2,t719-b3224-sl2,"8: Durham Station",1,12836,18290_shp,0,0
+8,2,t735-b3210-sl2,"8: Cornwallis Rd",0,12816,18289_shp,0,0
+8,2,t737-b3238-sl2,"8: Durham Station",1,12856,18064_shp,0,0
+8,2,t76C-b3224-sl2,"8: Cornwallis Rd",0,12836,18063_shp,0,0
+8,2,t77D-b3210-sl2,"8: Durham Station",1,12816,18064_shp,0,0
+8,2,t78A-b3238-sl2,"8: Cornwallis Rd",0,12856,18063_shp,0,0
+8,2,t795-b3224-sl2,"8: Durham Station",1,12836,18064_shp,0,0
+8,2,t7D0-b3210-sl2,"8: Cornwallis Rd",0,12816,18063_shp,0,0
+8,2,t7DB-b3238-sl2,"8: Durham Station",1,12856,18064_shp,0,0
+8,2,t7EE-b3224-sl2,"8: Cornwallis Rd",0,12836,18063_shp,0,0
+8,2,t7F9-b3210-sl2,"8: Durham Station",1,12816,18064_shp,0,0
+8,2,t834-b3238-sl2,"8: Cornwallis Rd",0,12856,18063_shp,0,0
+8,2,t83F-b3224-sl2,"8: Durham Station",1,12836,18064_shp,0,0
+8,2,t852-b3210-sl2,"8: Cornwallis Rd",0,12816,18063_shp,0,0
+8,2,t85D-b3238-sl2,"8: Durham Station",1,12856,18064_shp,0,0
+8,2,t898-b3224-sl2,"8: Cornwallis Rd",0,12836,18063_shp,0,0
+8,2,t8A3-b3210-sl2,"8: Durham Station",1,12816,18064_shp,0,0
+8,2,t8B6-b3238-sl2,"8: Cornwallis Rd",0,12856,18063_shp,0,0
+8,2,t8C1-b3224-sl2,"8: Durham Station",1,12836,18064_shp,0,0
+8,2,t8FC-b3210-sl2,"8: Cornwallis Rd",0,12816,17956_shp,0,0
+8,2,t907-b3238-sl2,"8: Durham Station",1,12856,18064_shp,0,0
+8,2,t91A-b3224-sl2,"8: Cornwallis Rd",0,12836,17956_shp,0,0
+8,2,t960-b3238-sl2,"8: Cornwallis Rd",0,12856,17956_shp,0,0
+8,3,t26D-b1F51-sl3,"8: Durham Station",1,8017,18066_shp,0,0
+8,3,t28B-b1F5B-sl3,"8: Durham Station",1,8027,18066_shp,0,0
+8,3,t2BC-b1F51-sl3,"8: Cornwallis Rd",0,8017,18062_shp,0,0
+8,3,t2D1-b1F65-sl3,"8: Durham Station",1,8037,18066_shp,0,0
+8,3,t2DA-b1F5B-sl3,"8: Cornwallis Rd",0,8027,18062_shp,0,0
+8,3,t2E5-b1F51-sl3,"8: Durham Station",1,8017,18066_shp,0,0
+8,3,t320-b1F65-sl3,"8: Cornwallis Rd",0,8037,18062_shp,0,0
+8,3,t32B-b1F5B-sl3,"8: Durham Station",1,8027,18066_shp,0,0
+8,3,t33E-b1F51-sl3,"8: Cornwallis Rd",0,8017,18062_shp,0,0
+8,3,t349-b1F65-sl3,"8: Durham Station",1,8037,18066_shp,0,0
+8,3,t384-b1F5B-sl3,"8: Cornwallis Rd",0,8027,18062_shp,0,0
+8,3,t38F-b1F51-sl3,"8: Durham Station",1,8017,18066_shp,0,0
+8,3,t3A2-b1F65-sl3,"8: Cornwallis Rd",0,8037,18062_shp,0,0
+8,3,t3AD-b1F5B-sl3,"8: Durham Station",1,8027,18066_shp,0,0
+8,3,t3E8-b1F51-sl3,"8: Cornwallis Rd",0,8017,18062_shp,0,0
+8,3,t3F3-b1F65-sl3,"8: Durham Station",1,8037,18066_shp,0,0
+8,3,t406-b1F5B-sl3,"8: Cornwallis Rd",0,8027,18062_shp,0,0
+8,3,t411-b1F51-sl3,"8: Durham Station",1,8017,18066_shp,0,0
+8,3,t44C-b1F65-sl3,"8: Cornwallis Rd",0,8037,18062_shp,0,0
+8,3,t457-b1F5B-sl3,"8: Durham Station",1,8027,18066_shp,0,0
+8,3,t46A-b1F51-sl3,"8: Cornwallis Rd",0,8017,18062_shp,0,0
+8,3,t475-b1F65-sl3,"8: Durham Station",1,8037,18066_shp,0,0
+8,3,t4B0-b1F5B-sl3,"8: Cornwallis Rd",0,8027,18062_shp,0,0
+8,3,t4BB-b1F51-sl3,"8: Durham Station",1,8017,18066_shp,0,0
+8,3,t4CE-b1F65-sl3,"8: Cornwallis Rd",0,8037,18062_shp,0,0
+8,3,t4D9-b1F5B-sl3,"8: Durham Station",1,8027,18066_shp,0,0
+8,3,t514-b1F51-sl3,"8: Cornwallis Rd",0,8017,18062_shp,0,0
+8,3,t51F-b1F65-sl3,"8: Durham Station",1,8037,18066_shp,0,0
+8,3,t532-b1F5B-sl3,"8: Cornwallis Rd",0,8027,18062_shp,0,0
+8,3,t53D-b1F51-sl3,"8: Durham Station",1,8017,18066_shp,0,0
+8,3,t578-b1F65-sl3,"8: Cornwallis Rd",0,8037,18062_shp,0,0
+8,3,t583-b1F5B-sl3,"8: Durham Station",1,8027,18066_shp,0,0
+8,3,t596-b1F51-sl3,"8: Cornwallis Rd",0,8017,18062_shp,0,0
+8,3,t5A1-b1F65-sl3,"8: Durham Station",1,8037,18066_shp,0,0
+8,3,t5DC-b1F5B-sl3,"8: Cornwallis Rd",0,8027,18062_shp,0,0
+8,3,t5E7-b1F51-sl3,"8: Durham Station",1,8017,18066_shp,0,0
+8,3,t5FA-b1F65-sl3,"8: Cornwallis Rd",0,8037,18062_shp,0,0
+8,3,t605-b1F5B-sl3,"8: Durham Station",1,8027,18066_shp,0,0
+8,3,t640-b1F51-sl3,"8: Cornwallis Rd",0,8017,18062_shp,0,0
+8,3,t64B-b1F65-sl3,"8: Durham Station",1,8037,18066_shp,0,0
+8,3,t65E-b1F5B-sl3,"8: Cornwallis Rd",0,8027,18062_shp,0,0
+8,3,t669-b1F51-sl3,"8: Durham Station",1,8017,18066_shp,0,0
+8,3,t6A4-b1F65-sl3,"8: Cornwallis Rd",0,8037,18062_shp,0,0
+8,3,t6AF-b1F5B-sl3,"8: Durham Station",1,8027,18066_shp,0,0
+8,3,t6C2-b1F51-sl3,"8: Cornwallis Rd",0,8017,18062_shp,0,0
+8,3,t6CD-b1F65-sl3,"8: Durham Station",1,8037,18066_shp,0,0
+8,3,t708-b1F5B-sl3,"8: Cornwallis Rd",0,8027,18062_shp,0,0
+8,3,t713-b1F51-sl3,"8: Durham Station",1,8017,18066_shp,0,0
+8,3,t726-b1F65-sl3,"8: Cornwallis Rd",0,8037,18062_shp,0,0
+8,3,t731-b1F5B-sl3,"8: Durham Station",1,8027,18066_shp,0,0
+8,3,t76C-b1F51-sl3,"8: Cornwallis Rd",0,8017,18062_shp,0,0
+8,3,t777-b1F65-sl3,"8: Durham Station",1,8037,18066_shp,0,0
+8,3,t78A-b1F5B-sl3,"8: Cornwallis Rd",0,8027,18062_shp,0,0
+8,3,t795-b1F51-sl3,"8: Durham Station",1,8017,18066_shp,0,0
+8,3,t7D0-b1F65-sl3,"8: Cornwallis Rd",0,8037,17957_shp,0,0
+8,3,t7DB-b1F5B-sl3,"8: Durham Station",1,8027,18066_shp,0,0
+8,3,t7EE-b1F51-sl3,"8: Cornwallis Rd",0,8017,17957_shp,0,0
+8,3,t834-b1F5B-sl3,"8: Cornwallis Rd",0,8027,17957_shp,0,0
+8,4,t209-b321C-sl4,"8: Durham Station",1,12828,18084_shp,0,0
+8,4,t227-b3226-sl4,"8: Durham Station",1,12838,18084_shp,0,0
+8,4,t267-b3212-sl4,"8: Cornwallis Rd",0,12818,18083_shp,0,0
+8,4,t26D-b323A-sl4,"8: Durham Station",1,12858,18084_shp,0,0
+8,4,t285-b3230-sl4,"8: Cornwallis Rd",0,12848,18083_shp,0,0
+8,4,t286-b3212-sl4,"8: Durham Station",1,12818,18084_shp,0,0
+8,4,t2CB-b321C-sl4,"8: Cornwallis Rd",0,12828,18083_shp,0,0
+8,4,t2CC-b3230-sl4,"8: Durham Station",1,12848,18084_shp,0,0
+8,4,t2E9-b3226-sl4,"8: Cornwallis Rd",0,12838,18083_shp,0,0
+8,4,t2EA-b321C-sl4,"8: Durham Station",1,12828,18084_shp,0,0
+8,4,t32F-b323A-sl4,"8: Cornwallis Rd",0,12858,18083_shp,0,0
+8,4,t330-b3226-sl4,"8: Durham Station",1,12838,18084_shp,0,0
+8,4,t34D-b3212-sl4,"8: Cornwallis Rd",0,12818,18083_shp,0,0
+8,4,t34E-b323A-sl4,"8: Durham Station",1,12858,18084_shp,0,0
+8,4,t393-b3230-sl4,"8: Cornwallis Rd",0,12848,18083_shp,0,0
+8,4,t394-b3212-sl4,"8: Durham Station",1,12818,18084_shp,0,0
+8,4,t3B1-b321C-sl4,"8: Cornwallis Rd",0,12828,18083_shp,0,0
+8,4,t3B2-b3230-sl4,"8: Durham Station",1,12848,18084_shp,0,0
+8,4,t3F7-b3226-sl4,"8: Cornwallis Rd",0,12838,18083_shp,0,0
+8,4,t3F8-b321C-sl4,"8: Durham Station",1,12828,18084_shp,0,0
+8,4,t415-b323A-sl4,"8: Cornwallis Rd",0,12858,18083_shp,0,0
+8,4,t416-b3226-sl4,"8: Durham Station",1,12838,18084_shp,0,0
+8,4,t45B-b3212-sl4,"8: Cornwallis Rd",0,12818,18083_shp,0,0
+8,4,t45C-b323A-sl4,"8: Durham Station",1,12858,18084_shp,0,0
+8,4,t479-b3230-sl4,"8: Cornwallis Rd",0,12848,18083_shp,0,0
+8,4,t47A-b3212-sl4,"8: Durham Station",1,12818,18084_shp,0,0
+8,4,t4BF-b321C-sl4,"8: Cornwallis Rd",0,12828,18083_shp,0,0
+8,4,t4C0-b3230-sl4,"8: Durham Station",1,12848,18084_shp,0,0
+8,4,t4DD-b3226-sl4,"8: Cornwallis Rd",0,12838,18083_shp,0,0
+8,4,t4DE-b321C-sl4,"8: Durham Station",1,12828,18084_shp,0,0
+8,4,t523-b323A-sl4,"8: Cornwallis Rd",0,12858,18083_shp,0,0
+8,4,t524-b3226-sl4,"8: Durham Station",1,12838,18084_shp,0,0
+8,4,t541-b3212-sl4,"8: Cornwallis Rd",0,12818,18083_shp,0,0
+8,4,t542-b323A-sl4,"8: Durham Station",1,12858,18084_shp,0,0
+8,4,t587-b3230-sl4,"8: Cornwallis Rd",0,12848,18083_shp,0,0
+8,4,t588-b3212-sl4,"8: Durham Station",1,12818,18084_shp,0,0
+8,4,t5A5-b321C-sl4,"8: Cornwallis Rd",0,12828,18083_shp,0,0
+8,4,t5A6-b3230-sl4,"8: Durham Station",1,12848,18084_shp,0,0
+8,4,t5EB-b3226-sl4,"8: Cornwallis Rd",0,12838,18083_shp,0,0
+8,4,t5ED-b321C-sl4,"8: Durham Station",1,12828,18084_shp,0,0
+8,4,t609-b323A-sl4,"8: Cornwallis Rd",0,12858,18083_shp,0,0
+8,4,t60B-b3226-sl4,"8: Durham Station",1,12838,18084_shp,0,0
+8,4,t64F-b3212-sl4,"8: Cornwallis Rd",0,12818,18083_shp,0,0
+8,4,t651-b323A-sl4,"8: Durham Station",1,12858,18084_shp,0,0
+8,4,t66D-b3230-sl4,"8: Cornwallis Rd",0,12848,18083_shp,0,0
+8,4,t66F-b3212-sl4,"8: Durham Station",1,12818,18084_shp,0,0
+8,4,t6B3-b321C-sl4,"8: Cornwallis Rd",0,12828,18083_shp,0,0
+8,4,t6B5-b3230-sl4,"8: Durham Station",1,12848,18084_shp,0,0
+8,4,t6D1-b3226-sl4,"8: Cornwallis Rd",0,12838,18083_shp,0,0
+8,4,t6D3-b321C-sl4,"8: Durham Station",1,12828,18084_shp,0,0
+8,4,t717-b323A-sl4,"8: Cornwallis Rd",0,12858,18083_shp,0,0
+8,4,t719-b3226-sl4,"8: Durham Station",1,12838,18084_shp,0,0
+8,4,t735-b3212-sl4,"8: Cornwallis Rd",0,12818,18083_shp,0,0
+8,4,t737-b323A-sl4,"8: Durham Station",1,12858,18065_shp,0,0
+8,4,t76C-b3226-sl4,"8: Cornwallis Rd",0,12838,18061_shp,0,0
+8,4,t77D-b3212-sl4,"8: Durham Station",1,12818,18065_shp,0,0
+8,4,t78A-b323A-sl4,"8: Cornwallis Rd",0,12858,18061_shp,0,0
+8,4,t795-b3226-sl4,"8: Durham Station",1,12838,18065_shp,0,0
+8,4,t7D0-b3212-sl4,"8: Cornwallis Rd",0,12818,18061_shp,0,0
+8,4,t7DB-b323A-sl4,"8: Durham Station",1,12858,18065_shp,0,0
+8,4,t7EE-b3226-sl4,"8: Cornwallis Rd",0,12838,18061_shp,0,0
+8,4,t7F9-b3212-sl4,"8: Durham Station",1,12818,18065_shp,0,0
+8,4,t834-b323A-sl4,"8: Cornwallis Rd",0,12858,18061_shp,0,0
+8,4,t83F-b3226-sl4,"8: Durham Station",1,12838,18065_shp,0,0
+8,4,t852-b3212-sl4,"8: Cornwallis Rd",0,12818,18061_shp,0,0
+8,4,t85D-b323A-sl4,"8: Durham Station",1,12858,18065_shp,0,0
+8,4,t898-b3226-sl4,"8: Cornwallis Rd",0,12838,18061_shp,0,0
+8,4,t8A3-b3212-sl4,"8: Durham Station",1,12818,18065_shp,0,0
+8,4,t8B6-b323A-sl4,"8: Cornwallis Rd",0,12858,18061_shp,0,0
+8,4,t8C1-b3226-sl4,"8: Durham Station",1,12838,18065_shp,0,0
+8,4,t8FC-b3212-sl4,"8: Cornwallis Rd",0,12818,17955_shp,0,0
+8,4,t907-b323A-sl4,"8: Durham Station",1,12858,18065_shp,0,0
+8,4,t91A-b3226-sl4,"8: Cornwallis Rd",0,12838,17955_shp,0,0
+8,4,t960-b323A-sl4,"8: Cornwallis Rd",0,12858,17955_shp,0,0
+9,2,t206-b2338-sl2,"9: Durham Station",1,9016,17917_shp,0,0
+9,2,t21F-b2342-sl2,"9: Durham Station",1,9026,17919_shp,0,0
+9,2,t258-b2338-sl2,"9: Duke Regional",0,9016,18118_shp,0,0
+9,2,t26A-b234C-sl2,"9: Durham Station",1,9036,17917_shp,0,0
+9,2,t276-b2342-sl2,"9: Duke Regional",0,9026,18123_shp,0,0
+9,2,t283-b2338-sl2,"9: Durham Station",1,9016,17919_shp,0,0
+9,2,t2BC-b234C-sl2,"9: Duke Regional",0,9036,18118_shp,0,0
+9,2,t2CE-b2342-sl2,"9: Durham Station",1,9026,17917_shp,0,0
+9,2,t2DA-b2338-sl2,"9: Duke Regional",0,9016,18123_shp,0,0
+9,2,t2E7-b234C-sl2,"9: Durham Station",1,9036,17919_shp,0,0
+9,2,t320-b2342-sl2,"9: Duke Regional",0,9026,18118_shp,0,0
+9,2,t332-b2338-sl2,"9: Durham Station",1,9016,17917_shp,0,0
+9,2,t33E-b234C-sl2,"9: Duke Regional",0,9036,18123_shp,0,0
+9,2,t34B-b2342-sl2,"9: Durham Station",1,9026,17919_shp,0,0
+9,2,t384-b2338-sl2,"9: Duke Regional",0,9016,18118_shp,0,0
+9,2,t396-b234C-sl2,"9: Durham Station",1,9036,17917_shp,0,0
+9,2,t3A2-b2342-sl2,"9: Duke Regional",0,9026,18123_shp,0,0
+9,2,t3AF-b2338-sl2,"9: Durham Station",1,9016,17919_shp,0,0
+9,2,t3E8-b234C-sl2,"9: Duke Regional",0,9036,18118_shp,0,0
+9,2,t3FA-b2342-sl2,"9: Durham Station",1,9026,17917_shp,0,0
+9,2,t406-b2338-sl2,"9: Duke Regional",0,9016,18123_shp,0,0
+9,2,t413-b234C-sl2,"9: Durham Station",1,9036,17919_shp,0,0
+9,2,t44C-b2342-sl2,"9: Duke Regional",0,9026,18118_shp,0,0
+9,2,t45E-b2338-sl2,"9: Durham Station",1,9016,17917_shp,0,0
+9,2,t46A-b234C-sl2,"9: Duke Regional",0,9036,18123_shp,0,0
+9,2,t477-b2342-sl2,"9: Durham Station",1,9026,17919_shp,0,0
+9,2,t4B0-b2338-sl2,"9: Duke Regional",0,9016,18118_shp,0,0
+9,2,t4C2-b234C-sl2,"9: Durham Station",1,9036,17917_shp,0,0
+9,2,t4CE-b2342-sl2,"9: Duke Regional",0,9026,18123_shp,0,0
+9,2,t4DB-b2338-sl2,"9: Durham Station",1,9016,17919_shp,0,0
+9,2,t514-b234C-sl2,"9: Duke Regional",0,9036,18118_shp,0,0
+9,2,t526-b2342-sl2,"9: Durham Station",1,9026,17917_shp,0,0
+9,2,t532-b2338-sl2,"9: Duke Regional",0,9016,18123_shp,0,0
+9,2,t53F-b234C-sl2,"9: Durham Station",1,9036,17919_shp,0,0
+9,2,t578-b2342-sl2,"9: Duke Regional",0,9026,18118_shp,0,0
+9,2,t58A-b2338-sl2,"9: Durham Station",1,9016,17917_shp,0,0
+9,2,t596-b234C-sl2,"9: Duke Regional",0,9036,18123_shp,0,0
+9,2,t5A3-b2342-sl2,"9: Durham Station",1,9026,17919_shp,0,0
+9,2,t5DC-b2338-sl2,"9: Duke Regional",0,9016,18118_shp,0,0
+9,2,t5EE-b234C-sl2,"9: Durham Station",1,9036,17917_shp,0,0
+9,2,t5FA-b2342-sl2,"9: Duke Regional",0,9026,18123_shp,0,0
+9,2,t607-b2338-sl2,"9: Durham Station",1,9016,17919_shp,0,0
+9,2,t640-b234C-sl2,"9: Duke Regional",0,9036,18118_shp,0,0
+9,2,t652-b2342-sl2,"9: Durham Station",1,9026,17917_shp,0,0
+9,2,t65E-b2338-sl2,"9: Duke Regional",0,9016,18123_shp,0,0
+9,2,t66B-b234C-sl2,"9: Durham Station",1,9036,17919_shp,0,0
+9,2,t6A4-b2342-sl2,"9: Duke Regional",0,9026,18118_shp,0,0
+9,2,t6B6-b2338-sl2,"9: Durham Station",1,9016,17917_shp,0,0
+9,2,t6C2-b234C-sl2,"9: Duke Regional",0,9036,18123_shp,0,0
+9,2,t6CF-b2342-sl2,"9: Durham Station",1,9026,17919_shp,0,0
+9,2,t708-b2338-sl2,"9: Duke Regional",0,9016,18118_shp,0,0
+9,2,t71A-b234C-sl2,"9: Durham Station",1,9036,17917_shp,0,0
+9,2,t726-b2342-sl2,"9: Duke Regional",0,9026,18123_shp,0,0
+9,2,t733-b2338-sl2,"9: Durham Station",1,9016,17919_shp,0,0
+9,2,t76C-b234C-sl2,"9: Duke Regional",0,9036,18118_shp,0,0
+9,2,t77E-b2342-sl2,"9: Durham Station",1,9026,17917_shp,0,0
+9,2,t78A-b2338-sl2,"9: Duke Regional",0,9016,18123_shp,0,0
+9,2,t797-b234C-sl2,"9: Durham Station",1,9036,17919_shp,0,0
+9,2,t7D0-b2342-sl2,"9: Duke Regional",0,9026,18118_shp,0,0
+9,2,t7E2-b2338-sl2,"9: Durham Station",1,9016,17917_shp,0,0
+9,2,t7EE-b234C-sl2,"9: Duke Regional",0,9036,18123_shp,0,0
+9,2,t7FB-b2342-sl2,"9: Durham Station",1,9026,17919_shp,0,0
+9,2,t834-b2338-sl2,"9: Duke Regional",0,9016,18118_shp,0,0
+9,2,t846-b234C-sl2,"9: Durham Station",1,9036,17917_shp,0,0
+9,2,t852-b2342-sl2,"9: Duke Regional",0,9026,18123_shp,0,0
+9,2,t85F-b2338-sl2,"9: Durham Station",1,9016,17919_shp,0,0
+9,2,t898-b234C-sl2,"9: Duke Regional",0,9036,18118_shp,0,0
+9,2,t8AA-b2342-sl2,"9: Durham Station",1,9026,17917_shp,0,0
+9,2,t8B6-b2338-sl2,"9: Duke Regional",0,9016,18123_shp,0,0
+9,2,t8C3-b234C-sl2,"9: Durham Station",1,9036,17919_shp,0,0
+9,2,t8FC-b2342-sl2,"9: Duke Regional",0,9026,18125_shp,0,0
+9,2,t90E-b2338-sl2,"9: Durham Station",1,9016,17917_shp,0,0
+9,2,t91A-b234C-sl2,"9: Duke Regional",0,9036,18128_shp,0,0
+9,2,t960-b2338-sl2,"9: Duke Regional",0,9016,18118_shp,0,0
+9,3,t26A-b2339-sl3,"9: Durham Station",1,9017,17920_shp,0,0
+9,3,t283-b2343-sl3,"9: Durham Station",1,9027,17921_shp,0,0
+9,3,t2BC-b2339-sl3,"9: Duke Regional",0,9017,18120_shp,0,0
+9,3,t2CE-b234D-sl3,"9: Durham Station",1,9037,17920_shp,0,0
+9,3,t2DA-b2343-sl3,"9: Duke Regional",0,9027,18119_shp,0,0
+9,3,t2E7-b2339-sl3,"9: Durham Station",1,9017,17921_shp,0,0
+9,3,t320-b234D-sl3,"9: Duke Regional",0,9037,18120_shp,0,0
+9,3,t332-b2343-sl3,"9: Durham Station",1,9027,17920_shp,0,0
+9,3,t33E-b2339-sl3,"9: Duke Regional",0,9017,18119_shp,0,0
+9,3,t34B-b234D-sl3,"9: Durham Station",1,9037,17921_shp,0,0
+9,3,t384-b2343-sl3,"9: Duke Regional",0,9027,18120_shp,0,0
+9,3,t396-b2339-sl3,"9: Durham Station",1,9017,17920_shp,0,0
+9,3,t3A2-b234D-sl3,"9: Duke Regional",0,9037,18119_shp,0,0
+9,3,t3AF-b2343-sl3,"9: Durham Station",1,9027,17921_shp,0,0
+9,3,t3E8-b2339-sl3,"9: Duke Regional",0,9017,18120_shp,0,0
+9,3,t3FA-b234D-sl3,"9: Durham Station",1,9037,17920_shp,0,0
+9,3,t406-b2343-sl3,"9: Duke Regional",0,9027,18119_shp,0,0
+9,3,t413-b2339-sl3,"9: Durham Station",1,9017,17921_shp,0,0
+9,3,t44C-b234D-sl3,"9: Duke Regional",0,9037,18120_shp,0,0
+9,3,t45E-b2343-sl3,"9: Durham Station",1,9027,17920_shp,0,0
+9,3,t46A-b2339-sl3,"9: Duke Regional",0,9017,18119_shp,0,0
+9,3,t477-b234D-sl3,"9: Durham Station",1,9037,17921_shp,0,0
+9,3,t4B0-b2343-sl3,"9: Duke Regional",0,9027,18120_shp,0,0
+9,3,t4C2-b2339-sl3,"9: Durham Station",1,9017,17920_shp,0,0
+9,3,t4CE-b234D-sl3,"9: Duke Regional",0,9037,18119_shp,0,0
+9,3,t4DB-b2343-sl3,"9: Durham Station",1,9027,17921_shp,0,0
+9,3,t514-b2339-sl3,"9: Duke Regional",0,9017,18120_shp,0,0
+9,3,t526-b234D-sl3,"9: Durham Station",1,9037,17920_shp,0,0
+9,3,t532-b2343-sl3,"9: Duke Regional",0,9027,18119_shp,0,0
+9,3,t53F-b2339-sl3,"9: Durham Station",1,9017,17921_shp,0,0
+9,3,t578-b234D-sl3,"9: Duke Regional",0,9037,18120_shp,0,0
+9,3,t58A-b2343-sl3,"9: Durham Station",1,9027,17920_shp,0,0
+9,3,t596-b2339-sl3,"9: Duke Regional",0,9017,18119_shp,0,0
+9,3,t5A3-b234D-sl3,"9: Durham Station",1,9037,17921_shp,0,0
+9,3,t5DC-b2343-sl3,"9: Duke Regional",0,9027,18120_shp,0,0
+9,3,t5EE-b2339-sl3,"9: Durham Station",1,9017,17920_shp,0,0
+9,3,t5FA-b234D-sl3,"9: Duke Regional",0,9037,18119_shp,0,0
+9,3,t607-b2343-sl3,"9: Durham Station",1,9027,17921_shp,0,0
+9,3,t640-b2339-sl3,"9: Duke Regional",0,9017,18120_shp,0,0
+9,3,t652-b234D-sl3,"9: Durham Station",1,9037,17920_shp,0,0
+9,3,t65E-b2343-sl3,"9: Duke Regional",0,9027,18119_shp,0,0
+9,3,t66B-b2339-sl3,"9: Durham Station",1,9017,17921_shp,0,0
+9,3,t6A4-b234D-sl3,"9: Duke Regional",0,9037,18120_shp,0,0
+9,3,t6B6-b2343-sl3,"9: Durham Station",1,9027,17920_shp,0,0
+9,3,t6C2-b2339-sl3,"9: Duke Regional",0,9017,18119_shp,0,0
+9,3,t6CF-b234D-sl3,"9: Durham Station",1,9037,17921_shp,0,0
+9,3,t708-b2343-sl3,"9: Duke Regional",0,9027,18120_shp,0,0
+9,3,t71A-b2339-sl3,"9: Durham Station",1,9017,17920_shp,0,0
+9,3,t726-b234D-sl3,"9: Duke Regional",0,9037,18119_shp,0,0
+9,3,t733-b2343-sl3,"9: Durham Station",1,9027,17921_shp,0,0
+9,3,t76C-b2339-sl3,"9: Duke Regional",0,9017,18120_shp,0,0
+9,3,t77E-b234D-sl3,"9: Durham Station",1,9037,17920_shp,0,0
+9,3,t78A-b2343-sl3,"9: Duke Regional",0,9027,18119_shp,0,0
+9,3,t797-b2339-sl3,"9: Durham Station",1,9017,17921_shp,0,0
+9,3,t7D0-b234D-sl3,"9: Duke Regional",0,9037,18126_shp,0,0
+9,3,t7E2-b2343-sl3,"9: Durham Station",1,9027,17920_shp,0,0
+9,3,t7EE-b2339-sl3,"9: Duke Regional",0,9017,18129_shp,0,0
+9,3,t834-b2343-sl3,"9: Duke Regional",0,9027,18126_shp,0,0
+9,4,t206-b233A-sl4,"9: Durham Station",1,9018,17922_shp,0,0
+9,4,t21F-b2344-sl4,"9: Durham Station",1,9028,17918_shp,0,0
+9,4,t258-b233A-sl4,"9: Duke Regional",0,9018,18121_shp,0,0
+9,4,t26A-b234E-sl4,"9: Durham Station",1,9038,17922_shp,0,0
+9,4,t276-b2344-sl4,"9: Duke Regional",0,9028,18122_shp,0,0
+9,4,t283-b233A-sl4,"9: Durham Station",1,9018,17918_shp,0,0
+9,4,t2BC-b234E-sl4,"9: Duke Regional",0,9038,18121_shp,0,0
+9,4,t2CE-b2344-sl4,"9: Durham Station",1,9028,17922_shp,0,0
+9,4,t2DA-b233A-sl4,"9: Duke Regional",0,9018,18122_shp,0,0
+9,4,t2E7-b234E-sl4,"9: Durham Station",1,9038,17918_shp,0,0
+9,4,t320-b2344-sl4,"9: Duke Regional",0,9028,18121_shp,0,0
+9,4,t332-b233A-sl4,"9: Durham Station",1,9018,17922_shp,0,0
+9,4,t33E-b234E-sl4,"9: Duke Regional",0,9038,18122_shp,0,0
+9,4,t34B-b2344-sl4,"9: Durham Station",1,9028,17918_shp,0,0
+9,4,t384-b233A-sl4,"9: Duke Regional",0,9018,18121_shp,0,0
+9,4,t396-b234E-sl4,"9: Durham Station",1,9038,17922_shp,0,0
+9,4,t3A2-b2344-sl4,"9: Duke Regional",0,9028,18122_shp,0,0
+9,4,t3AF-b233A-sl4,"9: Durham Station",1,9018,17918_shp,0,0
+9,4,t3E8-b234E-sl4,"9: Duke Regional",0,9038,18121_shp,0,0
+9,4,t3FA-b2344-sl4,"9: Durham Station",1,9028,17922_shp,0,0
+9,4,t406-b233A-sl4,"9: Duke Regional",0,9018,18122_shp,0,0
+9,4,t413-b234E-sl4,"9: Durham Station",1,9038,17918_shp,0,0
+9,4,t44C-b2344-sl4,"9: Duke Regional",0,9028,18121_shp,0,0
+9,4,t45E-b233A-sl4,"9: Durham Station",1,9018,17922_shp,0,0
+9,4,t46A-b234E-sl4,"9: Duke Regional",0,9038,18122_shp,0,0
+9,4,t477-b2344-sl4,"9: Durham Station",1,9028,17918_shp,0,0
+9,4,t4B0-b233A-sl4,"9: Duke Regional",0,9018,18121_shp,0,0
+9,4,t4C2-b234E-sl4,"9: Durham Station",1,9038,17922_shp,0,0
+9,4,t4CE-b2344-sl4,"9: Duke Regional",0,9028,18122_shp,0,0
+9,4,t4DB-b233A-sl4,"9: Durham Station",1,9018,17918_shp,0,0
+9,4,t514-b234E-sl4,"9: Duke Regional",0,9038,18121_shp,0,0
+9,4,t526-b2344-sl4,"9: Durham Station",1,9028,17922_shp,0,0
+9,4,t532-b233A-sl4,"9: Duke Regional",0,9018,18122_shp,0,0
+9,4,t53F-b234E-sl4,"9: Durham Station",1,9038,17918_shp,0,0
+9,4,t578-b2344-sl4,"9: Duke Regional",0,9028,18121_shp,0,0
+9,4,t58A-b233A-sl4,"9: Durham Station",1,9018,17922_shp,0,0
+9,4,t596-b234E-sl4,"9: Duke Regional",0,9038,18122_shp,0,0
+9,4,t5A3-b2344-sl4,"9: Durham Station",1,9028,17918_shp,0,0
+9,4,t5DC-b233A-sl4,"9: Duke Regional",0,9018,18121_shp,0,0
+9,4,t5EE-b234E-sl4,"9: Durham Station",1,9038,17922_shp,0,0
+9,4,t5FA-b2344-sl4,"9: Duke Regional",0,9028,18122_shp,0,0
+9,4,t607-b233A-sl4,"9: Durham Station",1,9018,17918_shp,0,0
+9,4,t640-b234E-sl4,"9: Duke Regional",0,9038,18121_shp,0,0
+9,4,t652-b2344-sl4,"9: Durham Station",1,9028,17922_shp,0,0
+9,4,t65E-b233A-sl4,"9: Duke Regional",0,9018,18122_shp,0,0
+9,4,t66B-b234E-sl4,"9: Durham Station",1,9038,17918_shp,0,0
+9,4,t6A4-b2344-sl4,"9: Duke Regional",0,9028,18121_shp,0,0
+9,4,t6B6-b233A-sl4,"9: Durham Station",1,9018,17922_shp,0,0
+9,4,t6C2-b234E-sl4,"9: Duke Regional",0,9038,18122_shp,0,0
+9,4,t6CF-b2344-sl4,"9: Durham Station",1,9028,17918_shp,0,0
+9,4,t708-b233A-sl4,"9: Duke Regional",0,9018,18121_shp,0,0
+9,4,t71A-b234E-sl4,"9: Durham Station",1,9038,17922_shp,0,0
+9,4,t726-b2344-sl4,"9: Duke Regional",0,9028,18122_shp,0,0
+9,4,t733-b233A-sl4,"9: Durham Station",1,9018,17918_shp,0,0
+9,4,t76C-b234E-sl4,"9: Duke Regional",0,9038,18121_shp,0,0
+9,4,t77E-b2344-sl4,"9: Durham Station",1,9028,17922_shp,0,0
+9,4,t78A-b233A-sl4,"9: Duke Regional",0,9018,18122_shp,0,0
+9,4,t797-b234E-sl4,"9: Durham Station",1,9038,17918_shp,0,0
+9,4,t7D0-b2344-sl4,"9: Duke Regional",0,9028,18121_shp,0,0
+9,4,t7E2-b233A-sl4,"9: Durham Station",1,9018,17922_shp,0,0
+9,4,t7EE-b234E-sl4,"9: Duke Regional",0,9038,18122_shp,0,0
+9,4,t7FB-b2344-sl4,"9: Durham Station",1,9028,17918_shp,0,0
+9,4,t834-b233A-sl4,"9: Duke Regional",0,9018,18121_shp,0,0
+9,4,t846-b234E-sl4,"9: Durham Station",1,9038,17922_shp,0,0
+9,4,t852-b2344-sl4,"9: Duke Regional",0,9028,18122_shp,0,0
+9,4,t85F-b233A-sl4,"9: Durham Station",1,9018,17918_shp,0,0
+9,4,t898-b234E-sl4,"9: Duke Regional",0,9038,18121_shp,0,0
+9,4,t8AA-b2344-sl4,"9: Durham Station",1,9028,17922_shp,0,0
+9,4,t8B6-b233A-sl4,"9: Duke Regional",0,9018,18122_shp,0,0
+9,4,t8C3-b234E-sl4,"9: Durham Station",1,9038,17918_shp,0,0
+9,4,t8FC-b2344-sl4,"9: Duke Regional",0,9028,18124_shp,0,0
+9,4,t90E-b233A-sl4,"9: Durham Station",1,9018,17922_shp,0,0
+9,4,t91A-b234E-sl4,"9: Duke Regional",0,9038,18127_shp,0,0
+9,4,t960-b233A-sl4,"9: Duke Regional",0,9018,18121_shp,0,0

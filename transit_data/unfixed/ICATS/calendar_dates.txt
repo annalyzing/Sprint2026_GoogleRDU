@@ -1,0 +1,12 @@
+service_id,date,exception_type
+Service_period_1,20250120,2
+Service_period_1,20250418,2
+Service_period_1,20250526,2
+Service_period_1,20250704,2
+Service_period_1,20250901,2
+Service_period_1,20251111,2
+Service_period_1,20251127,2
+Service_period_1,20251128,2
+Service_period_1,20251224,2
+Service_period_1,20251225,2
+Service_period_1,20251226,2

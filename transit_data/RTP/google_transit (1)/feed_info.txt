@@ -1,0 +1,2 @@
+feed_publisher_name,feed_publisher_url,feed_lang,default_lang,feed_start_date,feed_end_date,feed_version,feed_contact_email,feed_contact_url
+GoTriangle,https://gotriangle.org/,en,en,20260315,20260801,2026-03 service V1,customerservice@gotriangle.org,https://gotriangle.org/

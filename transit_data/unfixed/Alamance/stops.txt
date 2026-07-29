@@ -1,0 +1,9 @@
+stop_id,stop_code,stop_name,stop_desc,stop_lat,stop_lon,stop_url,location_type,parent_station,stop_timezone,wheelchair_boarding
+3600456,,Carlie C's IGA,,36.0570240337557,-79.4006672918191,,0,,,
+3600457,,Food Lion,,36.0522813210204,-79.4009725368176,,0,,,
+3600458,,Dollar General,,36.0054628072968,-79.3921901703958,,0,,,
+3600459,,Southern Alamance Family Empowerment,,35.9419242753173,-79.3428606157908,,0,,,
+3600460,,Eli Whitney Community Center,,35.9072940634506,-79.300030535127,,0,,,
+3600461,,United States Postal Service,,35.9476998565985,-79.321363220329,,0,,,
+3600462,,Swepsonville United Methodist Church,,36.0242876854692,-79.3572971614355,,0,,,
+3600463,,Alamance Community College,,36.0661082964475,-79.3575647911683,,0,,,

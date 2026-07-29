@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NC Teacher Funding &amp; Attrition Dashboard</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.5.1"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.css">
+<script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.js"></script>
+<style>
+:root{
+  --bg-primary:#f4f5f7; --bg-card:#ffffff; --bg-header:#1F4E78;
+  --text-primary:#1e2733; --text-secondary:#6c757d; --text-on-dark:#ffffff;
+  --navy:#1F4E78; --darkred:#9C2B2B; --amber:#c98500; --green:#2e7d32;
+  --gap:16px; --radius:10px;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;background:var(--bg-primary);color:var(--text-primary);line-height:1.5;}
+.wrap{max-width:1440px;margin:0 auto;padding:20px;}
+header{background:var(--bg-header);color:var(--text-on-dark);padding:24px 28px;border-radius:var(--radius);margin-bottom:var(--gap);}
+header h1{font-size:22px;font-weight:600;margin-bottom:4px;}
+header p{font-size:13px;color:rgba(255,255,255,.8);max-width:900px;}
+.badge{display:inline-block;background:rgba(255,255,255,.15);border-radius:20px;padding:3px 12px;font-size:11px;margin-top:10px;margin-right:6px;}
+
+.kpi-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:var(--gap);margin-bottom:var(--gap);}
+.kpi-card{background:var(--bg-card);border-radius:var(--radius);padding:18px 20px;box-shadow:0 1px 3px rgba(0,0,0,.07);border-left:4px solid var(--navy);}
+.kpi-card.red{border-left-color:var(--darkred);}
+.kpi-card.amber{border-left-color:var(--amber);}
+.kpi-card.green{border-left-color:var(--green);}
+.kpi-label{font-size:12px;color:var(--text-secondary);text-transform:uppercase;letter-spacing:.5px;margin-bottom:6px;}
+.kpi-value{font-size:26px;font-weight:700;}
+.kpi-sub{font-size:12px;color:var(--text-secondary);margin-top:4px;}
+
+.section-title{font-size:15px;font-weight:700;color:var(--navy);margin:26px 0 10px;padding-bottom:6px;border-bottom:2px solid var(--navy);}
+.chart-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(440px,1fr));gap:var(--gap);}
+.chart-container{background:var(--bg-card);border-radius:var(--radius);padding:18px 22px;box-shadow:0 1px 3px rgba(0,0,0,.07);}
+.chart-container h3{font-size:14px;font-weight:600;margin-bottom:4px;}
+.chart-container .note{font-size:11.5px;color:var(--text-secondary);margin-bottom:12px;}
+.chart-container canvas{max-height:300px;}
+.chart-container.tall canvas{max-height:340px;}
+
+.callout{background:#fff8e6;border:1px solid #f0d99a;border-radius:var(--radius);padding:14px 18px;font-size:13px;margin-top:14px;}
+.callout b{color:var(--darkred);}
+
+.case-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--gap);}
+.case-card{background:var(--bg-card);border-radius:var(--radius);padding:16px 18px;box-shadow:0 1px 3px rgba(0,0,0,.07);}
+.case-card h4{font-size:13px;color:var(--navy);margin-bottom:10px;}
+.case-row{display:flex;justify-content:space-between;font-size:12.5px;padding:5px 0;border-bottom:1px solid #f0f0f0;}
+.case-row:last-child{border-bottom:none;}
+.case-row .lea{color:var(--text-secondary);}
+.case-row .val{font-weight:600;}
+.case-row .val.hi{color:var(--darkred);}
+.case-row .val.lo{color:var(--green);}
+
+.table-section{background:var(--bg-card);border-radius:var(--radius);padding:18px 22px;box-shadow:0 1px 3px rgba(0,0,0,.07);margin-top:var(--gap);}
+.table-toolbar{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-bottom:12px;}
+.table-toolbar input,.table-toolbar select{padding:7px 10px;border:1px solid #d8dbe0;border-radius:6px;font-size:13px;}
+.table-toolbar input{flex:1;min-width:200px;}
+.table-scroll{max-height:480px;overflow-y:auto;}
+table.data-table{width:100%;border-collapse:collapse;font-size:12.5px;}
+.data-table thead th{position:sticky;top:0;background:#f4f5f7;text-align:left;padding:8px 10px;border-bottom:2px solid #dee2e6;font-weight:700;font-size:11px;text-transform:uppercase;letter-spacing:.4px;color:var(--text-secondary);cursor:pointer;white-space:nowrap;}
+.data-table thead th:hover{color:var(--navy);}
+.data-table tbody td{padding:7px 10px;border-bottom:1px solid #f2f2f2;white-space:nowrap;}
+.data-table tbody tr:hover{background:#f8f9fb;}
+.flagged{background:#fff3e0;}
+
+footer{margin-top:24px;padding:16px 4px;font-size:11.5px;color:var(--text-secondary);}
+footer a{color:var(--navy);}
+
+@media(max-width:768px){.kpi-row{grid-template-columns:repeat(2,1fr);}.chart-row,.case-grid{grid-template-columns:1fr;}}
+
+.map-toggle{display:flex;gap:8px;margin-bottom:12px;}
+.map-toggle button{padding:7px 14px;border:1px solid #d8dbe0;background:#fff;border-radius:6px;font-size:12.5px;font-weight:600;cursor:pointer;color:var(--text-secondary);}
+.map-toggle button.active{background:var(--navy);border-color:var(--navy);color:#fff;}
+#countyMap{height:520px;border-radius:8px;}
+.map-legend{display:flex;align-items:center;gap:6px;font-size:11px;color:var(--text-secondary);margin-top:10px;flex-wrap:wrap;}
+.map-legend .swatch{width:16px;height:12px;border-radius:2px;display:inline-block;}
+.leaflet-tooltip.county-tip{font-size:12px;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <h1>Teacher Funding as a Risk Factor in NC Education Equity</h1>
+  <p>Wages, attrition, and beginning-vs-experienced staffing &mdash; NC K-12 public schools, 2024&ndash;25. Individual workstream within the group's "risk factors in education equity" project.</p>
+  <span class="badge">115 LEAs, DPI attrition dashboard</span>
+  <span class="badge">100 counties, fiscal data</span>
+  <span class="badge">29-district graduation-rate sample</span>
+</header>
+
+<section class="kpi-row">
+  <div class="kpi-card red">
+    <div class="kpi-label">Statewide attrition, 2024&ndash;25</div>
+    <div class="kpi-value">10.11%</div>
+    <div class="kpi-sub">Up from 9.88% in 2023-24</div>
+  </div>
+  <div class="kpi-card amber">
+    <div class="kpi-label">Beginning-teacher attrition</div>
+    <div class="kpi-value">14.73%</div>
+    <div class="kpi-sub">vs. 9.34% for experienced teachers</div>
+  </div>
+  <div class="kpi-card">
+    <div class="kpi-label">Local salary supplement range</div>
+    <div class="kpi-value">$0&ndash;$10,650</div>
+    <div class="kpi-sub">Weldon City / Caswell / Graham &rarr; Chapel Hill-Carrboro</div>
+  </div>
+  <div class="kpi-card green">
+    <div class="kpi-label">Attrition &rarr; graduation correlation</div>
+    <div class="kpi-value">r = &minus;0.31</div>
+    <div class="kpi-sub">n=29 districts, moderate &amp; in predicted direction</div>
+  </div>
+</section>
+
+<div class="section-title">Statewide trends</div>
+<section class="chart-row">
+  <div class="chart-container">
+    <h3>Multi-year attrition trend</h3>
+    <div class="note">Statewide attrition rate, 2019-20 to 2024-25 (post-pandemic figures approximate, gathered via published report summaries)</div>
+    <canvas id="trendChart"></canvas>
+  </div>
+  <div class="chart-container">
+    <h3>Attrition by teacher category, 2024-25</h3>
+    <div class="note">Beginning and temporary-licensed teachers leave at far higher rates than experienced staff</div>
+    <canvas id="categoryChart"></canvas>
+  </div>
+</section>
+
+<div class="section-title">The funding mechanism</div>
+<section class="chart-row">
+  <div class="chart-container">
+    <h3>State salary schedule &mdash; the mid-career "dead zone"</h3>
+    <div class="note">Bachelor's degree scale, FY 2025-26. Zero step increases from year 16 to year 24.</div>
+    <canvas id="salaryChart"></canvas>
+  </div>
+  <div class="chart-container">
+    <h3>Local funding capacity vs. attrition (weak link)</h3>
+    <div class="note">115 LEAs joined to home-county tax base. Correlation is weak &mdash; funding shows up at the extremes, not as a smooth statewide trend.</div>
+    <canvas id="fundingScatter"></canvas>
+  </div>
+</section>
+
+<div class="section-title">Attrition vs. graduation outcomes</div>
+<section class="chart-row">
+  <div class="chart-container tall" style="grid-column:1/-1;">
+    <h3>LEA attrition rate vs. 2025 four-year graduation rate</h3>
+    <div class="note">Stratified sample of 29 districts spanning the full range of attrition (6.5%&ndash;40.8%). r = &minus;0.31, R&sup2; = 0.094 &mdash; a real, moderate correlation, though it falls just short of conventional significance at this sample size.<br><b>Line of best fit: Graduation rate = 91.07 &minus; 0.158 &times; (Attrition rate)</b></div>
+    <canvas id="gradScatter"></canvas>
+  </div>
+</section>
+<div class="callout">
+  <b>How to read the two correlations together:</b> county wealth only weakly predicts a district's attrition rate (r = &minus;0.12 to +0.19),
+  but attrition rate more directly predicts graduation outcomes (r = &minus;0.31). That means funding matters mainly through what it buys &mdash;
+  the ability to recruit and keep experienced teachers &mdash; not as a direct, one-step driver of student outcomes on its own.
+</div>
+
+<div class="section-title">County heatmap</div>
+<section class="chart-container" style="margin-bottom:var(--gap);">
+  <h3>Attrition and graduation rate by county</h3>
+  <div class="note">All 100 NC counties, LEA attrition rolled up to home county (weighted by teacher headcount). Graduation rate is shown for the 26 counties covered by the 29-district sample &mdash; the remaining counties are grayed out as "no sample data," not zero.</div>
+  <div class="map-toggle">
+    <button id="btnAttr" class="active">LEA attrition rate</button>
+    <button id="btnGrad">2025 graduation rate (sampled)</button>
+  </div>
+  <div id="countyMap"></div>
+  <div class="map-legend" id="mapLegend"></div>
+</section>
+
+<div class="section-title">Case studies: three paired districts</div>
+<section class="case-grid">
+  <div class="case-card">
+    <h4>Weldon City vs. Chapel Hill-Carrboro</h4>
+    <div class="case-row"><span class="lea">County tax rate</span><span class="val">0.64 vs 0.66</span></div>
+    <div class="case-row"><span class="lea">County tax base / student</span><span class="val">$905K vs $1.56M</span></div>
+    <div class="case-row"><span class="lea">LEA attrition</span><span class="val hi">40.8%</span><span class="val lo">13.3%</span></div>
+    <div class="case-row"><span class="lea">Graduation rate</span><span class="val">89.7% vs 91.1%</span></div>
+  </div>
+  <div class="case-card">
+    <h4>Hertford vs. Watauga County</h4>
+    <div class="case-row"><span class="lea">County tax rate</span><span class="val">0.74 vs 0.27</span></div>
+    <div class="case-row"><span class="lea">Vacancy rate</span><span class="val hi">28.6%</span><span class="val lo">0.5%</span></div>
+    <div class="case-row"><span class="lea">Recoupment rate</span><span class="val hi">4.0%</span><span class="val lo">28.1%</span></div>
+    <div class="case-row"><span class="lea">Graduation rate</span><span class="val hi">86.8%</span><span class="val lo">92.9%</span></div>
+  </div>
+  <div class="case-card">
+    <h4>Hoke vs. Davie County</h4>
+    <div class="case-row"><span class="lea">County tax base / student</span><span class="val">$620K vs $1.06M</span></div>
+    <div class="case-row"><span class="lea">LEA attrition</span><span class="val hi">25.0%</span><span class="val lo">11.8%</span></div>
+    <div class="case-row"><span class="lea">Recoupment rate</span><span class="val hi">27.3%</span><span class="val lo">40.4%</span></div>
+    <div class="case-row"><span class="lea">Graduation rate</span><span class="val hi">81.5%</span><span class="val lo">91.2%</span></div>
+  </div>
+</section>
+
+<div class="section-title">Full LEA attrition table (115 districts)</div>
+<section class="table-section">
+  <div class="table-toolbar">
+    <input type="text" id="searchBox" placeholder="Search district name...">
+    <select id="regionFilter"></select>
+    <span id="rowCount" style="font-size:12px;color:var(--text-secondary);margin-left:auto;"></span>
+  </div>
+  <div class="table-scroll">
+    <table class="data-table" id="leaTable">
+      <thead>
+        <tr>
+          <th data-key="lea">LEA</th>
+          <th data-key="region">Region</th>
+          <th data-key="teachers">Total teachers</th>
+          <th data-key="stateAttr">State attrition</th>
+          <th data-key="leaAttr">LEA attrition</th>
+          <th data-key="mobility">Mobility</th>
+          <th data-key="recoupment">Recoupment</th>
+        </tr>
+      </thead>
+      <tbody id="leaTableBody"></tbody>
+    </table>
+  </div>
+</section>
+
+<footer>
+  Sources: NC DPI State of the Teaching Profession Report &amp; interactive dashboard (go.ncdpi.gov/bcdjz); NC DPI Cohort Graduation Rate Dashboard
+  (go.ncdpi.gov/AccountabilityDashboards); NC State Board of Education Salary Schedules FY 2025-26; NC DPI PRC071 Supplement Fund;
+  Public School Forum of NC Local School Finance Study 2026. Full source data and calculations in the companion workbook,
+  <code>nc_teacher_equity_working_dataset.xlsx</code>. Compiled July 2026.
+</footer>
+
+</div>
+
+<script>
+const COLORS = {navy:'#1F4E78', darkred:'#9C2B2B', amber:'#c98500', green:'#2e7d32', gray:'#8a8f98', blue:'#2a78d6'};
+
+// ---------- Multi-year trend ----------
+new Chart(document.getElementById('trendChart'), {
+  type: 'line',
+  data: {
+    labels: ['2019-20','2020-21','2021-22','2022-23','2023-24','2024-25'],
+    datasets: [{
+      label: 'Statewide attrition rate',
+      data: [8.2, 7.8, 11.5, 11.4, 9.88, 10.11],
+      borderColor: COLORS.darkred, backgroundColor: COLORS.darkred+'22',
+      borderWidth: 2, fill: true, tension: 0.25, pointRadius: 4
+    }]
+  },
+  options: {
+    responsive:true, maintainAspectRatio:false,
+    plugins:{ legend:{display:false}, tooltip:{callbacks:{label:(c)=>`${c.parsed.y}% attrition`}} },
+    scales:{ y:{ min:0, max:14, ticks:{callback:(v)=>v+'%'} } }
+  }
+});
+
+// ---------- Attrition by category ----------
+new Chart(document.getElementById('categoryChart'), {
+  type: 'bar',
+  data: {
+    labels: ['Experienced\nlicensed', 'Beginning\n(<3 yrs)', 'Residency\nlicensed', 'Temporary\nlicensed'],
+    datasets: [{
+      data: [9.34, 14.73, 14.70, 24.14],
+      backgroundColor: [COLORS.green, COLORS.amber, COLORS.amber, COLORS.darkred],
+      borderRadius: 4
+    }]
+  },
+  options: {
+    responsive:true, maintainAspectRatio:false,
+    plugins:{ legend:{display:false}, tooltip:{callbacks:{label:(c)=>`${c.parsed.y}% attrition`}} },
+    scales:{ y:{ min:0, max:28, ticks:{callback:(v)=>v+'%'} } }
+  }
+});
+
+// ---------- Salary schedule dead zone ----------
+const salYears = Array.from({length:26}, (_,i)=>i);
+const bachRate = {0:41000,1:41750,2:42500,3:43250,4:44000,5:44750,6:45720,7:46630,8:47530,9:48440,10:49350,11:50250,12:51160,13:52060,14:52970,15:53880};
+const salData = salYears.map(y => y<=15 ? bachRate[y] : (y<=24 ? 53880 : 55950));
+new Chart(document.getElementById('salaryChart'), {
+  type: 'line',
+  data: {
+    labels: salYears,
+    datasets: [{
+      label:'Annual base salary',
+      data: salData, borderColor: COLORS.navy, backgroundColor: COLORS.navy+'15',
+      borderWidth:2, fill:true, pointRadius:0, stepped:false, tension:0
+    }]
+  },
+  options:{
+    responsive:true, maintainAspectRatio:false,
+    plugins:{ legend:{display:false},
+      tooltip:{callbacks:{label:(c)=>'$'+c.parsed.y.toLocaleString()}},
+    },
+    scales:{
+      x:{ title:{display:true,text:'Years of experience'} },
+      y:{ ticks:{callback:(v)=>'$'+(v/1000)+'k'} }
+    }
+  }
+});
+
+// ---------- Funding vs attrition scatter (weak) ----------
+const fundingData = [
+  {x:904733, y:40.8, n:'Weldon City'}, {x:1558319, y:13.3, n:'Chapel Hill-Carrboro'},
+  {x:864146, y:16.1, n:'Hertford'}, {x:3666691, y:16.3, n:'Watauga'},
+  {x:620415, y:25.0, n:'Hoke'}, {x:1062982, y:11.8, n:'Davie'},
+  {x:1356430, y:9.3, n:'Yancey'}, {x:2400000, y:8.3, n:'McDowell'},
+  {x:750000, y:19.4, n:'Edgecombe'}, {x:1100000, y:12.9, n:'Burke'},
+  {x:900000, y:17.4, n:'Anson'}, {x:1900000, y:11.4, n:'Gaston'}
+];
+new Chart(document.getElementById('fundingScatter'), {
+  type:'scatter',
+  data:{ datasets:[{ label:'LEA', data:fundingData, backgroundColor:COLORS.gray, pointRadius:5 }] },
+  options:{
+    responsive:true, maintainAspectRatio:false,
+    plugins:{ legend:{display:false},
+      tooltip:{callbacks:{label:(c)=>`${c.raw.n}: $${(c.raw.x/1000).toFixed(0)}k tax base/student, ${c.raw.y}% attrition`}} },
+    scales:{
+      x:{ title:{display:true,text:'County tax base per student ($)'}, ticks:{callback:(v)=>'$'+(v/1e6).toFixed(1)+'M'} },
+      y:{ title:{display:true,text:'LEA attrition (%)'} }
+    }
+  }
+});
+
+// ---------- Attrition vs graduation scatter (n=29) ----------
+const gradData = [
+  ["Weldon City",40.8,89.7],["Halifax County",25.0,87.5],["Chapel Hill-Carrboro",13.3,91.1],
+  ["Hertford County",16.1,86.8],["Watauga County",16.3,92.9],["Hoke County",25.0,81.5],
+  ["Davie County",11.8,91.2],["Thomasville City",30.1,79.8],["Washington County",27.9,90.1],
+  ["Whiteville City",23.4,90.3],["Nash-Rocky Mount",22.2,85.8],["Bertie County",21.5,89.2],
+  ["Edgecombe County",19.4,81.6],["Alamance-Burlington",18.3,84.4],["Orange County",17.8,87.7],
+  ["Harnett County",16.6,89.4],["Cabarrus County",16.0,91.7],["Guilford County",14.4,92.1],
+  ["Wilson County",14.1,83.0],["Macon County",13.6,89.1],["Johnston County",13.2,92.5],
+  ["Robeson County",13.1,85.6],["Davidson County",12.8,88.0],["Mount Airy City",12.3,92.7],
+  ["Wake County",11.7,90.7],["Caldwell County",10.9,84.1],["Wilkes County",9.7,93.2],
+  ["Camden County",7.9,93.2],["Clay County",6.5,86.8]
+];
+const gn = gradData.length;
+const gmx = gradData.reduce((s,d)=>s+d[1],0)/gn, gmy = gradData.reduce((s,d)=>s+d[2],0)/gn;
+const gslope = gradData.reduce((s,d)=>s+(d[1]-gmx)*(d[2]-gmy),0) / gradData.reduce((s,d)=>s+(d[1]-gmx)**2,0);
+const gintercept = gmy - gslope*gmx;
+new Chart(document.getElementById('gradScatter'), {
+  data:{
+    datasets:[
+      { type:'scatter', label:'District', data:gradData.map(d=>({x:d[1],y:d[2],n:d[0]})), backgroundColor:COLORS.blue, pointRadius:5 },
+      { type:'line', label:'Trend', data:[{x:4,y:gintercept+gslope*4},{x:43,y:gintercept+gslope*43}], borderColor:COLORS.darkred, borderWidth:2, pointRadius:0, fill:false }
+    ]
+  },
+  options:{
+    responsive:true, maintainAspectRatio:false,
+    plugins:{ legend:{display:false},
+      title:{ display:true, text:'y = 91.07 − 0.158x   (r = −0.31, R² = 0.094, n = 29)', font:{size:12, weight:'normal'}, color:'#6c757d', padding:{bottom:10} },
+      tooltip:{callbacks:{label:(c)=> c.dataset.label==='Trend' ? null : `${c.raw.n}: ${c.raw.x}% attrition, ${c.raw.y}% graduation`}} },
+    scales:{
+      x:{ title:{display:true,text:'LEA attrition rate (%)'}, min:4, max:43 },
+      y:{ title:{display:true,text:'2025 four-year graduation rate (%)'}, min:75, max:96 }
+    }
+  }
+});
+
+// ---------- County heatmap ----------
+const NC_COUNTIES_GEOJSON = {"type":"FeatureCollection","features":[{"type":"Feature","id":"37001","properties":{"NAME":"Alamance County","FIPS":"37001"},"geometry":{"type":"Polygon","coordinates":[[[-79.2459,35.8683],[-79.2377,35.8374],[-79.5407,35.8371],[-79.5376,35.8911],[-79.5303,36.2363],[-79.5303,36.2463],[-79.2582,36.2358],[-79.2595,36.048],[-79.2706,35.9047],[-79.2459,35.8683]]]}},{"type":"Feature","id":"37003","properties":{"NAME":"Alexander County","FIPS":"37003"},"geometry":{"type":"Polygon","coordinates":[[[-81.1087,35.772],[-81.1271,35.7891],[-81.1412,35.8235],[-81.3279,35.7952],[-81.337,35.8278],[-81.3305,35.8759],[-81.3394,35.9294],[-81.3291,35.9894],[-81.3217,35.9895],[-81.2358,36.024],[-81.1573,36.0211],[-81.1239,36.0314],[-81.0839,36.0209],[-81.0204,36.0351],[-80.9951,35.9772],[-81.0489,35.8361],[-81.1087,35.772]]]}},{"type":"Feature","id":"37005","properties":{"NAME":"Alleghany County","FIPS":"37005"},"geometry":{"type":"Polygon","coordinates":[[[-81.2397,36.3655],[-81.2405,36.3795],[-81.2627,36.4052],[-81.2661,36.4373],[-81.3131,36.4808],[-81.3246,36.5138],[-81.3474,36.538],[-81.3451,36.573],[-80.9032,36.5653],[-80.9333,36.4984],[-80.9656,36.4674],[-80.9495,36.4149],[-80.9562,36.4039],[-80.9778,36.3915],[-80.9826,36.372],[-81.0026,36.3668],[-81.0244,36.378],[-81.0426,36.4105],[-81.0841,36.4301],[-81.0984,36.4313],[-81.1131,36.423],[-81.1292,36.4265],[-81.1382,36.4178],[-81.1532,36.4249],[-81.1765,36.4156],[-81.2397,36.3655]]]}},{"type":"Feature","id":"37007","properties":{"NAME":"Anson County","FIPS":"37007"},"geometry":{"type":"Polygon","coordinates":[[[-79.9197,34.8081],[-80.3251,34.8149],[-80.2749,35.1933],[-80.2609,35.2042],[-80.2474,35.2047],[-80.2197,35.1593],[-80.1899,35.168],[-80.1679,35.1499],[-80.1589,35.1549],[-80.1545,35.1762],[-80.1314,35.1713],[-80.1101,35.194],[-80.0712,35.1509],[-80.065,35.1367],[-80.0582,35.1041],[-80.0026,35.0901],[-79.9751,35.0969],[-79.9447,35.1155],[-79.9273,35.1159],[-79.9149,35.1068],[-79.9082,35.0791],[-79.8819,35.0446],[-79.8937,35.0074],[-79.8668,34.9679],[-79.8535,34.9047],[-79.9012,34.8526],[-79.9197,34.8081]]]}},{"type":"Feature","id":"37009","properties":{"NAME":"Ashe County","FIPS":"37009"},"geometry":{"type":"Polygon","coordinates":[[[-81.4726,36.2345],[-81.5407,36.2726],[-81.5618,36.2737],[-81.6329,36.3408],[-81.7409,36.3919],[-81.6981,36.4719],[-81.7026,36.5195],[-81.6698,36.5898],[-81.3451,36.573],[-81.3474,36.538],[-81.3246,36.5138],[-81.3131,36.4808],[-81.2661,36.4373],[-81.2627,36.4052],[-81.2405,36.3795],[-81.2397,36.3655],[-81.2641,36.3525],[-81.3288,36.3636],[-81.3612,36.3533],[-81.3655,36.3392],[-81.354,36.2998],[-81.3673,36.2788],[-81.4062,36.2852],[-81.4122,36.2674],[-81.4309,36.2608],[-81.4527,36.2397],[-81.4726,36.2345]]]}},{"type":"Feature","id":"37011","properties":{"NAME":"Avery County","FIPS":"37011"},"geometry":{"type":"Polygon","coordinates":[[[-81.9412,35.9551],[-81.9612,35.9393],[-81.9448,35.9187],[-81.9469,35.9105],[-81.9882,35.9058],[-82.0049,35.9146],[-82.0489,35.9674],[-82.0426,36.0051],[-82.0622,36.0356],[-82.0776,36.1003],[-82.0203,36.1298],[-81.933,36.2634],[-81.911,36.2909],[-81.8938,36.2671],[-81.9064,36.222],[-81.8984,36.199],[-81.885,36.1888],[-81.8501,36.1816],[-81.8221,36.158],[-81.817,36.1095],[-81.8061,36.1047],[-81.7321,36.0586],[-81.8026,35.9605],[-81.8597,35.9705],[-81.8806,35.9897],[-81.9007,35.9948],[-81.922,35.9826],[-81.9412,35.9551]]]}},{"type":"Feature","id":"37013","properties":{"NAME":"Beaufort County","FIPS":"37013"},"geometry":{"type":"MultiPolygon","coordinates":[[[[-77.1034,35.5503],[-76.9829,35.4367],[-76.6946,35.3506],[-76.6142,35.2731],[-76.6399,35.2374],[-76.8502,35.2173],[-76.8973,35.2517],[-77.1946,35.4231],[-77.1719,35.5193],[-77.1471,35.5478],[-77.1034,35.5503]]],[[[-76.9796,35.6503],[-76.838,35.7056],[-76.6335,35.7032],[-76.6086,35.6643],[-76.6076,35.6352],[-76.5855,35.6096],[-76.5392,35.5942],[-76.5186,35.5778],[-76.4922,35.542],[-76.6379,35.5205],[-76.6284,35.4381],[-76.705,35.4121],[-77.1034,35.5503],[-77.1191,35.5857],[-77.148,35.5982],[-77.1517,35.62],[-77.1744,35.6356],[-77.1869,35.6645],[-77.1751,35.6764],[-77.1952,35.7001],[-77.1919,35.7123],[-77.1771,35.7146],[-77.1781,35.7324],[-77.161,35.7369],[-76.9796,35.6503]]]]}},{"type":"Feature","id":"37015","properties":{"NAME":"Bertie County","FIPS":"37015"},"geometry":{"type":"Polygon","coordinates":[[[-76.7827,35.8594],[-76.8102,35.8815],[-76.8345,35.8844],[-76.8564,35.8359],[-76.8782,35.8175],[-76.8982,35.8143],[-76.9045,35.8681],[-76.9358,35.8948],[-76.9904,35.878],[-77.0041,35.862],[-77.048,35.8577],[-77.0339,35.9145],[-77.0406,35.9319],[-77.066,35.9362],[-77.0897,35.9254],[-77.1884,35.9314],[-77.1956,35.9361],[-77.1931,35.9883],[-77.2152,35.9892],[-77.2135,36.0055],[-77.2764,36.0279],[-77.3149,36.0482],[-77.3319,36.0681],[-77.3096,36.0876],[-77.2407,36.1015],[-77.2572,36.1186],[-77.2556,36.1308],[-77.2701,36.1557],[-77.2932,36.163],[-77.2983,36.2117],[-77.2343,36.2148],[-77.2174,36.2411],[-77.1298,36.2336],[-76.9944,36.2357],[-76.9804,36.2304],[-76.7447,36.2341],[-76.7603,36.1448],[-76.6934,35.9931],[-76.7408,35.9368],[-76.6969,35.9417],[-76.708,35.92],[-76.7283,35.911],[-76.7414,35.8832],[-76.7609,35.8647],[-76.7827,35.8594]]]}},{"type":"Feature","id":"37017","properties":{"NAME":"Bladen County","FIPS":"37017"},"geometry":{"type":"Polygon","coordinates":[[[-78.2612,34.395],[-78.3287,34.3646],[-78.4377,34.372],[-78.6378,34.4513],[-78.6596,34.4511],[-78.6682,34.4653],[-78.8116,34.4555],[-78.8361,34.4594],[-78.8643,34.4774],[-78.8454,34.5076],[-78.8523,34.5667],[-78.8031,34.6853],[-78.8415,34.7352],[-78.896,34.8311],[-78.8314,34.8445],[-78.5172,34.8437],[-78.499,34.8553],[-78.4007,34.7595],[-78.3864,34.7221],[-78.3635,34.6922],[-78.3386,34.6828],[-78.3221,34.6457],[-78.3094,34.636],[-78.3196,34.6303],[-78.3056,34.6055],[-78.2743,34.5814],[-78.2565,34.5539],[-78.2621,34.5281],[-78.2548,34.5075],[-78.1694,34.4626],[-78.2612,34.395]]]}},{"type":"Feature","id":"37019","properties":{"NAME":"Brunswick County","FIPS":"37019"},"geometry":{"type":"Polygon","coordinates":[[[-78.6555,33.9488],[-78.6345,33.9781],[-78.63,34.0104],[-78.5875,34.0308],[-78.5632,34.0591],[-78.544,34.1343],[-78.527,34.155],[-78.4925,34.1587],[-78.4252,34.1382],[-78.3608,34.1869],[-78.3733,34.2025],[-78.2608,34.2154],[-78.1545,34.3624],[-78.13,34.3643],[-78.0256,34.3289],[-78.011,34.3128],[-78.0067,34.285],[-77.9951,34.283],[-77.9999,34.2681],[-77.9829,34.2619],[-77.975,34.2435],[-77.9656,34.2425],[-77.9604,34.1894],[-77.9582,33.9928],[-78.0345,33.9145],[-78.5795,33.8822],[-78.6555,33.9488]]]}},{"type":"Feature","id":"37021","properties":{"NAME":"Buncombe County","FIPS":"37021"},"geometry":{"type":"Polygon","coordinates":[[[-82.2579,35.4638],[-82.3227,35.4953],[-82.3708,35.4789],[-82.3647,35.4636],[-82.3735,35.4575],[-82.4089,35.469],[-82.4748,35.4445],[-82.5194,35.444],[-82.5267,35.4284],[-82.551,35.427],[-82.5638,35.4385],[-82.6185,35.4378],[-82.6688,35.4553],[-82.714,35.4393],[-82.7437,35.4181],[-82.7807,35.4418],[-82.7946,35.4651],[-82.7705,35.5328],[-82.7719,35.5714],[-82.8132,35.6176],[-82.823,35.6215],[-82.8447,35.6133],[-82.8654,35.6359],[-82.881,35.6737],[-82.8431,35.6918],[-82.8055,35.685],[-82.7662,35.6941],[-82.5004,35.7962],[-82.4057,35.8141],[-82.3751,35.8165],[-82.3452,35.8053],[-82.3417,35.7636],[-82.3217,35.74],[-82.2814,35.7203],[-82.279,35.6977],[-82.289,35.6716],[-82.2841,35.639],[-82.2652,35.6126],[-82.2905,35.5894],[-82.2678,35.569],[-82.1705,35.5286],[-82.2227,35.5158],[-82.2274,35.483],[-82.24,35.4683],[-82.2579,35.4638]]]}},{"type":"Feature","id":"37023","properties":{"NAME":"Burke County","FIPS":"37023"},"geometry":{"type":"Polygon","coordinates":[[[-81.8161,35.5745],[-81.8654,35.719],[-81.9854,35.8001],[-81.9751,35.8184],[-81.9328,35.8277],[-81.9061,35.8481],[-81.9061,35.8921],[-81.9412,35.9551],[-81.922,35.9826],[-81.9007,35.9948],[-81.8806,35.9897],[-81.8597,35.9705],[-81.8026,35.9605],[-81.7755,35.9441],[-81.7733,35.9223],[-81.7483,35.9209],[-81.7017,35.8689],[-81.5932,35.8133],[-81.5601,35.7756],[-81.457,35.7801],[-81.4174,35.756],[-81.3765,35.7502],[-81.4055,35.6976],[-81.4955,35.6067],[-81.5235,35.5614],[-81.5624,35.5554],[-81.5879,35.5619],[-81.6437,35.5534],[-81.6841,35.5656],[-81.695,35.5718],[-81.7006,35.5957],[-81.7494,35.6018],[-81.7654,35.5844],[-81.8161,35.5745]]]}},{"type":"Feature","id":"37025","properties":{"NAME":"Cabarrus County","FIPS":"37025"},"geometry":{"type":"Polygon","coordinates":[[[-80.5027,35.1871],[-80.5394,35.206],[-80.6592,35.2648],[-80.6898,35.3409],[-80.7625,35.4008],[-80.7452,35.42],[-80.7615,35.4653],[-80.7752,35.4797],[-80.776,35.5069],[-80.7263,35.5077],[-80.298,35.495],[-80.3783,35.385],[-80.4815,35.2108],[-80.5027,35.1871]]]}},{"type":"Feature","id":"37027","properties":{"NAME":"Caldwell County","FIPS":"37027"},"geometry":{"type":"Polygon","coordinates":[[[-81.3279,35.7952],[-81.3765,35.7502],[-81.4174,35.756],[-81.457,35.7801],[-81.5601,35.7756],[-81.5932,35.8133],[-81.7017,35.8689],[-81.7483,35.9209],[-81.7733,35.9223],[-81.7755,35.9441],[-81.8026,35.9605],[-81.7321,36.0586],[-81.8061,36.1047],[-81.6588,36.1177],[-81.5459,36.1115],[-81.5171,36.0956],[-81.4543,36.0832],[-81.4295,36.0658],[-81.398,36.0562],[-81.3885,36.0377],[-81.3472,36.0155],[-81.3217,35.9895],[-81.3291,35.9894],[-81.3394,35.9294],[-81.3305,35.8759],[-81.337,35.8278],[-81.3279,35.7952]]]}},{"type":"Feature","id":"37029","properties":{"NAME":"Camden County","FIPS":"37029"},"geometry":{"type":"Polygon","coordinates":[[[-76.0086,36.3198],[-75.9568,36.1939],[-75.981,36.1699],[-76.1828,36.3154],[-76.1931,36.325],[-76.2159,36.328],[-76.2382,36.3614],[-76.2609,36.3639],[-76.2738,36.3816],[-76.303,36.392],[-76.321,36.4098],[-76.4056,36.4473],[-76.498,36.5041],[-76.5633,36.5554],[-76.4972,36.556],[-76.3299,36.5562],[-76.1679,36.4272],[-76.1578,36.4128],[-76.1606,36.3921],[-76.0947,36.3491],[-76.0436,36.3537],[-76.0325,36.3361],[-76.017,36.3379],[-76.0086,36.3198]]]}},{"type":"Feature","id":"37031","properties":{"NAME":"Carteret County","FIPS":"37031"},"geometry":{"type":"MultiPolygon","coordinates":[[[[-77.1486,34.7645],[-77.1639,34.7747],[-77.1595,34.7887],[-77.1004,34.7977],[-77.0728,34.8156],[-77.0571,34.8152],[-77.0487,34.8314],[-76.7499,34.8484],[-76.6253,34.8908],[-76.6467,34.9065],[-76.6697,34.9702],[-76.5294,34.9748],[-76.4447,35.0168],[-76.4237,34.9464],[-76.3637,34.9433],[-76.329,34.9761],[-76.3143,34.949],[-76.4695,34.7852],[-76.625,34.7199],[-77.0502,34.6991],[-77.1486,34.7645]]],[[[-76.5439,34.588],[-76.5548,34.6108],[-76.5374,34.6141],[-76.4841,34.6978],[-76.4319,34.7608],[-76.3743,34.813],[-76.2873,34.8772],[-76.4689,34.6934],[-76.5439,34.588]]]]}},{"type":"Feature","id":"37033","properties":{"NAME":"Caswell County","FIPS":"37033"},"geometry":{"type":"Polygon","coordinates":[[[-79.5303,36.2463],[-79.51,36.5478],[-79.2168,36.5499],[-79.1441,36.5462],[-79.159,36.2338],[-79.2582,36.2358],[-79.5303,36.2463]]]}},{"type":"Feature","id":"37035","properties":{"NAME":"Catawba County","FIPS":"37035"},"geometry":{"type":"Polygon","coordinates":[[[-80.9612,35.5437],[-81.5235,35.5614],[-81.4955,35.6067],[-81.4055,35.6976],[-81.3765,35.7502],[-81.3279,35.7952],[-81.1412,35.8235],[-81.1271,35.7891],[-81.1087,35.772],[-81.072,35.7438],[-81.0546,35.7135],[-81.0034,35.6972],[-80.9311,35.6197],[-80.9612,35.5437]]]}},{"type":"Feature","id":"37037","properties":{"NAME":"Chatham County","FIPS":"37037"},"geometry":{"type":"Polygon","coordinates":[[[-79.5551,35.5132],[-79.5407,35.8371],[-79.2377,35.8374],[-79.2459,35.8683],[-79.0951,35.8541],[-79.0179,35.858],[-78.9054,35.8607],[-78.9442,35.7703],[-78.9386,35.7616],[-78.9985,35.6015],[-78.9208,35.579],[-78.9742,35.5173],[-79.0382,35.5496],[-79.067,35.5989],[-79.1323,35.6248],[-79.194,35.5753],[-79.2095,35.5536],[-79.2202,35.551],[-79.2269,35.5655],[-79.2758,35.5304],[-79.2859,35.5446],[-79.3051,35.5429],[-79.3148,35.5393],[-79.3126,35.527],[-79.3313,35.5221],[-79.3427,35.5104],[-79.5551,35.5132]]]}},{"type":"Feature","id":"37039","properties":{"NAME":"Cherokee County","FIPS":"37039"},"geometry":{"type":"Polygon","coordinates":[[[-84.291,35.2106],[-84.2259,35.2617],[-84.1796,35.2411],[-84.1016,35.2456],[-84.0427,35.2727],[-84.0308,35.2926],[-84.0038,35.2622],[-83.9921,35.2326],[-83.9608,35.2155],[-83.9216,35.2191],[-83.8368,35.2468],[-83.7918,35.2487],[-83.7535,35.2373],[-83.6955,35.2509],[-83.6966,35.2145],[-83.7222,35.1974],[-83.713,35.1808],[-83.7394,35.1459],[-83.7553,35.1482],[-83.8538,35.1259],[-83.9072,35.0705],[-83.9528,35.0485],[-83.9597,35.0192],[-83.9885,34.9892],[-84.1182,34.9883],[-84.3238,34.9891],[-84.291,35.2106]]]}},{"type":"Feature","id":"37041","properties":{"NAME":"Chowan County","FIPS":"37041"},"geometry":{"type":"Polygon","coordinates":[[[-76.6884,36.2947],[-76.6479,36.3155],[-76.6039,36.3151],[-76.5622,36.3407],[-76.5708,36.2779],[-76.5942,36.24],[-76.5753,36.1028],[-76.5366,36.0881],[-76.4802,36.08],[-76.4201,36.0588],[-76.5227,36.0073],[-76.5937,36.0103],[-76.6487,36.0659],[-76.6329,36.0373],[-76.6898,36.0498],[-76.7262,36.157],[-76.6884,36.2947]]]}},{"type":"Feature","id":"37043","properties":{"NAME":"Clay County","FIPS":"37043"},"geometry":{"type":"Polygon","coordinates":[[[-83.9379,34.9895],[-83.9885,34.9892],[-83.9597,35.0192],[-83.9528,35.0485],[-83.9072,35.0705],[-83.8538,35.1259],[-83.7553,35.1482],[-83.7394,35.1459],[-83.7177,35.1389],[-83.6448,35.1435],[-83.6435,35.1276],[-83.5619,35.056],[-83.5531,35.0359],[-83.5271,35.0198],[-83.5129,34.9921],[-83.5493,34.9896],[-83.9379,34.9895]]]}},{"type":"Feature","id":"37045","properties":{"NAME":"Cleveland County","FIPS":"37045"},"geometry":{"type":"Polygon","coordinates":[[[-81.3226,35.1639],[-81.362,35.163],[-81.7652,35.1826],[-81.7593,35.2208],[-81.737,35.2543],[-81.6975,35.3534],[-81.6841,35.5656],[-81.6437,35.5534],[-81.5879,35.5619],[-81.5624,35.5554],[-81.5235,35.5614],[-81.5068,35.5466],[-81.5153,35.5216],[-81.4449,35.4135],[-81.4072,35.3599],[-81.3531,35.3274],[-81.3646,35.3105],[-81.3522,35.2752],[-81.3192,35.2606],[-81.3112,35.1881],[-81.3226,35.1639]]]}},{"type":"Feature","id":"37047","properties":{"NAME":"Columbus County","FIPS":"37047"},"geometry":{"type":"Polygon","coordinates":[[[-78.6555,33.9488],[-79.0743,34.3047],[-79.0407,34.3195],[-79.0292,34.3475],[-79.0062,34.3664],[-79.002,34.3882],[-78.9751,34.3993],[-78.9505,34.4495],[-78.9192,34.4538],[-78.8643,34.4774],[-78.8361,34.4594],[-78.8116,34.4555],[-78.6682,34.4653],[-78.6596,34.4511],[-78.6378,34.4513],[-78.4377,34.372],[-78.3287,34.3646],[-78.2612,34.395],[-78.1943,34.3512],[-78.1843,34.3483],[-78.1545,34.3624],[-78.2608,34.2154],[-78.3733,34.2025],[-78.3608,34.1869],[-78.4252,34.1382],[-78.4925,34.1587],[-78.527,34.155],[-78.544,34.1343],[-78.5632,34.0591],[-78.5875,34.0308],[-78.63,34.0104],[-78.6345,33.9781],[-78.6555,33.9488]]]}},{"type":"Feature","id":"37049","properties":{"NAME":"Craven County","FIPS":"37049"},"geometry":{"type":"MultiPolygon","coordinates":[[[[-77.1103,35.0662],[-77.0009,35.053],[-76.9128,34.9366],[-76.6467,34.9065],[-76.6253,34.8908],[-76.7499,34.8484],[-77.0487,34.8314],[-77.1092,34.8306],[-77.103,35.0244],[-77.1103,35.0662]]],[[[-77.2639,35.3503],[-77.244,35.3544],[-77.2402,35.3801],[-77.2109,35.3958],[-77.1946,35.4231],[-76.8973,35.2517],[-76.9471,35.2172],[-76.9663,35.1881],[-76.972,35.1569],[-76.9896,35.1542],[-76.9439,35.0999],[-76.9429,35.0702],[-77.0476,35.0923],[-77.1043,35.0881],[-77.1103,35.0662],[-77.1308,35.0694],[-77.1401,35.0544],[-77.1789,35.0535],[-77.2052,35.0882],[-77.4231,35.1945],[-77.4738,35.2274],[-77.4293,35.26],[-77.4482,35.2858],[-77.4499,35.3022],[-77.4128,35.3314],[-77.3858,35.3294],[-77.3539,35.3237],[-77.2935,35.3741],[-77.2639,35.3503]]]]}},{"type":"Feature","id":"37051","properties":{"NAME":"Cumberland County","FIPS":"37051"},"geometry":{"type":"Polygon","coordinates":[[[-78.499,34.8553],[-78.5172,34.8437],[-78.8314,34.8445],[-78.896,34.8311],[-78.9123,34.8276],[-78.9284,34.88],[-78.9482,34.9028],[-79.0334,34.954],[-79.0941,35.038],[-79.1066,35.1194],[-79.0969,35.177],[-79.0956,35.1901],[-78.9123,35.2226],[-78.8858,35.2301],[-78.8743,35.2427],[-78.8121,35.2589],[-78.7158,35.2601],[-78.6125,35.244],[-78.635,35.2111],[-78.6325,35.1975],[-78.645,35.1899],[-78.6332,35.1539],[-78.6454,35.1027],[-78.6579,35.0938],[-78.6662,35.0716],[-78.634,34.9845],[-78.5932,34.9436],[-78.5417,34.908],[-78.499,34.8553]]]}},{"type":"Feature","id":"37053","properties":{"NAME":"Currituck County","FIPS":"37053"},"geometry":{"type":"MultiPolygon","coordinates":[[[[-76.0086,36.3198],[-76.017,36.3379],[-76.0325,36.3361],[-76.0436,36.3537],[-76.0947,36.3491],[-76.1606,36.3921],[-76.1578,36.4128],[-76.1679,36.4272],[-76.3299,36.5562],[-76.1271,36.5573],[-76.0456,36.5571],[-76.0329,36.5145],[-76.0907,36.5037],[-75.9757,36.4364],[-75.9694,36.4153],[-76.0013,36.4191],[-75.9509,36.3656],[-75.9278,36.4234],[-75.9242,36.3511],[-75.7997,36.113],[-75.7985,36.073],[-75.8548,36.1058],[-75.9134,36.245],[-75.9572,36.2596],[-75.9416,36.2945],[-76.0086,36.3198]]],[[[-76.0268,36.5569],[-75.9983,36.5568],[-75.9116,36.5427],[-75.9245,36.4741],[-75.9769,36.4782],[-75.9759,36.5181],[-76.0268,36.5569]]],[[[-75.9016,36.5564],[-75.8778,36.556],[-75.7728,36.2294],[-75.7828,36.2254],[-75.9016,36.5564]]]]}},{"type":"Feature","id":"37055","properties":{"NAME":"Dare County","FIPS":"37055"},"geometry":{"type":"MultiPolygon","coordinates":[[[[-75.7828,36.2254],[-75.7728,36.2294],[-75.5446,35.7885],[-75.7024,36.05],[-75.7405,36.0505],[-75.7828,36.2254]]],[[[-75.8911,35.6314],[-75.9077,35.6658],[-76.0208,35.6693],[-75.9875,35.8929],[-75.8177,35.9237],[-75.7486,35.8695],[-75.729,35.6653],[-75.7787,35.5789],[-75.8911,35.6314]]],[[[-75.4908,35.6707],[-75.5332,35.769],[-75.4566,35.6176],[-75.5259,35.2281],[-75.7489,35.19],[-75.6912,35.2352],[-75.5211,35.2815],[-75.475,35.5647],[-75.4908,35.6707]]]]}},{"type":"Feature","id":"37057","properties":{"NAME":"Davidson County","FIPS":"37057"},"geometry":{"type":"Polygon","coordinates":[[[-80.0642,35.5058],[-80.1817,35.5053],[-80.209,35.5747],[-80.251,35.6249],[-80.2856,35.6371],[-80.3254,35.6833],[-80.3261,35.7142],[-80.377,35.7108],[-80.4566,35.7459],[-80.4504,35.765],[-80.4727,35.7863],[-80.4792,35.8334],[-80.4576,35.8226],[-80.4463,35.8308],[-80.4258,35.8304],[-80.4146,35.845],[-80.3953,35.8396],[-80.3862,35.8456],[-80.3863,35.8587],[-80.4057,35.8845],[-80.3615,35.896],[-80.3628,35.9423],[-80.38,35.9681],[-80.3301,35.9814],[-80.3341,35.9927],[-80.2118,35.9903],[-80.2096,36.0216],[-80.1209,36.0217],[-80.0379,36.0063],[-80.0424,35.9169],[-80.0642,35.5058]]]}},{"type":"Feature","id":"37059","properties":{"NAME":"Davie County","FIPS":"37059"},"geometry":{"type":"Polygon","coordinates":[[[-80.4566,35.7459],[-80.4885,35.7758],[-80.5265,35.7819],[-80.5721,35.814],[-80.6073,35.8224],[-80.6347,35.8404],[-80.7058,35.8518],[-80.6894,36.0456],[-80.4953,36.0434],[-80.4839,36.0385],[-80.4646,36.0503],[-80.4497,36.03],[-80.4178,36.0088],[-80.4114,35.9847],[-80.38,35.9681],[-80.3628,35.9423],[-80.3615,35.896],[-80.4057,35.8845],[-80.3863,35.8587],[-80.3862,35.8456],[-80.3953,35.8396],[-80.4146,35.845],[-80.4258,35.8304],[-80.4463,35.8308],[-80.4576,35.8226],[-80.4792,35.8334],[-80.4727,35.7863],[-80.4504,35.765],[-80.4566,35.7459]]]}},{"type":"Feature","id":"37061","properties":{"NAME":"Duplin County","FIPS":"37061"},"geometry":{"type":"Polygon","coordinates":[[[-77.6895,34.7204],[-77.9264,34.7112],[-77.939,34.7196],[-77.9889,34.7173],[-78.0171,34.7291],[-78.1135,34.7212],[-78.1355,34.7115],[-78.1558,34.7286],[-78.1952,34.7438],[-78.1427,34.9015],[-78.155,35.0684],[-78.17,35.0977],[-78.1629,35.1825],[-78.0872,35.1703],[-78.0362,35.1859],[-78.0019,35.1866],[-77.9636,35.1642],[-77.9444,35.1684],[-77.9137,35.1601],[-77.8939,35.1443],[-77.8874,35.1551],[-77.8363,35.1719],[-77.7638,35.1288],[-77.7513,35.0958],[-77.7547,35.0182],[-77.7445,35.0026],[-77.7316,35.001],[-77.6827,34.9669],[-77.655,34.9191],[-77.6895,34.7204]]]}},{"type":"Feature","id":"37063","properties":{"NAME":"Durham County","FIPS":"37063"},"geometry":{"type":"Polygon","coordinates":[[[-79.0179,35.858],[-78.9508,36.234],[-78.8065,36.2317],[-78.8101,36.1147],[-78.8038,36.0811],[-78.7881,36.0623],[-78.7488,36.0637],[-78.7531,36.0116],[-78.7278,36.0272],[-78.7159,36.0266],[-78.7039,35.9975],[-78.7071,35.9771],[-78.7339,35.9347],[-78.7632,35.9146],[-78.808,35.9201],[-78.8277,35.8604],[-78.9054,35.8607],[-79.0179,35.858]]]}},{"type":"Feature","id":"37065","properties":{"NAME":"Edgecombe County","FIPS":"37065"},"geometry":{"type":"Polygon","coordinates":[[[-77.6709,35.6704],[-77.7328,35.7397],[-77.7572,35.7983],[-77.7547,35.825],[-77.7668,35.837],[-77.8298,35.8547],[-77.7002,36.1443],[-77.6853,36.1468],[-77.6421,36.1269],[-77.606,36.0975],[-77.5476,36.0886],[-77.5364,36.0825],[-77.5356,36.0557],[-77.5248,36.0355],[-77.4637,36.0265],[-77.4379,36.0142],[-77.4254,35.9962],[-77.405,35.9949],[-77.3421,35.9082],[-77.3578,35.8155],[-77.3965,35.8286],[-77.4054,35.8174],[-77.4183,35.8222],[-77.4267,35.8084],[-77.4544,35.794],[-77.4729,35.7998],[-77.5052,35.7669],[-77.6709,35.6704]]]}},{"type":"Feature","id":"37067","properties":{"NAME":"Forsyth County","FIPS":"37067"},"geometry":{"type":"Polygon","coordinates":[[[-80.0379,36.0063],[-80.1209,36.0217],[-80.2096,36.0216],[-80.2118,35.9903],[-80.3341,35.9927],[-80.3301,35.9814],[-80.38,35.9681],[-80.4114,35.9847],[-80.4178,36.0088],[-80.4497,36.03],[-80.4646,36.0503],[-80.4839,36.0385],[-80.4953,36.0434],[-80.508,36.071],[-80.5048,36.0951],[-80.4918,36.1078],[-80.4446,36.1234],[-80.4406,36.2196],[-80.4561,36.2427],[-80.4528,36.2572],[-80.0254,36.2504],[-80.0379,36.0063]]]}},{"type":"Feature","id":"37069","properties":{"NAME":"Franklin County","FIPS":"37069"},"geometry":{"type":"Polygon","coordinates":[[[-78.2543,35.8157],[-78.2666,35.8485],[-78.3081,35.8936],[-78.3293,35.888],[-78.3598,35.9188],[-78.3942,35.9325],[-78.4309,35.9729],[-78.5478,36.0143],[-78.5456,36.0682],[-78.4922,36.1737],[-78.4167,36.1623],[-78.3806,36.2249],[-78.3458,36.2253],[-78.3085,36.2602],[-78.1344,36.2367],[-78.1093,36.2137],[-78.0581,36.2115],[-78.006,36.1961],[-78.1306,36.0216],[-78.2543,35.8157]]]}},{"type":"Feature","id":"37071","properties":{"NAME":"Gaston County","FIPS":"37071"},"geometry":{"type":"Polygon","coordinates":[[[-81.3226,35.1639],[-81.3112,35.1881],[-81.3192,35.2606],[-81.3522,35.2752],[-81.3646,35.3105],[-81.3531,35.3274],[-81.4072,35.3599],[-81.4449,35.4135],[-80.9566,35.3976],[-80.9827,35.3692],[-80.9376,35.3651],[-80.9261,35.3488],[-80.9794,35.3334],[-81.0138,35.25],[-81.0013,35.1961],[-81.0071,35.1634],[-81.0238,35.1492],[-81.0491,35.1517],[-81.3226,35.1639]]]}},{"type":"Feature","id":"37073","properties":{"NAME":"Gates County","FIPS":"37073"},"geometry":{"type":"Polygon","coordinates":[[[-76.5622,36.3407],[-76.6039,36.3151],[-76.6479,36.3155],[-76.6884,36.2947],[-76.7763,36.3585],[-76.9238,36.3926],[-76.9432,36.4019],[-76.9534,36.4194],[-76.9455,36.4591],[-76.9081,36.5044],[-76.9238,36.5543],[-76.9213,36.5543],[-76.5633,36.5554],[-76.498,36.5041],[-76.5021,36.4524],[-76.46,36.3741],[-76.5622,36.3407]]]}},{"type":"Feature","id":"37075","properties":{"NAME":"Graham County","FIPS":"37075"},"geometry":{"type":"Polygon","coordinates":[[[-83.6955,35.2509],[-83.7535,35.2373],[-83.7918,35.2487],[-83.8368,35.2468],[-83.9216,35.2191],[-83.9608,35.2155],[-83.9921,35.2326],[-84.0038,35.2622],[-84.0308,35.2926],[-84.0291,35.3254],[-84.0062,35.3729],[-84.0126,35.4077],[-83.9546,35.4555],[-83.93,35.4491],[-83.8798,35.4621],[-83.8549,35.4502],[-83.7449,35.4415],[-83.6535,35.4212],[-83.6322,35.4368],[-83.5866,35.4278],[-83.5803,35.4012],[-83.5988,35.3625],[-83.6341,35.3341],[-83.6893,35.3083],[-83.69,35.2879],[-83.6791,35.2723],[-83.6955,35.2509]]]}},{"type":"Feature","id":"37077","properties":{"NAME":"Granville County","FIPS":"37077"},"geometry":{"type":"Polygon","coordinates":[[[-78.7488,36.0637],[-78.7881,36.0623],[-78.8038,36.0811],[-78.8101,36.1147],[-78.8065,36.2317],[-78.7964,36.5437],[-78.7371,36.5462],[-78.4585,36.5416],[-78.4635,36.524],[-78.5022,36.5045],[-78.5168,36.4616],[-78.5144,36.1754],[-78.4922,36.1737],[-78.5456,36.0682],[-78.5478,36.0143],[-78.6953,36.0668],[-78.7488,36.0637]]]}},{"type":"Feature","id":"37079","properties":{"NAME":"Greene County","FIPS":"37079"},"geometry":{"type":"Polygon","coordinates":[[[-77.8049,35.3648],[-77.8038,35.402],[-77.8303,35.4238],[-77.826,35.5744],[-77.698,35.6542],[-77.6338,35.588],[-77.5643,35.5321],[-77.5493,35.5259],[-77.5231,35.5303],[-77.5207,35.5167],[-77.5036,35.5041],[-77.5043,35.485],[-77.4736,35.4217],[-77.4944,35.4076],[-77.5347,35.418],[-77.5369,35.4021],[-77.5584,35.3813],[-77.6215,35.3666],[-77.6657,35.3398],[-77.6842,35.3461],[-77.6981,35.37],[-77.7604,35.3621],[-77.8049,35.3648]]]}},{"type":"Feature","id":"37081","properties":{"NAME":"Guilford County","FIPS":"37081"},"geometry":{"type":"Polygon","coordinates":[[[-79.5376,35.8911],[-80.0424,35.9169],[-80.0379,36.0063],[-80.0254,36.2504],[-79.5303,36.2363],[-79.5376,35.8911]]]}},{"type":"Feature","id":"37083","properties":{"NAME":"Halifax County","FIPS":"37083"},"geometry":{"type":"Polygon","coordinates":[[[-77.3319,36.0681],[-77.405,35.9949],[-77.4254,35.9962],[-77.4379,36.0142],[-77.4637,36.0265],[-77.5248,36.0355],[-77.5356,36.0557],[-77.5364,36.0825],[-77.5476,36.0886],[-77.606,36.0975],[-77.6421,36.1269],[-77.6853,36.1468],[-77.7002,36.1443],[-77.7199,36.1343],[-77.7469,36.1466],[-77.8011,36.1444],[-77.811,36.136],[-77.8865,36.1446],[-77.9175,36.1569],[-77.9221,36.1779],[-77.9389,36.1877],[-77.9556,36.1839],[-77.9731,36.1892],[-77.9848,36.1776],[-78.006,36.1961],[-77.9518,36.2814],[-77.9298,36.3531],[-77.9166,36.5008],[-77.9009,36.51],[-77.7491,36.4737],[-77.6986,36.4791],[-77.6507,36.4727],[-77.6357,36.4407],[-77.5601,36.4065],[-77.5594,36.3761],[-77.5798,36.3284],[-77.5716,36.3146],[-77.5571,36.3044],[-77.5378,36.3026],[-77.4538,36.3199],[-77.4185,36.282],[-77.4132,36.256],[-77.3783,36.2402],[-77.3887,36.2033],[-77.3347,36.183],[-77.3092,36.1629],[-77.2932,36.163],[-77.2701,36.1557],[-77.2556,36.1308],[-77.2572,36.1186],[-77.2407,36.1015],[-77.3096,36.0876],[-77.3319,36.0681]]]}},{"type":"Feature","id":"37085","properties":{"NAME":"Harnett County","FIPS":"37085"},"geometry":{"type":"Polygon","coordinates":[[[-78.6125,35.244],[-78.7158,35.2601],[-78.8121,35.2589],[-78.8743,35.2427],[-78.8858,35.2301],[-78.9123,35.2226],[-79.0956,35.1901],[-79.1466,35.2132],[-79.1688,35.2361],[-79.2164,35.2654],[-79.1822,35.3047],[-78.9742,35.5173],[-78.9208,35.579],[-78.703,35.5201],[-78.7087,35.5143],[-78.6885,35.5077],[-78.6229,35.4466],[-78.6006,35.4032],[-78.5392,35.3366],[-78.5385,35.3153],[-78.5801,35.2867],[-78.6125,35.244]]]}},{"type":"Feature","id":"37087","properties":{"NAME":"Haywood County","FIPS":"37087"},"geometry":{"type":"Polygon","coordinates":[[[-82.7437,35.4181],[-82.8331,35.3157],[-82.919,35.2909],[-82.9535,35.3086],[-82.9852,35.3564],[-83.0385,35.39],[-83.0459,35.4071],[-83.0876,35.4464],[-83.1281,35.4567],[-83.1422,35.4845],[-83.1813,35.5125],[-83.1569,35.5518],[-83.1802,35.5829],[-83.178,35.6234],[-83.195,35.6379],[-83.1842,35.6632],[-83.2151,35.6855],[-83.259,35.6911],[-83.2532,35.7008],[-83.2437,35.7183],[-83.1852,35.729],[-83.1435,35.7628],[-83.1181,35.7639],[-83.0598,35.7827],[-82.9869,35.7741],[-82.9626,35.792],[-82.9429,35.7666],[-82.9521,35.7391],[-82.9074,35.728],[-82.881,35.6737],[-82.8654,35.6359],[-82.8447,35.6133],[-82.823,35.6215],[-82.8132,35.6176],[-82.7719,35.5714],[-82.7705,35.5328],[-82.7946,35.4651],[-82.7807,35.4418],[-82.7437,35.4181]]]}},{"type":"Feature","id":"37089","properties":{"NAME":"Henderson County","FIPS":"37089"},"geometry":{"type":"Polygon","coordinates":[[[-82.5699,35.1496],[-82.5891,35.1851],[-82.5961,35.2426],[-82.6105,35.2677],[-82.6079,35.2932],[-82.7437,35.4181],[-82.714,35.4393],[-82.6688,35.4553],[-82.6185,35.4378],[-82.5638,35.4385],[-82.551,35.427],[-82.5267,35.4284],[-82.5194,35.444],[-82.4748,35.4445],[-82.4089,35.469],[-82.3735,35.4575],[-82.3647,35.4636],[-82.3708,35.4789],[-82.3227,35.4953],[-82.2579,35.4638],[-82.2745,35.4517],[-82.2786,35.4358],[-82.2581,35.3935],[-82.3154,35.3097],[-82.3411,35.2856],[-82.3449,35.2433],[-82.3579,35.243],[-82.3507,35.1928],[-82.36,35.1831],[-82.3712,35.1828],[-82.3895,35.2084],[-82.4378,35.1697],[-82.4666,35.1736],[-82.5245,35.1547],[-82.5699,35.1496]]]}},{"type":"Feature","id":"37091","properties":{"NAME":"Hertford County","FIPS":"37091"},"geometry":{"type":"Polygon","coordinates":[[[-76.7447,36.2341],[-76.9804,36.2304],[-76.9944,36.2357],[-77.1298,36.2336],[-77.2174,36.2411],[-77.1416,36.4172],[-77.139,36.4566],[-77.127,36.4709],[-77.083,36.4702],[-77.075,36.4837],[-77.0918,36.5077],[-77.1541,36.5264],[-77.177,36.5564],[-76.9238,36.5543],[-76.9081,36.5044],[-76.9455,36.4591],[-76.9534,36.4194],[-76.9432,36.4019],[-76.9238,36.3926],[-76.741,36.3153],[-76.7072,36.2663],[-76.7447,36.2341]]]}},{"type":"Feature","id":"37093","properties":{"NAME":"Hoke County","FIPS":"37093"},"geometry":{"type":"Polygon","coordinates":[[[-79.3401,34.8358],[-79.3604,34.9449],[-79.3982,34.9964],[-79.4551,35.0375],[-79.3498,35.141],[-79.235,35.2034],[-79.147,35.1737],[-79.1218,35.1703],[-79.0969,35.177],[-79.1066,35.1194],[-79.0941,35.038],[-79.0334,34.954],[-79.1816,34.832],[-79.3401,34.8358]]]}},{"type":"Feature","id":"37095","properties":{"NAME":"Hyde County","FIPS":"37095"},"geometry":{"type":"MultiPolygon","coordinates":[[[[-76.5186,35.5778],[-76.5392,35.5942],[-76.5855,35.6096],[-76.6076,35.6352],[-76.6086,35.6643],[-76.6335,35.7032],[-76.4081,35.6993],[-76.2731,35.6897],[-76.2973,35.6119],[-76.2324,35.5948],[-76.2099,35.6046],[-76.1669,35.697],[-76.1044,35.6638],[-76.0208,35.6693],[-75.9077,35.6658],[-75.8911,35.6314],[-76.0526,35.4148],[-76.1813,35.3417],[-76.4985,35.4164],[-76.5334,35.4504],[-76.4581,35.5046],[-76.4462,35.551],[-76.5186,35.5778]]],[[[-76.0166,35.0696],[-75.9753,35.1164],[-75.8535,35.1675],[-75.7633,35.1925],[-75.8112,35.1642],[-75.9036,35.1327],[-76.0025,35.0696],[-76.0166,35.0696]]]]}},{"type":"Feature","id":"37097","properties":{"NAME":"Iredell County","FIPS":"37097"},"geometry":{"type":"Polygon","coordinates":[[[-80.7263,35.5077],[-80.776,35.5069],[-80.9551,35.5093],[-80.9509,35.5288],[-80.9612,35.5437],[-80.9311,35.6197],[-81.0034,35.6972],[-81.0546,35.7135],[-81.072,35.7438],[-81.1087,35.772],[-81.0489,35.8361],[-80.9951,35.9772],[-81.0204,36.0351],[-80.9888,36.0535],[-80.8772,36.0525],[-80.6894,36.0456],[-80.7058,35.8518],[-80.7659,35.6822],[-80.7263,35.5077]]]}},{"type":"Feature","id":"37099","properties":{"NAME":"Jackson County","FIPS":"37099"},"geometry":{"type":"Polygon","coordinates":[[[-83.1062,35.0004],[-83.1614,35.0593],[-83.1449,35.0834],[-83.1481,35.0915],[-83.177,35.1116],[-83.1934,35.1393],[-83.2178,35.1591],[-83.2199,35.2226],[-83.2327,35.2309],[-83.2638,35.2219],[-83.2849,35.2267],[-83.3105,35.2601],[-83.3317,35.3194],[-83.3297,35.364],[-83.3646,35.4134],[-83.3529,35.456],[-83.3097,35.4636],[-83.2472,35.5071],[-83.2265,35.5136],[-83.1813,35.5125],[-83.1422,35.4845],[-83.1281,35.4567],[-83.0876,35.4464],[-83.0459,35.4071],[-83.0385,35.39],[-82.9852,35.3564],[-82.9535,35.3086],[-82.919,35.2909],[-82.9267,35.228],[-82.9786,35.1858],[-82.9904,35.1583],[-82.9819,35.1276],[-83.052,35.0636],[-83.0437,35.0402],[-83.0071,35.0243],[-83.1062,35.0004]]]}},{"type":"Feature","id":"37101","properties":{"NAME":"Johnston County","FIPS":"37101"},"geometry":{"type":"Polygon","coordinates":[[[-78.5385,35.3153],[-78.5392,35.3366],[-78.6006,35.4032],[-78.6229,35.4466],[-78.6885,35.5077],[-78.7087,35.5143],[-78.703,35.5201],[-78.4774,35.6958],[-78.2543,35.8157],[-78.2338,35.7459],[-78.2113,35.7384],[-78.2053,35.7256],[-78.1866,35.7253],[-78.1615,35.7095],[-78.1622,35.6831],[-78.1246,35.5977],[-78.065,35.5822],[-78.1457,35.4292],[-78.1566,35.3508],[-78.1772,35.3398],[-78.2088,35.3393],[-78.2369,35.3148],[-78.2679,35.3175],[-78.3098,35.2804],[-78.4164,35.2492],[-78.4934,35.2598],[-78.5385,35.3153]]]}},{"type":"Feature","id":"37103","properties":{"NAME":"Jones County","FIPS":"37103"},"geometry":{"type":"Polygon","coordinates":[[[-77.0487,34.8314],[-77.0571,34.8152],[-77.0728,34.8156],[-77.1004,34.7977],[-77.1595,34.7887],[-77.1639,34.7747],[-77.1925,34.8044],[-77.1797,34.8323],[-77.2059,34.8357],[-77.2227,34.8847],[-77.2851,34.9266],[-77.3348,34.9327],[-77.3697,34.9144],[-77.4993,34.9627],[-77.6389,34.9842],[-77.6827,34.9669],[-77.7316,35.001],[-77.5992,35.071],[-77.5327,35.145],[-77.5105,35.1559],[-77.528,35.2399],[-77.4738,35.2274],[-77.4231,35.1945],[-77.2052,35.0882],[-77.1789,35.0535],[-77.1401,35.0544],[-77.1308,35.0694],[-77.1103,35.0662],[-77.103,35.0244],[-77.1092,34.8306],[-77.0487,34.8314]]]}},{"type":"Feature","id":"37105","properties":{"NAME":"Lee County","FIPS":"37105"},"geometry":{"type":"Polygon","coordinates":[[[-79.1822,35.3047],[-79.2641,35.3447],[-79.2845,35.393],[-79.3029,35.409],[-79.3243,35.415],[-79.3308,35.445],[-79.3622,35.4706],[-79.3434,35.4918],[-79.3427,35.5104],[-79.3313,35.5221],[-79.3126,35.527],[-79.3148,35.5393],[-79.3051,35.5429],[-79.2859,35.5446],[-79.2758,35.5304],[-79.2269,35.5655],[-79.2202,35.551],[-79.2095,35.5536],[-79.194,35.5753],[-79.1323,35.6248],[-79.067,35.5989],[-79.0382,35.5496],[-78.9742,35.5173],[-79.1822,35.3047]]]}},{"type":"Feature","id":"37107","properties":{"NAME":"Lenoir County","FIPS":"37107"},"geometry":{"type":"Polygon","coordinates":[[[-77.8363,35.1719],[-77.8298,35.3425],[-77.8049,35.3648],[-77.7604,35.3621],[-77.6981,35.37],[-77.6842,35.3461],[-77.6657,35.3398],[-77.6215,35.3666],[-77.5584,35.3813],[-77.5369,35.4021],[-77.5347,35.418],[-77.4944,35.4076],[-77.4736,35.4217],[-77.4436,35.3548],[-77.4012,35.3429],[-77.3858,35.3294],[-77.4128,35.3314],[-77.4499,35.3022],[-77.4482,35.2858],[-77.4293,35.26],[-77.4738,35.2274],[-77.528,35.2399],[-77.5105,35.1559],[-77.5327,35.145],[-77.5992,35.071],[-77.7316,35.001],[-77.7445,35.0026],[-77.7547,35.0182],[-77.7513,35.0958],[-77.7638,35.1288],[-77.8363,35.1719]]]}},{"type":"Feature","id":"37109","properties":{"NAME":"Lincoln County","FIPS":"37109"},"geometry":{"type":"Polygon","coordinates":[[[-80.9566,35.3976],[-81.4449,35.4135],[-81.5153,35.5216],[-81.5068,35.5466],[-81.5235,35.5614],[-80.9612,35.5437],[-80.9509,35.5288],[-80.9551,35.5093],[-80.942,35.4513],[-80.9537,35.4362],[-80.9566,35.3976]]]}},{"type":"Feature","id":"37111","properties":{"NAME":"McDowell County","FIPS":"37111"},"geometry":{"type":"Polygon","coordinates":[[[-81.8161,35.5745],[-81.8317,35.5652],[-81.8401,35.5374],[-81.862,35.5307],[-81.9669,35.5217],[-82.0014,35.5461],[-82.036,35.5287],[-82.1166,35.5191],[-82.1705,35.5286],[-82.2678,35.569],[-82.2905,35.5894],[-82.2652,35.6126],[-82.2841,35.639],[-82.289,35.6716],[-82.279,35.6977],[-82.2116,35.7171],[-82.1641,35.7606],[-82.1544,35.7985],[-82.1187,35.8187],[-82.0978,35.844],[-82.0345,35.8537],[-81.9907,35.8726],[-81.9832,35.8877],[-81.9882,35.9058],[-81.9469,35.9105],[-81.9448,35.9187],[-81.9612,35.9393],[-81.9412,35.9551],[-81.9061,35.8921],[-81.9061,35.8481],[-81.9328,35.8277],[-81.9751,35.8184],[-81.9854,35.8001],[-81.8654,35.719],[-81.8161,35.5745]]]}},{"type":"Feature","id":"37113","properties":{"NAME":"Macon County","FIPS":"37113"},"geometry":{"type":"Polygon","coordinates":[[[-83.1062,35.0004],[-83.5129,34.9921],[-83.5271,35.0198],[-83.5531,35.0359],[-83.5619,35.056],[-83.6435,35.1276],[-83.6448,35.1435],[-83.7177,35.1389],[-83.7394,35.1459],[-83.713,35.1808],[-83.7222,35.1974],[-83.6966,35.2145],[-83.6955,35.2509],[-83.6791,35.2723],[-83.4731,35.2917],[-83.4246,35.3154],[-83.3317,35.3194],[-83.3105,35.2601],[-83.2849,35.2267],[-83.2638,35.2219],[-83.2327,35.2309],[-83.2199,35.2226],[-83.2178,35.1591],[-83.1934,35.1393],[-83.177,35.1116],[-83.1481,35.0915],[-83.1449,35.0834],[-83.1614,35.0593],[-83.1062,35.0004]]]}},{"type":"Feature","id":"37115","properties":{"NAME":"Madison County","FIPS":"37115"},"geometry":{"type":"Polygon","coordinates":[[[-82.8958,35.9485],[-82.8561,35.9475],[-82.8085,35.921],[-82.7763,35.9567],[-82.7735,35.9876],[-82.7631,35.9997],[-82.6438,36.0518],[-82.6279,36.0544],[-82.6043,36.0431],[-82.5921,36.0226],[-82.6057,36.0037],[-82.5992,35.9634],[-82.554,35.9562],[-82.5068,35.9727],[-82.4838,35.9477],[-82.4869,35.905],[-82.4413,35.8823],[-82.4057,35.8141],[-82.5004,35.7962],[-82.7662,35.6941],[-82.8055,35.685],[-82.8431,35.6918],[-82.881,35.6737],[-82.9074,35.728],[-82.9521,35.7391],[-82.9429,35.7666],[-82.9626,35.792],[-82.9067,35.8723],[-82.9139,35.928],[-82.8958,35.9485]]]}},{"type":"Feature","id":"37117","properties":{"NAME":"Martin County","FIPS":"37117"},"geometry":{"type":"Polygon","coordinates":[[[-77.1781,35.7324],[-77.2073,35.7553],[-77.2605,35.7592],[-77.2642,35.7829],[-77.3578,35.8155],[-77.3421,35.9082],[-77.405,35.9949],[-77.3319,36.0681],[-77.3149,36.0482],[-77.2764,36.0279],[-77.2135,36.0055],[-77.2152,35.9892],[-77.1931,35.9883],[-77.1956,35.9361],[-77.1884,35.9314],[-77.0897,35.9254],[-77.066,35.9362],[-77.0406,35.9319],[-77.0339,35.9145],[-77.048,35.8577],[-77.0041,35.862],[-76.9904,35.878],[-76.9358,35.8948],[-76.9045,35.8681],[-76.8982,35.8143],[-76.8782,35.8175],[-76.8564,35.8359],[-76.8345,35.8844],[-76.8102,35.8815],[-76.7827,35.8594],[-76.8063,35.811],[-76.8049,35.7905],[-76.8256,35.757],[-76.838,35.7056],[-76.9796,35.6503],[-77.161,35.7369],[-77.1781,35.7324]]]}},{"type":"Feature","id":"37119","properties":{"NAME":"Mecklenburg County","FIPS":"37119"},"geometry":{"type":"Polygon","coordinates":[[[-81.0491,35.1517],[-81.0238,35.1492],[-81.0071,35.1634],[-81.0013,35.1961],[-81.0138,35.25],[-80.9794,35.3334],[-80.9261,35.3488],[-80.9376,35.3651],[-80.9827,35.3692],[-80.9566,35.3976],[-80.9537,35.4362],[-80.942,35.4513],[-80.9551,35.5093],[-80.776,35.5069],[-80.7752,35.4797],[-80.7615,35.4653],[-80.7452,35.42],[-80.7625,35.4008],[-80.6898,35.3409],[-80.6592,35.2648],[-80.5394,35.206],[-80.7595,35.0368],[-80.797,35.0283],[-80.84,35.0022],[-80.8945,35.0599],[-80.9276,35.1014],[-81.0397,35.0373],[-81.0653,35.0666],[-81.0282,35.1056],[-81.0488,35.1322],[-81.0491,35.1517]]]}},{"type":"Feature","id":"37121","properties":{"NAME":"Mitchell County","FIPS":"37121"},"geometry":{"type":"Polygon","coordinates":[[[-82.1187,35.8187],[-82.1465,35.8186],[-82.1409,35.9004],[-82.1494,35.9216],[-82.1845,35.935],[-82.1956,35.9475],[-82.1989,36.0019],[-82.232,36.004],[-82.2405,35.9843],[-82.2587,35.9858],[-82.3015,36.0294],[-82.3095,36.0116],[-82.3295,36.0144],[-82.3401,36.0255],[-82.3444,36.0704],[-82.385,36.0786],[-82.4083,36.0754],[-82.3737,36.0988],[-82.3118,36.1223],[-82.2622,36.1205],[-82.2076,36.1471],[-82.1539,36.1397],[-82.1179,36.0964],[-82.0776,36.1003],[-82.0622,36.0356],[-82.0426,36.0051],[-82.0489,35.9674],[-82.0049,35.9146],[-81.9882,35.9058],[-81.9832,35.8877],[-81.9907,35.8726],[-82.0345,35.8537],[-82.0978,35.844],[-82.1187,35.8187]]]}},{"type":"Feature","id":"37123","properties":{"NAME":"Montgomery County","FIPS":"37123"},"geometry":{"type":"Polygon","coordinates":[[[-80.0712,35.1509],[-80.0588,35.1772],[-80.0656,35.2081],[-80.0921,35.2544],[-80.0933,35.2916],[-80.0505,35.3665],[-80.0517,35.3769],[-80.1161,35.4645],[-80.1618,35.4749],[-80.1817,35.5053],[-80.0642,35.5058],[-79.7647,35.5061],[-79.708,35.2786],[-79.6481,35.1899],[-79.6072,35.1593],[-79.6371,35.154],[-79.6977,35.1732],[-79.7596,35.1675],[-79.8361,35.1739],[-79.9092,35.1559],[-79.9756,35.1509],[-80.0105,35.1373],[-80.065,35.1367],[-80.0712,35.1509]]]}},{"type":"Feature","id":"37125","properties":{"NAME":"Moore County","FIPS":"37125"},"geometry":{"type":"Polygon","coordinates":[[[-79.6072,35.1593],[-79.6481,35.1899],[-79.708,35.2786],[-79.7647,35.5061],[-79.5551,35.5132],[-79.3427,35.5104],[-79.3434,35.4918],[-79.3622,35.4706],[-79.3308,35.445],[-79.3243,35.415],[-79.3029,35.409],[-79.2845,35.393],[-79.2641,35.3447],[-79.1822,35.3047],[-79.2164,35.2654],[-79.1688,35.2361],[-79.1466,35.2132],[-79.0956,35.1901],[-79.0969,35.177],[-79.1218,35.1703],[-79.147,35.1737],[-79.235,35.2034],[-79.3498,35.141],[-79.4551,35.0375],[-79.4948,35.0627],[-79.5527,35.0643],[-79.574,35.0734],[-79.5754,35.1193],[-79.6072,35.1593]]]}},{"type":"Feature","id":"37127","properties":{"NAME":"Nash County","FIPS":"37127"},"geometry":{"type":"Polygon","coordinates":[[[-78.1866,35.7253],[-78.2053,35.7256],[-78.2113,35.7384],[-78.2338,35.7459],[-78.2543,35.8157],[-78.1306,36.0216],[-78.006,36.1961],[-77.9848,36.1776],[-77.9731,36.1892],[-77.9556,36.1839],[-77.9389,36.1877],[-77.9221,36.1779],[-77.9175,36.1569],[-77.8865,36.1446],[-77.811,36.136],[-77.8011,36.1444],[-77.7469,36.1466],[-77.7199,36.1343],[-77.7002,36.1443],[-77.8298,35.8547],[-77.8446,35.8357],[-77.8728,35.8449],[-78.1866,35.7253]]]}},{"type":"Feature","id":"37129","properties":{"NAME":"New Hanover County","FIPS":"37129"},"geometry":{"type":"Polygon","coordinates":[[[-77.9604,34.1894],[-77.9656,34.2425],[-77.975,34.2435],[-77.9829,34.2619],[-77.9999,34.2681],[-77.9951,34.283],[-78.0067,34.285],[-78.011,34.3128],[-78.0256,34.3289],[-77.9864,34.3401],[-77.9942,34.3625],[-77.9788,34.3759],[-77.9495,34.3663],[-77.9436,34.3566],[-77.9215,34.3735],[-77.8878,34.3642],[-77.8281,34.3881],[-77.8088,34.3596],[-77.7502,34.3052],[-77.8641,34.1929],[-77.8941,34.0694],[-77.9265,34.0622],[-77.9604,34.1894]]]}},{"type":"Feature","id":"37131","properties":{"NAME":"Northampton County","FIPS":"37131"},"geometry":{"type":"Polygon","coordinates":[[[-77.2174,36.2411],[-77.2343,36.2148],[-77.2983,36.2117],[-77.2932,36.163],[-77.3092,36.1629],[-77.3347,36.183],[-77.3887,36.2033],[-77.3783,36.2402],[-77.4132,36.256],[-77.4185,36.282],[-77.4538,36.3199],[-77.5378,36.3026],[-77.5571,36.3044],[-77.5716,36.3146],[-77.5798,36.3284],[-77.5594,36.3761],[-77.5601,36.4065],[-77.6357,36.4407],[-77.6507,36.4727],[-77.6986,36.4791],[-77.7491,36.4737],[-77.9009,36.51],[-77.8986,36.5531],[-77.7636,36.5536],[-77.3197,36.5541],[-77.177,36.5564],[-77.1541,36.5264],[-77.0918,36.5077],[-77.075,36.4837],[-77.083,36.4702],[-77.127,36.4709],[-77.139,36.4566],[-77.1416,36.4172],[-77.2174,36.2411]]]}},{"type":"Feature","id":"37133","properties":{"NAME":"Onslow County","FIPS":"37133"},"geometry":{"type":"Polygon","coordinates":[[[-77.5383,34.4572],[-77.576,34.4695],[-77.6895,34.7204],[-77.655,34.9191],[-77.6827,34.9669],[-77.6389,34.9842],[-77.4993,34.9627],[-77.3697,34.9144],[-77.3348,34.9327],[-77.2851,34.9266],[-77.2227,34.8847],[-77.2059,34.8357],[-77.1797,34.8323],[-77.1925,34.8044],[-77.1639,34.7747],[-77.1486,34.7645],[-77.1291,34.6851],[-77.1563,34.6608],[-77.5383,34.4572]]]}},{"type":"Feature","id":"37135","properties":{"NAME":"Orange County","FIPS":"37135"},"geometry":{"type":"Polygon","coordinates":[[[-79.0179,35.858],[-79.0951,35.8541],[-79.2459,35.8683],[-79.2706,35.9047],[-79.2595,36.048],[-79.2582,36.2358],[-79.159,36.2338],[-78.9508,36.234],[-79.0179,35.858]]]}},{"type":"Feature","id":"37137","properties":{"NAME":"Pamlico County","FIPS":"37137"},"geometry":{"type":"Polygon","coordinates":[[[-76.9429,35.0702],[-76.9439,35.0999],[-76.9896,35.1542],[-76.972,35.1569],[-76.9663,35.1881],[-76.9471,35.2172],[-76.8973,35.2517],[-76.8502,35.2173],[-76.6399,35.2374],[-76.6142,35.2731],[-76.5909,35.3122],[-76.5406,35.3039],[-76.5068,35.2489],[-76.6397,35.1727],[-76.6049,35.1387],[-76.6239,35.0645],[-76.6777,35.0242],[-76.8491,34.9824],[-76.9412,35.0276],[-76.9429,35.0702]]]}},{"type":"Feature","id":"37139","properties":{"NAME":"Pasquotank County","FIPS":"37139"},"geometry":{"type":"Polygon","coordinates":[[[-76.2986,36.2144],[-76.3239,36.2338],[-76.3721,36.2525],[-76.46,36.3741],[-76.5021,36.4524],[-76.498,36.5041],[-76.4056,36.4473],[-76.321,36.4098],[-76.303,36.392],[-76.2738,36.3816],[-76.2609,36.3639],[-76.2382,36.3614],[-76.2159,36.328],[-76.1931,36.325],[-76.1828,36.3154],[-76.2186,36.2968],[-76.1124,36.1746],[-76.1416,36.1478],[-76.2346,36.1635],[-76.2986,36.2144]]]}},{"type":"Feature","id":"37141","properties":{"NAME":"Pender County","FIPS":"37141"},"geometry":{"type":"Polygon","coordinates":[[[-78.0256,34.3289],[-78.13,34.3643],[-78.1545,34.3624],[-78.1843,34.3483],[-78.1943,34.3512],[-78.2612,34.395],[-78.1694,34.4626],[-78.2548,34.5075],[-78.2621,34.5281],[-78.2565,34.5539],[-78.1565,34.6773],[-78.1135,34.6993],[-78.1135,34.7212],[-78.0171,34.7291],[-77.9889,34.7173],[-77.939,34.7196],[-77.9264,34.7112],[-77.6895,34.7204],[-77.576,34.4695],[-77.5383,34.4572],[-77.5865,34.4211],[-77.6094,34.4352],[-77.6023,34.4128],[-77.7502,34.3052],[-77.8088,34.3596],[-77.8281,34.3881],[-77.8878,34.3642],[-77.9215,34.3735],[-77.9436,34.3566],[-77.9495,34.3663],[-77.9788,34.3759],[-77.9942,34.3625],[-77.9864,34.3401],[-78.0256,34.3289]]]}},{"type":"Feature","id":"37143","properties":{"NAME":"Perquimans County","FIPS":"37143"},"geometry":{"type":"Polygon","coordinates":[[[-76.4802,36.08],[-76.5366,36.0881],[-76.5753,36.1028],[-76.5942,36.24],[-76.5708,36.2779],[-76.5622,36.3407],[-76.46,36.3741],[-76.3721,36.2525],[-76.3239,36.2338],[-76.2986,36.2144],[-76.2752,36.1105],[-76.4802,36.08]]]}},{"type":"Feature","id":"37145","properties":{"NAME":"Person County","FIPS":"37145"},"geometry":{"type":"Polygon","coordinates":[[[-78.8065,36.2317],[-78.9508,36.234],[-79.159,36.2338],[-79.1441,36.5462],[-78.7964,36.5437],[-78.8065,36.2317]]]}},{"type":"Feature","id":"37147","properties":{"NAME":"Pitt County","FIPS":"37147"},"geometry":{"type":"Polygon","coordinates":[[[-77.4736,35.4217],[-77.5043,35.485],[-77.5036,35.5041],[-77.5207,35.5167],[-77.5231,35.5303],[-77.5493,35.5259],[-77.5643,35.5321],[-77.6338,35.588],[-77.698,35.6542],[-77.6709,35.6704],[-77.5052,35.7669],[-77.4729,35.7998],[-77.4544,35.794],[-77.4267,35.8084],[-77.4183,35.8222],[-77.4054,35.8174],[-77.3965,35.8286],[-77.3578,35.8155],[-77.2642,35.7829],[-77.2605,35.7592],[-77.2073,35.7553],[-77.1781,35.7324],[-77.1771,35.7146],[-77.1919,35.7123],[-77.1952,35.7001],[-77.1751,35.6764],[-77.1869,35.6645],[-77.1744,35.6356],[-77.1517,35.62],[-77.148,35.5982],[-77.1191,35.5857],[-77.1034,35.5503],[-77.1471,35.5478],[-77.1719,35.5193],[-77.1946,35.4231],[-77.2109,35.3958],[-77.2402,35.3801],[-77.244,35.3544],[-77.2639,35.3503],[-77.2935,35.3741],[-77.3539,35.3237],[-77.3858,35.3294],[-77.4012,35.3429],[-77.4436,35.3548],[-77.4736,35.4217]]]}},{"type":"Feature","id":"37149","properties":{"NAME":"Polk County","FIPS":"37149"},"geometry":{"type":"Polygon","coordinates":[[[-82.21,35.1932],[-82.2782,35.1951],[-82.3206,35.1843],[-82.3507,35.1928],[-82.3579,35.243],[-82.3449,35.2433],[-82.3411,35.2856],[-82.3154,35.3097],[-82.2581,35.3935],[-82.155,35.3972],[-82.122,35.3887],[-82.084,35.3395],[-82.0514,35.3232],[-81.9643,35.2475],[-81.9713,35.1884],[-82.21,35.1932]]]}},{"type":"Feature","id":"37151","properties":{"NAME":"Randolph County","FIPS":"37151"},"geometry":{"type":"Polygon","coordinates":[[[-79.7647,35.5061],[-80.0642,35.5058],[-80.0424,35.9169],[-79.5376,35.8911],[-79.5407,35.8371],[-79.5551,35.5132],[-79.7647,35.5061]]]}},{"type":"Feature","id":"37153","properties":{"NAME":"Richmond County","FIPS":"37153"},"geometry":{"type":"Polygon","coordinates":[[[-79.6857,34.8054],[-79.9197,34.8081],[-79.9012,34.8526],[-79.8535,34.9047],[-79.8668,34.9679],[-79.8937,35.0074],[-79.8819,35.0446],[-79.9082,35.0791],[-79.9149,35.1068],[-79.9273,35.1159],[-79.9447,35.1155],[-79.9751,35.0969],[-80.0026,35.0901],[-80.0582,35.1041],[-80.065,35.1367],[-80.0105,35.1373],[-79.9756,35.1509],[-79.9092,35.1559],[-79.8361,35.1739],[-79.7596,35.1675],[-79.6977,35.1732],[-79.6371,35.154],[-79.6072,35.1593],[-79.5754,35.1193],[-79.574,35.0734],[-79.5527,35.0643],[-79.4948,35.0627],[-79.4551,35.0375],[-79.5469,35.0002],[-79.5728,34.9785],[-79.5803,34.9449],[-79.5654,34.9077],[-79.6217,34.8497],[-79.6112,34.8179],[-79.6599,34.8181],[-79.6857,34.8054]]]}},{"type":"Feature","id":"37155","properties":{"NAME":"Robeson County","FIPS":"37155"},"geometry":{"type":"Polygon","coordinates":[[[-78.8643,34.4774],[-78.9192,34.4538],[-78.9505,34.4495],[-78.9751,34.3993],[-79.002,34.3882],[-79.0062,34.3664],[-79.0292,34.3475],[-79.0407,34.3195],[-79.0743,34.3047],[-79.4469,34.6192],[-79.4557,34.6343],[-79.3277,34.7726],[-79.3442,34.809],[-79.3401,34.8358],[-79.1816,34.832],[-79.0334,34.954],[-78.9482,34.9028],[-78.9284,34.88],[-78.9123,34.8276],[-78.896,34.8311],[-78.8415,34.7352],[-78.8031,34.6853],[-78.8523,34.5667],[-78.8454,34.5076],[-78.8643,34.4774]]]}},{"type":"Feature","id":"37157","properties":{"NAME":"Rockingham County","FIPS":"37157"},"geometry":{"type":"Polygon","coordinates":[[[-79.5303,36.2463],[-79.5303,36.2363],[-80.0254,36.2504],[-80.0238,36.5452],[-79.7172,36.548],[-79.51,36.5478],[-79.5303,36.2463]]]}},{"type":"Feature","id":"37159","properties":{"NAME":"Rowan County","FIPS":"37159"},"geometry":{"type":"Polygon","coordinates":[[[-80.298,35.495],[-80.7263,35.5077],[-80.7659,35.6822],[-80.7058,35.8518],[-80.6347,35.8404],[-80.6073,35.8224],[-80.5721,35.814],[-80.5265,35.7819],[-80.4885,35.7758],[-80.4566,35.7459],[-80.377,35.7108],[-80.3261,35.7142],[-80.3254,35.6833],[-80.2856,35.6371],[-80.251,35.6249],[-80.209,35.5747],[-80.1817,35.5053],[-80.298,35.495]]]}},{"type":"Feature","id":"37161","properties":{"NAME":"Rutherford County","FIPS":"37161"},"geometry":{"type":"Polygon","coordinates":[[[-81.9713,35.1884],[-81.9643,35.2475],[-82.0514,35.3232],[-82.084,35.3395],[-82.122,35.3887],[-82.155,35.3972],[-82.2581,35.3935],[-82.2786,35.4358],[-82.2745,35.4517],[-82.2579,35.4638],[-82.24,35.4683],[-82.2274,35.483],[-82.2227,35.5158],[-82.1705,35.5286],[-82.1166,35.5191],[-82.036,35.5287],[-82.0014,35.5461],[-81.9669,35.5217],[-81.862,35.5307],[-81.8401,35.5374],[-81.8317,35.5652],[-81.8161,35.5745],[-81.7654,35.5844],[-81.7494,35.6018],[-81.7006,35.5957],[-81.695,35.5718],[-81.6841,35.5656],[-81.6975,35.3534],[-81.737,35.2543],[-81.7593,35.2208],[-81.7652,35.1826],[-81.8704,35.1832],[-81.9713,35.1884]]]}},{"type":"Feature","id":"37163","properties":{"NAME":"Sampson County","FIPS":"37163"},"geometry":{"type":"Polygon","coordinates":[[[-78.1135,34.7212],[-78.1135,34.6993],[-78.1565,34.6773],[-78.2565,34.5539],[-78.2743,34.5814],[-78.3056,34.6055],[-78.3196,34.6303],[-78.3094,34.636],[-78.3221,34.6457],[-78.3386,34.6828],[-78.3635,34.6922],[-78.3864,34.7221],[-78.4007,34.7595],[-78.499,34.8553],[-78.5417,34.908],[-78.5932,34.9436],[-78.634,34.9845],[-78.6662,35.0716],[-78.6579,35.0938],[-78.6454,35.1027],[-78.6332,35.1539],[-78.645,35.1899],[-78.6325,35.1975],[-78.635,35.2111],[-78.6125,35.244],[-78.5801,35.2867],[-78.5385,35.3153],[-78.4934,35.2598],[-78.4164,35.2492],[-78.3098,35.2804],[-78.2571,35.2211],[-78.1649,35.1934],[-78.1629,35.1825],[-78.17,35.0977],[-78.155,35.0684],[-78.1427,34.9015],[-78.1952,34.7438],[-78.1558,34.7286],[-78.1355,34.7115],[-78.1135,34.7212]]]}},{"type":"Feature","id":"37165","properties":{"NAME":"Scotland County","FIPS":"37165"},"geometry":{"type":"Polygon","coordinates":[[[-79.4557,34.6343],[-79.6673,34.8008],[-79.6857,34.8054],[-79.6599,34.8181],[-79.6112,34.8179],[-79.6217,34.8497],[-79.5654,34.9077],[-79.5803,34.9449],[-79.5728,34.9785],[-79.5469,35.0002],[-79.4551,35.0375],[-79.3982,34.9964],[-79.3604,34.9449],[-79.3401,34.8358],[-79.3442,34.809],[-79.3277,34.7726],[-79.4557,34.6343]]]}},{"type":"Feature","id":"37167","properties":{"NAME":"Stanly County","FIPS":"37167"},"geometry":{"type":"Polygon","coordinates":[[[-80.0712,35.1509],[-80.1101,35.194],[-80.1314,35.1713],[-80.1545,35.1762],[-80.1589,35.1549],[-80.1679,35.1499],[-80.1899,35.168],[-80.2197,35.1593],[-80.2474,35.2047],[-80.2609,35.2042],[-80.2749,35.1933],[-80.3255,35.1741],[-80.3485,35.1708],[-80.3727,35.178],[-80.3985,35.1648],[-80.4284,35.1687],[-80.4531,35.1609],[-80.483,35.1831],[-80.5027,35.1871],[-80.4815,35.2108],[-80.3783,35.385],[-80.298,35.495],[-80.1817,35.5053],[-80.1618,35.4749],[-80.1161,35.4645],[-80.0517,35.3769],[-80.0505,35.3665],[-80.0933,35.2916],[-80.0921,35.2544],[-80.0656,35.2081],[-80.0588,35.1772],[-80.0712,35.1509]]]}},{"type":"Feature","id":"37169","properties":{"NAME":"Stokes County","FIPS":"37169"},"geometry":{"type":"Polygon","coordinates":[[[-80.0254,36.2504],[-80.4528,36.2572],[-80.4351,36.5512],[-80.0479,36.5473],[-80.0238,36.5452],[-80.0254,36.2504]]]}},{"type":"Feature","id":"37171","properties":{"NAME":"Surry County","FIPS":"37171"},"geometry":{"type":"Polygon","coordinates":[[[-80.4561,36.2427],[-80.4762,36.2549],[-80.5367,36.2569],[-80.5448,36.2768],[-80.5539,36.2786],[-80.5904,36.2684],[-80.6241,36.2732],[-80.6672,36.2462],[-80.6964,36.2592],[-80.7238,36.2586],[-80.7342,36.2649],[-80.7524,36.2584],[-80.7661,36.262],[-80.7825,36.2487],[-80.8742,36.234],[-80.8707,36.3248],[-80.8887,36.3546],[-80.9244,36.3729],[-80.9562,36.4039],[-80.9495,36.4149],[-80.9656,36.4674],[-80.9333,36.4984],[-80.9032,36.5653],[-80.838,36.5636],[-80.6108,36.5574],[-80.4351,36.5512],[-80.4528,36.2572],[-80.4561,36.2427]]]}},{"type":"Feature","id":"37173","properties":{"NAME":"Swain County","FIPS":"37173"},"geometry":{"type":"Polygon","coordinates":[[[-83.3317,35.3194],[-83.4246,35.3154],[-83.4731,35.2917],[-83.6791,35.2723],[-83.69,35.2879],[-83.6893,35.3083],[-83.6341,35.3341],[-83.5988,35.3625],[-83.5803,35.4012],[-83.5866,35.4278],[-83.6322,35.4368],[-83.6535,35.4212],[-83.7449,35.4415],[-83.8549,35.4502],[-83.8798,35.4621],[-83.93,35.4491],[-83.9546,35.4555],[-83.9099,35.4766],[-83.8811,35.5107],[-83.8301,35.5191],[-83.7758,35.5527],[-83.6728,35.5651],[-83.6138,35.5718],[-83.5609,35.5553],[-83.5057,35.5596],[-83.4582,35.5974],[-83.387,35.6253],[-83.3429,35.6534],[-83.2983,35.6564],[-83.259,35.6911],[-83.2151,35.6855],[-83.1842,35.6632],[-83.195,35.6379],[-83.178,35.6234],[-83.1802,35.5829],[-83.1569,35.5518],[-83.1813,35.5125],[-83.2265,35.5136],[-83.2472,35.5071],[-83.3097,35.4636],[-83.3529,35.456],[-83.3646,35.4134],[-83.3297,35.364],[-83.3317,35.3194]]]}},{"type":"Feature","id":"37175","properties":{"NAME":"Transylvania County","FIPS":"37175"},"geometry":{"type":"Polygon","coordinates":[[[-82.8876,35.0555],[-83.0071,35.0243],[-83.0437,35.0402],[-83.052,35.0636],[-82.9819,35.1276],[-82.9904,35.1583],[-82.9786,35.1858],[-82.9267,35.228],[-82.919,35.2909],[-82.8331,35.3157],[-82.7437,35.4181],[-82.6079,35.2932],[-82.6105,35.2677],[-82.5961,35.2426],[-82.5891,35.1851],[-82.5699,35.1496],[-82.6543,35.1196],[-82.6859,35.1216],[-82.6879,35.0979],[-82.6972,35.0913],[-82.7712,35.0855],[-82.8876,35.0555]]]}},{"type":"Feature","id":"37177","properties":{"NAME":"Tyrrell County","FIPS":"37177"},"geometry":{"type":"Polygon","coordinates":[[[-76.1669,35.697],[-76.2099,35.6046],[-76.2324,35.5948],[-76.2973,35.6119],[-76.2731,35.6897],[-76.4081,35.6993],[-76.4084,35.7896],[-76.3578,35.8608],[-76.3832,35.9006],[-76.3711,35.9325],[-76.2134,35.977],[-76.0893,35.9631],[-76.0257,35.9206],[-76.0756,35.757],[-76.0427,35.684],[-76.1669,35.697]]]}},{"type":"Feature","id":"37179","properties":{"NAME":"Union County","FIPS":"37179"},"geometry":{"type":"Polygon","coordinates":[[[-80.84,35.0022],[-80.797,35.0283],[-80.7595,35.0368],[-80.5394,35.206],[-80.5027,35.1871],[-80.483,35.1831],[-80.4531,35.1609],[-80.4284,35.1687],[-80.3985,35.1648],[-80.3727,35.178],[-80.3485,35.1708],[-80.3255,35.1741],[-80.2749,35.1933],[-80.3251,34.8149],[-80.5613,34.8154],[-80.7999,34.8163],[-80.7854,34.9408],[-80.84,35.0022]]]}},{"type":"Feature","id":"37181","properties":{"NAME":"Vance County","FIPS":"37181"},"geometry":{"type":"Polygon","coordinates":[[[-78.4922,36.1737],[-78.5144,36.1754],[-78.5168,36.4616],[-78.5022,36.5045],[-78.4635,36.524],[-78.4585,36.5416],[-78.321,36.5457],[-78.2826,36.292],[-78.3085,36.2602],[-78.3458,36.2253],[-78.3806,36.2249],[-78.4167,36.1623],[-78.4922,36.1737]]]}},{"type":"Feature","id":"37183","properties":{"NAME":"Wake County","FIPS":"37183"},"geometry":{"type":"Polygon","coordinates":[[[-78.9208,35.579],[-78.9985,35.6015],[-78.9386,35.7616],[-78.9442,35.7703],[-78.9054,35.8607],[-78.8277,35.8604],[-78.808,35.9201],[-78.7632,35.9146],[-78.7339,35.9347],[-78.7071,35.9771],[-78.7039,35.9975],[-78.7159,36.0266],[-78.7278,36.0272],[-78.7531,36.0116],[-78.7488,36.0637],[-78.6953,36.0668],[-78.5478,36.0143],[-78.4309,35.9729],[-78.3942,35.9325],[-78.3598,35.9188],[-78.3293,35.888],[-78.3081,35.8936],[-78.2666,35.8485],[-78.2543,35.8157],[-78.4774,35.6958],[-78.703,35.5201],[-78.9208,35.579]]]}},{"type":"Feature","id":"37185","properties":{"NAME":"Warren County","FIPS":"37185"},"geometry":{"type":"Polygon","coordinates":[[[-78.3085,36.2602],[-78.2826,36.292],[-78.321,36.5457],[-78.0514,36.5526],[-77.8986,36.5531],[-77.9009,36.51],[-77.9166,36.5008],[-77.9298,36.3531],[-77.9518,36.2814],[-78.006,36.1961],[-78.0581,36.2115],[-78.1093,36.2137],[-78.1344,36.2367],[-78.3085,36.2602]]]}},{"type":"Feature","id":"37187","properties":{"NAME":"Washington County","FIPS":"37187"},"geometry":{"type":"Polygon","coordinates":[[[-76.4081,35.6993],[-76.6335,35.7032],[-76.838,35.7056],[-76.8256,35.757],[-76.8049,35.7905],[-76.8063,35.811],[-76.7827,35.8594],[-76.7609,35.8647],[-76.7414,35.8832],[-76.7283,35.911],[-76.708,35.92],[-76.6969,35.9417],[-76.4091,35.9776],[-76.3711,35.9325],[-76.3832,35.9006],[-76.3578,35.8608],[-76.4084,35.7896],[-76.4081,35.6993]]]}},{"type":"Feature","id":"37189","properties":{"NAME":"Watauga County","FIPS":"37189"},"geometry":{"type":"Polygon","coordinates":[[[-81.8061,36.1047],[-81.817,36.1095],[-81.8221,36.158],[-81.8501,36.1816],[-81.885,36.1888],[-81.8984,36.199],[-81.9064,36.222],[-81.8938,36.2671],[-81.911,36.2909],[-81.8304,36.3348],[-81.7303,36.3295],[-81.7093,36.3339],[-81.7402,36.362],[-81.7409,36.3919],[-81.6329,36.3408],[-81.5618,36.2737],[-81.5407,36.2726],[-81.4726,36.2345],[-81.4506,36.1907],[-81.4991,36.1362],[-81.5459,36.1115],[-81.6588,36.1177],[-81.8061,36.1047]]]}},{"type":"Feature","id":"37191","properties":{"NAME":"Wayne County","FIPS":"37191"},"geometry":{"type":"Polygon","coordinates":[[[-78.1629,35.1825],[-78.1649,35.1934],[-78.2571,35.2211],[-78.3098,35.2804],[-78.2679,35.3175],[-78.2369,35.3148],[-78.2088,35.3393],[-78.1772,35.3398],[-78.1566,35.3508],[-78.1457,35.4292],[-78.065,35.5822],[-78.0602,35.5948],[-78.0018,35.5762],[-77.8269,35.5831],[-77.826,35.5744],[-77.8303,35.4238],[-77.8038,35.402],[-77.8049,35.3648],[-77.8298,35.3425],[-77.8363,35.1719],[-77.8874,35.1551],[-77.8939,35.1443],[-77.9137,35.1601],[-77.9444,35.1684],[-77.9636,35.1642],[-78.0019,35.1866],[-78.0362,35.1859],[-78.0872,35.1703],[-78.1629,35.1825]]]}},{"type":"Feature","id":"37193","properties":{"NAME":"Wilkes County","FIPS":"37193"},"geometry":{"type":"Polygon","coordinates":[[[-81.0204,36.0351],[-81.0839,36.0209],[-81.1239,36.0314],[-81.1573,36.0211],[-81.2358,36.024],[-81.3217,35.9895],[-81.3472,36.0155],[-81.3885,36.0377],[-81.398,36.0562],[-81.4295,36.0658],[-81.4543,36.0832],[-81.5171,36.0956],[-81.5459,36.1115],[-81.4991,36.1362],[-81.4506,36.1907],[-81.4726,36.2345],[-81.4527,36.2397],[-81.4309,36.2608],[-81.4122,36.2674],[-81.4062,36.2852],[-81.3673,36.2788],[-81.354,36.2998],[-81.3655,36.3392],[-81.3612,36.3533],[-81.3288,36.3636],[-81.2641,36.3525],[-81.2397,36.3655],[-81.1765,36.4156],[-81.1532,36.4249],[-81.1382,36.4178],[-81.1292,36.4265],[-81.1131,36.423],[-81.0984,36.4313],[-81.0841,36.4301],[-81.0426,36.4105],[-81.0244,36.378],[-81.0026,36.3668],[-80.9826,36.372],[-80.9778,36.3915],[-80.9562,36.4039],[-80.9244,36.3729],[-80.8887,36.3546],[-80.8707,36.3248],[-80.8742,36.234],[-80.8772,36.0525],[-80.9888,36.0535],[-81.0204,36.0351]]]}},{"type":"Feature","id":"37195","properties":{"NAME":"Wilson County","FIPS":"37195"},"geometry":{"type":"Polygon","coordinates":[[[-78.065,35.5822],[-78.1246,35.5977],[-78.1622,35.6831],[-78.1615,35.7095],[-78.1866,35.7253],[-77.8728,35.8449],[-77.8446,35.8357],[-77.8298,35.8547],[-77.7668,35.837],[-77.7547,35.825],[-77.7572,35.7983],[-77.7328,35.7397],[-77.6709,35.6704],[-77.698,35.6542],[-77.826,35.5744],[-77.8269,35.5831],[-78.0018,35.5762],[-78.0602,35.5948],[-78.065,35.5822]]]}},{"type":"Feature","id":"37197","properties":{"NAME":"Yadkin County","FIPS":"37197"},"geometry":{"type":"Polygon","coordinates":[[[-80.4953,36.0434],[-80.6894,36.0456],[-80.8772,36.0525],[-80.8742,36.234],[-80.7825,36.2487],[-80.7661,36.262],[-80.7524,36.2584],[-80.7342,36.2649],[-80.7238,36.2586],[-80.6964,36.2592],[-80.6672,36.2462],[-80.6241,36.2732],[-80.5904,36.2684],[-80.5539,36.2786],[-80.5448,36.2768],[-80.5367,36.2569],[-80.4762,36.2549],[-80.4561,36.2427],[-80.4406,36.2196],[-80.4446,36.1234],[-80.4918,36.1078],[-80.5048,36.0951],[-80.508,36.071],[-80.4953,36.0434]]]}},{"type":"Feature","id":"37199","properties":{"NAME":"Yancey County","FIPS":"37199"},"geometry":{"type":"Polygon","coordinates":[[[-82.279,35.6977],[-82.2814,35.7203],[-82.3217,35.74],[-82.3417,35.7636],[-82.3452,35.8053],[-82.3751,35.8165],[-82.4057,35.8141],[-82.4413,35.8823],[-82.4869,35.905],[-82.4838,35.9477],[-82.5068,35.9727],[-82.4751,35.9933],[-82.4083,36.0754],[-82.385,36.0786],[-82.3444,36.0704],[-82.3401,36.0255],[-82.3295,36.0144],[-82.3095,36.0116],[-82.3015,36.0294],[-82.2587,35.9858],[-82.2405,35.9843],[-82.232,36.004],[-82.1989,36.0019],[-82.1956,35.9475],[-82.1845,35.935],[-82.1494,35.9216],[-82.1409,35.9004],[-82.1465,35.8186],[-82.1187,35.8187],[-82.1544,35.7985],[-82.1641,35.7606],[-82.2116,35.7171],[-82.279,35.6977]]]}}]};
+const COUNTY_ATTRITION = {"37037":{"name":"Chatham","teachers":635,"leaAttr":15.3,"stateAttr":9.9,"mobility":5.4,"recoupment":46.4},"37063":{"name":"Durham","teachers":2346,"leaAttr":17.2,"stateAttr":11.2,"mobility":6.0,"recoupment":24.0},"37065":{"name":"Edgecombe","teachers":341,"leaAttr":19.4,"stateAttr":13.5,"mobility":5.9,"recoupment":93.9},"37069":{"name":"Franklin","teachers":518,"leaAttr":16.0,"stateAttr":9.8,"mobility":6.2,"recoupment":31.3},"37077":{"name":"Granville","teachers":411,"leaAttr":15.8,"stateAttr":9.0,"mobility":6.8,"recoupment":18.5},"37085":{"name":"Harnett","teachers":1245,"leaAttr":16.6,"stateAttr":11.0,"mobility":5.6,"recoupment":19.8},"37101":{"name":"Johnston","teachers":2399,"leaAttr":13.2,"stateAttr":8.7,"mobility":4.5,"recoupment":22.1},"37105":{"name":"Lee","teachers":630,"leaAttr":15.9,"stateAttr":8.4,"mobility":7.5,"recoupment":25.0},"37127":{"name":"Nash","teachers":835,"leaAttr":22.2,"stateAttr":11.3,"mobility":10.9,"recoupment":16.8},"37135":{"name":"Orange","teachers":1396,"leaAttr":14.95,"stateAttr":9.67,"mobility":5.28,"recoupment":31.71},"37145":{"name":"Person","teachers":278,"leaAttr":19.8,"stateAttr":10.1,"mobility":9.7,"recoupment":7.3},"37181":{"name":"Vance","teachers":316,"leaAttr":15.2,"stateAttr":8.5,"mobility":6.6,"recoupment":25.0},"37183":{"name":"Wake","teachers":10507,"leaAttr":11.7,"stateAttr":9.4,"mobility":2.4,"recoupment":21.7},"37185":{"name":"Warren","teachers":111,"leaAttr":18.9,"stateAttr":10.8,"mobility":8.1,"recoupment":28.6},"37195":{"name":"Wilson","teachers":611,"leaAttr":14.1,"stateAttr":8.3,"mobility":5.7,"recoupment":22.1},"37029":{"name":"Camden","teachers":139,"leaAttr":7.9,"stateAttr":7.2,"mobility":0.7,"recoupment":45.5},"37041":{"name":"Chowan","teachers":112,"leaAttr":19.6,"stateAttr":12.5,"mobility":7.1,"recoupment":13.6},"37053":{"name":"Currituck","teachers":278,"leaAttr":18.0,"stateAttr":14.0,"mobility":4.0,"recoupment":8.0},"37055":{"name":"Dare","teachers":425,"leaAttr":11.1,"stateAttr":9.4,"mobility":1.6,"recoupment":21.3},"37073":{"name":"Gates","teachers":100,"leaAttr":10.0,"stateAttr":9.0,"mobility":1.0,"recoupment":50.0},"37083":{"name":"Halifax","teachers":393,"leaAttr":21.35,"stateAttr":13.97,"mobility":7.38,"recoupment":14.06},"37091":{"name":"Hertford","teachers":155,"leaAttr":16.1,"stateAttr":9.0,"mobility":7.1,"recoupment":4.0},"37095":{"name":"Hyde","teachers":47,"leaAttr":19.1,"stateAttr":12.8,"mobility":6.4,"recoupment":0.0},"37117":{"name":"Martin","teachers":163,"leaAttr":19.6,"stateAttr":8.6,"mobility":11.0,"recoupment":43.8},"37131":{"name":"Northampton","teachers":81,"leaAttr":22.2,"stateAttr":19.8,"mobility":2.5,"recoupment":50.0},"37013":{"name":"Beaufort","teachers":389,"leaAttr":18.0,"stateAttr":12.1,"mobility":5.9,"recoupment":25.7},"37139":{"name":"Pasquotank","teachers":320,"leaAttr":18.1,"stateAttr":13.8,"mobility":4.4,"recoupment":12.1},"37143":{"name":"Perquimans","teachers":112,"leaAttr":14.3,"stateAttr":11.6,"mobility":2.7,"recoupment":87.5},"37147":{"name":"Pitt","teachers":1555,"leaAttr":12.7,"stateAttr":9.1,"mobility":3.6,"recoupment":21.2},"37015":{"name":"Bertie","teachers":121,"leaAttr":21.5,"stateAttr":14.0,"mobility":7.4,"recoupment":30.8},"37177":{"name":"Tyrrell","teachers":35,"leaAttr":8.6,"stateAttr":5.7,"mobility":2.9,"recoupment":66.7},"37187":{"name":"Washington","teachers":68,"leaAttr":27.9,"stateAttr":22.1,"mobility":5.9,"recoupment":0.0},"37023":{"name":"Burke","teachers":729,"leaAttr":12.9,"stateAttr":9.3,"mobility":3.6,"recoupment":34.0},"37027":{"name":"Caldwell","teachers":727,"leaAttr":10.9,"stateAttr":7.7,"mobility":3.2,"recoupment":27.8},"37035":{"name":"Catawba","teachers":1439,"leaAttr":12.48,"stateAttr":7.7,"mobility":4.7,"recoupment":39.39},"37003":{"name":"Alexander","teachers":300,"leaAttr":15.0,"stateAttr":8.3,"mobility":6.7,"recoupment":6.7},"37005":{"name":"Alleghany","teachers":103,"leaAttr":17.5,"stateAttr":9.7,"mobility":7.8,"recoupment":5.6},"37009":{"name":"Ashe","teachers":200,"leaAttr":15.0,"stateAttr":12.5,"mobility":2.5,"recoupment":16.7},"37111":{"name":"McDowell","teachers":372,"leaAttr":8.3,"stateAttr":5.9,"mobility":2.4,"recoupment":35.5},"37011":{"name":"Avery","teachers":145,"leaAttr":12.4,"stateAttr":6.9,"mobility":5.5,"recoupment":33.3},"37121":{"name":"Mitchell","teachers":129,"leaAttr":7.0,"stateAttr":5.4,"mobility":1.6,"recoupment":33.3},"37189":{"name":"Watauga","teachers":392,"leaAttr":16.3,"stateAttr":12.0,"mobility":4.3,"recoupment":28.1},"37193":{"name":"Wilkes","teachers":535,"leaAttr":9.7,"stateAttr":6.2,"mobility":3.6,"recoupment":34.6},"37199":{"name":"Yancey","teachers":151,"leaAttr":9.3,"stateAttr":5.3,"mobility":4.0,"recoupment":21.4},"37001":{"name":"Alamance","teachers":1397,"leaAttr":18.3,"stateAttr":10.1,"mobility":8.2,"recoupment":23.5},"37033":{"name":"Caswell","teachers":133,"leaAttr":21.1,"stateAttr":12.0,"mobility":9.0,"recoupment":42.9},"37057":{"name":"Davidson","teachers":1425,"leaAttr":14.78,"stateAttr":8.72,"mobility":6.06,"recoupment":37.16},"37059":{"name":"Davie","teachers":397,"leaAttr":11.8,"stateAttr":7.8,"mobility":4.0,"recoupment":40.4},"37067":{"name":"Forsyth","teachers":3538,"leaAttr":13.7,"stateAttr":9.8,"mobility":3.9,"recoupment":19.8},"37081":{"name":"Guilford","teachers":4505,"leaAttr":14.4,"stateAttr":9.8,"mobility":4.6,"recoupment":19.5},"37151":{"name":"Randolph","teachers":1270,"leaAttr":11.58,"stateAttr":7.45,"mobility":4.12,"recoupment":29.23},"37157":{"name":"Rockingham","teachers":734,"leaAttr":15.1,"stateAttr":12.3,"mobility":2.9,"recoupment":22.5},"37169":{"name":"Stokes","teachers":368,"leaAttr":14.4,"stateAttr":10.6,"mobility":3.8,"recoupment":34.0},"37171":{"name":"Surry","teachers":687,"leaAttr":14.85,"stateAttr":11.35,"mobility":3.5,"recoupment":37.88},"37197":{"name":"Yadkin","teachers":330,"leaAttr":14.2,"stateAttr":9.4,"mobility":4.8,"recoupment":46.8},"37047":{"name":"Columbus","teachers":467,"leaAttr":15.61,"stateAttr":9.84,"mobility":5.77,"recoupment":49.81},"37051":{"name":"Cumberland","teachers":3186,"leaAttr":16.1,"stateAttr":12.1,"mobility":4.0,"recoupment":17.7},"37093":{"name":"Hoke","teachers":557,"leaAttr":25.0,"stateAttr":15.4,"mobility":9.5,"recoupment":27.3},"37123":{"name":"Montgomery","teachers":222,"leaAttr":15.3,"stateAttr":9.9,"mobility":5.4,"recoupment":44.1},"37125":{"name":"Moore","teachers":823,"leaAttr":14.6,"stateAttr":10.4,"mobility":4.1,"recoupment":30.0},"37153":{"name":"Richmond","teachers":411,"leaAttr":13.6,"stateAttr":9.5,"mobility":4.1,"recoupment":32.1},"37155":{"name":"Robeson","teachers":1269,"leaAttr":13.1,"stateAttr":8.4,"mobility":4.7,"recoupment":15.7},"37163":{"name":"Sampson","teachers":695,"leaAttr":15.66,"stateAttr":9.47,"mobility":6.18,"recoupment":30.54},"37165":{"name":"Scotland","teachers":361,"leaAttr":15.8,"stateAttr":10.0,"mobility":5.8,"recoupment":54.4},"37017":{"name":"Bladen","teachers":246,"leaAttr":15.4,"stateAttr":7.7,"mobility":7.7,"recoupment":44.7},"37019":{"name":"Brunswick","teachers":873,"leaAttr":14.3,"stateAttr":9.6,"mobility":4.7,"recoupment":44.8},"37031":{"name":"Carteret","teachers":569,"leaAttr":13.2,"stateAttr":10.9,"mobility":2.3,"recoupment":25.3},"37049":{"name":"Craven","teachers":767,"leaAttr":17.1,"stateAttr":11.2,"mobility":5.9,"recoupment":27.5},"37061":{"name":"Duplin","teachers":599,"leaAttr":11.2,"stateAttr":8.5,"mobility":2.7,"recoupment":29.9},"37079":{"name":"Greene","teachers":199,"leaAttr":19.1,"stateAttr":12.6,"mobility":6.5,"recoupment":26.3},"37103":{"name":"Jones","teachers":74,"leaAttr":23.0,"stateAttr":10.8,"mobility":12.2,"recoupment":47.1},"37107":{"name":"Lenoir","teachers":524,"leaAttr":14.9,"stateAttr":9.5,"mobility":5.3,"recoupment":23.1},"37129":{"name":"New Hanover","teachers":1682,"leaAttr":13.1,"stateAttr":9.8,"mobility":3.3,"recoupment":18.2},"37133":{"name":"Onslow","teachers":1737,"leaAttr":17.4,"stateAttr":14.3,"mobility":3.2,"recoupment":15.2},"37137":{"name":"Pamlico","teachers":93,"leaAttr":17.2,"stateAttr":10.8,"mobility":6.5,"recoupment":31.3},"37141":{"name":"Pender","teachers":662,"leaAttr":17.4,"stateAttr":10.1,"mobility":7.3,"recoupment":30.4},"37191":{"name":"Wayne","teachers":1065,"leaAttr":16.2,"stateAttr":11.4,"mobility":4.8,"recoupment":14.5},"37025":{"name":"Cabarrus","teachers":2456,"leaAttr":16.28,"stateAttr":9.81,"mobility":6.47,"recoupment":23.89},"37045":{"name":"Cleveland","teachers":909,"leaAttr":13.0,"stateAttr":9.7,"mobility":3.3,"recoupment":29.7},"37071":{"name":"Gaston","teachers":1873,"leaAttr":15.7,"stateAttr":11.4,"mobility":4.3,"recoupment":18.0},"37007":{"name":"Anson","teachers":195,"leaAttr":17.4,"stateAttr":9.7,"mobility":7.7,"recoupment":26.5},"37097":{"name":"Iredell","teachers":1639,"leaAttr":13.89,"stateAttr":9.21,"mobility":4.67,"recoupment":22.93},"37109":{"name":"Lincoln","teachers":734,"leaAttr":9.3,"stateAttr":5.9,"mobility":3.4,"recoupment":45.6},"37119":{"name":"Mecklenburg","teachers":8721,"leaAttr":14.9,"stateAttr":11.2,"mobility":3.8,"recoupment":17.8},"37159":{"name":"Rowan","teachers":1078,"leaAttr":15.3,"stateAttr":8.7,"mobility":6.6,"recoupment":38.2},"37167":{"name":"Stanly","teachers":538,"leaAttr":11.3,"stateAttr":8.9,"mobility":2.4,"recoupment":49.2},"37179":{"name":"Union","teachers":2485,"leaAttr":14.7,"stateAttr":10.2,"mobility":4.5,"recoupment":14.5},"37021":{"name":"Buncombe","teachers":1851,"leaAttr":16.05,"stateAttr":11.13,"mobility":4.9,"recoupment":18.57},"37039":{"name":"Cherokee","teachers":226,"leaAttr":11.5,"stateAttr":10.2,"mobility":1.3,"recoupment":11.5},"37043":{"name":"Clay","teachers":93,"leaAttr":6.5,"stateAttr":4.3,"mobility":2.2,"recoupment":33.3},"37075":{"name":"Graham","teachers":91,"leaAttr":7.7,"stateAttr":6.6,"mobility":1.1,"recoupment":57.1},"37087":{"name":"Haywood","teachers":432,"leaAttr":12.7,"stateAttr":10.0,"mobility":2.8,"recoupment":25.5},"37089":{"name":"Henderson","teachers":853,"leaAttr":12.2,"stateAttr":10.6,"mobility":1.6,"recoupment":22.1},"37099":{"name":"Jackson","teachers":243,"leaAttr":17.7,"stateAttr":11.9,"mobility":5.8,"recoupment":32.6},"37113":{"name":"Macon","teachers":323,"leaAttr":13.6,"stateAttr":10.5,"mobility":3.1,"recoupment":18.2},"37115":{"name":"Madison","teachers":174,"leaAttr":11.5,"stateAttr":6.9,"mobility":4.6,"recoupment":25.0},"37149":{"name":"Polk","teachers":162,"leaAttr":17.9,"stateAttr":13.6,"mobility":4.3,"recoupment":34.5},"37161":{"name":"Rutherford","teachers":480,"leaAttr":15.6,"stateAttr":11.0,"mobility":4.6,"recoupment":18.7},"37173":{"name":"Swain","teachers":131,"leaAttr":22.1,"stateAttr":13.0,"mobility":9.2,"recoupment":6.9},"37175":{"name":"Transylvania","teachers":259,"leaAttr":15.1,"stateAttr":12.0,"mobility":3.1,"recoupment":23.1}};
+const COUNTY_GRAD = {"37083":{"name":"Halifax","gradRate":88.6},"37135":{"name":"Orange","gradRate":89.4},"37091":{"name":"Hertford","gradRate":86.8},"37189":{"name":"Watauga","gradRate":92.9},"37093":{"name":"Hoke","gradRate":81.5},"37059":{"name":"Davie","gradRate":91.2},"37057":{"name":"Davidson","gradRate":83.9},"37187":{"name":"Washington","gradRate":90.1},"37047":{"name":"Columbus","gradRate":90.3},"37127":{"name":"Nash","gradRate":85.8},"37015":{"name":"Bertie","gradRate":89.2},"37065":{"name":"Edgecombe","gradRate":81.6},"37001":{"name":"Alamance","gradRate":84.4},"37085":{"name":"Harnett","gradRate":89.4},"37025":{"name":"Cabarrus","gradRate":91.7},"37081":{"name":"Guilford","gradRate":92.1},"37195":{"name":"Wilson","gradRate":83.0},"37113":{"name":"Macon","gradRate":89.1},"37101":{"name":"Johnston","gradRate":92.5},"37155":{"name":"Robeson","gradRate":85.6},"37171":{"name":"Surry","gradRate":92.7},"37183":{"name":"Wake","gradRate":90.7},"37027":{"name":"Caldwell","gradRate":84.1},"37193":{"name":"Wilkes","gradRate":93.2},"37029":{"name":"Camden","gradRate":93.2},"37043":{"name":"Clay","gradRate":86.8}};
+
+const countyMap = L.map('countyMap', {scrollWheelZoom:false}).setView([35.55, -79.3], 6.6);
+let mapMode = 'attr';
+let geoLayer;
+
+function attrColor(v){
+  // low attrition = green, high = dark red
+  if (v == null) return '#d9dde1';
+  if (v < 10) return '#2e7d32';
+  if (v < 13) return '#8bc34a';
+  if (v < 16) return '#f4d35e';
+  if (v < 20) return '#e08e45';
+  return '#9C2B2B';
+}
+function gradColor(v){
+  if (v == null) return '#d9dde1';
+  if (v >= 92) return '#1F4E78';
+  if (v >= 89) return '#2a78d6';
+  if (v >= 86) return '#7fb3e8';
+  if (v >= 83) return '#f4d35e';
+  return '#9C2B2B';
+}
+
+function styleFeature(feature){
+  const fips = feature.id || feature.properties.FIPS;
+  if (mapMode === 'attr'){
+    const d = COUNTY_ATTRITION[fips];
+    return { fillColor: attrColor(d ? d.leaAttr : null), weight:1, color:'#ffffff', fillOpacity:0.85 };
+  } else {
+    const d = COUNTY_GRAD[fips];
+    return { fillColor: gradColor(d ? d.gradRate : null), weight:1, color:'#ffffff', fillOpacity:0.85 };
+  }
+}
+
+function tooltipFor(feature){
+  const fips = feature.id || feature.properties.FIPS;
+  const name = feature.properties.NAME;
+  const a = COUNTY_ATTRITION[fips];
+  const g = COUNTY_GRAD[fips];
+  if (mapMode === 'attr'){
+    return a ? `<b>${name}</b><br>LEA attrition: ${a.leaAttr}%<br>Teachers: ${a.teachers.toLocaleString()}` : `<b>${name}</b><br>No data`;
+  } else {
+    return g ? `<b>${name}</b><br>2025 graduation rate: ${g.gradRate}%` : `<b>${name}</b><br>No sample data`;
+  }
+}
+
+function drawLayer(){
+  if (geoLayer) countyMap.removeLayer(geoLayer);
+  geoLayer = L.geoJSON(NC_COUNTIES_GEOJSON, {
+    style: styleFeature,
+    onEachFeature: (feature, layer) => {
+      layer.bindTooltip(tooltipFor(feature), {className:'county-tip', sticky:true});
+      layer.on('mouseover', () => layer.setStyle({weight:2, color:'#333'}));
+      layer.on('mouseout', () => layer.setStyle({weight:1, color:'#ffffff'}));
+    }
+  }).addTo(countyMap);
+}
+drawLayer();
+
+function renderLegend(){
+  const el = document.getElementById('mapLegend');
+  if (mapMode === 'attr'){
+    el.innerHTML = [
+      ['<10%','#2e7d32'],['10-13%','#8bc34a'],['13-16%','#f4d35e'],['16-20%','#e08e45'],['20%+','#9C2B2B'],['No data','#d9dde1']
+    ].map(([l,c]) => `<span class="swatch" style="background:${c}"></span>${l}`).join(' &nbsp; ');
+  } else {
+    el.innerHTML = [
+      ['92%+','#1F4E78'],['89-92%','#2a78d6'],['86-89%','#7fb3e8'],['83-86%','#f4d35e'],['<83%','#9C2B2B'],['No sample data','#d9dde1']
+    ].map(([l,c]) => `<span class="swatch" style="background:${c}"></span>${l}`).join(' &nbsp; ');
+  }
+}
+renderLegend();
+
+document.getElementById('btnAttr').addEventListener('click', () => {
+  mapMode = 'attr';
+  document.getElementById('btnAttr').classList.add('active');
+  document.getElementById('btnGrad').classList.remove('active');
+  drawLayer(); renderLegend();
+});
+document.getElementById('btnGrad').addEventListener('click', () => {
+  mapMode = 'grad';
+  document.getElementById('btnGrad').classList.add('active');
+  document.getElementById('btnAttr').classList.remove('active');
+  drawLayer(); renderLegend();
+});
+
+// ---------- Full LEA table ----------
+const LEA = [
+["Chatham County Schools","North Central",635,9.9,15.3,5.4,46.4,false],
+["Durham Public Schools","North Central",2346,11.2,17.2,6.0,24.0,false],
+["Edgecombe County Public Schools","North Central",341,13.5,19.4,5.9,93.9,false],
+["Franklin County Schools","North Central",518,9.8,16.0,6.2,31.3,false],
+["Granville County Schools","North Central",411,9.0,15.8,6.8,18.5,false],
+["Harnett County Schools","North Central",1245,11.0,16.6,5.6,19.8,false],
+["Johnston County Public Schools","North Central",2399,8.7,13.2,4.5,22.1,false],
+["Lee County Schools","North Central",630,8.4,15.9,7.5,25.0,false],
+["Nash-Rocky Mount Schools","North Central",835,11.3,22.2,10.9,16.8,false],
+["Orange County Schools","North Central",511,11.0,17.8,6.8,35.2,false],
+["Chapel Hill-Carrboro City Schools","North Central",885,8.9,13.3,4.4,29.7,false],
+["Person County Schools","North Central",278,10.1,19.8,9.7,7.3,false],
+["Vance County Schools","North Central",316,8.5,15.2,6.6,25.0,false],
+["Wake County Schools","North Central",10507,9.4,11.7,2.4,21.7,false],
+["Warren County Schools","North Central",111,10.8,18.9,8.1,28.6,false],
+["Wilson County Schools","North Central",611,8.3,14.1,5.7,22.1,false],
+["Camden County Schools","Northeast",139,7.2,7.9,0.7,45.5,false],
+["Edenton-Chowan Schools","Northeast",112,12.5,19.6,7.1,13.6,false],
+["Currituck County Schools","Northeast",278,14.0,18.0,4.0,8.0,false],
+["Dare County Schools","Northeast",425,9.4,11.1,1.6,21.3,false],
+["Gates County Schools","Northeast",100,9.0,10.0,1.0,50.0,false],
+["Halifax County Schools","Northeast",160,13.1,25.0,11.9,12.5,false],
+["Roanoke Rapids City Schools","Northeast",184,11.4,13.0,1.6,12.5,false],
+["Weldon City Schools","Northeast",49,26.5,40.8,14.3,25.0,false],
+["Hertford County Schools","Northeast",155,9.0,16.1,7.1,4.0,false],
+["Hyde County Schools","Northeast",47,12.8,19.1,6.4,0.0,false],
+["Martin County Schools","Northeast",163,8.6,19.6,11.0,43.8,false],
+["Northampton County Schools","Northeast",81,19.8,22.2,2.5,50.0,false],
+["Beaufort County Schools","Northeast",389,12.1,18.0,5.9,25.7,false],
+["Elizabeth City-Pasquotank Public Schools","Northeast",320,13.8,18.1,4.4,12.1,false],
+["Perquimans County Schools","Northeast",112,11.6,14.3,2.7,87.5,false],
+["Pitt County Schools","Northeast",1555,9.1,12.7,3.6,21.2,false],
+["Bertie County Schools","Northeast",121,14.0,21.5,7.4,30.8,false],
+["Tyrrell County Schools","Northeast",35,5.7,8.6,2.9,66.7,false],
+["Washington County Schools","Northeast",68,22.1,27.9,5.9,0.0,false],
+["Burke County Schools","Northwest",729,9.3,12.9,3.6,34.0,false],
+["Caldwell County Schools","Northwest",727,7.7,10.9,3.2,27.8,false],
+["Catawba County Schools","Northwest",1014,6.1,10.2,4.0,44.7,false],
+["Hickory City Schools","Northwest",247,15.0,21.9,6.9,29.6,false],
+["Newton-Conover City Schools","Northwest",178,6.7,12.4,5.6,22.7,false],
+["Alexander County Schools","Northwest",300,8.3,15.0,6.7,6.7,false],
+["Alleghany County Schools","Northwest",103,9.7,17.5,7.8,5.6,false],
+["Ashe County Schools","Northwest",200,12.5,15.0,2.5,16.7,false],
+["McDowell County Schools","Northwest",372,5.9,8.3,2.4,35.5,false],
+["Avery County Schools","Northwest",145,6.9,12.4,5.5,33.3,false],
+["Mitchell County Schools","Northwest",129,5.4,7.0,1.6,33.3,false],
+["Watauga County Schools","Northwest",392,12.0,16.3,4.3,28.1,false],
+["Wilkes County Schools","Northwest",535,6.2,9.7,3.6,34.6,false],
+["Yancey County Schools","Northwest",151,5.3,9.3,4.0,21.4,false],
+["Alamance-Burlington Schools","Piedmont Triad",1397,10.1,18.3,8.2,23.5,false],
+["Caswell County Schools","Piedmont Triad",133,12.0,21.1,9.0,42.9,false],
+["Davidson County Schools","Piedmont Triad",1121,8.4,12.8,4.4,36.4,false],
+["Lexington City Schools","Piedmont Triad",181,8.3,16.6,8.3,43.3,false],
+["Thomasville City Schools","Piedmont Triad",123,12.2,30.1,17.9,35.1,false],
+["Davie County Schools","Piedmont Triad",397,7.8,11.8,4.0,40.4,false],
+["Winston Salem/Forsyth County Schools","Piedmont Triad",3538,9.8,13.7,3.9,19.8,false],
+["Guilford County Schools","Piedmont Triad",4505,9.8,14.4,4.6,19.5,false],
+["Randolph County School System","Piedmont Triad",958,7.7,11.6,3.9,27.9,false],
+["Asheboro City Schools","Piedmont Triad",312,6.7,11.5,4.8,33.3,false],
+["Rockingham County Schools","Piedmont Triad",734,12.3,15.1,2.9,22.5,false],
+["Stokes County Schools","Piedmont Triad",368,10.6,14.4,3.8,34.0,false],
+["Surry County Schools","Piedmont Triad",486,11.1,14.2,3.1,26.1,false],
+["Elkin City Schools","Piedmont Triad",87,16.1,21.8,5.7,31.6,false],
+["Mount Airy City Schools","Piedmont Triad",114,8.8,12.3,3.5,92.9,false],
+["Yadkin County Schools","Piedmont Triad",330,9.4,14.2,4.8,46.8,false],
+["Columbus County Schools","Sandhills",322,5.9,12.1,6.2,59.0,false],
+["Whiteville City Schools","Sandhills",145,18.6,23.4,4.8,29.4,false],
+["Cumberland County Schools","Sandhills",3186,12.1,16.1,4.0,17.7,false],
+["Hoke County Schools","Sandhills",557,15.4,25.0,9.5,27.3,false],
+["Montgomery County Schools","Sandhills",222,9.9,15.3,5.4,44.1,false],
+["Moore County Schools","Sandhills",823,10.4,14.6,4.1,30.0,false],
+["Richmond County Schools","Sandhills",411,9.5,13.6,4.1,32.1,false],
+["Public Schools of Robeson County","Sandhills",1269,8.4,13.1,4.7,15.7,false],
+["Sampson County Schools","Sandhills",499,8.4,13.4,5.0,31.3,false],
+["Clinton City Schools","Sandhills",196,12.2,21.4,9.2,28.6,false],
+["Scotland County Schools","Sandhills",361,10.0,15.8,5.8,54.4,false],
+["Bladen County Schools","Sandhills",246,7.7,15.4,7.7,44.7,false],
+["Brunswick County Schools","Southeast",873,9.6,14.3,4.7,44.8,false],
+["Carteret County Public Schools","Southeast",569,10.9,13.2,2.3,25.3,false],
+["Craven County Schools","Southeast",767,11.2,17.1,5.9,27.5,false],
+["Duplin County Schools","Southeast",599,8.5,11.2,2.7,29.9,false],
+["Greene County Schools","Southeast",199,12.6,19.1,6.5,26.3,true],
+["Jones County Schools","Southeast",74,10.8,23.0,12.2,47.1,true],
+["Lenoir County Public Schools","Southeast",524,9.5,14.9,5.3,23.1,false],
+["New Hanover County Schools","Southeast",1682,9.8,13.1,3.3,18.2,false],
+["Onslow County Schools","Southeast",1737,14.3,17.4,3.2,15.2,false],
+["Pamlico County Schools","Southeast",93,10.8,17.2,6.5,31.3,false],
+["Pender County Schools","Southeast",662,10.1,17.4,7.3,30.4,true],
+["Wayne County Public Schools","Southeast",1065,11.4,16.2,4.8,14.5,true],
+["Cabarrus County Schools","Southwest",2118,10.2,16.0,5.8,23.0,false],
+["Kannapolis City Schools","Southwest",338,7.4,18.0,10.7,29.5,false],
+["Cleveland County Schools","Southwest",909,9.7,13.0,3.3,29.7,false],
+["Gaston County Schools","Southwest",1873,11.4,15.7,4.3,18.0,false],
+["Anson County Schools","Southwest",195,9.7,17.4,7.7,26.5,false],
+["Iredell-Statesville Schools","Southwest",1264,9.9,14.3,4.4,17.1,false],
+["Mooresville Graded School District","Southwest",375,6.9,12.5,5.6,42.6,false],
+["Lincoln County Schools","Southwest",734,5.9,9.3,3.4,45.6,false],
+["Charlotte-Mecklenburg Schools","Southwest",8721,11.2,14.9,3.8,17.8,false],
+["Rowan-Salisbury Schools","Southwest",1078,8.7,15.3,6.6,38.2,false],
+["Stanly County Schools","Southwest",538,8.9,11.3,2.4,49.2,false],
+["Union County Public Schools","Southwest",2485,10.2,14.7,4.5,14.5,false],
+["Buncombe County Schools","Western",1543,10.9,14.9,4.0,17.8,false],
+["Asheville City Schools","Western",308,12.3,21.8,9.4,22.4,false],
+["Cherokee County Schools","Western",226,10.2,11.5,1.3,11.5,false],
+["Clay County Schools","Western",93,4.3,6.5,2.2,33.3,false],
+["Graham County Schools","Western",91,6.6,7.7,1.1,57.1,false],
+["Haywood County Schools","Western",432,10.0,12.7,2.8,25.5,false],
+["Henderson County Schools","Western",853,10.6,12.2,1.6,22.1,false],
+["Jackson County Public Schools","Western",243,11.9,17.7,5.8,32.6,false],
+["Macon County Schools","Western",323,10.5,13.6,3.1,18.2,false],
+["Madison County Schools","Western",174,6.9,11.5,4.6,25.0,false],
+["Polk County Schools","Western",162,13.6,17.9,4.3,34.5,false],
+["Rutherford County Schools","Western",480,11.0,15.6,4.6,18.7,false],
+["Swain County Schools","Western",131,13.0,22.1,9.2,6.9,false],
+["Transylvania County Schools","Western",259,12.0,15.1,3.1,23.1,false]
+];
+
+const tbody = document.getElementById('leaTableBody');
+const regionSel = document.getElementById('regionFilter');
+const regions = [...new Set(LEA.map(r=>r[1]))].sort();
+regionSel.innerHTML = '<option value="all">All regions</option>' + regions.map(r=>`<option value="${r}">${r}</option>`).join('');
+
+let sortKey = 'leaAttr', sortDir = 'desc';
+const keyIdx = {lea:0, region:1, teachers:2, stateAttr:3, leaAttr:4, mobility:5, recoupment:6};
+
+function renderTable(){
+  const q = document.getElementById('searchBox').value.toLowerCase();
+  const reg = regionSel.value;
+  let rows = LEA.filter(r => (reg==='all' || r[1]===reg) && r[0].toLowerCase().includes(q));
+  const idx = keyIdx[sortKey];
+  rows.sort((a,b)=>{
+    const av=a[idx], bv=b[idx];
+    const cmp = av<bv ? -1 : av>bv ? 1 : 0;
+    return sortDir==='asc' ? cmp : -cmp;
+  });
+  document.getElementById('rowCount').textContent = `${rows.length} of ${LEA.length} districts`;
+  tbody.innerHTML = rows.map(r => `
+    <tr class="${r[7] ? 'flagged' : ''}">
+      <td>${r[0]}</td><td>${r[1]}</td><td>${r[2].toLocaleString()}</td>
+      <td>${r[3]}%</td><td>${r[4]}%</td><td>${r[5]}%</td><td>${r[6]}%</td>
+    </tr>`).join('');
+}
+document.querySelectorAll('#leaTable thead th').forEach(th => {
+  th.addEventListener('click', () => {
+    const k = th.dataset.key;
+    if (sortKey===k) sortDir = sortDir==='asc' ? 'desc' : 'asc'; else { sortKey=k; sortDir='desc'; }
+    renderTable();
+  });
+});
+document.getElementById('searchBox').addEventListener('input', renderTable);
+regionSel.addEventListener('change', renderTable);
+renderTable();
+</script>
+</body>
+</html>

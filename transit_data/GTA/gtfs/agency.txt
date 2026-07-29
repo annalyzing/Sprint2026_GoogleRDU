@@ -1,0 +1,2 @@
+agency_id,agency_name,agency_url,agency_timezone,agency_lang,agency_phone,agency_fare_url,agency_email
+232,"Greensboro Transit Agency",https://www.greensboro-nc.gov/departments/transit,America/New_York,en-US,3364126237,https://www.greensboro-nc.gov/departments/transit/fares-and-passes,

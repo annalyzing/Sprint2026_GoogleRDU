@@ -1,0 +1,840 @@
+edu_school_name,edu_county,edu_rate,grade_span,county_norm,name_norm,reason
+"Central Elementary, Jackson",Northampton,0.2916,PK:04,northampton,central elementary jackson,best fuzzy score 82 below threshold 85
+Northampton Early College,Northampton,0.094,09:13,northampton,northampton early college,best fuzzy score 62 below threshold 85
+"Southwest Elementary, Jacksonville",Onslow,0.1361,PK:05,onslow,southwest elementary jacksonville,best fuzzy score 75 below threshold 85
+"Southwest Middle, Jacksonville",Onslow,0.1523,06:08,onslow,southwest middle jacksonville,best fuzzy score 71 below threshold 85
+"Parkwood Elementary, Jacksonville",Onslow,0.0626,KG:05,onslow,parkwood elementary jacksonville,best fuzzy score 75 below threshold 85
+"Northwoods Elementary, Jacksonville",Onslow,0.1747,KG:05,onslow,northwoods elementary jacksonville,best fuzzy score 76 below threshold 85
+"Northside High, Jacksonville",Onslow,0.1812,09:12,onslow,northside high jacksonville,best fuzzy score 77 below threshold 85
+"Fairview Elementary, Rocky Mount",Nash,0.2131,PK:02,nash,fairview elementary rocky mount,best fuzzy score 60 below threshold 85
+"Southern Middle, Aberdeen",Moore,0.1547,06:08,moore,southern middle aberdeen,best fuzzy score 77 below threshold 85
+"Edwin A Alderman Elementary, Wilmington",New Hanover,0.2034,KG:05,new hanover,edwin a alderman elementary wilmington,best fuzzy score 83 below threshold 85
+Isaac M Bear Early College High School,New Hanover,0.0714,09:12,new hanover,isaac m bear early college high,best fuzzy score 71 below threshold 85
+"Swift Creek Elementary, Whitakers",Nash,0.1494,PK:05,nash,swift creek elementary whitakers,best fuzzy score 81 below threshold 85
+Vidant Health,Pitt,0.1707,PK:12,pitt,vidant health,best fuzzy score 43 below threshold 85
+"Eastern Elementary, Greenville",Pitt,0.0561,KG:05,pitt,eastern elementary greenville,best fuzzy score 77 below threshold 85
+"Southmont Elementary, Asheboro",Randolph,0.0792,PK:05,randolph,southmont elementary asheboro,best fuzzy score 82 below threshold 85
+Randolph County Schools,Randolph,0.1231,,randolph,randolph county schools,best fuzzy score 53 below threshold 85
+"Creekside Elementary, Winterville",Pitt,0.1205,PK:05,pitt,creekside elementary winterville,best fuzzy score 77 below threshold 85
+"Bethel Elementary, Bethel",Pitt,0.1382,PK:08,pitt,bethel elementary bethel,best fuzzy score 83 below threshold 85
+Chapel Hill-Carrboro Schools,Orange,0.0989,,orange,chapel hill carrboro schools,best fuzzy score 59 below threshold 85
+"New Hope Elementary, Chapel Hill",Orange,0.1015,PK:05,orange,new hope elementary chapel hill,best fuzzy score 76 below threshold 85
+"Northside Elementary, Chapel Hill",Orange,0.0638,PK:05,orange,northside elementary chapel hill,best fuzzy score 65 below threshold 85
+"Glenwood Elementary, Chapel Hill",Orange,0.0516,KG:05,orange,glenwood elementary chapel hill,best fuzzy score 76 below threshold 85
+"Phillips Middle, Chapel Hill",Orange,0.0895,06:08,orange,phillips middle chapel hill,best fuzzy score 71 below threshold 85
+Pasquotank County Schools,Pasquotank,0.1252,,pasquotank,pasquotank county schools,best fuzzy score 72 below threshold 85
+"North Elementary, Roxboro",Person,0.1055,KG:05,person,north elementary roxboro,best fuzzy score 80 below threshold 85
+"South Elementary, Roxboro",Person,0.1217,PK:05,person,south elementary roxboro,best fuzzy score 80 below threshold 85
+"Southern Middle, Roxboro",Person,0.1322,06:08,person,southern middle roxboro,best fuzzy score 79 below threshold 85
+Uwharrie Charter Academy,Randolph,0.0696,05:12,randolph,uwharrie charter academy,best fuzzy score 56 below threshold 85
+"Riverside High, Williamston",Martin,0.2195,09:12,martin,riverside high williamston,best fuzzy score 70 below threshold 85
+East McDowell Middle,McDowell,0.2482,06:08,mcdowell,east mcdowell middle,best fuzzy score 58 below threshold 85
+"Glenwood Elementary, Marion",McDowell,0.1652,PK:05,mcdowell,glenwood elementary marion,best fuzzy score 84 below threshold 85
+"Marion Elementary, Marion",McDowell,0.1243,PK:05,mcdowell,marion elementary marion,best fuzzy score 83 below threshold 85
+"Clear Creek Elementary, Charlotte",Mecklenburg,0.1104,PK:05,mecklenburg,clear creek elementary charlotte,best fuzzy score 81 below threshold 85
+West McDowell Middle,McDowell,0.144,06:08,mcdowell,west mcdowell middle,best fuzzy score 58 below threshold 85
+McDowell,McDowell,0.1751,06:12,mcdowell,mcdowell,best fuzzy score 76 below threshold 85
+Johnston County Schools,Johnston,0.1228,,johnston,johnston county schools,best fuzzy score 57 below threshold 85
+"Northeast Elementary, Kinston",Lenoir,0.2024,PK:05,lenoir,northeast elementary kinston,best fuzzy score 83 below threshold 85
+"Northwest Elementary, Kinston",Lenoir,0.1164,KG:05,lenoir,northwest elementary kinston,best fuzzy score 83 below threshold 85
+"Southwood Elementary, Kinston",Lenoir,0.1815,KG:05,lenoir,southwood elementary kinston,best fuzzy score 83 below threshold 85
+Grand Oak Elementary,Mecklenburg,0.0503,KG:05,mecklenburg,grand oak elementary,best fuzzy score 80 below threshold 85
+"Reedy Creek Elementary, Charlotte",Mecklenburg,0.1067,PK:05,mecklenburg,reedy creek elementary charlotte,best fuzzy score 81 below threshold 85
+"Sedgefield Elementary, Charlotte",Mecklenburg,0.3173,PK:05,mecklenburg,sedgefield elementary charlotte,best fuzzy score 81 below threshold 85
+"Stoney Creek Elementary, Charlotte",Mecklenburg,0.1576,KG:05,mecklenburg,stoney creek elementary charlotte,best fuzzy score 82 below threshold 85
+Olympic TEAM High School,Mecklenburg,0.434,09:12,mecklenburg,olympic team high,best fuzzy score 73 below threshold 85
+Thunderbird Preparatory Academy,Mecklenburg,0.1637,KG:07,mecklenburg,thunderbird preparatory academy,best fuzzy score 62 below threshold 85
+Olympic High-Leadership and Development,Mecklenburg,0.4406,09:12,mecklenburg,olympic high leadership and development,best fuzzy score 56 below threshold 85
+"Performance Learning Center, Charlotte",Mecklenburg,0.4076,09:12,mecklenburg,performance learning center charlotte,best fuzzy score 84 below threshold 85
+eLearning Academy,Mecklenburg,0.1774,09:12,mecklenburg,elearning academy,best fuzzy score 68 below threshold 85
+"Pinewood Elementary, Charlotte",Mecklenburg,0.1932,PK:05,mecklenburg,pinewood elementary charlotte,best fuzzy score 79 below threshold 85
+"Piney Grove Elementary, Charlotte",Mecklenburg,0.1074,PK:05,mecklenburg,piney grove elementary charlotte,best fuzzy score 81 below threshold 85
+Oakview Elementary,Wake,0.0605,PK:05,wake,oakview elementary,best fuzzy score 81 below threshold 85
+"Oak Grove Elementary, Raleigh",Wake,0.0772,PK:05,wake,oak grove elementary raleigh,best fuzzy score 83 below threshold 85
+"Lincoln Heights Elementary, Fuquay-Varin",Wake,0.0794,PK:05,wake,lincoln heights elementary fuquay varin,best fuzzy score 80 below threshold 85
+"Pleasant Grove Elementary, Morrisville",Wake,0.1384,PK:05,wake,pleasant grove elementary morrisville,best fuzzy score 75 below threshold 85
+"Vance Elementary, Raleigh",Wake,0.0833,PK:05,wake,vance elementary raleigh,best fuzzy score 80 below threshold 85
+"River Bend Middle, Raleigh",Wake,0.1402,06:08,wake,river bend middle raleigh,best fuzzy score 67 below threshold 85
+"Swift Creek Elementary, Raleigh",Wake,0.0807,KG:05,wake,swift creek elementary raleigh,best fuzzy score 85 below threshold 85
+"Brier Creek Elementary, Raleigh",Wake,0.072,PK:05,wake,brier creek elementary raleigh,best fuzzy score 85 below threshold 85
+"Carver Elementary, Wendell",Wake,0.0829,PK:05,wake,carver elementary wendell,best fuzzy score 84 below threshold 85
+"Brentwood Elementary, Raleigh",Wake,0.0985,PK:05,wake,brentwood elementary raleigh,best fuzzy score 83 below threshold 85
+"Heritage Middle, Wake Forest",Wake,0.1015,06:08,wake,heritage middle wake forest,best fuzzy score 76 below threshold 85
+Ronda-Clingman Elementary,Wilkes,0.0952,PK:05,wilkes,ronda clingman elementary,best fuzzy score 65 below threshold 85
+"Northeast Elementary, Pikeville",Wayne,0.1673,PK:05,wayne,northeast elementary pikeville,best fuzzy score 80 below threshold 85
+"Northwest Elementary, Pikeville",Wayne,0.1395,KG:05,wayne,northwest elementary pikeville,best fuzzy score 80 below threshold 85
+Boomer-Ferguson Elementary,Wilkes,0.0563,PK:05,wilkes,boomer ferguson elementary,best fuzzy score 67 below threshold 85
+"Mount Pleasant Elementary, Ferguson",Wilkes,0.094,PK:05,wilkes,mount pleasant elementary ferguson,best fuzzy score 85 below threshold 85
+Wilson Academy of Applied Technology,Wilson,0.0549,09:10,wilson,wilson academy of applied technology,best fuzzy score 66 below threshold 85
+Envision Science Academy,Wake,0.0571,KG:08,wake,envision science academy,best fuzzy score 54 below threshold 85
+The Exploris School,Wake,0.0595,KG:08,wake,the exploris,best fuzzy score 43 below threshold 85
+Sterling Montessori Academy,Wake,0.0651,PK:08,wake,sterling montessori academy,best fuzzy score 54 below threshold 85
+Washington Early College High,Washington,0.2,09:10,washington,washington early college high,best fuzzy score 62 below threshold 85
+"Carver Elementary, Mount Olive",Wayne,0.0701,PK:04,wayne,carver elementary mount olive,best fuzzy score 74 below threshold 85
+Northeast Regional School - Biotech/Agri,Martin,0.0704,09:13,martin,northeast regional biotech agri,best fuzzy score 37 below threshold 85
+"Bethel Elementary, Sugar Grove",Watauga,0.1466,KG:08,watauga,bethel elementary sugar grove,best fuzzy score 74 below threshold 85
+"Brogden Middle, Dudley",Wayne,0.2387,05:08,wayne,brogden middle dudley,best fuzzy score 80 below threshold 85
+"Southeast Middle, Salisbury",Rowan,0.1731,06:08,rowan,southeast middle salisbury,best fuzzy score 76 below threshold 85
+"Erwin Middle, Salisbury",Rowan,0.1588,06:08,rowan,erwin middle salisbury,best fuzzy score 71 below threshold 85
+"Cleveland Elementary, Cleveland",Rowan,0.1535,KG:05,rowan,cleveland elementary cleveland,best fuzzy score 80 below threshold 85
+"Union Elementary, Clinton",Sampson,0.1675,PK:03,sampson,union elementary clinton,best fuzzy score 80 below threshold 85
+"Piney Grove Elementary, Lumberton",Robeson,0.1948,PK:06,robeson,piney grove elementary lumberton,best fuzzy score 81 below threshold 85
+"Prospect Elementary, Maxton",Robeson,0.1703,PK:08,robeson,prospect elementary maxton,best fuzzy score 84 below threshold 85
+"Lincoln Elementary, Ruffin",Rockingham,0.1655,PK:05,rockingham,lincoln elementary ruffin,best fuzzy score 84 below threshold 85
+"Union Elementary, Rowland",Robeson,0.1814,PK:06,robeson,union elementary rowland,best fuzzy score 80 below threshold 85
+Robeson County Schools,Robeson,0.2597,,robeson,robeson county schools,best fuzzy score 55 below threshold 85
+"East Elementary, Monroe",Union,0.136,PK:05,union,east elementary monroe,best fuzzy score 81 below threshold 85
+"Fairview Elementary, Monroe",Union,0.117,PK:05,union,fairview elementary monroe,best fuzzy score 84 below threshold 85
+"Union Academy, Monroe",Union,0.0721,KG:12,union,union academy monroe,best fuzzy score 57 below threshold 85
+"Carver Elementary, Henderson",Vance,0.2615,PK:05,vance,carver elementary henderson,best fuzzy score 77 below threshold 85
+"New Hope Elementary, Henderson",Vance,0.2468,PK:05,vance,new hope elementary henderson,best fuzzy score 79 below threshold 85
+"Prospect Elementary, Monroe",Union,0.0729,KG:05,union,prospect elementary monroe,best fuzzy score 84 below threshold 85
+Oakboro Choice STEM,Stanly,0.0629,KG:08,stanly,oakboro choice stem,best fuzzy score 49 below threshold 85
+Elkin City Schools,Surry,0.06,,surry,elkin city schools,best fuzzy score 51 below threshold 85
+"Sandy Ridge Elementary, Sandy Ridge",Stokes,0.0899,KG:05,stokes,sandy ridge elementary sandy ridge,best fuzzy score 79 below threshold 85
+"Central Middle, Dobson",Surry,0.1421,06:08,surry,central middle dobson,best fuzzy score 80 below threshold 85
+"White Oak Elementary, Edenton",Chowan,0.1378,PK:02,chowan,white oak elementary edenton,best fuzzy score 83 below threshold 85
+Chatham School of Science & Engineering,Chatham,0.147,09:10,chatham,chatham of science and engineering,best fuzzy score 48 below threshold 85
+"East Elementary, Kings Mountain",Cleveland,0.1558,PK:04,cleveland,east elementary kings mountain,best fuzzy score 70 below threshold 85
+"Marion Elementary, Shelby",Cleveland,0.0996,PK:04,cleveland,marion elementary shelby,best fuzzy score 83 below threshold 85
+"North Elementary, Kings Mountain",Cleveland,0.1454,PK:04,cleveland,north elementary kings mountain,best fuzzy score 68 below threshold 85
+"Union Elementary, Shelby",Cleveland,0.1263,PK:05,cleveland,union elementary shelby,best fuzzy score 82 below threshold 85
+"White Oak Elementary, Cape Carteret",Carteret,0.0878,PK:05,carteret,white oak elementary cape carteret,best fuzzy score 74 below threshold 85
+"North Elementary, Providence",Caswell,0.2532,PK:05,caswell,north elementary providence,best fuzzy score 74 below threshold 85
+"Oakwood Elementary, Yanceyville",Caswell,0.1914,PK:05,caswell,oakwood elementary yanceyville,best fuzzy score 75 below threshold 85
+"South Elementary, Mebane",Caswell,0.1851,PK:05,caswell,south elementary mebane,best fuzzy score 82 below threshold 85
+"Stoney Creek Elementary, Reidsville",Caswell,0.2,KG:05,caswell,stoney creek elementary reidsville,best fuzzy score 81 below threshold 85
+"River Bend Middle, Claremont",Catawba,0.1319,07:08,catawba,river bend middle claremont,best fuzzy score 77 below threshold 85
+"Central Middle, Whiteville",Columbus,0.2378,06:08,columbus,central middle whiteville,best fuzzy score 72 below threshold 85
+Walker Spivey Elementary,Cumberland,0.2081,KG:05,cumberland,walker spivey elementary,best fuzzy score 70 below threshold 85
+"Southmont Elementary, Lexington",Davidson,0.0539,PK:05,davidson,southmont elementary lexington,best fuzzy score 80 below threshold 85
+"Brier Creek Elementary, Thomasville",Davidson,0.0754,PK:05,davidson,brier creek elementary thomasville,best fuzzy score 79 below threshold 85
+"Brentwood Elementary, Fayetteville",Cumberland,0.2291,PK:05,cumberland,brentwood elementary fayetteville,best fuzzy score 75 below threshold 85
+"Creekside Elementary, New Bern",Craven,0.0799,KG:05,craven,creekside elementary new bern,best fuzzy score 82 below threshold 85
+"Pilot Elementary, Thomasville",Davidson,0.0522,PK:05,davidson,pilot elementary thomasville,best fuzzy score 73 below threshold 85
+Heritage Collegiate Leadership Academy,Bertie,0.3128,KG:06,bertie,heritage collegiate leadership academy,best fuzzy score 48 below threshold 85
+Williams Academy,Avery,0.0573,KG:12,avery,williams academy,best fuzzy score 51 below threshold 85
+"Eastern Elementary, Washington",Beaufort,0.2133,PK:01,beaufort,eastern elementary washington,best fuzzy score 77 below threshold 85
+"Northeast Elementary, Pinetown",Beaufort,0.183,PK:08,beaufort,northeast elementary pinetown,best fuzzy score 82 below threshold 85
+"Northside High, Pinetown",Beaufort,0.1458,09:12,beaufort,northside high pinetown,best fuzzy score 76 below threshold 85
+"Erwin Middle, Asheville",Buncombe,0.186,07:08,buncombe,erwin middle asheville,best fuzzy score 84 below threshold 85
+"Union Elementary, Shallotte",Brunswick,0.0749,KG:05,brunswick,union elementary shallotte,best fuzzy score 76 below threshold 85
+"Lincoln Elementary, Leland",Brunswick,0.1869,PK:05,brunswick,lincoln elementary leland,best fuzzy score 84 below threshold 85
+"Pleasant Grove Elementary, Burlington",Alamance,0.2,PK:05,alamance,pleasant grove elementary burlington,best fuzzy score 82 below threshold 85
+"Southern Middle, Graham",Alamance,0.1632,06:08,alamance,southern middle graham,best fuzzy score 81 below threshold 85
+"Hillcrest Elementary, Burlington",Alamance,0.1487,PK:05,alamance,hillcrest elementary burlington,best fuzzy score 78 below threshold 85
+"Highland Elementary, Burlington",Alamance,0.106,KG:05,alamance,highland elementary burlington,best fuzzy score 78 below threshold 85
+"Mountain View Elementary, Jefferson",Ashe,0.0693,PK:06,ashe,mountain view elementary jefferson,best fuzzy score 83 below threshold 85
+"Forest Park Elementary, Kannapolis",Cabarrus,0.1259,PK:05,cabarrus,forest park elementary kannapolis,best fuzzy score 80 below threshold 85
+"Mount Pleasant Elementary, Mount Pleasan",Cabarrus,0.0677,KG:05,cabarrus,mount pleasant elementary mount pleasan,best fuzzy score 78 below threshold 85
+"Rocky River Elementary, Concord",Cabarrus,0.0901,PK:05,cabarrus,rocky river elementary concord,best fuzzy score 85 below threshold 85
+Kannapolis Charter Academy,Cabarrus,0.1135,KG:07,cabarrus,kannapolis charter academy,best fuzzy score 65 below threshold 85
+"Oak Hill Elementary, Lenoir",Caldwell,0.1764,KG:08,caldwell,oak hill elementary lenoir,best fuzzy score 84 below threshold 85
+"Claxton Elementary, Asheville",Buncombe,0.1194,KG:05,buncombe,claxton elementary asheville,best fuzzy score 78 below threshold 85
+"Vance Elementary, Asheville",Buncombe,0.0894,KG:05,buncombe,vance elementary asheville,best fuzzy score 76 below threshold 85
+"Fairview Elementary, Fairview",Buncombe,0.0938,KG:05,buncombe,fairview elementary fairview,best fuzzy score 81 below threshold 85
+"Salem Elementary, Morganton",Burke,0.0665,PK:05,burke,salem elementary morganton,best fuzzy score 76 below threshold 85
+"Bethel Elementary, Midland",Cabarrus,0.069,KG:05,cabarrus,bethel elementary midland,best fuzzy score 81 below threshold 85
+Invest Collegiate - Imagine,Buncombe,0.097,KG:12,buncombe,invest collegiate imagine,best fuzzy score 44 below threshold 85
+"Heritage Middle, Valdese",Burke,0.0761,06:08,burke,heritage middle valdese,best fuzzy score 79 below threshold 85
+"Hillcrest Elementary, Morganton",Burke,0.0717,PK:05,burke,hillcrest elementary morganton,best fuzzy score 73 below threshold 85
+"Washington Elementary, Greensboro",Guilford,0.1329,PK:05,guilford,washington elementary greensboro,best fuzzy score 69 below threshold 85
+"Pilot Elementary, Greensboro",Guilford,0.1243,PK:05,guilford,pilot elementary greensboro,best fuzzy score 74 below threshold 85
+"Sedgefield Elementary, Greensboro",Guilford,0.1809,PK:05,guilford,sedgefield elementary greensboro,best fuzzy score 79 below threshold 85
+"Phoenix Academy- Primary, Elem. IB MYP",Guilford,0.1706,KG:08,guilford,phoenix academy primary elementary ib myp,best fuzzy score 56 below threshold 85
+"Oak Hill Elementary, High Point",Guilford,0.1615,PK:05,guilford,oak hill elementary high point,best fuzzy score 78 below threshold 85
+Kearns Academy,Guilford,0.056,09:12,guilford,kearns academy,best fuzzy score 79 below threshold 85
+"Claxton Elementary, Greensboro",Guilford,0.1019,KG:05,guilford,claxton elementary greensboro,best fuzzy score 77 below threshold 85
+"Fairview Elementary, High Point",Guilford,0.1502,PK:05,guilford,fairview elementary high point,best fuzzy score 78 below threshold 85
+"Hunter Elementary, Greensboro",Guilford,0.1333,PK:05,guilford,hunter elementary greensboro,best fuzzy score 76 below threshold 85
+"Jefferson Elementary, Greensboro",Guilford,0.0869,PK:05,guilford,jefferson elementary greensboro,best fuzzy score 78 below threshold 85
+Harnett Early College (HCEC),Harnett,0.1,09:13,harnett,harnett early college hcec,best fuzzy score 64 below threshold 85
+"Sharon Elementary, Statesville",Iredell,0.0788,PK:05,iredell,sharon elementary statesville,best fuzzy score 74 below threshold 85
+"Brawley Middle, Mooresville",Iredell,0.0722,06:08,iredell,brawley middle mooresville,best fuzzy score 82 below threshold 85
+"Central Elementary, Statesville",Iredell,0.0608,PK:05,iredell,central elementary statesville,best fuzzy score 75 below threshold 85
+"South Elementary, Mooresville",Iredell,0.0839,PK:03,iredell,south elementary mooresville,best fuzzy score 73 below threshold 85
+Mooresville City Schools,Iredell,0.1046,,iredell,mooresville city schools,best fuzzy score 68 below threshold 85
+"Cleveland Elementary, Clayton",Johnston,0.062,PK:05,johnston,cleveland elementary clayton,best fuzzy score 83 below threshold 85
+Jackson County Schools,Jackson,0.2288,,jackson,jackson county schools,best fuzzy score 50 below threshold 85
+Shining Rock Classical Academy CFA,Haywood,0.1588,KG:08,haywood,shining rock classical academy cfa,best fuzzy score 37 below threshold 85
+"Clear Creek Elementary, Hendersonville",Henderson,0.0883,KG:05,henderson,clear creek elementary hendersonville,best fuzzy score 81 below threshold 85
+"Highland Elementary, Sanford",Harnett,0.1276,KG:05,harnett,highland elementary sanford,best fuzzy score 83 below threshold 85
+"Flat Rock Middle, East Flat Rock",Henderson,0.1507,06:08,henderson,flat rock middle east flat rock,best fuzzy score 68 below threshold 85
+"Hillandale Elementary, East Flat Rock",Henderson,0.1041,KG:05,henderson,hillandale elementary east flat rock,best fuzzy score 74 below threshold 85
+Excelsior Classical Academy,Durham,0.0526,KG:06,durham,excelsior classical academy,best fuzzy score 59 below threshold 85
+"Phillips Middle, Battleboro",Edgecombe,0.2295,06:08,edgecombe,phillips middle battleboro,best fuzzy score 73 below threshold 85
+"Riverside High, Durham",Durham,0.2814,09:12,durham,riverside high durham,best fuzzy score 80 below threshold 85
+"Forest Park Elementary, Winston-Salem",Forsyth,0.2328,PK:05,forsyth,forest park elementary winston salem,best fuzzy score 76 below threshold 85
+Homebound/ Hospital Education,Forsyth,0.1176,PK:12,forsyth,homebound hospital education,best fuzzy score 75 below threshold 85
+"Jefferson Elementary, Winston-Salem",Forsyth,0.0667,PK:05,forsyth,jefferson elementary winston salem,best fuzzy score 74 below threshold 85
+"Flat Rock Middle, Winston-Salem",Forsyth,0.208,06:08,forsyth,flat rock middle winston salem,best fuzzy score 70 below threshold 85
+Edgecombe County Public School,Edgecombe,0.2147,,edgecombe,edgecombe county public,best fuzzy score 59 below threshold 85
+"Southwood Elementary, Lexington",Davidson,0.0931,PK:05,davidson,southwood elementary lexington,best fuzzy score 80 below threshold 85
+"Edwin A Alderman Elementary, Greensboro",Guilford,0.1111,PK:05,guilford,edwin a alderman elementary greensboro,best fuzzy score 83 below threshold 85
+"Brogden Middle, Durham",Durham,0.2287,06:08,durham,brogden middle durham,best fuzzy score 80 below threshold 85
+"Parkwood Elementary, Durham",Durham,0.2125,PK:05,durham,parkwood elementary durham,best fuzzy score 84 below threshold 85
+Gaston Virtual Academy,Gaston,0.3333,06:08,gaston,gaston virtual academy,best fuzzy score 59 below threshold 85
+"Southwest Middle, Gastonia",Gaston,0.1481,06:08,gaston,southwest middle gastonia,best fuzzy score 78 below threshold 85
+"Pinewood Elementary, Mount Holly",Gaston,0.0912,PK:05,gaston,pinewood elementary mount holly,best fuzzy score 76 below threshold 85
+"New Hope Elementary, Gastonia",Gaston,0.076,KG:05,gaston,new hope elementary gastonia,best fuzzy score 81 below threshold 85
+"Piney Grove Elementary, Kernersville",Forsyth,0.09,PK:05,forsyth,piney grove elementary kernersville,best fuzzy score 79 below threshold 85
+"Southeast Middle, Kernersville",Forsyth,0.1454,06:08,forsyth,southeast middle kernersville,best fuzzy score 79 below threshold 85
+"Southwest Elementary, Clemmons",Forsyth,0.0803,PK:05,forsyth,southwest elementary clemmons,best fuzzy score 82 below threshold 85
+"Mineral Springs Elementary, Winston-Sale",Forsyth,0.1426,PK:05,forsyth,mineral springs elementary winston sale,best fuzzy score 80 below threshold 85
+Youngsville Academy,Franklin,0.0656,KG:04,franklin,youngsville academy,best fuzzy score 73 below threshold 85
+Forsyth County Schools,Forsyth,0.2054,,forsyth,forsyth county schools,best fuzzy score 62 below threshold 85
+Cape Fear Center for Inquiry,New Hanover,0.08,KG:08,new hanover,cape fear center for inquiry,best fuzzy score 49 below threshold 85
+Coastal Preparatory Academy,New Hanover,0.1589,KG:07,new hanover,coastal preparatory academy,best fuzzy score 75 below threshold 85
+KIPP Gaston College Preparatory,Northampton,0.0979,KG:12,northampton,kipp gaston college preparatory,best fuzzy score 42 below threshold 85
+College Road Early Childhood Center,New Hanover,0.096,P2:KG,new hanover,college road early childhood center,best fuzzy score 48 below threshold 85
+Career Readiness Academy at Mosley PLC,New Hanover,0.2522,P3:12,new hanover,career readiness academy at mosley plc,best fuzzy score 55 below threshold 85
+SEA-Tech,New Hanover,0.1111,9:10,new hanover,sea tech,best fuzzy score 38 below threshold 85
+Heritage Elementary School,Onslow,0.1676,KG:05,onslow,heritage elementary,best fuzzy score 75 below threshold 85
+Vass-Lakeview Elementary,Moore,0.1456,P3:05,moore,vass lakeview elementary,best fuzzy score 81 below threshold 85
+STARS Charter,Moore,0.0962,KG:11,moore,stars charter,best fuzzy score 56 below threshold 85
+Moore Montessori Community School,Moore,0.2857,KG:02,moore,moore montessori community,best fuzzy score 52 below threshold 85
+Fairview Elementary,Nash,0.2403,KG:02,nash,fairview elementary,best fuzzy score 77 below threshold 85
+Montgomery County Early College,Montgomery,0.073,9:12,montgomery,montgomery county early college,best fuzzy score 62 below threshold 85
+The Community Learning Center @ Pinckney,Moore,0.8857,7:12,moore,the community learning center pinckney,best fuzzy score 51 below threshold 85
+Rocky Mount Preparatory,Nash,0.0772,KG:12,nash,rocky mount preparatory,best fuzzy score 56 below threshold 85
+The International School at Gregory,New Hanover,0.0956,KG:08,new hanover,the international at gregory,best fuzzy score 43 below threshold 85
+Nash-Rocky Mount Schools,Nash,0.1693,,nash,nash rocky mount schools,best fuzzy score 55 below threshold 85
+Rocky Mount Middle,Nash,0.2346,6:08,nash,rocky mount middle,best fuzzy score 76 below threshold 85
+Vidant  Health,Pitt,0.279,P0:12,pitt,vidant health,best fuzzy score 43 below threshold 85
+South Central,Pitt,0.2116,9:12,pitt,south central,best fuzzy score 84 below threshold 85
+Stokes,Pitt,0.0875,PK:08,pitt,stokes,best fuzzy score 52 below threshold 85
+Winterville Charter Academy,Pitt,0.0752,KG:08,pitt,winterville charter academy,best fuzzy score 51 below threshold 85
+ECU Community School,Pitt,0.074,KG:05,pitt,ecu community,best fuzzy score 44 below threshold 85
+Pactolus,Pitt,0.2211,PK:08,pitt,pactolus,best fuzzy score 59 below threshold 85
+Chicod,Pitt,0.1026,PK:08,pitt,chicod,best fuzzy score 52 below threshold 85
+Grifton,Pitt,0.087,PK:08,pitt,grifton,best fuzzy score 58 below threshold 85
+Archdale-Trinity Middle,Randolph,0.1395,7:08,randolph,archdale trinity middle,best fuzzy score 67 below threshold 85
+Smith Middle,Orange,0.065,6:08,orange,smith middle,best fuzzy score 62 below threshold 85
+Eno River Academy,Orange,0.0596,KG:12,orange,eno river academy,best fuzzy score 61 below threshold 85
+Phillips Middle,Orange,0.0668,6:08,orange,phillips middle,best fuzzy score 83 below threshold 85
+FPG Elementary,Orange,0.0616,P3:05,orange,fpg elementary,best fuzzy score 73 below threshold 85
+Northside Elementary,Orange,0.0776,P3:05,orange,northside elementary,best fuzzy score 74 below threshold 85
+Surf City Middle,Pender,0.1384,6:08,pender,surf city middle,best fuzzy score 53 below threshold 85
+Surf City Elementary,Pender,0.1379,P3:05,pender,surf city elementary,best fuzzy score 70 below threshold 85
+Northeast Academy of Aerospace & AdvTech,Pasquotank,0.1197,7:12,pasquotank,northeast academy of aerospace and advtech,best fuzzy score 39 below threshold 85
+Rocky Point Elementary,Pender,0.1117,P2:05,pender,rocky point elementary,best fuzzy score 67 below threshold 85
+Military and Global Leadership Academy,Mecklenburg,0.1322,9:12,mecklenburg,military and global leadership academy,best fuzzy score 81 below threshold 85
+Marie G Davis,Mecklenburg,0.2028,KG:08,mecklenburg,marie g davis,best fuzzy score 56 below threshold 85
+Dilworth Elementary School: Latta Campus,Mecklenburg,0.0739,3:05,mecklenburg,dilworth elementary latta campus,best fuzzy score 75 below threshold 85
+Lincoln Charter School,Lincoln,0.0712,KG:12,lincoln,lincoln charter,best fuzzy score 62 below threshold 85
+BT Bullock Elementary,Lee,0.108,KG:05,lee,bt bullock elementary,best fuzzy score 80 below threshold 85
+Swift Creek Middle,Johnston,0.0917,6:08,johnston,swift creek middle,best fuzzy score 60 below threshold 85
+Neuse Charter School,Johnston,0.067,KG:12,johnston,neuse charter,best fuzzy score 44 below threshold 85
+Johnston Charter Academy,Johnston,0.0794,KG:07,johnston,johnston charter academy,best fuzzy score 70 below threshold 85
+Children's Village Academy,Lenoir,0.4204,KG:08,lenoir,children s village academy,best fuzzy score 44 below threshold 85
+Charlotte Teacher Early College,Mecklenburg,0.08,9:11,mecklenburg,charlotte teacher early college,best fuzzy score 57 below threshold 85
+Dilworth Elementary School: Sedgefield C,Mecklenburg,0.1075,P3:02,mecklenburg,dilworth elementary sedgefield c,best fuzzy score 79 below threshold 85
+Starmount Acad of Excellence,Mecklenburg,0.1957,P3:05,mecklenburg,starmount academy of excellence,best fuzzy score 55 below threshold 85
+United Community School,Mecklenburg,0.0735,KG:06,mecklenburg,united community,best fuzzy score 68 below threshold 85
+Charlotte Lab School,Mecklenburg,0.0798,KG:07,mecklenburg,charlotte lab,best fuzzy score 63 below threshold 85
+"VERITAS Community School, CFA",Mecklenburg,0.1466,KG:06,mecklenburg,veritas community cfa,best fuzzy score 56 below threshold 85
+Matthews Charter Academy,Mecklenburg,0.1159,KG:08,mecklenburg,matthews charter academy,best fuzzy score 67 below threshold 85
+Unity Classical Charter,Mecklenburg,0.0909,KG:03,mecklenburg,unity classical charter,best fuzzy score 54 below threshold 85
+Mountain Island Day Community Charter,Mecklenburg,0.097,KG:11,mecklenburg,mountain island day community charter,best fuzzy score 70 below threshold 85
+Metrolina Reg Scholars Academy,Mecklenburg,0.0506,KG:08,mecklenburg,metrolina reg scholars academy,best fuzzy score 59 below threshold 85
+Community School of Davidson,Mecklenburg,0.0781,KG:12,mecklenburg,community of davidson,best fuzzy score 56 below threshold 85
+Socrates Academy,Mecklenburg,0.0654,KG:08,mecklenburg,socrates academy,best fuzzy score 69 below threshold 85
+Charlotte Secondary,Mecklenburg,0.1095,6:12,mecklenburg,charlotte secondary,best fuzzy score 59 below threshold 85
+Aristotle Preparatory Academy,Mecklenburg,0.2035,KG:06,mecklenburg,aristotle preparatory academy,best fuzzy score 60 below threshold 85
+Charlotte Choice Charter,Mecklenburg,0.3085,KG:08,mecklenburg,charlotte choice charter,best fuzzy score 60 below threshold 85
+Bradford Preparatory School,Mecklenburg,0.0517,KG:12,mecklenburg,bradford preparatory,best fuzzy score 50 below threshold 85
+Charlotte Learning Academy,Mecklenburg,0.1795,6:12,mecklenburg,charlotte learning academy,best fuzzy score 68 below threshold 85
+Corvian Community School,Mecklenburg,0.0691,KG:09,mecklenburg,corvian community,best fuzzy score 62 below threshold 85
+Governors Village STEM Academy (Upper),Mecklenburg,0.1239,5:08,mecklenburg,governors village stem academy upper,best fuzzy score 56 below threshold 85
+Lawrence Orr Elementary,Mecklenburg,0.1155,P2:05,mecklenburg,lawrence orr elementary,best fuzzy score 74 below threshold 85
+Parkside Elementary,Mecklenburg,0.1,P3:05,mecklenburg,parkside elementary,best fuzzy score 83 below threshold 85
+Olympic High,Mecklenburg,0.2319,9:12,mecklenburg,olympic high,best fuzzy score 67 below threshold 85
+Palisades Park Elementary,Mecklenburg,0.0559,KG:05,mecklenburg,palisades park elementary,best fuzzy score 76 below threshold 85
+Charlotte-Mecklenburg Virtual HS,Mecklenburg,0.2041,9:12,mecklenburg,charlotte mecklenburg virtual high,best fuzzy score 69 below threshold 85
+Vaughan Academy of Technology,Mecklenburg,0.0671,KG:05,mecklenburg,vaughan academy of technology,best fuzzy score 64 below threshold 85
+Merry Oaks International Academy,Mecklenburg,0.1707,PK:05,mecklenburg,merry oaks international academy,best fuzzy score 64 below threshold 85
+Lincoln Heights Academy,Mecklenburg,0.8051,KG:13,mecklenburg,lincoln heights academy,best fuzzy score 63 below threshold 85
+Governors Village STEM Academy (Lower),Mecklenburg,0.1507,KG:04,mecklenburg,governors village stem academy lower,best fuzzy score 56 below threshold 85
+Moore Square Middle,Wake,0.1341,6:08,wake,moore square middle,best fuzzy score 73 below threshold 85
+North Wake College and Career Academy,Wake,0.0717,9:12,wake,north wake college and career academy,best fuzzy score 56 below threshold 85
+Pine Hollow Middle,Wake,0.0738,6:08,wake,pine hollow middle,best fuzzy score 78 below threshold 85
+Pleasant Grove Elementary,Wake,0.1202,P2:05,wake,pleasant grove elementary,best fuzzy score 80 below threshold 85
+Vernon Malone College and Career Academy,Wake,0.0623,9:13,wake,vernon malone college and career academy,best fuzzy score 55 below threshold 85
+Wake Forest High School,Wake,0.1978,9:12,wake,wake forest high,best fuzzy score 76 below threshold 85
+Walnut Creek Elementary,Wake,0.246,P2:05,wake,walnut creek elementary,best fuzzy score 84 below threshold 85
+Rolesville High,Wake,0.2289,9:12,wake,rolesville high,best fuzzy score 76 below threshold 85
+Rogers Lane Elementary,Wake,0.1366,P2:05,wake,rogers lane elementary,best fuzzy score 81 below threshold 85
+River Bend Middle,Wake,0.1494,6:08,wake,river bend middle,best fuzzy score 71 below threshold 85
+South Garner High,Wake,0.2258,9:11,wake,south garner high,best fuzzy score 79 below threshold 85
+Buckhorn Creek Elementary,Wake,0.0795,P2:05,wake,buckhorn creek elementary,best fuzzy score 81 below threshold 85
+Apex Friendship Middle,Wake,0.0735,6:08,wake,apex friendship middle,best fuzzy score 67 below threshold 85
+Beaverdam Elementary,Wake,0.139,P1:05,wake,beaverdam elementary,best fuzzy score 83 below threshold 85
+Fuquay-Varina High,Wake,0.2005,9:12,wake,fuquay varina high,best fuzzy score 69 below threshold 85
+Fuquay-Varina Middle,Wake,0.1305,6:08,wake,fuquay varina middle,best fuzzy score 67 below threshold 85
+East Wake High,Wake,0.2446,9:12,wake,east wake high,best fuzzy score 73 below threshold 85
+Enloe High,Wake,0.1742,9:12,wake,enloe high,best fuzzy score 67 below threshold 85
+Ronda-Clingman Elementary School,Wilkes,0.1301,PK:05,wilkes,ronda clingman elementary,best fuzzy score 65 below threshold 85
+Wilkes County Schools,Wilkes,0.1218,,wilkes,wilkes county schools,best fuzzy score 60 below threshold 85
+Frederick Douglass Elementary,Wilson,0.0575,KG:05,wilson,frederick douglass elementary,best fuzzy score 68 below threshold 85
+Wayne County Public Schools,Wayne,0.2021,,wayne,wayne county public schools,best fuzzy score 46 below threshold 85
+Dillard Academy,Wayne,0.2592,KG:08,wayne,dillard academy,best fuzzy score 55 below threshold 85
+Wayne Preparatory Academy,Wayne,0.1893,KG:08,wayne,wayne preparatory academy,best fuzzy score 60 below threshold 85
+Boomer-Ferguson Elementary School,Wilkes,0.1016,PK:05,wilkes,boomer ferguson elementary,best fuzzy score 67 below threshold 85
+Yadkin County Schools,Yadkin,0.1413,,yadkin,yadkin county schools,best fuzzy score 60 below threshold 85
+Yancey County Schools,Yancey,0.1748,,yancey,yancey county schools,best fuzzy score 51 below threshold 85
+State of North Carolina,,0.1588,,,state of north carolina,no transit schools in this county
+Spring Creek Middle,Wayne,0.1827,5:08,wayne,spring creek middle,best fuzzy score 78 below threshold 85
+Sallie B Howard School,Wilson,0.1346,KG:08,wilson,sallie b howard,best fuzzy score 41 below threshold 85
+Wilson Preparatory Academy,Wilson,0.1331,KG:12,wilson,wilson preparatory academy,best fuzzy score 70 below threshold 85
+Wilson County Schools,Wilson,0.1419,,wilson,wilson county schools,best fuzzy score 53 below threshold 85
+Casa Esperanza Montessori Charter School,Wake,0.0549,PK:08,wake,casa esperanza montessori charter,best fuzzy score 49 below threshold 85
+Triangle Math and Science Academy,Wake,0.0594,KG:12,wake,triangle math and science academy,best fuzzy score 57 below threshold 85
+Longleaf School of the Arts,Wake,0.2185,9:12,wake,longleaf of the arts,best fuzzy score 50 below threshold 85
+Wake Forest Charter Academy,Wake,0.0597,KG:08,wake,wake forest charter academy,best fuzzy score 65 below threshold 85
+Cardinal Charter Academy,Wake,0.1182,KG:08,wake,cardinal charter academy,best fuzzy score 58 below threshold 85
+Northside K-8,Warren,0.317,PK:08,warren,northside k 8,best fuzzy score 61 below threshold 85
+Warren County Schools,Warren,0.2974,,warren,warren county schools,best fuzzy score 77 below threshold 85
+Haliwa-Saponi Tribal School,Warren,0.3161,KG:12,warren,haliwa saponi tribal,best fuzzy score 35 below threshold 85
+Hope Charter Leadership Academy,Wake,0.3716,KG:05,wake,hope charter leadership academy,best fuzzy score 55 below threshold 85
+PAVE Southeast Raleigh Charter,Wake,0.2131,KG:04,wake,pave southeast raleigh charter,best fuzzy score 73 below threshold 85
+PreEminent Charter,Wake,0.2,KG:08,wake,preeminent charter,best fuzzy score 69 below threshold 85
+Raleigh Charter High School,Wake,0.1428,9:12,wake,raleigh charter high,best fuzzy score 59 below threshold 85
+White Oak Elementary,Wake,0.0565,P2:05,wake,white oak elementary,best fuzzy score 80 below threshold 85
+Wake County Schools,Wake,0.1274,,wake,wake county schools,best fuzzy score 54 below threshold 85
+Franklin Academy,Wake,0.0519,KG:12,wake,franklin academy,best fuzzy score 59 below threshold 85
+East Wake Academy,Wake,0.0822,KG:12,wake,east wake academy,best fuzzy score 62 below threshold 85
+Torchlight Academy,Wake,0.3802,KG:08,wake,torchlight academy,best fuzzy score 59 below threshold 85
+Raleigh Oak Charter,Wake,0.3054,KG:04,wake,raleigh oak charter,best fuzzy score 53 below threshold 85
+Grantham Elementary,Wayne,0.1581,KG:04,wayne,grantham elementary,best fuzzy score 77 below threshold 85
+Grantham Middle,Wayne,0.1925,5:08,wayne,grantham middle,best fuzzy score 70 below threshold 85
+Washington County High,Washington,0.2847,9:12,washington,washington county high,best fuzzy score 84 below threshold 85
+Washington County Middle,Washington,0.26,6:08,washington,washington county middle,best fuzzy score 81 below threshold 85
+Washington County Schools,Washington,0.2109,,washington,washington county schools,best fuzzy score 79 below threshold 85
+Watauga Innovation Academy,Watauga,0.114,9:12,watauga,watauga innovation academy,best fuzzy score 47 below threshold 85
+Watauga County Schools,Watauga,0.1121,,watauga,watauga county schools,best fuzzy score 53 below threshold 85
+Two Rivers Community School,Watauga,0.1077,KG:08,watauga,two rivers community,best fuzzy score 38 below threshold 85
+Bethany Community  School,Rockingham,0.1852,6:10,rockingham,bethany community,best fuzzy score 69 below threshold 85
+Thomas Jefferson Class Academy,Rutherford,0.0736,KG:12,rutherford,thomas jefferson class academy,best fuzzy score 41 below threshold 85
+Abbotts Creek Elementary,Wake,0.0628,P2:05,wake,abbotts creek elementary,best fuzzy score 78 below threshold 85
+Mountain Discovery,Swain,0.1878,KG:08,swain,mountain discovery,best fuzzy score 48 below threshold 85
+T C Henderson,Transylvania,0.1214,P0:05,transylvania,t c henderson,best fuzzy score 70 below threshold 85
+Brevard Academy,Transylvania,0.0959,KG:08,transylvania,brevard academy,best fuzzy score 52 below threshold 85
+STEM Early High,Vance,0.1488,6:08,vance,stem early high,best fuzzy score 49 below threshold 85
+Vance Charter School,Vance,0.0553,KG:11,vance,vance charter,best fuzzy score 69 below threshold 85
+Henderson Collegiate,Vance,0.0767,KG:12,vance,henderson collegiate,best fuzzy score 52 below threshold 85
+Union Prep Academy at Indian Trail,Union,0.0509,KG:08,union,union prep academy at indian trail,best fuzzy score 56 below threshold 85
+Union Academy,Union,0.0859,KG:12,union,union academy,best fuzzy score 62 below threshold 85
+Cherokee Extension School,Swain,0.2244,KG:12,swain,cherokee extension,best fuzzy score 48 below threshold 85
+Surry Early College,Surry,0.055,9:13,surry,surry early college,best fuzzy score 76 below threshold 85
+Bruce H Tharrington Primary,Surry,0.1615,PK:02,surry,bruce h tharrington primary,best fuzzy score 77 below threshold 85
+Meadowview Magnet Middle,Surry,0.18,6:08,surry,meadowview magnet middle,best fuzzy score 83 below threshold 85
+Southeastern Middle,Stokes,0.2146,6:08,stokes,southeastern middle,best fuzzy score 84 below threshold 85
+CCCA - Fair Bluff /Southeastern Campuses,Columbus,0.0843,9:13,columbus,ccca fair bluff southeastern campuses,best fuzzy score 79 below threshold 85
+Tiller School,Carteret,0.0792,KG:05,carteret,tiller,best fuzzy score 40 below threshold 85
+J S Waters School,Chatham,0.124,KG:08,chatham,j s waters,best fuzzy score 65 below threshold 85
+Moncure School,Chatham,0.1062,PK:08,chatham,moncure,best fuzzy score 56 below threshold 85
+Silk Hope School,Chatham,0.1061,KG:08,chatham,silk hope,best fuzzy score 62 below threshold 85
+Chatham County Schools,Chatham,0.1089,,chatham,chatham county schools,best fuzzy score 57 below threshold 85
+Chatham Charter,Chatham,0.053,KG:12,chatham,chatham charter,best fuzzy score 63 below threshold 85
+Woods Charter,Chatham,0.0764,KG:12,chatham,woods charter,best fuzzy score 52 below threshold 85
+Willow Oak Montessori,Chatham,0.1214,1:08,chatham,willow oak montessori,best fuzzy score 44 below threshold 85
+Discovery High School,Catawba,0.1666,9:12,catawba,discovery high,best fuzzy score 77 below threshold 85
+Bennett School,Chatham,0.073,P3:08,chatham,bennett,best fuzzy score 56 below threshold 85
+Bonlee School,Chatham,0.0888,KG:08,chatham,bonlee,best fuzzy score 52 below threshold 85
+Water's Edge Village School,Currituck,0.0526,KG:08,currituck,water s edge village,best fuzzy score 37 below threshold 85
+Seventy-First Classical Middle,Cumberland,0.085,6:08,cumberland,seventy first classical middle,best fuzzy score 81 below threshold 85
+Oak Grove High,Davidson,0.0678,9:12,davidson,oak grove high,best fuzzy score 73 below threshold 85
+Roger Bell New Tech Academy,Craven,0.152,KG:05,craven,roger bell new tech academy,best fuzzy score 48 below threshold 85
+Washington Montessori,Beaufort,0.1087,KG:12,beaufort,washington montessori,best fuzzy score 67 below threshold 85
+Grandfather Academy,Avery,0.7931,1:12,avery,grandfather academy,best fuzzy score 52 below threshold 85
+Marjorie Williams Academy,Avery,0.0593,KG:12,avery,marjorie williams academy,best fuzzy score 56 below threshold 85
+Paul R Brown Leadership Academy,Bladen,0.213,6:12,bladen,paul r brown leadership academy,best fuzzy score 51 below threshold 85
+Early College,Buncombe,0.0559,9:13,buncombe,early college,best fuzzy score 62 below threshold 85
+Middle College,Buncombe,0.56,11:13,buncombe,middle college,best fuzzy score 67 below threshold 85
+South Brunswick Charter,Brunswick,0.0989,KG:05,brunswick,south brunswick charter,best fuzzy score 79 below threshold 85
+The COAST,Brunswick,0.5119,6:12,brunswick,the coast,best fuzzy score 32 below threshold 85
+Audrey W. Garrett Elementary,Alamance,0.1592,P3:05,alamance,audrey w garrett elementary,best fuzzy score 80 below threshold 85
+River Mill Academy,Alamance,0.0601,KG:12,alamance,river mill academy,best fuzzy score 53 below threshold 85
+Davidson County Schools,Davidson,0.0828,,davidson,davidson county schools,best fuzzy score 79 below threshold 85
+A.C.E. Academy,Cabarrus,0.1521,KG:08,cabarrus,a c e academy,best fuzzy score 46 below threshold 85
+GW Carver Elementary,Cabarrus,0.1362,KG:05,cabarrus,gw carver elementary,best fuzzy score 71 below threshold 85
+W R Odell Primary,Cabarrus,0.0725,KG:02,cabarrus,w r odell primary,best fuzzy score 54 below threshold 85
+Cabarrus-Kannapolis Early Coll,Cabarrus,0.1218,9:13,cabarrus,cabarrus kannapolis early college,best fuzzy score 68 below threshold 85
+Camden County Schools,Camden,0.1256,,camden,camden county schools,best fuzzy score 77 below threshold 85
+Down East Middle and Smyrna Elementary,Carteret,0.2226,PK:08,carteret,down east middle and smyrna elementary,best fuzzy score 62 below threshold 85
+Nesbitt Discovery Academy,Buncombe,0.0652,9:12,buncombe,nesbitt discovery academy,best fuzzy score 44 below threshold 85
+Asheville Primary,Buncombe,0.2337,P3:03,buncombe,asheville primary,best fuzzy score 71 below threshold 85
+ArtSpace Charter School,Buncombe,0.0578,KG:08,buncombe,artspace charter,best fuzzy score 40 below threshold 85
+IC Imagine,Buncombe,0.0838,KG:12,buncombe,ic imagine,best fuzzy score 45 below threshold 85
+Sand Hill-Venable Elem,Buncombe,0.1119,KG:04,buncombe,sand hill venable elementary,best fuzzy score 80 below threshold 85
+Francine Delany New School,Buncombe,0.0574,KG:08,buncombe,francine delany new,best fuzzy score 53 below threshold 85
+New Dimensions,Burke,0.1343,KG:08,burke,new dimensions,best fuzzy score 38 below threshold 85
+Coltrane-Webb Elementary,Cabarrus,0.0717,KG:05,cabarrus,coltrane webb elementary,best fuzzy score 81 below threshold 85
+Hillcrest Elementary,Burke,0.0745,P0:05,burke,hillcrest elementary,best fuzzy score 78 below threshold 85
+Mountain View Elementary,Burke,0.1109,P3:05,burke,mountain view elementary,best fuzzy score 78 below threshold 85
+Washington Elementary,Guilford,0.2485,P3:05,guilford,washington elementary,best fuzzy score 78 below threshold 85
+Philip J Weaver Ed Center,Guilford,0.0632,9:12,guilford,philip j weaver ed center,best fuzzy score 58 below threshold 85
+Welborn Middle,Guilford,0.2339,6:08,guilford,welborn middle,best fuzzy score 69 below threshold 85
+Wiley Accel/Enrichment,Guilford,0.4121,PK:05,guilford,wiley accel enrichment,best fuzzy score 68 below threshold 85
+Greensboro Academy,Guilford,0.0583,KG:08,guilford,greensboro academy,best fuzzy score 69 below threshold 85
+"Phoenix Academy-  Primary, Elem. IB MYP",Guilford,0.1404,KG:08,guilford,phoenix academy primary elementary ib myp,best fuzzy score 56 below threshold 85
+Cornerstone Charter Academy-CFA,Guilford,0.0894,KG:12,guilford,cornerstone charter academy cfa,best fuzzy score 60 below threshold 85
+College Prep and Leadership Academy,Guilford,0.1013,KG:12,guilford,college prep and leadership academy,best fuzzy score 58 below threshold 85
+Summerfield Charter Academy,Guilford,0.0979,KG:08,guilford,summerfield charter academy,best fuzzy score 65 below threshold 85
+Gate City Charter,Guilford,0.1388,KG:07,guilford,gate city charter,best fuzzy score 59 below threshold 85
+The Experiential School of Greensboro,Guilford,0.0794,KG:06,guilford,the experiential of greensboro,best fuzzy score 56 below threshold 85
+Pruette SCALE Academy,Guilford,0.8888,6:12,guilford,pruette scale academy,best fuzzy score 83 below threshold 85
+George C Simkins Jr Elementary,Guilford,0.1116,P2:05,guilford,george c simkins jr elementary,best fuzzy score 64 below threshold 85
+KIPP Halifax College Prep,Halifax,0.1899,KG:08,halifax,kipp halifax college prep,best fuzzy score 53 below threshold 85
+Manning Elementary School,Halifax,0.1581,P0:05,halifax,manning elementary,best fuzzy score 78 below threshold 85
+Roanoke Rapids Early College High,Halifax,0.1,8:13,halifax,roanoke rapids early college high,best fuzzy score 73 below threshold 85
+Highland Middle,Harnett,0.1351,6:08,harnett,highland middle,best fuzzy score 62 below threshold 85
+GC Middle College High,Guilford,0.065,11:12,guilford,gc middle college high,best fuzzy score 80 below threshold 85
+Penn-Griffin Schools,Guilford,0.0962,6:12,guilford,penn griffin schools,best fuzzy score 44 below threshold 85
+Hampton Elem Univ Partnership,Guilford,0.256,P2:05,guilford,hampton elementary univ partnership,best fuzzy score 70 below threshold 85
+Monticello-Brown Summit Elem,Guilford,0.2349,PK:05,guilford,monticello brown summit elementary,best fuzzy score 84 below threshold 85
+Ceasar Cone Elementary,Guilford,0.3146,P2:05,guilford,ceasar cone elementary,best fuzzy score 81 below threshold 85
+James B Dudley High,Guilford,0.4101,9:12,guilford,james b dudley high,best fuzzy score 73 below threshold 85
+Lincoln Academy,Guilford,0.104,4:08,guilford,lincoln academy,best fuzzy score 81 below threshold 85
+Herbin Metz Education Center,Guilford,0.2045,P0:08,guilford,herbin metz education center,best fuzzy score 77 below threshold 85
+Eastern Guilford Middle,Guilford,0.168,6:08,guilford,eastern guilford middle,best fuzzy score 82 below threshold 85
+Ronald E. McNair Elementary,Guilford,0.1873,PK:05,guilford,ronald e mcnair elementary,best fuzzy score 79 below threshold 85
+Montlieu Academy of Technology,Guilford,0.2134,PK:05,guilford,montlieu academy of technology,best fuzzy score 70 below threshold 85
+C Joyner Greene Education Center,Guilford,0.125,8:12,guilford,c joyner greene education center,best fuzzy score 71 below threshold 85
+American Renaissance School,Iredell,0.1344,KG:08,iredell,american renaissance,best fuzzy score 43 below threshold 85
+Success Institute Charter,Iredell,0.11,KG:08,iredell,success institute charter,best fuzzy score 44 below threshold 85
+Summit Charter,Jackson,0.0936,KG:09,jackson,summit charter,best fuzzy score 38 below threshold 85
+Sandy Grove Middle,Hoke,0.2482,6:08,hoke,sandy grove middle,best fuzzy score 65 below threshold 85
+Swann Middle School,Guilford,0.2158,6:08,guilford,swann middle,best fuzzy score 67 below threshold 85
+W A Pattillo Middle,Edgecombe,0.1541,6:08,edgecombe,w a pattillo middle,best fuzzy score 68 below threshold 85
+Reaching All Minds Academy,Durham,0.1881,KG:07,durham,reaching all minds academy,best fuzzy score 56 below threshold 85
+North East Carolina Prep,Edgecombe,0.205,KG:12,edgecombe,north east carolina prep,best fuzzy score 43 below threshold 85
+The Institute Development Young Leaders,Durham,0.3493,KG:08,durham,the institute development young leaders,best fuzzy score 47 below threshold 85
+Voyager Academy,Durham,0.0508,KG:12,durham,voyager academy,best fuzzy score 51 below threshold 85
+Rogers-Herr Middle,Durham,0.0792,6:08,durham,rogers herr middle,best fuzzy score 74 below threshold 85
+Carter Community Charter,Durham,0.1214,KG:08,durham,carter community charter,best fuzzy score 46 below threshold 85
+Kestrel Heights School,Durham,0.0576,KG:08,durham,kestrel heights,best fuzzy score 57 below threshold 85
+Research Triangle Charter,Durham,0.0735,KG:08,durham,research triangle charter,best fuzzy score 49 below threshold 85
+Central Park School For Child,Durham,0.1332,KG:08,durham,central park for child,best fuzzy score 49 below threshold 85
+Hanes Magnet School,Forsyth,0.1595,6:08,forsyth,hanes magnet,best fuzzy score 67 below threshold 85
+Robert B Glenn High School,Forsyth,0.3607,9:12,forsyth,robert b glenn high,best fuzzy score 85 below threshold 85
+Moore Magnet Elementary,Forsyth,0.0597,P2:05,forsyth,moore magnet elementary,best fuzzy score 82 below threshold 85
+NC School for the Deaf,Statewide,0.067,PK:12,statewide,nc for the deaf,no transit schools in this county
+Davidson Charter Academy: CFA,Davidson,0.1218,KG:04,davidson,davidson charter academy cfa,best fuzzy score 55 below threshold 85
+Little River K-8 School,Durham,0.139,P0:08,durham,little river k 8,best fuzzy score 67 below threshold 85
+Mountain Island Charter School,Gaston,0.1006,KG:12,gaston,mountain island charter,best fuzzy score 53 below threshold 85
+Oxford Preparatory,Granville,0.0599,6:12,granville,oxford preparatory,best fuzzy score 45 below threshold 85
+Allen Jay Middle - A Preparatory Academy,Guilford,0.0716,5:08,guilford,allen jay middle a preparatory academy,best fuzzy score 52 below threshold 85
+Hawks Nest STEAM Academy,Gaston,0.0549,KG:05,gaston,hawks nest steam academy,best fuzzy score 51 below threshold 85
+Granville Academy,Granville,0.1093,PK:12,granville,granville academy,best fuzzy score 62 below threshold 85
+Union Cross Traditional Acad,Forsyth,0.17,P2:05,forsyth,union cross traditional academy,best fuzzy score 54 below threshold 85
+Carter G Woodson School,Forsyth,0.2131,KG:12,forsyth,carter g woodson,best fuzzy score 59 below threshold 85
+Forsyth Academy,Forsyth,0.082,KG:08,forsyth,forsyth academy,best fuzzy score 59 below threshold 85
+The Arts Based School,Forsyth,0.0921,KG:08,forsyth,the arts based,best fuzzy score 50 below threshold 85
+Appalachian Academy at Middle Fork,Forsyth,0.1666,KG:05,forsyth,appalachian academy at middle fork,best fuzzy score 58 below threshold 85
+Ronald W Reagan High School,Forsyth,0.1922,9:12,forsyth,ronald w reagan high,best fuzzy score 71 below threshold 85
+Smith Farm Elementary,Forsyth,0.1639,P2:05,forsyth,smith farm elementary,best fuzzy score 81 below threshold 85
+W B Beam Intermediate School,Gaston,0.0952,4:05,gaston,w b beam intermediate,best fuzzy score 76 below threshold 85
+Stuart W Cramer High,Gaston,0.3313,9:12,gaston,stuart w cramer high,best fuzzy score 49 below threshold 85
+Edward D Sadler Jr  Elementary School,Gaston,0.1415,PK:05,gaston,edward d sadler jr elementary,best fuzzy score 74 below threshold 85
+Franklinton Middle,Franklin,0.2079,6:08,franklin,franklinton middle,best fuzzy score 76 below threshold 85
+Renaissance West STEAM Academy,Mecklenburg,0.1393,PK:08,mecklenburg,renaissance west steam academy,best fuzzy score 66 below threshold 85
+Dilworth Elem Sedgefield Campus,Mecklenburg,0.0514,PK:02,mecklenburg,dilworth elementary sedgefield campus,best fuzzy score 72 below threshold 85
+Char-Meck Virtual High School,Mecklenburg,0.1659,09:12,mecklenburg,char meck virtual high,best fuzzy score 59 below threshold 85
+Olympic High School,Mecklenburg,0.1809,09:12,mecklenburg,olympic high,best fuzzy score 67 below threshold 85
+Bruns Avenue Elementary,Mecklenburg,0.1989,PK:05,mecklenburg,bruns avenue elementary,best fuzzy score 73 below threshold 85
+Oakhurst STEAM Academy,Mecklenburg,0.0796,0K:05,mecklenburg,oakhurst steam academy,best fuzzy score 70 below threshold 85
+Eastside STREAM Academy,Mecklenburg,0.1724,0K:08,mecklenburg,eastside stream academy,best fuzzy score 63 below threshold 85
+Aristotle Preparatory Academy: A Challen,Mecklenburg,0.0888,0K:06,mecklenburg,aristotle preparatory academy a challen,best fuzzy score 53 below threshold 85
+KIPP Charlotte,Mecklenburg,0.1614,0K:08,mecklenburg,kipp charlotte,best fuzzy score 67 below threshold 85
+Charlotte Secondary School,Mecklenburg,0.0802,06:12,mecklenburg,charlotte secondary,best fuzzy score 59 below threshold 85
+Invest Collegiate Transform,Mecklenburg,0.096,0K:09,mecklenburg,invest collegiate transform,best fuzzy score 48 below threshold 85
+Queen's Grant Community School,Mecklenburg,0.0517,0K:12,mecklenburg,queen s grant community,best fuzzy score 65 below threshold 85
+Sugar Creek Charter,Mecklenburg,0.0731,0K:12,mecklenburg,sugar creek charter,best fuzzy score 59 below threshold 85
+Charlotte-Mecklenburg Schools,Mecklenburg,0.0948,,mecklenburg,charlotte mecklenburg schools,best fuzzy score 63 below threshold 85
+Villa Heights Elementary,Mecklenburg,0.1367,0K:05,mecklenburg,villa heights elementary,best fuzzy score 77 below threshold 85
+Zebulon B. Vance High School,Mecklenburg,0.2736,09:12,mecklenburg,zebulon b vance high,best fuzzy score 67 below threshold 85
+Starmount Academy of Excellen,Mecklenburg,0.1209,PK:05,mecklenburg,starmount academy of excellen,best fuzzy score 56 below threshold 85
+Wilson STEM Academy,Mecklenburg,0.2375,06:08,mecklenburg,wilson stem academy,best fuzzy score 65 below threshold 85
+Gov's Village STEM (Lower),Mecklenburg,0.0594,PK:04,mecklenburg,gov s village stem lower,best fuzzy score 51 below threshold 85
+Parkside Elementary School,Mecklenburg,0.0641,PK:05,mecklenburg,parkside elementary,best fuzzy score 83 below threshold 85
+Lawrence Orr Elementary School,Mecklenburg,0.082,PK:05,mecklenburg,lawrence orr elementary,best fuzzy score 74 below threshold 85
+Hawthorne Academy of Health Sciences,Mecklenburg,0.1532,09:12,mecklenburg,hawthorne academy of health sciences,best fuzzy score 56 below threshold 85
+First Ward Creative Arts Acad,Mecklenburg,0.0939,0K:05,mecklenburg,first ward creative arts academy,best fuzzy score 64 below threshold 85
+Marie G Davis School,Mecklenburg,0.0991,0K:08,mecklenburg,marie g davis,best fuzzy score 56 below threshold 85
+Military and Global Leadership,Mecklenburg,0.2824,09:12,mecklenburg,military and global leadership,best fuzzy score 68 below threshold 85
+David W Butler High School,Mecklenburg,0.0909,09:12,mecklenburg,david w butler high,best fuzzy score 73 below threshold 85
+Coulwood STEM Academy,Mecklenburg,0.1006,06:08,mecklenburg,coulwood stem academy,best fuzzy score 69 below threshold 85
+Pioneer Springs Community School,Mecklenburg,0.0911,0K:08,mecklenburg,pioneer springs community,best fuzzy score 60 below threshold 85
+Mountain Island Lake Academy,Mecklenburg,0.0788,PK:08,mecklenburg,mountain island lake academy,best fuzzy score 70 below threshold 85
+Charlotte-Mecklenburg Academy,Mecklenburg,0.6842,0K:13,mecklenburg,charlotte mecklenburg academy,best fuzzy score 61 below threshold 85
+Merry Oaks International Acad,Mecklenburg,0.1117,PK:05,mecklenburg,merry oaks international academy,best fuzzy score 64 below threshold 85
+Robert F. Kennedy Middle,Mecklenburg,0.0667,06:08,mecklenburg,robert f kennedy middle,best fuzzy score 76 below threshold 85
+Gov's Village STEM (Upper),Mecklenburg,0.0731,05:08,mecklenburg,gov s village stem upper,best fuzzy score 47 below threshold 85
+Croft Community School,Mecklenburg,0.0529,PK:05,mecklenburg,croft community,best fuzzy score 73 below threshold 85
+Legette Blythe Elementary,Mecklenburg,0.0567,PK:05,mecklenburg,legette blythe elementary,best fuzzy score 81 below threshold 85
+"Rocky Mount Preparatory School, Inc.",Nash,0.0515,0K:12,nash,rocky mount preparatory inc,best fuzzy score 60 below threshold 85
+Nash County Public Schools,Nash,0.1119,,nash,nash county public schools,best fuzzy score 43 below threshold 85
+Girls Leadership Academy of Wilmington,New Hanover,0.1217,06:09,new hanover,girls leadership academy of wilmington,best fuzzy score 60 below threshold 85
+Coastal Preparatory Academy: A Challenge,New Hanover,0.0752,0K:08,new hanover,coastal preparatory academy a challenge,best fuzzy score 65 below threshold 85
+Douglass Academy,New Hanover,0.0512,0K:05,new hanover,douglass academy,best fuzzy score 63 below threshold 85
+New Hanover County Schools,New Hanover,0.0987,,new hanover,new hanover county schools,best fuzzy score 52 below threshold 85
+Roland-Grise Middle,New Hanover,0.0739,06:08,new hanover,roland grise middle,best fuzzy score 70 below threshold 85
+J.C. Roe Center,New Hanover,0.8,06:12,new hanover,j c roe center,best fuzzy score 49 below threshold 85
+Tar River Academy,Nash,0.875,06:12,nash,tar river academy,best fuzzy score 47 below threshold 85
+Rocky Mount Middle School,Nash,0.2405,06:08,nash,rocky mount middle,best fuzzy score 76 below threshold 85
+Tillery Charter Academy,Montgomery,0.1774,0K:02,montgomery,tillery charter academy,best fuzzy score 60 below threshold 85
+Montgomery County Schools,Montgomery,0.0829,,montgomery,montgomery county schools,best fuzzy score 58 below threshold 85
+Steele Creek Preparatory Academy,Mecklenburg,0.1316,0K:07,mecklenburg,steele creek preparatory academy,best fuzzy score 62 below threshold 85
+Mountain Island Day School,Mecklenburg,0.0636,0K:12,mecklenburg,mountain island day,best fuzzy score 80 below threshold 85
+UpROAR Leadership Academy,Mecklenburg,0.344,05:11,mecklenburg,uproar leadership academy,best fuzzy score 60 below threshold 85
+Movement Charter School,Mecklenburg,0.1255,0K:05,mecklenburg,movement charter,best fuzzy score 57 below threshold 85
+Mallard Creek STEM Academy,Mecklenburg,0.0715,0K:08,mecklenburg,mallard creek stem academy,best fuzzy score 67 below threshold 85
+VERITAS Community School: A Challenge Fo,Mecklenburg,0.0833,0K:06,mecklenburg,veritas community a challenge fo,best fuzzy score 52 below threshold 85
+Queen City STEM School,Mecklenburg,0.0934,0K:10,mecklenburg,queen city stem,best fuzzy score 49 below threshold 85
+Lakeside Charter Academy,Mecklenburg,0.1148,0K:08,mecklenburg,lakeside charter academy,best fuzzy score 68 below threshold 85
+Mitchell County Schools,Mitchell,0.0704,,mitchell,mitchell county schools,best fuzzy score 50 below threshold 85
+Fairview Elementary School,Nash,0.1061,0K:02,nash,fairview elementary,best fuzzy score 77 below threshold 85
+The Academy of Moore County,Moore,0.0515,0K:05,moore,the academy of moore county,best fuzzy score 51 below threshold 85
+Vass-Lakeview Elementary School,Moore,0.065,PK:05,moore,vass lakeview elementary,best fuzzy score 81 below threshold 85
+Community Learning Center at Pinckney,Moore,0.4555,07:12,moore,community learning center at pinckney,best fuzzy score 53 below threshold 85
+Moore County Schools,Moore,0.0689,,moore,moore county schools,best fuzzy score 45 below threshold 85
+Briarwood Academy,Mecklenburg,0.1076,PK:05,mecklenburg,briarwood academy,best fuzzy score 67 below threshold 85
+Jackson Community School,Jackson,0.4285,0K:12,jackson,jackson community,best fuzzy score 54 below threshold 85
+Iredell Charter Academy,Iredell,0.0965,0K:08,iredell,iredell charter academy,best fuzzy score 63 below threshold 85
+Langtree Charter Academy,Iredell,0.0635,0K:12,iredell,langtree charter academy,best fuzzy score 62 below threshold 85
+Success Institute Charter School,Iredell,0.0588,0K:08,iredell,success institute charter,best fuzzy score 44 below threshold 85
+Mooresville Graded School District,Iredell,0.0688,,iredell,mooresville graded district,best fuzzy score 71 below threshold 85
+Mooresville High School,Iredell,0.0954,09:12,iredell,mooresville high,best fuzzy score 82 below threshold 85
+Iredell-Statesville Schools,Iredell,0.0831,,iredell,iredell statesville schools,best fuzzy score 67 below threshold 85
+Third Creek Middle School,Iredell,0.1114,06:08,iredell,third creek middle,best fuzzy score 70 below threshold 85
+Jackson County Public Schools,Jackson,0.1056,,jackson,jackson county public schools,best fuzzy score 44 below threshold 85
+Summit Charter School,Jackson,0.0775,0K:10,jackson,summit charter,best fuzzy score 38 below threshold 85
+Princeton Middle/High,Johnston,0.1281,06:12,johnston,princeton middle high,best fuzzy score 80 below threshold 85
+Corinth-Holders Elementary,Johnston,0.0775,PK:05,johnston,corinth holders elementary,best fuzzy score 71 below threshold 85
+Cooper Academy,Johnston,0.1047,PK:05,johnston,cooper academy,best fuzzy score 55 below threshold 85
+Catamount School,Jackson,0.1694,06:08,jackson,catamount,best fuzzy score 40 below threshold 85
+Hertford County Schools,Hertford,0.1826,,hertford,hertford county schools,best fuzzy score 79 below threshold 85
+Hertford County Early College High Schoo,Hertford,0.0529,09:13,hertford,hertford county early college high schoo,best fuzzy score 68 below threshold 85
+FernLeaf Community Charter School,Henderson,0.1207,0K:06,henderson,fernleaf community charter,best fuzzy score 50 below threshold 85
+Henderson County Schools,Henderson,0.0677,,henderson,henderson county schools,best fuzzy score 60 below threshold 85
+Henderson County Career Academy,Henderson,0.6846,06:12,henderson,henderson county career academy,best fuzzy score 66 below threshold 85
+Northampton County High School,Northampton,0.4113,09:12,northampton,northampton county high,best fuzzy score 82 below threshold 85
+Discovery Program at The Springs,Iredell,0.1739,PK:12,iredell,discovery program at the springs,best fuzzy score 49 below threshold 85
+Woodland Heights Middle School,Iredell,0.1129,06:08,iredell,woodland heights middle,best fuzzy score 64 below threshold 85
+Hoke County Schools,Hoke,0.0912,,hoke,hoke county schools,best fuzzy score 63 below threshold 85
+Sandy Grove Middle School,Hoke,0.0823,06:08,hoke,sandy grove middle,best fuzzy score 65 below threshold 85
+J W Turlington Alternative,Hoke,0.6438,06:12,hoke,j w turlington alternative,best fuzzy score 70 below threshold 85
+Hyde County Schools,Hyde,0.096,,hyde,hyde county schools,best fuzzy score 28 below threshold 85
+The Innovation Academy at South Campus,Johnston,0.0748,06:08,johnston,the innovation academy at south campus,best fuzzy score 49 below threshold 85
+Madison County Schools,Madison,0.0947,,madison,madison county schools,best fuzzy score 50 below threshold 85
+Macon County Schools,Macon,0.0859,,macon,macon county schools,best fuzzy score 57 below threshold 85
+West Lake Preparatory Academy,Lincoln,0.0727,0K:06,lincoln,west lake preparatory academy,best fuzzy score 46 below threshold 85
+Lincoln County Schools,Lincoln,0.08,,lincoln,lincoln county schools,best fuzzy score 54 below threshold 85
+South Creek Elementary,Martin,0.0809,PK:05,martin,south creek elementary,best fuzzy score 70 below threshold 85
+Charlotte East Language Academy,Mecklenburg,0.0594,0K:08,mecklenburg,charlotte east language academy,best fuzzy score 68 below threshold 85
+McDowell County Schools,McDowell,0.0861,,mcdowell,mcdowell county schools,best fuzzy score 54 below threshold 85
+Foothills Community School,McDowell,0.0687,06:08,mcdowell,foothills community,best fuzzy score 50 below threshold 85
+West McDowell Middle School,McDowell,0.0745,06:08,mcdowell,west mcdowell middle,best fuzzy score 58 below threshold 85
+Norris S Childers Elementary,Lincoln,0.0695,PK:05,lincoln,norris s childers elementary,best fuzzy score 81 below threshold 85
+McDowell Academy for Innovation,McDowell,0.101,09:13,mcdowell,mcdowell academy for innovation,best fuzzy score 54 below threshold 85
+East McDowell Middle School,McDowell,0.127,06:08,mcdowell,east mcdowell middle,best fuzzy score 58 below threshold 85
+Bear Grass Charter School,Martin,0.0847,06:12,martin,bear grass charter,best fuzzy score 44 below threshold 85
+Martin County Schools,Martin,0.1034,,martin,martin county schools,best fuzzy score 36 below threshold 85
+Riverside Middle,Martin,0.1144,06:08,martin,riverside middle,best fuzzy score 73 below threshold 85
+Jones County Schools,Jones,0.1541,,jones,jones county schools,best fuzzy score 49 below threshold 85
+Johnston County Public Schools,Johnston,0.0911,,johnston,johnston county public schools,best fuzzy score 50 below threshold 85
+Smithfield-Selma High,Johnston,0.2295,09:12,johnston,smithfield selma high,best fuzzy score 73 below threshold 85
+Asbury Academy,Lincoln,0.825,06:12,lincoln,asbury academy,best fuzzy score 60 below threshold 85
+The Children's Village Academy,Lenoir,0.2556,0K:08,lenoir,the children s village academy,best fuzzy score 44 below threshold 85
+Lenoir County Public Schools,Lenoir,0.1165,,lenoir,lenoir county public schools,best fuzzy score 44 below threshold 85
+Lenoir County Learning Academy,Lenoir,0.6329,PK:12,lenoir,lenoir county learning academy,best fuzzy score 71 below threshold 85
+Ascend Leadership Academy: Lee County,Lee,0.0784,06:09,lee,ascend leadership academy lee county,best fuzzy score 51 below threshold 85
+Lee County Schools,Lee,0.0823,,lee,lee county schools,best fuzzy score 61 below threshold 85
+Scotland County Schools,Scotland,0.1231,,scotland,scotland county schools,best fuzzy score 56 below threshold 85
+Sycamore Lane Elementary,Scotland,0.1192,PK:05,scotland,sycamore lane elementary,best fuzzy score 70 below threshold 85
+Wagram Elementary,Scotland,0.115,PK:05,scotland,wagram elementary,best fuzzy score 72 below threshold 85
+I. Ellis Johnson Elementary,Scotland,0.1054,PK:05,scotland,i ellis johnson elementary,best fuzzy score 83 below threshold 85
+Clinton City Schools,Sampson,0.0503,,sampson,clinton city schools,best fuzzy score 56 below threshold 85
+Sampson County Schools,Sampson,0.1014,,sampson,sampson county schools,best fuzzy score 46 below threshold 85
+Stanly County Schools,Stanly,0.0911,,stanly,stanly county schools,best fuzzy score 58 below threshold 85
+J H Knox Middle School,Rowan,0.1306,06:08,rowan,j h knox middle,best fuzzy score 85 below threshold 85
+Jesse C Carson High School,Rowan,0.1489,09:12,rowan,jesse c carson high,best fuzzy score 73 below threshold 85
+Elizabeth Hanford Dole Elementary School,Rowan,0.1221,PK:05,rowan,elizabeth hanford dole elementary,best fuzzy score 62 below threshold 85
+Harold D Isenberg Elementary,Rowan,0.0997,PK:05,rowan,harold d isenberg elementary,best fuzzy score 81 below threshold 85
+Ethan H Shive Elementary School,Rowan,0.1224,PK:05,rowan,ethan h shive elementary,best fuzzy score 80 below threshold 85
+Elizabeth Duncan Koontz Elementary Schoo,Rowan,0.1556,PK:05,rowan,elizabeth duncan koontz elementary schoo,best fuzzy score 60 below threshold 85
+West Rowan Elementary,Rowan,0.0783,PK:05,rowan,west rowan elementary,best fuzzy score 75 below threshold 85
+Rowan-Salisbury Schools,Rowan,0.125,,rowan,rowan salisbury schools,best fuzzy score 54 below threshold 85
+Lake Lure Classical Academy,Rutherford,0.0734,0K:12,rutherford,lake lure classical academy,best fuzzy score 39 below threshold 85
+Rutherford County Schools,Rutherford,0.1145,,rutherford,rutherford county schools,best fuzzy score 63 below threshold 85
+Mt. Vernon-Ruth Elementary School,Rutherford,0.1256,PK:05,rutherford,mt vernon ruth elementary,best fuzzy score 82 below threshold 85
+Essie Mae Kiser Foxx Charter School,Rowan,0.055,0K:05,rowan,essie mae kiser foxx charter,best fuzzy score 46 below threshold 85
+Stokes County Schools,Stokes,0.0896,,stokes,stokes county schools,best fuzzy score 58 below threshold 85
+Vance County Schools,Vance,0.1694,,vance,vance county schools,best fuzzy score 57 below threshold 85
+STEM Early High School,Vance,0.0569,06:08,vance,stem early high,best fuzzy score 49 below threshold 85
+Vance County High School,Vance,0.3157,09:12,vance,vance county high,best fuzzy score 57 below threshold 85
+AdVance Academy,Vance,0.1827,06:12,vance,advance academy,best fuzzy score 51 below threshold 85
+Vance County Middle School,Vance,0.2156,06:08,vance,vance county middle,best fuzzy score 54 below threshold 85
+Apprentice Academy High School  of North,Union,0.1315,09:12,union,apprentice academy high of north,best fuzzy score 52 below threshold 85
+Union Preparatory Academy at Indian Trai,Union,0.052,0K:08,union,union preparatory academy at indian trai,best fuzzy score 48 below threshold 85
+Union County Public Schools,Union,0.0505,,union,union county public schools,best fuzzy score 53 below threshold 85
+Apex Friendship High,Wake,0.0632,09:12,wake,apex friendship high,best fuzzy score 62 below threshold 85
+Oberlin Middle,Wake,0.0577,06:08,wake,oberlin middle,best fuzzy score 71 below threshold 85
+Crossroads FLEX,Wake,0.0884,09:12,wake,crossroads flex,best fuzzy score 48 below threshold 85
+Connections Academy,Wake,0.5142,06:08,wake,connections academy,best fuzzy score 55 below threshold 85
+Beaverdam Elementary School,Wake,0.0793,PK:05,wake,beaverdam elementary,best fuzzy score 83 below threshold 85
+Carroll T Overton Elementary School,Rowan,0.1021,0K:05,rowan,carroll t overton elementary,best fuzzy score 78 below threshold 85
+Mount Airy City Schools,Surry,0.0798,,surry,mount airy city schools,best fuzzy score 63 below threshold 85
+Jones Intermediate,Surry,0.0963,03:05,surry,jones intermediate,best fuzzy score 59 below threshold 85
+Bruce H. Tharrington Primary,Surry,0.1028,PK:02,surry,bruce h tharrington primary,best fuzzy score 77 below threshold 85
+Surry County Schools,Surry,0.0877,,surry,surry county schools,best fuzzy score 58 below threshold 85
+Meadowview Magnet Middle School,Surry,0.0961,06:08,surry,meadowview magnet middle,best fuzzy score 83 below threshold 85
+Swain County Schools,Swain,0.1507,,swain,swain county schools,best fuzzy score 76 below threshold 85
+Mountain Discovery Charter School,Swain,0.1,0K:08,swain,mountain discovery charter,best fuzzy score 44 below threshold 85
+Health Sciences Academy at Monroe Middle,Union,0.1174,06:08,union,health sciences academy at monroe middle,best fuzzy score 49 below threshold 85
+Columbia Early College/High School,Tyrrell,0.1371,09:13,tyrrell,columbia early college high,best fuzzy score 65 below threshold 85
+Brevard Academy: A Challenge Foundation,Transylvania,0.0626,0K:08,transylvania,brevard academy a challenge foundation,best fuzzy score 46 below threshold 85
+Transylvania County Schools,Transylvania,0.0966,,transylvania,transylvania county schools,best fuzzy score 36 below threshold 85
+Tyrrell County Schools,Tyrrell,0.0984,,tyrrell,tyrrell county schools,best fuzzy score 55 below threshold 85
+Northampton County Schools,Northampton,0.2085,,northampton,northampton county schools,best fuzzy score 64 below threshold 85
+Charles C Erwin Middle School,Rowan,0.1279,06:08,rowan,charles c erwin middle,best fuzzy score 71 below threshold 85
+Moss Street Partnership School,Rockingham,0.0785,0K:05,rockingham,moss street partnership,best fuzzy score 49 below threshold 85
+Pender County Schools,Pender,0.0897,,pender,pender county schools,best fuzzy score 54 below threshold 85
+Surf City Middle School,Pender,0.0506,06:08,pender,surf city middle,best fuzzy score 53 below threshold 85
+Surf City Elementary School,Pender,0.0553,0K:05,pender,surf city elementary,best fuzzy score 70 below threshold 85
+Rocky Point Elementary School,Pender,0.0726,PK:05,pender,rocky point elementary,best fuzzy score 67 below threshold 85
+C.F. Pope Elementary,Pender,0.1304,PK:05,pender,c f pope elementary,best fuzzy score 77 below threshold 85
+Northeast Academy for Aerospace & Advanc,Pasquotank,0.0686,06:12,pasquotank,northeast academy for aerospace and advanc,best fuzzy score 39 below threshold 85
+Elizabeth City-Pasquotank Public Schools,Pasquotank,0.0817,,pasquotank,elizabeth city pasquotank public schools,best fuzzy score 56 below threshold 85
+Sheep-Harney Elementary,Pasquotank,0.0891,PK:05,pasquotank,sheep harney elementary,best fuzzy score 76 below threshold 85
+Perquimans County Schools,Perquimans,0.0827,,perquimans,perquimans county schools,best fuzzy score 72 below threshold 85
+Grifton School,Pitt,0.0585,PK:08,pitt,grifton,best fuzzy score 58 below threshold 85
+Person County Schools,Person,0.1002,,person,person county schools,best fuzzy score 44 below threshold 85
+Arapahoe Charter School,Pamlico,0.1195,0K:12,pamlico,arapahoe charter,best fuzzy score 33 below threshold 85
+Pamlico County Schools,Pamlico,0.0978,,pamlico,pamlico county schools,best fuzzy score 68 below threshold 85
+Heritage Elementary School of Richlands,Onslow,0.0784,0K:05,onslow,heritage elementary of richlands,best fuzzy score 77 below threshold 85
+Chapel Hill-Carrboro City Schools,Orange,0.0572,,orange,chapel hill carrboro city schools,best fuzzy score 53 below threshold 85
+Northside Elementary School,Orange,0.0502,PK:05,orange,northside elementary,best fuzzy score 74 below threshold 85
+Orange County Schools,Orange,0.0727,,orange,orange county schools,best fuzzy score 46 below threshold 85
+Z.E.C.A. School of Arts and Technology,Onslow,0.1392,0K:08,onslow,z e c a of arts and technology,best fuzzy score 35 below threshold 85
+Onslow County Schools,Onslow,0.0929,,onslow,onslow county schools,best fuzzy score 48 below threshold 85
+Pactolus School,Pitt,0.0674,PK:08,pitt,pactolus,best fuzzy score 59 below threshold 85
+Townsend,Robeson,0.2042,PK:08,robeson,townsend,best fuzzy score 70 below threshold 85
+Rex-Rennert Elementary,Robeson,0.0756,PK:05,robeson,rex rennert elementary,best fuzzy score 84 below threshold 85
+South Robeson Intermediate School,Robeson,0.1083,05:08,robeson,south robeson intermediate,best fuzzy score 68 below threshold 85
+Bethany Community School,Rockingham,0.1144,06:11,rockingham,bethany community,best fuzzy score 69 below threshold 85
+Rockingham County Schools,Rockingham,0.143,,rockingham,rockingham county schools,best fuzzy score 72 below threshold 85
+CIS Academy,Robeson,0.0504,06:08,robeson,cis academy,best fuzzy score 41 below threshold 85
+Public Schools of Robeson County,Robeson,0.1851,,robeson,public schools of robeson county,best fuzzy score 49 below threshold 85
+John W Dillard Academy,Rockingham,0.06,0K:05,rockingham,john w dillard academy,best fuzzy score 60 below threshold 85
+L Gilbert Carroll,Robeson,0.1639,04:05,robeson,l gilbert carroll,best fuzzy score 83 below threshold 85
+Polk County Schools,Polk,0.0639,,polk,polk county schools,best fuzzy score 63 below threshold 85
+Polk Central Elementary School,Polk,0.0833,PK:05,polk,polk central elementary,best fuzzy score 69 below threshold 85
+Ignite Innovation Academy - Pitt,Pitt,0.1907,0K:08,pitt,ignite innovation academy pitt,best fuzzy score 49 below threshold 85
+Pitt County Schools,Pitt,0.0885,,pitt,pitt county schools,best fuzzy score 47 below threshold 85
+Stokes School,Pitt,0.0683,PK:08,pitt,stokes,best fuzzy score 52 below threshold 85
+Archdale-Trinity Middle School,Randolph,0.084,07:08,randolph,archdale trinity middle,best fuzzy score 67 below threshold 85
+Richmond County Schools,Richmond,0.0803,,richmond,richmond county schools,best fuzzy score 64 below threshold 85
+Cordova Middle,Richmond,0.0975,06:08,richmond,cordova middle,best fuzzy score 67 below threshold 85
+Fairgrove Elementary School,Robeson,0.0858,PK:04,robeson,fairgrove elementary,best fuzzy score 81 below threshold 85
+Asheboro City Schools,Randolph,0.0763,,randolph,asheboro city schools,best fuzzy score 65 below threshold 85
+Randolph County School System,Randolph,0.0657,,randolph,randolph county system,best fuzzy score 58 below threshold 85
+Uwharrie Ridge Six-Twelve,Randolph,0.0737,06:11,randolph,uwharrie ridge six twelve,best fuzzy score 65 below threshold 85
+Ashley Chapel Educational Center,Richmond,0.8636,07:12,richmond,ashley chapel educational center,best fuzzy score 45 below threshold 85
+Haywood County Schools,Haywood,0.0593,,haywood,haywood county schools,best fuzzy score 62 below threshold 85
+Newton Conover City Schools,Catawba,0.1007,,catawba,newton conover city schools,best fuzzy score 62 below threshold 85
+Newton-Conover Middle,Catawba,0.0936,06:08,catawba,newton conover middle,best fuzzy score 64 below threshold 85
+Newton-Conover High,Catawba,0.1664,09:12,catawba,newton conover high,best fuzzy score 71 below threshold 85
+Hickory City Schools,Catawba,0.12,,catawba,hickory city schools,best fuzzy score 56 below threshold 85
+Southwest Primary,Catawba,0.1044,PK:02,catawba,southwest primary,best fuzzy score 76 below threshold 85
+Catawba County Schools,Catawba,0.0819,,catawba,catawba county schools,best fuzzy score 57 below threshold 85
+Clay County Schools,Clay,0.078,,clay,clay county schools,best fuzzy score 35 below threshold 85
+Edenton-Chowan Schools,Chowan,0.0715,,chowan,edenton chowan schools,best fuzzy score 51 below threshold 85
+The Learning Center,Cherokee,0.1229,0K:08,cherokee,the learning center,best fuzzy score 51 below threshold 85
+Cherokee County Schools,Cherokee,0.1159,,cherokee,cherokee county schools,best fuzzy score 43 below threshold 85
+Tri-County Early College High,Cherokee,0.1527,09:13,cherokee,tri county early college high,best fuzzy score 77 below threshold 85
+The Oaks Academy,Cherokee,0.8571,06:12,cherokee,the oaks academy,best fuzzy score 43 below threshold 85
+Bridges School,Carteret,0.7727,0K:12,carteret,bridges,best fuzzy score 45 below threshold 85
+Caldwell County Schools,Caldwell,0.1223,,caldwell,caldwell county schools,best fuzzy score 62 below threshold 85
+Caswell County Schools,Caswell,0.1551,,caswell,caswell county schools,best fuzzy score 42 below threshold 85
+Carteret County Public Schools,Carteret,0.0778,,carteret,carteret county public schools,best fuzzy score 54 below threshold 85
+Marine Sci. & Tech. Early College HS,Carteret,0.0526,09:10,carteret,marine sci and tech early college high,best fuzzy score 45 below threshold 85
+Down East Middle School and Smyrna Eleme,Carteret,0.073,PK:08,carteret,down east middle and smyrna eleme,best fuzzy score 48 below threshold 85
+Ferguson-Easley Elementary,Cumberland,0.1167,0K:05,cumberland,ferguson easley elementary,best fuzzy score 75 below threshold 85
+Seventy-First High,Cumberland,0.213,09:12,cumberland,seventy first high,best fuzzy score 69 below threshold 85
+Howard Learning Academy Middle School,Cumberland,0.8051,05:08,cumberland,howard learning academy middle,best fuzzy score 57 below threshold 85
+Walker-Spivey Elementary,Cumberland,0.1785,0K:05,cumberland,walker spivey elementary,best fuzzy score 70 below threshold 85
+Columbus County Schools,Columbus,0.1405,,columbus,columbus county schools,best fuzzy score 62 below threshold 85
+Hallsboro-Artesia Elementary,Columbus,0.125,PK:05,columbus,hallsboro artesia elementary,best fuzzy score 73 below threshold 85
+East Columbus Junior-Senior High,Columbus,0.2364,09:12,columbus,east columbus junior senior high,best fuzzy score 72 below threshold 85
+Cleveland County Schools,Cleveland,0.0903,,cleveland,cleveland county schools,best fuzzy score 68 below threshold 85
+Craven County Schools,Craven,0.0839,,craven,craven county schools,best fuzzy score 49 below threshold 85
+Oaks Road Academy,Craven,0.0831,0K:05,craven,oaks road academy,best fuzzy score 70 below threshold 85
+Vanceboro-Farm Life Elementary,Craven,0.0887,PK:05,craven,vanceboro farm life elementary,best fuzzy score 85 below threshold 85
+Columbus Charter School,Columbus,0.0823,0K:08,columbus,columbus charter,best fuzzy score 47 below threshold 85
+Thomas Academy,Columbus,0.1444,06:12,columbus,thomas academy,best fuzzy score 53 below threshold 85
+Whiteville City Schools,Columbus,0.1433,,columbus,whiteville city schools,best fuzzy score 68 below threshold 85
+Beaufort County Educational Technical Ce,Beaufort,0.6909,06:12,beaufort,beaufort county educational technical ce,best fuzzy score 57 below threshold 85
+Grandfather Academy Inc,Avery,0.5769,01:12,avery,grandfather academy inc,best fuzzy score 58 below threshold 85
+Avery County Schools,Avery,0.0926,,avery,avery county schools,best fuzzy score 76 below threshold 85
+Blue Ridge High School,Avery,0.4285,06:12,avery,blue ridge high,best fuzzy score 46 below threshold 85
+Ashe County Schools,Ashe,0.0731,,ashe,ashe county schools,best fuzzy score 74 below threshold 85
+Anson County Schools,Anson,0.2048,,anson,anson county schools,best fuzzy score 51 below threshold 85
+Paul R. Brown Leadership Academy,Bladen,0.0746,06:12,bladen,paul r brown leadership academy,best fuzzy score 51 below threshold 85
+Bladen County Schools,Bladen,0.1068,,bladen,bladen county schools,best fuzzy score 54 below threshold 85
+Three Rivers Academy,Bertie,0.4788,0K:08,bertie,three rivers academy,best fuzzy score 41 below threshold 85
+Bertie County Schools,Bertie,0.0963,,bertie,bertie county schools,best fuzzy score 56 below threshold 85
+Beaufort County Schools,Beaufort,0.0978,,beaufort,beaufort county schools,best fuzzy score 57 below threshold 85
+Ray Street Academy,Alamance,0.3827,06:12,alamance,ray street academy,best fuzzy score 44 below threshold 85
+Audrey W.Garrett Elementary,Alamance,0.0631,PK:05,alamance,audrey w garrett elementary,best fuzzy score 80 below threshold 85
+ABSS Early College at ACC,Alamance,0.0614,09:13,alamance,abss early college at acc,best fuzzy score 48 below threshold 85
+Southern Alamance Middle,Alamance,0.0849,06:08,alamance,southern alamance middle,best fuzzy score 77 below threshold 85
+Anson County Early College High School,Anson,0.088,09:13,anson,anson county early college high,best fuzzy score 83 below threshold 85
+Alleghany County Schools,Alleghany,0.0957,,alleghany,alleghany county schools,best fuzzy score 58 below threshold 85
+Alexander County Schools,Alexander,0.0502,,alexander,alexander county schools,best fuzzy score 65 below threshold 85
+The Hawbridge School,Alamance,0.0505,04:12,alamance,the hawbridge,best fuzzy score 54 below threshold 85
+Clover Garden,Alamance,0.0663,0K:12,alamance,clover garden,best fuzzy score 52 below threshold 85
+Alamance-Burlington Schools,Alamance,0.1213,,alamance,alamance burlington schools,best fuzzy score 73 below threshold 85
+Western Alamance Middle,Alamance,0.1022,06:08,alamance,western alamance middle,best fuzzy score 82 below threshold 85
+The Center of Applied Sciences and Techn,Brunswick,0.3,06:12,brunswick,the center of applied sciences and techn,best fuzzy score 41 below threshold 85
+New Dimensions A Public Charter School,Burke,0.051,0K:08,burke,new dimensions a public charter,best fuzzy score 39 below threshold 85
+Burke County Schools,Burke,0.0669,,burke,burke county schools,best fuzzy score 51 below threshold 85
+Mountain View Elementary School,Burke,0.0665,PK:05,burke,mountain view elementary,best fuzzy score 78 below threshold 85
+The Franklin School of Innovation,Buncombe,0.1781,05:12,buncombe,the franklin of innovation,best fuzzy score 41 below threshold 85
+Evergreen Community Charter,Buncombe,0.059,0K:08,buncombe,evergreen community charter,best fuzzy score 54 below threshold 85
+Asheville City Schools,Buncombe,0.0989,,buncombe,asheville city schools,best fuzzy score 67 below threshold 85
+Gateway School,Caldwell,0.7727,06:12,caldwell,gateway,best fuzzy score 54 below threshold 85
+Concord Lake STEAM Academy,Cabarrus,0.2247,0K:08,cabarrus,concord lake steam academy,best fuzzy score 50 below threshold 85
+Cabarrus Charter Academy,Cabarrus,0.1592,0K:12,cabarrus,cabarrus charter academy,best fuzzy score 55 below threshold 85
+Carolina International School,Cabarrus,0.098,0K:12,cabarrus,carolina international,best fuzzy score 46 below threshold 85
+Kannapolis City Schools,Cabarrus,0.1207,,cabarrus,kannapolis city schools,best fuzzy score 65 below threshold 85
+North Kannapolis Elementary,Cabarrus,0.0613,PK:05,cabarrus,north kannapolis elementary,best fuzzy score 67 below threshold 85
+Cabarrus County Schools,Cabarrus,0.0596,,cabarrus,cabarrus county schools,best fuzzy score 65 below threshold 85
+Cabarrus-Kannapolis Early College,Cabarrus,0.0921,09:13,cabarrus,cabarrus kannapolis early college,best fuzzy score 68 below threshold 85
+GW Carver Elementary School,Cabarrus,0.0796,0K:05,cabarrus,gw carver elementary,best fuzzy score 71 below threshold 85
+Montford North Star Academy,Buncombe,0.0995,06:08,buncombe,montford north star academy,best fuzzy score 50 below threshold 85
+Charles D Owen Middle,Buncombe,0.0551,06:08,buncombe,charles d owen middle,best fuzzy score 69 below threshold 85
+Charles D Owen High,Buncombe,0.0668,09:12,buncombe,charles d owen high,best fuzzy score 64 below threshold 85
+Charles C Bell Elementary,Buncombe,0.0524,0K:05,buncombe,charles c bell elementary,best fuzzy score 75 below threshold 85
+South Brunswick Charter School,Brunswick,0.0767,0K:05,brunswick,south brunswick charter,best fuzzy score 79 below threshold 85
+Charter Day School,Brunswick,0.0722,0K:08,brunswick,charter day,best fuzzy score 41 below threshold 85
+Brunswick County Schools,Brunswick,0.1131,,brunswick,brunswick county schools,best fuzzy score 67 below threshold 85
+Clyde A Erwin High,Buncombe,0.1018,09:12,buncombe,clyde a erwin high,best fuzzy score 71 below threshold 85
+Clyde A Erwin Middle,Buncombe,0.0965,07:08,buncombe,clyde a erwin middle,best fuzzy score 75 below threshold 85
+Asheville Primary School,Buncombe,0.098,PK:03,buncombe,asheville primary,best fuzzy score 71 below threshold 85
+Buncombe County Schools,Buncombe,0.0703,,buncombe,buncombe county schools,best fuzzy score 65 below threshold 85
+Charles T. Koontz Intermediate School,Buncombe,0.0535,05:06,buncombe,charles t koontz intermediate,best fuzzy score 79 below threshold 85
+William W Estes Elementary,Buncombe,0.0531,0K:05,buncombe,william w estes elementary,best fuzzy score 80 below threshold 85
+Shining Rock Classical Academy: CFA,Haywood,0.0771,0K:08,haywood,shining rock classical academy cfa,best fuzzy score 37 below threshold 85
+James Benson Dudley High School,Guilford,0.304,09:12,guilford,james benson dudley high,best fuzzy score 63 below threshold 85
+Ceasar Cone Elementary School,Guilford,0.1666,PK:05,guilford,ceasar cone elementary,best fuzzy score 81 below threshold 85
+Monticello-Brown Summit Elementary Schoo,Guilford,0.1432,PK:05,guilford,monticello brown summit elementary schoo,best fuzzy score 79 below threshold 85
+"Bluford Science, Technology, Engineering",Guilford,0.1278,0K:05,guilford,bluford science technology engineering,best fuzzy score 50 below threshold 85
+Dr Melvin C Swann Jr Middle School,Guilford,0.1084,06:08,guilford,dr melvin c swann jr middle,best fuzzy score 51 below threshold 85
+Greene County Schools,Greene,0.0805,,greene,greene county schools,best fuzzy score 73 below threshold 85
+Falls Lake Academy,Granville,0.0521,0K:12,granville,falls lake academy,best fuzzy score 45 below threshold 85
+Granville County Schools,Granville,0.1113,,granville,granville county schools,best fuzzy score 65 below threshold 85
+Stovall-Shaw Elementary,Granville,0.0641,PK:05,granville,stovall shaw elementary,best fuzzy score 80 below threshold 85
+South Granville High,Granville,0.1445,09:12,granville,south granville high,best fuzzy score 67 below threshold 85
+William Penn - Alfred J. Griffin School,Guilford,0.0642,06:12,guilford,william penn alfred j griffin,best fuzzy score 45 below threshold 85
+John Chavis Middle School,Gaston,0.0987,06:08,gaston,john chavis middle,best fuzzy score 84 below threshold 85
+Webb Street School,Gaston,0.2661,PK:12,gaston,webb street,best fuzzy score 78 below threshold 85
+Edward D Sadler Jr Elementary School,Gaston,0.0732,PK:05,gaston,edward d sadler jr elementary,best fuzzy score 74 below threshold 85
+Stuart W Cramer High School,Gaston,0.1869,09:12,gaston,stuart w cramer high,best fuzzy score 49 below threshold 85
+Phoenix Academy,Granville,0.7647,0K:12,granville,phoenix academy,best fuzzy score 42 below threshold 85
+Butner-Stem Elementary,Granville,0.0954,PK:05,granville,butner stem elementary,best fuzzy score 79 below threshold 85
+Butner-Stem Middle,Granville,0.0952,06:08,granville,butner stem middle,best fuzzy score 74 below threshold 85
+Graham County Schools,Graham,0.1015,,graham,graham county schools,best fuzzy score 32 below threshold 85
+Gates County Schools,Gates,0.1297,,gates,gates county schools,best fuzzy score 68 below threshold 85
+Community Public Charter,Gaston,0.0954,0K:05,gaston,community public charter,best fuzzy score 46 below threshold 85
+Ridgeview Charter School,Gaston,0.1466,0K:04,gaston,ridgeview charter,best fuzzy score 50 below threshold 85
+Gaston County Schools,Gaston,0.1134,,gaston,gaston county schools,best fuzzy score 54 below threshold 85
+KIPP Halifax College Preparatory,Halifax,0.0869,0K:08,halifax,kipp halifax college preparatory,best fuzzy score 50 below threshold 85
+Weldon City Schools,Halifax,0.2207,,halifax,weldon city schools,best fuzzy score 60 below threshold 85
+Weldon STEM High School Career Academies,Halifax,0.4772,09:12,halifax,weldon stem high career academies,best fuzzy score 50 below threshold 85
+Weldon Elementary Global Academy,Halifax,0.1115,PK:04,halifax,weldon elementary global academy,best fuzzy score 69 below threshold 85
+Roanoke Rapids City Schools,Halifax,0.1534,,halifax,roanoke rapids city schools,best fuzzy score 70 below threshold 85
+Roanoke Rapids Early College High School,Halifax,0.0865,09:13,halifax,roanoke rapids early college high,best fuzzy score 73 below threshold 85
+John Armstrong Chaloner Middle School,Halifax,0.1699,06:08,halifax,john armstrong chaloner middle,best fuzzy score 67 below threshold 85
+Halifax County Schools,Halifax,0.1934,,halifax,halifax county schools,best fuzzy score 50 below threshold 85
+William R Davie Middle S.T.E.M. Academy,Halifax,0.2523,06:08,halifax,william r davie middle s t e m academy,best fuzzy score 73 below threshold 85
+Southeast Halifax Collegiate Prep Academ,Halifax,0.2488,09:12,halifax,southeast halifax collegiate prep academ,best fuzzy score 58 below threshold 85
+Pittman Elementary Leadership Academy,Halifax,0.1206,PK:05,halifax,pittman elementary leadership academy,best fuzzy score 65 below threshold 85
+Northwest Halifax Collegiate and Technic,Halifax,0.384,09:12,halifax,northwest halifax collegiate and technic,best fuzzy score 47 below threshold 85
+Inborden Elementary S.T.E.A.M. Academy,Halifax,0.126,PK:05,halifax,inborden elementary s t e a m academy,best fuzzy score 68 below threshold 85
+Hollister Elementary Leadership Academy,Halifax,0.0925,PK:05,halifax,hollister elementary leadership academy,best fuzzy score 68 below threshold 85
+Everetts Elementary S.T.E.M. Academy,Halifax,0.27,PK:05,halifax,everetts elementary s t e m academy,best fuzzy score 70 below threshold 85
+Erwin Elementary at Gentry,Harnett,0.071,0K:05,harnett,erwin elementary at gentry,best fuzzy score 76 below threshold 85
+Anderson Creek Academy,Harnett,0.0725,0K:05,harnett,anderson creek academy,best fuzzy score 64 below threshold 85
+Harnett County Schools,Harnett,0.09,,harnett,harnett county schools,best fuzzy score 62 below threshold 85
+Enfield Middle S.T.E.A.M. Academy,Halifax,0.1,06:08,halifax,enfield middle s t e a m academy,best fuzzy score 61 below threshold 85
+Highland Middle School,Harnett,0.0869,06:08,harnett,highland middle,best fuzzy score 62 below threshold 85
+Scotland Neck Elementary Leadership Acad,Halifax,0.0654,PK:05,halifax,scotland neck elementary leadership academy,best fuzzy score 52 below threshold 85
+Piedmont Classical High School,Guilford,0.1599,09:12,guilford,piedmont classical high,best fuzzy score 57 below threshold 85
+Peeler Open School for the Performing Ar,Guilford,0.0752,0K:05,guilford,peeler open for the performing ar,best fuzzy score 53 below threshold 85
+Parkview Village Elementary Expressive A,Guilford,0.1463,PK:05,guilford,parkview village elementary expressive a,best fuzzy score 81 below threshold 85
+Walter Hines Page High School,Guilford,0.1509,09:12,guilford,walter hines page high,best fuzzy score 58 below threshold 85
+Montlieu Elementary Academy of Technolog,Guilford,0.092,PK:05,guilford,montlieu elementary academy of technolog,best fuzzy score 57 below threshold 85
+Meredith Leigh Haynes - Bennie Lee Inman,Guilford,0.3513,PK:12,guilford,meredith leigh haynes bennie lee inman,best fuzzy score 48 below threshold 85
+Ronald E. McNair Elementary School,Guilford,0.0676,PK:05,guilford,ronald e mcnair elementary,best fuzzy score 79 below threshold 85
+Eastern Guilford Middle School,Guilford,0.11,06:08,guilford,eastern guilford middle,best fuzzy score 82 below threshold 85
+Christine Joyner Greene Education Center,Guilford,0.1038,08:12,guilford,christine joyner greene education center,best fuzzy score 62 below threshold 85
+Sarah Walden Herbin-Dale J. Metz Educati,Guilford,0.1204,PK:08,guilford,sarah walden herbin dale j metz educati,best fuzzy score 50 below threshold 85
+Triad Math and Science Academy,Guilford,0.0938,0K:12,guilford,triad math and science academy,best fuzzy score 66 below threshold 85
+Guilford Preparatory Academy,Guilford,0.0946,0K:08,guilford,guilford preparatory academy,best fuzzy score 58 below threshold 85
+Guilford County Schools,Guilford,0.1063,,guilford,guilford county schools,best fuzzy score 57 below threshold 85
+Calvin Wiley Elementary School,Guilford,0.2826,PK:05,guilford,calvin wiley elementary,best fuzzy score 82 below threshold 85
+Aurelian Springs Institute of Global Lea,Halifax,0.1122,PK:05,halifax,aurelian springs institute of global lea,best fuzzy score 63 below threshold 85
+Ben L. Smith High School,Guilford,0.3344,09:12,guilford,ben l smith high,best fuzzy score 77 below threshold 85
+George C Simkins Jr Elementary School,Guilford,0.077,PK:05,guilford,george c simkins jr elementary,best fuzzy score 64 below threshold 85
+Duplin County Schools,Duplin,0.0922,,duplin,duplin county schools,best fuzzy score 49 below threshold 85
+Wallace-Rose Hill High,Duplin,0.1175,09:12,duplin,wallace rose hill high,best fuzzy score 79 below threshold 85
+Davie County Schools,Davie,0.0578,,davie,davie county schools,best fuzzy score 76 below threshold 85
+Charles E Jordan Sr High School,Durham,0.1468,09:12,durham,charles e jordan sr high,best fuzzy score 77 below threshold 85
+The School for Creative Studies,Durham,0.1116,06:12,durham,the for creative studies,best fuzzy score 47 below threshold 85
+,,0.1153,,,nan,no transit schools in this county
+Innovative School District,Wake,0.1415,,wake,innovative district,best fuzzy score 43 below threshold 85
+Currituck County Schools,Currituck,0.0888,,currituck,currituck county schools,best fuzzy score 80 below threshold 85
+The Capitol Encore Academy,Cumberland,0.1358,0K:08,cumberland,the capitol encore academy,best fuzzy score 43 below threshold 85
+Alpha Academy,Cumberland,0.1345,0K:10,cumberland,alpha academy,best fuzzy score 44 below threshold 85
+Cumberland County Schools,Cumberland,0.1269,,cumberland,cumberland county schools,best fuzzy score 50 below threshold 85
+Ramsey Street Alternative High School,Cumberland,0.8765,09:12,cumberland,ramsey street alternative high,best fuzzy score 52 below threshold 85
+Thomasville City Schools,Davidson,0.1231,,davidson,thomasville city schools,best fuzzy score 70 below threshold 85
+Lexington City Schools,Davidson,0.1255,,davidson,lexington city schools,best fuzzy score 65 below threshold 85
+Southern School of Energy and Sustainabi,Durham,0.268,09:12,durham,southern of energy and sustainabi,best fuzzy score 61 below threshold 85
+Dare County Schools,Dare,0.0962,,dare,dare county schools,best fuzzy score 52 below threshold 85
+Smith Farm Elementary School,Forsyth,0.0714,PK:05,forsyth,smith farm elementary,best fuzzy score 81 below threshold 85
+Ronald Wilson Reagan High,Forsyth,0.115,09:12,forsyth,ronald wilson reagan high,best fuzzy score 63 below threshold 85
+Philo-Hill Magnet Academy,Forsyth,0.3116,06:08,forsyth,philo hill magnet academy,best fuzzy score 73 below threshold 85
+Middle College of Forsyth County,Forsyth,0.1707,11:12,forsyth,middle college of forsyth county,best fuzzy score 81 below threshold 85
+Franklin County Schools,Franklin,0.1034,,franklin,franklin county schools,best fuzzy score 58 below threshold 85
+Franklinton Middle School,Franklin,0.1224,06:08,franklin,franklinton middle,best fuzzy score 76 below threshold 85
+Diggs-Latham Elementary,Forsyth,0.0823,PK:05,forsyth,diggs latham elementary,best fuzzy score 73 below threshold 85
+Appalachian State University Academy at Mi,Forsyth,0.0955,0K:05,forsyth,appalachian state university academy at mi,best fuzzy score 56 below threshold 85
+Carter G. Woodson School,Forsyth,0.1624,0K:12,forsyth,carter g woodson,best fuzzy score 59 below threshold 85
+Quality Education Academy,Forsyth,0.129,0K:12,forsyth,quality education academy,best fuzzy score 59 below threshold 85
+Winston Salem / Forsyth County Schools,Forsyth,0.1317,,forsyth,winston salem forsyth county schools,best fuzzy score 52 below threshold 85
+Winston-Salem Preparatory Acad,Forsyth,0.2735,06:12,forsyth,winston salem preparatory academy,best fuzzy score 83 below threshold 85
+Wiley Magnet Middle,Forsyth,0.1276,06:08,forsyth,wiley magnet middle,best fuzzy score 77 below threshold 85
+W A Pattillo Middle School,Edgecombe,0.1292,06:08,edgecombe,w a pattillo middle,best fuzzy score 68 below threshold 85
+Princeville Elementary,Edgecombe,0.1136,PK:05,edgecombe,princeville elementary,best fuzzy score 73 below threshold 85
+Coker-Wimberly Elementary,Edgecombe,0.1003,PK:05,edgecombe,coker wimberly elementary,best fuzzy score 70 below threshold 85
+KIPP Durham College Preparatory,Durham,0.1169,05:08,durham,kipp durham college preparatory,best fuzzy score 54 below threshold 85
+The Institute for the Development of You,Durham,0.2861,0K:08,durham,the institute for the development of you,best fuzzy score 50 below threshold 85
+Global Scholars Academy,Durham,0.1415,0K:08,durham,global scholars academy,best fuzzy score 47 below threshold 85
+Central Park School for Children,Durham,0.0644,0K:08,durham,central park for children,best fuzzy score 49 below threshold 85
+"Carter Community Charter School, Inc.",Durham,0.1048,0K:08,durham,carter community charter inc,best fuzzy score 49 below threshold 85
+Healthy Start Academy,Durham,0.0704,0K:08,durham,healthy start academy,best fuzzy score 49 below threshold 85
+Maureen Joy Charter School,Durham,0.0658,0K:08,durham,maureen joy charter,best fuzzy score 46 below threshold 85
+Durham Public Schools,Durham,0.1199,,durham,durham public schools,best fuzzy score 46 below threshold 85
+Martin Millennium Academy,Edgecombe,0.0627,0K:08,edgecombe,martin millennium academy,best fuzzy score 62 below threshold 85
+Edgecombe County Public Schools,Edgecombe,0.1386,,edgecombe,edgecombe county public schools,best fuzzy score 55 below threshold 85
+North East Carolina Preparatory,Edgecombe,0.1479,PK:12,edgecombe,north east carolina preparatory,best fuzzy score 43 below threshold 85
+Ashley Academy,Forsyth,0.1654,PK:05,forsyth,ashley academy,best fuzzy score 67 below threshold 85
+Thomas Jefferson Middle,Forsyth,0.056,06:08,forsyth,thomas jefferson middle,best fuzzy score 82 below threshold 85
+Hanes Magnet,Forsyth,0.1089,06:08,forsyth,hanes magnet,best fuzzy score 67 below threshold 85
+Robert B Glenn High,Forsyth,0.2496,09:12,forsyth,robert b glenn high,best fuzzy score 85 below threshold 85
+Kingswood School at the Children's Home,Forsyth,0.8064,PK:12,forsyth,kingswood at the children s home,best fuzzy score 59 below threshold 85
+Cook Literacy Model School,Forsyth,0.2572,PK:05,forsyth,cook literacy model,best fuzzy score 53 below threshold 85
+C. Douglas Carter High School,Forsyth,0.2802,09:12,forsyth,c douglas carter high,best fuzzy score 69 below threshold 85

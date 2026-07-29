@@ -1,0 +1,4 @@
+fare_id,route_id
+Local,4f2a4648
+Local,5de92f4d
+Express,f9e3f8aa

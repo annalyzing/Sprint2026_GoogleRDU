@@ -1,0 +1,29 @@
+route_id,agency_id,route_short_name,route_long_name,route_desc,route_type,route_url,route_color,route_text_color
+6354,246,"96","96 - Oak Ridge  Rd - New Walkertown Rd - Carver School Rd ",Transit Center to Oak Ridge Rd  Via New Walkerton - Carver School - Oak Ridge Rd,3,,903BFF,FCFCFC
+6355,246,"92 ","92 - Oak Summit Rd - DSS - Patterson Rd ",Transit Center to Oak Summit Rd via DDS - Cleveland - Patterson - Akron - Ogburn,3,,1F26FF,FCFCFC
+6356,246,"85","85 - Salem Crest Apts - Broad St - FTCC Main Campus ",Transit Center to Salem Creek Apts via Broad - Silas Creek - FTCC Main Campus - Ebert,3,,1F8FFF,FCFCFC
+6358,246,"103","103 Hanes Mall Rd - Baptist Hospital - Stratford ","Transit Center to Hanes Mall Blvd via Baptist Hospital, Stratford Rd",3,,FF1CF0,FCFCFC
+6359,246,"106","106 - University Goodwill - Coliseum Area ",Transit Center to University Goodwill & Coliseum area ,3,,BD59FF,FCFCFC
+6361,246,"95","95 - Peace Haven - Country Club - Vinegar Hill",Transit Center to Peace Haven via Country Club Rd,3,,7897FF,FCFCFC
+6362,246,"80","80 - Hanes Mall - Academy Rd ",Transit Center to Hanes Mall via Academy Rd - Forsyth Hospital,3,,F5791B,FCFCFC
+6363,246,"102","102 - Westpoint Business Park",Transit Center to Westpoint Business Park via Salem Pkwy - Stratford Rd,3,,643E80,FCFCFC
+6364,246,"86","86 Louise Rd - WSSU - Thomasville Rd",Transit Center to Louise Rd via  MLK - Thomasville ,3,,39D439,000000
+6365,246,"94","94 - East Forsyth HS - Old Greensboro Rd",Transit Center to East Forsyth HIgh School via Old Greensboro Rd,3,,2CD113,000000
+6366,246,"87","87 - Hanes Mill Rd Walmart - DSS - Patterson ",Transit Center to Hanes Mill Rd Walmart via DSS - Patterson  - Germanton,3,,FF26F1,FCFCFC
+6367,246,"109","109 - Old Town Elementary - Sherwood Plaza",Transit Center to Old Town Elementary - Reynolda Rd,3,,FF870F,000000
+6368,246,"101","101 Peters Creek Walmart  - Waughtown Crosstown ",Southeastern Crosstown from Peters Creek Walmart to Waughtown ,3,,387AFF,FCFCFC
+6369,246,"82","82 - Hanes Mall East Circulator",Hanes Mall East Circulator via Silas Creek - FTCC Main Campus - Ebert - Burke Mill - Frontis - Hanes Mall Blvd,3,,38D419,000000
+6370,246,"108","108 South Side Circulator ",Teague Rd to Plaza Hollow Dr via Union Cross - Willow - Sprague - Waughtown  ,3,,FF4D29,FCFCFC
+6371,246,"83","83 - Peters Creek Pkwy Walmart",Transit Center to Peters Creek Pkwy Walmart via Peters Creek Pkwy,3,,FF512E,FCFCFC
+6372,246,"90","90 - Wake Forest University - Thurmond - University",Transit Center to Wake Forest Univeristy via Thurmond - University ,3,,F75036,FCFCFC
+6373,246,"107","107 - Hanes Mall - Baptist - Forsyth Hospitals",Transit Center to Hanes Mall Via Hospitals,3,,1FC0FF,000000
+6374,246,"104","104 - Teague Rd - Old Salem - Old Lexington ",Transit Center to Marta and Teague - Old Salem - Old Lexington ,3,,B34FFF,FCFCFC
+6375,246,"84","84 - Hanes Mall - Silas Creek - FTCC West Campus",Transit Center to Hanes Mall via Peters Creek - Silas Creek - FTCC West,3,,BB1CFF,FCFCFC
+6376,246,"97","97 - Hanes Mill Circulator - Northside",Hanes Mill Walmart - University - Bethabara Park - Reynolda - Shattalon,3,,20B033,FCFCFC
+6377,246,"105","105 - Waughtown - MLK - Reynolds Park  ",Transit Center to Waughtown Rd - MLK - Argonne - Pleasant - Reynolds Park,3,,622CF5,FCFCFC
+6379,246,"93","93 - DSS - East Loop","Transit Center to Eastside Loop via DSS - Cleveland - 25th, Attucks, 10th ",3,,8214FF,FCFCFC
+6380,246,"88","88 - IFB - Reynolda Rd ",Transit Center to IFB via - Unversity - Reynolda - Old Town,3,,437B91,FCFCFC
+6381,246,"89","89 Sturmer Park - University Park - IFB",Transit Center to Sturmer Park - University - IFB,3,,59FFF9,000000
+6382,246,"98","98 - Carver School Rd - Liberty St",Transit Center to Carver School Rd via Liberty St. - Smith Reynolds Airport,3,,FF8E1C,FCFCFC
+6383,246,"81","81 - Hanes Mall West Circulator ",Hanes Mall to Kester Mill Walmart - Jonestown Rd - Old Vineyard ,3,,1239FF,FCFCFC
+6384,246,"91","91 Sturmer Park - Patterson Ave - Indiana",Transit Center to Sturmer Park - Patterson - Indiana ,3,,A9FF14,000000

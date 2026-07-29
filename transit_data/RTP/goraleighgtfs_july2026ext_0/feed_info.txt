@@ -1,0 +1,2 @@
+feed_publisher_name,feed_publisher_url,feed_lang,feed_start_date,feed_end_date,feed_version
+GoRaleigh,http://www.GoRaleigh.org,en,20260622,20260831,S1000094

@@ -1,0 +1,2 @@
+agency_id,agency_name,agency_url,agency_timezone,agency_lang,agency_phone,agency_fare_url,agency_email
+246,"Winston Salem Transit",https://wstransit.com/,America/New_York,en-US,3367272000,https://wstransit.com/fares-passes/,custserv@wstransit.com

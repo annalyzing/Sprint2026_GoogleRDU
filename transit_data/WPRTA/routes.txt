@@ -1,0 +1,9 @@
+route_id,route_short_name,route_long_name,route_desc,route_url,route_color,route_text_color,route_type
+2,2,NC 127/Springs Rd,,http://www.mygreenway.org/how/documents/Greenwaytimetables2013final.pdf,0066ff,FFFFFF,3
+3,3,Hickory/Conover/Newton Highway 70,,http://www.mygreenway.org/how/documents/Greenwaytimetables2013final.pdf,FF0000,FFFFFF,3
+4,4,Hickory/Conover/Newton Highway 70,,http://www.mygreenway.org/how/documents/Greenwaytimetables2013final.pdf,FF0000,FFFFFF,3
+5,5,Tate Blvd/Highland Ave/Conover,,http://www.mygreenway.org/how/documents/Greenwaytimetables2013final.pdf,33cc33,FFFFFF,3
+6,6,Conover/Highland Ave/Tate Blvd,,http://www.mygreenway.org/how/documents/Greenwaytimetables2013final.pdf,33cc33,FFFFFF,3
+Taylorsville,,Taylorsville,,http://mygreenway.org/how/documents/TaylorsvilleBusServiceBrochure11-28.pdf,dea8eb,050505,3
+West Taylorsville,,West Taylorsville,,,f9ab0d,FFFFFF,3
+1,1,West Hickory,,http://www.mygreenway.org/how/documents/Greenwaytimetables2013final.pdf,ecbf09,0d0c0c,3
