@@ -1,0 +1,1803 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EduBridge — Closing the opportunity gap, county by county</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --bg: #ffffff;
+    --bg-alt: #f8f9fa;
+    --surface: #ffffff;
+    --surface-alt: #f1f3f4;
+    --border: #e3e6ea;
+    --border-soft: #f0f2f5;
+    --ink: #1f1f1f;
+    --muted: #5f6368;
+    --faint: #9aa0a6;
+
+    --blue: #1a73e8;      --blue-bg: #e8f0fe;
+    --green: #1e8e3e;     --green-bg: #e6f4ea;
+    --purple: #8430ce;    --purple-bg: #f3e8fd;
+    --amber: #f9ab00;     --amber-bg: #fef7e0;
+    --red: #d93025;       --red-bg: #fce8e6;
+
+    --low: #d93025; --mid: #f9ab00; --high: #1e8e3e;
+
+    --ease: cubic-bezier(0.2, 0, 0, 1);
+    --maxw: 1200px;
+  }
+
+  html { scroll-behavior: smooth; }
+  body {
+    min-height: 100vh; background: var(--bg-alt); color: var(--ink);
+    font-family: 'Plus Jakarta Sans', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;
+  }
+  a { color: inherit; text-decoration: none; }
+  img, svg { display: block; max-width: 100%; }
+  ::selection { background: var(--blue-bg); color: var(--blue); }
+
+  .wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 28px; }
+  @media (max-width: 720px) { .wrap { padding: 0 18px; } }
+
+  /* ============ SITE HEADER ============ */
+
+#site-header {
+  position: fixed;
+  top: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 100;
+
+  display: none;
+
+  background: rgba(255,255,255,0.92);
+  backdrop-filter: blur(20px);
+
+  border: 1px solid rgba(255,255,255,0.9);
+  border-radius: 999px;
+
+  box-shadow:
+    0 8px 30px rgba(0,0,0,0.10),
+    0 2px 8px rgba(0,0,0,0.04);
+
+  padding: 6px 12px;
+
+  width: fit-content;
+  max-width: calc(100vw - 32px);
+}
+
+#site-header.visible {
+  display: block;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  height: 52px;
+}
+
+.header-logo {
+  font-size: 16px;
+  font-weight: 800;
+  letter-spacing: -0.6px;
+  color: var(--ink);
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  flex-shrink: 0;
+}
+
+.header-logo span {
+  color: var(--blue);
+}
+
+/* Hide the vertical divider */
+.header-divider {
+  display: none;
+}
+
+/* Navigation */
+.header-tabs {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  flex: none;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.header-tabs::-webkit-scrollbar {
+  display: none;
+}
+
+.header-tab {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 8px 15px;
+  border-radius: 999px;
+
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--muted);
+
+  cursor: pointer;
+  white-space: nowrap;
+
+  transition: all 0.18s var(--ease);
+  letter-spacing: -0.1px;
+}
+
+.header-tab svg {
+  width: 15px;
+  height: 15px;
+}
+
+.header-tab:hover {
+  background: var(--surface-alt);
+  color: var(--ink);
+}
+
+.header-tab.active {
+  background: var(--blue-bg);
+  color: var(--blue);
+}
+
+/* Role selector */
+.role-pill {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  background: transparent;
+
+  border: none;
+  border-radius: 999px;
+
+  padding: 8px 14px;
+
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--ink);
+
+  position: relative;
+  flex-shrink: 0;
+
+  box-shadow: none;
+  transition: all 0.2s var(--ease);
+}
+
+.role-pill:hover {
+  background: var(--surface-alt);
+}
+
+.role-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.role-dropdown {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 20px;
+
+  padding: 8px;
+  min-width: 190px;
+
+  z-index: 200;
+
+  opacity: 0;
+  pointer-events: none;
+
+  transform: translateY(-8px);
+
+  transition:
+    opacity 0.2s var(--ease),
+    transform 0.2s var(--ease);
+
+  box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+}
+
+.role-dropdown.open {
+  opacity: 1;
+  pointer-events: all;
+  transform: translateY(0);
+}
+
+.role-option {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  padding: 10px 14px;
+
+  border-radius: 12px;
+
+  font-size: 13px;
+  font-weight: 500;
+
+  color: var(--muted);
+
+  cursor: pointer;
+
+  transition: background 0.15s, color 0.15s;
+}
+
+.role-option:hover,
+.role-option.current {
+  background: var(--bg-alt);
+  color: var(--ink);
+}
+
+.role-option-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+  /* ============ ROLE SELECT (entry point) ============ */
+  #profile-screen {
+    min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center;
+    padding: 90px 24px 60px; opacity: 1; transform: scale(1);
+    position: relative;
+    background: #fafbff;
+    background-image:
+      radial-gradient(ellipse 1400px 500px at 50% -60px, rgba(26,115,232,0.07), transparent),
+      radial-gradient(ellipse 700px 400px at 100% 100%, rgba(132,48,206,0.06), transparent),
+      radial-gradient(ellipse 600px 400px at 0% 80%, rgba(30,142,62,0.04), transparent);
+    transition: opacity 0.4s var(--ease), transform 0.4s var(--ease);
+  }
+  #profile-screen.exit { opacity: 0; transform: scale(0.98); pointer-events: none; }
+  .profile-logo {
+    font-size: 20px; font-weight: 800; letter-spacing: -0.6px; margin-bottom: 40px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+  }
+  .profile-logo span { color: var(--blue); }
+  .profile-badge {
+    display: inline-flex; align-items: center; gap: 7px; background: var(--blue-bg);
+    border: 1px solid rgba(26,115,232,0.2); border-radius: 999px; padding: 6px 14px;
+    font-size: 12px; font-weight: 700; color: var(--blue); margin-bottom: 20px; letter-spacing: 0.2px;
+  }
+  .profile-badge-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--blue); animation: pulse 2s ease-in-out infinite; }
+  @keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: 0.4; } }
+  .profile-heading {
+    font-size: 36px; font-weight: 800; text-align: center; margin-bottom: 12px;
+    letter-spacing: -1px; color: var(--ink);
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    line-height: 1.15;
+  }
+  .profile-sub { font-size: 15px; color: var(--muted); text-align: center; margin-bottom: 52px; font-weight: 400; max-width: 400px; line-height: 1.6; }
+  
+  /* Netflix-style Staggered Fade-in */
+  .role-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; width: 100%; max-width: 920px; }
+  @media (max-width: 760px) { .role-grid { grid-template-columns: repeat(2, 1fr); } }
+  
+  .role-card {
+    background: #fff; border: 1px solid var(--border); border-radius: 20px;
+    padding: 22px 20px 20px; display: flex; flex-direction: column; align-items: flex-start; gap: 12px;
+    cursor: pointer; text-align: left; transition: all 0.22s var(--ease);
+    box-shadow: 0 1px 4px rgba(0,0,0,0.04), 0 4px 16px rgba(0,0,0,0.03);
+    animation: staggerIn 0.5s var(--ease) backwards;
+    position: relative; overflow: hidden;
+  }
+  .role-card::after {
+    content: '→'; position: absolute; right: 16px; bottom: 18px;
+    font-size: 16px; color: var(--border); transition: all 0.2s;
+  }
+  .role-card:nth-child(1) { animation-delay: 0.05s; }
+  .role-card:nth-child(2) { animation-delay: 0.11s; }
+  .role-card:nth-child(3) { animation-delay: 0.17s; }
+  .role-card:nth-child(4) { animation-delay: 0.23s; }
+
+  @keyframes staggerIn {
+    from { opacity: 0; transform: translateY(16px) scale(0.97); }
+    to { opacity: 1; transform: translateY(0) scale(1); }
+  }
+
+  .role-card:hover { box-shadow: 0 4px 24px rgba(0,0,0,0.08); transform: translateY(-3px); border-color: rgba(26,115,232,0.3); }
+  .role-card:hover::after { color: var(--blue); right: 14px; }
+  .role-icon-wrap { width: 42px; height: 42px; border-radius: 13px; display: flex; align-items: center; justify-content: center; }
+  .role-icon-wrap svg { width: 20px; height: 20px; }
+  .role-card-name { font-size: 15px; font-weight: 700; color: var(--ink); letter-spacing: -0.2px; font-family: 'Plus Jakarta Sans', sans-serif; }
+  .role-card-desc { font-size: 12px; color: var(--muted); line-height: 1.5; padding-right: 20px; }
+
+  #welcome-ai-fab {
+    position: fixed; right: 28px; bottom: 28px; z-index: 120; width: 56px; height: 56px;
+    border: 0; border-radius: 50%; background: var(--blue); color: #fff; display: grid; place-items: center;
+    cursor: pointer; box-shadow: 0 8px 24px rgba(26,115,232,0.35); transition: transform .2s var(--ease), opacity .2s var(--ease);
+  }
+  #welcome-ai-fab:hover { transform: scale(1.06); }
+  #welcome-ai-fab.hidden { opacity: 0; pointer-events: none; transform: scale(.86); }
+  #welcome-ai-fab svg { width: 24px; height: 24px; }
+
+  #welcome-ai-panel {
+    position: fixed; right: 28px; bottom: 28px; z-index: 121; width: min(400px, calc(100vw - 36px));
+    background: rgba(255,255,255,.98); backdrop-filter: blur(20px); border: 1px solid var(--border); border-radius: 24px;
+    box-shadow: 0 16px 40px rgba(0,0,0,0.14); overflow: hidden; display: none;
+  }
+  #welcome-ai-panel.open { display: block; animation: welcomeChatIn .25s var(--ease); }
+  @keyframes welcomeChatIn { from { opacity: 0; transform: translateY(12px) scale(.96); } to { opacity: 1; transform: translateY(0) scale(1); } }
+  .welcome-ai-header { display: flex; align-items: center; justify-content: space-between; padding: 16px 20px; border-bottom: 1px solid var(--border-soft); }
+  .welcome-ai-heading { display: flex; align-items: center; gap: 10px; font-size: 14px; font-weight: 700; }
+  .welcome-ai-heading-icon { width: 28px; height: 28px; display: grid; place-items: center; border-radius: 999px; background: var(--blue); color: #fff; }
+  .welcome-ai-heading-icon svg { width: 14px; height: 14px; }
+  .welcome-ai-close { border: 0; background: var(--bg-alt); color: var(--muted); width: 28px; height: 28px; border-radius: 50%; cursor: pointer; font-size: 15px; font-weight: 600; }
+  .welcome-ai-messages { max-height: 280px; overflow-y: auto; padding: 16px; display: flex; flex-direction: column; gap: 12px; }
+  .welcome-ai-input-row { display: flex; gap: 8px; padding: 12px 16px 16px; border-top: 1px solid var(--border-soft); }
+  .welcome-ai-input { min-width: 0; flex: 1; border: 1px solid var(--border); border-radius: 999px; padding: 10px 16px; font: inherit; font-size: 13px; outline: 0; background: var(--bg-alt); }
+  .welcome-ai-input:focus { border-color: var(--blue); background: #fff; }
+  .welcome-ai-send { width: 38px; border: 0; border-radius: 50%; background: var(--blue); color: #fff; cursor: pointer; display: grid; place-items: center; flex-shrink: 0; }
+  .welcome-ai-send svg { width: 15px; height: 15px; }
+  .welcome-ai-result { border: 1px solid rgba(26,115,232,.2); background: var(--blue-bg); border-radius: 16px; padding: 14px; font-size: 12.5px; line-height: 1.5; color: var(--ink); }
+  .welcome-ai-result strong { display: block; margin-bottom: 4px; font-weight: 700; color: var(--blue); }
+  .welcome-ai-choice { margin-top: 10px; border: 0; border-radius: 999px; padding: 9px 16px; background: var(--blue); color: #fff; font: inherit; font-size: 12px; font-weight: 700; cursor: pointer; transition: opacity 0.15s; }
+  .welcome-ai-choice:hover { opacity: 0.9; }
+
+  /* ============ APP ============ */
+  #app { display: none; }
+  #app.visible { display: block; }
+.app-body {
+    max-width: var(--maxw);
+    margin: 0 auto;
+    padding: 90px 28px 32px;
+}
+  @media (max-width: 720px) { .app-body { padding: 20px 18px; } }
+  .tab-panel { display: none; }
+  .tab-panel.active { display: block; }
+
+  .accent-line { height: 4px; width: 44px; border-radius: 2px; margin-bottom: 20px; }
+  .page-title { font-size: 28px; font-weight: 800; letter-spacing: -0.7px; margin-bottom: 6px; font-family: 'Plus Jakarta Sans', sans-serif; }
+  .page-sub { font-size: 14px; color: var(--muted); margin-bottom: 28px; }
+  .section-label { font-size: 11px; font-weight: 700; color: var(--faint); text-transform: uppercase; letter-spacing: 0.8px; margin-bottom: 14px; }
+
+  .card { background: var(--surface); border: 1px solid var(--border); border-radius: 20px; padding: 20px; margin-bottom: 16px; box-shadow: 0 1px 3px rgba(0,0,0,0.02); }
+  .card-sm { background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 14px 16px; margin-bottom: 10px; }
+
+  .grid-cards { display: grid; grid-template-columns: 1fr; gap: 16px; }
+  @media (min-width: 640px) { .grid-cards { grid-template-columns: 1fr 1fr; } }
+  @media (min-width: 980px) { .grid-cards.cols-3 { grid-template-columns: 1fr 1fr 1fr; } }
+
+  .kpi-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 14px; margin-bottom: 24px; }
+  @media (min-width: 640px) { .kpi-grid { grid-template-columns: repeat(4,1fr); } }
+  .kpi-card { background: var(--surface); border: 1px solid var(--border); border-radius: 18px; padding: 18px; }
+  .kpi-label { font-size: 12px; color: var(--muted); margin-bottom: 6px; font-weight: 500; }
+  .kpi-value { font-size: 24px; font-weight: 800; }
+  .kpi-change { font-size: 11.5px; color: var(--muted); margin-top: 4px; }
+  .trend-bar-wrap { background: var(--bg-alt); border-radius: 999px; height: 6px; margin-top: 10px; overflow: hidden; }
+  .trend-bar { height: 100%; border-radius: 999px; }
+
+  .prompt-chips { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 20px; }
+  .prompt-chip {
+    background: var(--surface); border: 1px solid var(--border); border-radius: 999px;
+    padding: 8px 16px; font-size: 12px; color: var(--ink); cursor: pointer; font-weight: 500;
+    transition: all 0.2s var(--ease); box-shadow: 0 1px 2px rgba(0,0,0,0.03);
+  }
+  .prompt-chip:hover { border-color: var(--blue); background: var(--blue-bg); color: var(--blue); }
+
+  .resource-tag { display: inline-block; border-radius: 999px; padding: 4px 10px; font-size: 10px; font-weight: 700; letter-spacing: 0.4px; margin-bottom: 10px; }
+  .tag-stem { background: var(--blue-bg); color: var(--blue); }
+  .tag-tutor { background: var(--green-bg); color: var(--green); }
+  .tag-policy { background: var(--purple-bg); color: var(--purple); }
+  .tag-scholar { background: var(--amber-bg); color: var(--amber); }
+  .tag-fafsa { background: var(--purple-bg); color: var(--purple); }
+  .resource-actions { display: flex; gap: 8px; margin-top: 14px; }
+  .res-btn { background: var(--bg-alt); border: 1px solid var(--border); border-radius: 999px; padding: 7px 14px; font-size: 11.5px; color: var(--muted); font-weight: 600; cursor: pointer; transition: all 0.15s; }
+  .res-btn:hover { color: var(--ink); border-color: var(--muted); background: #fff; }
+
+  .layer-pills { display: flex; gap: 8px; overflow-x: auto; padding-bottom: 4px; margin-bottom: 16px; }
+  .layer-pill { background: var(--surface); border: 1px solid var(--border); border-radius: 999px; padding: 8px 16px; font-size: 12px; color: var(--muted); font-weight: 600; cursor: pointer; white-space: nowrap; transition: all 0.2s var(--ease); flex-shrink: 0; display: flex; align-items: center; gap: 8px; opacity: 0.8; }
+  .layer-pill .sw { width: 7px; height: 7px; border-radius: 50%; }
+  .layer-pill.on { background: var(--ink); border-color: var(--ink); color: #fff; opacity: 1; }
+
+  .divider { height: 1px; background: var(--border-soft); margin: 20px 0; }
+  .avatar { width: 64px; height: 64px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 22px; font-weight: 700; color: #fff; flex-shrink: 0; }
+  .insight { border-left: 4px solid var(--blue); border-radius: 0 16px 16px 0; background: var(--surface); border-top: 1px solid var(--border); border-right: 1px solid var(--border); border-bottom: 1px solid var(--border); padding: 14px 18px; margin-bottom: 10px; }
+  .insight-title { font-size: 13.5px; font-weight: 700; color: var(--blue); margin-bottom: 4px; }
+  .insight-body { font-size: 12.5px; color: var(--muted); line-height: 1.55; }
+  .report-card { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 16px; display: flex; align-items: center; gap: 14px; margin-bottom: 10px; cursor: pointer; transition: all 0.2s var(--ease); }
+  .report-card:hover { border-color: var(--purple); transform: translateX(2px); }
+  .report-icon { width: 44px; height: 44px; border-radius: 12px; background: var(--purple-bg); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+  .report-icon svg { width: 20px; height: 20px; color: var(--purple); }
+
+  /* ---------- EXPLORE: full-screen map layout ---------- */
+  .explore-fullscreen-active .app-body { max-width: none; width: 100%; margin: 0; padding: 0 !important; }
+  .explore-fullscreen-active footer.site-footer { display: none; }
+  .explore-fullscreen-active #ai-rec-section { display: none !important; }
+
+  .explore-layout {
+    position: relative;
+    width: 100%;
+    height: calc(100vh - 64px);
+    overflow: hidden;
+    background: #e5e3df;
+  }
+
+  /* Sleek Oval Banner Floating Controls (Fixed Dynamic Oval) */
+.explore-layout .layer-pills {
+  position: absolute; 
+  top: 20px; 
+  left: 50%; 
+  transform: translateX(-50%); 
+  z-index: 15;
+  background: rgba(255,255,255,0.9); 
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255,255,255,0.8); 
+  border-radius: 999px; 
+  padding: 6px 12px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+  
+  display: flex; 
+  gap: 4px; 
+  align-items: center;
+  
+  /* Sizing fixes to keep oval expanding nicely */
+  width: fit-content;
+  max-width: calc(100vw - 32px);
+  overflow-x: auto;                  /* Allows smooth swipe on mobile without breaking shape */
+  scrollbar-width: none;             /* Hides scrollbars on Firefox */
+  -ms-overflow-style: none;          /* Hides scrollbars on IE/Edge */
+}
+
+/* Hide scrollbars for Chrome/Safari */
+.explore-layout .layer-pills::-webkit-scrollbar {
+  display: none;
+}
+
+.explore-layout .layer-pill {
+  background: transparent; 
+  border: none; 
+  border-radius: 999px; 
+  padding: 8px 16px;
+  font-size: 12px; 
+  color: var(--muted); 
+  font-weight: 600; 
+  cursor: pointer;
+  white-space: nowrap;               /* Stops text from wrapping to 2 lines */
+  transition: all 0.2s var(--ease); 
+  opacity: 1;
+  display: flex; 
+  align-items: center; 
+  gap: 6px; 
+  flex-shrink: 0;                    /* Prevents buttons from squishing */
+}
+
+.explore-layout .layer-pill:hover { 
+  background: var(--bg-alt); 
+  color: var(--ink); 
+}
+
+.explore-layout .layer-pill.on { 
+  background: var(--ink); 
+  color: #fff; 
+  box-shadow: 0 2px 10px rgba(0,0,0,0.15); 
+}
+
+.explore-layout .layer-pill .sw { 
+  width: 6px; 
+  height: 6px; 
+  border-radius: 50%; 
+}.explore-fullscreen-active .explore-layout {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.explore-fullscreen-active .mapwindow {
+    height: 100%;
+    width: 100%;
+}
+  .explore-layout .mapwindow { position: absolute; inset: 0; z-index: 1; }
+  .explore-layout .mapframe { position: absolute; inset: 0; height: 100% !important; }
+  .explore-layout .mapframe iframe { width: 100%; height: 100%; display: block; border: 0; }
+  .overlay-svg { display: none; }
+  .layer { opacity: 0; transition: opacity .3s; }
+  .layer.show { opacity: 1; }
+  .openmap {
+    position: absolute; bottom: 88px; left: 20px; font-size: 12px; font-weight: 600; color: #fff;
+    background: rgba(31,31,31,0.8); backdrop-filter: blur(12px);
+    padding: 8px 16px; border-radius: 999px; text-decoration: none;
+    display: flex; align-items: center; gap: 6px; z-index: 15;
+    border: 1px solid rgba(255,255,255,0.2);
+    transition: background 0.2s;
+  }
+  .openmap:hover { background: rgba(31,31,31,0.95); }
+  .legend { display: none; }
+
+  @keyframes travel { from { offset-distance: 0%; opacity: 0; } 8% { opacity: 1; } 92% { opacity: 1; } to { offset-distance: 100%; opacity: 0; } }
+  .particle { animation: travel 2.2s linear infinite; }
+  @keyframes ringout { 0% { r: 5; opacity: 0.9; } 100% { r: 24; opacity: 0; } }
+  .ring { animation: ringout 1.9s ease-out infinite; }
+
+  table.zonetable { width: 100%; border-collapse: collapse; font-size: 13px; }
+  table.zonetable th { text-align: left; font-weight: 600; color: var(--muted); font-size: 11px; padding: 0 4px 10px; border-bottom: 1px solid var(--border); }
+  table.zonetable td { padding: 12px 4px; border-bottom: 1px solid var(--border-soft); color: var(--ink); }
+  table.zonetable tr:last-child td { border-bottom: none; }
+  .tag { font-size: 10.5px; padding: 3px 10px; border-radius: 999px; font-weight: 700; }
+  .tag.high { background: var(--amber-bg); color: var(--amber); }
+  .tag.mid { background: var(--blue-bg); color: var(--blue); }
+  .tag.low { background: var(--green-bg); color: var(--green); }
+
+  .addrow { margin-top: 14px; width: 100%; padding: 12px; border-radius: 12px; border: 1px dashed var(--faint); background: none; color: var(--muted); font-size: 13px; font-weight: 600; cursor: pointer; font-family: inherit; }
+  .addrow:hover { border-color: var(--ink); color: var(--ink); }
+  .analyzebtn {
+    width: 100%; padding: 14px; border: none; border-radius: 999px; background: var(--ink); color: #fff;
+    font-size: 13.5px; font-weight: 700; cursor: pointer; margin-top: 14px; font-family: inherit;
+    display: flex; align-items: center; justify-content: center; gap: 8px; transition: opacity 0.2s;
+  }
+  .analyzebtn:hover { opacity: 0.9; }
+  .analyzebtn svg { width: 15px; height: 15px; }
+
+  /* ---------- Chat ---------- */
+  .chat-box { max-height: 380px; overflow-y: auto; margin-bottom: 14px; display: flex; flex-direction: column; gap: 12px; padding-right: 4px; }
+  .chat-input-row { display: flex; gap: 10px; align-items: center; }
+  .chat-input-row input {
+    flex: 1; background: var(--bg-alt); border: 1px solid var(--border); border-radius: 999px;
+    padding: 12px 18px; font-size: 13px; color: var(--ink); font-family: 'Inter', sans-serif; outline: none; transition: all 0.2s;
+  }
+  .chat-input-row input:focus { border-color: var(--blue); background: #fff; }
+  .chat-send-btn { width: 40px; height: 40px; border-radius: 50%; flex-shrink: 0; cursor: pointer; background: var(--ink);
+    display: flex; align-items: center; justify-content: center; transition: opacity 0.2s; }
+  .chat-send-btn:hover { opacity: 0.85; }
+  .chat-send-btn svg { width: 16px; height: 16px; color: #fff; }
+  .msg-user { display: flex; justify-content: flex-end; }
+  .msg-user p { background: var(--ink); color: #fff; font-size: 13px; padding: 11px 16px; border-radius: 20px 20px 4px 20px; max-width: 85%; line-height: 1.5; }
+  .msg-ai { display: flex; align-items: flex-start; gap: 10px; }
+  .msg-ai-dot { width: 8px; height: 8px; border-radius: 50%; margin-top: 8px; flex-shrink: 0; }
+  .msg-ai p { font-size: 13px; color: #202124; line-height: 1.6; background: var(--bg-alt); border-radius: 20px 20px 20px 4px; padding: 12px 16px; }
+  .msg-ai-bubble {
+    font-size: 13px; color: #202124; line-height: 1.65; background: var(--bg-alt);
+    border-radius: 20px 20px 20px 4px; padding: 14px 16px; max-width: calc(100% - 20px);
+  }
+  .msg-ai-bubble p { margin: 0 0 8px; }
+  .msg-ai-bubble p:last-child { margin-bottom: 0; }
+  .msg-ai-bubble ul { margin: 6px 0 8px 18px; }
+  .msg-ai-bubble li { margin-bottom: 4px; }
+  .msg-ai-bubble strong { font-weight: 700; color: var(--ink); }
+  .msg-ai-bubble .md-h2 { font-size: 13.5px; font-weight: 700; color: var(--ink); margin: 10px 0 4px; }
+  .msg-ai-bubble .md-h3 { font-size: 13px; font-weight: 700; color: var(--blue); margin: 8px 0 3px; }
+  .msg-thinking p { color: var(--faint) !important; font-style: italic; }
+
+  /* Markdown in ai-rec-response */
+  .ai-rec-response p { margin: 0 0 10px; }
+  .ai-rec-response p:last-child { margin-bottom: 0; }
+  .ai-rec-response ul { margin: 6px 0 10px 20px; }
+  .ai-rec-response li { margin-bottom: 5px; font-size: 13.5px; line-height: 1.6; }
+  .ai-rec-response strong { font-weight: 700; color: var(--ink); }
+  .ai-rec-response .md-h2 { font-size: 15px; font-weight: 700; color: var(--ink); margin: 14px 0 6px; }
+  .ai-rec-response .md-h3 { font-size: 13.5px; font-weight: 700; color: var(--blue); margin: 10px 0 4px; }
+
+  /* ---------- Reports charts ---------- */
+  .chartrow { display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 10px; }
+  .chartrow .lbl { font-size: 12.5px; color: var(--muted); }
+  .chartrow .delta { font-size: 12px; font-weight: 700; }
+  .delta.down { color: var(--red); } .delta.up { color: var(--green); }
+  svg.chart { width: 100%; height: 80px; display: block; }
+  .barrow { display: flex; align-items: center; gap: 10px; font-size: 12.5px; margin-bottom: 10px; }
+  .barrow .name { width: 100px; flex-shrink: 0; }
+  .barrow .track { flex: 1; height: 8px; background: var(--bg-alt); border-radius: 999px; overflow: hidden; }
+  .barrow .fill { height: 100%; border-radius: 999px; }
+  .barrow .n { width: 40px; text-align: right; color: var(--muted); font-size: 11.5px; }
+
+  /* ---------- Agent trace sheet ---------- */
+  .sheet-scrim { position: fixed; inset: 0; background: rgba(0,0,0,0.4); backdrop-filter: blur(4px); z-index: 250; opacity: 0; pointer-events: none; transition: opacity 0.3s var(--ease); }
+  .sheet-scrim.open { opacity: 1; pointer-events: all; }
+  .sheet {
+    position: fixed; left: 50%; bottom: 0; transform: translate(-50%, 100%); width: min(600px, 94vw);
+    background: #fff; border-radius: 28px 28px 0 0; box-shadow: 0 -10px 50px rgba(0,0,0,0.18);
+    transition: transform 0.4s var(--ease); z-index: 260; max-height: 84vh; overflow-y: auto; padding: 16px 28px 36px;
+  }
+  .sheet.open { transform: translate(-50%, 0); }
+  .sheet-handle { width: 40px; height: 4px; background: var(--border); border-radius: 999px; margin: 0 auto 18px; }
+  .sheet h3 { font-size: 18px; font-weight: 800; margin-bottom: 4px; }
+  .sheet .stepline { font-size: 13px; color: var(--muted); margin-bottom: 20px; }
+  .closebtn { position: absolute; top: 18px; right: 24px; font-size: 13px; color: var(--muted); background: none; border: none; cursor: pointer; font-family: inherit; font-weight: 600; }
+  .agentrow { display: flex; align-items: flex-start; gap: 12px; margin-bottom: 16px; opacity: 0.3; transition: opacity 0.3s var(--ease); }
+  .agentrow.on { opacity: 1; }
+  .agentrow .badge { width: 30px; height: 30px; border-radius: 10px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; font-size: 11.5px; font-weight: 800; color: #fff; }
+  .agentrow .name { font-size: 13px; font-weight: 700; }
+  .agentrow .txt { font-size: 12px; color: var(--muted); margin-top: 2px; line-height: 1.5; }
+  .reportcard .title { font-size: 16px; font-weight: 800; margin-bottom: 6px; }
+  .reportcard .lede { font-size: 13px; color: var(--muted); margin-bottom: 14px; line-height: 1.6; }
+  .finding { display: flex; gap: 10px; padding: 12px 0; border-top: 1px solid var(--border-soft); }
+  .finding .sw { width: 8px; height: 8px; border-radius: 50%; margin-top: 6px; flex-shrink: 0; }
+  .finding .t { font-size: 13px; line-height: 1.55; }
+  .confidence { font-size: 11px; color: var(--faint); margin-top: 12px; }
+
+  /* ---------- Add-zone modal ---------- */
+  .modalscrim { position: fixed; inset: 0; background: rgba(0,0,0,0.4); backdrop-filter: blur(4px); display: none; align-items: center; justify-content: center; z-index: 270; }
+  .modalscrim.open { display: flex; }
+  .modal { background: var(--surface); width: min(440px, 92vw); border-radius: 24px; padding: 24px 28px 28px; box-shadow: 0 12px 40px rgba(0,0,0,0.15); }
+  .modal h3 { font-size: 17px; font-weight: 800; margin-bottom: 16px; }
+  .field { margin-bottom: 14px; }
+  .field label { display: block; font-size: 12px; color: var(--muted); margin-bottom: 6px; font-weight: 600; }
+  .field input { width: 100%; border: 1px solid var(--border); border-radius: 12px; padding: 12px 14px; font-size: 13.5px;
+    font-family: inherit; color: var(--ink); background: var(--bg-alt); outline: none; transition: border-color 0.2s; }
+  .field input:focus { border-color: var(--blue); background: #fff; }
+  .modalbtns { display: flex; gap: 10px; margin-top: 10px; }
+  .modalbtns button { flex: 1; padding: 12px; border-radius: 999px; font-size: 13px; font-weight: 700; cursor: pointer; border: none; font-family: inherit; transition: opacity 0.2s; }
+  .modalbtns .cancel { background: var(--bg-alt); color: var(--muted); }
+  .modalbtns .submit { background: var(--ink); color: #fff; }
+  .modalbtns button:hover { opacity: 0.9; }
+
+  footer.site-footer { border-top: 1px solid var(--border); margin-top: 48px; padding: 28px 0 44px; background: #fff; }
+  footer.site-footer .wrap { display: flex; justify-content: space-between; align-items: center; font-size: 12.5px; color: var(--muted); flex-wrap: wrap; gap: 12px; }
+
+  /* ============ INFO BANNER (profile tab only) ============ */
+  #info-banner {
+    position: absolute; top: 16px; left: 50%; transform: translateX(-50%);
+    width: max-content; max-width: calc(100vw - 32px);
+    background: rgba(255,255,255,0.92); backdrop-filter: blur(20px);
+    border: 1px solid rgba(255,255,255,0.9);
+    border-radius: 999px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.08), 0 1px 2px rgba(0,0,0,0.04);
+    display: flex; align-items: center; z-index: 5; padding: 0 8px;
+  }
+  .welcome-banner-inner { height: 52px; display: flex; align-items: center; gap: 4px; padding: 0 8px; }
+  .welcome-banner-links { display: flex; align-items: center; gap: 2px; overflow-x: auto; }
+  @media (max-width: 640px) {
+    #info-banner { top: 12px; padding: 0 6px; }
+    .welcome-banner-inner { padding: 0 4px; }
+  }
+  .banner-logo-area { display: flex; align-items: center; gap: 12px; padding-right: 4px; }
+  .banner-sep { width: 1px; height: 18px; background: var(--border); margin: 0 4px; flex-shrink: 0; }
+  .info-banner-link {
+    font-size: 13px; font-weight: 600; color: var(--muted);
+    padding: 7px 13px; cursor: pointer; white-space: nowrap;
+    border-radius: 999px; transition: all 0.18s var(--ease);
+    text-decoration: none; letter-spacing: -0.1px;
+  }
+  .info-banner-link:hover { color: var(--blue); background: var(--blue-bg); }
+
+  /* ============ INFO MODAL ============ */
+  .infomodalscrim {
+    position: fixed; inset: 0; background: rgba(0,0,0,0.4); backdrop-filter: blur(4px);
+    display: none; align-items: center; justify-content: center; z-index: 300;
+  }
+  .infomodalscrim.open { display: flex; }
+  .infomodal {
+    background: var(--surface); width: min(540px, 92vw); border-radius: 28px;
+    padding: 32px; max-height: 82vh; overflow-y: auto; position: relative; box-shadow: 0 16px 40px rgba(0,0,0,0.16);
+  }
+  .infomodal h2 { font-size: 20px; font-weight: 800; margin-bottom: 12px; letter-spacing: -0.4px; }
+  .infomodal p { font-size: 13.5px; color: var(--muted); line-height: 1.7; margin-bottom: 12px; }
+  .infomodal-close {
+    position: absolute; top: 20px; right: 20px; background: var(--bg-alt); border: none;
+    width: 30px; height: 30px; border-radius: 50%; font-size: 14px; font-weight: 700; color: var(--muted); cursor: pointer; font-family: inherit; display: flex; align-items: center; justify-content: center;
+  }
+
+  /* ============ AI RECOMMENDATION (Policymaker + Explorer profile only) ============ */
+  #ai-rec-section {
+    max-width: var(--maxw); margin: 0 auto; padding: 0 28px 52px;
+    display: none;
+  }
+  #ai-rec-section.visible { display: block; }
+  .ai-rec-card {
+    background: linear-gradient(135deg, rgba(26,115,232,0.06) 0%, rgba(132,48,206,0.05) 100%);
+    border: 1px solid rgba(26,115,232,0.18);
+    border-radius: 28px;
+    padding: 32px 36px;
+    box-shadow: 0 6px 28px rgba(26,115,232,0.06);
+    position: relative; overflow: hidden;
+  }
+  .ai-rec-card::before {
+    content: ''; position: absolute; top: -60px; right: -60px;
+    width: 220px; height: 220px; border-radius: 50%;
+    background: radial-gradient(circle, rgba(26,115,232,0.12) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .ai-rec-eyebrow {
+    font-size: 11px; font-weight: 700; letter-spacing: 1.2px; text-transform: uppercase;
+    color: var(--blue); margin-bottom: 10px; display: flex; align-items: center; gap: 8px;
+  }
+  .ai-rec-eyebrow-dot {
+    width: 6px; height: 6px; border-radius: 50%; background: var(--blue);
+    box-shadow: 0 0 0 3px rgba(26,115,232,0.2);
+  }
+  .ai-rec-title { font-size: 22px; font-weight: 800; margin-bottom: 6px; letter-spacing: -0.5px; color: var(--ink); }
+  .ai-rec-sub { font-size: 14px; color: var(--muted); margin-bottom: 22px; line-height: 1.6; max-width: 600px; }
+  .example-prompts { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 20px; }
+  .example-prompt-btn {
+    background: rgba(255,255,255,0.85); border: 1px solid rgba(26,115,232,0.2); border-radius: 999px;
+    padding: 8px 16px; font-size: 12px; font-weight: 500; color: #1a73e8;
+    cursor: pointer; transition: all 0.2s var(--ease); font-family: inherit;
+    backdrop-filter: blur(4px); box-shadow: 0 1px 2px rgba(0,0,0,0.02);
+  }
+  .example-prompt-btn:hover { background: var(--blue); color: #fff; border-color: var(--blue); }
+  .ai-rec-input-row { display: flex; gap: 12px; align-items: flex-end; margin-bottom: 16px; }
+  .ai-rec-textarea {
+    flex: 1; border: 1px solid rgba(26,115,232,0.25); border-radius: 18px; padding: 14px 18px;
+    font-size: 13.5px; font-family: inherit; color: var(--ink);
+    background: rgba(255,255,255,0.9); backdrop-filter: blur(8px);
+    resize: none; height: 76px; outline: none; line-height: 1.5;
+    transition: all 0.2s var(--ease);
+  }
+  .ai-rec-textarea:focus { border-color: var(--blue); box-shadow: 0 0 0 4px rgba(26,115,232,0.12); background: #fff; }
+  .ai-rec-btn {
+    padding: 14px 26px; background: var(--blue); color: #fff; border: none; border-radius: 999px;
+    font-size: 13.5px; font-weight: 700; cursor: pointer; font-family: inherit; white-space: nowrap;
+    align-self: flex-end; transition: all 0.2s;
+    box-shadow: 0 4px 16px rgba(26,115,232,0.3);
+  }
+  .ai-rec-btn:hover { opacity: 0.92; transform: translateY(-1px); }
+  .ai-rec-btn:disabled { opacity: 0.45; cursor: default; transform: none; }
+  .ai-rec-response {
+    background: rgba(255,255,255,0.9); border: 1px solid rgba(26,115,232,0.18);
+    border-radius: 18px; padding: 18px 20px; font-size: 13.5px; color: var(--ink);
+    line-height: 1.7; white-space: pre-line; display: none;
+    backdrop-filter: blur(8px);
+  }
+  .ai-rec-response.visible { display: block; }
+
+  /* ============ FLOATING AI CHAT (Explore map) ============ */
+  #map-ai-panel {
+    position: absolute; bottom: 24px; right: 24px; z-index: 20;
+    width: min(380px, calc(100vw - 36px));
+    background: rgba(255,255,255,0.95); backdrop-filter: blur(20px);
+    border: 1px solid var(--border); border-radius: 24px;
+    box-shadow: 0 16px 40px rgba(0,0,0,0.14);
+    display: flex; flex-direction: column; overflow: hidden;
+    transform: scale(0.95) translateY(12px); opacity: 0; pointer-events: none;
+    transition: transform 0.22s var(--ease), opacity 0.22s var(--ease);
+  }
+  #map-ai-panel.open { transform: scale(1) translateY(0); opacity: 1; pointer-events: all; }
+
+  .map-ai-header {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 14px 16px; border-bottom: 1px solid var(--border-soft);
+    flex-shrink: 0;
+  }
+  .map-ai-header-left { display: flex; align-items: center; gap: 10px; }
+  .map-ai-logo {
+    width: 28px; height: 28px; border-radius: 50%; background: var(--blue);
+    display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+  }
+  .map-ai-logo svg { width: 14px; height: 14px; color: #fff; }
+  .map-ai-title { font-size: 13px; font-weight: 700; color: var(--ink); line-height: 1.2; }
+  .map-ai-sub { font-size: 10.5px; color: var(--muted); }
+  .map-ai-close {
+    width: 26px; height: 26px; border-radius: 50%; background: var(--bg-alt);
+    border: none; cursor: pointer; display: flex; align-items: center; justify-content: center;
+    color: var(--muted); font-size: 13px; font-family: inherit; font-weight: 700;
+    transition: background 0.15s; flex-shrink: 0;
+  }
+  .map-ai-close:hover { background: var(--border); color: var(--ink); }
+
+  .map-ai-messages {
+    max-height: 220px; overflow-y: auto; padding: 12px 16px;
+    display: flex; flex-direction: column; gap: 10px; flex-shrink: 0;
+  }
+  .map-ai-messages .msg-ai p,
+  .map-ai-messages .msg-user p {
+    font-size: 12.5px; line-height: 1.5; white-space: pre-wrap; word-break: break-word;
+  }
+
+  .map-ai-input-row {
+    display: flex; gap: 8px; padding: 10px 14px 14px; border-top: 1px solid var(--border-soft);
+    align-items: center; flex-shrink: 0;
+  }
+  .map-ai-input {
+    flex: 1; background: var(--bg-alt); border: 1px solid var(--border); border-radius: 999px;
+    padding: 9px 16px; font-size: 12.5px; font-family: inherit; color: var(--ink); outline: none;
+    min-width: 0;
+  }
+  .map-ai-input:focus { border-color: var(--blue); background: #fff; }
+  .map-ai-send {
+    width: 32px; height: 32px; border-radius: 50%; background: var(--blue);
+    border: none; cursor: pointer; display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0; transition: opacity 0.15s;
+  }
+  .map-ai-send:hover { opacity: 0.88; }
+  .map-ai-send svg { width: 13px; height: 13px; color: #fff; }
+
+  /* ---------- Map AI FAB — Oval Pill Banner ---------- */
+  #map-ai-fab {
+    position: absolute; bottom: 24px; right: 24px; z-index: 20;
+    display: flex; align-items: center; gap: 10px;
+    background: rgba(31,31,31,0.88); backdrop-filter: blur(16px);
+    color: #fff; border: 1px solid rgba(255,255,255,0.2); border-radius: 999px;
+    padding: 10px 20px 10px 14px; cursor: pointer;
+    box-shadow: 0 8px 28px rgba(0,0,0,0.25);
+    transition: all 0.2s var(--ease);
+    font-family: inherit;
+  }
+  #map-ai-fab:hover { background: rgba(26,115,232,0.95); transform: translateY(-2px); box-shadow: 0 10px 32px rgba(26,115,232,0.4); }
+  #map-ai-fab.hidden { opacity: 0; pointer-events: none; transform: translateY(8px); }
+  .map-ai-fab-icon {
+    width: 28px; height: 28px; border-radius: 50%; background: var(--blue);
+    display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+  }
+  .map-ai-fab-icon svg { width: 14px; height: 14px; color: #fff; }
+  .map-ai-fab-label { font-size: 13px; font-weight: 700; white-space: nowrap; letter-spacing: -0.1px; }
+</style>
+</head>
+<body>
+
+<!-- ================= SITE HEADER ================= -->
+<header id="site-header">
+  <div class="wrap header-inner">
+    <div class="header-logo">Edu<span>Bridge</span></div>
+    <div class="header-divider"></div>
+    <nav class="header-tabs" id="header-tabs"></nav>
+    <div class="role-pill" onclick="toggleDropdown(event)">
+      <div class="role-dot" id="role-dot"></div>
+      <span id="role-pill-label">—</span>
+      <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+      <div class="role-dropdown" id="role-dropdown">
+        <div class="role-option" onclick="switchRole('parent')"><div class="role-option-dot" style="background:var(--blue)"></div>Parent</div>
+        <div class="role-option" onclick="switchRole('student')"><div class="role-option-dot" style="background:var(--green)"></div>Student</div>
+        <div class="role-option" onclick="switchRole('policy')"><div class="role-option-dot" style="background:var(--purple)"></div>Policymaker</div>
+        <div class="role-option" onclick="switchRole('general')"><div class="role-option-dot" style="background:var(--amber)"></div>Explorer</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ================= ROLE SELECT (entry point) ================= -->
+<div id="profile-screen">
+  <div id="info-banner">
+    <div class="welcome-banner-inner">
+      <div class="banner-logo-area">
+        <div class="header-logo" style="font-size:16px">Edu<span>Bridge</span></div>
+        <div class="banner-sep"></div>
+      </div>
+      <nav class="welcome-banner-links" aria-label="About EduBridge">
+        <a class="info-banner-link" onclick="openInfoModal('about')">About</a>
+        <a class="info-banner-link" onclick="openInfoModal('story')">Our Story</a>
+        <a class="info-banner-link" onclick="openInfoModal('howitworks')">How It Works</a>
+        <a class="info-banner-link" onclick="openInfoModal('faqs')">FAQs</a>
+        <a class="info-banner-link" onclick="openInfoModal('data')">Data</a>
+      </nav>
+    </div>
+  </div>
+  <div class="profile-logo">Edu<span>Bridge</span></div>
+  <h1 class="profile-heading">Who's using EduBridge today?</h1>
+  <p class="profile-sub">We'll personalize your map, data, and resources in seconds.</p>
+  <div class="role-grid">
+    <div class="role-card" onclick="selectRole('parent')">
+      <div class="role-icon-wrap" style="background:var(--blue-bg)"><svg viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 21a6 6 0 0 0-12 0"/><circle cx="12" cy="9" r="4"/></svg></div>
+      <div class="role-card-name">Parent</div>
+      <div class="role-card-desc">Resources for your child's school</div>
+    </div>
+    <div class="role-card" onclick="selectRole('student')">
+      <div class="role-icon-wrap" style="background:var(--green-bg)"><svg viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10 12 5 2 10l10 5 10-5Z"/><path d="M6 12v5c0 1.5 2.7 3 6 3s6-1.5 6-3v-5"/></svg></div>
+      <div class="role-card-name">Student</div>
+      <div class="role-card-desc">Scholarships, camps, opportunities</div>
+    </div>
+    <div class="role-card" onclick="selectRole('policy')">
+      <div class="role-icon-wrap" style="background:var(--purple-bg)"><svg viewBox="0 0 24 24" fill="none" stroke="var(--purple)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M5 21V10l7-6 7 6v11"/><path d="M9 21v-6h6v6"/></svg></div>
+      <div class="role-card-name">Policymaker</div>
+      <div class="role-card-desc">District data and reports</div>
+    </div>
+    <div class="role-card" onclick="selectRole('general')">
+      <div class="role-icon-wrap" style="background:var(--amber-bg)"><svg viewBox="0 0 24 24" fill="none" stroke="var(--amber)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M15 9l-2 5-5 2 2-5 5-2Z"/></svg></div>
+      <div class="role-card-name">Explorer</div>
+      <div class="role-card-desc">Browse freely, no account needed</div>
+    </div>
+  </div>
+  <button id="welcome-ai-fab" type="button" onclick="toggleWelcomeAssistant()" aria-label="Open the role recommendation assistant">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M9.7 9a2.5 2.5 0 1 1 4.25 1.8c-.95.8-1.95 1.35-1.95 2.7"/><path d="M12 16.9h.01"/></svg>
+  </button>
+  <section id="welcome-ai-panel" aria-label="Role recommendation assistant">
+    <div class="welcome-ai-header">
+      <div class="welcome-ai-heading">
+        <span class="welcome-ai-heading-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></span>
+        Find your best EduBridge view
+      </div>
+      <button class="welcome-ai-close" type="button" onclick="closeWelcomeAssistant()" aria-label="Close">✕</button>
+    </div>
+    <div class="welcome-ai-messages" id="welcome-ai-messages">
+      <div class="msg-ai"><div class="msg-ai-dot" style="background:var(--blue)"></div><p>Tell me what brings you here. I’ll recommend the best view for you: Parent, Student, Policymaker, or Explorer.</p></div>
+    </div>
+    <div class="welcome-ai-input-row">
+      <input class="welcome-ai-input" id="welcome-ai-input" type="text" placeholder="For example: I want scholarships for college…" onkeydown="if(event.key==='Enter') recommendProfile()" />
+      <button class="welcome-ai-send" type="button" onclick="recommendProfile()" aria-label="Send"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2 11 13"/><path d="M22 2 15 22l-4-9-9-4 20-7Z"/></svg></button>
+    </div>
+  </section>
+</div>
+
+<!-- ================= APP ================= -->
+<div id="app">
+  <div class="app-body" id="app-body"></div>
+  <footer class="site-footer">
+    <div class="wrap">
+      <span>Edu<span style="color:var(--blue);font-weight:700">Bridge</span> · NC Public DPI Data Platform</span>
+      <span>Made for NC families, students, and districts</span>
+    </div>
+  </footer>
+</div>
+
+<!-- ================= AI RECOMMENDATION (Policymaker + Explorer profile only) ================= -->
+<div id="ai-rec-section" style="display:none;">
+  <div class="ai-rec-card">
+    <div class="ai-rec-eyebrow"><div class="ai-rec-eyebrow-dot"></div> AI-Powered Discovery</div>
+    <div class="ai-rec-title">Not sure where to start?</div>
+    <div class="ai-rec-sub">Tell us about your goals, district, or what you're trying to change — our AI will point you to the right data and people to explore.</div>
+    <div class="example-prompts">
+      <button class="example-prompt-btn" onclick="fillAIRec('I want to address funding gaps in rural NC districts')">Funding gaps in rural districts</button>
+      <button class="example-prompt-btn" onclick="fillAIRec('Which counties have the worst broadband access for K-12 students?')">Worst broadband counties</button>
+      <button class="example-prompt-btn" onclick="fillAIRec('I\'m exploring teacher shortage solutions in Tier 1 districts')">Teacher shortage in Tier 1</button>
+      <button class="example-prompt-btn" onclick="fillAIRec('Show me districts with high absenteeism and low funding')">High absenteeism + low funding</button>
+    </div>
+    <div class="ai-rec-input-row">
+      <textarea class="ai-rec-textarea" id="ai-rec-input" placeholder="Describe your goals, district focus, or what problem you're trying to solve…"></textarea>
+      <button class="ai-rec-btn" id="ai-rec-submit" onclick="submitAIRec()">Find My Starting Point</button>
+    </div>
+    <div class="ai-rec-response" id="ai-rec-response"></div>
+  </div>
+</div>
+
+<!-- Info Modal Overlay -->
+<div class="infomodalscrim" id="infomodalscrim" onclick="closeInfoModal()">
+  <div class="infomodal" onclick="event.stopPropagation()">
+    <button class="infomodal-close" onclick="closeInfoModal()">✕</button>
+    <div id="infomodal-content"></div>
+  </div>
+</div>
+
+<!-- Agent analysis sheet -->
+<div class="sheet-scrim" id="sheet-scrim" onclick="closeSheet()"></div>
+<div class="sheet" id="sheet">
+  <button class="closebtn" id="closebtn" onclick="closeSheet()">Close</button>
+  <div class="sheet-handle"></div>
+  <h3 id="sheettitle">Analyzing flagged zones</h3>
+  <div class="stepline" id="stepline">Dispatching to specialist agents…</div>
+  <div class="agentrow" data-a="orchestrator"><div class="badge" style="background:#8b8c96">OR</div>
+    <div><div class="name">Orchestrator</div><div class="txt">Reads the zone table and assigns each zone to a specialist agent.</div></div></div>
+  <div class="agentrow" data-a="funding"><div class="badge" style="background:var(--amber)">FN</div>
+    <div><div class="name">Funding agent</div><div class="txt">Top-flagged zone received $890K this cycle, down 12% year over year.</div></div></div>
+  <div class="agentrow" data-a="income"><div class="badge" style="background:var(--green)">IN</div>
+    <div><div class="name">Income agent</div><div class="txt">Median household income nearby fell to $38,900, down 4%.</div></div></div>
+  <div class="agentrow" data-a="tech"><div class="badge" style="background:var(--blue)">TC</div>
+    <div><div class="name">Tech access agent</div><div class="txt">Home broadband coverage sits at 46%, below the district average.</div></div></div>
+  <div class="agentrow" data-a="transit"><div class="badge" style="background:#8b8c96">TR</div>
+    <div><div class="name">Transit agent</div><div class="txt">Transit desert score 0.61 — above the 0.50 statewide average.</div></div></div>
+  <div class="agentrow" data-a="synth"><div class="badge" style="background:var(--ink)">SY</div>
+    <div><div class="name">Synthesis agent</div><div class="txt">Combining findings into one report.</div></div></div>
+  <div id="sheet-report" style="margin-top:6px"></div>
+</div>
+
+<!-- Add-zone modal -->
+<div class="modalscrim" id="modalscrim">
+  <div class="modal">
+    <div class="sheet-handle"></div>
+    <h3>Add a zone</h3>
+    <div class="field"><label>County</label><input id="in-county" placeholder="e.g. Mecklenburg"></div>
+    <div class="field"><label>School name</label><input id="in-school" placeholder="e.g. Eastover Elementary"></div>
+    <div class="field"><label>Zip code</label><input id="in-zip" placeholder="e.g. 28211" inputmode="numeric"></div>
+    <div class="modalbtns">
+      <button class="cancel" id="modalcancel" onclick="closeModal()">Cancel</button>
+      <button class="submit" id="modalsubmit">Add zone</button>
+    </div>
+  </div>
+</div>
+
+<script>
+/* ============ GEMINI CONFIG ============ */
+
+async function callGemini(userMessage, persona, history) {
+
+  const res = await fetch("http://127.0.0.1:5000/chat", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify({
+      message: userMessage,
+      persona: persona,
+      history: history || []
+    })
+  });
+
+
+  if (!res.ok) {
+    throw new Error(
+      "Chat server error: " + res.status
+    );
+  }
+
+
+  const data = await res.json();
+
+  return data.response || 
+    "Sorry, I couldn't generate a response.";
+} 
+
+/* ============ MARKDOWN RENDERER ============ */
+function renderMarkdown(text) {
+  if (!text) return '';
+  let html = text
+    // Bold
+    .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
+    // Headers (## and ###)
+    .replace(/^### (.+)$/gm, '<div class="md-h3">$1</div>')
+    .replace(/^## (.+)$/gm, '<div class="md-h2">$1</div>')
+    // Bullet lists
+    .replace(/^[-•] (.+)$/gm, '<li>$1</li>')
+    // Numbered lists
+    .replace(/^\d+\. (.+)$/gm, '<li>$1</li>')
+    // Italic
+    .replace(/\*(.+?)\*/g, '<em>$1</em>')
+    // Line breaks
+    .replace(/\n\n/g, '</p><p>')
+    .replace(/\n/g, '<br>');
+
+  // Wrap consecutive <li> in <ul>
+  html = html.replace(/(<li>.*?<\/li>(?:<br>)?)+/gs, match => {
+    const items = match.replace(/<br>/g, '');
+    return `<ul>${items}</ul>`;
+  });
+
+  return `<p>${html}</p>`;
+}
+
+/* ============ ICONS ============ */
+const ICON = {
+  explore: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M15 9l-2 5-5 2 2-5 5-2Z"/></svg>',
+  community: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H7a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>',
+  profile: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 21a6 6 0 0 0-12 0"/><circle cx="12" cy="9" r="4"/></svg>',
+  dashboard: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><rect x="7" y="12" width="3" height="6"/><rect x="12" y="8" width="3" height="10"/><rect x="17" y="5" width="3" height="13"/></svg>',
+  reports: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"/><path d="M14 2v6h6"/><path d="M9 13h6"/><path d="M9 17h6"/></svg>',
+  opportunities: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 15 9l7 1-5 5 1.5 7L12 18.5 5.5 22 7 15 2 10l7-1 3-7Z"/></svg>',
+  send: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2 11 13"/><path d="M22 2 15 22l-4-9-9-4 20-7Z"/></svg>',
+  bolt: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 4 14h7l-1 8 9-12h-7l1-8Z"/></svg>',
+  doc: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"/><path d="M14 2v6h6"/></svg>'
+};
+
+const ROLES = {
+  parent:  { color:'#1a73e8', label:'Parent',      tabs:[{icon:'explore',label:'Explore'},{icon:'community',label:'Community'},{icon:'profile',label:'Profile'}], default:0 },
+  student: { color:'#1e8e3e', label:'Student',     tabs:[{icon:'opportunities',label:'Opportunities'},{icon:'explore',label:'Explore'},{icon:'profile',label:'Profile'}], default:0 },
+  policy:  { color:'#8430ce', label:'Policymaker', tabs:[{icon:'dashboard',label:'Dashboard'},{icon:'explore',label:'Explore'},{icon:'reports',label:'Reports'}], default:0 },
+  general: { color:'#f9ab00', label:'Explorer',    tabs:[{icon:'explore',label:'Explore'},{icon:'community',label:'Community'},{icon:'profile',label:'Profile'}], default:0 }
+};
+
+/* ============ CHAT ============ */
+let conversationHistory = [];
+const personaMap = { parent:'parent', student:'student', policy:'policy', general:'general' };
+
+function buildChatUI(accentColor) {
+  return `
+    <div class="card">
+      <div class="section-label" style="margin-bottom:14px">Ask EduBridge</div>
+      <div class="chat-box" id="chat-messages">
+        <div class="msg-ai">
+          <div class="msg-ai-dot" style="background:${accentColor}"></div>
+          <p>Hi! Ask me anything about NC schools — graduation rates, broadband access, funding gaps, EOG scores, absenteeism, and more.</p>
+        </div>
+      </div>
+      <div class="chat-input-row">
+        <input id="chat-input" type="text" placeholder="Ask about any NC school or county…" onkeydown="if(event.key==='Enter') sendChat()" />
+        <div class="chat-send-btn" onclick="sendChat()">${ICON.send}</div>
+      </div>
+    </div>
+  `;
+}
+
+async function sendChat() {
+  const input = document.getElementById('chat-input');
+  const chatBox = document.getElementById('chat-messages');
+  if (!input || !chatBox) return;
+  const message = input.value.trim();
+  if (!message) return;
+  input.value = '';
+
+  const userDiv = document.createElement('div');
+  userDiv.className = 'msg-user';
+  userDiv.innerHTML = `<p></p>`;
+  userDiv.querySelector('p').textContent = message;
+  chatBox.appendChild(userDiv);
+
+  const thinkDiv = document.createElement('div');
+  thinkDiv.className = 'msg-ai msg-thinking';
+  thinkDiv.id = 'chat-thinking';
+  thinkDiv.innerHTML = `<div class="msg-ai-dot" style="background:#c9cad2"></div><p>Thinking…</p>`;
+  chatBox.appendChild(thinkDiv);
+  chatBox.scrollTop = chatBox.scrollHeight;
+
+  conversationHistory.push({ role: 'user', content: message });
+
+  try {
+    const reply = await callGemini(message, personaMap[role] || 'general', conversationHistory.slice(0, -1));
+    document.getElementById('chat-thinking')?.remove();
+
+    const aiDiv = document.createElement('div');
+    aiDiv.className = 'msg-ai';
+    const bubble = document.createElement('div');
+    bubble.className = 'msg-ai-bubble';
+    bubble.innerHTML = renderMarkdown(reply);
+    aiDiv.innerHTML = `<div class="msg-ai-dot" style="background:${ROLES[role].color}"></div>`;
+    aiDiv.appendChild(bubble);
+    chatBox.appendChild(aiDiv);
+    conversationHistory.push({ role: 'assistant', content: reply });
+
+  } catch (err) {
+    document.getElementById('chat-thinking')?.remove();
+    const errDiv = document.createElement('div');
+    errDiv.className = 'msg-ai';
+    errDiv.innerHTML = `<div class="msg-ai-dot" style="background:#d93025"></div><p style="color:#d93025">Gemini error: ${err.message}. Check your API key in the GEMINI_API_KEY config at the top of the script.</p>`;
+    chatBox.appendChild(errDiv);
+  }
+  chatBox.scrollTop = chatBox.scrollHeight;
+}
+
+function chipPrompt(text) {
+  const input = document.getElementById('chat-input');
+  if (input) { input.value = text; sendChat(); }
+}
+
+/* ============ EXPLORE ============ */
+function seeded(seed){ let s = seed; return function(){ s = (s*9301+49297)%233280; return s/233280; }; }
+
+function buildExploreBlock(kind, accentColor) {
+  return `
+  <div class="explore-layout" id="explore-layout-${kind}">
+
+
+    <!-- Full-screen map -->
+    <div class="mapwindow" style="border-radius:0;border:none;">
+      <div class="mapframe" id="mapframe-${kind}" style="height:100%;">
+        <iframe src="map/map.html" title="NC Opportunity Distance Map" loading="lazy" style="width:100%;height:100%;display:block;border:0;" onerror="this.style.display='none'"></iframe>
+        <svg class="overlay-svg" viewBox="0 0 315 230" preserveAspectRatio="xMidYMid slice">
+          <defs>
+            <filter id="heatblur-${kind}" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="9"></feGaussianBlur></filter>
+          </defs>
+          <g class="layer" id="ly-${kind}-funding">
+            <path d="M35,215 C70,160 95,120 118,60" stroke="#f9ab00" stroke-width="2" fill="none" opacity="0.45"></path>
+            <path d="M115,215 C118,160 118,120 118,60" stroke="#f9ab00" stroke-width="4" fill="none" opacity="0.45"></path>
+            <path d="M200,215 C170,160 145,120 121,60" stroke="#f9ab00" stroke-width="2.5" fill="none" opacity="0.45"></path>
+            <path d="M280,215 C230,150 165,110 122,60" stroke="#f9ab00" stroke-width="1.5" fill="none" opacity="0.45"></path>
+            <circle class="particle" r="3" fill="#f9ab00" style="offset-path:path('M35,215 C70,160 95,120 118,60')"></circle>
+            <circle class="particle" r="4" fill="#f9ab00" style="offset-path:path('M115,215 C118,160 118,120 118,60');animation-delay:.5s"></circle>
+            <circle class="particle" r="3" fill="#f9ab00" style="offset-path:path('M200,215 C170,160 145,120 121,60');animation-delay:1s"></circle>
+            <circle class="particle" r="2.5" fill="#f9ab00" style="offset-path:path('M280,215 C230,150 165,110 122,60');animation-delay:1.5s"></circle>
+            <circle cx="118" cy="60" r="5" fill="#f9ab00"></circle>
+            <rect x="82" y="10" width="72" height="15" rx="4" fill="#fef7e0"></rect>
+            <text x="118" y="20.5" font-size="8" fill="#f9ab00" text-anchor="middle" font-weight="700">$6.4M budget</text>
+          </g>
+          <g class="layer" id="ly-${kind}-income" filter="url(#heatblur-${kind})"></g>
+          <g class="layer" id="ly-${kind}-tech"></g>
+          <g class="layer show" id="ly-${kind}-transit"></g>
+        </svg>
+      </div>
+    </div>
+
+    <!-- Oval Map AI Button — bottom right -->
+    <button id="map-ai-fab" onclick="toggleMapAI('${kind}')" title="Ask EduBridge AI">
+      <div class="map-ai-fab-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+        </svg>
+      </div>
+      <span class="map-ai-fab-label">Ask about this map</span>
+    </button>
+
+    <!-- Floating AI chat panel -->
+    <div id="map-ai-panel">
+      <div class="map-ai-header">
+        <div class="map-ai-header-left">
+          <div class="map-ai-logo">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 2 8l10 5 10-5-10-5Z"/><path d="M6 10.5V16c0 1.5 2.7 3 6 3s6-1.5 6-3v-5.5"/></svg>
+          </div>
+          <div>
+            <div class="map-ai-title">Ask EduBridge</div>
+            <div class="map-ai-sub">NC school & equity data</div>
+          </div>
+        </div>
+        <button class="map-ai-close" onclick="toggleMapAI('${kind}')">✕</button>
+      </div>
+      <div class="map-ai-messages" id="map-ai-messages-${kind}">
+        <div class="msg-ai">
+          <div class="msg-ai-dot" style="background:var(--blue)"></div>
+          <p>Hi! Ask about NC schools, counties, districts, graduation, attendance, or performance. I’ll use the map first, then check the web if the map does not cover it.</p>
+        </div>
+      </div>
+      <div class="map-ai-input-row">
+        <input class="map-ai-input" id="map-ai-input-${kind}" type="text" placeholder="Ask about any county or school…" onkeydown="if(event.key==='Enter') sendMapChat('${kind}')" />
+        <button class="map-ai-send" onclick="sendMapChat('${kind}')">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2 11 13"/><path d="M22 2 15 22l-4-9-9-4 20-7Z"/></svg>
+        </button>
+      </div>
+    </div>
+
+  </div>
+  `;
+}
+
+function wireExploreBlock(kind) {
+  const mapframe = document.getElementById('mapframe-' + kind);
+  if (!mapframe) return;
+
+  const incomeGroup = document.getElementById('ly-' + kind + '-income');
+  if (incomeGroup && incomeGroup.children.length === 0) {
+    const rnd = seeded(42);
+    for (let i=0;i<24;i++){
+      const cx = 15 + rnd()*285, cy = 15 + rnd()*200, val = rnd(), r = 14 + val*20;
+      const c = document.createElementNS('http://www.w3.org/2000/svg','circle');
+      c.setAttribute('cx', cx.toFixed(1)); c.setAttribute('cy', cy.toFixed(1)); c.setAttribute('r', r.toFixed(1));
+      c.setAttribute('fill', val < 0.4 ? '#d93025' : val < 0.65 ? '#f9ab00' : '#1e8e3e');
+      c.setAttribute('opacity', (0.35 + val*0.25).toFixed(2));
+      incomeGroup.appendChild(c);
+    }
+  }
+
+  const techGroup = document.getElementById('ly-' + kind + '-tech');
+  if (techGroup && techGroup.children.length === 0) {
+    const techSeed = seeded(7);
+    for (let i=0;i<16;i++){
+      const cx = 15 + techSeed()*285, cy = 15 + techSeed()*200;
+      const dot = document.createElementNS('http://www.w3.org/2000/svg','circle');
+      dot.setAttribute('cx', cx.toFixed(1)); dot.setAttribute('cy', cy.toFixed(1)); dot.setAttribute('r','2.2');
+      dot.setAttribute('fill', '#1a73e8'); dot.setAttribute('opacity','0.55');
+      techGroup.appendChild(dot);
+    }
+    [[100,70],[230,150],[170,190]].forEach((p,i)=>{
+      const dot = document.createElementNS('http://www.w3.org/2000/svg','circle');
+      dot.setAttribute('cx',p[0]); dot.setAttribute('cy',p[1]); dot.setAttribute('r','4'); dot.setAttribute('fill','#1a73e8');
+      const ring = document.createElementNS('http://www.w3.org/2000/svg','circle');
+      ring.setAttribute('cx',p[0]); ring.setAttribute('cy',p[1]); ring.setAttribute('r','5'); ring.setAttribute('fill','none');
+      ring.setAttribute('stroke','#1a73e8'); ring.setAttribute('stroke-width','1.5'); ring.setAttribute('class','ring');
+      ring.style.animationDelay = (i*0.6)+'s';
+      techGroup.appendChild(dot); techGroup.appendChild(ring);
+    });
+  }
+
+  const transitGroup = document.getElementById('ly-' + kind + '-transit');
+  if (transitGroup && transitGroup.children.length === 0) {
+    const tRnd = seeded(23);
+    for (let i=0;i<10;i++){
+      const cx = 20 + tRnd()*275, cy = 20 + tRnd()*190;
+      const dot = document.createElementNS('http://www.w3.org/2000/svg','circle');
+      dot.setAttribute('cx', cx.toFixed(1)); dot.setAttribute('cy', cy.toFixed(1)); dot.setAttribute('r','2.4');
+      dot.setAttribute('fill', '#8b8c96'); dot.setAttribute('opacity','0.55');
+      transitGroup.appendChild(dot);
+    }
+  }
+
+  const pills = document.getElementById('layerpills-' + kind);
+  if (pills) {
+    pills.querySelectorAll('.layer-pill').forEach(chip => {
+      chip.onclick = () => {
+        pills.querySelectorAll('.layer-pill').forEach(c => c.classList.remove('on'));
+        mapframe.querySelectorAll('.layer').forEach(l => l.classList.remove('show'));
+        const legend = document.getElementById('incomelegend-' + kind);
+        if (legend) legend.style.display = 'none';
+        chip.classList.add('on');
+        const layer = document.getElementById('ly-' + kind + '-' + chip.dataset.layer);
+        if (layer) layer.classList.add('show');
+        if (chip.dataset.layer === 'income' && legend) legend.style.display = 'flex';
+      };
+    });
+  }
+}
+
+/* ============ MAP FLOATING AI CHAT ============ */
+let mapAIOpen = false;
+
+async function callMapAI(userMessage, persona) {
+  return await callGemini(userMessage, personaMap[persona] || 'general', []);
+}
+
+function toggleMapAI(kind) {
+  const panel = document.getElementById('map-ai-panel');
+  const button = document.getElementById('map-ai-fab');
+  if (!panel) return;
+  mapAIOpen = !mapAIOpen;
+  if (mapAIOpen) {
+    panel.classList.add('open');
+    button?.classList.add('hidden');
+    setTimeout(() => document.getElementById('map-ai-input-' + kind)?.focus(), 200);
+  } else {
+    panel.classList.remove('open');
+    button?.classList.remove('hidden');
+  }
+}
+
+async function sendMapChat(kind) {
+  const input = document.getElementById('map-ai-input-' + kind);
+  const chatBox = document.getElementById('map-ai-messages-' + kind);
+  if (!input || !chatBox) return;
+  const message = input.value.trim();
+  if (!message) return;
+  input.value = '';
+
+  const userDiv = document.createElement('div');
+  userDiv.className = 'msg-user';
+  userDiv.innerHTML = `<p></p>`;
+  userDiv.querySelector('p').textContent = message;
+  chatBox.appendChild(userDiv);
+
+  const thinkDiv = document.createElement('div');
+  thinkDiv.className = 'msg-ai msg-thinking';
+  thinkDiv.id = 'map-thinking';
+  thinkDiv.innerHTML = `<div class="msg-ai-dot" style="background:#c9cad2"></div><p>Thinking…</p>`;
+  chatBox.appendChild(thinkDiv);
+  chatBox.scrollTop = chatBox.scrollHeight;
+
+  try {
+    const reply = await callMapAI(message, role || 'general');
+
+    document.getElementById('map-thinking')?.remove();
+    const aiDiv = document.createElement('div');
+    aiDiv.className = 'msg-ai';
+    const bubble = document.createElement('div');
+    bubble.className = 'msg-ai-bubble';
+    bubble.innerHTML = renderMarkdown(reply);
+    const source = document.createElement('small');
+    source.style.cssText = 'display:block;margin:5px 0 0 0;color:var(--faint);font-size:10px;';
+    source.textContent = 'EduBridge AI · NC DPI Data';
+    bubble.appendChild(source);
+    aiDiv.innerHTML = `<div class="msg-ai-dot" style="background:var(--blue)"></div>`;
+    aiDiv.appendChild(bubble);
+    chatBox.appendChild(aiDiv);
+  } catch (err) {
+    document.getElementById('map-thinking')?.remove();
+    const errDiv = document.createElement('div');
+    errDiv.className = 'msg-ai';
+    errDiv.innerHTML = `<div class="msg-ai-dot" style="background:#d93025"></div><p style="color:#d93025">Error: ${err.message}</p>`;
+    chatBox.appendChild(errDiv);
+  }
+  chatBox.scrollTop = chatBox.scrollHeight;
+}
+
+/* Modal and Sheet handlers */
+let modalTargetKind = null;
+function openModal(kind) { modalTargetKind = kind; document.getElementById('modalscrim').classList.add('open'); }
+function closeModal() { document.getElementById('modalscrim').classList.remove('open'); }
+
+document.getElementById('modalsubmit').addEventListener('click', () => {
+  const county = document.getElementById('in-county').value.trim();
+  const school = document.getElementById('in-school').value.trim();
+  const zip = document.getElementById('in-zip').value.trim();
+  if (!school) { document.getElementById('in-school').focus(); return; }
+  const t = document.getElementById('zonetable-' + modalTargetKind);
+  if (t) {
+    const row = document.createElement('tr');
+    const label = school + (county ? ' — ' + county : '') + (zip ? ' (' + zip + ')' : '');
+    const tdLabel = document.createElement('td'); tdLabel.textContent = label;
+    row.appendChild(tdLabel);
+    row.innerHTML += '<td>Pending</td><td><span class="tag mid">Watch</span></td>';
+    t.appendChild(row);
+  }
+  document.getElementById('in-county').value = '';
+  document.getElementById('in-school').value = '';
+  document.getElementById('in-zip').value = '';
+  closeModal();
+});
+
+const sheetOrder = ['orchestrator','funding','income','tech','transit','synth'];
+function openSheet() {
+  document.getElementById('sheet-scrim').classList.add('open');
+  document.getElementById('sheet').classList.add('open');
+  document.getElementById('stepline').textContent = 'Dispatching to specialist agents…';
+  document.getElementById('sheet-report').innerHTML = '';
+  document.querySelectorAll('.agentrow').forEach(r => r.classList.remove('on'));
+  sheetOrder.forEach((a,i) => {
+    setTimeout(() => {
+      document.querySelector(`.agentrow[data-a="${a}"]`).classList.add('on');
+      if (a === 'synth') {
+        document.getElementById('stepline').textContent = 'Synthesis complete.';
+        document.getElementById('sheet-report').innerHTML = `
+          <div class="divider"></div>
+          <div class="reportcard">
+            <div class="title">Eastover Elementary is the priority zone</div>
+            <div class="lede">Funding, income, tech access and transit are all trending down together in the same zone.</div>
+            <div class="finding"><span class="sw" style="background:var(--amber)"></span><span class="t">Funding down 12% to $890K this cycle, against a $6.4M district budget.</span></div>
+            <div class="finding"><span class="sw" style="background:var(--green)"></span><span class="t">Median household income fell 4% to $38,900, below the district median.</span></div>
+            <div class="finding"><span class="sw" style="background:var(--blue)"></span><span class="t">Home broadband at 46%, well under the 61% district average.</span></div>
+            <div class="finding"><span class="sw" style="background:#8b8c96"></span><span class="t">Transit desert score 0.61, worse than the 0.50 statewide average.</span></div>
+          </div>`;
+      }
+    }, i * 550);
+  });
+}
+
+function closeSheet() {
+  document.getElementById('sheet-scrim').classList.remove('open');
+  document.getElementById('sheet').classList.remove('open');
+}
+
+/* ============ CONTENT ============ */
+const CONTENT = {
+  parent: [
+    () => { document.body.classList.add('explore-fullscreen-active'); return buildExploreBlock('parent', '#1a73e8'); },
+    () => `<div class="page-title">Community</div>
+     <div class="page-sub">Programs and events near you in Wake County.</div>
+     <div class="accent-line" style="background:var(--blue)"></div>
+     <div class="layer-pills">
+       <span class="layer-pill on">Near me</span>
+       <span class="layer-pill">Free</span>
+       <span class="layer-pill">Virtual</span>
+       <span class="layer-pill">K–5</span>
+     </div>
+     <div class="grid-cards cols-3">
+     ${[
+       {tag:'tag-tutor',l:'TUTORING',n:'Wake County Public Libraries Free Tutoring',m:'Tuesdays & Thursdays · Southeast Regional Library, Garner · Free',d:'Free after-school math and reading support for K-8 students provided by certified volunteer educators.'},
+       {tag:'tag-stem',l:'STEM CAMP',n:'NC State University Math & Tech Workshop',m:'Saturdays · Centennial Campus, Raleigh · Free',d:'Interactive coding and robotics sessions designed for elementary and middle school students.'},
+       {tag:'tag-fafsa',l:'FAFSA WORKSHOP',n:'Triangle College Access Network FAFSA Night',m:'March 12 · Virtual / Online · Free',d:'One-on-one assistance completing FAFSA and NC Residency Determination Service (RDS) forms.'},
+       {tag:'tag-scholar',l:'SCHOLARSHIP',n:'WakeEd Partnership Student Opportunity Fund',m:'Deadline April 15 · Up to $2,500',d:'Need-based funding for Wake County high school seniors transitioning to post-secondary education.'},
+     ].map(e=>`
+     <div class="card">
+       <span class="resource-tag ${e.tag}">${e.l}</span>
+       <div style="font-size:14.5px;font-weight:700;margin-bottom:4px">${e.n}</div>
+       <div style="font-size:11.5px;color:var(--muted);margin-bottom:10px">${e.m}</div>
+       <div style="font-size:12.5px;color:#3c4043;line-height:1.55">${e.d}</div>
+       <div class="resource-actions"><button class="res-btn">Save</button><button class="res-btn">Calendar</button><button class="res-btn">Map</button></div>
+     </div>`).join('')}
+     </div>`,
+    () => `<div style="display:flex;align-items:center;gap:18px;margin-bottom:28px">
+       <div class="avatar" style="background:var(--blue)">S</div>
+       <div><div style="font-size:20px;font-weight:800">Sarah Jenkins</div><div style="font-size:13px;color:var(--muted);margin-top:2px">Parent · Wake County Schools · NC</div></div>
+     </div>
+     <div class="accent-line" style="background:var(--blue)"></div>
+     <div class="section-label">Personalized insights</div>
+     <div class="insight"><div class="insight-title">Broadband assistance</div><div class="insight-body">Your address in ZIP 27610 qualifies for the NC Affordable Connectivity Program subsidy.</div></div>
+     <div class="insight" style="border-left-color:var(--green)"><div class="insight-title" style="color:var(--green)">STEM camp nearby</div><div class="insight-body">NC State Centennial Campus math workshop is 4.2 miles from your saved address.</div></div>
+     <div class="insight" style="border-left-color:var(--amber)"><div class="insight-title" style="color:var(--amber)">District report updated</div><div class="insight-body">Wake County Public School System FY2026 title I funding allocations updated this week.</div></div>
+     <div class="section-label" style="margin-top:24px">Your details</div>
+     ${[
+       ['ZIP code', '27610'],
+       ['School district', 'Wake County Public School System'],
+       ["Child's grade", '4th Grade'],
+       ['School name', 'Barwell Road Elementary']
+     ].map(f=>`
+     <div class="card-sm" style="display:flex;justify-content:space-between;align-items:center">
+       <span style="font-size:13px;color:var(--muted)">${f[0]}</span>
+       <span style="font-size:13px;color:var(--ink);font-weight:600">${f[1]}</span>
+     </div>`).join('')}`
+  ],
+
+  student: [
+    () => `<div class="page-title">Your opportunities</div>
+     <div class="page-sub">Filtered for your grade and ZIP in Durham County.</div>
+     <div class="accent-line" style="background:var(--green)"></div>
+     <div class="layer-pills">
+       <span class="layer-pill on">All</span>
+       <span class="layer-pill">Scholarships</span>
+       <span class="layer-pill">Internships</span>
+       <span class="layer-pill">STEM</span>
+     </div>
+     <div class="grid-cards cols-3">
+     ${[
+       {tag:'tag-scholar',l:'SCHOLARSHIP',n:'NC State Park Scholarship Program',m:'Deadline Nov 1 · Full Tuition + Stipend',d:'Four-year merit scholarship emphasizing leadership, service, character, and scholarship at NC State.'},
+       {tag:'tag-stem',l:'STEM INTERNSHIP',n:'RTP Youth Innovation Summer Internship',m:'June – August · Research Triangle Park · Paid ($16/hr)',d:'Hands-on biotech and software development experience for high school juniors and seniors in Durham & Wake counties.'},
+       {tag:'tag-tutor',l:'FREE TUTORING',n:'NC School of Science and Math Online Tutoring',m:'Mon–Thu 6–9 PM · Virtual · Free',d:'Peer-led math and science tutoring hosted by NCSSM students for any NC public high school student.'},
+     ].map(e=>`
+     <div class="card">
+       <span class="resource-tag ${e.tag}">${e.l}</span>
+       <div style="font-size:14.5px;font-weight:700;margin-bottom:4px">${e.n}</div>
+       <div style="font-size:11.5px;color:var(--muted);margin-bottom:10px">${e.m}</div>
+       <div style="font-size:12.5px;color:#3c4043;line-height:1.55">${e.d}</div>
+       <div class="resource-actions"><button class="res-btn">Save</button><button class="res-btn">Remind me</button><button class="res-btn">Apply</button></div>
+     </div>`).join('')}
+     </div>`,
+    () => { document.body.classList.add('explore-fullscreen-active'); return buildExploreBlock('student', '#1e8e3e'); },
+    () => `<div style="display:flex;align-items:center;gap:18px;margin-bottom:28px">
+       <div class="avatar" style="background:var(--green)">M</div>
+       <div><div style="font-size:20px;font-weight:800">Marcus Vance</div><div style="font-size:13px;color:var(--muted);margin-top:2px">Student · 11th Grade · Hillside High School</div></div>
+     </div>
+     <div class="accent-line" style="background:var(--green)"></div>
+     <div class="section-label">Saved opportunities</div>
+     <div class="card-sm" style="display:flex;justify-content:space-between"><span style="font-size:13px;color:var(--muted)">Saved scholarships</span><span style="font-size:13px;font-weight:600">3 Saved</span></div>
+     <div class="card-sm" style="display:flex;justify-content:space-between"><span style="font-size:13px;color:var(--muted)">Upcoming deadlines</span><span style="font-size:13px;font-weight:600">NC Park Scholarship (Nov 1)</span></div>
+     <div class="section-label" style="margin-top:24px">Your details</div>
+     ${[
+       ['ZIP code', '27707'],
+       ['Grade level', '11th Grade (Junior)'],
+       ['School name', 'Hillside High School (Durham)'],
+       ['Interests', 'Computer Science, Biotech, Debate']
+     ].map(f=>`
+     <div class="card-sm" style="display:flex;justify-content:space-between;align-items:center">
+       <span style="font-size:13px;color:var(--muted)">${f[0]}</span>
+       <span style="font-size:13px;color:var(--ink);font-weight:600">${f[1]}</span>
+     </div>`).join('')}`
+  ],
+
+  policy: [
+    () => `<div class="page-title">District overview</div>
+     <div class="page-sub">Equity metrics across North Carolina public school districts.</div>
+     <div class="accent-line" style="background:var(--purple)"></div>
+     <div class="kpi-grid">
+       <div class="kpi-card"><div class="kpi-label">Avg equity score</div><div class="kpi-value" style="color:var(--amber)">68.4</div><div class="kpi-change">↓ 2.1 from FY24</div></div>
+       <div class="kpi-card"><div class="kpi-label">Funding gap</div><div class="kpi-value" style="color:var(--red)">$1.4B</div><div class="kpi-change">Statewide supplemental gap</div></div>
+       <div class="kpi-card"><div class="kpi-label">Broadband gap</div><div class="kpi-value" style="color:var(--purple)">18.2%</div><div class="kpi-change">Unserved rural K-12 households</div></div>
+       <div class="kpi-card"><div class="kpi-label">Teacher shortage</div><div class="kpi-value" style="color:var(--blue)">4.2K</div><div class="kpi-change">Vacancies across 115 LEAs</div></div>
+     </div>
+     <div class="section-label">Districts</div>
+     <div class="grid-cards">
+     ${[
+       { d: 'Wake County Public Schools', s: '78.2', w: 78, c: '#1e8e3e' },
+       { d: 'Mecklenburg (CMS)', s: '74.1', w: 74, c: '#1a73e8' },
+       { d: 'Durham Public Schools', s: '62.5', w: 62, c: '#f9ab00' },
+       { d: 'Vance County Schools', s: '44.8', w: 45, c: '#d93025' }
+     ].map((item)=>`
+     <div class="card-sm">
+       <div style="display:flex;justify-content:space-between;margin-bottom:8px">
+         <span style="font-size:13.5px;font-weight:700">${item.d}</span>
+         <span style="font-size:12px;color:var(--muted)">Score: ${item.s}</span>
+       </div>
+       <div class="trend-bar-wrap"><div class="trend-bar" style="width:${item.w}%;background:${item.c}"></div></div>
+     </div>`).join('')}
+     </div>`,
+    () => { document.body.classList.add('explore-fullscreen-active'); return buildExploreBlock('policy', '#8430ce'); },
+    () => `<div class="page-title">Reports</div>
+     <div class="page-sub">Exportable summaries and analysis.</div>
+     <div class="accent-line" style="background:var(--purple)"></div>
+     <div class="section-label">Recent</div>
+     ${[
+       {n:'Vance County Educational Opportunity & Funding Analysis', m:'Generated Jan 2026 · PDF Report'},
+       {n:'NC Rural Broadband Impact on EOG Scores', m:'Generated Dec 2025 · PDF Report'},
+       {n:'Tier 1 vs Tier 3 Local Allocation Disparities', m:'Generated Nov 2025 · CSV + PDF'},
+       {n:'NC Teacher Retention Rates by District Tier', m:'Generated Oct 2025 · PDF Report'},
+     ].map(r=>`
+     <div class="report-card">
+       <div class="report-icon">${ICON.doc}</div>
+       <div style="flex:1"><div style="font-size:13.5px;font-weight:700;margin-bottom:2px">${r.n}</div><div style="font-size:11.5px;color:var(--muted)">${r.m}</div></div>
+       <span style="font-size:16px;color:var(--faint)">↓</span>
+     </div>`).join('')}
+     <div class="section-label" style="margin-top:20px">Funding trend</div>
+     <div class="card">
+       <div class="chartrow"><span class="lbl">Vance County District 4 Budget Trend</span><span class="delta down">▼ 12% vs last cycle</span></div>
+       <svg class="chart" viewBox="0 0 300 70" preserveAspectRatio="none">
+         <polyline points="10,20 100,26 190,34 290,50" fill="none" stroke="#f9ab00" stroke-width="2.5"/>
+         <circle cx="10" cy="20" r="3" fill="#f9ab00"/><circle cx="100" cy="26" r="3" fill="#f9ab00"/>
+         <circle cx="190" cy="34" r="3" fill="#f9ab00"/><circle cx="290" cy="50" r="3" fill="#f9ab00"/>
+       </svg>
+     </div>
+     <div class="card">
+       <div class="section-label">Composite risk by zone</div>
+       <div class="barrow"><span class="name">Eastover</span><div class="track"><div class="fill" style="width:88%;background:var(--red)"></div></div><span class="n">0.81</span></div>
+       <div class="barrow"><span class="name">Albemarle Rd</span><div class="track"><div class="fill" style="width:58%;background:var(--amber)"></div></div><span class="n">0.52</span></div>
+       <div class="barrow"><span class="name">Lincoln High</span><div class="track"><div class="fill" style="width:30%;background:var(--green)"></div></div><span class="n">0.27</span></div>
+     </div>`
+  ],
+
+  general: [
+    () => { document.body.classList.add('explore-fullscreen-active'); return buildExploreBlock('general', '#f9ab00'); },
+    () => `<div class="page-title">Community resources</div>
+     <div class="page-sub">Programs across all categories in North Carolina.</div>
+     <div class="accent-line" style="background:var(--amber)"></div>
+     <div class="layer-pills">
+       <span class="layer-pill on">All</span>
+       <span class="layer-pill">Free</span>
+       <span class="layer-pill">Virtual</span>
+     </div>
+     <div class="grid-cards cols-3">
+     ${[
+       {tag:'tag-tutor',l:'TUTORING',n:'NC Student Success Corps',m:'Weekly Sessions · Statewide / Local · Free',d:'Statewide free tutoring network providing math and literacy coaching for public school students.'},
+       {tag:'tag-stem',l:'STEM',n:'NC Science Festival Community Workshops',m:'April Events · Statewide · Free',d:'Hands-on STEM activities, lab tours, and science expos held in communities across NC.'},
+       {tag:'tag-scholar',l:'SCHOLARSHIP',n:'NC Need-Based Assistance Grant',m:'Annual Deadline · NC Colleges · Up to $3,000',d:'State-funded grant for eligible North Carolina residents attending NC higher education institutions.'},
+     ].map(e=>`
+     <div class="card">
+       <span class="resource-tag ${e.tag}">${e.l}</span>
+       <div style="font-size:14.5px;font-weight:700;margin-bottom:4px">${e.n}</div>
+       <div style="font-size:11.5px;color:var(--muted);margin-bottom:10px">${e.m}</div>
+       <div style="font-size:12.5px;color:#3c4043;line-height:1.55">${e.d}</div>
+       <div class="resource-actions"><button class="res-btn">Save</button><button class="res-btn">Calendar</button></div>
+     </div>`).join('')}
+     </div>`,
+    () => `<div style="text-align:center;padding:36px 0 28px">
+       <div style="width:64px;height:64px;border-radius:50%;background:var(--amber);display:flex;align-items:center;justify-content:center;margin:0 auto 16px;color:#fff">
+         <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M15 9l-2 5-5 2 2-5 5-2Z"/></svg>
+       </div>
+       <div style="font-size:20px;font-weight:800">Exploring as Guest</div>
+       <div style="font-size:13px;color:var(--muted);margin-top:4px">Set a role to personalize</div>
+     </div>
+     <div class="accent-line" style="background:var(--amber);margin-left:auto;margin-right:auto"></div>
+     <div class="role-grid" style="max-width:none">
+       ${['Parent','Student','Policymaker','Explorer'].map((r,i)=>`
+       <div class="role-card" style="text-align:center;align-items:center" onclick="switchRole('${['parent','student','policy','general'][i]}')">
+         <div style="color:${['#1a73e8','#1e8e3e','#8430ce','#f9ab00'][i]}">${[ICON.profile,ICON.opportunities,ICON.dashboard,ICON.explore][i]}</div>
+         <div class="role-card-name">${r}</div>
+       </div>`).join('')}
+     </div>`
+  ]
+};
+
+let role = null, tab = 0;
+
+/* ============ NAVIGATION & RENDERING ============ */
+function selectRole(r) {
+  const ps = document.getElementById('profile-screen');
+  ps.classList.add('exit');
+  setTimeout(() => { ps.style.display = 'none'; initApp(r); }, 440);
+}
+
+function toggleWelcomeAssistant() {
+  const panel = document.getElementById('welcome-ai-panel');
+  if (panel.classList.contains('open')) closeWelcomeAssistant();
+  else {
+    panel.classList.add('open');
+    document.getElementById('welcome-ai-fab').classList.add('hidden');
+    setTimeout(() => document.getElementById('welcome-ai-input')?.focus(), 120);
+  }
+}
+
+function closeWelcomeAssistant() {
+  document.getElementById('welcome-ai-panel').classList.remove('open');
+  document.getElementById('welcome-ai-fab').classList.remove('hidden');
+}
+
+function getRecommendedProfile(message) {
+  const text = message.toLowerCase();
+  if (/(parent|guardian|my child|my kid|my son|my daughter|family|enroll my|child's school|school for my)/.test(text)) return 'parent';
+  if (/(district|policy|polic|board|budget|funding|administrator|principal|superintendent|staff|school system|county-wide|teacher|educator|nonprofit|community organization)/.test(text)) return 'policy';
+  if (/(student|scholarship|college|fafsa|financial aid|camp|internship|my classes|i am in|i'm in|career|apply|application|university|tuition|graduate)/.test(text)) return 'student';
+  return 'general';
+}
+
+function showProfileRecommendation(messages, recommended, explanation) {
+  const labels = { parent: 'Parent', student: 'Student', policy: 'Policymaker', general: 'Explorer' };
+  const label = labels[recommended];
+  const result = document.createElement('div');
+  result.className = 'welcome-ai-result';
+  result.innerHTML = '<strong>Best match: ' + label + '</strong><span></span><button class="welcome-ai-choice" type="button"></button>';
+  result.querySelector('span').textContent = explanation;
+  const choice = result.querySelector('button');
+  choice.textContent = 'Open ' + label + ' view';
+  choice.onclick = () => { closeWelcomeAssistant(); selectRole(recommended); };
+  messages.appendChild(result);
+  messages.scrollTop = messages.scrollHeight;
+}
+
+async function recommendProfile() {
+  const input = document.getElementById('welcome-ai-input');
+  const messages = document.getElementById('welcome-ai-messages');
+  const message = input.value.trim();
+  if (!message) { input.focus(); return; }
+  input.value = '';
+
+  const user = document.createElement('div');
+  user.className = 'msg-user';
+  user.innerHTML = '<p></p>';
+  user.querySelector('p').textContent = message;
+  messages.appendChild(user);
+
+  const details = {
+    parent: ['Parent', 'You’re looking for information to support a child or family. The Parent view puts school resources and local support first.'],
+    student: ['Student', 'You’re focused on your own next steps. The Student view leads with scholarships, programs, and opportunities.'],
+    policy: ['Policymaker', 'You’re working at a school, district, or system level. The Policymaker view gives you district data and reports.'],
+    general: ['Explorer', 'You’re here to browse and learn. The Explorer view is the best open starting point for the map and community resources.']
+  };
+  const thinking = document.createElement('div');
+  thinking.className = 'msg-ai msg-thinking';
+  thinking.innerHTML = '<div class="msg-ai-dot" style="background:#c9cad2"></div><p>Finding the best fit…</p>';
+  messages.appendChild(thinking);
+  messages.scrollTop = messages.scrollHeight;
+
+  try {
+    const recommended = getRecommendedProfile(message);
+    const explanation = details[recommended][1];
+    thinking.remove();
+    showProfileRecommendation(messages, recommended, explanation);
+  } catch (err) {
+    thinking.remove();
+    const fallbackRole = getRecommendedProfile(message);
+    showProfileRecommendation(messages, fallbackRole, details[fallbackRole][1]);
+  }
+}
+
+function initApp(r) {
+  role = r; tab = ROLES[role].default;
+  document.getElementById('site-header').classList.add('visible');
+  document.getElementById('app').classList.add('visible');
+  renderHeaderTabs();
+  renderBody();
+}
+
+function renderHeaderTabs() {
+  const rDef = ROLES[role];
+  const container = document.getElementById('header-tabs');
+  document.getElementById('role-dot').style.background = rDef.color;
+  document.getElementById('role-pill-label').textContent = rDef.label;
+
+  container.innerHTML = rDef.tabs.map((t, idx) => `
+    <div class="header-tab ${idx === tab ? 'active' : ''}" onclick="switchTab(${idx})">
+      ${ICON[t.icon]}
+      <span>${t.label}</span>
+    </div>
+  `).join('');
+}
+
+function switchTab(tIndex) {
+  tab = tIndex;
+  renderHeaderTabs();
+  renderBody();
+}
+
+function switchRole(newRole) {
+  role = newRole;
+  tab = ROLES[role].default;
+  document.getElementById('role-dropdown').classList.remove('open');
+  renderHeaderTabs();
+  renderBody();
+}
+
+function toggleDropdown(e) {
+  e.stopPropagation();
+  document.getElementById('role-dropdown').classList.toggle('open');
+}
+
+window.addEventListener('click', () => {
+  document.getElementById('role-dropdown')?.classList.remove('open');
+});
+
+function renderBody() {
+  document.body.classList.remove('explore-fullscreen-active');
+  const body = document.getElementById('app-body');
+  const recSection = document.getElementById('ai-rec-section');
+
+  const contentFn = CONTENT[role][tab];
+  body.innerHTML = contentFn ? contentFn() : '';
+
+  if (role === 'policy' || role === 'general') {
+    recSection.classList.add('visible');
+  } else {
+    recSection.classList.remove('visible');
+  }
+
+  const currentTabLabel = ROLES[role].tabs[tab].label;
+  if (currentTabLabel === 'Explore') {
+    wireExploreBlock(role);
+  }
+}
+
+/* ============ INFO MODAL & AI RECOMMENDATION LOGIC ============ */
+const INFO_CONTENT = {
+  about: `<h2>About EduBridge</h2><p>EduBridge is a statewide platform connecting North Carolina families, students, and leaders with educational opportunity data and local resources.</p><p>Our goal is to ensure every student in North Carolina has equitable access to public school resources, broadband, and post-secondary pathways.</p>`,
+  story: `<h2>Our Story</h2><p>Founded to bridge the educational divide across NC's 100 counties, EduBridge brings district leaders, local organizations, and families into one unified digital space.</p>`,
+  howitworks: `<h2>How It Works</h2><p>Select your persona (Parent, Student, Policymaker, or Explorer) to unlock customized interactive maps, resource search engines, and real-time AI guidance powered by NC DPI datasets.</p>`,
+  faqs: `<h2>Frequently Asked Questions</h2><p><strong>Is EduBridge free?</strong> Yes, completely free for all NC residents.</p><p><strong>Where does the data come from?</strong> Data is refreshed regularly using public NC Department of Public Instruction (NC DPI) releases.</p>`,
+  data: `<h2>Our Data</h2><p>We source data directly from state educational repositories, broadband access maps, and county financial audits to deliver clear equity metrics.</p>`
+};
+
+function openInfoModal(key) {
+  const content = INFO_CONTENT[key] || '<h2>EduBridge</h2><p>Information not found.</p>';
+  document.getElementById('infomodal-content').innerHTML = content;
+  document.getElementById('infomodalscrim').classList.add('open');
+}
+
+function closeInfoModal() {
+  document.getElementById('infomodalscrim').classList.remove('open');
+}
+
+function fillAIRec(text) {
+  document.getElementById('ai-rec-input').value = text;
+}
+
+async function submitAIRec() {
+  const input = document.getElementById('ai-rec-input');
+  const btn = document.getElementById('ai-rec-submit');
+  const resBox = document.getElementById('ai-rec-response');
+  const query = input.value.trim();
+  if (!query) return;
+
+  btn.disabled = true;
+  btn.textContent = 'Analyzing...';
+  resBox.classList.remove('visible');
+
+  try {
+    const reply = await callGemini(query, 'policy', []);
+    resBox.innerHTML = renderMarkdown(reply);
+    resBox.classList.add('visible');
+  } catch (e) {
+    resBox.innerHTML = `<span style="color:var(--red)">Error: ${e.message}</span>`;
+    resBox.classList.add('visible');
+  } finally {
+    btn.disabled = false;
+    btn.textContent = 'Find My Starting Point';
+  }
+}
+</script>
+</body>
+</html>
