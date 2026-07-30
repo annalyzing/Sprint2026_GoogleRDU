@@ -73,26 +73,28 @@
   .brand-sub{ font-size: 10.5px; color: var(--text-2); font-weight: 500; }
 
   /* ---------- Search ---------- */
+  /* ---------- Search ---------- */
   .search-wrap{
-    top: 16px; left: 50%; transform: translateX(-50%);
-    width: min(420px, calc(100vw - 32px));
+    bottom: 16px; left: 50%; transform: translateX(-50%);
+    width: min(280px, calc(100vw - 32px));
     z-index: 600;
   }
   .search-bar{
-    display: flex; align-items: center; gap: 10px;
-    padding: 11px 14px; border-radius: var(--radius-lg);
+    display: flex; align-items: bottom; gap: 8px;
+    padding: 7px 10px; border-radius: var(--radius-lg);
   }
   .search-bar svg{ flex-shrink: 0; opacity: 0.55; }
   .search-bar input{
     flex: 1; border: none; outline: none; background: transparent;
-    font-size: 15px; font-weight: 500; color: var(--text-1);
+    font-size: 13px; font-weight: 500; color: var(--text-1);
   }
   .search-bar input::placeholder{ color: var(--text-3); font-weight: 500; }
   .search-clear{
-    display:none; width: 20px; height: 20px; border-radius: 50%;
-    background: var(--text-3); color: white; border: none; font-size: 12px;
+    display:none; width: 16px; height: 16px; border-radius: 50%;
+    background: var(--text-3); color: white; border: none; font-size: 10px;
     align-items: center; justify-content: center; cursor: pointer; flex-shrink:0;
   }
+  
   .search-results{
     margin-top: 8px; max-height: 340px; overflow-y: auto;
     border-radius: var(--radius-md); display: none; overflow-x: hidden;
@@ -272,7 +274,7 @@
   @media (max-width: 680px){
     .brand{ padding: 8px 12px; top: 12px; left: 12px; }
     .brand-sub{ display:none; }
-    .search-wrap{ width: calc(100vw - 24px); top: 60px; }
+    .search-wrap{ width: calc(100vw - 24px); bottom: 60px; }
     .layers-panel{ width: 200px; top: 12px; right: 12px; }
     .legend-panel{ width: 190px; max-height: 34vh; bottom: 12px; left: 12px; }
     .leaflet-control-zoom{ display:none !important; }
