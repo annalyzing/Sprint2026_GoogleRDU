@@ -341,7 +341,7 @@
   .welcome-ai-send svg { width: 15px; height: 15px; }
   .welcome-ai-result { border: 1px solid rgba(26,115,232,.2); background: var(--blue-bg); border-radius: 16px; padding: 14px; font-size: 12.5px; line-height: 1.5; color: var(--ink); }
   .welcome-ai-result strong { display: block; margin-bottom: 4px; font-weight: 700; color: var(--blue); }
-  .welcome-ai-choice { margin-top: 20px; border: 0; border-radius: 999px; padding: 9px 16px; background: var(--blue); color: #fff; font: inherit; font-size: 12px; font-weight: 700; cursor: pointer; transition: opacity 0.15s; display:block; }
+  .welcome-ai-choice { margin-top: 10px; border: 0; border-radius: 999px; padding: 9px 16px; background: var(--blue); color: #fff; font: inherit; font-size: 12px; font-weight: 700; cursor: pointer; transition: opacity 0.15s; }
   .welcome-ai-choice:hover { opacity: 0.9; }
 
   /* ============ APP ============ */
@@ -1056,7 +1056,7 @@ const ICON = {
 };
 
 const ROLES = {
-  parent:  { color:'#1a73e8', label:'Parent',      tabs:[{icon:'explore',label:'Explore'},{icon:'community',label:'Community'},{icon:'profile',label:'Profile'}], default:0 },
+  parent:  { color:'#1a73e8', label:'Parent',      tabs:[{icon:'dashboard',label:'Dashboard'},{icon:'explore',label:'Explore'},{icon:'community',label:'Community'},{icon:'profile',label:'Profile'}], default:0 },
   student: { color:'#1e8e3e', label:'Student',     tabs:[{icon:'opportunities',label:'Opportunities'},{icon:'explore',label:'Explore'},{icon:'profile',label:'Profile'}], default:0 },
   policy:  { color:'#8430ce', label:'Policymaker', tabs:[{icon:'dashboard',label:'Dashboard'},{icon:'explore',label:'Explore'},{icon:'reports',label:'Reports'}], default:0 },
   general: { color:'#f9ab00', label:'Explorer',    tabs:[{icon:'explore',label:'Explore'},{icon:'community',label:'Community'},{icon:'profile',label:'Profile'}], default:0 }
@@ -1410,6 +1410,20 @@ function closeSheet() {
 /* ============ CONTENT ============ */
 const CONTENT = {
   parent: [
+    () => `<div class="page-title">District overview</div>
+     <div class="page-sub">Poverty, staffing, teacher retention, and student outcomes across North Carolina public school districts.</div>
+     <div class="accent-line" style="background:var(--blue)"></div>
+     <div style="display:flex;justify-content:flex-end;margin-bottom:12px">
+       <a href="combine.dash.html" target="_blank" rel="noopener" style="font-size:12.5px;font-weight:700;color:var(--blue);text-decoration:none;display:flex;align-items:center;gap:4px">
+         Open full dashboard
+         <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+       </a>
+     </div>
+     <div class="card" style="padding:0;overflow:hidden;border-radius:20px;">
+       <iframe src="combine.dash.html" title="NC Education &amp; Teacher Workforce Dashboard" loading="lazy"
+         style="width:100%;height:85vh;min-height:640px;display:block;border:0;"
+         onerror="this.closest('.card').innerHTML='&lt;div style=&quot;padding:24px;font-size:13px;color:var(--muted)&quot;&gt;Dashboard failed to load &mdash; make sure combine.dash.html is saved in the same folder as this page.&lt;/div&gt;'"></iframe>
+     </div>`,
     () => { document.body.classList.add('explore-fullscreen-active'); return buildExploreBlock('parent', '#1a73e8'); },
     () => `<div class="page-title">Community</div>
      <div class="page-sub">Programs and events near you in Wake County.</div>
